@@ -4,6 +4,10 @@
   include_vars:
     file: "{{ vars_file }}"
 
+- name: Output what we are running
+  debug:
+    msg: "Running generation for {{ vars_file|basename|replace('.yaml', '')|replace('.yml', '') }}"
+
 - name: Generate our secrets
   include_role:
     name: "{{ playbook_dir }}/roles/roles/credentials"
