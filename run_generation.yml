@@ -1,0 +1,9 @@
+---
+
+- name: Load our vars file
+  include_vars:
+    file: "{{ vars_file }}"
+
+- name: Generate our secrets
+  include_role:
+    name: "{{ playbook_dir }}/roles/roles/credentials"
