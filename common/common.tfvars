@@ -37,6 +37,23 @@ weblogic_domain_ports = {
   spg_managed       = "8080" #TODO: check port for api calls
 }
 
+
+#SPG Partner Gateway
+#Note we will be moving the ActiveMQ Broker away from servicemix and its own dedicated servers/service (AmazonMQ)
+
+spg_partnergateway_domain_ports = {
+  mutual_tls        = "9001"  # from POs unless TLS is terminated by NGINX
+  internal_soap     = "8989"  # used between spg.iso and spg.mpx when they were separate modules. deprecated.
+  http              = "8181"  # used from tls terminating loadbalancer, and devops ssh tunnelling
+  jms_broker        = "61616" # used by SPG, ND and Alfresco consumers to push/pull JMS messages to spg.servicemix.ActiveMQ Broker
+  jms_broker_ssl    = "61616" # SSL version of the above
+
+  amq_web_console   = "8161"  # unsecured default port for activemq web console - not implemented
+  amq_web_console_ssl = "8443"  # secured default port for activemq web console - not implemented
+  https             = "443"   # not yet implemented, would be used for devops non tunnelled console admin (ie hawtio)
+}
+
+
 #TODO: allow JMX ports for weblogic domains from bastion or admin
 
 
