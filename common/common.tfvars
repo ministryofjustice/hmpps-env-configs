@@ -24,17 +24,18 @@ spg_app_name = "spg"
 
 ## Delius Core
 weblogic_domain_ports = {
-  # oid_admin         = "7005" #user admin
-  oid_admin         = "10389" #user admin
-  oid_admin_tls     = "10636" #user admin
-  oid_managed       = "7001" #not used
-  oid_ldap          = "3060" #app talking to oid
-  ndelius_admin     = "7001"
-  ndelius_managed   = "9704"
-  interface_admin   = "7001"
-  interface_managed = "8080" #TODO: check port for api calls
-  spg_admin         = "7001"
-  spg_managed       = "8080" #TODO: check port for api calls
+  ndelius_admin       = "7001"
+  ndelius_managed     = "9704"
+  interface_admin     = "7001"
+  interface_managed   = "8080" #TODO: check port for api calls
+  spg_admin           = "7001"
+  spg_jms_broker      = "61616"
+  spg_jms_broker_ssl  = "61617"
+}
+
+ldap_ports = {
+  ldap      = "10389"
+  ldap_tls  = "10636"
 }
 
 
