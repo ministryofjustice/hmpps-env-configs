@@ -25,9 +25,9 @@ spg_app_name = "spg"
 ## Delius Core
 weblogic_domain_ports = {
   ndelius_admin       = "7001"
-  ndelius_managed     = "9704"
+  ndelius_managed     = "7001"
   interface_admin     = "7001"
-  interface_managed   = "8080" #TODO: check port for api calls
+  interface_managed   = "7001" #TODO: check port for api calls
   spg_admin           = "7001"
   spg_jms_broker      = "61616"
   spg_jms_broker_ssl  = "61617"
@@ -37,7 +37,6 @@ ldap_ports = {
   ldap      = "10389"
   ldap_tls  = "10636"
 }
-
 
 #SPG Partner Gateway
 #Note we will be moving the ActiveMQ Broker away from servicemix and its own dedicated servers/service (AmazonMQ)
@@ -56,6 +55,15 @@ spg_partnergateway_domain_ports = {
 
 
 #TODO: allow JMX ports for weblogic domains from bastion or admin
+
+# public / user access
+user_access_cidr_blocks = [
+  "81.134.202.29/32",   #Moj VPN
+  "217.33.148.210/32",  #Digital studio
+  "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
+  "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
+  "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
+]
 
 
 #SPG has activeMQ running incomming
