@@ -54,4 +54,4 @@ az_asg_min = {
 
 asg_instance_type = "t2.medium"
 
-spg_app_name = "spg"
+spg_app_name = "gw"
