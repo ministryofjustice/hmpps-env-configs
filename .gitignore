@@ -80,3 +80,4 @@ env.bak/
 venv.bak/
 
 *.retry
+roles/*
