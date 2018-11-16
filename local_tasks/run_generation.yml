@@ -3,6 +3,12 @@
 - name: Load our vars file
   include_vars:
     file: "{{ vars_file }}"
+    name: env_vars
+
+- name: Set our vars in global
+  set_fact:
+    "{{ item.key }}": "{{ item.value }}"
+  with_dict: "{{ env_vars }}"
 
 - name: Load our common vars
   include_vars:
@@ -16,6 +22,10 @@
 - name: Export our products
   set_fact:
     products: "{{ tmp_vars.products }}"
+
+- name: Export our account
+  set_fact:
+    account: "{{ tmp_vars.account }}"
 
 - name: Output what we are running
   debug:
