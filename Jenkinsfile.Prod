@@ -39,7 +39,7 @@ pipeline {
             }
         }
 
-        stage('Manage Hosted Zones') {
+        stage('Manage Secrets') {
             steps {
                 run_ansible()
             }
