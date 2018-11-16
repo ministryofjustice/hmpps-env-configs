@@ -15,17 +15,13 @@
     file: "{{ playbook_dir }}/common/common.credentials.yml"
     name: common_vars
 
-- name: Combine our vars
-  set_fact:
-    tmp_vars: "{{ (common_vars|merge_config_dictionaries(vars)) }}"
-
 - name: Export our products
   set_fact:
-    products: "{{ tmp_vars.products }}"
+    products: "{{ common_vars.products }}"
 
 - name: Export our account
   set_fact:
-    account: "{{ tmp_vars.account }}"
+    account: "{{ common_vars.account }}"
 
 - name: Output what we are running
   debug:
