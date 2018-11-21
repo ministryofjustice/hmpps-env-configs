@@ -13,4 +13,4 @@ instance_type_db = "t2.large"
 egress_443 = true
 egress_80 = true
 
-ndelius_version = 4.1.7.1
+ndelius_version = "4.1.7.1"
