@@ -18,7 +18,7 @@ def run_ansible() {
             -v `pwd`:/home/tools/data \
             -v ~/.aws:/home/tools/.aws:ro \
             mojdigitalstudio/hmpps-ansible-builder:latest \
-             bash -c "AWS_DEFAULT_REGION=eu-west-2 ansible-playbook generate_secrets.yml"
+             bash -c "AWS_DEFAULT_REGION=eu-west-2 ansible-playbook generate_secrets.yml -e target_environment=prod"
         """
     }
 }
