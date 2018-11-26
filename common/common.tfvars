@@ -46,7 +46,7 @@ spg_partnergateway_domain_ports = {
   internal_soap     = "8989"  # used between spg.iso and spg.mpx when they were separate modules. deprecated.
   http              = "8181"  # used from tls terminating loadbalancer, and devops ssh tunnelling
   jms_broker        = "61616" # used by SPG, ND and Alfresco consumers to push/pull JMS messages to spg.servicemix.ActiveMQ Broker
-  jms_broker_ssl    = "61616" # SSL version of the above
+  jms_broker_ssl    = "61617" # SSL version of the above
 
   amq_web_console   = "8161"  # unsecured default port for activemq web console - not implemented
   amq_web_console_ssl = "8443"  # secured default port for activemq web console - not implemented
