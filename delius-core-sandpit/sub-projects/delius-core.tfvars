@@ -10,10 +10,6 @@ ansible_vars_apacheds = {
   create_test_users = "yes"
 }
 
-ansible_vars_spg = {
-  spg_host = "gw-int-direct"
-}
-
 ansible_vars = {
   setup_datasources = "false"
   #s3_dependencies_bucket = derived from dependencies_bucket_arn
@@ -21,6 +17,7 @@ ansible_vars = {
   alfresco_host = "alfresco"
   alfresco_office_host = "alfresco"
   ldap_host = "oid-wls-instance"
+  spg_host = "gw-int-direct"
 
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
   ndelius_training_mode = "development"
