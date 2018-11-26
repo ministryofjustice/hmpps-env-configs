@@ -2,7 +2,7 @@
 
 ansible_vars_apacheds = {
   apacheds_version  = "apacheds-2.0.0.AM25-default"
-  ldap_protocol:    = "ldap"
+  ldap_protocol     = "ldap"
   # ldap_port       = "${var.ldap_ports["ldap"]}"
   bind_user         = "uid=admin,ou=system"
   # bind_password   = "/TG_ENVIRONMENT_NAME/TG_PROJECT_NAME/apacheds/apacheds/ldap_admin_password"
