@@ -5,9 +5,13 @@ ansible_vars_apacheds = {
   ldap_protocol     = "ldap"
   # ldap_port       = "${var.ldap_ports["ldap"]}"
   bind_user         = "uid=admin,ou=system"
-  # bind_password   = "/TG_ENVIRONMENT_NAME/TG_PROJECT_NAME/apacheds/apacheds/ldap_admin_password"
+  # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
   partition_id      = "moj"
   create_test_users = "yes"
+}
+
+ansible_vars_spg = {
+  spg_host = "gw-int-direct"
 }
 
 ansible_vars = {
@@ -16,8 +20,8 @@ ansible_vars = {
   database_host = "delius-db"
   alfresco_host = "alfresco"
   alfresco_office_host = "alfresco"
-  spg_host = "gw-int-direct"
-  oid_host = "oid-wls-instance"
+  ldap_host = "oid-wls-instance"
+
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
   ndelius_training_mode = "development"
   ndelius_log_level = "DEBUG"
@@ -26,4 +30,27 @@ ansible_vars = {
   newtech_pdfgenerator_url = "/newTech"
   usermanagement_url = "/umt/"
   nomis_url = "https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api"
+
+
+  domain_name = "NDelius"  # This is defined by the AMI
+  server_name = "AdminServer"
+  server_params = "-Xms2048m -Xmx2048m -XX:MaxPermSize=256m"
+  weblogic_admin_username = "weblogic"
+  #weblogic_admin_password = "/${environment_name}/delius-core/weblogic/${app_name}-domain/weblogic_admin_password"
+  server_listen_address = "0.0.0.0"
+  #server_listen_port = "${var.weblogic_domain_ports["ndelius_admin"]}"
+
+  jvm_mem_args = "-Xms2g -Xmx2g"
+
+  database_port = "1521"
+  database_sid = "DNDA"
+  #database_password = "/${environment_name}/delius-core/oracle-database/db/delius_app_schema_password"
+
+  alfresco_port = "80"
+  alfresco_office_port = "443"
+
+  #ldap_port       = "${var.ldap_ports["ldap"]}"
+  #ldap_principal = "${var.ansible_vars_apacheds["bind_user"]}"
+  #ldap_admin_password = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
+  #partition_id = "${var.ansible_vars_apacheds["bind_user"]}"
 }
