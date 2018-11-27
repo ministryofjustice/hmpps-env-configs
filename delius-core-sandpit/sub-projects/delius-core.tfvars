@@ -1,4 +1,15 @@
 # delius-core-sandpit  delius-core.tfvar
+## Delius Core Specific
+
+instance_type_weblogic = "t2.large"
+
+instance_type_db = "t2.large"
+
+egress_443 = true
+egress_80 = true
+
+ndelius_version = "4.1.7.1"
+
 
 ansible_vars_apacheds = {
   apacheds_version  = "apacheds-2.0.0.AM25-default"
