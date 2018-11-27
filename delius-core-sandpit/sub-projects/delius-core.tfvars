@@ -10,6 +10,36 @@ egress_80 = true
 
 ndelius_version = "4.1.7.1"
 
+ansible_vars_oracle_db = {
+  service_user_name             = "oracle"
+  database_global_database_name = "DNDA"
+  database_sid                  = "DNDA"
+  ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
+  ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
+  ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
+  ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
+  ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
+  database_characterset         = "AL32UTF8"
+}
+
+GDBNAME={{ database_global_database_name|default('dnda') }}
+SID={{ database_sid|default('dnda') }}
+TEMPLATENAME="General_Purpose.dbc"
+SYSPASSWORD="{{ oradb_sys_password|default('d3l1u5ag41n') }}"
+SYSTEMPASSWORD="{{ oradb_system_password|default('d3l1u5ag41n') }}"
+EMCONFIGURATION="NONE"
+SYSMANPASSWORD="{{ oradb_sysman_password|default('d3l1u5ag41') }}"
+DBSNMPPASSWORD="{{ oradb_dbsnmp_password|default('d3l1u5ag41n') }}"
+STORAGETYPE=ASM
+DISKGROUPNAME=DATA
+ASMSNMP_PASSWORD="{{ oradb_asmsnmp_password|default('d3l1u5ag41n') }}"
+RECOVERYGROUPNAME=FLASH
+AUTOMATICMEMORYMANAGEMENT="TRUE"
+TOTALMEMORY="1024"
+LISTENERS="LISTENER"
+SAMPLESCHEMA=FALSE
+DATABASETYPE="MULTIPURPOSE"
+CHARACTERSET="{{ database_characterset|default('AL32UTF8') }}"
 
 ansible_vars_apacheds = {
   apacheds_version  = "apacheds-2.0.0.AM25-default"
