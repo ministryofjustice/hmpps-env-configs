@@ -22,25 +22,6 @@ ansible_vars_oracle_db = {
   database_characterset         = "AL32UTF8"
 }
 
-GDBNAME={{ database_global_database_name|default('dnda') }}
-SID={{ database_sid|default('dnda') }}
-TEMPLATENAME="General_Purpose.dbc"
-SYSPASSWORD="{{ oradb_sys_password|default('d3l1u5ag41n') }}"
-SYSTEMPASSWORD="{{ oradb_system_password|default('d3l1u5ag41n') }}"
-EMCONFIGURATION="NONE"
-SYSMANPASSWORD="{{ oradb_sysman_password|default('d3l1u5ag41') }}"
-DBSNMPPASSWORD="{{ oradb_dbsnmp_password|default('d3l1u5ag41n') }}"
-STORAGETYPE=ASM
-DISKGROUPNAME=DATA
-ASMSNMP_PASSWORD="{{ oradb_asmsnmp_password|default('d3l1u5ag41n') }}"
-RECOVERYGROUPNAME=FLASH
-AUTOMATICMEMORYMANAGEMENT="TRUE"
-TOTALMEMORY="1024"
-LISTENERS="LISTENER"
-SAMPLESCHEMA=FALSE
-DATABASETYPE="MULTIPURPOSE"
-CHARACTERSET="{{ database_characterset|default('AL32UTF8') }}"
-
 ansible_vars_apacheds = {
   apacheds_version  = "apacheds-2.0.0.AM25-default"
   ldap_protocol     = "ldap"
