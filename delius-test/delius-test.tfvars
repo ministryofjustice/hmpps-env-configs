@@ -8,7 +8,9 @@ public_ssl_arn = ""
 
 instance_type_weblogic = "t2.large"
 
-instance_type_db = "t2.large"
+instance_type_db = "r5.large"
 
 egress_443 = true
 egress_80 = true
+
+ndelius_version = "4.1.7.1"
