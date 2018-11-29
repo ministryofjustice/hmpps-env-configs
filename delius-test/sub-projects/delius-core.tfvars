@@ -11,6 +11,17 @@ egress_80 = true
 
 ndelius_version = "4.1.7.1"
 
+ansible_vars_oracle_db = {
+  service_user_name             = "oracle"
+  database_global_database_name = "DNDA"
+  database_sid                  = "DNDA"
+  ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
+  ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
+  ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
+  ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
+  ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
+  database_characterset         = "AL32UTF8"
+}
 
 ansible_vars_apacheds = {
   apacheds_version  = "apacheds-2.0.0.AM25-default"
