@@ -34,7 +34,7 @@ ansible_vars_apacheds = {
 }
 
 ansible_vars = {
-  setup_datasources = "false"
+  setup_datasources = "true"
   #s3_dependencies_bucket = derived from dependencies_bucket_arn
   database_host = "delius-db"
   alfresco_host = "alfresco"
