@@ -29,8 +29,9 @@ ansible_vars_apacheds = {
   # ldap_port       = "${var.ldap_ports["ldap"]}"
   bind_user         = "uid=admin,ou=system"
   # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
-  partition_id      = "moj"
-  create_test_users = "yes"
+  partition_id      = "moj"  
+  import_users_ldif = "IFSR3-181204.ldif"
+  sanitize_oid_ldif = "yes"
 }
 
 ansible_vars = {
