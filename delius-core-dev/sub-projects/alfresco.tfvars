@@ -67,7 +67,7 @@ az_asg_desired = {
 
   az2 = "1"
 
-  az3 = "1"
+  az3 = "0"
 }
 
 az_asg_max = {
@@ -75,7 +75,7 @@ az_asg_max = {
 
   az2 = "1"
 
-  az3 = "1"
+  az3 = "0"
 }
 
 az_asg_min = {
@@ -83,7 +83,7 @@ az_asg_min = {
 
   az2 = "1"
 
-  az3 = "1"
+  az3 = "0"
 }
 
 asg_instance_type = "t2.large"
