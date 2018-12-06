@@ -64,7 +64,7 @@ alfresco_instance_ami = {
 az_asg_desired = {
   az1 = "1"
 
-  az2 = "0"
+  az2 = "1"
 
   az3 = "0"
 }
@@ -72,7 +72,7 @@ az_asg_desired = {
 az_asg_max = {
   az1 = "2"
 
-  az2 = "0"
+  az2 = "1"
 
   az3 = "0"
 }
@@ -80,7 +80,7 @@ az_asg_max = {
 az_asg_min = {
   az1 = "1"
 
-  az2 = "0"
+  az2 = "1"
 
   az3 = "0"
 }
