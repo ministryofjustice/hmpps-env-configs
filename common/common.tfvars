@@ -6,6 +6,11 @@ availability_zone = {
   az3 = "eu-west-2c"
 }
 
+# LB Account is used for ALB logs to S3 bucket.
+# This is fixed for each region. if region changes, this changes
+lb_account_id = "652711504416"
+
+
 route53_domain_private = "probation.hmpps.dsd.io"
 
 # ENVIRONMENT REMOTE STATES
