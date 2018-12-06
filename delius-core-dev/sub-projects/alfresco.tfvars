@@ -88,6 +88,8 @@ az_asg_min = {
 
 asg_instance_type = "t2.large"
 
+alfresco_jvm_memory = "4G"
+
 # common
 allowed_ssh_cidr = [
   "51.148.142.120/32",  #Brett Home
