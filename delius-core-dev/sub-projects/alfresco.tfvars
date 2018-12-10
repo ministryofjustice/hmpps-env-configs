@@ -54,11 +54,11 @@ allowed_cidr_block = [
 # ALFRESCO AMI
 # OLD AMI ID: ami-054fe3c0cbbdd687e
 alfresco_instance_ami = {
-  az1 = "ami-08ca03668a220fa44"
+  az1 = "ami-0fc507e7616c32ade"
 
-  az2 = "ami-08ca03668a220fa44"
+  az2 = "ami-0fc507e7616c32ade"
 
-  az3 = "ami-08ca03668a220fa44"
+  az3 = "ami-0fc507e7616c32ade"
 }
 
 # ASG Configuration
@@ -86,7 +86,7 @@ az_asg_min = {
   az3 = "0"
 }
 
-asg_instance_type = "t2.large"
+asg_instance_type = "m5.xlarge"
 
 alfresco_jvm_memory = "4G"
 
