@@ -29,11 +29,9 @@ spg_app_name = "spg"
 
 ## Delius Core
 weblogic_domain_ports = {
-  ndelius_admin       = "7001"
-  ndelius_managed     = "7001"
-  interface_admin     = "7001"
-  interface_managed   = "7001" #TODO: check port for api calls
-  spg_admin           = "7001"
+  weblogic     = "7001"
+  weblogic_tls = "7002"
+  activemq     = "61617"
   spg_jms_broker      = "61616"
   spg_jms_broker_ssl  = "61617"
 }
