@@ -9,12 +9,12 @@ instance_type_db = "t2.2xlarge"
 egress_443 = true
 egress_80 = true
 
-ndelius_version = "4.1.7.1"
+ndelius_version = "4.1.7.2"
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DNDA"
-  database_sid                  = "DNDA"
+  database_global_database_name = "SANNDA"
+  database_sid                  = "SANNDA"
   ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
@@ -64,7 +64,7 @@ ansible_vars = {
   jvm_mem_args = "-Xms2g -Xmx2g"
 
   database_port = "1521"
-  database_sid = "DNDA"
+  database_sid = "SANNDA"
   #database_password = "/${environment_name}/delius-core/oracle-database/db/delius_app_schema_password"
 
   alfresco_port = "80"

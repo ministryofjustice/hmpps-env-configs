@@ -6,6 +6,11 @@ availability_zone = {
   az3 = "eu-west-2c"
 }
 
+# LB Account is used for ALB logs to S3 bucket.
+# This is fixed for each region. if region changes, this changes
+lb_account_id = "652711504416"
+
+
 route53_domain_private = "probation.hmpps.dsd.io"
 
 # ENVIRONMENT REMOTE STATES
@@ -63,7 +68,7 @@ user_access_cidr_blocks = [
   "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
-  "35.178.198.157/32",  #Engineering Jenkins Windows Slave
+  "3.8.97.195/32",      #Engineering Jenkins Windows Slave   
   "18.130.186.182/32",  #TEST  test-test-windows-injector-0
   "35.178.200.180/32",  #TEST  test-test-windows-injector-1
   "35.176.195.86/32",   #TEST  test-test-windows-loadrunner
