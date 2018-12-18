@@ -29,9 +29,9 @@ spg_app_name = "spg"
 
 ## Delius Core
 weblogic_domain_ports = {
-  weblogic     = "7001"
-  weblogic_tls = "7002"
-  activemq     = "61617"
+  weblogic_port     = "7001"
+  weblogic_tls_port = "7002"
+  activemq_port     = "61617"
   spg_jms_broker      = "61616"
   spg_jms_broker_ssl  = "61617"
 }
