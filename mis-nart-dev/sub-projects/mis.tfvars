@@ -8,6 +8,8 @@ cloudwatch_log_retention = 14
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
+public_ssl_arn = "arn:aws:acm:eu-west-2:723123699647:certificate/0b97aef6-3c80-48c2-818c-855d493b2d81"
+
 # ALLOWED CIDRS
 allowed_cidr_block = [
   "51.148.142.120/32", #Brett Home
