@@ -71,6 +71,8 @@ user_access_cidr_blocks = [
   "35.178.200.180/32",  #TEST  test-test-windows-injector-1
   "35.176.195.86/32",   #TEST  test-test-windows-loadrunner
   "51.148.144.179/32",  #Brett's Office IP
+  "194.75.210.208/28",  #BCL
+  "213.48.246.99/32",   #BCL
 ]
 
 # jenkins access
