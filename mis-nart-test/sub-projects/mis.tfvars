@@ -1,3 +1,8 @@
+mis_app_name = "mis"
+
+# Windows admin password length
+password_length = "12"
+
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
@@ -9,6 +14,16 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
 public_ssl_arn = "arn:aws:acm:eu-west-2:723123699647:certificate/0b97aef6-3c80-48c2-818c-855d493b2d81"
+
+# ENVIRONMENT REMOTE STATES
+eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
+
+# ENVIRONMENT ROLE ARNS
+eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
+
+eng_root_arn = "arn:aws:iam::895523100917:root"
+
+cross_account_iam_role = "arn:aws:iam::895523100917:role/tf-eu-west-2-hmpps-eng-dev-mis-runtime"
 
 # ALLOWED CIDRS
 allowed_cidr_block = [
