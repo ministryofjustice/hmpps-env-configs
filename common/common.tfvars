@@ -29,11 +29,9 @@ spg_app_name = "spg"
 
 ## Delius Core
 weblogic_domain_ports = {
-  ndelius_admin       = "7001"
-  ndelius_managed     = "7001"
-  interface_admin     = "7001"
-  interface_managed   = "7001" #TODO: check port for api calls
-  spg_admin           = "7001"
+  weblogic_port     = "7001"
+  weblogic_tls_port = "7002"
+  activemq_port     = "61617"
   spg_jms_broker      = "61616"
   spg_jms_broker_ssl  = "61617"
 }
@@ -73,6 +71,8 @@ user_access_cidr_blocks = [
   "35.178.200.180/32",  #TEST  test-test-windows-injector-1
   "35.176.195.86/32",   #TEST  test-test-windows-loadrunner
   "51.148.144.179/32",  #Brett's Office IP
+  "194.75.210.208/28",  #BCL
+  "213.48.246.99/32",   #BCL
 ]
 
 # jenkins access
