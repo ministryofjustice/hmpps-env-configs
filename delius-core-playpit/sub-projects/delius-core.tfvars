@@ -9,7 +9,7 @@ instance_type_db = "t2.2xlarge"
 egress_443 = true
 egress_80 = true
 
-ndelius_version = "4.1.7.2"
+ndelius_version = "4.1.7.3"
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
