@@ -86,9 +86,9 @@ az_asg_min = {
   az3 = "0"
 }
 
-asg_instance_type = "t2.large"
+asg_instance_type = "m4.xlarge"
 
-alfresco_jvm_memory = "4G"
+alfresco_jvm_memory = "8G"
 
 # common
 allowed_ssh_cidr = [
@@ -96,6 +96,7 @@ allowed_ssh_cidr = [
   "109.148.137.148/32", #Don Home
   "81.134.202.29/32",   #Moj VPN
   "217.33.148.210/32",
+  "51.148.144.179/32", # Brett Office
 ] #Digital studio
 
 alfresco_app_name = "alfresco"
