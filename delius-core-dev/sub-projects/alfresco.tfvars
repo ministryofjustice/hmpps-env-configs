@@ -88,7 +88,7 @@ az_asg_min = {
 
 asg_instance_type = "m5.xlarge"
 
-alfresco_jvm_memory = "4G"
+alfresco_jvm_memory = "8G"
 
 # common
 allowed_ssh_cidr = [
