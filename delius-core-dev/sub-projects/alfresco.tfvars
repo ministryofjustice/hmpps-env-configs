@@ -81,7 +81,7 @@ az_asg_max = {
 az_asg_min = {
   az1 = "1"
 
-  az2 = "0"
+  az2 = "1"
 
   az3 = "0"
 }
