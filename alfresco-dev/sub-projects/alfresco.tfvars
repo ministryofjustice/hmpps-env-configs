@@ -40,6 +40,7 @@ self_signed_server_early_renewal_hours = 336
 
 allowed_cidr_block = [
   "51.148.142.120/32",  #Brett Home
+  "51.148.144.179/32",  #Brett Office
   "109.148.151.107/32", #Don Home
   "81.134.202.29/32",   #Moj VPN
   "217.33.148.210/32",  #Digital studio
