@@ -2,6 +2,9 @@
 ## Delius Core Specific
 
 instance_type_weblogic = "t2.large"
+instance_count_weblogic_ndelius = "1"
+instance_count_weblogic_spg = "1"
+instance_count_weblogic_interface = "1"
 
 instance_type_db = "t2.2xlarge"
 #instance_type_db = "r5.large"
