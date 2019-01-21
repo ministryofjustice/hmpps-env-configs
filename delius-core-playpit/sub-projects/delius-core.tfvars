@@ -70,6 +70,8 @@ ansible_vars = {
   database_sid = "DNDA"
   #database_password = "/${environment_name}/delius-core/oracle-database/db/delius_app_schema_password"
 
+  activemq_data_folder = "/activemq-data"
+
   alfresco_port = "80"
   alfresco_office_port = "443"
 
