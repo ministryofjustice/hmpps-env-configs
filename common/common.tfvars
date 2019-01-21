@@ -66,14 +66,13 @@ user_access_cidr_blocks = [
   "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
-  "3.8.156.194/32",      #Engineering Jenkins Windows Slave   
+  "35.178.251.127/32",  #Engineering Jenkins non prod windows slave
   "18.130.186.182/32",  #TEST  test-test-windows-injector-0
   "35.178.200.180/32",  #TEST  test-test-windows-injector-1
   "35.176.195.86/32",   #TEST  test-test-windows-loadrunner
   "51.148.144.179/32",  #Brett's Office IP
   "194.75.210.208/28",  #BCL
   "213.48.246.99/32",   #BCL
-  "35.178.251.127/32",  #Engineering Jenkins non prod windows slave
 ]
 
 # jenkins access
