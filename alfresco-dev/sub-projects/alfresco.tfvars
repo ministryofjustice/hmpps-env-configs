@@ -64,25 +64,25 @@ alfresco_instance_ami = {
 
 # ASG Configuration
 az_asg_desired = {
-  az1 = "1"
+  az1 = "2"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
 
 az_asg_max = {
-  az1 = "1"
+  az1 = "2"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
 
 az_asg_min = {
-  az1 = "1"
+  az1 = "2"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
@@ -97,7 +97,7 @@ allowed_ssh_cidr = [
   "109.148.137.148/32", #Don Home
   "81.134.202.29/32",   #Moj VPN
   "217.33.148.210/32",
-  "51.148.144.179/32", # Brett Office
+  "51.148.144.179/32",  # Brett Office
 ] #Digital studio
 
 alfresco_app_name = "alfresco"
