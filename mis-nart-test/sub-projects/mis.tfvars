@@ -59,7 +59,7 @@ self_signed_server_early_renewal_hours = 336
 # LB
 health_check = [
   {
-    target              = "HTTPS:443/ipa/ui/"
+    target              = "TCP:443"
     interval            = 30
     healthy_threshold   = 2
     unhealthy_threshold = 2
