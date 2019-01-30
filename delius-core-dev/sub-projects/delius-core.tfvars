@@ -2,6 +2,9 @@
 ## Delius Core Specific
 
 instance_type_weblogic = "t2.large"
+instance_count_weblogic_ndelius = "2"
+instance_count_weblogic_spg = "2"
+instance_count_weblogic_interface = "2"
 
 instance_type_db = "t2.2xlarge"
 #instance_type_db = "r5.large"
@@ -9,7 +12,7 @@ instance_type_db = "t2.2xlarge"
 egress_443 = true
 egress_80 = true
 
-ndelius_version = "4.1.7.2"
+ndelius_version = "4.1.7.3"
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
@@ -40,7 +43,7 @@ ansible_vars = {
   database_host = "delius-db"
   alfresco_host = "alfresco"
   alfresco_office_host = "alfresco"
-  ldap_host = "ldap-instance"
+  ldap_host = "ldap-elb"
   spg_host = "gw-int-direct"
 
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
@@ -66,6 +69,8 @@ ansible_vars = {
   database_port = "1521"
   database_sid = "DNDA"
   #database_password = "/${environment_name}/delius-core/oracle-database/db/delius_app_schema_password"
+
+  activemq_data_folder = "/activemq-data"
 
   alfresco_port = "80"
   alfresco_office_port = "443"

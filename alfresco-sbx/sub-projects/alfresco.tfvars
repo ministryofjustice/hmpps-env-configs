@@ -5,7 +5,7 @@ lb_account_id = "652711504416"
 # VPC variables
 cloudwatch_log_retention = 14
 
-route53_sub_domain = "dev.alfresco"
+route53_sub_domain = "sbx.alfresco"
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
@@ -53,36 +53,36 @@ allowed_cidr_block = [
 ]
 
 # ALFRESCO AMI
-# OLD AMI ID: ami-09a429c5ee45af41b
+# OLD AMI ID: ami-054fe3c0cbbdd687e
 alfresco_instance_ami = {
-  az1 = "ami-0a292062fe401e34c"
+  az1 = "ami-06ca022f1590ce6f0"
 
-  az2 = "ami-0a292062fe401e34c"
+  az2 = "ami-06ca022f1590ce6f0"
 
-  az3 = "ami-0a292062fe401e34c"
+  az3 = "ami-06ca022f1590ce6f0"
 }
 
 # ASG Configuration
 az_asg_desired = {
-  az1 = "2"
+  az1 = "1"
 
-  az2 = "0"
+  az2 = "1"
 
   az3 = "0"
 }
 
 az_asg_max = {
-  az1 = "2"
+  az1 = "1"
 
-  az2 = "0"
+  az2 = "1"
 
   az3 = "0"
 }
 
 az_asg_min = {
-  az1 = "2"
+  az1 = "1"
 
-  az2 = "0"
+  az2 = "1"
 
   az3 = "0"
 }
@@ -96,8 +96,8 @@ allowed_ssh_cidr = [
   "51.148.142.120/32",  #Brett Home
   "109.148.137.148/32", #Don Home
   "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
-  "51.148.144.179/32",  # Brett Office
-]
+  "217.33.148.210/32",
+  "51.148.144.179/32", # Brett Office
+] #Digital studio
 
 alfresco_app_name = "alfresco"
