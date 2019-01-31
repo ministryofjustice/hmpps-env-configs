@@ -1,10 +1,10 @@
 # delius-core-dev  delius-core.tfvars
 ## Delius Core Specific
 
-instance_type_weblogic = "t2.large"
-instance_count_weblogic_ndelius = "2"
-instance_count_weblogic_spg = "2"
-instance_count_weblogic_interface = "2"
+instance_type_weblogic = "t2.medium"
+instance_count_weblogic_ndelius = "6"
+instance_count_weblogic_spg = "6"
+instance_count_weblogic_interface = "6"
 
 instance_type_db = "t2.2xlarge"
 #instance_type_db = "r5.large"
