@@ -38,7 +38,7 @@ ansible_vars_apacheds = {
 }
 
 ansible_vars = {
-  setup_datasources = "false"
+  setup_datasources = "true"
   #s3_dependencies_bucket = derived from dependencies_bucket_arn
   database_host = "delius-db"
   alfresco_host = "alfresco"
@@ -46,9 +46,9 @@ ansible_vars = {
   ldap_host = "ldap-elb"
   spg_host = "gw-int-direct"
 
-  ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level = "DEBUG"
+  ndelius_display_name = "National Delius"
+  ndelius_training_mode = "production"
+  ndelius_log_level = "INFO"
   ndelius_analytics_tag = "UA-122274748-2"
   newtech_search_url = "/newTech"
   newtech_pdfgenerator_url = "/newTech"
@@ -58,13 +58,12 @@ ansible_vars = {
 
   domain_name = "NDelius"  # This is defined by the AMI
   server_name = "AdminServer"
-  server_params = "-Xms2048m -Xmx2048m -XX:MaxPermSize=256m"
+  server_params = "-Xms3g -Xmx3g -XX:MaxPermSize=256m"
+  jvm_mem_args = "-Xms3g -Xmx3g"
   weblogic_admin_username = "weblogic"
   #weblogic_admin_password = "/${environment_name}/delius-core/weblogic/${app_name}-domain/weblogic_admin_password"
   server_listen_address = "0.0.0.0"
   #server_listen_port = "${var.weblogic_domain_ports["ndelius_admin"]}"
-
-  jvm_mem_args = "-Xms2g -Xmx2g"
 
   database_port = "1521"
   database_sid = "TSTNDA"

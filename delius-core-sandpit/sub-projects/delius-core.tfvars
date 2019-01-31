@@ -58,13 +58,12 @@ ansible_vars = {
 
   domain_name = "NDelius"  # This is defined by the AMI
   server_name = "AdminServer"
-  server_params = "-Xms2048m -Xmx2048m -XX:MaxPermSize=256m"
+  server_params = "-Xms3g -Xmx3g -XX:MaxPermSize=256m"
+  jvm_mem_args = "-Xms3g -Xmx3g"
   weblogic_admin_username = "weblogic"
   #weblogic_admin_password = "/${environment_name}/delius-core/weblogic/${app_name}-domain/weblogic_admin_password"
   server_listen_address = "0.0.0.0"
   #server_listen_port = "${var.weblogic_domain_ports["ndelius_admin"]}"
-
-  jvm_mem_args = "-Xms2g -Xmx2g"
 
   database_port = "1521"
   database_sid = "SANNDA"
