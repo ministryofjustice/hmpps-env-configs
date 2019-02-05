@@ -53,36 +53,36 @@ allowed_cidr_block = [
 ]
 
 # ALFRESCO AMI
-# OLD AMI ID: ami-054fe3c0cbbdd687e
+# OLD AMI ID: ami-09a429c5ee45af41b
 alfresco_instance_ami = {
-  az1 = "ami-06ca022f1590ce6f0"
+  az1 = "ami-0a292062fe401e34c"
 
-  az2 = "ami-06ca022f1590ce6f0"
+  az2 = "ami-0a292062fe401e34c"
 
-  az3 = "ami-06ca022f1590ce6f0"
+  az3 = "ami-0a292062fe401e34c"
 }
 
 # ASG Configuration
 az_asg_desired = {
-  az1 = "1"
+  az1 = "2"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
 
 az_asg_max = {
-  az1 = "1"
+  az1 = "2"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
 
 az_asg_min = {
-  az1 = "1"
+  az1 = "2"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
@@ -97,7 +97,7 @@ allowed_ssh_cidr = [
   "109.148.137.148/32", #Don Home
   "81.134.202.29/32",   #Moj VPN
   "217.33.148.210/32",
-  "51.148.144.179/32", # Brett Office
+  "51.148.144.179/32",  # Brett Office
 ] #Digital studio
 
 alfresco_app_name = "alfresco"
