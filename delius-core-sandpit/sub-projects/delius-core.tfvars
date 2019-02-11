@@ -24,6 +24,8 @@ ansible_vars_oracle_db = {
   ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
   database_characterset         = "AL32UTF8"
+  database_bootstrap_restore    = "True" # whether primary db has db restore on bootstrap
+  database_backup               = "dbbackup/dev/delius" # path in S3 to directory backup files
 }
 
 ansible_vars_apacheds = {
