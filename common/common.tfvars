@@ -92,3 +92,60 @@ jenkins_access_cidr_blocks = [
 
 # dev
 dependencies_bucket_arn = "arn:aws:s3:::tf-eu-west-2-hmpps-eng-dev-delius-core-dependencies-s3bucket"
+
+
+database_size_small = {
+  instance_type = "t3.large"
+  iops_of_disks = "1000"
+  total_storage = "200"
+  disk_set_1_number_of_disks = 2 # 2 x 100GB disks
+  disk_set_2_number_of_disks = "0"
+  disk_set_3_number_of_disks = "0"
+  disk_set_4_number_of_disks = "0"
+  disk_set_1_offset =  5 # we want to start labeling volumes at "f"
+  disk_set_2_offset =  7 # disk_set_1_number_of_disks + disk_set_1_offset
+  disk_set_3_offset =  7 # disk_set_2_number_of_disks + disk_set_2_offset
+  disk_set_4_offset =  7 # disk_set_3_number_of_disks + disk_set_3_offset
+}
+
+database_size_medium = {
+  instance_type = "r5.xlarge"
+  iops_of_disks = "1000"
+  total_storage = "1000"
+  disk_set_1_number_of_disks = 2 # 2 x 500GB disks
+  disk_set_2_number_of_disks = "0"
+  disk_set_3_number_of_disks = "0"
+  disk_set_4_number_of_disks = "0"
+  disk_set_1_offset =  5 # we want to start labeling volumes at "f"
+  disk_set_2_offset =  7 # disk_set_1_number_of_disks + disk_set_1_offset
+  disk_set_3_offset =  7 # disk_set_2_number_of_disks + disk_set_2_offset
+  disk_set_4_offset =  7 # disk_set_3_number_of_disks + disk_set_3_offset
+}
+
+database_size_large = {
+  instance_type = "r5.2xlarge"
+  iops_of_disks = "1000"
+  total_storage = "8000"
+  disk_set_1_number_of_disks = 8 # 8 x 1000GB disks
+  disk_set_2_number_of_disks = "0"
+  disk_set_3_number_of_disks = "0"
+  disk_set_4_number_of_disks = "0"
+  disk_set_1_offset =  5 # we want to start labeling volumes at "f"
+  disk_set_2_offset =  13 # disk_set_1_number_of_disks + disk_set_1_offset
+  disk_set_3_offset =  13 # disk_set_2_number_of_disks + disk_set_2_offset
+  disk_set_4_offset =  13 # disk_set_3_number_of_disks + disk_set_3_offset
+}
+
+database_size_x_large = {
+  instance_type = "r5.4xlarge"
+  iops_of_disks = "1000"
+  total_storage = "16000"
+  disk_set_1_number_of_disks = 16 # 16 x 1000GB disks
+  disk_set_2_number_of_disks = "0"
+  disk_set_3_number_of_disks = "0"
+  disk_set_4_number_of_disks = "0"
+  disk_set_1_offset =  5 # we want to start labeling volumes at "f"
+  disk_set_2_offset =  21 # disk_set_1_number_of_disks + disk_set_1_offset
+  disk_set_3_offset =  21 # disk_set_2_number_of_disks + disk_set_2_offset
+  disk_set_4_offset =  21 # disk_set_3_number_of_disks + disk_set_3_offset
+}
