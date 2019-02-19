@@ -20,14 +20,7 @@ db_size_delius_core = {
   instance_type = "t3.large"
   iops_of_disks = "1000"
   total_storage = "200"
-  disk_set_1_number_of_disks = 2 # 2 x 100GB disks
-  disk_set_2_number_of_disks = "0"
-  disk_set_3_number_of_disks = "0"
-  disk_set_4_number_of_disks = "0"
-  disk_set_1_offset =  5 # we want to start labeling volumes at "f"
-  disk_set_2_offset =  7 # disk_set_1_number_of_disks + disk_set_1_offset
-  disk_set_3_offset =  7 # disk_set_2_number_of_disks + disk_set_2_offset
-  disk_set_4_offset =  7 # disk_set_3_number_of_disks + disk_set_3_offset
+  number_of_disks = 2 # 2 x 100GB disks
 }
 
 ansible_vars_oracle_db = {
