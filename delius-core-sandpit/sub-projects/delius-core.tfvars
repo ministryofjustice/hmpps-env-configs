@@ -15,7 +15,7 @@ ndelius_version = "4.1.7.3"
 
 database_size = "medium"
 
-db_delius_core = {
+db_size_delius_core = {
   database_size = "small"
   instance_type = "t3.large"
   iops_of_disks = "1000"
