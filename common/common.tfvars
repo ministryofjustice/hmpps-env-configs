@@ -95,6 +95,7 @@ dependencies_bucket_arn = "arn:aws:s3:::tf-eu-west-2-hmpps-eng-dev-delius-core-d
 
 
 database_size_small = {
+  database_size = "small"
   instance_type = "t3.large"
   iops_of_disks = "1000"
   total_storage = "200"
@@ -109,6 +110,7 @@ database_size_small = {
 }
 
 database_size_medium = {
+  database_size = "medium"
   instance_type = "r5.xlarge"
   iops_of_disks = "1000"
   total_storage = "1000"
@@ -123,6 +125,7 @@ database_size_medium = {
 }
 
 database_size_large = {
+  database_size = "large"
   instance_type = "r5.2xlarge"
   iops_of_disks = "1000"
   total_storage = "8000"
@@ -137,6 +140,7 @@ database_size_large = {
 }
 
 database_size_x_large = {
+  database_size = "x_large"
   instance_type = "r5.4xlarge"
   iops_of_disks = "1000"
   total_storage = "16000"
