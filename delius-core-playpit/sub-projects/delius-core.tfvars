@@ -14,6 +14,15 @@ egress_80 = true
 
 ndelius_version = "4.1.7.3"
 
+db_size_delius_core = {
+  database_size  = "small"
+  instance_type  = "t3.large"
+  disk_iops      = 1000
+  disks_quantity = 2  # Do not decrease this
+  disk_size      = 100 # Do not decrease this
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
+}
+
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
   database_global_database_name = "DNDA"
@@ -32,7 +41,7 @@ ansible_vars_apacheds = {
   # ldap_port       = "${var.ldap_ports["ldap"]}"
   bind_user         = "uid=admin,ou=system"
   # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
-  partition_id      = "moj"  
+  partition_id      = "moj"
   import_users_ldif = "IFSR3-181204.ldif"
   sanitize_oid_ldif = "yes"
 }

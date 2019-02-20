@@ -6,13 +6,19 @@ instance_count_weblogic_ndelius = "6"
 instance_count_weblogic_spg = "6"
 instance_count_weblogic_interface = "6"
 
-instance_type_db = "t2.2xlarge"
-#instance_type_db = "r5.large"
-
 egress_443 = true
 egress_80 = true
 
 ndelius_version = "4.1.7.3"
+
+db_size_delius_core = {
+  database_size  = "small"
+  instance_type  = "t3.large"
+  disk_iops      = 1000
+  disks_quantity = 2  # Do not decrease this
+  disk_size      = 100 # Do not decrease this
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
+}
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
