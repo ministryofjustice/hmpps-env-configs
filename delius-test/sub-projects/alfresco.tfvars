@@ -40,7 +40,7 @@ self_signed_server_early_renewal_hours = 336
 
 allowed_cidr_block = [
   "51.148.142.120/32",  #Brett Home
-  "109.148.158.168/32", #Don Home
+  "109.148.151.107/32", #Don Home
   "81.134.202.29/32",   #Moj VPN
   "217.33.148.210/32",  #Digital studio
   "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
@@ -53,18 +53,18 @@ allowed_cidr_block = [
 
 # ALFRESCO AMI
 alfresco_instance_ami = {
-  az1 = ""
+  az1 = "ami-00b278e848774b63f"
 
-  az2 = ""
+  az2 = "ami-00b278e848774b63f"
 
-  az3 = ""
+  az3 = "ami-00b278e848774b63f"
 }
 
 # ASG Configuration
 az_asg_desired = {
   az1 = "1"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
@@ -72,7 +72,7 @@ az_asg_desired = {
 az_asg_max = {
   az1 = "2"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
@@ -80,12 +80,14 @@ az_asg_max = {
 az_asg_min = {
   az1 = "1"
 
-  az2 = "1"
+  az2 = "0"
 
   az3 = "0"
 }
 
-asg_instance_type = "t2.large"
+asg_instance_type = "m4.xlarge"
+
+alfresco_jvm_memory = "8G"
 
 # common
 allowed_ssh_cidr = [
