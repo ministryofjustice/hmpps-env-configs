@@ -1,3 +1,3 @@
-vpc_supernet = "10.161.81.0/24"
+vpc_supernet = "10.162.80.0/20"
 
-aws_nameserver = "10.161.81.2"
+aws_nameserver = "10.162.80.2"
