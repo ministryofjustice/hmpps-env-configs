@@ -11,6 +11,7 @@ egress_80 = true
 
 ndelius_version = "4.1.7.3"
 
+# ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size  = "small"
   instance_type  = "t3.large"

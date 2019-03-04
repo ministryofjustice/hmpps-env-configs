@@ -6,13 +6,12 @@ instance_count_weblogic_ndelius = "6"
 instance_count_weblogic_spg = "6"
 instance_count_weblogic_interface = "6"
 
-instance_type_db = "t2.2xlarge" ## This will be deprecated as database_size will determine instance type
-
 egress_443 = true
 egress_80 = true
 
 ndelius_version = "4.1.7.3"
 
+# ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size  = "small"
   instance_type  = "t3.large"

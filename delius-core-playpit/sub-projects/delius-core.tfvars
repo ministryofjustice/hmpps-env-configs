@@ -6,14 +6,12 @@ instance_count_weblogic_ndelius = "1"
 instance_count_weblogic_spg = "1"
 instance_count_weblogic_interface = "1"
 
-instance_type_db = "t2.2xlarge"
-#instance_type_db = "r5.large"
-
 egress_443 = true
 egress_80 = true
 
 ndelius_version = "4.1.7.3"
 
+# ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size  = "small"
   instance_type  = "t3.large"
@@ -33,6 +31,11 @@ ansible_vars_oracle_db = {
   ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
   database_characterset         = "AL32UTF8"
+  database_bootstrap_restore    = "True" # whether primary db has db restore on bootstrap
+  database_backup               = "dbbackup/dev/delius" # path in S3 to directory backup files
+  database_backup_sys_passwd    = "/dbbackup/delius-core-dev/delius-core/oracle-database/db/oradb_sys_password" # ssm parameter store name for db backup password
+  database_backup_location      = "/u01/backup" #default for local testing
+  oracle_dbca_template_file     = "database"
 }
 
 ansible_vars_apacheds = {
