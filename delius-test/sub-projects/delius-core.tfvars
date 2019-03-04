@@ -34,6 +34,7 @@ ansible_vars_oracle_db = {
   database_backup               = "dbbackup/dev/delius" # path in S3 to directory backup files
   database_backup_sys_passwd    = "/dbbackup/delius-core-dev/delius-core/oracle-database/db/oradb_sys_password" # ssm parameter store name for db backup password
   database_backup_location      = "/u01/backup" #default for local testing
+  oracle_dbca_template_file     = "database"
 }
 
 ansible_vars_apacheds = {
