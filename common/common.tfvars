@@ -92,3 +92,42 @@ jenkins_access_cidr_blocks = [
 
 # dev
 dependencies_bucket_arn = "arn:aws:s3:::tf-eu-west-2-hmpps-eng-dev-delius-core-dependencies-s3bucket"
+
+## These are the reference maps for the database sizes
+## copy block into the appropriate env config file and rename
+
+database_size_small = {
+  database_size  = "small"
+  instance_type  = "t3.large"
+  disk_iops      = 1000
+  disks_quantity = 2  # Do not decrease this
+  disk_size      = 100 # Do not decrease this
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
+}
+
+database_size_medium = {
+  database_size  = "medium"
+  instance_type  = "r5.xlarge"
+  disk_iops      = 1000
+  disks_quantity = 2  # Do not decrease this
+  disk_size      = 500 # Do not decrease this
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
+}
+
+database_size_large = {
+  database_size  = "large"
+  instance_type  = "r5.2xlarge"
+  disk_iops      = 1000
+  disks_quantity = 8  # Do not decrease this
+  disk_size      = 1000 # Do not decrease this
+  # total_storage  = 8000 # This should equal disks_quantity x disk_size
+}
+
+database_size_x_large = {
+  database_size  = "x_large"
+  instance_type  = "r5.4xlarge"
+  disk_iops      = 1000
+  disks_quantity = 16  # Do not decrease this
+  disk_size      = 1000 # Do not decrease this
+  # total_storage  = 16000 # This should equal disks_quantity x disk_size
+}
