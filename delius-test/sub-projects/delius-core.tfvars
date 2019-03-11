@@ -93,7 +93,7 @@ ansible_vars = {
 }
 
 # Add MTCNovo and Seetec IPs
-user_access_cidr_blocks = "${concat(var.user_access_cidr_blocks, list(
+user_access_cidr_blocks = ["${concat(var.user_access_cidr_blocks, list(
   "62.25.109.202/32",
   "80.86.46.16/30"
-))}"
+))}"]
