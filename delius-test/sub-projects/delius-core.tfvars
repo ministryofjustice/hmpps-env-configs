@@ -91,3 +91,9 @@ ansible_vars = {
   #ldap_admin_password = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
   #partition_id = "${var.ansible_vars_apacheds["bind_user"]}"
 }
+
+# Add MTCNovo and Seetec IPs
+user_access_cidr_blocks = "${concat(var.user_access_cidr_blocks, list(
+  "62.25.109.202/32",
+  "80.86.46.16/30"
+))}"
