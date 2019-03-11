@@ -56,5 +56,5 @@ asg_instance_type = "t2.medium"
 
 spg_app_name = "gw"
 
-s3_bucket_config = "dlc-sandpit-spgw-s3bucket"
+s3_bucket_config = "dlc-sandpit-gw-s3bucket"
 spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/sandpit-mvp2-docker"
