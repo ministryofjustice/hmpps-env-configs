@@ -14,11 +14,11 @@ lb_account_id = "652711504416"
 route53_domain_private = "probation.hmpps.dsd.io"
 
 # ENVIRONMENT REMOTE STATES
-eng_remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-prod-remote-state"
+eng_remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
 
 bastion_remote_state_bucket_name = "tf-eu-west-2-hmpps-bastion-prod-remote-state"
 
-eng_role_arn = "arn:aws:iam::077643444046:role/terraform"
+eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
 
 bastion_role_arn = "arn:aws:iam::077643444046:role/terraform"
 
@@ -93,7 +93,7 @@ jenkins_access_cidr_blocks = [
 # dependencies_bucket_arn = "arn:aws:s3:::tf-eu-west-2-hmpps-eng-dev-artefacts-s3bucket"
 
 # dev
-dependencies_bucket_arn = "arn:aws:s3:::tf-eu-west-2-hmpps-eng-prod-delius-core-dependencies-s3bucket"
+dependencies_bucket_arn = "arn:aws:s3:::tf-eu-west-2-hmpps-eng-dev-delius-core-dependencies-s3bucket"
 
 ## These are the reference maps for the database sizes
 ## copy block into the appropriate env config file and rename
