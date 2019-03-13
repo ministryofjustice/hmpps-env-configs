@@ -91,3 +91,5 @@ ansible_vars = {
   #ldap_admin_password = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
   #partition_id = "${var.ansible_vars_apacheds["bind_user"]}"
 }
+
+env_user_access_cidr_blocks = []
