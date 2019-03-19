@@ -37,3 +37,15 @@ self_signed_server_validity_period_hours = 2160
 self_signed_server_early_renewal_hours = 336
 
 app_name = "new-tech"
+
+# LB
+
+case-notes-health_check = [
+  {
+    target              = "HTTP:8080"
+    interval            = 30
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
