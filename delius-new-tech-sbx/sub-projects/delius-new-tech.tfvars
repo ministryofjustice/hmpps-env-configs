@@ -49,3 +49,12 @@ case-notes-health_check = [
     timeout             = 5
   },
 ]
+
+case-notes-listener = [
+  {
+    instance_port     = "8080"
+    instance_protocol = "HTTP"
+    lb_port           = "80"
+    lb_protocol       = "HTTP"
+  },
+]
