@@ -42,7 +42,7 @@ app_name = "new-tech"
 
 case-notes-health_check = [
   {
-    target              = "HTTP:8080"
+    target              = "HTTP:8080/"
     interval            = 30
     healthy_threshold   = 2
     unhealthy_threshold = 2
