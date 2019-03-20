@@ -58,3 +58,6 @@ case-notes-listener = [
     lb_protocol       = "HTTP"
   },
 ]
+
+# images
+case-note-image-url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/case-notes-poll-push:latest"
