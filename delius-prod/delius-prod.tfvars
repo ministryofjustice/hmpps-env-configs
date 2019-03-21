@@ -14,3 +14,7 @@ egress_443 = true
 egress_80 = true
 
 ndelius_version = "4.1.7.3"
+
+route53_domain_private = "service.justice.gov.uk"
+
+subdomain              = "probation"
