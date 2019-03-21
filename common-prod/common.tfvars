@@ -134,6 +134,8 @@ database_size_x_large = {
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
 
+# How long we keep our indices for in elastic search in days
 retention_period = 365
 
+# How long we keep our backups on the efs share in days, we don't have a policy on s3 yet
 backup_retention_days = 30
