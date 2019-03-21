@@ -131,3 +131,7 @@ database_size_x_large = {
   disk_size      = 1000 # Do not decrease this
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
+
+retention_period = 30
+
+backup_retention_days = 7
