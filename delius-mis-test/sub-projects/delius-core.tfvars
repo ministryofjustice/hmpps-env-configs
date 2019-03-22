@@ -1,4 +1,4 @@
-# delius-core-dev  delius-core.tfvars
+# delius-mis-test  delius-core.tfvars
 ## Delius Core Specific
 
 instance_type_weblogic = "t2.medium"
@@ -23,8 +23,8 @@ db_size_delius_core = {
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DNDA"
-  database_sid                  = "DNDA"
+  database_global_database_name = "DMTNDA"
+  database_sid                  = "DMTNDA"
   ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
@@ -78,7 +78,7 @@ ansible_vars = {
   #server_listen_port = "${var.weblogic_domain_ports["ndelius_admin"]}"
 
   database_port = "1521"
-  database_sid = "DNDA"
+  database_sid = "DMTNDA"
   #database_password = "/${environment_name}/delius-core/oracle-database/db/delius_app_schema_password"
 
   activemq_data_folder = "/activemq-data"
