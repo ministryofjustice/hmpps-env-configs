@@ -140,3 +140,5 @@ retention_period = 365
 # How long we keep our backups on the efs share in days, we don't have a policy on s3 yet
 backup_retention_days = 30
 
+# How long do we keep our instance volume snapshots for
+snapshot_retention_days = 30
