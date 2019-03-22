@@ -61,3 +61,6 @@ case-notes-listener = [
 
 # images
 case-notes-image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/case-notes-poll-push:latest"
+
+#delius_endpoint 
+push_base_url = "https://interface.dev.delius-core.probation.hmpps.dsd.io"
