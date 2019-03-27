@@ -31,3 +31,87 @@ self_signed_server_rsa_bits = "2048"
 self_signed_server_validity_period_hours = 2160
 
 self_signed_server_early_renewal_hours = 336
+
+
+# Databases
+## MIS Datamart
+db_size_mis = {
+  database_size  = "small"
+  instance_type  = "t3.large"
+  disk_iops      = 1000
+  disks_quantity = 2  # Do not decrease this
+  disk_size      = 100 # Do not decrease this
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
+}
+
+ansible_vars_mis_db = {
+  service_user_name             = "oracle"
+  database_global_database_name = "DMTMIS"
+  database_sid                  = "DMTMIS"
+  ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
+  ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
+  ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
+  ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
+  ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
+  database_characterset         = "AL32UTF8"
+  database_bootstrap_restore    = "False" # whether primary db has db restore on bootstrap
+  database_backup               = "NotApplicable" # path in S3 to directory backup files
+  database_backup_sys_passwd    = "NotApplicable" # ssm parameter store name for db backup password
+  database_backup_location      = "NotApplicable" #default for local testing
+  oracle_dbca_template_file     = "database"
+}
+
+## Business Objects Repo
+db_size_misboe = {
+  database_size  = "small"
+  instance_type  = "t3.large"
+  disk_iops      = 1000
+  disks_quantity = 2  # Do not decrease this
+  disk_size      = 100 # Do not decrease this
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
+}
+
+ansible_vars_misboe_db = {
+  service_user_name             = "oracle"
+  database_global_database_name = "DMTBOE"
+  database_sid                  = "DMTBOE"
+  ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
+  ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
+  ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
+  ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
+  ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
+  database_characterset         = "AL32UTF8"
+  database_bootstrap_restore    = "False" # whether primary db has db restore on bootstrap
+  database_backup               = "NotApplicable" # path in S3 to directory backup files
+  database_backup_sys_passwd    = "NotApplicable" # ssm parameter store name for db backup password
+  database_backup_location      = "NotApplicable" #default for local testing
+  oracle_dbca_template_file     = "database"
+}
+
+
+## Data Services Repo
+db_size_misdsd = {
+  database_size  = "small"
+  instance_type  = "t3.large"
+  disk_iops      = 1000
+  disks_quantity = 2  # Do not decrease this
+  disk_size      = 100 # Do not decrease this
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
+}
+
+ansible_vars_misdsd_db = {
+  service_user_name             = "oracle"
+  database_global_database_name = "DMTDSD"
+  database_sid                  = "DMTDSD"
+  ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
+  ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
+  ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
+  ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
+  ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
+  database_characterset         = "AL32UTF8"
+  database_bootstrap_restore    = "False" # whether primary db has db restore on bootstrap
+  database_backup               = "NotApplicable" # path in S3 to directory backup files
+  database_backup_sys_passwd    = "NotApplicable" # ssm parameter store name for db backup password
+  database_backup_location      = "NotApplicable" #default for local testing
+  oracle_dbca_template_file     = "database"
+}
