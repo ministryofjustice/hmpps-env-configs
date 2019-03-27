@@ -55,11 +55,11 @@ allowed_cidr_block = [
 # ALFRESCO AMI
 # OLD AMI ID: ami-09a429c5ee45af41b
 alfresco_instance_ami = {
-  az1 = "ami-0a292062fe401e34c"
+  az1 = "ami-07c0cd6545dd23291"
 
-  az2 = "ami-0a292062fe401e34c"
+  az2 = "ami-07c0cd6545dd23291"
 
-  az3 = "ami-0a292062fe401e34c"
+  az3 = "ami-07c0cd6545dd23291"
 }
 
 # ASG Configuration
