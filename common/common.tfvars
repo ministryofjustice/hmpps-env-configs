@@ -93,6 +93,8 @@ jenkins_access_cidr_blocks = [
 # dev
 dependencies_bucket_arn = "arn:aws:s3:::tf-eu-west-2-hmpps-eng-dev-delius-core-dependencies-s3bucket"
 
+migration_bucket_arn = "arn:aws:s3:::tf-eu-west-2-hmpps-eng-prod-artefacts-s3bucket"
+
 ## These are the reference maps for the database sizes
 ## copy block into the appropriate env config file and rename
 
