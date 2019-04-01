@@ -42,6 +42,21 @@ def merge_config_dictionaries(*dicts):
         print(exep)
 
 
+def merge_and_update_dictionary(user, default):
+    merged = default.copy()
+
+    count = 0
+    for item in user['products']:
+        if merged['products'][count]['name'] == item['name']:
+            print item
+            merged['products'][count] = item
+        else:
+            merged['products'].append(item)
+        count += 1
+
+    return merged
+
+
 class FilterModule(object):
 
     def filters(self):
@@ -49,6 +64,7 @@ class FilterModule(object):
             'strip': strip,
             'rstrip': rstrip,
             'lstrip': lstrip,
-            'merge_config_dictionaries': merge_config_dictionaries
+            'merge_config_dictionaries': merge_config_dictionaries,
+            'merge_and_update_dictionary': merge_and_update_dictionary
         }
         return filter_list
