@@ -39,9 +39,9 @@ db_size_mis = {
   database_size  = "small"
   instance_type  = "t3.large"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
-  disk_size      = 100 # Do not decrease this
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  disks_quantity = 4  # Do not decrease this
+  disk_size      = 200 # increased by 100 # Do not decrease this
+  # total_storage  = 800 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_mis_db = {
