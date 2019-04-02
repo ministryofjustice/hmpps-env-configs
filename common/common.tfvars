@@ -145,20 +145,16 @@ snapshot_retention_days = 7
 
 # Default values for NDelius WebLogic bootstrap
 default_ansible_vars = {
-  # Artefact locations
-  s3_dependencies_bucket = "tf-eu-west-2-hmpps-eng-dev-delius-core-dependencies-s3bucket"
-
   # Server/WebLogic config
   domain_name = "NDelius" # This is defined by the AMI, so should not be overridden
   jvm_mem_args = "-Xms3g -Xmx3g"
   server_name = "AdminServer"
   weblogic_admin_username = "weblogic"
   server_listen_address = "0.0.0.0"
-  server_listen_port = 7001
 
   # Database
-  # database_host - Derived in terraform
   setup_datasources = "true"
+  database_host = "delius-db"
 
   # Alfresco
   alfresco_host = "alfresco"
@@ -168,13 +164,11 @@ default_ansible_vars = {
 
   # SPG
   spg_host = "gw-int-direct"
+  activemq_data_folder = "/activemq-data"
 
   # LDAP
   ldap_host = "ldap-elb"
   ldap_readonly_host = "ldap-readonly-elb"
-  ldap_port = 10389
-  ldap_principal = "uid=admin,ou=system"
-  ldap_admin_password = "secret"
   partition_id = "moj"
   ldap_base = "dc=moj,dc=com"
   ldap_user_base = "cn=Users,dc=moj,dc=com"
