@@ -50,46 +50,9 @@ ansible_vars_apacheds = {
 }
 
 ansible_vars = {
-  setup_datasources = "true"
-  #s3_dependencies_bucket = derived from dependencies_bucket_arn
-  database_host = "delius-db"
-  alfresco_host = "alfresco"
-  alfresco_office_host = "alfresco"
-  ldap_host = "ldap-elb"
-  spg_host = "gw-int-direct"
-
-  ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level = "DEBUG"
-  ndelius_analytics_tag = "UA-122274748-2"
-  newtech_search_url = "/newTech"
-  newtech_pdfgenerator_url = "/newTech"
-  usermanagement_url = "/umt/"
-  nomis_url = "https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api"
-
-
-  domain_name = "NDelius"  # This is defined by the AMI
-  server_name = "AdminServer"
-  server_params = "-Xms3g -Xmx3g -XX:MaxPermSize=256m"
-  jvm_mem_args = "-Xms3g -Xmx3g"
-  weblogic_admin_username = "weblogic"
-  #weblogic_admin_password = "/${environment_name}/delius-core/weblogic/${app_name}-domain/weblogic_admin_password"
-  server_listen_address = "0.0.0.0"
-  #server_listen_port = "${var.weblogic_domain_ports["ndelius_admin"]}"
-
-  database_port = "1521"
-  database_sid = "DNDA"
-  #database_password = "/${environment_name}/delius-core/oracle-database/db/delius_app_schema_password"
-
-  activemq_data_folder = "/activemq-data"
-
-  alfresco_port = "80"
-  alfresco_office_port = "443"
-
-  #ldap_port       = "${var.ldap_ports["ldap"]}"
-  #ldap_principal = "${var.ansible_vars_apacheds["bind_user"]}"
-  #ldap_admin_password = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
-  #partition_id = "${var.ansible_vars_apacheds["bind_user"]}"
+  ndelius_display_name = "National Delius - TEST USE ONLY"
+  ndelius_training_mode = "training"
+  database_sid = "TRTNDA"
 }
 
 env_user_access_cidr_blocks = []
