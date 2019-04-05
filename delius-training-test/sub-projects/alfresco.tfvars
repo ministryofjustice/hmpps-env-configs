@@ -71,7 +71,7 @@ az_asg_desired = {
 }
 
 az_asg_max = {
-  az1 = "1"
+  az1 = "2"
 
   az2 = "0"
 
