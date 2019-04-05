@@ -63,7 +63,7 @@ alfresco_instance_ami = {
 
 # ASG Configuration
 az_asg_desired = {
-  az1 = "2"
+  az1 = "1"
 
   az2 = "0"
 
@@ -79,7 +79,7 @@ az_asg_max = {
 }
 
 az_asg_min = {
-  az1 = "2"
+  az1 = "1"
 
   az2 = "0"
 
