@@ -12,6 +12,9 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
 
 # ENVIRONMENT ROLE ARNS
+
+#895523100917 = account for hmpps-engineering-non-prod
+
 eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
 
 eng_root_arn = "arn:aws:iam::895523100917:root"
@@ -57,7 +60,7 @@ asg_instance_type = "t2.medium"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-core-sandpit-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/sandpit-mvp2-docker"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/sandpit"
 
 
 
