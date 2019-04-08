@@ -17,8 +17,8 @@ db_size_delius_core = {
   instance_type  = "t3.large"
   disk_iops      = 1000
   disks_quantity = 2  # Do not decrease this
-  disk_size      = 100 # Do not decrease this
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  disk_size      = 200 # Do not decrease this
+  # total_storage  = 400 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
@@ -54,7 +54,7 @@ ansible_vars = {
   database_sid = "POT1NDA"
 }
 
-env_user_access_cidr_blocks = [
+env_user_access_cidr_blocks = [	env_user_access_cidr_blocks = []
   "62.25.109.202/32",   # MTCNovo PO
   "80.86.46.16/30",     # Seetec PO
   "46.227.51.224/29",   # Interserve
