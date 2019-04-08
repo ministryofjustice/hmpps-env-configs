@@ -54,7 +54,7 @@ ansible_vars = {
   database_sid = "POT1NDA"
 }
 
-env_user_access_cidr_blocks = [	env_user_access_cidr_blocks = []
+env_user_access_cidr_blocks = [
   "62.25.109.202/32",   # MTCNovo PO
   "80.86.46.16/30",     # Seetec PO
   "46.227.51.224/29",   # Interserve
