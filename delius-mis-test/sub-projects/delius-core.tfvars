@@ -54,4 +54,11 @@ ansible_vars = {
   database_sid = "DMTNDA"
 }
 
-env_user_access_cidr_blocks = []
+env_user_access_cidr_blocks = [
+  # ARK internet (DOM1)
+  "195.59.75.0/24",
+  "194.33.192.0/25",
+  "194.33.193.0/25",
+  "194.33.196.0/25",
+  "194.33.197.0/25"
+]
