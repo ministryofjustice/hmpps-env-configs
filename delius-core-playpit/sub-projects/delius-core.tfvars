@@ -56,7 +56,10 @@ ansible_vars = {
   alfresco_host = "alfresco"
   alfresco_office_host = "alfresco"
   ldap_host = "ldap-elb"
-  spg_host = "spgw-mpx-int"
+
+  #SPG jms may get moved to amazonMQ (and thereby wont be hosted on the mpx server)
+  #spg_host = "spgw-mpx-int"
+  spg_jms_host = "spgw-jms-int"
 
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
   ndelius_training_mode = "development"
