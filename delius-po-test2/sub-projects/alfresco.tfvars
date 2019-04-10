@@ -5,7 +5,7 @@ lb_account_id = "652711504416"
 # VPC variables
 cloudwatch_log_retention = 14
 
-route53_sub_domain = "dev.alfresco"
+route53_sub_domain = "delius-po-test2.alfresco"
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
@@ -54,16 +54,16 @@ allowed_cidr_block = [
 # ALFRESCO AMI
 # OLD AMI ID: ami-08ca03668a220fa44
 alfresco_instance_ami = {
-  az1 = "ami-00b278e848774b63f"
+  az1 = "ami-07c0cd6545dd23291"
 
-  az2 = "ami-00b278e848774b63f"
+  az2 = "ami-07c0cd6545dd23291"
 
-  az3 = "ami-00b278e848774b63f"
+  az3 = "ami-07c0cd6545dd23291"
 }
 
 # ASG Configuration
 az_asg_desired = {
-  az1 = "2"
+  az1 = "1"
 
   az2 = "0"
 
@@ -79,7 +79,7 @@ az_asg_max = {
 }
 
 az_asg_min = {
-  az1 = "2"
+  az1 = "1"
 
   az2 = "0"
 

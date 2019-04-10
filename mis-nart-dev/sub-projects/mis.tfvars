@@ -10,19 +10,10 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
 public_ssl_arn = "arn:aws:acm:eu-west-2:723123699647:certificate/0b97aef6-3c80-48c2-818c-855d493b2d81"
 
-# ALLOWED CIDRS
-allowed_cidr_block = [
-  "51.148.142.120/32", #Brett Home
-  "86.132.187.22/32",  #Don Home
-  "81.134.202.29/32",  #Moj VPN
-  "217.33.148.210/32", #Digital studio
-  "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
-  "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
-  "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "194.75.210.218/32", #MIS Tolomy
-  "90.212.106.30/32",  #MIS Tolomy
-  "82.14.114.76/32",   #MIS Tolomy
-]
+# IAM
+eng_root_arn = "arn:aws:iam::895523100917:root"
+
+cross_account_iam_role = "arn:aws:iam::895523100917:role/tf-eu-west-2-hmpps-eng-dev-mis-runtime"
 
 # Self Signed Certs
 self_signed_ca_algorithm = "RSA"

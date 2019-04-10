@@ -5,35 +5,19 @@ lb_account_id = "652711504416"
 # VPC variables
 cloudwatch_log_retention = 14
 
-route53_sub_domain = "dev.iaps"
+route53_sub_domain = "sbx.delius-new-tech"
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
-# IAPS RDS INSTANCE
+# ALFRESCO RDS INSTANCE
 rds_instance_class = "db.t2.large"
 
 rds_backup_retention_period = 2
 
 rds_monitoring_interval = 5
 
-rds_allocated_storage = "500"
-
-rds_family = "oracle-ee-12.1"
-
-rds_major_engine_version = "12.1"
-
-rds_engine = "oracle-ee"
-
-rds_engine_version = "12.1.0.2.v15"
-
-maintenance_window = "Mon:00:00-Mon:03:00"
-
-backup_window = "03:00-06:00"
-
-license_model = "bring-your-own-license"
-
-storage_encrypted = true
+rds_allocated_storage = "1000"
 
 # Self Signed Certs
 self_signed_ca_algorithm = "RSA"
@@ -52,12 +36,31 @@ self_signed_server_validity_period_hours = 2160
 
 self_signed_server_early_renewal_hours = 336
 
-# common
-allowed_ssh_cidr = [
-  "51.148.142.120/32",  #Brett Home
-  "109.148.137.148/32", #Don Home
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",
-] #Digital studio
+app_name = "new-tech"
 
-iaps_app_name = "iaps"
+# LB
+
+case-notes-health_check = [
+  {
+    target              = "HTTP:8080/"
+    interval            = 30
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
+
+case-notes-listener = [
+  {
+    instance_port     = "8080"
+    instance_protocol = "HTTP"
+    lb_port           = "80"
+    lb_protocol       = "HTTP"
+  },
+]
+
+# images
+case-notes-image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/case-notes-poll-push:latest"
+
+#delius_endpoint 
+push_base_url = "https://interface.dev.delius-core.probation.hmpps.dsd.io"

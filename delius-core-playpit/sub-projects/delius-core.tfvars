@@ -56,7 +56,7 @@ ansible_vars = {
   alfresco_host = "alfresco"
   alfresco_office_host = "alfresco"
   ldap_host = "ldap-elb"
-  spg_host = "gw-int-direct"
+  spg_host = "spgw-mpx-int"
 
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
   ndelius_training_mode = "development"
@@ -92,3 +92,5 @@ ansible_vars = {
   #ldap_admin_password = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
   #partition_id = "${var.ansible_vars_apacheds["bind_user"]}"
 }
+
+env_user_access_cidr_blocks = []

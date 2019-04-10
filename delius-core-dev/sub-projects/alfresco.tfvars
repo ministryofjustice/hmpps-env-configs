@@ -39,26 +39,24 @@ self_signed_server_early_renewal_hours = 336
 # ALLOWED CIDRS
 
 allowed_cidr_block = [
-  "51.148.142.120/32",  #Brett Home
-  "109.148.151.107/32", #Don Home
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
-  "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
-  "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
-  "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
-  "35.178.206.119/32",  #SPG instance public NAT address
-  "194.75.210.208/28",  #BCL
-  "213.48.246.99/32",   #BCL
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
+  "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
+  "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
+  "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
+  "35.178.206.119/32", #SPG instance public NAT address
+  "194.75.210.208/28", #BCL
+  "213.48.246.99/32",  #BCL
 ]
 
 # ALFRESCO AMI
 # OLD AMI ID: ami-08ca03668a220fa44
 alfresco_instance_ami = {
-  az1 = "ami-00b278e848774b63f"
+  az1 = "ami-07c0cd6545dd23291"
 
-  az2 = "ami-00b278e848774b63f"
+  az2 = "ami-07c0cd6545dd23291"
 
-  az3 = "ami-00b278e848774b63f"
+  az3 = "ami-07c0cd6545dd23291"
 }
 
 # ASG Configuration
