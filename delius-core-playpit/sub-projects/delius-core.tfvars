@@ -56,7 +56,7 @@ ansible_vars = {
   alfresco_host = "alfresco"
   alfresco_office_host = "alfresco"
   ldap_host = "ldap-elb"
-  spg_host = "gw-int-direct"
+  spg_host = "spgw-mpx-int"
 
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
   ndelius_training_mode = "development"

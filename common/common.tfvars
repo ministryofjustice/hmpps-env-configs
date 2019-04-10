@@ -162,7 +162,7 @@ default_ansible_vars = {
   alfresco_office_port = 443
 
   # SPG
-  spg_host             = "gw-int-direct"
+  spg_host             = "spgw-mpx-int"
   activemq_data_folder = "/activemq-data"
 
   # LDAP
