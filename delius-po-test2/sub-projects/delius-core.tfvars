@@ -9,7 +9,7 @@ instance_count_weblogic_interface = "6"
 egress_443 = true
 egress_80 = true
 
-ndelius_version = "4.1.7.3"
+ndelius_version = "4.1.8.2"
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
@@ -60,5 +60,7 @@ env_user_access_cidr_blocks = [
   "46.227.51.224/29",   # Interserve
   "46.227.51.232/29",   # Interserve
   "46.227.51.240/28",   # Interserve
-  "83.151.209.178/32"   # Meganexus
+  "83.151.209.178/32",  # Meganexus
+  "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
+  "49.248.250.6/32",    # Meganexus India (Gateway IP)
 ]
