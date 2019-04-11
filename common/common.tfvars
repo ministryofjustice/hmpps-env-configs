@@ -10,7 +10,6 @@ availability_zone = {
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
 
-
 route53_domain_private = "probation.hmpps.dsd.io"
 
 # ENVIRONMENT REMOTE STATES
@@ -26,63 +25,59 @@ alfresco_app_name = "alfresco"
 
 spg_app_name = "spg"
 
-
 ## Delius Core
 weblogic_domain_ports = {
-  weblogic_port     = "7001"
-  weblogic_tls_port = "7002"
-  activemq_port     = "61617"
-  spg_jms_broker      = "61616"
-  spg_jms_broker_ssl  = "61617"
+  weblogic_port      = "7001"
+  weblogic_tls_port  = "7002"
+  activemq_port      = "61617"
+  spg_jms_broker     = "61616"
+  spg_jms_broker_ssl = "61617"
 }
 
 ldap_ports = {
-  ldap      = "10389"
-  ldap_tls  = "10636"
+  ldap     = "10389"
+  ldap_tls = "10636"
 }
 
 #SPG Partner Gateway
 #Note we will be moving the ActiveMQ Broker away from servicemix and its own dedicated servers/service (AmazonMQ)
 
 spg_partnergateway_domain_ports = {
-  mutual_tls        = "9001"  # from POs unless TLS is terminated by NGINX
-  internal_soap     = "8989"  # used between spg.iso and spg.mpx when they were separate modules. deprecated.
-  http              = "8181"  # used from tls terminating loadbalancer, and devops ssh tunnelling
-  jms_broker        = "61616" # used by SPG, ND and Alfresco consumers to push/pull JMS messages to spg.servicemix.ActiveMQ Broker
-  jms_broker_ssl    = "61617" # SSL version of the above
+  mutual_tls     = "9001"  # from POs unless TLS is terminated by NGINX
+  internal_soap  = "8989"  # used between spg.iso and spg.mpx when they were separate modules. deprecated.
+  http           = "8181"  # used from tls terminating loadbalancer, and devops ssh tunnelling
+  jms_broker     = "61616" # used by SPG, ND and Alfresco consumers to push/pull JMS messages to spg.servicemix.ActiveMQ Broker
+  jms_broker_ssl = "61617" # SSL version of the above
 
-  amq_web_console   = "8161"  # unsecured default port for activemq web console - not implemented
-  amq_web_console_ssl = "8443"  # secured default port for activemq web console - not implemented
-  https             = "443"   # not yet implemented, would be used for devops non tunnelled console admin (ie hawtio)
+  amq_web_console     = "8161" # unsecured default port for activemq web console - not implemented
+  amq_web_console_ssl = "8443" # secured default port for activemq web console - not implemented
+  https               = "443"  # not yet implemented, would be used for devops non tunnelled console admin (ie hawtio)
 }
-
 
 #TODO: allow JMX ports for weblogic domains from bastion or admin
 
 # public / user access
 user_access_cidr_blocks = [
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
-  "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
-  "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
-  "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
-  "35.178.251.127/32",  #Engineering Jenkins non prod windows slave
-  "18.130.186.182/32",  #TEST  test-test-windows-injector-0
-  "35.178.200.180/32",  #TEST  test-test-windows-injector-1
-  "35.176.195.86/32",   #TEST  test-test-windows-loadrunner
-  "51.148.144.179/32",  #Brett's Office IP
-  "194.75.210.208/28",  #BCL
-  "213.48.246.99/32",   #BCL
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
+  "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
+  "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
+  "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
+  "35.178.251.127/32", #Engineering Jenkins non prod windows slave
+  "18.130.186.182/32", #TEST  test-test-windows-injector-0
+  "35.178.200.180/32", #TEST  test-test-windows-injector-1
+  "35.176.195.86/32",  #TEST  test-test-windows-loadrunner
+  "194.75.210.208/28", #BCL
+  "213.48.246.99/32",  #BCL
 ]
 
 # jenkins access
 jenkins_access_cidr_blocks = [
-  "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
-  "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
-  "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
-  "35.178.251.127/32",  #Engineering Jenkins non prod windows slave
+  "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
+  "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
+  "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
+  "35.178.251.127/32", #Engineering Jenkins non prod windows slave
 ]
-
 
 #SPG has activeMQ running incomming
 #database talks to activemq on spg weblogic domain
@@ -102,8 +97,9 @@ database_size_small = {
   database_size  = "small"
   instance_type  = "t3.large"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
-  disk_size      = 100 # Do not decrease this
+  disks_quantity = 2          # Do not decrease this
+  disk_size      = 100        # Do not decrease this
+
   # total_storage  = 200 # This should equal disks_quantity x disk_size
 }
 
@@ -111,8 +107,9 @@ database_size_medium = {
   database_size  = "medium"
   instance_type  = "r5.xlarge"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
-  disk_size      = 500 # Do not decrease this
+  disks_quantity = 2           # Do not decrease this
+  disk_size      = 500         # Do not decrease this
+
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
 
@@ -120,8 +117,9 @@ database_size_large = {
   database_size  = "large"
   instance_type  = "r5.2xlarge"
   disk_iops      = 1000
-  disks_quantity = 8  # Do not decrease this
-  disk_size      = 1000 # Do not decrease this
+  disks_quantity = 8            # Do not decrease this
+  disk_size      = 1000         # Do not decrease this
+
   # total_storage  = 8000 # This should equal disks_quantity x disk_size
 }
 
@@ -129,8 +127,9 @@ database_size_x_large = {
   database_size  = "x_large"
   instance_type  = "r5.4xlarge"
   disk_iops      = 1000
-  disks_quantity = 16  # Do not decrease this
-  disk_size      = 1000 # Do not decrease this
+  disks_quantity = 16           # Do not decrease this
+  disk_size      = 1000         # Do not decrease this
+
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
 
@@ -142,3 +141,59 @@ backup_retention_days = 7
 
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 7
+
+# Default values for NDelius WebLogic bootstrap
+default_ansible_vars = {
+  # Server/WebLogic config
+  domain_name             = "NDelius"       # This is defined by the AMI, so should not be overridden
+  jvm_mem_args            = "-Xms3g -Xmx3g"
+  server_name             = "AdminServer"
+  weblogic_admin_username = "weblogic"
+  server_listen_address   = "0.0.0.0"
+
+  # Database
+  setup_datasources = "true"
+  database_host     = "delius-db"
+
+  # Alfresco
+  alfresco_host        = "alfresco"
+  alfresco_port        = 80
+  alfresco_office_host = "alfresco"
+  alfresco_office_port = 443
+
+  #SPG jms may get moved to amazonMQ (and thereby wont be hosted on the mpx server) so rename to jms host and use another dns name
+  #spg_host = "spgw-mpx-int"
+  spg_jms_host = "spgw-jms-int"
+
+  activemq_data_folder = "/activemq-data"
+
+  # LDAP
+  ldap_host          = "ldap-elb"
+  ldap_readonly_host = "ldap-readonly-elb"
+  partition_id       = "moj"
+  ldap_base          = "dc=moj,dc=com"
+  ldap_user_base     = "cn=Users,dc=moj,dc=com"
+  ldap_group_base    = "cn=EISUsers,cn=Users,dc=moj,dc=com"
+
+  # App Config
+  ndelius_display_name  = "National Delius"
+  ndelius_training_mode = "production"                                                                # development, training, production
+  ndelius_log_level     = "INFO"
+  ndelius_analytics_tag = "UA-122274748-2"
+  ldap_passfile         = "/u01/app/oracle/middleware/user_projects/domains/NDelius/password.keyfile"
+
+  # New Tech
+  newtech_search_url             = "/newTech"
+  newtech_pdfgenerator_url       = "/newTech"
+  newtech_pdfgenerator_templates = "shortFormatPreSentenceReport"
+  newtech_pdfgenerator_secret    = "ThisIsASecretKey"             # TODO pull from param store
+
+  # User Management Tool
+  usermanagement_url    = "/umt/"
+  usermanagement_secret = "ThisIsASecretKey" # TODO pull from param store
+
+  # NOMIS
+  nomis_url           = "https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api"
+  nomis_client_id     = "delius"
+  nomis_client_secret = "ThisIsASecretKey"                                    # TODO pull from param store
+}
