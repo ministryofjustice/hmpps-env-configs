@@ -49,13 +49,14 @@
 
 - name: Export our combined_products
   set_fact:
-    combined_products: "{{ common_vars | merge_and_update_dictionary(default=env_vars)  }}"
+    combined_products: "{{ env_vars | merge_and_update_dictionary(default=common_vars)  }}"
+    #combined_products: "{{ common_vars | merge_and_update_dictionary(default=env_vars)  }}"
     #combined_products: "{{ common_vars.products | merge_config_dictionaries(default=env_vars.products)  }}"
     # msg: "{{ right.stuff.0|merge_and_update_dictionary(default=left.stuff.0) }}"
 
-- name: Export our combined_products
-  set_fact:
-    combined_products: "{{ common_vars | merge_config_dictionaries(env_vars)  }}"
+# - name: Export our combined_products
+#   set_fact:
+#     combined_products: "{{ common_vars | merge_config_dictionaries(env_vars)  }}"
 
 - name: Debug our combined_products
   debug:
