@@ -55,5 +55,5 @@ asg_instance_type = "t2.medium"
 #
 spg_app_name = "spgw"
 
-s3_bucket_config = "tf-eu-west-2-hmpps-delius-test-gw-s3bucket"
+s3_bucket_config = "tf-eu-west-2-hmpps-delius-test-spgw-s3bucket"
 spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/test"
