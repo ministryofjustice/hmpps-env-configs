@@ -16,9 +16,9 @@ db_size_delius_core = {
   database_size  = "small"
   instance_type  = "t3.large"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
+  disks_quantity = 4  # Do not decrease this
   disk_size      = 500 # Do not decrease this
-  # total_storage  = 1000 # This should equal disks_quantity x disk_size
+  # total_storage  = 2000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
@@ -45,7 +45,7 @@ ansible_vars_apacheds = {
   bind_user         = "uid=admin,ou=system"
   # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
   partition_id      = "moj"
-  import_users_ldif = "IFSR3-181204.ldif"
+  import_users_ldif = "SR2/OID/SR2-190412.ldif"
   sanitize_oid_ldif = "yes"
 }
 
@@ -64,4 +64,6 @@ env_user_access_cidr_blocks = [
   "51.179.210.36/32",   # Meganexus
   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
   "49.248.250.6/32",    # Meganexus India (Gateway IP)
+  "80.86.46.16/31",     # Sodexo
+  "80.86.46.18/32",     # Sodexo
 ]

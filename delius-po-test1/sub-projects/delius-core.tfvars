@@ -45,7 +45,7 @@ ansible_vars_apacheds = {
   bind_user         = "uid=admin,ou=system"
   # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
   partition_id      = "moj"
-  import_users_ldif = "IFSR3-181204.ldif"
+  import_users_ldif = "IFSR1/OID/IFSR1-190412.ldif"
   sanitize_oid_ldif = "yes"
 }
 
@@ -63,4 +63,6 @@ env_user_access_cidr_blocks = [
   "51.179.210.36/32",   # Meganexus
   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
   "49.248.250.6/32",    # Meganexus India (Gateway IP)
+  "80.86.46.16/31",     # Sodexo
+  "80.86.46.18/32",     # Sodexo
 ]
