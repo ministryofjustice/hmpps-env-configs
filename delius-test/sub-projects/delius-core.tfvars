@@ -9,7 +9,7 @@ instance_count_weblogic_interface = "6"
 egress_443 = true
 egress_80 = true
 
-ndelius_version = "4.2.6"
+ndelius_version = "4.2.7"
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
