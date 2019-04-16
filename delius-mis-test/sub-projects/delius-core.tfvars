@@ -45,7 +45,7 @@ ansible_vars_apacheds = {
   bind_user         = "uid=admin,ou=system"
   # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
   partition_id      = "moj"
-  import_users_ldif = "ND300/OID/NDMIS300-190329.ldif"
+  import_users_ldif = "LATEST"
   sanitize_oid_ldif = "yes"
 }
 
