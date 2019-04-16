@@ -80,5 +80,6 @@ env.bak/
 venv.bak/
 
 *.retry
+roles/
 roles/*
 **.pyc
