@@ -13,8 +13,8 @@ ndelius_version = "4.2.7"
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size  = "medium"
+  instance_type  = "r5.xlarge"
   disk_iops      = 1000
   disks_quantity = 4  # Do not decrease this
   disk_size      = 500 # Do not decrease this
