@@ -65,4 +65,5 @@ env_user_access_cidr_blocks = [
   "49.248.250.6/32",    # Meganexus India (Gateway IP)
   "80.86.46.16/31",     # Sodexo
   "80.86.46.18/32",     # Sodexo
+  "62.253.83.37/32",    # RRP
 ]
