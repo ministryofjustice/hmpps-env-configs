@@ -24,7 +24,7 @@ bastion_role_arn = "arn:aws:iam::077643444046:role/terraform"
 
 alfresco_app_name = "alfresco"
 
-spg_app_name = "spg"
+spg_app_name = "spgw"
 
 
 ## Delius Core
