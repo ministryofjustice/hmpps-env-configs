@@ -57,4 +57,4 @@ asg_instance_type = "t2.medium"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-core-dev-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/dev-mvp2-docker"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/dev"
