@@ -73,4 +73,6 @@ env_user_access_cidr_blocks = [
   "80.86.46.18/32",
   # -RRP (Reducing Reoffending Partnership)
   "62.253.83.37/32",
+  # - ARCC
+  "51.179.193.241/32",
 ]
