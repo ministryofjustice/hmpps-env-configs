@@ -55,14 +55,22 @@ ansible_vars = {
 }
 
 env_user_access_cidr_blocks = [
-  "62.25.109.202/32",   # MTCNovo PO
-  "80.86.46.16/30",     # Seetec PO
-  "46.227.51.224/29",   # Interserve
-  "46.227.51.232/29",   # Interserve
-  "46.227.51.240/28",   # Interserve
-  "51.179.210.36/32",   # Meganexus
+  # Parent Organisation IP ranges
+  # -MTCNovo
+  "62.25.109.202/32",
+  # -SEETEC
+  "80.86.46.16/30",
+  # -Interserve
+  "46.227.51.224/29",
+  "46.227.51.232/29",
+  "46.227.51.240/28",
+  # -Meganexus
+  "51.179.210.36/32",
   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
   "49.248.250.6/32",    # Meganexus India (Gateway IP)
-  "80.86.46.16/31",     # Sodexo
-  "80.86.46.18/32",     # Sodexo
+  # -Sodexo Justice Services
+  "80.86.46.16/31",
+  "80.86.46.18/32",
+  # -RRP (Reducing Reoffending Partnership)
+  "62.253.83.37/32",
 ]
