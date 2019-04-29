@@ -1,11 +1,11 @@
 [loadrunner]
 loadrunner.sandpit.delius-core.probation.hmpps.dsd.io
 
-[primarydb]
+[delius_primarydb]
 delius-db-1.sandpit.delius-core.probation.hmpps.dsd.io
-[standbydb1]
+[delius_standbydb1]
 delius-db-2.sandpit.delius-core.probation.hmpps.dsd.io
-[standbydb2]
+[delius_standbydb2]
 delius-db-3.sandpit.delius-core.probation.hmpps.dsd.io
 
 [delius_dbs:children]
