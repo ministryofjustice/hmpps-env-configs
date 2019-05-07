@@ -54,4 +54,33 @@ az_asg_min = {
 
 asg_instance_type = "t2.medium"
 
-spg_app_name = "gw"
+
+spg_app_name = "spgw"
+
+s3_bucket_config = "tf-eu-west-2-hmpps-delius-core-sandpit-spgw-s3bucket"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/sandpit"
+
+
+
+
+# Self Signed Certs
+self_signed_ca_algorithm = "RSA"
+
+self_signed_ca_rsa_bits = "4096"
+
+self_signed_ca_validity_period_hours = 8760
+
+#672 = 28 days
+self_signed_ca_early_renewal_hours = 672
+
+self_signed_server_algorithm = "RSA"
+
+self_signed_server_rsa_bits = "4096"
+
+#8760=365 days
+self_signed_server_validity_period_hours = 8760
+
+
+#336 = 14 days
+self_signed_server_early_renewal_hours = 336
+
