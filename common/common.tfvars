@@ -69,6 +69,11 @@ user_access_cidr_blocks = [
   "35.176.195.86/32",  #TEST  test-test-windows-loadrunner
   "194.75.210.208/28", #BCL
   "213.48.246.99/32",  #BCL
+  "195.59.75.0/24",    # ARK internet (DOM1)
+  "194.33.192.0/25",   # ARK internet (DOM1)
+  "194.33.193.0/25",   # ARK internet (DOM1)
+  "194.33.196.0/25",   # ARK internet (DOM1)
+  "194.33.197.0/25"    # ARK internet (DOM1)
 ]
 
 # jenkins access
