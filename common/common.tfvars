@@ -81,7 +81,7 @@ jenkins_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "35.178.251.127/32", #Engineering Jenkins non prod windows slave
+  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
 ]
 
 #SPG has activeMQ running incomming
