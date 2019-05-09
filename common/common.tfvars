@@ -153,7 +153,7 @@ default_ansible_vars_apacheds = {
   jvm_mem_args                = "-Xms6g -Xmx6g"
   apacheds_version            = "apacheds-2.0.0.AM25-default"
   apacheds_install_directory  = "/var/lib/apacheds-2.0.0.AM25/default"
-  apacheds_lib_directory      = "/opt/apacheds-2.0.0.AM25/lib"
+  apacheds_lib_directory      = "/opt/apacheds-2.0.0.AM25"
   workspace                   = "/tmp/apacheds-bootstrap"
   log_level                   = "WARN"
 
