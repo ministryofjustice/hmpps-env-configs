@@ -36,7 +36,7 @@ ansible_vars_oracle_db = {
 # LDAP
 instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
-  import_users_ldif = "IFSR1/OID/IFSR1-190412.ldif"
+  import_users_ldif = "IFSR1-190412/OID/IFSR1-190412.ldif"
 }
 
 # WebLogic
