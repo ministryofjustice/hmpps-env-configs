@@ -150,7 +150,7 @@ snapshot_retention_days = 7
 # Default values for ApacheDS LDAP bootstrap
 default_ansible_vars_apacheds = {
   # ApacheDS
-  jvm_mem_args                = "-Xms6g -Xmx6g"
+  jvm_mem_args                = "6144"  # (in MB)
   apacheds_version            = "apacheds-2.0.0.AM25-default"
   apacheds_install_directory  = "/var/lib/apacheds-2.0.0.AM25/default"
   apacheds_lib_directory      = "/opt/apacheds-2.0.0.AM25"
