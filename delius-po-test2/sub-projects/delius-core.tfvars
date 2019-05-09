@@ -1,11 +1,6 @@
 # delius-core-dev  delius-core.tfvars
 ## Delius Core Specific
 
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
-instance_count_weblogic_interface = "6"
-
 egress_443 = true
 egress_80 = true
 
@@ -38,17 +33,17 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
+# LDAP
+instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
-  apacheds_version  = "apacheds-2.0.0.AM25-default"
-  ldap_protocol     = "ldap"
-  # ldap_port       = "${var.ldap_ports["ldap"]}"
-  bind_user         = "uid=admin,ou=system"
-  # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
-  partition_id      = "moj"
   import_users_ldif = "IFSR3-190412/OID/IFSR3-190412.ldif"
-  sanitize_oid_ldif = "yes"
 }
 
+# WebLogic
+instance_type_weblogic = "t2.medium"
+instance_count_weblogic_ndelius = "6"
+instance_count_weblogic_spg = "6"
+instance_count_weblogic_interface = "0"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
   database_sid = "POT2NDA"

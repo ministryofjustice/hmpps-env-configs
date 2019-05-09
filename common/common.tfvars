@@ -147,11 +147,32 @@ backup_retention_days = 7
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 7
 
+# Default values for ApacheDS LDAP bootstrap
+default_ansible_vars_apacheds = {
+  # ApacheDS
+  jvm_mem_args                = "6144"  # (in MB)
+  apacheds_version            = "apacheds-2.0.0.AM25-default"
+  apacheds_install_directory  = "/var/lib/apacheds-2.0.0.AM25/default"
+  apacheds_lib_directory      = "/opt/apacheds-2.0.0.AM25"
+  workspace                   = "/tmp/apacheds-bootstrap"
+  log_level                   = "WARN"
+
+  # LDAP
+  ldap_protocol               = "ldap"
+  bind_user                   = "uid=admin,ou=system"
+  partition_id                = "moj"
+  base_root                   = "dc=moj,dc=com"
+
+  # Data import
+  import_users_ldif           = "LATEST"
+  sanitize_oid_ldif           = "yes"
+}
+
 # Default values for NDelius WebLogic bootstrap
 default_ansible_vars = {
   # Server/WebLogic config
-  domain_name             = "NDelius"       # This is defined by the AMI, so should not be overridden
   jvm_mem_args            = "-Xms3g -Xmx3g"
+  domain_name             = "NDelius"       # This is defined by the AMI, so should not be overridden
   server_name             = "AdminServer"
   weblogic_admin_username = "weblogic"
   server_listen_address   = "0.0.0.0"
@@ -182,7 +203,7 @@ default_ansible_vars = {
 
   # App Config
   ndelius_display_name  = "National Delius"
-  ndelius_training_mode = "production"                                                                # development, training, production
+  ndelius_training_mode = "production" # development, training, production
   ndelius_log_level     = "INFO"
   ndelius_analytics_tag = "UA-122274748-2"
   ldap_passfile         = "/u01/app/oracle/middleware/user_projects/domains/NDelius/password.keyfile"
@@ -191,7 +212,7 @@ default_ansible_vars = {
   newtech_search_url             = "/newTech"
   newtech_pdfgenerator_url       = "/newTech"
   newtech_pdfgenerator_templates = "shortFormatPreSentenceReport"
-  newtech_pdfgenerator_secret    = "ThisIsASecretKey"             # TODO pull from param store
+  newtech_pdfgenerator_secret    = "ThisIsASecretKey" # TODO pull from param store
 
   # User Management Tool
   usermanagement_url    = "/umt/"
@@ -200,5 +221,5 @@ default_ansible_vars = {
   # NOMIS
   nomis_url           = "https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api"
   nomis_client_id     = "delius"
-  nomis_client_secret = "ThisIsASecretKey"                                    # TODO pull from param store
+  nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
 }
