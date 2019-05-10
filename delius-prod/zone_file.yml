@@ -1,0 +1,17 @@
+---
+
+parent_zone_name: "service.justice.gov.uk"
+parent_account_id: 570551521311
+role_name: "terraform"
+
+hosted_zones:
+
+  - account_id: "050243167760"
+    zone_name: "probation"
+    is_delegated: True
+    is_apex: True
+
+# # Created manually at present, jenkins dev cannot assume jenkins prod, needs discussion
+#   - account_id: 050243167760
+#     zone_name: "delius"
+#     is_delegated: True

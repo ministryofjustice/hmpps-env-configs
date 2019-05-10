@@ -1,0 +1,6 @@
+--- # misboe_primarydb.yml
+
+database_global_database_name: DMTBOE
+database_taf_service_name: DMTBOE_TAF
+database_primary_unique_name: DMTBOE
+database_primary_sid: DMTBOE

@@ -8,7 +8,7 @@ def pull_image() {
     }
 }
 
-def run_ansible() {
+def run_ansible(environment_name) {
     wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
         sh """
         #!/usr/env/bin bash
@@ -18,7 +18,7 @@ def run_ansible() {
             -v `pwd`:/home/tools/data \
             -v ~/.aws:/home/tools/.aws:ro \
             mojdigitalstudio/hmpps-ansible-builder:latest \
-             bash -c "AWS_DEFAULT_REGION=eu-west-2 ansible-playbook generate_secrets.yml -e target_environment=prod"
+             bash -c "AWS_DEFAULT_REGION=eu-west-2 ansible-playbook generate_secrets.yml -e env_name=${environment_name}"
         """
     }
 }
@@ -41,7 +41,7 @@ pipeline {
 
         stage('Manage Secrets') {
             steps {
-                run_ansible()
+                run_ansible(environment_name)
             }
         }
 

@@ -1,24 +1,19 @@
 # delius-core-dev  delius-core.tfvars
 ## Delius Core Specific
 
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
-instance_count_weblogic_interface = "6"
-
 egress_443 = true
 egress_80 = true
 
-ndelius_version = "4.2.6"
+ndelius_version = "4.2.7"
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size  = "medium"
+  instance_type  = "r5.xlarge"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
+  disks_quantity = 4  # Do not decrease this
   disk_size      = 500 # Do not decrease this
-  # total_storage  = 1000 # This should equal disks_quantity x disk_size
+  # total_storage  = 2000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
@@ -38,30 +33,21 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
+# LDAP
+instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
-  apacheds_version  = "apacheds-2.0.0.AM25-default"
-  ldap_protocol     = "ldap"
-  # ldap_port       = "${var.ldap_ports["ldap"]}"
-  bind_user         = "uid=admin,ou=system"
-  # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
-  partition_id      = "moj"
-  import_users_ldif = "IFSR3-181204.ldif"
-  sanitize_oid_ldif = "yes"
+  import_users_ldif = "SR2-190412/OID/SR2-190412.ldif"
 }
 
+# WebLogic
+instance_type_weblogic = "t2.medium"
+instance_count_weblogic_ndelius = "6"
+instance_count_weblogic_spg = "6"
+instance_count_weblogic_interface = "6"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
   database_sid = "TSTNDA"
 }
 
 env_user_access_cidr_blocks = [
-  "62.25.109.202/32",   # MTCNovo PO
-  "80.86.46.16/30",     # Seetec PO
-  "46.227.51.224/29",   # Interserve
-  "46.227.51.232/29",   # Interserve
-  "46.227.51.240/28",   # Interserve
-  "83.151.209.178/32",  # Meganexus
-  "51.179.210.36/32",   # Meganexus
-  "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
-  "49.248.250.6/32",    # Meganexus India (Gateway IP)
 ]

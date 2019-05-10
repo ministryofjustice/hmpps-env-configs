@@ -1,11 +1,6 @@
 # delius-core-dev  delius-core.tfvars
 ## Delius Core Specific
 
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
-instance_count_weblogic_interface = "6"
-
 egress_443 = true
 egress_80 = true
 
@@ -38,29 +33,51 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
+# LDAP
+instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
-  apacheds_version  = "apacheds-2.0.0.AM25-default"
-  ldap_protocol     = "ldap"
-  # ldap_port       = "${var.ldap_ports["ldap"]}"
-  bind_user         = "uid=admin,ou=system"
-  # bind_password   = "/${environment_name}/delius-core/apacheds/apacheds/ldap_admin_password"
-  partition_id      = "moj"
-  import_users_ldif = "IFSR3-181204.ldif"
-  sanitize_oid_ldif = "yes"
+  import_users_ldif = "IFSR3-190412/OID/IFSR3-190412.ldif"
 }
 
+# WebLogic
+instance_type_weblogic = "t2.medium"
+instance_count_weblogic_ndelius = "6"
+instance_count_weblogic_spg = "6"
+instance_count_weblogic_interface = "0"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
   database_sid = "POT2NDA"
 }
 
 env_user_access_cidr_blocks = [
-  "62.25.109.202/32",   # MTCNovo PO
-  "80.86.46.16/30",     # Seetec PO
-  "46.227.51.224/29",   # Interserve
-  "46.227.51.232/29",   # Interserve
-  "46.227.51.240/28",   # Interserve
-  "83.151.209.178/32",  # Meganexus
+  # Parent Organisation IP ranges
+
+  # -MTCNovo
+  "62.25.109.202/32",
+
+  # -SEETEC
+  "80.86.46.16/30",
+
+  # -Interserve
+  "46.227.51.224/29",
+  "46.227.51.232/29",
+  "46.227.51.240/28",
+
+  # -Meganexus
+  "83.151.209.178/32",
   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
   "49.248.250.6/32",    # Meganexus India (Gateway IP)
+
+  # -Sodexo Justice Services
+  "80.86.46.16/31",
+  "80.86.46.18/32",
+
+  # -RRP (Reducing Reoffending Partnership)
+  "62.253.83.37/32",
+
+  # - ARCC
+  "51.179.193.241/32",
+
+  # - EOS
+  "5.153.255.210/32",   # EOS Public IP
 ]
