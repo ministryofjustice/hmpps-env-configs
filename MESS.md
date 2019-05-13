@@ -64,8 +64,8 @@ A useful TG_SHORT_ENVIRONMENT_IDENTIFIER   tf-hmpps-dpt1-po-test1 might look lik
           TG_SHORT_ENVIRONMENT_IDENTIFIER   eu-west-2-dpt1
 
 So as not to break things
-          TG_TINY_ENVIRONMENT_IDENTIFIER="${TG_REGION}-${TG_PROJECT_NAME_ABBREVIATED}"
+          TG_TINY_ENVIRONMENT_IDENTIFIER="${TG_REGION}-${TG_SHORT_ENVIRONMENT_NAME}"
 
-          TG_TINY_ENVIRONMENT_IDENTIFIER   eu-west-2-dpt1
+          TG_TINY_ENVIRONMENT_IDENTIFIER   eu-west-2-dpt1-po-test1
 
 Has region so is useful for S3 buckets keeping bucket names unique across globe
