@@ -147,7 +147,11 @@ backup_retention_days = 7
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 7
 
-# Default values for ApacheDS LDAP bootstrap
+# Default values for ApacheDS LDAP
+instance_type_ldap = "t3.large"
+ldap_slave_asg_min = "1"
+ldap_slave_asg_desired = "2"
+ldap_slave_asg_max = "10"
 default_ansible_vars_apacheds = {
   # ApacheDS
   jvm_mem_args                = "6144"  # (in MB)
@@ -168,7 +172,11 @@ default_ansible_vars_apacheds = {
   sanitize_oid_ldif           = "yes"
 }
 
-# Default values for NDelius WebLogic bootstrap
+# Default values for NDelius WebLogic
+instance_type_weblogic = "t2.medium"
+instance_count_weblogic_ndelius = "6"
+instance_count_weblogic_spg = "6"
+instance_count_weblogic_interface = "6"
 default_ansible_vars = {
   # Server/WebLogic config
   jvm_mem_args            = "-Xms3g -Xmx3g"

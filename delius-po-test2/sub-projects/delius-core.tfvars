@@ -34,15 +34,11 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
   import_users_ldif = "IFSR3-190412/OID/IFSR3-190412.ldif"
 }
 
 # WebLogic
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
 instance_count_weblogic_interface = "0"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
