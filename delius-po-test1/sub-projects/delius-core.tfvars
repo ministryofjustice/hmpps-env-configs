@@ -35,7 +35,7 @@ ansible_vars_oracle_db = {
 
 # LDAP
 ansible_vars_apacheds = {
-  import_users_ldif = "IFSR1-190412/OID/IFSR1-190412.ldif"
+  import_users_ldif = "IFSR1-190517/OID/IFSR1-190517.ldif"
 }
 
 # WebLogic
