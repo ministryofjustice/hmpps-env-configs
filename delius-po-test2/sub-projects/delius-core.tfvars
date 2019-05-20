@@ -53,6 +53,7 @@ env_user_access_cidr_blocks = [
 
   # -SEETEC
   "80.86.46.16/30",
+  "195.224.76.229/32",
 
   # -Interserve
   "46.227.51.224/29",
