@@ -4,7 +4,7 @@
 egress_443 = true
 egress_80 = true
 
-ndelius_version = "4.1.8.2"
+ndelius_version = "4.2.9"
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
@@ -34,15 +34,11 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
-  import_users_ldif = "IFSR1-190412/OID/IFSR1-190412.ldif"
+  import_users_ldif = "IFSR1-190517/OID/IFSR1-190517.ldif"
 }
 
 # WebLogic
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
 instance_count_weblogic_interface = "0"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
@@ -57,11 +53,13 @@ env_user_access_cidr_blocks = [
 
   # -SEETEC
   "80.86.46.16/30",
+  "195.224.76.229/32",
 
   # -Interserve
   "46.227.51.224/29",
   "46.227.51.232/29",
   "46.227.51.240/28",
+  "51.179.196.131/32",
 
   # -Meganexus
   "51.179.210.36/32",

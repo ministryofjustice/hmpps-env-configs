@@ -33,14 +33,9 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
-instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
 }
 
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
-instance_count_weblogic_interface = "6"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
   database_sid = "DMTNDA"

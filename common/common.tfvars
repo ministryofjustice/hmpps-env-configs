@@ -63,7 +63,7 @@ user_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "35.178.251.127/32", #Engineering Jenkins non prod windows slave
+  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
   "18.130.186.182/32", #TEST  test-test-windows-injector-0
   "35.178.200.180/32", #TEST  test-test-windows-injector-1
   "35.176.195.86/32",  #TEST  test-test-windows-loadrunner
@@ -147,7 +147,11 @@ backup_retention_days = 7
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 7
 
-# Default values for ApacheDS LDAP bootstrap
+# Default values for ApacheDS LDAP
+instance_type_ldap = "t3.large"
+ldap_slave_asg_min = "1"
+ldap_slave_asg_desired = "2"
+ldap_slave_asg_max = "10"
 default_ansible_vars_apacheds = {
   # ApacheDS
   jvm_mem_args                = "6144"  # (in MB)
@@ -168,7 +172,11 @@ default_ansible_vars_apacheds = {
   sanitize_oid_ldif           = "yes"
 }
 
-# Default values for NDelius WebLogic bootstrap
+# Default values for NDelius WebLogic
+instance_type_weblogic = "t2.medium"
+instance_count_weblogic_ndelius = "6"
+instance_count_weblogic_spg = "6"
+instance_count_weblogic_interface = "6"
 default_ansible_vars = {
   # Server/WebLogic config
   jvm_mem_args            = "-Xms3g -Xmx3g"

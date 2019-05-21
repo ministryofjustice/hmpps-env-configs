@@ -1,4 +1,4 @@
-# delius-core-dev  delius-core.tfvars
+# delius-core-sandpit  delius-core.tfvar
 ## Delius Core Specific
 
 egress_443 = true
@@ -18,8 +18,8 @@ db_size_delius_core = {
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "POT2NDA"
-  database_sid                  = "POT2NDA"
+  database_global_database_name = "DATNDA"
+  database_sid                  = "DATNDA"
   ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
@@ -35,48 +35,14 @@ ansible_vars_oracle_db = {
 
 # LDAP
 ansible_vars_apacheds = {
-  import_users_ldif = "IFSR3-190517/OID/IFSR3-190517.ldif"
 }
 
 # WebLogic
-instance_count_weblogic_interface = "0"
 ansible_vars = {
-  ndelius_display_name = "National Delius - TEST USE ONLY"
-  database_sid = "POT2NDA"
+  ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
+  ndelius_training_mode = "development"
+  ndelius_log_level = "DEBUG"
+  database_sid = "DATNDA"
 }
 
-env_user_access_cidr_blocks = [
-  # Parent Organisation IP ranges
-
-  # -MTCNovo
-  "62.25.109.202/32",
-
-  # -SEETEC
-  "80.86.46.16/30",
-  "195.224.76.229/32",
-
-  # -Interserve (Purple Futures)
-  "46.227.51.224/29",
-  "46.227.51.232/29",
-  "46.227.51.240/28",
-  "51.179.196.131/32", #interserve desktop users public IP
-
-  # -Meganexus (Purple Futures)
-  "83.151.209.178/32",  # PF SPG Server Public IP/NAT
-  "83.151.209.179/32", # PF SPG Server Public IP/NAT 2
-  "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
-  "49.248.250.6/32",    # Meganexus India (Gateway IP)
-
-  # -Sodexo Justice Services
-  "80.86.46.16/31",
-  "80.86.46.18/32",
-
-  # -RRP (Reducing Reoffending Partnership)
-  "62.253.83.37/32",
-
-  # - ARCC
-  "51.179.193.241/32",
-
-  # - EOS
-  "5.153.255.210/32",   # EOS Public IP
-]
+env_user_access_cidr_blocks = []
