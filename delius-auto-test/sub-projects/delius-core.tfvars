@@ -1,4 +1,4 @@
-# delius-core-sandpit  delius-core.tfvar
+# delius-auto-test  delius-core.tfvar
 ## Delius Core Specific
 
 egress_443 = true
