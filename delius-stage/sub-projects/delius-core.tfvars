@@ -38,11 +38,11 @@ ansible_vars_apacheds = {
 }
 
 # WebLogic
+instance_count_weblogic_ndelius = "15"
 ansible_vars = {
-  ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level = "DEBUG"
   database_sid = "STGNDA"
+  ndelius_analytics_tag = "UA-122274748-2"
+  nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"
 }
 
 env_user_access_cidr_blocks = []
