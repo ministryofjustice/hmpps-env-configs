@@ -54,7 +54,7 @@ az_asg_min = {
 
 asg_instance_type = "t2.medium"
 
-spg_app_name = "gw"
+spg_app_name = "spgw"
 
-s3_bucket_config = "tf-eu-west-2-hmpps-delius-core-dev-gw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/dev-mvp2-docker"
+s3_bucket_config = "tf-eu-west-2-hmpps-delius-po-test1-spgw-s3bucket"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/po-test1"

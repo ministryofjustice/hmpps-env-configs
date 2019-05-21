@@ -55,14 +55,15 @@ env_user_access_cidr_blocks = [
   "80.86.46.16/30",
   "195.224.76.229/32",
 
-  # -Interserve
+  # -Interserve (Purple Futures)
   "46.227.51.224/29",
   "46.227.51.232/29",
   "46.227.51.240/28",
-  "51.179.196.131/32",
+  "51.179.196.131/32", #interserve desktop users public IP
 
-  # -Meganexus
-  "83.151.209.178/32",
+  # -Meganexus (Purple Futures)
+  "83.151.209.178/32",  # PF SPG Server Public IP/NAT
+  "83.151.209.179/32", # PF SPG Server Public IP/NAT 2
   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
   "49.248.250.6/32",    # Meganexus India (Gateway IP)
 
