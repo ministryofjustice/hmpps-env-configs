@@ -39,9 +39,6 @@ ansible_vars_apacheds = {
 
 # WebLogic
 ansible_vars = {
-  ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level = "DEBUG"
   database_sid = "PRDNDA"
 }
 

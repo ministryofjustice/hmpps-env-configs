@@ -144,3 +144,88 @@ backup_retention_days = 30
 
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 30
+
+# Default values for ApacheDS LDAP
+instance_type_ldap = "m5.xlarge"
+ldap_slave_asg_min = "1"
+ldap_slave_asg_desired = "2"
+ldap_slave_asg_max = "10"
+default_ansible_vars_apacheds = {
+  # ApacheDS
+  jvm_mem_args                = "12228"  # (in MB)
+  apacheds_version            = "apacheds-2.0.0.AM25-default"
+  apacheds_install_directory  = "/var/lib/apacheds-2.0.0.AM25/default"
+  apacheds_lib_directory      = "/opt/apacheds-2.0.0.AM25"
+  workspace                   = "/tmp/apacheds-bootstrap"
+  log_level                   = "WARN"
+
+  # LDAP
+  ldap_protocol               = "ldap"
+  bind_user                   = "uid=admin,ou=system"
+  partition_id                = "moj"
+  base_root                   = "dc=moj,dc=com"
+
+  # Data import
+  import_users_ldif           = "LATEST"
+  sanitize_oid_ldif           = "yes"
+}
+
+# Default values for NDelius WebLogic
+instance_type_weblogic = "m5.xlarge"
+instance_count_weblogic_ndelius = "30"
+instance_count_weblogic_spg = "6"
+instance_count_weblogic_interface = "6"
+default_ansible_vars = {
+  # Server/WebLogic config
+  jvm_mem_args            = "-Xms12g -Xmx12g"
+  domain_name             = "NDelius"       # This is defined by the AMI, so should not be overridden
+  server_name             = "AdminServer"
+  weblogic_admin_username = "weblogic"
+  server_listen_address   = "0.0.0.0"
+
+  # Database
+  setup_datasources = "true"
+  database_host     = "delius-db"
+
+  # Alfresco
+  alfresco_host        = "alfresco"
+  alfresco_port        = 80
+  alfresco_office_host = "alfresco"
+  alfresco_office_port = 443
+
+  #SPG jms may get moved to amazonMQ (and thereby wont be hosted on the mpx server) so rename to jms host and use another dns name
+  #spg_host = "spgw-mpx-int"
+  spg_jms_host = "spgw-jms-int"
+
+  activemq_data_folder = "/activemq-data"
+
+  # LDAP
+  ldap_host          = "ldap-elb"
+  ldap_readonly_host = "ldap-readonly-elb"
+  partition_id       = "moj"
+  ldap_base          = "dc=moj,dc=com"
+  ldap_user_base     = "cn=Users,dc=moj,dc=com"
+  ldap_group_base    = "cn=EISUsers,cn=Users,dc=moj,dc=com"
+
+  # App Config
+  ndelius_display_name  = "National Delius"
+  ndelius_training_mode = "production" # development, training, production
+  ndelius_log_level     = "ERROR"
+  ndelius_analytics_tag = "UA-122274748-1"
+  ldap_passfile         = "/u01/app/oracle/middleware/user_projects/domains/NDelius/password.keyfile"
+
+  # New Tech
+  newtech_search_url             = "/newTech"
+  newtech_pdfgenerator_url       = "/newTech"
+  newtech_pdfgenerator_templates = "shortFormatPreSentenceReport"
+  newtech_pdfgenerator_secret    = "ThisIsASecretKey" # TODO pull from param store
+
+  # User Management Tool
+  usermanagement_url    = "/umt/"
+  usermanagement_secret = "ThisIsASecretKey" # TODO pull from param store
+
+  # NOMIS
+  nomis_url           = "https://gateway.prod.nomis-api.hmpps.dsd.io/elite2api"
+  nomis_client_id     = "delius"
+  nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
+}
