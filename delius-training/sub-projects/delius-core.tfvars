@@ -1,4 +1,4 @@
-# delius-test  delius-core.tfvars
+# delius-training  delius-core.tfvars
 ## Delius Core Specific
 
 egress_443 = true
