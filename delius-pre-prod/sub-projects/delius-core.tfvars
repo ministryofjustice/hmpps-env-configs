@@ -1,4 +1,4 @@
-# delius-auto-test  delius-core.tfvar
+# delius-pre-prod  delius-core.tfvar
 ## Delius Core Specific
 
 egress_443 = true
@@ -8,18 +8,18 @@ ndelius_version = "4.2.9"
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size  = "x_large"
+  instance_type  = "r5.4xlarge"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
-  disk_size      = 200 # Do not decrease this
-  # total_storage  = 400 # This should equal disks_quantity x disk_size
+  disks_quantity = 16           # Do not decrease this
+  disk_size      = 1000         # Do not decrease this
+  # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DATNDA"
-  database_sid                  = "DATNDA"
+  database_global_database_name = "PRENDA"
+  database_sid                  = "PRENDA"
   ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
@@ -38,11 +38,11 @@ ansible_vars_apacheds = {
 }
 
 # WebLogic
+instance_count_weblogic_ndelius = "15"
 ansible_vars = {
-  ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level = "DEBUG"
-  database_sid = "DATNDA"
+  database_sid = "PRENDA"
+  ndelius_analytics_tag = "UA-122274748-2"
+  nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"
 }
 
 env_user_access_cidr_blocks = []
