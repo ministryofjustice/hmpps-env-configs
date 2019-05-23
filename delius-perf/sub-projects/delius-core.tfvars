@@ -1,4 +1,4 @@
-# delius-prod  delius-core.tfvar
+# delius-perf  delius-core.tfvar
 ## Delius Core Specific
 
 egress_443 = true
@@ -18,8 +18,8 @@ db_size_delius_core = {
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "PRDNDA"
-  database_sid                  = "PRDNDA"
+  database_global_database_name = "PERNDA"
+  database_sid                  = "PERNDA"
   ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
@@ -41,13 +41,12 @@ ansible_vars_apacheds = {
 
 # WebLogic
 instance_type_weblogic = "m5.xlarge"
-instance_count_weblogic_ndelius = "30"
+instance_count_weblogic_ndelius = "15"
 ansible_vars = {
   jvm_mem_args = "-Xms12g -Xmx12g"
-  database_sid = "PRDNDA"
+  database_sid = "PERNDA"
   ndelius_log_level = "ERROR"
-  ndelius_analytics_tag = "UA-122274748-1"
-  nomis_url = "https://gateway.prod.nomis-api.hmpps.dsd.io/elite2api"
+  nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"
 }
 
 env_user_access_cidr_blocks = []
