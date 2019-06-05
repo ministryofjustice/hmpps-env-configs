@@ -44,3 +44,21 @@ ansible_vars = {
 
 env_user_access_cidr_blocks = [
 ]
+
+# DSS Batch Task
+dss_batch_instances = [ "m5.large"]
+dss_min_vcpu = 0
+dss_min_vcpu = 8
+dss_job_retries = 1
+dss_job_envvars = {
+  DSS_TESTMODE = "true"
+  DSS_TESTINGAUTOCORRECT = "true"
+}
+dss_job_ulimits = [
+  {
+    hardLimit = 1024
+    name = "nofile"
+    softLimit =  1024
+  },
+]
+dss_queue_state = "ENABLED"
