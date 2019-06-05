@@ -10,8 +10,8 @@ db_size_delius_core = {
   instance_type  = "t3.large"
   disk_iops      = 1000
   disks_quantity = 2  # Do not decrease this
-  disk_size      = 100 # Do not decrease this
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  disk_size      = 500 # Do not decrease this
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
