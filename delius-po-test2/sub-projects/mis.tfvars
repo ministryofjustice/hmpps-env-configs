@@ -23,7 +23,6 @@ cross_account_iam_role = "arn:aws:iam::895523100917:role/tf-eu-west-2-hmpps-eng-
 
 # ALLOWED CIDRS
 allowed_cidr_block = [
-  "51.148.142.120/32", #Brett Home
   "86.132.187.22/32",  #Don Home
   "81.134.202.29/32",  #Moj VPN
   "217.33.148.210/32", #Digital studio
