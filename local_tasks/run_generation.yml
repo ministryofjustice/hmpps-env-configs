@@ -5,11 +5,6 @@
     file: "{{ vars_file }}"
     name: env_vars
 
-- name: Debug env var dict
-  debug:
-    msg: "{{ item }}"
-  with_dict: "{{ env_vars }}"
-  
 - name: Set our vars in global
   set_fact:
     "{{ item.key }}": "{{ item.value }}"
