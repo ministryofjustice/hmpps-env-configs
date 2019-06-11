@@ -69,7 +69,6 @@ user_access_cidr_blocks = [
   "18.130.105.155/32",  #Engineering Jenkins prod AZ 1
   "18.130.54.20/32",    #Engineering Jenkins prod AZ 2
   "18.130.87.166/32" ,  #Engineering Jenkins prod AZ 3
-  "51.148.144.179/32",  #Brett's Office IP
   "194.75.210.208/28",  #BCL
   "213.48.246.99/32",   #BCL
 ]
