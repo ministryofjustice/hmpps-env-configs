@@ -71,7 +71,11 @@ dss_job_envvars = [
   {
     "name" = "DSS_TESTINGAUTOCORRECT"
     "value" = "true"
-  }
+  },
+    {
+    "name" = "DSS_ENVIRONMENT"
+    "value" = "delius-core-sandpit"
+  },
 ]
 
 dss_job_ulimits = [
