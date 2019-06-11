@@ -5,15 +5,15 @@
     file: "{{ vars_file }}"
     name: env_vars
 
-- name: Set our vars in global
-  set_fact:
-    "{{ item.key }}": "{{ item.value }}"
-  with_dict: "{{ env_vars }}"
-
 - name: Debug our env_vars
   debug:
     msg: "{{ env_vars|pprint }}"
     verbosity: 1
+
+- name: Set our vars in global
+  set_fact:
+    "{{ item.key }}": "{{ item.value }}"
+  with_dict: "{{ env_vars }}"
 
 - name: Load our common vars
   include_vars:
