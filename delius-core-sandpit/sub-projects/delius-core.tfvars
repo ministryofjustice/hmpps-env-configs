@@ -53,11 +53,11 @@ dss_min_vcpu = 0
 
 dss_max_vcpu = 8
 
-dss_job_image = "mojdigitalstudio/hmpps-delius-dss-docker:latest"
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
 
 dss_job_vcpus = 1
 
-dss_job_memory = 128
+dss_job_memory = 256
 
 dss_job_schedule = "cron(00 23 * * ? *)"
 
@@ -72,9 +72,13 @@ dss_job_envvars = [
     "name" = "DSS_TESTINGAUTOCORRECT"
     "value" = "true"
   },
-    {
+  {
     "name" = "DSS_ENVIRONMENT"
     "value" = "delius-core-sandpit"
+  },
+  {
+    "name" = "DSS_DSSWEBSERVERURL"
+    "value" = "https://interface-app-internal.sandpit.delius-core.probation.hmpps.dsd.io/NDeliusDSS"
   },
 ]
 
@@ -86,4 +90,4 @@ dss_job_ulimits = [
   }
 ]
 
-dss_queue_state = "ENABLED"
+dss_queue_state = "DISABLED"
