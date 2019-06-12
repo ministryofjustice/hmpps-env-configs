@@ -53,8 +53,7 @@ dss_min_vcpu = 0
 
 dss_max_vcpu = 8
 
-dss_job_image = "mojdigitalstudio/hmpps-delius-dss-docker:latest"
-
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
 dss_job_vcpus = 1
 
 dss_job_memory = 128
