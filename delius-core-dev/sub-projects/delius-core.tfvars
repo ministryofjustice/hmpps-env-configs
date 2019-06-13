@@ -80,6 +80,11 @@ dss_job_envvars = [
     "name" = "DSS_DSSWEBSERVERURL"
     "value" = "https://interface-app-internal.dev.delius-core.probation.hmpps.dsd.io/NDeliusDSS"
   },
+  ,
+  {
+    "name" = "DSS_PROJECT"
+    "value" = "delius-core"
+  }
 ]
 
 dss_job_ulimits = [

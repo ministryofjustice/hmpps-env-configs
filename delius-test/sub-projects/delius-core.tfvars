@@ -80,8 +80,13 @@ dss_job_envvars = [
   },
   {
     "name" = "DSS_DSSWEBSERVERURL"
-    "value" = "https://interface-app-internal.test.delius.probation.hmpps.dsd.io/NDeliusDSS"
+    "value" = "https://interface-app-internal.test.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
   },
+  ,
+  {
+    "name" = "DSS_PROJECT"
+    "value" = "delius"
+  }
 ]
 
 dss_job_ulimits = [
