@@ -51,7 +51,9 @@ az_asg_min = {
   az3 = "0"
 }
 
-asg_instance_type = "t2.medium"
+asg_instance_type_crc = "t2.small"
+asg_instance_type_mpx = "t2.medium"
+asg_instance_type_iso = "t2.small"
 
 
 spg_app_name = "spgw"
