@@ -42,3 +42,27 @@ ansible_vars = {
 }
 
 env_user_access_cidr_blocks = []
+
+# DSS Batch Task
+dss_job_envvars = [
+  {
+    "name" = "DSS_TESTMODE"
+    "value" =  "true"
+  },
+  {
+    "name" = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name" = "DSS_ENVIRONMENT"
+    "value" = "delius-training"
+  },
+  {
+    "name" = "DSS_DSSWEBSERVERURL"
+    "value" = "https://interface-app-internal.training.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
+  },
+  {
+    "name" = "DSS_PROJECT"
+    "value" = "delius"
+  }
+]
