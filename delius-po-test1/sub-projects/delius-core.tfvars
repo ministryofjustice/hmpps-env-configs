@@ -77,3 +77,27 @@ env_user_access_cidr_blocks = [
   # - EOS
   "5.153.255.210/32",   # EOS Public IP
 ]
+
+# DSS Batch Task
+dss_job_envvars = [
+  {
+    "name" = "DSS_TESTMODE"
+    "value" =  "true"
+  },
+  {
+    "name" = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name" = "DSS_ENVIRONMENT"
+    "value" = "delius-po-test1"
+  },
+  {
+    "name" = "DSS_DSSWEBSERVERURL"
+    "value" = "https://interface-app-internal.po-test1.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
+  },
+  {
+    "name" = "DSS_PROJECT"
+    "value" = "delius"
+  }
+]

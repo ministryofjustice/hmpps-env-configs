@@ -242,3 +242,22 @@ default_ansible_vars = {
 
 # Elasticsearch
 es_jvm_heap_size = "8g"
+
+# DSS Batch Task
+dss_batch_instances = ["m5.large", "c5.large"]
+dss_min_vcpu = 0
+dss_max_vcpu = 8
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
+dss_job_vcpus = 1
+dss_job_memory = 256
+dss_job_schedule = "cron(00 23 * * ? *)"
+dss_job_retries = 1
+dss_queue_state = "ENABLED"
+dss_job_ulimits = [
+  {
+    "name"      = "nofile"
+    "hardLimit" = "1024"
+    "softLimit" = "1024"
+  }
+]
+
