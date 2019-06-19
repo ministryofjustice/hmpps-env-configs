@@ -85,3 +85,8 @@ self_signed_server_validity_period_hours = 8760
 #336 = 14 days
 self_signed_server_early_renewal_hours = 336
 
+
+SPG_GATEWAY_MQ_URL="tcp://localhost:61616" // NOTE THIS SHOULD COME FROM THE COMMON ENVS PROJECT
+
+SPG_DELIUS_MQ_URL ="tcp://spg-internal.sandpit.delius-core.probation.hmpps.dsd.io"  // NOTE THIS SHOULD COME FROM THE COMMON ENVS PROJECT
+}
