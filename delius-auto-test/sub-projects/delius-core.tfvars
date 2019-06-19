@@ -1,4 +1,4 @@
-# delius-core-dev  delius-core.tfvars
+# delius-auto-test  delius-core.tfvar
 ## Delius Core Specific
 
 egress_443 = true
@@ -16,8 +16,8 @@ db_size_delius_core = {
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DNDA"
-  database_sid                  = "DNDA"
+  database_global_database_name = "DATNDA"
+  database_sid                  = "DATNDA"
   ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
@@ -41,7 +41,7 @@ ansible_vars = {
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
   ndelius_training_mode = "development"
   ndelius_log_level = "DEBUG"
-  database_sid = "DNDA"
+  database_sid = "DATNDA"
 }
 
 env_user_access_cidr_blocks = []
@@ -58,15 +58,14 @@ dss_job_envvars = [
   },
   {
     "name" = "DSS_ENVIRONMENT"
-    "value" = "delius-core-dev"
+    "value" = "delius-auto-test"
   },
   {
     "name" = "DSS_DSSWEBSERVERURL"
-    "value" = "https://interface-app-internal.dev.delius-core.probation.hmpps.dsd.io/NDeliusDSS"
+    "value" = "https://interface-app-internal.auto-test.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
   },
-  ,
   {
     "name" = "DSS_PROJECT"
-    "value" = "delius-core"
+    "value" = "delius"
   }
 ]

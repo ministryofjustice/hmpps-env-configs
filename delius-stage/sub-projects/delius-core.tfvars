@@ -1,4 +1,4 @@
-# delius-core-dev  delius-core.tfvars
+# delius-stage  delius-core.tfvar
 ## Delius Core Specific
 
 egress_443 = true
@@ -10,14 +10,14 @@ db_size_delius_core = {
   instance_type  = "t3.large"
   disk_iops      = 1000
   disks_quantity = 2  # Do not decrease this
-  disk_size      = 500 # Do not decrease this
-  # total_storage  = 1000 # This should equal disks_quantity x disk_size
+  disk_size      = 200 # Do not decrease this
+  # total_storage  = 400 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DNDA"
-  database_sid                  = "DNDA"
+  database_global_database_name = "STGNDA"
+  database_sid                  = "STGNDA"
   ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
@@ -32,16 +32,18 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
+instance_type_ldap = "m5.xlarge"
 ansible_vars_apacheds = {
-  import_users_ldif = "seed.ldif"
+  jvm_mem_args = "12228"  # (in MB)
 }
 
 # WebLogic
+instance_type_weblogic = "m5.xlarge"
+instance_count_weblogic_ndelius = "15"
 ansible_vars = {
-  ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level = "DEBUG"
-  database_sid = "DNDA"
+  jvm_mem_args = "-Xms12g -Xmx12g"
+  database_sid = "STGNDA"
+  nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"
 }
 
 env_user_access_cidr_blocks = []
@@ -58,15 +60,14 @@ dss_job_envvars = [
   },
   {
     "name" = "DSS_ENVIRONMENT"
-    "value" = "delius-core-dev"
+    "value" = "delius-stage"
   },
   {
     "name" = "DSS_DSSWEBSERVERURL"
-    "value" = "https://interface-app-internal.dev.delius-core.probation.hmpps.dsd.io/NDeliusDSS"
+    "value" = "https://interface-app-internal.stage.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
   },
-  ,
   {
     "name" = "DSS_PROJECT"
-    "value" = "delius-core"
+    "value" = "delius"
   }
 ]

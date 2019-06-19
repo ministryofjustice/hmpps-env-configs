@@ -17,7 +17,6 @@ eng_root_arn = "arn:aws:iam::895523100917:root"
 #
 # ALLOWED CIDRS
 allowed_cidr_block = [
-  "51.148.142.120/32",  #Brett Home
   "109.148.137.148/32", #Don Home
   "81.134.202.29/32",   #Moj VPN
   "217.33.148.210/32",  #Digital studio
@@ -53,7 +52,7 @@ az_asg_min = {
 #
 asg_instance_type = "t2.medium"
 #
-spg_app_name = "gw"
+spg_app_name = "spgw"
 
-s3_bucket_config = "tf-eu-west-2-hmpps-delius-test-gw-s3bucket"
+s3_bucket_config = "tf-eu-west-2-hmpps-delius-test-spgw-s3bucket"
 spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/test"

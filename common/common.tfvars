@@ -63,7 +63,7 @@ user_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "35.178.251.127/32", #Engineering Jenkins non prod windows slave
+  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
   "18.130.186.182/32", #TEST  test-test-windows-injector-0
   "35.178.200.180/32", #TEST  test-test-windows-injector-1
   "35.176.195.86/32",  #TEST  test-test-windows-loadrunner
@@ -73,8 +73,8 @@ user_access_cidr_blocks = [
   "194.33.192.0/25",   # ARK internet (DOM1)
   "194.33.193.0/25",   # ARK internet (DOM1)
   "194.33.196.0/25",   # ARK internet (DOM1)
-  "194.33.197.0/25"    # ARK internet (DOM1)
-]
+  "194.33.197.0/25",
+] # ARK internet (DOM1)
 
 # jenkins access
 jenkins_access_cidr_blocks = [
@@ -147,28 +147,44 @@ backup_retention_days = 7
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 7
 
-# Default values for ApacheDS LDAP bootstrap
+# Default values for ApacheDS LDAP
+instance_type_ldap = "t3.large"
+
+ldap_slave_asg_min = "1"
+
+ldap_slave_asg_desired = "2"
+
+ldap_slave_asg_max = "10"
+
 default_ansible_vars_apacheds = {
   # ApacheDS
-  jvm_mem_args                = "6144"  # (in MB)
-  apacheds_version            = "apacheds-2.0.0.AM25-default"
-  apacheds_install_directory  = "/var/lib/apacheds-2.0.0.AM25/default"
-  apacheds_lib_directory      = "/opt/apacheds-2.0.0.AM25"
-  workspace                   = "/tmp/apacheds-bootstrap"
-  log_level                   = "WARN"
+  jvm_mem_args               = "6144"                                 # (in MB)
+  apacheds_version           = "apacheds-2.0.0.AM25-default"
+  apacheds_install_directory = "/var/lib/apacheds-2.0.0.AM25/default"
+  apacheds_lib_directory     = "/opt/apacheds-2.0.0.AM25"
+  workspace                  = "/tmp/apacheds-bootstrap"
+  log_level                  = "WARN"
 
   # LDAP
-  ldap_protocol               = "ldap"
-  bind_user                   = "uid=admin,ou=system"
-  partition_id                = "moj"
-  base_root                   = "dc=moj,dc=com"
+  ldap_protocol = "ldap"
+  bind_user     = "uid=admin,ou=system"
+  partition_id  = "moj"
+  base_root     = "dc=moj,dc=com"
 
   # Data import
-  import_users_ldif           = "LATEST"
-  sanitize_oid_ldif           = "yes"
+  import_users_ldif = "LATEST"
+  sanitize_oid_ldif = "yes"
 }
 
-# Default values for NDelius WebLogic bootstrap
+# Default values for NDelius WebLogic
+instance_type_weblogic = "t2.medium"
+
+instance_count_weblogic_ndelius = "6"
+
+instance_count_weblogic_spg = "6"
+
+instance_count_weblogic_interface = "6"
+
 default_ansible_vars = {
   # Server/WebLogic config
   jvm_mem_args            = "-Xms3g -Xmx3g"
@@ -203,7 +219,7 @@ default_ansible_vars = {
 
   # App Config
   ndelius_display_name  = "National Delius"
-  ndelius_training_mode = "production" # development, training, production
+  ndelius_training_mode = "production"                                                                # development, training, production
   ndelius_log_level     = "INFO"
   ndelius_analytics_tag = "UA-122274748-2"
   ldap_passfile         = "/u01/app/oracle/middleware/user_projects/domains/NDelius/password.keyfile"
@@ -212,7 +228,7 @@ default_ansible_vars = {
   newtech_search_url             = "/newTech"
   newtech_pdfgenerator_url       = "/newTech"
   newtech_pdfgenerator_templates = "shortFormatPreSentenceReport"
-  newtech_pdfgenerator_secret    = "ThisIsASecretKey" # TODO pull from param store
+  newtech_pdfgenerator_secret    = "ThisIsASecretKey"             # TODO pull from param store
 
   # User Management Tool
   usermanagement_url    = "/umt/"
@@ -221,5 +237,63 @@ default_ansible_vars = {
   # NOMIS
   nomis_url           = "https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api"
   nomis_client_id     = "delius"
-  nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
+  nomis_client_secret = "ThisIsASecretKey"                                    # TODO pull from param store
 }
+
+# Elasticsearch
+es_jvm_heap_size = "8g"
+
+# DSS Batch Task
+dss_batch_instances = ["m5.large", "c5.large"]
+dss_min_vcpu = 0
+dss_max_vcpu = 8
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
+dss_job_vcpus = 1
+dss_job_memory = 256
+dss_job_schedule = "cron(00 23 * * ? *)"
+dss_job_retries = 1
+dss_queue_state = "ENABLED"
+dss_job_ulimits = [
+  {
+    "name"      = "nofile"
+    "hardLimit" = "1024"
+    "softLimit" = "1024"
+  }
+]
+
+# Testing/Chaosmonkey 
+ce_instances = ["m5.large", "c5.large"]
+ce_min_vcpu = 0
+ce_max_vcpu = 8
+ce_queue_state = "ENABLED"
+chaosmonkey_job_image = "mojdigitalstudio/hmpps-chaosmonkey:latest"
+chaosmonkey_job_vcpus = 1
+chaosmonkey_job_memory = 512
+chaosmonkey_job_retries = 1
+chaosmonkey_job_envvars = [
+    {
+        "name" = "SIMIANARMY_CLIENT_LOCALDB_ENABLED"
+        "value" =  "true"
+    },
+    {
+        "name" = "SIMIANARMY_CALENDAR_TIMEZONE"
+        "value" = "Europe/London"
+    },
+    {
+        "name" = "SIMIANARMY_CHAOS_LEASHED"
+        "value" = "false"
+    },
+    {
+        "name" = "SIMIANARMY_CALENDAR_OPENHOUR"
+        "value" = "9"
+    },
+    {
+        "name" = "SIMIANARMY_CALENDAR_CLOSEHOUR"
+        "value" = "17"
+    },    
+    {
+        "name" = "SIMIANARMY_CLIENT_AWS_REGION"
+        "value" = "eu-west-2"
+    }, 
+]
+chaosmonkey_job_ulimits = []

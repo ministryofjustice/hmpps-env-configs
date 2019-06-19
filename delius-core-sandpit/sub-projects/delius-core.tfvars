@@ -4,16 +4,14 @@
 egress_443 = true
 egress_80 = true
 
-ndelius_version = "4.1.8.4"
-
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size  = "small"
   instance_type  = "t3.large"
   disk_iops      = 1000
   disks_quantity = 2  # Do not decrease this
-  disk_size      = 100 # Do not decrease this
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  disk_size      = 500 # Do not decrease this
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
@@ -34,15 +32,11 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
+  import_users_ldif = "seed.ldif"
 }
 
 # WebLogic
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
-instance_count_weblogic_interface = "6"
 ansible_vars = {
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
   ndelius_training_mode = "development"
@@ -51,3 +45,27 @@ ansible_vars = {
 }
 
 env_user_access_cidr_blocks = []
+
+# DSS Batch Task
+dss_job_envvars = [
+  {
+    "name" = "DSS_TESTMODE"
+    "value" =  "true"
+  },
+  {
+    "name" = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name" = "DSS_ENVIRONMENT"
+    "value" = "delius-core-sandpit"
+  },
+  {
+    "name" = "DSS_DSSWEBSERVERURL"
+    "value" = "https://interface-app-internal.sandpit.delius-core.probation.hmpps.dsd.io/NDeliusDSS"
+  },
+  {
+    "name" = "DSS_PROJECT"
+    "value" = "delius-core"
+  }
+]

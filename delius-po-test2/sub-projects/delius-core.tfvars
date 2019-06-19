@@ -1,10 +1,8 @@
-# delius-core-dev  delius-core.tfvars
+# delius-po-test2  delius-core.tfvars
 ## Delius Core Specific
 
 egress_443 = true
 egress_80 = true
-
-ndelius_version = "4.1.8.2"
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
@@ -34,15 +32,11 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
-  import_users_ldif = "IFSR3-190412/OID/IFSR3-190412.ldif"
+  import_users_ldif = "IFSR3-190517/OID/IFSR3-190517.ldif"
 }
 
 # WebLogic
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
 instance_count_weblogic_interface = "0"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
@@ -57,14 +51,17 @@ env_user_access_cidr_blocks = [
 
   # -SEETEC
   "80.86.46.16/30",
+  "195.224.76.229/32",
 
-  # -Interserve
+  # -Interserve (Purple Futures)
   "46.227.51.224/29",
   "46.227.51.232/29",
   "46.227.51.240/28",
+  "51.179.196.131/32", #interserve desktop users public IP
 
-  # -Meganexus
-  "83.151.209.178/32",
+  # -Meganexus (Purple Futures)
+  "83.151.209.178/32",  # PF SPG Server Public IP/NAT
+  "83.151.209.179/32", # PF SPG Server Public IP/NAT 2
   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
   "49.248.250.6/32",    # Meganexus India (Gateway IP)
 
@@ -80,4 +77,28 @@ env_user_access_cidr_blocks = [
 
   # - EOS
   "5.153.255.210/32",   # EOS Public IP
+]
+
+# DSS Batch Task
+dss_job_envvars = [
+  {
+    "name" = "DSS_TESTMODE"
+    "value" =  "true"
+  },
+  {
+    "name" = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name" = "DSS_ENVIRONMENT"
+    "value" = "delius-po-test2"
+  },
+  {
+    "name" = "DSS_DSSWEBSERVERURL"
+    "value" = "https://interface-app-internal.po-test2.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
+  },
+  {
+    "name" = "DSS_PROJECT"
+    "value" = "delius"
+  }
 ]

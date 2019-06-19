@@ -1,10 +1,8 @@
-# delius-core-dev  delius-core.tfvars
+# delius-training  delius-core.tfvars
 ## Delius Core Specific
 
 egress_443 = true
 egress_80 = true
-
-ndelius_version = "4.1.7.3"
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
@@ -34,18 +32,37 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "t3.large"
 ansible_vars_apacheds = {
 }
 
 # WebLogic
-instance_type_weblogic = "t2.medium"
-instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_spg = "6"
-instance_count_weblogic_interface = "6"
 ansible_vars = {
   database_sid = "TRNDA"
   ndelius_training_mode = "training"
 }
 
 env_user_access_cidr_blocks = []
+
+# DSS Batch Task
+dss_job_envvars = [
+  {
+    "name" = "DSS_TESTMODE"
+    "value" =  "true"
+  },
+  {
+    "name" = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name" = "DSS_ENVIRONMENT"
+    "value" = "delius-training"
+  },
+  {
+    "name" = "DSS_DSSWEBSERVERURL"
+    "value" = "https://interface-app-internal.training.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
+  },
+  {
+    "name" = "DSS_PROJECT"
+    "value" = "delius"
+  }
+]
