@@ -228,3 +228,58 @@ default_ansible_vars = {
   nomis_client_id     = "delius"
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
 }
+
+# DSS Batch Task
+dss_batch_instances = ["m5.large", "c5.large"]
+dss_min_vcpu = 0
+dss_max_vcpu = 8
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
+dss_job_vcpus = 1
+dss_job_memory = 256
+dss_job_schedule = "cron(00 05 * * ? *)"
+dss_job_retries = 1
+dss_queue_state = "ENABLED"
+dss_job_ulimits = [
+  {
+    "name"      = "nofile"
+    "hardLimit" = "1024"
+    "softLimit" = "1024"
+  }
+]
+
+# Testing/Chaosmonkey 
+ce_instances = ["m5.large", "c5.large"]
+ce_min_vcpu = 0
+ce_max_vcpu = 8
+ce_queue_state = "ENABLED"
+chaosmonkey_job_image = "mojdigitalstudio/hmpps-chaosmonkey:latest"
+chaosmonkey_job_vcpus = 1
+chaosmonkey_job_memory = 512
+chaosmonkey_job_retries = 1
+chaosmonkey_job_envvars = [
+    {
+        "name" = "SIMIANARMY_CLIENT_LOCALDB_ENABLED"
+        "value" =  "true"
+    },
+    {
+        "name" = "SIMIANARMY_CALENDAR_TIMEZONE"
+        "value" = "Europe/London"
+    },
+    {
+        "name" = "SIMIANARMY_CHAOS_LEASHED"
+        "value" = "true"
+    },
+    {
+        "name" = "SIMIANARMY_CALENDAR_OPENHOUR"
+        "value" = "9"
+    },
+    {
+        "name" = "SIMIANARMY_CALENDAR_CLOSEHOUR"
+        "value" = "17"
+    },    
+    {
+        "name" = "SIMIANARMY_CLIENT_AWS_REGION"
+        "value" = "eu-west-2"
+    }, 
+]
+chaosmonkey_job_ulimits = []
