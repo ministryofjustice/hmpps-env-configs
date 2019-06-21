@@ -86,7 +86,17 @@ self_signed_server_validity_period_hours = 8760
 self_signed_server_early_renewal_hours = 336
 
 
-SPG_GATEWAY_MQ_URL="tcp://localhost:61616" // NOTE THIS SHOULD COME FROM THE COMMON ENVS PROJECT
 
-SPG_DELIUS_MQ_URL ="tcp://spg-internal.sandpit.delius-core.probation.hmpps.dsd.io"  // NOTE THIS SHOULD COME FROM THE COMMON ENVS PROJECT
+SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
+SPG_DELIUS_MQ_URL ="tcp://spg-internal.sandpit.delius-core.probation.hmpps.dsd.io"
+
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io/alfresco/service/noms-spg"
+
+SPG_ISO_FQDN  = "spgw-ext.sandpit.delius-core.probation.hmpps.dsd.io"
+SPG_MPX_FQDN  = "spgw-crc-int.sandpit.delius-core.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-mpx-int.sandpit.delius-core.probation.hmpps.dsd.io"
+
+
+
 }
