@@ -51,9 +51,70 @@ az_asg_min = {
   az3 = "0"
 }
 
-asg_instance_type = "t2.small"
+asg_instance_type_crc = "t2.small"
+asg_instance_type_mpx = "t2.medium"
+asg_instance_type_iso = "t2.small"
+
 
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-auto-test-spgw-s3bucket"
 spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
+
+
+
+
+
+# Self Signed Certs
+self_signed_ca_algorithm = "RSA"
+
+self_signed_ca_rsa_bits = "4096"
+
+self_signed_ca_validity_period_hours = 8760
+
+#672 = 28 days
+self_signed_ca_early_renewal_hours = 672
+
+self_signed_server_algorithm = "RSA"
+
+self_signed_server_rsa_bits = "4096"
+
+#8760=365 days
+self_signed_server_validity_period_hours = 8760
+
+
+#336 = 14 days
+self_signed_server_early_renewal_hours = 336
+
+
+#ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
+#ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
+#Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
+spg_mpx_ecs_cpu_units = 1024
+spg_mpx_ecs_memory = 3845
+SPG_MPX_JAVA_MAX_MEM = 3000
+
+
+
+SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default/hosts_spg_one"
+
+
+
+SPG_ENVIRONMENT_CODE = "autotest"
+SPG_ENVIRONMENT_CN = "autotest.delius.probation.hmpps.dsd.io"
+
+
+SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
+SPG_DELIUS_MQ_URL ="tcp://spg-internal.autotest.delius.probation.hmpps.dsd.io:61617"
+
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
+
+//SPG_ISO_FQDN  = "spgw-ext.autotest.delius.probation.hmpps.dsd.io"
+//SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
+//SPG_CRC_FQDN  = "spgw-crc-int.autotest.delius.probation.hmpps.dsd.io"
+
+
+SPG_ISO_FQDN  = "localhost"
+SPG_MPX_FQDN  = "localhost"
+SPG_CRC_FQDN  = "localhost"
