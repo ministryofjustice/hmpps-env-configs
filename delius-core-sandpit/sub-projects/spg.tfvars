@@ -103,7 +103,3 @@ SPG_ISO_FQDN  = "spgw-ext.sandpit.delius-core.probation.hmpps.dsd.io"
 SPG_MPX_FQDN  = "spgw-mpx-int.sandpit.delius-core.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-int.sandpit.delius-core.probation.hmpps.dsd.io"
 
-
-
-
-}
