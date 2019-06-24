@@ -86,9 +86,17 @@ self_signed_server_validity_period_hours = 8760
 self_signed_server_early_renewal_hours = 336
 
 
+#Java needs to be approx 200MB less than available memory
+spg_mpx_ecs_cpu_units = 256
+spg_mpx_ecs_memory = 3845
+SPG_MPX_JAVA_MAX_MEM = 3000
 
 
-SPG_JAVA_MAX_MEM = 1900
+
+SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default/hosts_spg_one"
+
+
+
 SPG_ENVIRONMENT_CODE = "sandpit"
 SPG_ENVIRONMENT_CN = "sandpit.delius-core.probation.hmpps.dsd.io"
 
