@@ -32,6 +32,21 @@ self_signed_server_validity_period_hours = 2160
 
 self_signed_server_early_renewal_hours = 336
 
+#Instance size for bcs
+bcs_instance_type  = "t2.xlarge"
+
+#Instance size for bfs
+bfs_instance_type  = "t2.large"
+
+#Instance size for bps
+bps_instance_type  = "t2.xlarge"
+
+#Instance size for bws
+bws_instance_type  = "t2.xlarge"
+
+#Instance size for dis
+dis_instance_type  = "t2.xlarge"
+
 bws-health_check = [
   {
     target              = "HTTP:8080/BOE/BI"
