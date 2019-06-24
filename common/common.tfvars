@@ -240,6 +240,13 @@ default_ansible_vars = {
   nomis_client_secret = "ThisIsASecretKey"                                    # TODO pull from param store
 }
 
+# PWM
+pwm_config = {
+  instance_type = "t3.large"
+  desired_count = 3
+  memory = 6144
+}
+
 # Elasticsearch
 es_jvm_heap_size = "8g"
 

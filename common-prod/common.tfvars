@@ -229,6 +229,13 @@ default_ansible_vars = {
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
 }
 
+# PWM
+pwm_config = {
+  instance_type = "t3.large"
+  desired_count = 3
+  memory = 6144
+}
+
 # DSS Batch Task
 dss_batch_instances = ["m5.large", "c5.large"]
 dss_min_vcpu = 0
