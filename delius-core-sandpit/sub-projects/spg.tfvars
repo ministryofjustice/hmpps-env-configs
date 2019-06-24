@@ -86,8 +86,10 @@ self_signed_server_validity_period_hours = 8760
 self_signed_server_early_renewal_hours = 336
 
 
-#Java needs to be approx 200MB less than available memory
-spg_mpx_ecs_cpu_units = 256
+#ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
+#ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
+#Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
+spg_mpx_ecs_cpu_units = 1024
 spg_mpx_ecs_memory = 3845
 SPG_MPX_JAVA_MAX_MEM = 3000
 
@@ -102,12 +104,16 @@ SPG_ENVIRONMENT_CN = "sandpit.delius-core.probation.hmpps.dsd.io"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://spg-internal.sandpit.delius-core.probation.hmpps.dsd.io"
+SPG_DELIUS_MQ_URL ="tcp://spg-internal.sandpit.delius-core.probation.hmpps.dsd.io:61617"
 
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-SPG_ISO_FQDN  = "spgw-ext.sandpit.delius-core.probation.hmpps.dsd.io"
-SPG_MPX_FQDN  = "spgw-mpx-int.sandpit.delius-core.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-int.sandpit.delius-core.probation.hmpps.dsd.io"
+//SPG_ISO_FQDN  = "spgw-ext.sandpit.delius-core.probation.hmpps.dsd.io"
+//SPG_MPX_FQDN  = "spgw-mpx-int.sandpit.delius-core.probation.hmpps.dsd.io"
+//SPG_CRC_FQDN  = "spgw-crc-int.sandpit.delius-core.probation.hmpps.dsd.io"
 
+
+SPG_ISO_FQDN  = "localhost"
+SPG_MPX_FQDN  = "localhost"
+SPG_CRC_FQDN  = "localhost"
