@@ -53,7 +53,7 @@ az_asg_min = {
 
 asg_instance_type_crc = "t2.small"
 asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+asg_instance_type_iso = "t2.micro"
 
 
 spg_app_name = "spgw"
@@ -78,7 +78,7 @@ SPG_CRC_JAVA_MAX_MEM = 1691
 SPG_CRC_HOST_TYPE = "crc"
 
 //spg_iso_ecs_cpu_units = 1024
-spg_iso_ecs_memory = 985
+spg_iso_ecs_memory = 965
 SPG_ISO_JAVA_MAX_MEM = 785
 SPG_ISO_HOST_TYPE = "iso"
 
