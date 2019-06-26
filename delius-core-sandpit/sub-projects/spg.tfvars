@@ -53,7 +53,7 @@ az_asg_min = {
 
 asg_instance_type_crc = "t2.small"
 asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.micro"
+asg_instance_type_iso = "t2.small"
 
 
 spg_app_name = "spgw"
@@ -68,18 +68,18 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/sandpit"
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
 #Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
 //spg_mpx_ecs_cpu_units = 1024
-spg_mpx_ecs_memory = 3845
+spg_mpx_ecs_memory = 3835
 SPG_MPX_JAVA_MAX_MEM = 3645
 SPG_MPX_HOST_TYPE = "hybrid"
 
 //spg_crc_ecs_cpu_units = 1024
-spg_crc_ecs_memory = 1891
+spg_crc_ecs_memory = 1881
 SPG_CRC_JAVA_MAX_MEM = 1691
 SPG_CRC_HOST_TYPE = "crc"
 
 //spg_iso_ecs_cpu_units = 1024
-spg_iso_ecs_memory = 965
-SPG_ISO_JAVA_MAX_MEM = 785
+spg_iso_ecs_memory = 1881
+SPG_ISO_JAVA_MAX_MEM = 1691
 SPG_ISO_HOST_TYPE = "iso"
 
 
