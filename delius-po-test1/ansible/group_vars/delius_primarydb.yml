@@ -1,0 +1,6 @@
+--- # delius_primarydb.yml
+
+database_global_database: POT1NDA
+database_taf_service: POT1NDA_TAF
+database_primary_unique: POT1NDA
+database_primary_sid: POT1NDA
