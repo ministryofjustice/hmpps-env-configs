@@ -48,7 +48,7 @@ bws_instance_type  = "t2.xlarge"
 dis_instance_type  = "t2.xlarge"
 
 #Deploy additional instance
-deploy_node        = "0"
+deploy_node        = "1"
 
 bws-health_check = [
   {
