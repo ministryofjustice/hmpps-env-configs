@@ -1,0 +1,4 @@
+--- # delius_standbydb2.yml
+
+database_standby_unique: TRTNDAS2
+database_standby_sid: TRTNDAS2

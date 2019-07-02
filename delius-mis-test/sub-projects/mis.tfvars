@@ -47,6 +47,9 @@ bws_instance_type  = "t2.xlarge"
 #Instance size for dis
 dis_instance_type  = "t2.xlarge"
 
+#Deploy additional instance
+deploy_node        = "1"
+
 bws-health_check = [
   {
     target              = "HTTP:8080/BOE/BI"

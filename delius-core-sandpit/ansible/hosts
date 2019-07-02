@@ -15,3 +15,11 @@ delius_standbydb2
 
 [oracle_databases:children]
 delius_dbs
+
+
+[delius_test_primarydb]
+delius-db-11.sandpit.delius-core.probation.hmpps.dsd.io
+[delius_test_standbydb1]
+delius-db-22.sandpit.delius-core.probation.hmpps.dsd.io
+[delius_test_standbydb2]
+delius-db-33.sandpit.delius-core.probation.hmpps.dsd.io
