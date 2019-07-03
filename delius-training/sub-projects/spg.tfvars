@@ -96,7 +96,7 @@ SPG_MPX_JAVA_MAX_MEM = 3000
 
 
 
-SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default/hosts_spg_one"
+SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 
 
 

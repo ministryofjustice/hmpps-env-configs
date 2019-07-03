@@ -83,8 +83,8 @@ SPG_ISO_JAVA_MAX_MEM = 1691
 SPG_ISO_HOST_TYPE = "iso"
 
 
-SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 
+SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 
 
 SPG_ENVIRONMENT_CODE = "sandpit"
