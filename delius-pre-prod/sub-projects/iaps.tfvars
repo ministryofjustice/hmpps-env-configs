@@ -8,7 +8,7 @@ cloudwatch_log_retention = 14
 route53_sub_domain = "dev.iaps"
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
-route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
+route53_hosted_zone_id = "ZL1RSLMZP6BJA"
 
 # IAPS RDS INSTANCE
 rds_instance_class = "db.t2.large"
