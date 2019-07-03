@@ -64,35 +64,23 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
-
-# Self Signed Certs
-self_signed_ca_algorithm = "RSA"
-
-self_signed_ca_rsa_bits = "4096"
-
-self_signed_ca_validity_period_hours = 8760
-
-#672 = 28 days
-self_signed_ca_early_renewal_hours = 672
-
-self_signed_server_algorithm = "RSA"
-
-self_signed_server_rsa_bits = "4096"
-
-#8760=365 days
-self_signed_server_validity_period_hours = 8760
-
-
-#336 = 14 days
-self_signed_server_early_renewal_hours = 336
-
-
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
 #Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
-spg_mpx_ecs_cpu_units = 1024
-spg_mpx_ecs_memory = 3845
-SPG_MPX_JAVA_MAX_MEM = 3000
+//spg_mpx_ecs_cpu_units = 1024
+spg_mpx_ecs_memory = 3835
+SPG_MPX_JAVA_MAX_MEM = 3645
+SPG_MPX_HOST_TYPE = "hybrid"
+
+//spg_crc_ecs_cpu_units = 1024
+spg_crc_ecs_memory = 1881
+SPG_CRC_JAVA_MAX_MEM = 1691
+SPG_CRC_HOST_TYPE = "crc"
+
+//spg_iso_ecs_cpu_units = 1024
+spg_iso_ecs_memory = 1881
+SPG_ISO_JAVA_MAX_MEM = 1691
+SPG_ISO_HOST_TYPE = "iso"
 
 
 
@@ -110,11 +98,7 @@ SPG_DELIUS_MQ_URL ="tcp://spg-internal.autotest.delius.probation.hmpps.dsd.io:61
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-//SPG_ISO_FQDN  = "spgw-ext.autotest.delius.probation.hmpps.dsd.io"
-//SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-int.autotest.delius.probation.hmpps.dsd.io"
+SPG_ISO_FQDN  = "spgw-ext.autotest.delius.probation.hmpps.dsd.io"
+SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-int.autotest.delius.probation.hmpps.dsd.io"
 
-
-SPG_ISO_FQDN  = "localhost"
-SPG_MPX_FQDN  = "localhost"
-SPG_CRC_FQDN  = "localhost"
