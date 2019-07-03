@@ -5,8 +5,8 @@ lb_account_id = "652711504416"
 # VPC variables
 cloudwatch_log_retention = 14
 
-# ROUTE53 ZONE probation.hmpps.dsd.io
-route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
+# ROUTE53 ZONE probation.service.justice.gov.uk
+route53_hosted_zone_id = "Z2SOZ79CNGAPIF"
 
 # IAPS RDS INSTANCE
 rds_instance_class = "db.t2.large"
