@@ -58,8 +58,8 @@ asg_instance_type_iso = "t2.small"
 
 spg_app_name = "spgw"
 
-s3_bucket_config = "tf-eu-west-2-hmpps-delius-auto-test-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
+s3_bucket_config = "tf-eu-west-2-hmpps-delius-pre-prod-spgw-s3bucket"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/pre-prod"
 
 
 
@@ -84,25 +84,24 @@ SPG_ISO_HOST_TYPE = "iso"
 
 
 
-SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
+SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 
 
-
-SPG_ENVIRONMENT_CODE = "autotest"
-SPG_ENVIRONMENT_CN = "autotest.delius.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CODE = "pre-prod"
+SPG_ENVIRONMENT_CN = "pre-prod.delius.probation.hmpps.dsd.io"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://spg-internal.autotest.delius.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://spg-internal.pre-prod.delius.probation.hmpps.dsd.io:61617"
 
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
-
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.pre-prod.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.pre-prod.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-SPG_ISO_FQDN  = "spgw-ext.autotest.delius.probation.hmpps.dsd.io"
-SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-int.autotest.delius.probation.hmpps.dsd.io"
+//SPG_ISO_FQDN  = "spgw-ext.pre-prod.delius.probation.hmpps.dsd.io"
+//SPG_MPX_FQDN  = "spgw-mpx-int.pre-prod.delius.probation.hmpps.dsd.io"
+//SPG_CRC_FQDN  = "spgw-crc-int.pre-prod.delius.probation.hmpps.dsd.io"
+
 
 SPG_ISO_FQDN  = "localhost"
 SPG_MPX_FQDN  = "localhost"
