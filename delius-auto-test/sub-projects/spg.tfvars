@@ -11,10 +11,6 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 # ENVIRONMENT REMOTE STATES
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
 
-# ENVIRONMENT ROLE ARNS
-eng_role_arn = "${TERRAGRUNT_IAM_ROLE}"
-#eng_role_arn N/A as specified in delius-test.properties/TERRAGRUNT_IAM_ROLE
-eng_root_arn = "arn:aws:iam::895523100917:root"
 
 # ALLOWED CIDRS
 allowed_cidr_block = [
