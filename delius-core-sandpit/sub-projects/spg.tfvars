@@ -11,10 +11,6 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 # ENVIRONMENT REMOTE STATES
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
 
-# ENVIRONMENT ROLE ARNS
-eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
-
-eng_root_arn = "arn:aws:iam::895523100917:root"
 
 # ALLOWED CIDRS
 allowed_cidr_block = [
@@ -85,6 +81,7 @@ SPG_ISO_HOST_TYPE = "iso"
 
 
 SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
+
 
 
 SPG_ENVIRONMENT_CODE = "sandpit"

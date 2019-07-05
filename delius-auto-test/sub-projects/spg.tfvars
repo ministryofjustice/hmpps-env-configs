@@ -11,10 +11,6 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 # ENVIRONMENT REMOTE STATES
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
 
-# ENVIRONMENT ROLE ARNS
-eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
-
-eng_root_arn = "arn:aws:iam::895523100917:root"
 
 # ALLOWED CIDRS
 allowed_cidr_block = [
@@ -98,7 +94,12 @@ SPG_DELIUS_MQ_URL ="tcp://spg-internal.autotest.delius.probation.hmpps.dsd.io:61
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
+
+//USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
 SPG_ISO_FQDN  = "spgw-ext.autotest.delius.probation.hmpps.dsd.io"
 SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-int.autotest.delius.probation.hmpps.dsd.io"
 
+SPG_ISO_FQDN  = "localhost"
+SPG_MPX_FQDN  = "localhost"
+SPG_CRC_FQDN  = "localhost"
