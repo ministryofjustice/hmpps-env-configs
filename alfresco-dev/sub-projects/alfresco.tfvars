@@ -97,3 +97,6 @@ allowed_ssh_cidr = [
 ]
 
 alfresco_app_name = "alfresco"
+
+# restore dataset
+alf_restore_status="restore"
