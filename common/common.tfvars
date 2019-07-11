@@ -243,7 +243,6 @@ default_ansible_vars = {
 # PWM
 pwm_config = {
   instance_type = "t3.large"
-  desired_count = 3
   memory = 6144
 }
 
