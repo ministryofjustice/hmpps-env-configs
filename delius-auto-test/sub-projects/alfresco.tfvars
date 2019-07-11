@@ -100,3 +100,6 @@ alfresco_app_name = "alfresco"
 
 # spg broker url
 spg_messaging_broker_url = "spgw-jms-int.auto-test.delius.probation.hmpps.dsd.io:61616"
+
+# restore dataset
+alf_restore_status = "restore"
