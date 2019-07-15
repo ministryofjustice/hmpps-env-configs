@@ -1,3 +1,4 @@
 --- # delius-pre-prod all.yml
 simple_environment_name: pre-prod
 ndelius_version: "4.2.9"
+catalog: PCAT

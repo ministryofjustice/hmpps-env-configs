@@ -1,3 +1,4 @@
 --- # delius-mis-test all.yml
 simple_environment_name: mis-test
 ndelius_version: "4.1.7.3"
+catalog: DCAT

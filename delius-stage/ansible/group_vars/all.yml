@@ -1,3 +1,4 @@
 --- # delius-stage all.yml
 simple_environment_name: stage
 ndelius_version: "4.2.9"
+catalog: DCAT

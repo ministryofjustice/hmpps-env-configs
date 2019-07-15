@@ -1,3 +1,4 @@
 --- # delius-auto-test all.yml
 simple_environment_name: auto-test
 ndelius_version: "4.2.9"
+catalog: DCAT
