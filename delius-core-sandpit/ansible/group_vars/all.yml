@@ -1,3 +1,4 @@
 --- # delius-core-sandpit all.yml
 simple_environment_name: sandpit
 ndelius_version: "4.2.9"
+catalog: DCAT

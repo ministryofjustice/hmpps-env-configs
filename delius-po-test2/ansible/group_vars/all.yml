@@ -1,3 +1,4 @@
 --- # delius-po-test2 all.yml
 simple_environment_name: po-test2
 ndelius_version: "4.2.9"
+catalog: DCAT

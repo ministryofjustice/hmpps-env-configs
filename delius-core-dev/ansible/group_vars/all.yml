@@ -1,3 +1,4 @@
 --- # delius-core-dev all.yml
 simple_environment_name: dev
 ndelius_version: "4.2.9"
+catalog: DCAT

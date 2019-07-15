@@ -1,3 +1,4 @@
 --- # delius-perf all.yml
 simple_environment_name: perf
 ndelius_version: "4.2.9"
+catalog: DCAT
