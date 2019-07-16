@@ -1,0 +1,6 @@
+--- # misboe_primarydb.yml
+
+database_global_database_name: PREBOE
+database_taf_service_name: PREBOE_TAF
+database_primary_unique_name: PREBOE
+database_primary_sid: PREBOE

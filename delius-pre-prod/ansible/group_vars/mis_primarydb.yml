@@ -1,0 +1,6 @@
+--- # mis_primarydb.yml
+
+database_global_database_name: PREMIS
+database_taf_service_name: PREMIS_TAF
+database_primary_unique_name: PREMIS
+database_primary_sid: PREMIS
