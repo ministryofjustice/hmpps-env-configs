@@ -221,7 +221,6 @@ default_ansible_vars = {
 
   # User Management Tool
   usermanagement_url    = "/umt/"
-  usermanagement_secret = "ThisIsASecretKey" # TODO pull from param store
 
   # NOMIS
   nomis_url           = "https://gateway.prod.nomis-api.hmpps.dsd.io/elite2api"
