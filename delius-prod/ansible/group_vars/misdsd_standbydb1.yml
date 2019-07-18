@@ -1,0 +1,4 @@
+--- # misdsd_standbydb1.yml
+
+database_standby_unique: PRDDSDS1
+database_standby_sid: PRDDSDS1
