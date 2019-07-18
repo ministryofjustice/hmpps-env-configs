@@ -1,0 +1,4 @@
+--- # misboe_standbydb2.yml
+
+database_standby_unique: PRDBOES2
+database_standby_sid: PRDBOES2

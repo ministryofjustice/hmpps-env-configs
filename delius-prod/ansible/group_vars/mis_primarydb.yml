@@ -1,0 +1,6 @@
+--- # mis_primarydb.yml
+
+database_global_database: PRDMIS
+database_taf_service: PRDMIS_TAF
+database_primary_unique: PRDMIS
+database_primary_sid: PRDMIS

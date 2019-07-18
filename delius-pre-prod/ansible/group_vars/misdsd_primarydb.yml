@@ -1,6 +1,6 @@
 --- # misdsd_primarydb.yml
 
-database_global_database_name: PREDSD
-database_taf_service_name: PREDSD_TAF
-database_primary_unique_name: PREDSD
+database_global_database: PREDSD
+database_taf_service: PREDSD_TAF
+database_primary_unique: PREDSD
 database_primary_sid: PREDSD
