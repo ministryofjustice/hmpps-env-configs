@@ -1,12 +1,12 @@
 [loadrunner]
-loadrunner.probation.hmpps.dsd.io
+loadrunner.probation.service.justice.gov.uk
 
 [delius_primarydb]
-delius-db-1.probation.hmpps.dsd.io
+delius-db-1.probation.service.justice.gov.uk
 [delius_standbydb1]
-delius-db-2.probation.hmpps.dsd.io
+delius-db-2.probation.service.justice.gov.uk
 [delius_standbydb2]
-delius-db-3.probation.hmpps.dsd.io
+delius-db-3.probation.service.justice.gov.uk
 
 [delius_dbs:children]
 delius_primarydb
@@ -15,11 +15,11 @@ delius_standbydb2
 
 
 [mis_primarydb]
-mis-db-1.probation.hmpps.dsd.io
+mis-db-1.probation.service.justice.gov.uk
 [mis_standbydb1]
-mis-db-2.probation.hmpps.dsd.io
+mis-db-2.probation.service.justice.gov.uk
 [mis_standbydb2]
-mis-db-3.probation.hmpps.dsd.io
+mis-db-3.probation.service.justice.gov.uk
 
 [mis_dbs:children]
 mis_primarydb
@@ -28,11 +28,11 @@ mis_standbydb2
 
 
 [misboe_primarydb]
-misboe-db-1.probation.hmpps.dsd.io
+misboe-db-1.probation.service.justice.gov.uk
 [misboe_standbydb1]
-misboe-db-2.probation.hmpps.dsd.io
+misboe-db-2.probation.service.justice.gov.uk
 [misboe_standbydb2]
-misboe-db-3.probation.hmpps.dsd.io
+misboe-db-3.probation.service.justice.gov.uk
 
 [misboe_dbs:children]
 misboe_primarydb
@@ -40,11 +40,11 @@ misboe_standbydb1
 misboe_standbydb2
 
 [misdsd_primarydb]
-misdsd-db-1.probation.hmpps.dsd.io
+misdsd-db-1.probation.service.justice.gov.uk
 [misdsd_standbydb1]
-misdsd-db-2.probation.hmpps.dsd.io
+misdsd-db-2.probation.service.justice.gov.uk
 [misdsd_standbydb2]
-misdsd-db-3.probation.hmpps.dsd.io
+misdsd-db-3.probation.service.justice.gov.uk
 
 [misdsd_dbs:children]
 misdsd_primarydb
