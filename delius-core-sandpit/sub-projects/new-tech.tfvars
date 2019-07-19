@@ -23,3 +23,8 @@ pdf_generator_instance_type = "t2.micro"
 pdf_generator_lower_cpu_trigger = 5
 pdf_generator_upper_cpu_trigger = 10
 pdf_generator_debug_log = "true"
+
+# Override default casenotes Config
+casenotes_conf = {
+
+}
