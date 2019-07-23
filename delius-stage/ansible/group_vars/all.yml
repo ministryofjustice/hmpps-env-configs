@@ -1,4 +1,7 @@
 --- # delius-stage all.yml
+region: eu-west-2
+project_name: delius
+environment_name: delius-stage
 simple_environment_name: stage
 ndelius_version: "4.2.9"
 catalog: DCAT
