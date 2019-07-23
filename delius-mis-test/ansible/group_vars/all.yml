@@ -1,4 +1,7 @@
 --- # delius-mis-test all.yml
+region: eu-west-2
+project_name: delius
+environment_name: delius-mis-test
 simple_environment_name: mis-test
 ndelius_version: "4.1.7.3"
 catalog: DCAT

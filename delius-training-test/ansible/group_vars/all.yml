@@ -1,4 +1,7 @@
 --- # delius-training-test all.yml
+region: eu-west-2
+project_name: delius
+environment_name: delius-training-test
 simple_environment_name: training-test
 ndelius_version: "4.1.8.4"
 catalog: DCAT
