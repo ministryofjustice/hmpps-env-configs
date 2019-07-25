@@ -28,3 +28,4 @@ pdf_generator_debug_log = "true"
 casenotes_conf = {
 
 }
+

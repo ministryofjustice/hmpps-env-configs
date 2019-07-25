@@ -1,4 +1,7 @@
 --- # delius-core-dev all.yml
+region: eu-west-2
+project_name: delius-core
+environment_name: delius-core-dev
 simple_environment_name: dev
 ndelius_version: "4.2.9"
 catalog: DCAT

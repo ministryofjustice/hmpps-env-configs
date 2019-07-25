@@ -1,4 +1,7 @@
 --- # delius-auto-test all.yml
+region: eu-west-2
+project_name: delius
+environment_name: delius-auto-test
 simple_environment_name: auto-test
 ndelius_version: "4.2.9"
 catalog: DCAT

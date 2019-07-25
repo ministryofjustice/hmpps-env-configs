@@ -25,6 +25,12 @@ alfresco_app_name = "alfresco"
 
 spg_app_name = "spg"
 
+# Alfresco
+alf_sqs_backup_config = {
+  poll_interval = 60
+  image         = "mojdigitalstudio/hmpps-elasticsearch-manager:latest"
+}
+
 ## Delius Core
 weblogic_domain_ports = {
   weblogic_port      = "7001"
@@ -231,7 +237,7 @@ default_ansible_vars = {
   newtech_pdfgenerator_secret    = "ThisIsASecretKey"             # TODO pull from param store
 
   # User Management Tool
-  usermanagement_url    = "/umt/"
+  usermanagement_url = "/umt/"
 
   # NOMIS
   nomis_url           = "https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api"
@@ -241,29 +247,29 @@ default_ansible_vars = {
 
 # PWM
 pwm_config = {
-  instance_type = "t3.large"      # AWS instance type to use
-  memory = 6144                   # Memory to assign to ECS container in MB
-  ecs_scaling_min_capacity = 3    # Minimum number of running tasks
-  ecs_scaling_max_capacity = 30   # Maximum number of running tasks
-  ec2_scaling_min_capacity = 3    # Minimum number of running instances
-  ec2_scaling_max_capacity = 30   # Maximum number of running instances
-  ecs_target_cpu = 60             # CPU target value for scaling of ECS tasks
-  scale_up_cpu_threshold = 50     # CPU threshold to trigger scale up of EC2 instances
-  scale_down_cpu_threshold = 15   # CPU threshold to trigger scale down of EC2 instances
+  instance_type            = "t3.large" # AWS instance type to use
+  memory                   = 6144       # Memory to assign to ECS container in MB
+  ecs_scaling_min_capacity = 3          # Minimum number of running tasks
+  ecs_scaling_max_capacity = 30         # Maximum number of running tasks
+  ec2_scaling_min_capacity = 3          # Minimum number of running instances
+  ec2_scaling_max_capacity = 30         # Maximum number of running instances
+  ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
+  scale_up_cpu_threshold   = 50         # CPU threshold to trigger scale up of EC2 instances
+  scale_down_cpu_threshold = 15         # CPU threshold to trigger scale down of EC2 instances
 }
 
 # UMT
 umt_config = {
-  version = "latest"              # Application version
-  instance_type = "t3.large"      # AWS instance type to use
-  memory = 6144                   # Memory to assign to ECS container in MB
-  ecs_scaling_min_capacity = 3    # Minimum number of running tasks
-  ecs_scaling_max_capacity = 30   # Maximum number of running tasks
-  ec2_scaling_min_capacity = 3    # Minimum number of running instances
-  ec2_scaling_max_capacity = 30   # Maximum number of running instances
-  ecs_target_cpu = 60             # CPU target value for scaling of ECS tasks
-  scale_up_cpu_threshold = 50     # CPU threshold to trigger scale up of EC2 instances
-  scale_down_cpu_threshold = 15   # CPU threshold to trigger scale down of EC2 instances
+  version                  = "latest"   # Application version
+  instance_type            = "t3.large" # AWS instance type to use
+  memory                   = 6144       # Memory to assign to ECS container in MB
+  ecs_scaling_min_capacity = 3          # Minimum number of running tasks
+  ecs_scaling_max_capacity = 30         # Maximum number of running tasks
+  ec2_scaling_min_capacity = 3          # Minimum number of running instances
+  ec2_scaling_max_capacity = 30         # Maximum number of running instances
+  ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
+  scale_up_cpu_threshold   = 50         # CPU threshold to trigger scale up of EC2 instances
+  scale_down_cpu_threshold = 15         # CPU threshold to trigger scale down of EC2 instances
 }
 
 # Elasticsearch
@@ -271,55 +277,73 @@ es_jvm_heap_size = "8g"
 
 # DSS Batch Task
 dss_batch_instances = ["m5.large", "c5.large"]
+
 dss_min_vcpu = 0
+
 dss_max_vcpu = 8
+
 dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
+
 dss_job_vcpus = 1
+
 dss_job_memory = 256
+
 dss_job_schedule = "cron(00 23 * * ? *)"
+
 dss_job_retries = 1
+
 dss_queue_state = "ENABLED"
+
 dss_job_ulimits = [
   {
     "name"      = "nofile"
     "hardLimit" = "1024"
     "softLimit" = "1024"
-  }
+  },
 ]
 
 # Testing/Chaosmonkey 
 ce_instances = ["m5.large", "c5.large"]
+
 ce_min_vcpu = 0
+
 ce_max_vcpu = 8
+
 ce_queue_state = "ENABLED"
+
 chaosmonkey_job_image = "mojdigitalstudio/hmpps-chaosmonkey:latest"
+
 chaosmonkey_job_vcpus = 1
+
 chaosmonkey_job_memory = 512
+
 chaosmonkey_job_retries = 1
+
 chaosmonkey_job_envvars = [
-    {
-        "name" = "SIMIANARMY_CLIENT_LOCALDB_ENABLED"
-        "value" =  "true"
-    },
-    {
-        "name" = "SIMIANARMY_CALENDAR_TIMEZONE"
-        "value" = "Europe/London"
-    },
-    {
-        "name" = "SIMIANARMY_CHAOS_LEASHED"
-        "value" = "false"
-    },
-    {
-        "name" = "SIMIANARMY_CALENDAR_OPENHOUR"
-        "value" = "9"
-    },
-    {
-        "name" = "SIMIANARMY_CALENDAR_CLOSEHOUR"
-        "value" = "17"
-    },    
-    {
-        "name" = "SIMIANARMY_CLIENT_AWS_REGION"
-        "value" = "eu-west-2"
-    }, 
+  {
+    "name"  = "SIMIANARMY_CLIENT_LOCALDB_ENABLED"
+    "value" = "true"
+  },
+  {
+    "name"  = "SIMIANARMY_CALENDAR_TIMEZONE"
+    "value" = "Europe/London"
+  },
+  {
+    "name"  = "SIMIANARMY_CHAOS_LEASHED"
+    "value" = "false"
+  },
+  {
+    "name"  = "SIMIANARMY_CALENDAR_OPENHOUR"
+    "value" = "9"
+  },
+  {
+    "name"  = "SIMIANARMY_CALENDAR_CLOSEHOUR"
+    "value" = "17"
+  },
+  {
+    "name"  = "SIMIANARMY_CLIENT_AWS_REGION"
+    "value" = "eu-west-2"
+  },
 ]
+
 chaosmonkey_job_ulimits = []

@@ -1,4 +1,7 @@
 --- # delius-pre-prod all.yml
+region: eu-west-2
+project_name: delius
+environment_name: delius-pre-prod
 simple_environment_name: pre-prod
 ndelius_version: "4.2.9"
 catalog: PCAT
