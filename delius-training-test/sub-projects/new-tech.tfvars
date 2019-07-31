@@ -24,3 +24,5 @@ casenotes_conf = {
 
 }
 
+# Override default PDF Generator Config
+pdfgenerator_conf = {}
