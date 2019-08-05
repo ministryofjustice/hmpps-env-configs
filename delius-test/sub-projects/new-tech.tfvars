@@ -19,3 +19,6 @@ casenotes_conf = {
 
 # Override default PDF Generator Config
 pdfgenerator_conf = {}
+
+# Override default Offender API Config
+offenderapi_conf = {}
