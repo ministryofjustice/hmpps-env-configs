@@ -18,4 +18,6 @@ casenotes_conf = {}
 pdfgenerator_conf = {}
 
 # Override default Offender API Config
-offenderapi_conf = {}
+offenderapi_conf = {
+    env_oracledb_servicename ="SANNDA_TAF"
+}
