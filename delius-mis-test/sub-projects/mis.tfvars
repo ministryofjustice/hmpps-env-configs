@@ -47,6 +47,9 @@ bws_instance_type  = "t2.xlarge"
 #Instance size for dis
 dis_instance_type  = "t2.xlarge"
 
+#instance size for http-fs
+http_instance_type = "t2.large"
+
 #Deploy additional instance
 deploy_node        = "1"
 
@@ -55,6 +58,16 @@ bws-health_check = [
     target              = "HTTP:8080/BOE/BI"
     interval            = 30
     healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
+
+httpfs_health_check = [
+  {
+    target              = "TCP:80"
+    interval            = 30
+    healthy_threshold   = 10
     unhealthy_threshold = 2
     timeout             = 5
   },
