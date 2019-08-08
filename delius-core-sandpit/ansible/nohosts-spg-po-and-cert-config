@@ -1,0 +1,18 @@
+####### Config variables only
+#
+# Used for
+#
+# certificate generation against each environment
+#
+# po certs? (or should they be in the s3 bucket) and related config
+#
+# server configuration (using ansible local connection) uses a single embedded ansible hosts file
+# which uses ENVIRONMENT VARS to set any variances between environments
+# for an example see hmpps-spg/.docker/ansible/inventories/generic-default/hosts_spg_crc
+
+[certgeneration]
+localhost environment_cn=sandpit.delius-core.probation.hmpps.dsd.io
+
+[certgeneration:vars]
+spg_iso_fqdn=spgw-ext.{{environment_cn}}
+spg_crc_fqdn=spgw-crc-int.{{environment_cn}}
