@@ -26,9 +26,18 @@ alfresco_app_name = "alfresco"
 spg_app_name = "spgw"
 
 # Alfresco
-alf_sqs_backup_config = {
-  poll_interval = 60
-  image         = "mojdigitalstudio/hmpps-elasticsearch-manager:latest"
+alf_backups_config = {
+  transition_days                            = 7
+  expiration_days                            = 180
+  noncurrent_version_transition_days         = 30
+  noncurrent_version_transition_glacier_days = 60
+  noncurrent_version_expiration_days         = 2560
+}
+
+# elk
+elk_backups_config = {
+  transition_days = 7
+  expiration_days = 2560
 }
 
 ## Delius Core
@@ -104,8 +113,8 @@ database_size_small = {
   database_size  = "small"
   instance_type  = "t3.large"
   disk_iops      = 1000
-  disks_quantity = 2          # Do not decrease this
-  disk_size      = 100        # Do not decrease this
+  disks_quantity = 2   # Do not decrease this
+  disk_size      = 100 # Do not decrease this
 
   # total_storage  = 200 # This should equal disks_quantity x disk_size
 }
@@ -114,8 +123,8 @@ database_size_medium = {
   database_size  = "medium"
   instance_type  = "r5.xlarge"
   disk_iops      = 1000
-  disks_quantity = 2           # Do not decrease this
-  disk_size      = 500         # Do not decrease this
+  disks_quantity = 2   # Do not decrease this
+  disk_size      = 500 # Do not decrease this
 
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
@@ -124,8 +133,8 @@ database_size_large = {
   database_size  = "large"
   instance_type  = "r5.2xlarge"
   disk_iops      = 1000
-  disks_quantity = 8            # Do not decrease this
-  disk_size      = 1000         # Do not decrease this
+  disks_quantity = 8    # Do not decrease this
+  disk_size      = 1000 # Do not decrease this
 
   # total_storage  = 8000 # This should equal disks_quantity x disk_size
 }
@@ -134,8 +143,8 @@ database_size_x_large = {
   database_size  = "x_large"
   instance_type  = "r5.4xlarge"
   disk_iops      = 1000
-  disks_quantity = 16           # Do not decrease this
-  disk_size      = 1000         # Do not decrease this
+  disks_quantity = 16   # Do not decrease this
+  disk_size      = 1000 # Do not decrease this
 
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
@@ -160,7 +169,7 @@ ldap_slave_asg_max = "10"
 
 default_ansible_vars_apacheds = {
   # ApacheDS
-  jvm_mem_args               = "12228"                                # (in MB)
+  jvm_mem_args               = "12228" # (in MB)
   apacheds_version           = "apacheds-2.0.0.AM25-default"
   apacheds_install_directory = "/var/lib/apacheds-2.0.0.AM25/default"
   apacheds_lib_directory     = "/opt/apacheds-2.0.0.AM25"
@@ -190,7 +199,7 @@ instance_count_weblogic_interface = "6"
 default_ansible_vars = {
   # Server/WebLogic config
   jvm_mem_args            = "-Xms12g -Xmx12g"
-  domain_name             = "NDelius"         # This is defined by the AMI, so should not be overridden
+  domain_name             = "NDelius" # This is defined by the AMI, so should not be overridden
   server_name             = "AdminServer"
   weblogic_admin_username = "weblogic"
   server_listen_address   = "0.0.0.0"
@@ -221,7 +230,7 @@ default_ansible_vars = {
 
   # App Config
   ndelius_display_name  = "National Delius"
-  ndelius_training_mode = "production"                                                                # development, training, production
+  ndelius_training_mode = "production" # development, training, production
   ndelius_log_level     = "ERROR"
   ndelius_analytics_tag = "UA-122274748-1"
   ldap_passfile         = "/u01/app/oracle/middleware/user_projects/domains/NDelius/password.keyfile"
@@ -230,7 +239,7 @@ default_ansible_vars = {
   newtech_search_url             = "/newTech"
   newtech_pdfgenerator_url       = "/newTech"
   newtech_pdfgenerator_templates = "shortFormatPreSentenceReport"
-  newtech_pdfgenerator_secret    = "ThisIsASecretKey"             # TODO pull from param store
+  newtech_pdfgenerator_secret    = "ThisIsASecretKey" # TODO pull from param store
 
   # User Management Tool
   usermanagement_url = "/umt/"
@@ -238,7 +247,7 @@ default_ansible_vars = {
   # NOMIS
   nomis_url           = "https://gateway.prod.nomis-api.hmpps.dsd.io/elite2api"
   nomis_client_id     = "delius"
-  nomis_client_secret = "ThisIsASecretKey"                                      # TODO pull from param store
+  nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
 }
 
 # PWM
