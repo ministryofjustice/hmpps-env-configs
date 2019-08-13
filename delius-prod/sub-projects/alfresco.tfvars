@@ -62,27 +62,27 @@ alfresco_instance_ami = {
 
 # ASG Configuration
 az_asg_desired = {
-  az1 = "1"
+  az1 = "2"
 
-  az2 = "0"
+  az2 = "2"
 
-  az3 = "0"
+  az3 = "2"
 }
 
 az_asg_max = {
-  az1 = "2"
+  az1 = "3"
 
-  az2 = "0"
+  az2 = "3"
 
-  az3 = "0"
+  az3 = "3"
 }
 
 az_asg_min = {
-  az1 = "1"
+  az1 = "2"
 
-  az2 = "0"
+  az2 = "2"
 
-  az3 = "0"
+  az3 = "2"
 }
 
 asg_instance_type = "m4.xlarge"
