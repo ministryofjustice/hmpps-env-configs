@@ -33,19 +33,27 @@ self_signed_server_validity_period_hours = 2160
 self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
-bcs_instance_type  = "t2.xlarge"
+bcs_instance_type  = "m5.2xlarge"
+bcs_root_size = 75
+bcs_deploy_secondary = true
 
 #Instance size for bfs
-bfs_instance_type  = "t2.large"
+bfs_instance_type  = "m5.2xlarge"
+bfs_root_size = 75
 
 #Instance size for bps
-bps_instance_type  = "t2.xlarge"
+bps_instance_type  = "m5.2xlarge"
+bps_root_size = 75
+bps_deploy_secondary = true
+bps_deploy_tertiary = true
 
 #Instance size for bws
-bws_instance_type  = "t2.xlarge"
+bws_instance_type  = "m5.2.xlarge"
+bws_root_size = 75
 
 #Instance size for dis
-dis_instance_type  = "t2.xlarge"
+dis_instance_type  = "m5.2xlarge"
+dis_root_size = 75
 
 #Deploy additional instance
 deploy_node        = "1"
