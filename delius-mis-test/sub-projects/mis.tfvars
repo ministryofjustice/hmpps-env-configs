@@ -34,18 +34,26 @@ self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
 bcs_instance_type  = "t2.xlarge"
+bcs_root_size = 60
+bcs_deploy_secondary = false
 
 #Instance size for bfs
 bfs_instance_type  = "t2.large"
+bfs_root_size = 60
 
 #Instance size for bps
 bps_instance_type  = "t2.xlarge"
+bps_root_size = 60
+bps_deploy_secondary = false
+bps_deploy_tertiary = false
 
 #Instance size for bws
 bws_instance_type  = "t2.xlarge"
+bws_root_size = 60
 
 #Instance size for dis
 dis_instance_type  = "t2.xlarge"
+dis_root_size = 60
 
 #instance size for http-fs
 http_instance_type = "t2.large"
