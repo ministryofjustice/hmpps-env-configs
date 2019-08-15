@@ -50,6 +50,8 @@ bps_deploy_tertiary = false
 #Instance size for bws
 bws_instance_type  = "t2.xlarge"
 bws_root_size = 60
+#Deploy additional bws instance
+deploy_node        = "1"
 
 #Instance size for dis
 dis_instance_type  = "t2.xlarge"
@@ -58,8 +60,7 @@ dis_root_size = 60
 #instance size for http-fs
 http_instance_type = "t2.large"
 
-#Deploy additional instance
-deploy_node        = "1"
+
 
 bws-health_check = [
   {

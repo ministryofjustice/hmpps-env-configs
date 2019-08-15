@@ -36,6 +36,7 @@ self_signed_server_early_renewal_hours = 336
 bcs_instance_type  = "m5.2xlarge"
 bcs_root_size = 75
 bcs_deploy_secondary = true
+bcs_deploy_tertiary = true
 
 #Instance size for bfs
 bfs_instance_type  = "m5.2xlarge"
@@ -50,13 +51,14 @@ bps_deploy_tertiary = true
 #Instance size for bws
 bws_instance_type  = "m5.2.xlarge"
 bws_root_size = 75
+#Deploy additional bws instance
+deploy_node        = "1"
 
 #Instance size for dis
 dis_instance_type  = "m5.2xlarge"
 dis_root_size = 75
 
-#Deploy additional instance
-deploy_node        = "1"
+
 
 bws-health_check = [
   {
@@ -158,3 +160,5 @@ ansible_vars_misdsd_db = {
   database_backup_location   = "NotApplicable" #default for local testing
   oracle_dbca_template_file  = "database"
 }
+
+legacy_environment_name = "000"
