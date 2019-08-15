@@ -40,6 +40,18 @@ elk_backups_config = {
   expiration_days = 7
 }
 
+# elasticsearch
+# jvm
+es_jvm_heap_size = "8g"
+
+# memory
+es_ecs_memory = "9000"
+
+es_ecs_mem_limit = "8500"
+
+# instance type
+es_instance_type = "m5d.xlarge"
+
 ## Delius Core
 weblogic_domain_ports = {
   weblogic_port      = "7001"

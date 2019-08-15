@@ -11,13 +11,13 @@ route53_sub_domain = "delius-prod.alfresco"
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
 # ALFRESCO RDS INSTANCE
-rds_instance_class = "db.t2.large"
+rds_instance_class = "db.m4.2xlarge"
 
-rds_backup_retention_period = 2
+rds_backup_retention_period = 7
 
 rds_monitoring_interval = 5
 
-rds_allocated_storage = "1000"
+rds_allocated_storage = "2000"
 
 # Self Signed Certs
 self_signed_ca_algorithm = "RSA"
@@ -64,9 +64,9 @@ alfresco_instance_ami = {
 az_asg_desired = {
   az1 = "2"
 
-  az2 = "2"
+  az2 = "1"
 
-  az3 = "2"
+  az3 = "1"
 }
 
 az_asg_max = {
@@ -80,14 +80,18 @@ az_asg_max = {
 az_asg_min = {
   az1 = "2"
 
-  az2 = "2"
+  az2 = "1"
 
-  az3 = "2"
+  az3 = "1"
 }
 
-asg_instance_type = "m4.xlarge"
+asg_instance_type = "m4.2xlarge"
 
-alfresco_jvm_memory = "8G"
+# jvm heap
+alfresco_jvm_memory = "24G"
+
+# cache disk
+alf_ebs_volume_size = "1000"
 
 # common
 allowed_ssh_cidr = [
