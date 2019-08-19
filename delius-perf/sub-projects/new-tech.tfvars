@@ -26,4 +26,8 @@ offenderapi_conf = {
 }
 
 # Override default Elasticsearch Config
-search_conf = {}
+search_conf = {
+    es_instance_count = 3
+    es_zone_aware_enabled = true
+    es_ebs_size = 50
+}
