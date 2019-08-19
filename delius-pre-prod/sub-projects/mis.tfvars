@@ -48,7 +48,7 @@ bps_root_size = 75
 bps_server_count = 1 
 
 #Instance size for bws
-bws_instance_type  = "m5.2.xlarge"
+bws_instance_type  = "m5.2xlarge"
 bws_root_size = 75
 bws_server_count = 1 
 
