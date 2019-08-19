@@ -50,13 +50,13 @@ allowed_cidr_block = [
 ]
 
 # ALFRESCO AMI
-# OLD AMI ID: ami-09a429c5ee45af41b
+# OLD AMI ID: ami-07c0cd6545dd23291
 alfresco_instance_ami = {
-  az1 = "ami-07c0cd6545dd23291"
+  az1 = "ami-0241900188f67b9c6"
 
-  az2 = "ami-07c0cd6545dd23291"
+  az2 = "ami-0241900188f67b9c6"
 
-  az3 = "ami-07c0cd6545dd23291"
+  az3 = "ami-0241900188f67b9c6"
 }
 
 # ASG Configuration
@@ -99,4 +99,5 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # restore dataset
-alf_restore_status="restore"
+alf_restore_status = "restore"
+
