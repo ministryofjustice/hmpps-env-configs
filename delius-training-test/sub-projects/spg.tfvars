@@ -67,7 +67,7 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/training-test"
 //spg_mpx_ecs_cpu_units = 1024
 spg_mpx_ecs_memory = 3835
 SPG_MPX_JAVA_MAX_MEM = 3645
-SPG_MPX_HOST_TYPE = "hybrid"
+SPG_MPX_HOST_TYPE = "one"
 
 //spg_crc_ecs_cpu_units = 1024
 spg_crc_ecs_memory = 1881
