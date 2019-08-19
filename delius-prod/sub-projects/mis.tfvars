@@ -35,30 +35,27 @@ self_signed_server_early_renewal_hours = 336
 #Instance size for bcs
 bcs_instance_type  = "m5.2xlarge"
 bcs_root_size = 75
-bcs_deploy_secondary = true
-bcs_deploy_tertiary = true
+bcs_server_count = 3
 
 #Instance size for bfs
 bfs_instance_type  = "m5.2xlarge"
 bfs_root_size = 75
+bfs_server_count = 1 
 
 #Instance size for bps
 bps_instance_type  = "m5.2xlarge"
 bps_root_size = 75
-bps_deploy_secondary = true
-bps_deploy_tertiary = true
+bps_server_count = 3 
 
 #Instance size for bws
 bws_instance_type  = "m5.2.xlarge"
 bws_root_size = 75
-#Deploy additional bws instance
-deploy_node        = "1"
+bws_server_count = 2 
 
 #Instance size for dis
 dis_instance_type  = "m5.2xlarge"
 dis_root_size = 75
-
-
+dis_server_count = 1 
 
 bws-health_check = [
   {
