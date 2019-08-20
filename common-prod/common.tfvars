@@ -244,7 +244,7 @@ default_ansible_vars = {
   ndelius_display_name  = "National Delius"
   ndelius_training_mode = "production" # development, training, production
   ndelius_log_level     = "ERROR"
-  ndelius_analytics_tag = "UA-122274748-1"
+  ndelius_analytics_tag = "UA-122274748-2"
   ldap_passfile         = "/u01/app/oracle/middleware/user_projects/domains/NDelius/password.keyfile"
 
   # New Tech
