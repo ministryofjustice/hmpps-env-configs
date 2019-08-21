@@ -21,3 +21,6 @@ pdfgenerator_conf = {}
 
 # Override default Offender API Config
 offenderapi_conf = {}
+
+# Override default Elasticsearch Config
+search_conf = {}

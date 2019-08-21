@@ -21,3 +21,6 @@ pdfgenerator_conf = {}
 offenderapi_conf = {
     env_oracledb_servicename ="SANNDA_TAF"
 }
+
+# Override default Elasticsearch Config
+search_conf = {}
