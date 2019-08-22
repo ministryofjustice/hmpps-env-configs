@@ -30,3 +30,6 @@ search_conf = {
     es_zone_aware_enabled = true
     es_ebs_size = 50
 }
+
+# Override default Web Frontend Config
+web_conf = {}
