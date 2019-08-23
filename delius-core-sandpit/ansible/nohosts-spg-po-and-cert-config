@@ -3,16 +3,15 @@
 # Used for
 #
 # certificate generation against each environment
-#
-# po certs? (or should they be in the s3 bucket) and related config
-#
-# server configuration (using ansible local connection) uses a single embedded ansible hosts file
-# which uses ENVIRONMENT VARS to set any variances between environments
-# for an example see hmpps-spg/.docker/ansible/inventories/generic-default/hosts_spg_crc
+
 
 [certgeneration]
-localhost environment_cn=sandpit.delius-core.probation.hmpps.dsd.io
+localhost
 
 [certgeneration:vars]
-spg_iso_fqdn=spgw-ext.{{environment_cn}}
-spg_crc_fqdn=spgw-crc-int.{{environment_cn}}
+environment_cn=sandpit.delius-core.probation.hmpps.dsd.io
+environment_folder=hmpps-delius-core-sandpit
+environment_s3_url=s3://tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket/unclassified-data/{{ environment_folder }}
+engineering_kms_key_for_ca_private_key="arn:aws:kms:eu-west-2:895523100917:key/2076d54e-9979-4fd4-addd-cb0cb2358e9b"
+environment_kms_key_for_signed_cert_spg_iso_private_key="arn:aws:kms:eu-west-2:723123699647:key/fca7675d-d414-467c-8144-cdbaf0ebff09"
+environment_kms_key_for_signed_cert_spg_crc_private_key="arn:aws:kms:eu-west-2:723123699647:key/3ebb605b-e81b-43a9-b5d7-3c404baa4fa0"
