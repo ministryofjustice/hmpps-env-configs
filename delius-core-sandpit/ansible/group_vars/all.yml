@@ -5,3 +5,4 @@ environment_name: delius-core-sandpit
 simple_environment_name: sandpit
 ndelius_version: "4.2.9"
 catalog: DCAT
+data_classification: unclassified-data
