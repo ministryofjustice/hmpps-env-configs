@@ -27,3 +27,6 @@ search_conf = {}
 
 # Override default Web Frontend Config
 web_conf = {}
+
+# Override default Offender Poll Push Config
+offenderpollpush_conf = {}
