@@ -34,3 +34,6 @@ offenderapi_conf = {
 
 # Override default Elasticsearch Config
 search_conf = {}
+
+# Override default Web Frontend Config
+web_conf = {}
