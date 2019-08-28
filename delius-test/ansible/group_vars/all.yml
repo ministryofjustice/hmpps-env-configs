@@ -5,3 +5,4 @@ environment_name: delius-test
 simple_environment_name: test
 ndelius_version: "4.2.9"
 catalog: DCAT
+data_classification: unclassified-data

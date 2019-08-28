@@ -5,3 +5,4 @@ environment_name: delius-pre-prod
 simple_environment_name: pre-prod
 ndelius_version: "4.2.9"
 catalog: PCAT
+data_classification: official-data
