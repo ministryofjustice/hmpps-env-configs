@@ -368,3 +368,6 @@ chaosmonkey_job_envvars = [
 ]
 
 chaosmonkey_job_ulimits = []
+
+delius_core_haproxy_instance_type = "t3.micro"
+delius_core_haproxy_instance_count = "3"
