@@ -33,7 +33,9 @@ search_conf = {
 }
 
 # Override default Web Frontend Config
-web_conf = {}
+web_conf = {
+    env_store_alfresco_url = "alfresco.perf.delius-core.probation.hmpps.dsd.io"
+}
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {}

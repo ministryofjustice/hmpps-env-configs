@@ -32,7 +32,9 @@ search_conf = {
 }
 
 # Override default Web Frontend Config
-web_conf = {}
+web_conf = {
+    env_store_alfresco_url = "alfresco.probation.service.justice.gov.uk."
+}
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {}
