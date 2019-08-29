@@ -36,9 +36,7 @@ offenderapi_conf = {
 search_conf = {}
 
 # Override default Web Frontend Config
-web_conf = {
-    env_store_alfresco_url = "alfresco.training-test.delius-core.probation.hmpps.dsd.io"
-}
+web_conf = {}
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {}
