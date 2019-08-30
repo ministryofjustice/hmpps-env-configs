@@ -29,4 +29,6 @@ search_conf = {}
 web_conf = {}
 
 # Override default Offender Poll Push Config
-offenderpollpush_conf = {}
+offenderpollpush_conf = {
+    env_debug_log             = "true"
+}
