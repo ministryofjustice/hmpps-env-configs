@@ -94,7 +94,7 @@ SPG_DELIUS_MQ_URL ="tcp://spg-internal.dev.delius-core.probation.hmpps.dsd.io:61
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.dev.delius-core.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.dev.delius-core.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-SPG_ISO_FQDN  = "spgw-ext.autotest.delius.probation.hmpps.dsd.io"
-SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-int.autotest.delius.probation.hmpps.dsd.io"
+SPG_ISO_FQDN  = "spgw-ext.dev.delius-core.probation.hmpps.dsd.io"
+SPG_MPX_FQDN  = "spgw-mpx-int.dev.delius-core.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-int.dev.delius-core.probation.hmpps.dsd.io"
 
