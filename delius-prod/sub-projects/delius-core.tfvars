@@ -73,3 +73,6 @@ dss_job_envvars = [
     "value" = "delius"
   }
 ]
+
+# Make the National Delius front-end pingdom report available to the public:
+pingdom_publicreports = ["ndelius_frontend"]
