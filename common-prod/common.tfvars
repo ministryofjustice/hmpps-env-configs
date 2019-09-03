@@ -195,7 +195,6 @@ default_ansible_vars_apacheds = {
   base_root     = "dc=moj,dc=com"
 
   # Data import
-  import_users_ldif = "LATEST"
   sanitize_oid_ldif = "yes"
 }
 
