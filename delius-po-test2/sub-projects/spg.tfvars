@@ -1,3 +1,8 @@
+#deployment version
+image_version = "branch-latest-DAM-319-Move-ansible-based-PO-endpoint-config-to-hmpps-env-config-project"
+
+
+
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
