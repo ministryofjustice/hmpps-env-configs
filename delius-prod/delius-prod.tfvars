@@ -18,3 +18,6 @@ ndelius_version = "4.1.7.3"
 route53_domain_private = "service.justice.gov.uk"
 
 subdomain              = "probation"
+
+#Instance size for smtp server
+smtp_instance_type = "m5.xlarge"
