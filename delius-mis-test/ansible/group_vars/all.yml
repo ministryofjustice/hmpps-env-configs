@@ -5,3 +5,4 @@ environment_name: delius-mis-test
 simple_environment_name: mis-test
 ndelius_version: "4.1.7.3"
 catalog: DCAT
+data_classification: unclassified-data
