@@ -5,3 +5,4 @@ environment_name: delius-training-test
 simple_environment_name: training-test
 ndelius_version: "4.1.8.4"
 catalog: DCAT
+data_classification: unclassified-data
