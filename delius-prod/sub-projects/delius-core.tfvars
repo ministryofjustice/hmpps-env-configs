@@ -69,6 +69,10 @@ dss_job_envvars = [
     "value" = "https://interface-app-internal.probation.service.justice.gov.uk/NDeliusDSS/UpdateOffender"
   },
   {
+    "name" = "DSS_HMPSSERVERURL"
+    "value" = "https://www.offloc.service.justice.gov.uk/"
+  },
+  {
     "name" = "DSS_PROJECT"
     "value" = "delius"
   }
