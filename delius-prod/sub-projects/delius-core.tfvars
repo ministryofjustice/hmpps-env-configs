@@ -75,7 +75,11 @@ dss_job_envvars = [
   {
     "name" = "DSS_PROJECT"
     "value" = "delius"
-  }
+  },
+  {
+    "name" = "JAVA_OPTS"
+    "value" = "-Xms1024m -Xmx2048m"
+}
 ]
 
 # Make the National Delius front-end pingdom report available to the public:
