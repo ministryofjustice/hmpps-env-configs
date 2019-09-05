@@ -54,7 +54,7 @@ env_user_access_cidr_blocks = []
 dss_job_envvars = [
   {
     "name" = "DSS_TESTMODE"
-    "value" =  "false"
+    "value" =  "true"
   },
   {
     "name" = "DSS_TESTINGAUTOCORRECT"
