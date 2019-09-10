@@ -57,14 +57,11 @@ alfresco_asg_props = {
   asg_max           = 5
   asg_instance_type = "m4.xlarge"
   asg_ami           = "ami-0d891eb6bea9cfa8c"
-  ebs_volume_size   = 512
+  ebs_volume_size   = 1000
 }
 
 # jvm heap
 alfresco_jvm_memory = "24G"
-
-# cache disk
-alf_ebs_volume_size = "1000"
 
 # common
 allowed_ssh_cidr = [
