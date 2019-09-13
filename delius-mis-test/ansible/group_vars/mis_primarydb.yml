@@ -1,0 +1,6 @@
+--- # mis_primarydb.yml
+
+database_global_database_name: DMTMIS
+database_taf_service_name: DMTMIS_TAF
+database_primary_unique_name: DMTMIS
+database_primary_sid: DMTMIS
