@@ -40,6 +40,18 @@ elk_backups_config = {
   expiration_days = 7
 }
 
+# elasticsearch
+# jvm
+es_jvm_heap_size = "8g"
+
+# memory
+es_ecs_memory = "9000"
+
+es_ecs_mem_limit = "8500"
+
+# instance type
+es_instance_type = "m5d.xlarge"
+
 ## Delius Core
 weblogic_domain_ports = {
   weblogic_port      = "7001"
@@ -50,8 +62,8 @@ weblogic_domain_ports = {
 }
 
 ldap_ports = {
-  ldap     = "10389"
-  ldap_tls = "10636"
+  ldap     = "389"
+  ldap_tls = "636" # currently unused, as the ldap can only be accessed internally
 }
 
 #SPG Partner Gateway
@@ -162,33 +174,21 @@ backup_retention_days = 7
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 7
 
-# Default values for ApacheDS LDAP
-instance_type_ldap = "t3.large"
-
-ldap_slave_asg_min = "1"
-
-ldap_slave_asg_desired = "2"
-
-ldap_slave_asg_max = "10"
-
+# Default values for LDAP
+instance_type_ldap = "t3.micro"
 default_ansible_vars_apacheds = {
-  # ApacheDS
-  jvm_mem_args               = "6144" # (in MB)
-  apacheds_version           = "apacheds-2.0.0.AM25-default"
-  apacheds_install_directory = "/var/lib/apacheds-2.0.0.AM25/default"
-  apacheds_lib_directory     = "/opt/apacheds-2.0.0.AM25"
-  workspace                  = "/tmp/apacheds-bootstrap"
-  log_level                  = "WARN"
+  workspace     = "/root/bootstrap-workspace"
 
   # LDAP
   ldap_protocol = "ldap"
-  bind_user     = "uid=admin,ou=system"
-  partition_id  = "moj"
+  bind_user     = "cn=admin,dc=moj,dc=com"
   base_root     = "dc=moj,dc=com"
+  base_users    = "ou=Users,dc=moj,dc=com"
 
   # Data import
-  import_users_ldif = "LATEST"
-  sanitize_oid_ldif = "yes"
+  import_users_ldif             = "LATEST"
+  import_users_ldif_base_users  = "cn=Users,dc=moj,dc=com"
+  sanitize_oid_ldif             = "yes"
 }
 
 # Default values for NDelius WebLogic
@@ -223,14 +223,6 @@ default_ansible_vars = {
   spg_jms_host = "spgw-jms-int"
 
   activemq_data_folder = "/activemq-data"
-
-  # LDAP
-  ldap_host          = "ldap-elb"
-  ldap_readonly_host = "ldap-readonly-elb"
-  partition_id       = "moj"
-  ldap_base          = "dc=moj,dc=com"
-  ldap_user_base     = "cn=Users,dc=moj,dc=com"
-  ldap_group_base    = "cn=EISUsers,cn=Users,dc=moj,dc=com"
 
   # App Config
   ndelius_display_name  = "National Delius"
@@ -291,7 +283,7 @@ dss_min_vcpu = 0
 
 dss_max_vcpu = 8
 
-dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.0"
 
 dss_job_vcpus = 1
 
@@ -356,3 +348,6 @@ chaosmonkey_job_envvars = [
 ]
 
 chaosmonkey_job_ulimits = []
+
+delius_core_haproxy_instance_type = "t3.micro"
+delius_core_haproxy_instance_count = "3"

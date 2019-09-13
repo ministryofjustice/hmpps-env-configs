@@ -5,3 +5,4 @@ environment_name: delius-auto-test
 simple_environment_name: auto-test
 ndelius_version: "4.2.9"
 catalog: DCAT
+data_classification: unclassified-data

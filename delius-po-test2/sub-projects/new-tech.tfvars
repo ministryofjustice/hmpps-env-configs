@@ -24,3 +24,12 @@ pdfgenerator_conf = {}
 offenderapi_conf = {
     env_oracledb_servicename = "POT2NDA_TAF"
 }
+
+# Override default Elasticsearch Config
+search_conf = {}
+
+# Override default Web Frontend Config
+web_conf = {}
+
+# Override default Offender Poll Push Config
+offenderpollpush_conf = {}

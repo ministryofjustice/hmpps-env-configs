@@ -23,3 +23,16 @@ pdfgenerator_conf = {}
 offenderapi_conf = {
     env_oracledb_servicename = "PRDNDA_TAF"
 }
+
+# Override default Elasticsearch Config
+search_conf = {
+    es_instance_count = 3
+    es_zone_aware_enabled = true
+    es_ebs_size = 50
+}
+
+# Override default Web Frontend Config
+web_conf = {}
+
+# Override default Offender Poll Push Config
+offenderpollpush_conf = {}
