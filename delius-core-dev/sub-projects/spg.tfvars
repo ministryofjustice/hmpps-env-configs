@@ -89,7 +89,7 @@ SPG_ENVIRONMENT_CN = "dev.delius-core.probation.hmpps.dsd.io"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://spg-internal.dev.delius-core.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.dev.delius-core.probation.hmpps.dsd.io:61617"
 
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.dev.delius-core.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.dev.delius-core.probation.hmpps.dsd.io/alfresco/service/noms-spg"
