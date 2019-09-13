@@ -42,8 +42,10 @@ alf_backups_config = {
 
 # elk
 elk_backups_config = {
-  transition_days = 7
-  expiration_days = 2560
+  transition_days                 = 7
+  expiration_days                 = 2560
+  provisioned_throughput_in_mibps = 150
+  throughput_mode                 = "provisioned"
 }
 
 # elasticsearch
@@ -180,7 +182,7 @@ snapshot_retention_days = 30
 # Default values for LDAP
 instance_type_ldap = "i3.xlarge"
 default_ansible_vars_apacheds = {
-  workspace     = "/root/bootstrap-workspace"
+  workspace = "/root/bootstrap-workspace"
 
   # LDAP
   ldap_protocol = "ldap"
@@ -189,9 +191,9 @@ default_ansible_vars_apacheds = {
   base_users    = "ou=Users,dc=moj,dc=com"
 
   # Data import
-  import_users_ldif             = "LATEST"
-  import_users_ldif_base_users  = "cn=Users,dc=moj,dc=com"
-  sanitize_oid_ldif             = "yes"
+  import_users_ldif            = "LATEST"
+  import_users_ldif_base_users = "cn=Users,dc=moj,dc=com"
+  sanitize_oid_ldif            = "yes"
 }
 
 # Default values for NDelius WebLogic
@@ -349,5 +351,5 @@ chaosmonkey_job_envvars = [
 
 chaosmonkey_job_ulimits = []
 
-delius_core_haproxy_instance_type = "t3.large"
+delius_core_haproxy_instance_type  = "t3.large"
 delius_core_haproxy_instance_count = "3"
