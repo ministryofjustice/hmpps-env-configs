@@ -182,6 +182,11 @@ snapshot_retention_days = 7
 
 # Default values for LDAP
 instance_type_ldap = "t3.micro"
+ldap_disk_config = {
+  volume_type = "io1"
+  volume_size = 50
+  iops        = 500
+}
 default_ansible_vars_apacheds = {
   workspace     = "/root/bootstrap-workspace"
 
