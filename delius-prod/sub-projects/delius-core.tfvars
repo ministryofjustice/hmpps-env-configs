@@ -33,7 +33,7 @@ ansible_vars_oracle_db = {
 
 # LDAP
 ansible_vars_apacheds = {
-  import_users_ldif = "PROD-190720/OID/PROD-190720.ldif"
+  import_users_ldif = "PROD-190914/OID/PROD-190914.ldif"
   import_users_ldif_base_users  = "ou=NDProd,cn=Users,dc=moj,dc=com"
 }
 
