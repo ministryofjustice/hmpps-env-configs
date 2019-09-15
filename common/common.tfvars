@@ -38,13 +38,15 @@ alf_backups_config = {
   noncurrent_version_transition_days         = 30
   noncurrent_version_transition_glacier_days = 60
   noncurrent_version_expiration_days         = 90
+  provisioned_throughput_in_mibps            = 50
+  throughput_mode                            = "provisioned"
 }
 
 # elk
 elk_backups_config = {
   transition_days                 = 2
   expiration_days                 = 7
-  provisioned_throughput_in_mibps = 150
+  provisioned_throughput_in_mibps = 50
   throughput_mode                 = "provisioned"
 }
 
@@ -59,6 +61,7 @@ es_ecs_mem_limit = "8500"
 
 # instance type
 es_instance_type = "m5d.xlarge"
+es_admin_instance_type = "t2.large"
 
 ## Delius Core
 weblogic_domain_ports = {
