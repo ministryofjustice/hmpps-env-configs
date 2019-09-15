@@ -42,8 +42,10 @@ alf_backups_config = {
 
 # elk
 elk_backups_config = {
-  transition_days = 7
-  expiration_days = 2560
+  transition_days                 = 7
+  expiration_days                 = 2560
+  provisioned_throughput_in_mibps = 150
+  throughput_mode                 = "provisioned"
 }
 
 # elasticsearch
@@ -185,7 +187,7 @@ ldap_disk_config = {
   iops        = 1500
 }
 default_ansible_vars_apacheds = {
-  workspace     = "/root/bootstrap-workspace"
+  workspace = "/root/bootstrap-workspace"
 
   # LDAP
   ldap_protocol = "ldap"
@@ -355,5 +357,5 @@ chaosmonkey_job_envvars = [
 
 chaosmonkey_job_ulimits = []
 
-delius_core_haproxy_instance_type = "t3.large"
+delius_core_haproxy_instance_type  = "t3.large"
 delius_core_haproxy_instance_count = "3"

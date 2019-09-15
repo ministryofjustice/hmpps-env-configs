@@ -42,8 +42,10 @@ alf_backups_config = {
 
 # elk
 elk_backups_config = {
-  transition_days = 2
-  expiration_days = 7
+  transition_days                 = 2
+  expiration_days                 = 7
+  provisioned_throughput_in_mibps = 150
+  throughput_mode                 = "provisioned"
 }
 
 # elasticsearch
