@@ -38,6 +38,9 @@ alf_backups_config = {
   noncurrent_version_transition_days         = 30
   noncurrent_version_transition_glacier_days = 60
   noncurrent_version_expiration_days         = 2560
+  provisioned_throughput_in_mibps            = 300
+  throughput_mode                            = "provisioned"
+
 }
 
 # elk
@@ -58,7 +61,8 @@ es_ecs_memory = "9000"
 es_ecs_mem_limit = "8500"
 
 # instance type
-es_instance_type = "i3.xlarge"
+es_instance_type       = "i3.xlarge"
+es_admin_instance_type = "m4.large"
 
 ## Delius Core
 weblogic_domain_ports = {
@@ -196,10 +200,10 @@ default_ansible_vars_apacheds = {
   base_users    = "ou=Users,dc=moj,dc=com"
 
   # Data import
-  import_users_ldif             = "LATEST"
-  import_users_ldif_base_users  = "cn=Users,dc=moj,dc=com"
-  sanitize_oid_ldif             = "yes"
-  perf_test_users               = "0"
+  import_users_ldif            = "LATEST"
+  import_users_ldif_base_users = "cn=Users,dc=moj,dc=com"
+  sanitize_oid_ldif            = "yes"
+  perf_test_users              = "0"
 }
 
 # Default values for NDelius WebLogic
