@@ -45,7 +45,7 @@ ansible_vars = {
   database_sid = "PRDNDA"
   ndelius_log_level = "ERROR"
   ndelius_analytics_tag = "UA-122274748-1"
-  nomis_url = "https://gateway.prod.nomis-api.hmpps.dsd.io/elite2api"
+  nomis_url = "https://gateway.nomis-api.service.justice.gov.uk/elite2api"
 }
 
 env_user_access_cidr_blocks = []
