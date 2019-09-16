@@ -361,5 +361,10 @@ chaosmonkey_job_envvars = [
 
 chaosmonkey_job_ulimits = []
 
-delius_core_haproxy_instance_type  = "t3.large"
+delius_core_haproxy_instance_type = "t3.large"
 delius_core_haproxy_instance_count = "3"
+
+# Shared ECS Cluster 
+ecs_instance_type = "m4.xlarge"
+node_max_count = 20
+node_min_count = 5
