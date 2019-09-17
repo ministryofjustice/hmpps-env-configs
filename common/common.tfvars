@@ -61,7 +61,20 @@ es_ecs_mem_limit = "8500"
 
 # instance type
 es_instance_type = "m5d.xlarge"
+
+# es_admin
+alf_restore_status     = "restore"
+
 es_admin_instance_type = "t2.large"
+
+es_admin_volume_props = {
+  size            = 200
+  type            = "gp2"
+  iops            = 100
+  encrypted       = true
+  device_name     = "/dev/xvdb"
+  create_snapshot = false
+}
 
 ## Delius Core
 weblogic_domain_ports = {
