@@ -40,22 +40,22 @@ bcs_server_count = 3
 #Instance size for bfs
 bfs_instance_type  = "m5.2xlarge"
 bfs_root_size = 75
-bfs_server_count = 1 
+bfs_server_count = 1
 
 #Instance size for bps
 bps_instance_type  = "m5.2xlarge"
 bps_root_size = 75
-bps_server_count = 3 
+bps_server_count = 3
 
 #Instance size for bws
 bws_instance_type  = "m5.2xlarge"
 bws_root_size = 75
-bws_server_count = 2 
+bws_server_count = 2
 
 #Instance size for dis
 dis_instance_type  = "m5.2xlarge"
 dis_root_size = 75
-dis_server_count = 1 
+dis_server_count = 1
 
 bws-health_check = [
   {
@@ -66,6 +66,20 @@ bws-health_check = [
     timeout             = 5
   },
 ]
+
+#Nextcloud
+nextcloud_health_check = [
+  {
+    target              = "TCP:80"
+    interval            = 30
+    healthy_threshold   = 10
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
+
+nextcloud_instance_type = "m5.xlarge"
+rds_instance_class      = "db.m5.xlarge"
 
 # Databases
 ## MIS Datamart
