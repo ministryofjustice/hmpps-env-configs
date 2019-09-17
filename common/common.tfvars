@@ -10,6 +10,8 @@ availability_zone = {
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
 
+#service.justice.gov.uk is the new strategic DNS for public facing addresses
+public_parent_dns_zone = "service.justice.gov.uk"
 route53_domain_private = "probation.hmpps.dsd.io"
 
 # ENVIRONMENT REMOTE STATES
