@@ -67,10 +67,11 @@ elk_migration_props = {
   ecs_cpu_units             = 500
   ecs_memory                = 24500
   jvm_heap_size             = "22g"
-  image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:0.0.329-alpha"
+  image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
   block_device              = "/dev/nvme0n1"
   es_master_nodes           = 2
   ecs_service_desired_count = 3
+  instance_type             = "i3.xlarge"
 }
 
 # instance type
