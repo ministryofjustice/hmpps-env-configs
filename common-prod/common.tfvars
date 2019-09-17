@@ -76,6 +76,7 @@ elk_migration_props = {
 
 # instance type
 es_instance_type = "i3.xlarge"
+es_block_device  = "/dev/nvme0n1"
 
 # es_admin
 alf_restore_status     = "restore"
