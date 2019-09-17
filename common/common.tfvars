@@ -23,6 +23,12 @@ eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
 
 bastion_role_arn = "arn:aws:iam::895523100917:role/terraform"
 
+# required for security group rules
+oracle_db_operation = {
+  eng_remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
+  eng_role_arn                 = "arn:aws:iam::895523100917:role/terraform"
+}
+
 alfresco_app_name = "alfresco"
 
 spg_app_name = "spg"
@@ -34,12 +40,16 @@ alf_backups_config = {
   noncurrent_version_transition_days         = 30
   noncurrent_version_transition_glacier_days = 60
   noncurrent_version_expiration_days         = 90
+  provisioned_throughput_in_mibps            = 50
+  throughput_mode                            = "provisioned"
 }
 
 # elk
 elk_backups_config = {
-  transition_days = 2
-  expiration_days = 7
+  transition_days                 = 2
+  expiration_days                 = 7
+  provisioned_throughput_in_mibps = 50
+  throughput_mode                 = "provisioned"
 }
 
 # elasticsearch
@@ -53,6 +63,7 @@ es_ecs_mem_limit = "8500"
 
 # instance type
 es_instance_type = "m5d.xlarge"
+es_admin_instance_type = "t2.large"
 
 ## Delius Core
 weblogic_domain_ports = {
@@ -64,8 +75,8 @@ weblogic_domain_ports = {
 }
 
 ldap_ports = {
-  ldap     = "10389"
-  ldap_tls = "10636"
+  ldap     = "389"
+  ldap_tls = "636" # currently unused, as the ldap can only be accessed internally
 }
 
 #SPG Partner Gateway
@@ -176,33 +187,27 @@ backup_retention_days = 7
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 7
 
-# Default values for ApacheDS LDAP
-instance_type_ldap = "t3.large"
-
-ldap_slave_asg_min = "1"
-
-ldap_slave_asg_desired = "2"
-
-ldap_slave_asg_max = "10"
-
+# Default values for LDAP
+instance_type_ldap = "t3.micro"
+ldap_disk_config = {
+  volume_type = "io1"
+  volume_size = 50
+  iops        = 500
+}
 default_ansible_vars_apacheds = {
-  # ApacheDS
-  jvm_mem_args               = "6144" # (in MB)
-  apacheds_version           = "apacheds-2.0.0.AM25-default"
-  apacheds_install_directory = "/var/lib/apacheds-2.0.0.AM25/default"
-  apacheds_lib_directory     = "/opt/apacheds-2.0.0.AM25"
-  workspace                  = "/tmp/apacheds-bootstrap"
-  log_level                  = "WARN"
+  workspace     = "/root/bootstrap-workspace"
 
   # LDAP
   ldap_protocol = "ldap"
-  bind_user     = "uid=admin,ou=system"
-  partition_id  = "moj"
+  bind_user     = "cn=admin,dc=moj,dc=com"
   base_root     = "dc=moj,dc=com"
+  base_users    = "ou=Users,dc=moj,dc=com"
 
   # Data import
-  import_users_ldif = "LATEST"
-  sanitize_oid_ldif = "yes"
+  import_users_ldif             = "LATEST"
+  import_users_ldif_base_users  = "cn=Users,dc=moj,dc=com"
+  sanitize_oid_ldif             = "yes"
+  perf_test_users               = "0"
 }
 
 # Default values for NDelius WebLogic
@@ -237,14 +242,6 @@ default_ansible_vars = {
   spg_jms_host = "spgw-jms-int"
 
   activemq_data_folder = "/activemq-data"
-
-  # LDAP
-  ldap_host          = "ldap-elb"
-  ldap_readonly_host = "ldap-readonly-elb"
-  partition_id       = "moj"
-  ldap_base          = "dc=moj,dc=com"
-  ldap_user_base     = "cn=Users,dc=moj,dc=com"
-  ldap_group_base    = "cn=EISUsers,cn=Users,dc=moj,dc=com"
 
   # App Config
   ndelius_display_name  = "National Delius"
@@ -325,7 +322,7 @@ dss_job_ulimits = [
   },
 ]
 
-# Testing/Chaosmonkey 
+# Testing/Chaosmonkey
 ce_instances = ["m5.large", "c5.large"]
 
 ce_min_vcpu = 0

@@ -32,10 +32,9 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "m5.xlarge"
 ansible_vars_apacheds = {
-  jvm_mem_args = "12228"  # (in MB)
   import_users_ldif = "PPL-190815/OID/PPL-190815.ldif"
+  import_users_ldif_base_users  = "ou=NDProd,cn=Users,dc=moj,dc=com"
 }
 
 # WebLogic
