@@ -40,29 +40,55 @@ alf_backups_config = {
   noncurrent_version_expiration_days         = 2560
   provisioned_throughput_in_mibps            = 300
   throughput_mode                            = "provisioned"
-
 }
 
 # elk
 elk_backups_config = {
   transition_days                 = 7
   expiration_days                 = 2560
-  provisioned_throughput_in_mibps = 150
+  provisioned_throughput_in_mibps = 300
   throughput_mode                 = "provisioned"
 }
 
 # elasticsearch
 # jvm
-es_jvm_heap_size = "8g"
+es_jvm_heap_size = "16g"
 
 # memory
-es_ecs_memory = "9000"
+es_ecs_memory = "26000"
 
-es_ecs_mem_limit = "8500"
+es_ecs_mem_limit = "25500"
+
+elk_migration_props = {
+  min_size                  = 3
+  max_size                  = 3
+  desired                   = 3
+  ecs_mem_limit             = 24000
+  ecs_cpu_units             = 500
+  ecs_memory                = 24500
+  jvm_heap_size             = "22g"
+  image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
+  block_device              = "/dev/nvme0n1"
+  es_master_nodes           = 2
+  ecs_service_desired_count = 3
+  instance_type             = "i3.xlarge"
+}
 
 # instance type
-es_instance_type       = "i3.xlarge"
+es_instance_type = "i3.xlarge"
+
+# es_admin
+alf_restore_status     = "restore"
 es_admin_instance_type = "m4.large"
+
+es_admin_volume_props = {
+  size            = 1000
+  type            = "io1"
+  iops            = 500
+  encrypted       = true
+  device_name     = "/dev/xvdb"
+  create_snapshot = false
+}
 
 ## Delius Core
 weblogic_domain_ports = {
@@ -361,10 +387,10 @@ chaosmonkey_job_envvars = [
 
 chaosmonkey_job_ulimits = []
 
-delius_core_haproxy_instance_type = "t3.large"
+delius_core_haproxy_instance_type  = "t3.large"
 delius_core_haproxy_instance_count = "3"
 
 # Shared ECS Cluster 
 ecs_instance_type = "m4.xlarge"
-node_max_count = 20
-node_min_count = 5
+node_max_count    = 20
+node_min_count    = 5
