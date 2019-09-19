@@ -57,6 +57,6 @@ web_conf = {
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {
-  cpu    = "2048"
+  cpu    = "3072"
   memory = "4096"
 }
