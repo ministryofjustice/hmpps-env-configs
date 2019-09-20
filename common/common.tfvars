@@ -381,3 +381,7 @@ chaosmonkey_job_ulimits = []
 
 delius_core_haproxy_instance_type = "t3.micro"
 delius_core_haproxy_instance_count = "3"
+
+loadrunner_config = {
+  "instance_type" = "t3.micro"
+}
