@@ -1,3 +1,5 @@
+SPG_IMAGE_VERSION=branch-latest-DAM-319
+
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
