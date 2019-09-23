@@ -35,6 +35,7 @@ ansible_vars_oracle_db = {
 instance_type_ldap = "m5.xlarge"
 ansible_vars_apacheds = {
   jvm_mem_args = "12228"  # (in MB)
+  perf_test_users = "10000" # Create 10,000 virtual users for performance testing
 }
 
 # WebLogic

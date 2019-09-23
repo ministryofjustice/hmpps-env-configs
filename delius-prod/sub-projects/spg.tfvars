@@ -66,7 +66,7 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/prod"
 //spg_mpx_ecs_cpu_units = 1024
 spg_mpx_ecs_memory = 3835
 SPG_MPX_JAVA_MAX_MEM = 3645
-SPG_MPX_HOST_TYPE = "hybrid"
+SPG_MPX_HOST_TYPE = "one"
 
 //spg_crc_ecs_cpu_units = 1024
 spg_crc_ecs_memory = 1881
@@ -84,19 +84,19 @@ SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 
 
 SPG_ENVIRONMENT_CODE = "prod"
-SPG_ENVIRONMENT_CN = "prod.delius.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CN = "probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://spg-internal.prod.delius.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.probation.service.justice.gov.uk:61617"
 
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.prod.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.prod.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-//SPG_ISO_FQDN  = "spgw-ext.prod.delius.probation.hmpps.dsd.io"
-//SPG_MPX_FQDN  = "spgw-mpx-int.prod.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-int.prod.delius.probation.hmpps.dsd.io"
+//SPG_ISO_FQDN  = "spgw-ext.probation.service.justice.gov.uk"
+//SPG_MPX_FQDN  = "spgw-mpx-int.probation.service.justice.gov.uk"
+//SPG_CRC_FQDN  = "spgw-crc-int.probation.service.justice.gov.uk"
 
 SPG_ISO_FQDN  = "localhost"
 SPG_MPX_FQDN  = "localhost"

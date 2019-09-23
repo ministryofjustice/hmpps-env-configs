@@ -66,7 +66,7 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 //spg_mpx_ecs_cpu_units = 1024
 spg_mpx_ecs_memory = 3835
 SPG_MPX_JAVA_MAX_MEM = 3645
-SPG_MPX_HOST_TYPE = "hybrid"
+SPG_MPX_HOST_TYPE = "one"
 
 //spg_crc_ecs_cpu_units = 1024
 spg_crc_ecs_memory = 1881
@@ -89,7 +89,7 @@ SPG_ENVIRONMENT_CN = "autotest.delius.probation.hmpps.dsd.io"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://spg-internal.autotest.delius.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.autotest.delius.probation.hmpps.dsd.io:61617"
 
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
