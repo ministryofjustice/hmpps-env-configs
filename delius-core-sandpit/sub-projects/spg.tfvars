@@ -100,5 +100,5 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.sandpit.delius-core.pro
 
 SPG_ISO_FQDN  = "spgw-ext.sandpit.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.sandpit.delius-core.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-int.sandpit.delius-core.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-int.sandpit.probation.service.justice.gov.uk"
 
