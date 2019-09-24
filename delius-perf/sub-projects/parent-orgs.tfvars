@@ -32,7 +32,7 @@ PO_SPG_FIREWALL_INGRESS_RULES = {
 
   #POSTUB="derived from vpc x 3 NAT"
 
-
+  #PSNPROXY = "Need subnets from lazzurs"
 
 
 

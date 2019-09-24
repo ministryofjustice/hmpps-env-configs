@@ -22,7 +22,7 @@ PO_SPG_CONFIGURATION = {
   PO_PF_CRC_LIST = "C04,C05,C06,C07,C20"
   PO_PF_TLS_COMMON_NAME = "shard-api.interservefls.gse.gov.uk.pem"
   PO_PF_SIGNING_COMMON_NAME = "signing-shard-api.interservefls.gse.gov.uk.pem"
-  PO_PF_ENDPOINT_URL = "http://spg-iso-prod-p11:8181/cxf/CRC-101"
+  PO_PF_ENDPOINT_URL = "http://spg-iso-prod-p11:8181/cxf/CRC-10   1"
   PO_PF_PROXY_URL = "https://shard-api.interservefls.gse.gov.uk.pem:9001/cxf/CRC-101"
 
 
