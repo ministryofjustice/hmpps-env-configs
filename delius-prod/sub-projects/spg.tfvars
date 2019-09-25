@@ -94,10 +94,6 @@ SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justic
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-//SPG_ISO_FQDN  = "spgw-ext.probation.service.justice.gov.uk"
-//SPG_MPX_FQDN  = "spgw-mpx-int.probation.service.justice.gov.uk"
-//SPG_CRC_FQDN  = "spgw-crc-int.probation.service.justice.gov.uk"
-
-SPG_ISO_FQDN  = "localhost"
-SPG_MPX_FQDN  = "localhost"
-SPG_CRC_FQDN  = "localhost"
+SPG_ISO_FQDN  = "spgw-ext.probation.service.justice.gov.uk"
+SPG_MPX_FQDN  = "spgw-mpx-int.probation.service.justice.gov.uk"
+SPG_CRC_FQDN  = "spgw-crc-int.probation.service.justice.gov.uk"

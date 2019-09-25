@@ -7,7 +7,7 @@ PO_SPG_CONFIGURATION = {
 
   PO_ACTIVE_CONNECTIONS = "POSTUB"
   SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
-  SPG_CERTIFICATE_PATH = "/unclassified-data/hmpps-delius-sandpit/current/"
+  SPG_CERTIFICATE_PATH = "/unclassified-data/hmpps-delius-training-test/current/"
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
   PO_POSTUB_NAME = "PO STUB"

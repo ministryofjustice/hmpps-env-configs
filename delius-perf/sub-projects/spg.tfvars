@@ -95,10 +95,7 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.perf.delius.probation.h
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
 
-//SPG_ISO_FQDN  = "spgw-ext.perf.delius.probation.hmpps.dsd.io"
-//SPG_MPX_FQDN  = "spgw-mpx-int.perf.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-int.perf.delius.probation.hmpps.dsd.io"
+SPG_ISO_FQDN  = "spgw-ext.perf.delius.probation.hmpps.dsd.io"
+SPG_MPX_FQDN  = "spgw-mpx-int.perf.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-int.perf.delius.probation.hmpps.dsd.io"
 
-SPG_ISO_FQDN  = "localhost"
-SPG_MPX_FQDN  = "localhost"
-SPG_CRC_FQDN  = "localhost"
