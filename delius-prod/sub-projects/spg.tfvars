@@ -83,6 +83,10 @@ SPG_ISO_HOST_TYPE = "iso"
 SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 
 
+#SPG_ENVIRONMENT_CN represents the strategic public DNS gov domain, and is used by SPG to know the name of the certificates it imports
+#as well as displaying the environment in terminals and splash screens
+#eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
+
 SPG_ENVIRONMENT_CODE = "prod"
 SPG_ENVIRONMENT_CN = "probation.service.justice.gov.uk"
 
