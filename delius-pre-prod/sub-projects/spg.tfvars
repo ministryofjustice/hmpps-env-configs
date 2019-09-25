@@ -1,3 +1,5 @@
+image_version = "branch-latest-DAM-319"
+
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
@@ -83,8 +85,12 @@ SPG_ISO_HOST_TYPE = "iso"
 SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 
 
+#SPG_ENVIRONMENT_CN represents the strategic public DNS gov domain, and is used by SPG to know the name of the certificates it imports
+#as well as displaying the environment in terminals and splash screens
+#eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
+
 SPG_ENVIRONMENT_CODE = "pre-prod"
-SPG_ENVIRONMENT_CN = "pre-prod.delius.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CN = "pre-prod.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
@@ -93,12 +99,8 @@ SPG_DELIUS_MQ_URL ="tcp://delius-jms.pre-prod.delius.probation.hmpps.dsd.io:6161
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.pre-prod.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.pre-prod.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-//USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-//SPG_ISO_FQDN  = "spgw-ext.pre-prod.delius.probation.hmpps.dsd.io"
-//SPG_MPX_FQDN  = "spgw-mpx-int.pre-prod.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-int.pre-prod.delius.probation.hmpps.dsd.io"
+SPG_ISO_FQDN  = "spgw-ext.pre-prod.probation.service.justice.gov.uk"
+SPG_MPX_FQDN  = "spgw-mpx-int.pre-prod.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-int.pre-prod.probation.service.justice.gov.uk"
 
 
-SPG_ISO_FQDN  = "localhost"
-SPG_MPX_FQDN  = "localhost"
-SPG_CRC_FQDN  = "localhost"

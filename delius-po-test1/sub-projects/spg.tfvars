@@ -83,9 +83,12 @@ SPG_ISO_HOST_TYPE = "iso"
 SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 
 
+#SPG_ENVIRONMENT_CN represents the strategic public DNS gov domain, and is used by SPG to know the name of the certificates it imports
+#as well as displaying the environment in terminals and splash screens
+#eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
 SPG_ENVIRONMENT_CODE = "po-test1"
-SPG_ENVIRONMENT_CN = "po-test1.delius.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CN = "po-test1.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
@@ -97,9 +100,9 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.po-test1.delius.probati
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
 
-//SPG_ISO_FQDN  = "spgw-ext.po-test1.delius.probation.hmpps.dsd.io"
+//SPG_ISO_FQDN  = "spgw-ext.po-test1.probation.service.justice.gov.uk"
 //SPG_MPX_FQDN  = "spgw-mpx-int.po-test1.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-int.po-test1.delius.probation.hmpps.dsd.io"
+//SPG_CRC_FQDN  = "spgw-crc-int.po-test1.probation.service.justice.gov.uk"
 
 
 SPG_ISO_FQDN  = "localhost"
