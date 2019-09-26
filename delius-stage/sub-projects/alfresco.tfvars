@@ -64,9 +64,8 @@ alfresco_jvm_memory = "8G"
 
 # common
 allowed_ssh_cidr = [
-  "109.148.137.148/32", #Don Home
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
 ]
 
 alfresco_app_name = "alfresco"
