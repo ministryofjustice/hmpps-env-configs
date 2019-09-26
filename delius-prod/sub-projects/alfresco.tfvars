@@ -52,9 +52,9 @@ allowed_cidr_block = [
 
 # ASG Configuration
 alfresco_asg_props = {
-  asg_desired       = 5
-  asg_min           = 5
-  asg_max           = 5
+  asg_desired       = 4
+  asg_min           = 4
+  asg_max           = 4
   asg_instance_type = "m4.2xlarge"
   asg_ami           = "ami-0d891eb6bea9cfa8c"
   ebs_volume_size   = 1000

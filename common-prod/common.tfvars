@@ -42,9 +42,59 @@ alf_backups_config = {
   throughput_mode                            = "provisioned"
 }
 
+alf_rds_props = {
+  instance_class          = "db.m5.2xlarge"
+  iops                    = 3000
+  storage_type            = "io1"
+  allocated_storage       = 1000
+  maintenance_window      = "Sun:06:00-Sun:08:00"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 28
+  family                  = "postgres9.6"
+  engine                  = "postgres"
+  major_engine_version    = "9.6"
+  engine_version          = "9.6.9"
+}
+
+# ontrol rds deployment
+alf_data_import = "disabled"
+
+alf_rds_migration_parameters = [
+  {
+    name         = "maintenance_work_mem"
+    value        = 8388608
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "max_wal_size"
+    value        = 256
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "checkpoint_timeout"
+    value        = 1800
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "synchronous_commit"
+    value        = "Off"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "wal_buffers"
+    value        = 8192
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "autovacuum"
+    value        = "Off"
+    apply_method = "pending-reboot"
+  }
+]
+
 # elk
 elk_backups_config = {
-  transition_days                 = 7
+  transition_days                 = 28
   expiration_days                 = 2560
   provisioned_throughput_in_mibps = 300
   throughput_mode                 = "provisioned"
