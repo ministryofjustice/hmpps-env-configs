@@ -4,7 +4,7 @@ PO_SPG_CONFIGURATION = {
 
 
   PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
-
+  SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
   SPG_CERTIFICATE_PATH = "/official-data/hmpps-delius-prod/current/"
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
@@ -41,6 +41,8 @@ PO_SPG_CONFIGURATION = {
 }
 
 
+//firewall rules for parent_orgs
+
 PO_SPG_FIREWALL_INGRESS_PORT = "9999" #9001 = switched on, 9999 = switched off
 
 PO_SPG_FIREWALL_INGRESS_RULES = {
@@ -48,10 +50,22 @@ PO_SPG_FIREWALL_INGRESS_RULES = {
   DIGITAL_STUDIO_VPN = "81.134.202.29/32"
   DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
 
-  #POSTUB="derived from vpc x 3 NAT"
+  #POSTUB="derived from vpc x 3 NAT as part of LB terraform"
 
-  #PSNPROXY = "Need subnets from lazzurs"
+  PSNPROXY_A = "3.10.56.113/32"
+  PSNPROXY_B = "35.178.173.171/32"
 
 
+}
+
+
+psn_facing_ips = [
+  "51.231.83.120",
+  "51.231.83.104"
+]
+internet_facing_ips = [
+  "3.10.56.113",
+  "35.178.173.171"
+]
 
 }

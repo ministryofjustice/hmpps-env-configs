@@ -53,10 +53,20 @@ PO_SPG_FIREWALL_INGRESS_RULES = {
   DIGITAL_STUDIO_VPN = "81.134.202.29/32"
   DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
 
-  #POSTUB="derived from vpc x 3 NAT"
+  #POSTUB="derived from vpc x 3 NAT as part of LB terraform"
 
-  #PSNPROXY = "Need subnets from lazzurs"
-
+  PSNPROXY_A = "3.10.56.113/32"
+  PSNPROXY_B = "35.178.173.171/32"
 
 
 }
+
+
+psn_facing_ips = [
+  "51.231.83.120",
+  "51.231.83.104"
+]
+internet_facing_ips = [
+  "3.10.56.113",
+  "35.178.173.171"
+]
