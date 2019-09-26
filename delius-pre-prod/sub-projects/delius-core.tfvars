@@ -32,10 +32,9 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "m5.xlarge"
 ansible_vars_apacheds = {
-  jvm_mem_args = "12228"  # (in MB)
   import_users_ldif = "PPL-190815/OID/PPL-190815.ldif"
+  import_users_ldif_base_users  = "ou=NDProd,cn=Users,dc=moj,dc=com"
 }
 
 # WebLogic
@@ -54,7 +53,7 @@ env_user_access_cidr_blocks = []
 dss_job_envvars = [
   {
     "name" = "DSS_TESTMODE"
-    "value" =  "false"
+    "value" =  "true"
   },
   {
     "name" = "DSS_TESTINGAUTOCORRECT"
@@ -71,5 +70,9 @@ dss_job_envvars = [
   {
     "name" = "DSS_PROJECT"
     "value" = "delius"
+  },
+  {
+    "name" = "JAVA_OPTS"
+    "value" = "-Xms1024m -Xmx2048m"
   }
 ]

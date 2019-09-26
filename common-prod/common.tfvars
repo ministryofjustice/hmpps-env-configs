@@ -21,6 +21,12 @@ eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
 
 bastion_role_arn = "arn:aws:iam::077643444046:role/terraform"
 
+# required for security group rules
+oracle_db_operation = {
+  eng_remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-prod-remote-state"
+  eng_role_arn                 = "arn:aws:iam::077643444046:role/terraform"
+}
+
 alfresco_app_name = "alfresco"
 
 spg_app_name = "spgw"
@@ -32,25 +38,58 @@ alf_backups_config = {
   noncurrent_version_transition_days         = 30
   noncurrent_version_transition_glacier_days = 60
   noncurrent_version_expiration_days         = 2560
+  provisioned_throughput_in_mibps            = 300
+  throughput_mode                            = "provisioned"
 }
 
 # elk
 elk_backups_config = {
-  transition_days = 7
-  expiration_days = 2560
+  transition_days                 = 7
+  expiration_days                 = 2560
+  provisioned_throughput_in_mibps = 300
+  throughput_mode                 = "provisioned"
 }
 
 # elasticsearch
 # jvm
-es_jvm_heap_size = "8g"
+es_jvm_heap_size = "16g"
 
 # memory
-es_ecs_memory = "9000"
+es_ecs_memory = "26000"
 
-es_ecs_mem_limit = "8500"
+es_ecs_mem_limit = "25500"
+
+elk_migration_props = {
+  min_size                  = 3
+  max_size                  = 3
+  desired                   = 3
+  ecs_mem_limit             = 24000
+  ecs_cpu_units             = 500
+  ecs_memory                = 24500
+  jvm_heap_size             = "22g"
+  image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
+  block_device              = "/dev/nvme0n1"
+  es_master_nodes           = 2
+  ecs_service_desired_count = 3
+  instance_type             = "i3.xlarge"
+}
 
 # instance type
 es_instance_type = "i3.xlarge"
+es_block_device  = "/dev/nvme0n1"
+
+# es_admin
+alf_restore_status     = "restore"
+es_admin_instance_type = "m4.large"
+
+es_admin_volume_props = {
+  size            = 1000
+  type            = "io1"
+  iops            = 500
+  encrypted       = true
+  device_name     = "/dev/xvdb"
+  create_snapshot = false
+}
 
 ## Delius Core
 weblogic_domain_ports = {
@@ -62,8 +101,8 @@ weblogic_domain_ports = {
 }
 
 ldap_ports = {
-  ldap     = "10389"
-  ldap_tls = "10636"
+  ldap     = "389"
+  ldap_tls = "636" # currently unused, as the ldap can only be accessed internally
 }
 
 #SPG Partner Gateway
@@ -90,11 +129,14 @@ user_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "18.130.105.155/32", #Engineering Jenkins prod AZ 1
-  "18.130.54.20/32",   #Engineering Jenkins prod AZ 2
-  "18.130.87.166/32",  #Engineering Jenkins prod AZ 3
+  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
   "194.75.210.208/28", #BCL
   "213.48.246.99/32",  #BCL
+  "195.59.75.0/24",    # ARK internet (DOM1)
+  "194.33.192.0/25",   # ARK internet (DOM1)
+  "194.33.193.0/25",   # ARK internet (DOM1)
+  "194.33.196.0/25",   # ARK internet (DOM1)
+  "194.33.197.0/25",   # ARK internet (DOM1)
 ]
 
 # jenkins access
@@ -102,9 +144,7 @@ jenkins_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "18.130.105.155/32", #Engineering Jenkins prod AZ 1
-  "18.130.54.20/32",   #Engineering Jenkins prod AZ 2
-  "18.130.87.166/32",  #Engineering Jenkins prod AZ 3
+  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
 ]
 
 #SPG has activeMQ running incomming
@@ -170,32 +210,27 @@ backup_retention_days = 30
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 30
 
-# Default values for ApacheDS LDAP
-instance_type_ldap = "m5.xlarge"
-
-ldap_slave_asg_min = "1"
-
-ldap_slave_asg_desired = "2"
-
-ldap_slave_asg_max = "10"
-
+# Default values for LDAP
+instance_type_ldap = "i3.xlarge"
+ldap_disk_config = {
+  volume_type = "io1"
+  volume_size = 100
+  iops        = 1500
+}
 default_ansible_vars_apacheds = {
-  # ApacheDS
-  jvm_mem_args               = "12228" # (in MB)
-  apacheds_version           = "apacheds-2.0.0.AM25-default"
-  apacheds_install_directory = "/var/lib/apacheds-2.0.0.AM25/default"
-  apacheds_lib_directory     = "/opt/apacheds-2.0.0.AM25"
-  workspace                  = "/tmp/apacheds-bootstrap"
-  log_level                  = "WARN"
+  workspace = "/root/bootstrap-workspace"
 
   # LDAP
   ldap_protocol = "ldap"
-  bind_user     = "uid=admin,ou=system"
-  partition_id  = "moj"
+  bind_user     = "cn=admin,dc=moj,dc=com"
   base_root     = "dc=moj,dc=com"
+  base_users    = "ou=Users,dc=moj,dc=com"
 
   # Data import
-  sanitize_oid_ldif = "yes"
+  import_users_ldif            = "LATEST"
+  import_users_ldif_base_users = "cn=Users,dc=moj,dc=com"
+  sanitize_oid_ldif            = "yes"
+  perf_test_users              = "0"
 }
 
 # Default values for NDelius WebLogic
@@ -216,8 +251,9 @@ default_ansible_vars = {
   server_listen_address   = "0.0.0.0"
 
   # Database
-  setup_datasources = "true"
-  database_host     = "delius-db"
+  setup_datasources  = "true"
+  database_host      = "delius-db"
+  database_pool_size = 50
 
   # Alfresco
   alfresco_host        = "alfresco"
@@ -230,14 +266,6 @@ default_ansible_vars = {
   spg_jms_host = "spgw-jms-int"
 
   activemq_data_folder = "/activemq-data"
-
-  # LDAP
-  ldap_host          = "ldap-elb"
-  ldap_readonly_host = "ldap-readonly-elb"
-  partition_id       = "moj"
-  ldap_base          = "dc=moj,dc=com"
-  ldap_user_base     = "cn=Users,dc=moj,dc=com"
-  ldap_group_base    = "cn=EISUsers,cn=Users,dc=moj,dc=com"
 
   # App Config
   ndelius_display_name  = "National Delius"
@@ -295,11 +323,11 @@ dss_min_vcpu = 0
 
 dss_max_vcpu = 8
 
-dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.0"
 
 dss_job_vcpus = 1
 
-dss_job_memory = 256
+dss_job_memory = 3096
 
 dss_job_schedule = "cron(00 05 * * ? *)"
 
@@ -315,7 +343,7 @@ dss_job_ulimits = [
   },
 ]
 
-# Testing/Chaosmonkey 
+# Testing/Chaosmonkey
 ce_instances = ["m5.large", "c5.large"]
 
 ce_min_vcpu = 0
@@ -361,5 +389,14 @@ chaosmonkey_job_envvars = [
 
 chaosmonkey_job_ulimits = []
 
-delius_core_haproxy_instance_type = "t3.large"
+delius_core_haproxy_instance_type  = "t3.large"
 delius_core_haproxy_instance_count = "3"
+
+# Shared ECS Cluster 
+ecs_instance_type = "m4.xlarge"
+node_max_count    = 20
+node_min_count    = 5
+
+loadrunner_config = {
+  "instance_type" = "t3.large"
+}

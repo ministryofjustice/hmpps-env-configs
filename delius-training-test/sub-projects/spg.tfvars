@@ -85,20 +85,24 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 
 
 
+#SPG_ENVIRONMENT_CN represents the strategic public DNS gov domain, and is used by SPG to know the name of the certificates it imports
+#as well as displaying the environment in terminals and splash screens
+#eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
+
 SPG_ENVIRONMENT_CODE = "training-test"
-SPG_ENVIRONMENT_CN = "training-test.delius.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CN = "training-test.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://spg-internal.training-test.delius.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.training-test.delius.probation.hmpps.dsd.io:61617"
 
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.training-test.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.training-test.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-//SPG_ISO_FQDN  = "spgw-ext.training-test.delius.probation.hmpps.dsd.io"
+//SPG_ISO_FQDN  = "spgw-ext.training-test.probation.service.justice.gov.uk"
 //SPG_MPX_FQDN  = "spgw-mpx-int.training-test.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-int.training-test.delius.probation.hmpps.dsd.io"
+//SPG_CRC_FQDN  = "spgw-crc-int.training-test.probation.service.justice.gov.uk"
 
 
 SPG_ISO_FQDN  = "localhost"
