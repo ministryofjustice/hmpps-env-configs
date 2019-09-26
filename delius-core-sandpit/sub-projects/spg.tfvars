@@ -88,7 +88,7 @@ SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 SPG_ENVIRONMENT_CODE = "sandpit"
 SPG_ENVIRONMENT_CN = "sandpit.probation.service.justice.gov.uk"
 
-SPG_GATEWAY_MQ_URL_SOURCE = "var"
+#SPG_GATEWAY_MQ_URL_SOURCE = "var"
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
 SPG_DELIUS_MQ_URL ="tcp://delius-jms.delius-core-sandpit.internal:61617"
 
