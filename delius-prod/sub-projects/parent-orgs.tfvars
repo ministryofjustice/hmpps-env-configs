@@ -43,7 +43,7 @@ PO_SPG_CONFIGURATION = {
 
 //firewall rules for parent_orgs
 
-PO_SPG_FIREWALL_INGRESS_PORT = "9999" #9001 = switched on, 9999 = switched off
+PO_SPG_FIREWALL_INGRESS_PORT = "9001" #9001 = switched on, 9999 = switched off
 
 PO_SPG_FIREWALL_INGRESS_RULES = {
 
