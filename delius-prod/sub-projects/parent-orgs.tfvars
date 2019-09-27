@@ -1,3 +1,5 @@
+// Used to generate ECS Launch Template for SPG environment vars
+
 PO_SPG_CONFIGURATION = {
 
   #current using proxy address as pattern spg-iso-prod-p01:8181, will become more like egress-prod.psn.probation.service.justice.gov.uk/mtc/
@@ -50,7 +52,7 @@ PO_SPG_FIREWALL_INGRESS_RULES = {
   DIGITAL_STUDIO_VPN = "81.134.202.29/32"
   DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
 
-  #POSTUB="derived from vpc x 3 NAT as part of LB terraform"
+  #POSTUB="no longer derived from vpc x 3 NAT as part of LB terraform as now external facing"
 
   PSNPROXY_A = "3.10.56.113/32"
   PSNPROXY_B = "35.178.173.171/32"
@@ -63,9 +65,10 @@ psn_facing_ips = [
   "51.231.83.120",
   "51.231.83.104"
 ]
+
+//POs come in from proxy here
+
 internet_facing_ips = [
   "3.10.56.113",
   "35.178.173.171"
 ]
-
-}
