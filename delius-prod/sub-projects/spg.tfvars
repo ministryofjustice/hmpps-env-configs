@@ -10,7 +10,7 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
 # ROUTE53 ZONE strategic probation.service.justice.gov.uk (same as normal)
-route53_strategic_hosted_zone_id = "Z3VDCLGXC4HLOW"
+route53_strategic_hosted_zone_id = "Z2SOZ79CNGAPIF"
 
 
 # ENVIRONMENT REMOTE STATES
