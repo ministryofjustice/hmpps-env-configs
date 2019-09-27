@@ -100,7 +100,7 @@ SPG_DELIUS_MQ_URL ="tcp://delius-jms.probation.service.justice.gov.uk:61617"
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
 
-//USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
 SPG_ISO_FQDN  = "spgw-ext.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.probation.service.justice.gov.uk"
 SPG_CRC_FQDN  = "spgw-crc-ext.probation.service.justice.gov.uk"
+
