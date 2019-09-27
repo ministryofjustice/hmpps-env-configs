@@ -144,8 +144,8 @@ user_access_cidr_blocks = [
   "194.33.193.0/25",   # ARK internet (DOM1)
   "194.33.196.0/25",   # ARK internet (DOM1)
   "194.33.197.0/25",   # ARK internet (DOM1)
-  "62.232.198.68/28",  # I2N 
-] 
+  "62.232.198.64/28",  # I2N 
+]
 
 # jenkins access
 jenkins_access_cidr_blocks = [

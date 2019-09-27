@@ -187,7 +187,7 @@ user_access_cidr_blocks = [
   "194.33.193.0/25",   # ARK internet (DOM1)
   "194.33.196.0/25",   # ARK internet (DOM1)
   "194.33.197.0/25",   # ARK internet (DOM1)
-  "62.232.198.68/28",  # I2N 
+  "62.232.198.64/28",  # I2N 
   "81.187.190.127/32", # Lazzurs Home
   "3.10.56.113/32",    # PSN Proxy A
   "35.178.173.171/32", # PSN Proxy B
@@ -447,7 +447,7 @@ chaosmonkey_job_ulimits = []
 delius_core_haproxy_instance_type  = "t3.large"
 delius_core_haproxy_instance_count = "3"
 
-# Shared ECS Cluster 
+# Shared ECS Cluster
 ecs_instance_type = "m4.xlarge"
 node_max_count    = 20
 node_min_count    = 5
