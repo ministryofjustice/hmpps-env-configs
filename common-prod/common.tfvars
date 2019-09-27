@@ -188,6 +188,9 @@ user_access_cidr_blocks = [
   "194.33.196.0/25",   # ARK internet (DOM1)
   "194.33.197.0/25",   # ARK internet (DOM1)
   "62.232.198.68/28",  # I2N 
+  "81.187.190.127/32", # Lazzurs Home
+  "3.10.56.113/32",    # PSN Proxy A
+  "35.178.173.171/32", # PSN Proxy B
 ]
 
 # jenkins access
