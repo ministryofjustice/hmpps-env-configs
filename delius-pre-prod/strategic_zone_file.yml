@@ -1,7 +1,7 @@
 ---
 
 parent_zone_name: "probation.service.justice.gov.uk"
-parent_account_id: 570551521311
+parent_account_id: 050243167760
 role_name: "terraform"
 
 hosted_zones:
