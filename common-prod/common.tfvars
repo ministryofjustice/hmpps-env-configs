@@ -191,6 +191,7 @@ user_access_cidr_blocks = [
   "81.187.190.127/32", # Lazzurs Home
   "3.10.56.113/32",    # PSN Proxy A
   "35.178.173.171/32", # PSN Proxy B
+  "82.38.248.151/32",  # Steve James Office
 ]
 
 # jenkins access
