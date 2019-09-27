@@ -10,6 +10,10 @@ cloudwatch_log_retention = 14
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
+# ROUTE53 ZONE pre-prod.probation.service.justice.gov.uk
+route53_strategic_hosted_zone_id = "Z2HN42YS4OOSPY"
+
+
 # ENVIRONMENT REMOTE STATES
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
 
