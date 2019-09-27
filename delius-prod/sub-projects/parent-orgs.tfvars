@@ -60,7 +60,7 @@ PO_SPG_FIREWALL_INGRESS_RULES = {
 
 }
 
-
+//IPs POs speak to
 psn_facing_ips = [
   "51.231.83.120",
   "51.231.83.104"
