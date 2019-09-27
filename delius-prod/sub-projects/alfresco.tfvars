@@ -39,22 +39,21 @@ self_signed_server_early_renewal_hours = 336
 # ALLOWED CIDRS
 
 allowed_cidr_block = [
-  "109.148.151.107/32", #Don Home
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
-  "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
-  "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
-  "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
-  "35.178.206.119/32",  #SPG instance public NAT address
-  "194.75.210.208/28",  #BCL
-  "213.48.246.99/32",   #BCL
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
+  "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
+  "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
+  "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
+  "35.178.206.119/32", #SPG instance public NAT address
+  "194.75.210.208/28", #BCL
+  "213.48.246.99/32",  #BCL
 ]
 
 # ASG Configuration
 alfresco_asg_props = {
-  asg_desired       = 5
-  asg_min           = 5
-  asg_max           = 5
+  asg_desired       = 4
+  asg_min           = 4
+  asg_max           = 4
   asg_instance_type = "m4.2xlarge"
   asg_ami           = "ami-0d891eb6bea9cfa8c"
   ebs_volume_size   = 1000

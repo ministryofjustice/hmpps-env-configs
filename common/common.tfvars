@@ -42,6 +42,25 @@ alf_backups_config = {
   throughput_mode                            = "provisioned"
 }
 
+alf_rds_props = {
+  instance_class          = "db.t2.medium"
+  iops                    = 50
+  storage_type            = "gp2"
+  allocated_storage       = 100
+  maintenance_window      = "Sun:06:00-Sun:08:00"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 7
+  family                  = "postgres9.6"
+  engine                  = "postgres"
+  major_engine_version    = "9.6"
+  engine_version          = "9.6.9"
+}
+
+# ontrol rds deployment
+alf_data_import = "disabled"
+
+alf_rds_migration_parameters = []
+
 # elk
 elk_backups_config = {
   transition_days                 = 2
@@ -124,8 +143,9 @@ user_access_cidr_blocks = [
   "194.33.192.0/25",   # ARK internet (DOM1)
   "194.33.193.0/25",   # ARK internet (DOM1)
   "194.33.196.0/25",   # ARK internet (DOM1)
-  "194.33.197.0/25",
-] # ARK internet (DOM1)
+  "194.33.197.0/25",   # ARK internet (DOM1)
+  "62.232.198.64/28",  # I2N 
+]
 
 # jenkins access
 jenkins_access_cidr_blocks = [

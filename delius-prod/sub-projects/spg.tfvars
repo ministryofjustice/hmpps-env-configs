@@ -100,4 +100,4 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justi
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
 SPG_ISO_FQDN  = "spgw-ext.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.probation.service.justice.gov.uk"
-SPG_CRC_FQDN  = "spgw-crc-int.probation.service.justice.gov.uk"
+SPG_CRC_FQDN  = "spgw-crc-ext.probation.service.justice.gov.uk"

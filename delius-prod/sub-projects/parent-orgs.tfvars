@@ -1,10 +1,12 @@
+// Used to generate ECS Launch Template for SPG environment vars
+
 PO_SPG_CONFIGURATION = {
 
   #current using proxy address as pattern spg-iso-prod-p01:8181, will become more like egress-prod.psn.probation.service.justice.gov.uk/mtc/
 
 
   PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
-
+  SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
   SPG_CERTIFICATE_PATH = "/official-data/hmpps-delius-prod/current/"
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
@@ -22,7 +24,7 @@ PO_SPG_CONFIGURATION = {
   PO_PF_CRC_LIST = "C04,C05,C06,C07,C20"
   PO_PF_TLS_COMMON_NAME = "shard-api.interservefls.gse.gov.uk.pem"
   PO_PF_SIGNING_COMMON_NAME = "signing-shard-api.interservefls.gse.gov.uk.pem"
-  PO_PF_ENDPOINT_URL = "http://spg-iso-prod-p11:8181/cxf/CRC-10   1"
+  PO_PF_ENDPOINT_URL = "http://spg-iso-prod-p11:8181/cxf/CRC-101"
   PO_PF_PROXY_URL = "https://shard-api.interservefls.gse.gov.uk.pem:9001/cxf/CRC-101"
 
 
@@ -41,17 +43,32 @@ PO_SPG_CONFIGURATION = {
 }
 
 
-PO_SPG_FIREWALL_INGRESS_PORT = "9999" #9001 = switched on, 9999 = switched off
+//firewall rules for parent_orgs
+
+PO_SPG_FIREWALL_INGRESS_PORT = "9001" #9001 = switched on, 9999 = switched off
 
 PO_SPG_FIREWALL_INGRESS_RULES = {
 
   DIGITAL_STUDIO_VPN = "81.134.202.29/32"
   DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
 
-  #POSTUB="derived from vpc x 3 NAT"
+  #POSTUB="no longer derived from vpc x 3 NAT as part of LB terraform as now external facing"
 
-  #PSNPROXY = "Need subnets from lazzurs"
-
+  PSNPROXY_A = "3.10.56.113/32"
+  PSNPROXY_B = "35.178.173.171/32"
 
 
 }
+
+//IPs POs speak to
+psn_facing_ips = [
+  "51.231.83.120",
+  "51.231.83.104"
+]
+
+//POs come in from proxy here
+
+internet_facing_ips = [
+  "3.10.56.113",
+  "35.178.173.171"
+]
