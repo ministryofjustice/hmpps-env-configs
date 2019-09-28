@@ -52,9 +52,12 @@ az_asg_min = {
   az3 = "0"
 }
 
-asg_instance_type_crc = "t2.small"
-asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+//NOTE in ukcloud servers are spec'd at 32GIG ram
+//I think could easily get away with 4, but need to performance test
+
+asg_instance_type_crc = "t2.2xlarge"
+asg_instance_type_mpx = "t2.2xlarge"
+asg_instance_type_iso = "t2.2xlarge"
 
 
 spg_app_name = "spgw"

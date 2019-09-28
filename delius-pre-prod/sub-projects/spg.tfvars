@@ -32,30 +32,33 @@ allowed_cidr_block = [
 az_asg_desired = {
   az1 = "1"
 
-  az2 = "0"
+  az2 = "1"
 
-  az3 = "0"
+  az3 = "1"
 }
 
 az_asg_max = {
-  az1 = "2"
+  az1 = "4"
 
-  az2 = "0"
+  az2 = "4"
 
-  az3 = "0"
+  az3 = "4"
 }
 
 az_asg_min = {
   az1 = "1"
 
-  az2 = "0"
+  az2 = "1"
 
-  az3 = "0"
+  az3 = "1"
 }
 
-asg_instance_type_crc = "t2.small"
-asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+//NOTE in ukcloud servers are spec'd at 32GIG ram
+//I think could easily get away with 4, but need to performance test
+
+asg_instance_type_crc = "t2.2xlarge"
+asg_instance_type_mpx = "t2.2xlarge"
+asg_instance_type_iso = "t2.2xlarge"
 
 
 spg_app_name = "spgw"
