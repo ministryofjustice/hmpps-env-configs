@@ -19,7 +19,7 @@ PO_SPG_CONFIGURATION = {
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
   PO_POSTUB_NAME = "PO STUB"
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
-  PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
+  PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
   PO_POSTUB_CRC_LIST = "C00"
   PO_POSTUB_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/POSTUB/cxf/CRC-101"
   PO_POSTUB_PROXY_URL = "https://spgw-crc-ext.pre-prod.probation.service.justice.gov.uk:9001/cxf/CRC-101"
