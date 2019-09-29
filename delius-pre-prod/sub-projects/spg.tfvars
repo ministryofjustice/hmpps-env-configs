@@ -78,7 +78,7 @@ SPG_MPX_JAVA_MAX_MEM = 15850
 //spg_mpx_ecs_memory = 32100
 //SPG_MPX_JAVA_MAX_MEM = 31900
 
-SPG_MPX_HOST_TYPE = "one"
+SPG_MPX_HOST_TYPE = "hybrid"
 
 spg_crc_service_desired_count = 1
 spg_crc_ecs_memory = 32100
