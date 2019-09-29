@@ -113,4 +113,5 @@ SPG_ISO_FQDN  = "spgw-ext.pre-prod.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.pre-prod.delius.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
 
-
+SPG_ISO_PSN_FQDN  = "spgw-ext.pre-prod.probation.service.justice.gov.uk"
+SPG_PSN_FQDN  = "spgw-int-psn.pre-prod.probation.service.justice.gov.uk"

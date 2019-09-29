@@ -22,6 +22,8 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
   PO_POSTUB_CRC_LIST = "C00"
   PO_POSTUB_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/POSTUB/cxf/CRC-100"
+
+  #TODO rename this to PO_POSTUB_PROXIED_URL
   PO_POSTUB_PROXY_URL = "https://spgw-crc-ext.pre-prod.probation.service.justice.gov.uk:9001/cxf/CRC-100"
 
   POSTUB_CRC_SCHEMA_0_9_13 = "C00"
