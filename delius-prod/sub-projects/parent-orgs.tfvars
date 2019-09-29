@@ -21,8 +21,8 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
   PO_POSTUB_CRC_LIST = "C00"
-  PO_POSTUB_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/POSTUB/cxf/CRC-101"
-  PO_POSTUB_PROXY_URL = "https://spgw-crc-ext.pre-prod.probation.service.justice.gov.uk:9001/cxf/CRC-101"
+  PO_POSTUB_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/POSTUB/cxf/CRC-100"
+  PO_POSTUB_PROXY_URL = "https://spgw-crc-ext.pre-prod.probation.service.justice.gov.uk:9001/cxf/CRC-100"
 
   POSTUB_CRC_SCHEMA_0_9_13 = "C00"
 
@@ -31,8 +31,8 @@ PO_SPG_CONFIGURATION = {
   PO_PF_CRC_LIST = "C04,C05,C06,C07,C20"
   PO_PF_TLS_COMMON_NAME = "shard-api-pre.interservefls.gse.gov.uk"
   PO_PF_SIGNING_COMMON_NAME = "signing-shard-api-pre.interservefls.gse.gov.uk"
-  PO_PF_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/PF/cxf/CRC-101"
-  PO_PF_PROXY_URL = "https://shard-api-pre.interservefls.gse.gov.uk:9001/cxf/CRC-101"
+  PO_PF_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/PF/cxf/CRC-100"
+  PO_PF_PROXY_URL = "https://shard-api-pre.interservefls.gse.gov.uk:9001/cxf/CRC-100"
 
 
   PO_STC_NAME = "SEETEC"
