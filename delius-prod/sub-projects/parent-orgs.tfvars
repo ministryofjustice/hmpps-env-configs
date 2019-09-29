@@ -16,10 +16,13 @@ PO_SPG_CONFIGURATION = {
   SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
   SPG_CERTIFICATE_PATH = "/official-data/hmpps-delius-prod/current/"
 
-  SPG_ISO_PSN_FQDN  = "spgw-ext.pre-prod.probation.service.justice.gov.uk"
+  SPG_ISO_PSN_FQDN  = "spgw-int-psn.pre-prod.probation.service.justice.gov.uk"
   SPG_PSN_FQDN  = "spgw-int-psn.pre-prod.probation.service.justice.gov.uk"
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
+  POSTUB_CRC_SCHEMA_0_9_13 = "C00"
+
+
   PO_POSTUB_NAME = "PO STUB"
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
@@ -28,8 +31,6 @@ PO_SPG_CONFIGURATION = {
 
   #TODO rename this to PO_POSTUB_PROXIED_URL
   PO_POSTUB_PROXY_URL = "https://spgw-crc-ext.pre-prod.probation.service.justice.gov.uk:9001/cxf/CRC-100"
-
-  POSTUB_CRC_SCHEMA_0_9_13 = "C00"
 
 
   PO_PF_NAME = "PURPLE FUTURES"
