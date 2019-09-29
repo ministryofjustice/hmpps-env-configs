@@ -16,6 +16,9 @@ PO_SPG_CONFIGURATION = {
   SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
   SPG_CERTIFICATE_PATH = "/official-data/hmpps-delius-prod/current/"
 
+  SPG_ISO_PSN_FQDN  = "spgw-ext.pre-prod.probation.service.justice.gov.uk"
+  SPG_PSN_FQDN  = "spgw-int-psn.pre-prod.probation.service.justice.gov.uk"
+
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
   PO_POSTUB_NAME = "PO STUB"
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
