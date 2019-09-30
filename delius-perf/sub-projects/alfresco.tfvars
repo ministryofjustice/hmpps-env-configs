@@ -50,41 +50,15 @@ allowed_cidr_block = [
 ]
 
 # ALFRESCO AMI
-# OLD AMI ID: ami-0241900188f67b9c6
-alfresco_instance_ami = {
-  az1 = "ami-0d891eb6bea9cfa8c"
-
-  az2 = "ami-0d891eb6bea9cfa8c"
-
-  az3 = "ami-0d891eb6bea9cfa8c"
-}
-
 # ASG Configuration
-az_asg_desired = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
+alfresco_asg_props = {
+  asg_desired       = 1
+  asg_min           = 1
+  asg_max           = 2
+  asg_instance_type = "m4.xlarge"
+  asg_ami           = "ami-0d891eb6bea9cfa8c"
+  ebs_volume_size   = 512
 }
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type = "m4.xlarge"
 
 alfresco_jvm_memory = "8G"
 
