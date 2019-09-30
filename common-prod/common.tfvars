@@ -38,7 +38,7 @@ alf_backups_config = {
   noncurrent_version_transition_days         = 30
   noncurrent_version_transition_glacier_days = 60
   noncurrent_version_expiration_days         = 2560
-  provisioned_throughput_in_mibps            = 300
+  provisioned_throughput_in_mibps            = 20
   throughput_mode                            = "provisioned"
 }
 
@@ -96,7 +96,7 @@ alf_rds_migration_parameters = [
 elk_backups_config = {
   transition_days                 = 28
   expiration_days                 = 2560
-  provisioned_throughput_in_mibps = 300
+  provisioned_throughput_in_mibps = 20
   throughput_mode                 = "provisioned"
 }
 
@@ -116,8 +116,10 @@ elk_migration_props = {
   ecs_mem_limit             = 24000
   ecs_cpu_units             = 500
   ecs_memory                = 24500
-  jvm_heap_size             = "22g"
+  jvm_heap_size             = "16g"
   image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
+  kibana_image_url          = "mojdigitalstudio/hmpps-kibana:latest"
+  logstash_image_url        = "mojdigitalstudio/hmpps-logstash:latest"
   block_device              = "/dev/nvme0n1"
   es_master_nodes           = 2
   ecs_service_desired_count = 3
