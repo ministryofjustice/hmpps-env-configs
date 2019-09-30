@@ -13,12 +13,12 @@ PO_SPG_CONFIGURATION = {
 
 
   //expected signed url = SPG_ISO_FQDN, ie "spgw-ext.probation.service.justice.gov.uk"
-  SPG_ISO_UD_ALTERNATE_INBOUND_SIGNED_URL_CN = "spgw-ext-psn.probation.service.justice.gov.uk"
+//  SPG_ISO_UD_ALTERNATE_INBOUND_SIGNED_URL_CN = "spgw-ext-psn.probation.service.justice.gov.uk"
 
 
-  #SPG_ISO_PSN_FQDN is an env var used by spg aliases to test SPG over PSN connection regardless of whether SPG
+  #SPG_ISO_PSNPROXY_FQDN is an env var used by spg aliases to test SPG over PSN connection regardless of whether SPG
   #aliases and scripts use SPG_ISO_FQDN to test directly
-  SPG_ISO_PSN_FQDN  = "spgw-int-psn.probation.service.justice.gov.uk"
+  SPG_ISO_PSNPROXY_FQDN  = "spgw-int-psn.probation.service.justice.gov.uk"
 
   PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
 
