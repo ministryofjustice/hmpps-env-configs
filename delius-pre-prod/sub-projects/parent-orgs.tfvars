@@ -9,12 +9,18 @@ PO_SPG_CONFIGURATION = {
 
 
 
-  PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
+
   SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
   SPG_CERTIFICATE_PATH = "/official-data/hmpps-delius-pre-prod/current/"
 
-  SPG_ISO_PSN_FQDN  = "spgw-ext.pre-prod.probation.service.justice.gov.uk"
-  SPG_PSN_FQDN  = "spgw-int-psn.pre-prod.probation.service.justice.gov.uk"
+  //override iso signing cert for aws preprod -> po prod  testing
+  SPG_ISO_SIGNING_COMMON_NAME = "signing.spgw-ext.probation.service.justice.gov.uk"
+
+  #SPG_ISO_PSN_FQDN is an env var used by spg aliases to test SPG over PSN connection regardless of whether SPG
+  #aliases and scripts use SPG_ISO_FQDN to test directly
+  SPG_ISO_PSN_FQDN  = "spgw-int-psn.pre-prod.probation.service.justice.gov.uk"
+
+  PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
   PO_POSTUB_NAME = "PO STUB"
@@ -31,7 +37,7 @@ PO_SPG_CONFIGURATION = {
   PO_PF_CRC_LIST = "C04,C05,C06,C07,C20"
   PO_PF_TLS_COMMON_NAME = "shard-api-pre.interservefls.gse.gov.uk"
   PO_PF_SIGNING_COMMON_NAME = "signing-shard-api-pre.interservefls.gse.gov.uk"
-  PO_PF_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/PF/cxf/CRC-100"
+  PO_PF_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/disabled_as_pointing_to_prod_PF/cxf/CRC-100"
   PO_PF_PROXY_URL = "https://shard-api-pre.interservefls.gse.gov.uk:9001/cxf/CRC-100"
 
 
@@ -39,14 +45,14 @@ PO_SPG_CONFIGURATION = {
   PO_STC_CRC_LIST = "C21"
   PO_STC_TLS_COMMON_NAME = "prep2.ksscrc.org.uk"
   PO_STC_SIGNING_COMMON_NAME = "signing.prep2.ksscrc.org.uk"
-  PO_STC_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/STC/nomsinbound.svc"
+  PO_STC_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/disabled_as_pointing_to_prod_STC/nomsinbound.svc"
   PO_STC_PROXY_URL = "https://prep2.ksscrc.org.uk:9001/nomsinbound.svc"
 
   PO_MTC_NAME = "MTC"
   PO_MTC_CRC_LIST = "C16,C17"
   PO_MTC_TLS_COMMON_NAME = "spg-psnppl.omnia.mtcnovo.net"
   PO_MTC_SIGNING_COMMON_NAME = "spg-iso-psnppl.omnia.mtcnovo.net"
-  PO_MTC_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/MTC/CRC/CRCendpoint"
+  PO_MTC_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/disabled_as_pointing_to_prod_MTC/CRC/CRCendpoint"
   PO_MTC_PROXY_URL = "https://spg-psnppl.omnia.mtcnovo.net:9001/CRC/CRCendpoint"
 }
 

@@ -7,30 +7,33 @@ PO_SPG_CONFIGURATION = {
 
   #current using proxy address as pattern spg-iso-prod-p01:8181, will become more like egress-prod.psn.probation.service.justice.gov.uk/mtc/
 
-
-  //override iso signing cert for preprod testing
-  SPG_ISO_SIGNING_COMMON_NAME = "signing.spgw-ext.pre-prod.probation.service.justice.gov.uk"
-
-
-  PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
   SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
   SPG_CERTIFICATE_PATH = "/official-data/hmpps-delius-prod/current/"
 
-  SPG_ISO_PSN_FQDN  = "spgw-int-psn.pre-prod.probation.service.justice.gov.uk"
-  SPG_PSN_FQDN  = "spgw-int-psn.pre-prod.probation.service.justice.gov.uk"
+  //override iso signing cert for aws prod -> po preprod testing
+  SPG_ISO_SIGNING_COMMON_NAME = "signing.spgw-ext.pre-prod.probation.service.justice.gov.uk"
+
+  //expected signed url = SPG_ISO_FQDN, ie "spgw-ext.pre-prod.probation.service.justice.gov.uk"
+  SPG_ISO_UD_ALTERNATE_INBOUND_SIGNED_URL_CN = "spgw-ext-psn.probation.service.justice.gov.uk"
+
+
+  #SPG_ISO_PSN_FQDN is an env var used by spg aliases to test SPG over PSN connection regardless of whether SPG
+  #aliases and scripts use SPG_ISO_FQDN to test directly
+  SPG_ISO_PSN_FQDN  = "spgw-int-psn.probation.service.justice.gov.uk"
+
+  PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
   POSTUB_CRC_SCHEMA_0_9_13 = "C00"
 
-
+  #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
   PO_POSTUB_NAME = "PO STUB"
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
   PO_POSTUB_CRC_LIST = "C00"
   PO_POSTUB_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/POSTUB/cxf/CRC-100"
-
-  #TODO rename this to PO_POSTUB_PROXIED_URL
   PO_POSTUB_PROXY_URL = "https://spgw-crc-ext.pre-prod.probation.service.justice.gov.uk:9001/cxf/CRC-100"
+  #TODO rename PO_POSTUB_PROXY_URL to PO_POSTUB_PROXIED_URL
 
 
   PO_PF_NAME = "PURPLE FUTURES"
