@@ -28,6 +28,7 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_CRC_LIST = "C00"
+  PO_POSTUB_CALLING_VIA_PSN = "true"
   PO_POSTUB_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/POSTUB/cxf/CRC-100"
   PO_POSTUB_PROXIED_URL = "https://spgw-crc-ext.pre-prod.probation.service.justice.gov.uk:9001/cxf/CRC-100"
 
@@ -36,6 +37,7 @@ PO_SPG_CONFIGURATION = {
 
   PO_PF_NAME = "PURPLE FUTURES"
   PO_PF_CRC_LIST = "C04,C05,C06,C07,C20"
+  PO_POSTUB_CALLING_VIA_PSN = "true"
   PO_PF_TLS_COMMON_NAME = "shard-api-pre.interservefls.gse.gov.uk"
   PO_PF_SIGNING_COMMON_NAME = "signing-shard-api-pre.interservefls.gse.gov.uk"
   PO_PF_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/disabled_as_pointing_to_prod_PF/cxf/CRC-100"
@@ -44,12 +46,14 @@ PO_SPG_CONFIGURATION = {
 
   PO_STC_NAME = "SEETEC"
   PO_STC_CRC_LIST = "C21"
+  PO_POSTUB_CALLING_VIA_PSN = "true"
   PO_STC_TLS_COMMON_NAME = "prep2.ksscrc.org.uk"
   PO_STC_SIGNING_COMMON_NAME = "signing.prep2.ksscrc.org.uk"
   PO_STC_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/disabled_as_pointing_to_prod_STC/nomsinbound.svc"
   PO_STC_PROXIED_URL = "https://prep2.ksscrc.org.uk:9001/nomsinbound.svc"
 
   PO_MTC_NAME = "MTC"
+  PO_POSTUB_CALLING_VIA_PSN = "true"
   PO_MTC_CRC_LIST = "C16,C17"
   PO_MTC_TLS_COMMON_NAME = "spg-psnppl.omnia.mtcnovo.net"
   PO_MTC_SIGNING_COMMON_NAME = "spg-iso-psnppl.omnia.mtcnovo.net"
