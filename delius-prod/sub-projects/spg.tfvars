@@ -27,7 +27,7 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
+# ASG Configuration DEPRECATED!!!
 az_asg_desired = {
   az1 = "1"
 
@@ -36,6 +36,7 @@ az_asg_desired = {
   az3 = "0"
 }
 
+# ASG Configuration DEPRECATED!!!
 az_asg_max = {
   az1 = "2"
 
@@ -44,6 +45,7 @@ az_asg_max = {
   az3 = "0"
 }
 
+# ASG Configuration DEPRECATED!!!
 az_asg_min = {
   az1 = "1"
 

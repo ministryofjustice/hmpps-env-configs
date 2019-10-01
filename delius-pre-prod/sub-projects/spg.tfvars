@@ -28,7 +28,8 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
+# ASG Configuration DEPRECATED!!!
+
 az_asg_desired = {
   az1 = "1"
 
@@ -37,6 +38,7 @@ az_asg_desired = {
   az3 = "1"
 }
 
+# ASG Configuration DEPRECATED!!!
 az_asg_max = {
   az1 = "4"
 
@@ -45,6 +47,7 @@ az_asg_max = {
   az3 = "4"
 }
 
+# ASG Configuration DEPRECATED!!!
 az_asg_min = {
   az1 = "1"
 
@@ -72,11 +75,11 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/pre-prod"
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
 #Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
-spg_mpx_service_desired_count = 2
-spg_mpx_ecs_memory = 16050
-SPG_MPX_JAVA_MAX_MEM = 15850
-//spg_mpx_ecs_memory = 32100
-//SPG_MPX_JAVA_MAX_MEM = 31900
+spg_mpx_service_desired_count = 1
+spg_mpx_ecs_memory = 32100
+SPG_MPX_JAVA_MAX_MEM = 31900
+//spg_mpx_ecs_memory = 32100 1/2 16050
+//SPG_MPX_JAVA_MAX_MEM = 31900 1/2 15850
 
 SPG_MPX_HOST_TYPE = "hybrid"
 
@@ -85,9 +88,9 @@ spg_crc_ecs_memory = 32100
 SPG_CRC_JAVA_MAX_MEM = 31900
 SPG_CRC_HOST_TYPE = "crc"
 
-spg_iso_service_desired_count = 2
-spg_iso_ecs_memory = 16050
-SPG_ISO_JAVA_MAX_MEM = 15850
+spg_iso_service_desired_count = 1
+spg_iso_ecs_memory = 32100
+SPG_ISO_JAVA_MAX_MEM = 31900
 SPG_ISO_HOST_TYPE = "iso"
 
 
