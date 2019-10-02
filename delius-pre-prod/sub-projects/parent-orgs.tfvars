@@ -27,7 +27,7 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_NAME = "PO STUB"
   PO_POSTUB_CRC_LIST = "C00"
   #PO_POSTUB_CALLING_VIA_PROXY_URL_REWRITE#  null, "" or "replace_string|replace_with" eg "spgw-ext.pre-prod.probation|spgw-int-psn.probation" (needed so that UD proxy can rewrite urls provided for oAuth signature cert validation)
-  PO_POSTUB_CALLING_VIA_PROXY_URL_REWRITE = "spgw-ext.pre-prod.probation|spgw-int-psn.probation"
+  PO_POSTUB_CALLING_VIA_PROXY_URL_REWRITE = "spgw-ext.pre-prod.probation,spgw-int-psn.probation"
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
 #  PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.probation.service.justice.gov.uk"
