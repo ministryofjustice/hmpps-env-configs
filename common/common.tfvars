@@ -33,8 +33,8 @@ spg_app_name = "spg"
 
 # Alfresco
 alf_backups_config = {
-  transition_days                            = 5
-  expiration_days                            = 14
+  transition_days                            = 30
+  expiration_days                            = 90
   noncurrent_version_transition_days         = 30
   noncurrent_version_transition_glacier_days = 60
   noncurrent_version_expiration_days         = 90
@@ -43,8 +43,8 @@ alf_backups_config = {
 }
 
 alf_rds_props = {
-  instance_class          = "db.t2.medium"
-  iops                    = 50
+  instance_class          = "db.t2.large"
+  iops                    = 0
   storage_type            = "gp2"
   allocated_storage       = 100
   maintenance_window      = "Sun:06:00-Sun:08:00"
@@ -53,7 +53,7 @@ alf_rds_props = {
   family                  = "postgres9.6"
   engine                  = "postgres"
   major_engine_version    = "9.6"
-  engine_version          = "9.6.11"
+  engine_version          = "9.6.9"
 }
 
 # ontrol rds deployment
