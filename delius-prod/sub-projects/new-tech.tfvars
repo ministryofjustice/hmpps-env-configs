@@ -20,6 +20,7 @@ delius_api_upper_cpu_trigger = 10
 casenotes_conf = {
   cpu    = "1024"
   memory = "2048"
+  env_pull_base_url  ="https://gateway.nomis-api.service.justice.gov.uk/elite2api/offenders/events/case_notes"
 }
 
 # Override default PDF Generator Config
@@ -53,6 +54,7 @@ web_conf = {
   memory                   = "2048"
   ecs_scaling_min_capacity = 2
   ecs_scaling_max_capacity = 10
+  image_version = "0.2.9"
 }
 
 # Override default Offender Poll Push Config
@@ -60,3 +62,9 @@ offenderpollpush_conf = {
   cpu    = "3072"
   memory = "4096"
 }
+
+offender_api_allowed_cidrs = [
+  "51.141.53.111/32", # Public IP of azure fortinet
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32" #Digital studio
+]

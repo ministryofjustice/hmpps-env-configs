@@ -85,8 +85,8 @@ rds_instance_class      = "db.m5.xlarge"
 ## MIS Datamart
 db_size_mis = {
   database_size  = "x_large"
-  instance_type  = "r5.4xlarge"
-  disk_iops      = 1000
+  instance_type  = "r5.12xlarge"
+  disk_iops      = 5000
   disks_quantity = 16          # Do not decrease this
   disk_size      = 1000        # Do not decrease this
 
