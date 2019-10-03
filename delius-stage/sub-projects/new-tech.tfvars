@@ -28,7 +28,14 @@ offenderapi_conf = {
 search_conf = {}
 
 # Override default Web Frontend Config
-web_conf = {}
+web_conf = {
+  image_version = "0.2.9"
+}
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {}
+
+offender_api_allowed_cidrs = [
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32" #Digital studio
+]
