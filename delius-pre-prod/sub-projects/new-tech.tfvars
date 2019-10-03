@@ -32,7 +32,19 @@ search_conf = {
 }
 
 # Override default Web Frontend Config
-web_conf = {}
+web_conf = {
+  cpu                      = "2048"
+  memory                   = "2048"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+  image_version = "0.2.9"
+}
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {}
+
+offender_api_allowed_cidrs = [
+  "51.141.53.111", # Public IP of azure fortinet
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32" #Digital studio
+]
