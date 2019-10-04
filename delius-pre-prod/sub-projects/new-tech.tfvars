@@ -14,8 +14,11 @@ delius_api_upper_cpu_trigger = 10
 
 # Override default casenotes Config
 casenotes_conf = {
-
+  cpu    = "1024"
+  memory = "2048"
+  env_pull_base_url = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/offenders/events/case_notes_for_delius"
 }
+
 # Override default PDF Generator Config
 pdfgenerator_conf = {}
 
@@ -45,6 +48,4 @@ offenderpollpush_conf = {}
 
 offender_api_allowed_cidrs = [
   "51.141.53.111/32", # Public IP of azure fortinet
-  "81.134.202.29/32",  #Moj VPN
-  "217.33.148.210/32" #Digital studio
 ]
