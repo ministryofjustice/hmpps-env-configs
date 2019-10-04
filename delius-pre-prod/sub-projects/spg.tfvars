@@ -28,34 +28,6 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration DEPRECATED!!!
-
-az_asg_desired = {
-  az1 = "1"
-
-  az2 = "1"
-
-  az3 = "1"
-}
-
-# ASG Configuration DEPRECATED!!!
-az_asg_max = {
-  az1 = "4"
-
-  az2 = "4"
-
-  az3 = "4"
-}
-
-# ASG Configuration DEPRECATED!!!
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "1"
-
-  az3 = "1"
-}
-
 //NOTE in ukcloud servers are spec'd at 32GIG ram
 //I think could easily get away with 4, but need to performance test
 
