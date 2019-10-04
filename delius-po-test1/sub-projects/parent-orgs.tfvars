@@ -8,7 +8,7 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_CRC_LIST = "C00,C01,C15,C22,C23"
-  PO_POSTUB_ENDPOINT_URL = "https://{{ lookup('env','SPG_CRC_FQDN') }}:9001/cxf/CRC-101"
+  PO_POSTUB_ENDPOINT_URL = "https://{{ lookup('env','SPG_CRC_FQDN') }}:9001/cxf/CRC-100"
 
   POSTUB_CRC_SCHEMA_0_9_10 = "C01"
   POSTUB_CRC_SCHEMA_0_9_13 = "C00,C15,C22,C23"
@@ -18,14 +18,14 @@ PO_SPG_CONFIGURATION = {
   PO_PFA_TLS_COMMON_NAME = "shard.evp.meganexus.com"
   PO_PFA_SIGNING_COMMON_NAME = "shard.evp.meganexus.com"
   PO_PFA_CRC_LIST = "C06,C07"
-  PO_PFA_ENDPOINT_URL = "https://shard.evp.meganexus.comxxx:9001/cxf/CRC-101"
+  PO_PFA_ENDPOINT_URL = "https://shard.evp.meganexus.comxxx:9001/cxf/CRC-100"
 
 
   #uses same cert for signing as tls in IFSR3 env
   PO_PFB_NAME = "PURPLE FUTURES B"
   PO_PFB_TLS_COMMON_NAME = "shard2.evp.meganexus.com"
   PO_PFB_SIGNING_COMMON_NAME = "shard2.evp.meganexus.com"
-  PO_PFB_ENDPOINT_URL = "https://shard2.evp.meganexus.comxxx:9001/cxf/CRC-101"
+  PO_PFB_ENDPOINT_URL = "https://shard2.evp.meganexus.comxxx:9001/cxf/CRC-100"
   PO_PFB_CRC_LIST = "C04,C05,C20"
 
 }

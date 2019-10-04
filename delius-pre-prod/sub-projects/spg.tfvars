@@ -1,4 +1,4 @@
-image_version = "DAM-394-PSN-Testing"
+image_version = "branch-latest-DAM-394"
 
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
@@ -28,34 +28,12 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
-az_asg_desired = {
-  az1 = "1"
+//NOTE in ukcloud servers are spec'd at 32GIG ram
+//I think could easily get away with 4, but need to performance test
 
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type_crc = "t2.small"
-asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+asg_instance_type_crc = "t2.2xlarge"
+asg_instance_type_mpx = "t2.2xlarge"
+asg_instance_type_iso = "t2.2xlarge"
 
 aws_broker_host_instance_type = "mq.m5.large"
 aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
@@ -71,19 +49,33 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/pre-prod"
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
 #Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
-//spg_mpx_ecs_cpu_units = 1024
-spg_mpx_ecs_memory = 3835
-SPG_MPX_JAVA_MAX_MEM = 3645
-SPG_MPX_HOST_TYPE = "one"
 
-//spg_crc_ecs_cpu_units = 1024
-spg_crc_ecs_memory = 1881
-SPG_CRC_JAVA_MAX_MEM = 1691
+spg_mpx_asg_desired = 1 #6 when live
+spg_mpx_asg_max = 1 #6 when live
+spg_mpx_asg_min ="1" #3 when live
+
+spg_mpx_service_desired_count = 1 # 6 when live
+spg_mpx_ecs_memory = 32100
+SPG_MPX_JAVA_MAX_MEM = 31900
+//spg_mpx_ecs_memory = 32100 1/2 16050
+//SPG_MPX_JAVA_MAX_MEM = 31900 1/2 15850
+
+SPG_MPX_HOST_TYPE = "hybrid"
+
+spg_crc_service_desired_count = 1
+spg_crc_ecs_memory = 32100
+SPG_CRC_JAVA_MAX_MEM = 31900
 SPG_CRC_HOST_TYPE = "crc"
 
-//spg_iso_ecs_cpu_units = 1024
-spg_iso_ecs_memory = 1881
-SPG_ISO_JAVA_MAX_MEM = 1691
+
+
+spg_mpx_asg_desired = 1 #6 when live
+spg_mpx_asg_max = 1 #6 when live
+spg_mpx_asg_min ="1" #3 when live
+
+spg_iso_service_desired_count = 1 # 6 when live
+spg_iso_ecs_memory = 32100
+SPG_ISO_JAVA_MAX_MEM = 31900
 SPG_ISO_HOST_TYPE = "iso"
 
 
@@ -108,5 +100,3 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.pre-prod.delius.probati
 SPG_ISO_FQDN  = "spgw-ext.pre-prod.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.pre-prod.delius.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
-
-

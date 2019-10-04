@@ -1,4 +1,4 @@
-image_version = "DAM-394-PSN-Testing"
+image_version = "branch-latest-DAM-394"
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
@@ -9,6 +9,8 @@ cloudwatch_log_retention = 14
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
+# ROUTE53 ZONE strategic probation.service.justice.gov.uk (same as normal)
+route53_strategic_hosted_zone_id = "Z2SOZ79CNGAPIF"
 
 
 # ENVIRONMENT REMOTE STATES
@@ -25,34 +27,13 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
-az_asg_desired = {
-  az1 = "1"
 
-  az2 = "0"
+//NOTE in ukcloud servers are spec'd at 32GIG ram
+//I think could easily get away with 4, but need to performance test
 
-  az3 = "0"
-}
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type_crc = "t2.small"
-asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+asg_instance_type_crc = "t2.2xlarge"
+asg_instance_type_mpx = "t2.2xlarge"
+asg_instance_type_iso = "t2.2xlarge"
 
 aws_broker_host_instance_type = "mq.m5.large"
 aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
@@ -68,19 +49,33 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/prod"
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
 #Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
-//spg_mpx_ecs_cpu_units = 1024
-spg_mpx_ecs_memory = 3835
-SPG_MPX_JAVA_MAX_MEM = 3645
-SPG_MPX_HOST_TYPE = "one"
 
-//spg_crc_ecs_cpu_units = 1024
-spg_crc_ecs_memory = 1881
-SPG_CRC_JAVA_MAX_MEM = 1691
+spg_mpx_asg_desired = 1 #6 when live
+spg_mpx_asg_max = 1 #6 when live
+spg_mpx_asg_min ="1" #3 when live
+
+spg_mpx_service_desired_count = 1 # 6 when live
+spg_mpx_ecs_memory = 32100
+SPG_MPX_JAVA_MAX_MEM = 31900
+//spg_mpx_ecs_memory = 32100 1/2 16050
+//SPG_MPX_JAVA_MAX_MEM = 31900 1/2 15850
+
+SPG_MPX_HOST_TYPE = "hybrid"
+
+spg_crc_service_desired_count = 1
+spg_crc_ecs_memory = 32100
+SPG_CRC_JAVA_MAX_MEM = 31900
 SPG_CRC_HOST_TYPE = "crc"
 
-//spg_iso_ecs_cpu_units = 1024
-spg_iso_ecs_memory = 1881
-SPG_ISO_JAVA_MAX_MEM = 1691
+
+
+spg_mpx_asg_desired = 1 #6 when live
+spg_mpx_asg_max = 1 #6 when live
+spg_mpx_asg_min ="1" #3 when live
+
+spg_iso_service_desired_count = 1 # 6 when live
+spg_iso_ecs_memory = 32100
+SPG_ISO_JAVA_MAX_MEM = 31900
 SPG_ISO_HOST_TYPE = "iso"
 
 
@@ -97,12 +92,22 @@ SPG_ENVIRONMENT_CN = "probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://delius-jms.probation.service.justice.gov.uk:61617"
+//SPG_DELIUS_MQ_URL ="tcp://delius-jms.probation.service.justice.gov.uk:61617"
+//
+//SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/admin-spg"
+//SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
 
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/admin-spg"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
+//the above are overridden until we are ready to smoke test internally
+SPG_DELIUS_MQ_URL ="tcp://localhost:61616"
 
-//USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="http://localhost:8181/cxf"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="http://localhost:8181/cxf"
+
+
+
+
+
 SPG_ISO_FQDN  = "spgw-ext.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.probation.service.justice.gov.uk"
 SPG_CRC_FQDN  = "spgw-crc-ext.probation.service.justice.gov.uk"
+

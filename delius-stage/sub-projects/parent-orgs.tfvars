@@ -14,8 +14,8 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_CRC_LIST = "C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21"
-  PO_POSTUB_ENDPOINT_URL = "https://spgw-crc-int.stage.probation.service.justice.gov.uk:9001/cxf/CRC-101"
-  PO_POSTUB_PROXY_URL = "n/a"
+  PO_POSTUB_ENDPOINT_URL = "https://spgw-crc-int.stage.probation.service.justice.gov.uk:9001/cxf/CRC-100"
+  PO_POSTUB_PROXIED_URL = "n/a"
   POSTUB_CRC_SCHEMA_0_9_13 = "C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21"
 }
 
