@@ -1,4 +1,4 @@
-image_version = "branch-latest-DAM-319"
+image_version = "DAM-394-PSN-Testing"
 
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
@@ -9,6 +9,10 @@ cloudwatch_log_retention = 14
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
+
+# ROUTE53 ZONE pre-prod.probation.service.justice.gov.uk
+route53_strategic_hosted_zone_id = "Z2HN42YS4OOSPY"
+
 
 # ENVIRONMENT REMOTE STATES
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
@@ -53,6 +57,8 @@ asg_instance_type_crc = "t2.small"
 asg_instance_type_mpx = "t2.medium"
 asg_instance_type_iso = "t2.small"
 
+aws_broker_host_instance_type = "mq.m5.large"
+aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 
 spg_app_name = "spgw"
 
