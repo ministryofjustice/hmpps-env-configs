@@ -87,18 +87,18 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #as well as displaying the environment in terminals and splash screens
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
-SPG_ENVIRONMENT_CODE = "autotest"
-SPG_ENVIRONMENT_CN = "autotest.probation.service.justice.gov.uk"
+SPG_ENVIRONMENT_CODE = "auto-test"
+SPG_ENVIRONMENT_CN = "auto-test.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://delius-jms.autotest.delius.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.auto-test.delius.probation.hmpps.dsd.io:61617"
 
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.auto-test.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.auto-test.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-SPG_ISO_FQDN  = "spgw-ext.autotest.probation.service.justice.gov.uk"
-SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-int.autotest.probation.service.justice.gov.uk"
+SPG_ISO_FQDN  = "spgw-ext.auto-test.probation.service.justice.gov.uk"
+SPG_MPX_FQDN  = "spgw-mpx-int.auto-test.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-int.auto-test.probation.service.justice.gov.uk"
