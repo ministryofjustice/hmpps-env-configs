@@ -92,16 +92,12 @@ SPG_ENVIRONMENT_CN = "probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-//SPG_DELIUS_MQ_URL ="tcp://delius-jms.probation.service.justice.gov.uk:61617"
-//
-//SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/admin-spg"
-//SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.probation.service.justice.gov.uk:61617"
+
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
 
 //the above are overridden until we are ready to smoke test internally
-SPG_DELIUS_MQ_URL ="tcp://localhost:61616"
-
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="http://localhost:8181/cxf"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="http://localhost:8181/cxf"
 
 
 
