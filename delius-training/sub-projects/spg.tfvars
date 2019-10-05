@@ -101,7 +101,7 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.training.delius.probati
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
 //SPG_ISO_FQDN  = "spgw-ext.training.probation.service.justice.gov.uk"
 //SPG_MPX_FQDN  = "spgw-mpx-int.training.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-int.training.probation.service.justice.gov.uk"
+//SPG_CRC_FQDN  = "spgw-crc-ext.training.probation.service.justice.gov.uk"
 
 
 SPG_ISO_FQDN  = "localhost"

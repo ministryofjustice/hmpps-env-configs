@@ -100,7 +100,7 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.stage.delius.probation.
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
 //SPG_ISO_FQDN  = "spgw-ext.stage.probation.service.justice.gov.uk"
 //SPG_MPX_FQDN  = "spgw-mpx-int.stage.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-int.stage.probation.service.justice.gov.uk"
+//SPG_CRC_FQDN  = "spgw-crc-ext.stage.probation.service.justice.gov.uk"
 
 SPG_ISO_FQDN  = "localhost"
 SPG_MPX_FQDN  = "localhost"

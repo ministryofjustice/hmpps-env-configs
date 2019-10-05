@@ -22,34 +22,10 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
-az_asg_desired = {
-  az1 = "1"
 
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type_crc = "t2.small"
+asg_instance_type_crc = "t2.medium"
 asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+asg_instance_type_iso = "t2.medium"
 
 aws_broker_host_instance_type = "mq.t2.micro"
 aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
@@ -89,18 +65,18 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #as well as displaying the environment in terminals and splash screens
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
-SPG_ENVIRONMENT_CODE = "autotest"
-SPG_ENVIRONMENT_CN = "autotest.probation.service.justice.gov.uk"
+SPG_ENVIRONMENT_CODE = "auto-test"
+SPG_ENVIRONMENT_CN = "auto-test.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
 SPG_DELIUS_MQ_URL ="tcp://delius-jms.delius-auto-test.internal:61617"
 
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.autotest.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.auto-test.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.auto-test.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-SPG_ISO_FQDN  = "spgw-ext.autotest.probation.service.justice.gov.uk"
-SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-int.autotest.probation.service.justice.gov.uk"
+SPG_ISO_FQDN  = "spgw-ext.auto-test.probation.service.justice.gov.uk"
+SPG_MPX_FQDN  = "spgw-mpx-int.auto-test.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-ext.auto-test.probation.service.justice.gov.uk"
