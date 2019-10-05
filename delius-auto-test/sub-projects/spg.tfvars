@@ -22,34 +22,10 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
-az_asg_desired = {
-  az1 = "1"
 
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type_crc = "t2.small"
+asg_instance_type_crc = "t2.medium"
 asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+asg_instance_type_iso = "t2.medium"
 
 
 spg_app_name = "spgw"
@@ -66,7 +42,7 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 //spg_mpx_ecs_cpu_units = 1024
 spg_mpx_ecs_memory = 3835
 SPG_MPX_JAVA_MAX_MEM = 3645
-SPG_MPX_HOST_TYPE = "one"
+SPG_MPX_HOST_TYPE = "hybrid"
 
 //spg_crc_ecs_cpu_units = 1024
 spg_crc_ecs_memory = 1881
