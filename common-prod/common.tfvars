@@ -184,15 +184,15 @@ user_access_cidr_blocks = [
   "35.176.246.202/32", #Engineering Jenkins non prod windows slave
   "194.75.210.208/28", #BCL
   "213.48.246.99/32",  #BCL
-  "195.59.75.0/24",    # ARK internet (DOM1)
-  "194.33.192.0/25",   # ARK internet (DOM1)
-  "194.33.193.0/25",   # ARK internet (DOM1)
-  "194.33.196.0/25",   # ARK internet (DOM1)
-  "194.33.197.0/25",   # ARK internet (DOM1)
-  "62.232.198.64/28",  # I2N 
+//  "195.59.75.0/24",    # ARK internet (DOM1)
+//  "194.33.192.0/25",   # ARK internet (DOM1)
+//  "194.33.193.0/25",   # ARK internet (DOM1)
+//  "194.33.196.0/25",   # ARK internet (DOM1)
+//  "194.33.197.0/25",   # ARK internet (DOM1)
+//  "62.232.198.64/28",  # I2N
   "81.187.190.127/32", # Lazzurs Home
-  "3.10.56.113/32",    # PSN Proxy A
-  "35.178.173.171/32", # PSN Proxy B
+//  "3.10.56.113/32",    # PSN Proxy A
+//  "35.178.173.171/32", # PSN Proxy B
   "82.38.248.151/32",  # Steve James Office
   "213.86.81.13/32",   # Zaizi London Office
 ]
@@ -315,7 +315,7 @@ default_ansible_vars = {
 
   # Alfresco
   alfresco_host        = "alfresco"
-  alfresco_port        = 80
+  alfresco_port        = 443
   alfresco_office_host = "alfresco"
   alfresco_office_port = 443
 
