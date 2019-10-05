@@ -53,7 +53,7 @@ alf_rds_props = {
   family                  = "postgres9.6"
   engine                  = "postgres"
   major_engine_version    = "9.6"
-  engine_version          = "9.6.9"
+  engine_version          = "9.6.11"
 }
 
 # ontrol rds deployment
@@ -97,8 +97,8 @@ es_admin_volume_props = {
 
 ## Delius Core
 weblogic_domain_ports = {
-  weblogic_port      = "7001"
-  weblogic_tls_port  = "7002"
+  weblogic_port      = "80"
+  weblogic_tls_port  = "443" # currently unused, as tls is terminated at the load-balancer
   activemq_port      = "61617"
   spg_jms_broker     = "61616"
   spg_jms_broker_ssl = "61617"
@@ -144,8 +144,8 @@ user_access_cidr_blocks = [
   "194.33.193.0/25",   # ARK internet (DOM1)
   "194.33.196.0/25",   # ARK internet (DOM1)
   "194.33.197.0/25",   # ARK internet (DOM1)
-  "62.232.198.68/28",  # I2N 
-] 
+  "62.232.198.64/28",  # I2N 
+]
 
 # jenkins access
 jenkins_access_cidr_blocks = [

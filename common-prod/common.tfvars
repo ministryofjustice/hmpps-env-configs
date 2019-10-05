@@ -38,7 +38,7 @@ alf_backups_config = {
   noncurrent_version_transition_days         = 30
   noncurrent_version_transition_glacier_days = 60
   noncurrent_version_expiration_days         = 2560
-  provisioned_throughput_in_mibps            = 300
+  provisioned_throughput_in_mibps            = 20
   throughput_mode                            = "provisioned"
 }
 
@@ -53,7 +53,7 @@ alf_rds_props = {
   family                  = "postgres9.6"
   engine                  = "postgres"
   major_engine_version    = "9.6"
-  engine_version          = "9.6.9"
+  engine_version          = "9.6.11"
 }
 
 # ontrol rds deployment
@@ -96,7 +96,7 @@ alf_rds_migration_parameters = [
 elk_backups_config = {
   transition_days                 = 28
   expiration_days                 = 2560
-  provisioned_throughput_in_mibps = 300
+  provisioned_throughput_in_mibps = 20
   throughput_mode                 = "provisioned"
 }
 
@@ -116,8 +116,10 @@ elk_migration_props = {
   ecs_mem_limit             = 24000
   ecs_cpu_units             = 500
   ecs_memory                = 24500
-  jvm_heap_size             = "22g"
+  jvm_heap_size             = "16g"
   image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
+  kibana_image_url          = "mojdigitalstudio/hmpps-kibana:latest"
+  logstash_image_url        = "mojdigitalstudio/hmpps-logstash:latest"
   block_device              = "/dev/nvme0n1"
   es_master_nodes           = 2
   ecs_service_desired_count = 3
@@ -143,8 +145,8 @@ es_admin_volume_props = {
 
 ## Delius Core
 weblogic_domain_ports = {
-  weblogic_port      = "7001"
-  weblogic_tls_port  = "7002"
+  weblogic_port      = "80"
+  weblogic_tls_port  = "443" # currently unused, as tls is terminated at the load-balancer
   activemq_port      = "61617"
   spg_jms_broker     = "61616"
   spg_jms_broker_ssl = "61617"
@@ -187,7 +189,12 @@ user_access_cidr_blocks = [
   "194.33.193.0/25",   # ARK internet (DOM1)
   "194.33.196.0/25",   # ARK internet (DOM1)
   "194.33.197.0/25",   # ARK internet (DOM1)
-  "62.232.198.68/28",  # I2N 
+  "62.232.198.64/28",  # I2N 
+  "81.187.190.127/32", # Lazzurs Home
+  "3.10.56.113/32",    # PSN Proxy A
+  "35.178.173.171/32", # PSN Proxy B
+  "82.38.248.151/32",  # Steve James Office
+  "213.86.81.13/32",   # Zaizi London Office
 ]
 
 # jenkins access
@@ -443,7 +450,7 @@ chaosmonkey_job_ulimits = []
 delius_core_haproxy_instance_type  = "t3.large"
 delius_core_haproxy_instance_count = "3"
 
-# Shared ECS Cluster 
+# Shared ECS Cluster
 ecs_instance_type = "m4.xlarge"
 node_max_count    = 20
 node_min_count    = 5

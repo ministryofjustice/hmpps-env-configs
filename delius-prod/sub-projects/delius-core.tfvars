@@ -33,7 +33,7 @@ ansible_vars_oracle_db = {
 
 # LDAP
 ansible_vars_apacheds = {
-  import_users_ldif = "PROD-190914/OID/PROD-190914.ldif"
+  import_users_ldif = "PROD-191003/OID/PROD-191003.ldif"
   import_users_ldif_base_users  = "ou=NDProd,cn=Users,dc=moj,dc=com"
 }
 
@@ -56,6 +56,7 @@ env_user_access_cidr_blocks = [
   # -SEETEC
   "80.86.46.16/30",
   "195.224.76.229/32",
+  "51.179.199.82/32", #ROK user outbound for wales,DDC,BGSW - requested via slack support channel https://mojdt.slack.com/archives/GNXRQ5HUN/p1570199298064800
 
   # -Interserve
   "46.227.51.224/29",

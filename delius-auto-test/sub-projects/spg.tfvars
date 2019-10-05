@@ -27,6 +27,8 @@ asg_instance_type_crc = "t2.medium"
 asg_instance_type_mpx = "t2.medium"
 asg_instance_type_iso = "t2.medium"
 
+aws_broker_host_instance_type = "mq.t2.micro"
+aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 
 spg_app_name = "spgw"
 
@@ -68,7 +70,7 @@ SPG_ENVIRONMENT_CN = "auto-test.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://delius-jms.auto-test.delius.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.delius-auto-test.internal:61617"
 
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.auto-test.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.auto-test.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
