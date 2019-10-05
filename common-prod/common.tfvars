@@ -458,3 +458,9 @@ node_min_count    = 5
 loadrunner_config = {
   "instance_type" = "t3.large"
 }
+
+#these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
+#var = spg, data = activemq
+SPG_GATEWAY_MQ_URL_SOURCE = "var"
+spg_messaging_broker_url_src = "var"
+spg_jms_host_src ="var"
