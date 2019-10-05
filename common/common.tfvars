@@ -265,7 +265,7 @@ default_ansible_vars = {
 
   # Alfresco
   alfresco_host        = "alfresco"
-  alfresco_port        = 80
+  alfresco_port        = 443
   alfresco_office_host = "alfresco"
   alfresco_office_port = 443
 
