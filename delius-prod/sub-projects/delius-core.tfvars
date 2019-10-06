@@ -33,8 +33,8 @@ ansible_vars_oracle_db = {
 
 # LDAP
 ansible_vars_apacheds = {
-  import_users_ldif = "PROD-191003/OID/PROD-191003.ldif"
-  import_users_ldif_base_users  = "ou=NDProd,cn=Users,dc=moj,dc=com"
+  import_users_ldif = "LATEST"
+  import_users_ldif_base_users = "ou=Users,dc=moj,dc=com"
 }
 
 # WebLogic
