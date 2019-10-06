@@ -197,7 +197,7 @@ user_access_cidr_blocks = [
   "62.232.198.64/28",  # I2N 
   "81.187.190.127/32", # Lazzurs Home
   "3.10.56.113/32",    # PSN Proxy A
-  "35.178.173.171/32", # PSN Proxy B
+  "35.176.141.197/32", # PSN Proxy B
   "82.38.248.151/32",  # Steve James Office
   "213.86.81.13/32",   # Zaizi London Office
 ]
