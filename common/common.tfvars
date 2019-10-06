@@ -144,6 +144,11 @@ user_access_cidr_blocks = [
   "194.33.193.0/25",   # ARK internet (DOM1)
   "194.33.196.0/25",   # ARK internet (DOM1)
   "194.33.197.0/25",   # ARK internet (DOM1)
+  "212.137.36.230/32", # Quantum
+  "62.25.109.197/32",  # Quantum
+  "195.92.38.16/28",   # Quantum
+  "62.25.106.209/32",  # OMNI
+  "195.92.40.49/32",   # OMNI
   "62.232.198.64/28",  # I2N 
 ]
 
