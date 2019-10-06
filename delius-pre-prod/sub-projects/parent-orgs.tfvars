@@ -73,7 +73,7 @@ PO_SPG_FIREWALL_INGRESS_RULES = {
 
   #POSTUB="no longer derived from vpc x 3 NAT as part of LB terraform as now external facing"
 
-  PSNPROXY_A = "3.10.56.113/32"
+  PSNPROXY_A = "3.10.115.64/32"
   PSNPROXY_B = "35.178.173.171/32"
 
 
@@ -88,6 +88,6 @@ psn_facing_ips = [
 //POs come in from proxy here
 
 internet_facing_ips = [
-  "3.10.56.113",
+  "3.10.115.64",
   "35.178.173.171"
 ]
