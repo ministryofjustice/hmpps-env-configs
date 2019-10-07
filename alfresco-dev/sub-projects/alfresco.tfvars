@@ -61,6 +61,8 @@ alfresco_asg_props = {
 
 alfresco_jvm_memory = "8G"
 
+spg_messaging_broker_url_src = ""
+
 # common
 allowed_ssh_cidr = [
   "109.148.137.148/32", #Don Home
