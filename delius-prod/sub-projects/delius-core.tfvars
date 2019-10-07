@@ -119,3 +119,7 @@ dss_job_envvars = [
 
 # Make the National Delius front-end pingdom report available to the public:
 pingdom_publicreports = ["ndelius_frontend"]
+
+azure_community_proxy_source = [
+  "51.141.53.111/32" # Public IP of azure fortinet
+]
