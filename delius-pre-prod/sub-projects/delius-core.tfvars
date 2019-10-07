@@ -76,3 +76,7 @@ dss_job_envvars = [
     "value" = "-Xms1024m -Xmx2048m"
   }
 ]
+
+azure_community_proxy_source = [
+  "51.141.53.111/32" # Public IP of azure fortinet
+]
