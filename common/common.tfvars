@@ -267,7 +267,7 @@ default_ansible_vars = {
   setup_datasources      = "true"
   database_host          = "delius-db"
   database_min_pool_size = 10
-  database_min_pool_size = 15
+  database_max_pool_size = 15
 
   # Alfresco
   alfresco_host        = "alfresco"
