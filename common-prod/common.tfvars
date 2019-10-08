@@ -314,9 +314,10 @@ default_ansible_vars = {
   server_listen_address   = "0.0.0.0"
 
   # Database
-  setup_datasources  = "true"
-  database_host      = "delius-db"
-  database_pool_size = 50
+  setup_datasources      = "true"
+  database_host          = "delius-db"
+  database_min_pool_size = 50
+  database_min_pool_size = 100
 
   # Alfresco
   alfresco_host        = "alfresco"
