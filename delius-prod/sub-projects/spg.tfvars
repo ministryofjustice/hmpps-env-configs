@@ -69,9 +69,9 @@ SPG_CRC_HOST_TYPE = "crc"
 
 
 
-spg_mpx_asg_desired = 1 #6 when live
-spg_mpx_asg_max = 1 #6 when live
-spg_mpx_asg_min ="1" #3 when live
+spg_iso_asg_desired = 1 #6 when live
+spg_iso_asg_max = 1 #6 when live
+spg_iso_asg_min ="1" #3 when live
 
 spg_iso_service_desired_count = 1 # 6 when live
 spg_iso_ecs_memory = 32100
