@@ -4,6 +4,12 @@
 egress_443 = true
 egress_80 = true
 
+instance_type_weblogic = "t2.medium"
+instance_count_weblogic_nomis = "6"
+
+nomis_haproxy_instance_type = "t3.micro"
+nomis_haproxy_instance_count = "3"
+
 # ref ../../common/common.tfvars
 db_size_nomis = {
   database_size  = "small"
