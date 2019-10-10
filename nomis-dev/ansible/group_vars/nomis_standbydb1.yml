@@ -1,0 +1,4 @@
+--- # nomis_standbydb1.yml
+
+database_standby_unique: DATNDAS1
+database_standby_sid: DATNDAS1
