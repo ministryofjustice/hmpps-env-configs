@@ -67,20 +67,6 @@ bws-health_check = [
   },
 ]
 
-#Nextcloud
-nextcloud_health_check = [
-  {
-    target              = "TCP:80"
-    interval            = 30
-    healthy_threshold   = 10
-    unhealthy_threshold = 2
-    timeout             = 5
-  },
-]
-
-nextcloud_instance_type = "m5.xlarge"
-rds_instance_class      = "db.m5.xlarge"
-
 # Databases
 ## MIS Datamart
 db_size_mis = {
@@ -173,3 +159,20 @@ ansible_vars_misdsd_db = {
 }
 
 legacy_environment_name = "000"
+
+#Nextcloud
+nextcloud_health_check = [
+  {
+    target              = "TCP:80"
+    interval            = 30
+    healthy_threshold   = 10
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
+
+nextcloud_instance_type = "m5.4xlarge"
+rds_instance_class      = "db.m5.xlarge"
+
+#monitoring
+alarms_enabled = "true"

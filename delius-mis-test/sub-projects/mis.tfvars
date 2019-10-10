@@ -157,3 +157,20 @@ ansible_vars_misdsd_db = {
   database_backup_location   = "NotApplicable" #default for local testing
   oracle_dbca_template_file  = "database"
 }
+
+#Nextcloud
+nextcloud_health_check = [
+  {
+    target              = "TCP:80"
+    interval            = 30
+    healthy_threshold   = 10
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
+
+nextcloud_instance_type = "t2.small"
+rds_instance_class      = "db.t2.small"
+
+#monitoring
+alarms_enabled = "false"
