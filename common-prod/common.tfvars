@@ -113,9 +113,8 @@ elk_migration_props = {
   min_size                  = 3
   max_size                  = 3
   desired                   = 3
-  ecs_mem_limit             = 24000
   ecs_cpu_units             = 500
-  ecs_memory                = 24500
+  ecs_memory                = 18000
   jvm_heap_size             = "16g"
   image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
   kibana_image_url          = "mojdigitalstudio/hmpps-kibana:latest"
@@ -124,11 +123,9 @@ elk_migration_props = {
   es_master_nodes           = 2
   ecs_service_desired_count = 3
   instance_type             = "i3.xlarge"
+  kibana_desired_count      = 2
+  logstash_desired_count    = 2
 }
-
-# instance type
-es_instance_type = "i3.xlarge"
-es_block_device  = "/dev/nvme0n1"
 
 # es_admin
 alf_restore_status     = "restore"
@@ -467,6 +464,6 @@ loadrunner_config = {
 
 #these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
 #var = spg, data = activemq
-SPG_GATEWAY_MQ_URL_SOURCE = "var"
+SPG_GATEWAY_MQ_URL_SOURCE    = "var"
 spg_messaging_broker_url_src = "var"
-spg_jms_host_src ="var"
+spg_jms_host_src             = "var"
