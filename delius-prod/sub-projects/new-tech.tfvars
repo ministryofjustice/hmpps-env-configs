@@ -66,3 +66,5 @@ offenderpollpush_conf = {
 offender_api_allowed_cidrs = [
   "51.141.53.111/32" # Public IP of azure fortinet
 ]
+
+dashboards_enabled = "true"

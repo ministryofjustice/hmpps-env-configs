@@ -113,9 +113,8 @@ elk_migration_props = {
   min_size                  = 3
   max_size                  = 3
   desired                   = 3
-  ecs_mem_limit             = 24000
   ecs_cpu_units             = 500
-  ecs_memory                = 24500
+  ecs_memory                = 18000
   jvm_heap_size             = "16g"
   image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
   kibana_image_url          = "mojdigitalstudio/hmpps-kibana:latest"
@@ -124,11 +123,9 @@ elk_migration_props = {
   es_master_nodes           = 2
   ecs_service_desired_count = 3
   instance_type             = "i3.xlarge"
+  kibana_desired_count      = 2
+  logstash_desired_count    = 2
 }
-
-# instance type
-es_instance_type = "i3.xlarge"
-es_block_device  = "/dev/nvme0n1"
 
 # es_admin
 alf_restore_status     = "restore"
@@ -314,9 +311,10 @@ default_ansible_vars = {
   server_listen_address   = "0.0.0.0"
 
   # Database
-  setup_datasources  = "true"
-  database_host      = "delius-db"
-  database_pool_size = 50
+  setup_datasources      = "true"
+  database_host          = "delius-db"
+  database_min_pool_size = 50
+  database_max_pool_size = 100
 
   # Alfresco
   alfresco_host        = "alfresco"
@@ -392,7 +390,7 @@ dss_job_vcpus = 1
 
 dss_job_memory = 3096
 
-dss_job_schedule = "cron(00 05 * * ? *)"
+dss_job_schedule = "cron(00 07 * * ? *)"
 
 dss_job_retries = 1
 
@@ -465,7 +463,7 @@ loadrunner_config = {
 }
 
 #these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
-#var = spg, data = activemq
-SPG_GATEWAY_MQ_URL_SOURCE = "var"
+#var = spg local MQ, data = amazon mq
+SPG_GATEWAY_MQ_URL_SOURCE    = "var"
 spg_messaging_broker_url_src = "var"
-spg_jms_host_src ="var"
+spg_jms_host_src             = "var"

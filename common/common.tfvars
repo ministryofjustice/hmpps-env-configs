@@ -264,9 +264,10 @@ default_ansible_vars = {
   server_listen_address   = "0.0.0.0"
 
   # Database
-  setup_datasources  = "true"
-  database_host      = "delius-db"
-  database_pool_size = 15
+  setup_datasources      = "true"
+  database_host          = "delius-db"
+  database_min_pool_size = 10
+  database_max_pool_size = 15
 
   # Alfresco
   alfresco_host        = "alfresco"
@@ -411,3 +412,9 @@ delius_core_haproxy_instance_count = "3"
 loadrunner_config = {
   "instance_type" = "t3.micro"
 }
+
+#these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
+#var = spg local MQ, data = amazon mq
+SPG_GATEWAY_MQ_URL_SOURCE    = "var"
+spg_messaging_broker_url_src = "var"
+spg_jms_host_src             = "var"

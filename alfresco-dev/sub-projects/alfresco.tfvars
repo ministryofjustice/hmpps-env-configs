@@ -55,11 +55,13 @@ alfresco_asg_props = {
   asg_min           = 1
   asg_max           = 2
   asg_instance_type = "m4.xlarge"
-  # asg_ami           = "ami-0d891eb6bea9cfa8c"
-  ebs_volume_size = 512
+  asg_ami           = ""
+  ebs_volume_size   = 512
 }
 
 alfresco_jvm_memory = "8G"
+
+spg_messaging_broker_url_src = ""
 
 # common
 allowed_ssh_cidr = [
