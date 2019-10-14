@@ -66,7 +66,7 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
 SPG_ENVIRONMENT_CODE = "auto-test"
-SPG_ENVIRONMENT_CN = "auto-test.probation.service.justice.gov.uk"
+SPG_ENVIRONMENT_CN = "auto-test.delius.probation.hmpps.dsd.io"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
@@ -77,6 +77,6 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.auto-test.delius.probat
 
 
 //USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-SPG_ISO_FQDN  = "spgw-ext.auto-test.probation.service.justice.gov.uk"
+SPG_ISO_FQDN  = "spgw-ext.auto-test.delius.probation.hmpps.dsd.io"
 SPG_MPX_FQDN  = "spgw-mpx-int.auto-test.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-ext.auto-test.probation.service.justice.gov.uk"
+SPG_CRC_FQDN  = "spgw-crc-ext.auto-test.delius.probation.hmpps.dsd.io"

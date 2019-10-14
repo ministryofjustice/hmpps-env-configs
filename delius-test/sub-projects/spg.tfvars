@@ -34,7 +34,7 @@ asg_instance_type_iso = "t2.small"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-test-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/test"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
