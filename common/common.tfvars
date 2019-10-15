@@ -411,3 +411,9 @@ delius_core_haproxy_instance_count = "3"
 loadrunner_config = {
   "instance_type" = "t3.micro"
 }
+
+#these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
+#var = spg local MQ, data = amazon mq
+SPG_GATEWAY_MQ_URL_SOURCE    = "var"
+spg_messaging_broker_url_src = "var"
+spg_jms_host_src             = "var"
