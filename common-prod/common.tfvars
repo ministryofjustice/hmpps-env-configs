@@ -459,7 +459,7 @@ node_max_count    = 20
 node_min_count    = 5
 
 loadrunner_config = {
-  "instance_type" = "t3.large"
+  "instance_type" = "m5.2xlarge"
 }
 
 #these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
