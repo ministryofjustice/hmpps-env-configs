@@ -110,21 +110,25 @@ es_ecs_memory = "26000"
 es_ecs_mem_limit = "25500"
 
 elk_migration_props = {
-  min_size                  = 3
-  max_size                  = 3
-  desired                   = 3
-  ecs_cpu_units             = 500
-  ecs_memory                = 18000
-  jvm_heap_size             = "16g"
-  image_url                 = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
-  kibana_image_url          = "mojdigitalstudio/hmpps-kibana:latest"
-  logstash_image_url        = "mojdigitalstudio/hmpps-logstash:latest"
-  block_device              = "/dev/nvme0n1"
-  es_master_nodes           = 2
-  ecs_service_desired_count = 3
-  instance_type             = "i3.xlarge"
-  kibana_desired_count      = 2
-  logstash_desired_count    = 2
+  min_size                        = 3
+  max_size                        = 3
+  desired                         = 3
+  ecs_cpu_units                   = 500
+  ecs_memory                      = 18000
+  jvm_heap_size                   = "16g"
+  image_url                       = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
+  kibana_image_url                = "mojdigitalstudio/hmpps-kibana-5:latest"
+  logstash_image_url              = "mojdigitalstudio/hmpps-logstash:latest"
+  block_device                    = "/dev/nvme0n1"
+  es_master_nodes                 = 2
+  ecs_service_desired_count       = 3
+  instance_type                   = "i3.xlarge"
+  kibana_instance_type            = "m4.large"
+  kibana_desired_count            = 2
+  kibana_asg_size                 = 2
+  logstash_desired_count          = 2
+  provisioned_throughput_in_mibps = 50
+  throughput_mode                 = "provisioned"
 }
 
 # es_admin

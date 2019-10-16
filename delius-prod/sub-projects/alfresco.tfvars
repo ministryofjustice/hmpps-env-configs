@@ -55,7 +55,7 @@ alfresco_asg_props = {
   asg_min           = 4
   asg_max           = 4
   asg_instance_type = "m5.2xlarge"
-  asg_ami           = "ami-0daf390b7cd42be97"
+  asg_ami           = "ami-08a7a5a1231a5830e"
   ebs_volume_size   = 1000
 }
 
