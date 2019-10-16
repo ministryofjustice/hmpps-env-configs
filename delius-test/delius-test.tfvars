@@ -5,5 +5,3 @@ aws_nameserver = "10.162.0.2"
 SPG_GATEWAY_MQ_URL_SOURCE    = "data"
 spg_messaging_broker_url_src = "data"
 spg_jms_host_src             = "data"
-
-instance_count_weblogic_spg = "6"
