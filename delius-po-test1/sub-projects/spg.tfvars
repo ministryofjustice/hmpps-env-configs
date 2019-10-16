@@ -88,7 +88,7 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
 SPG_ENVIRONMENT_CODE = "po-test1"
-SPG_ENVIRONMENT_CN = "po-test1.probation.service.justice.gov.uk"
+SPG_ENVIRONMENT_CN = "po-test1.delius.probation.hmpps.dsd.io"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
@@ -98,13 +98,7 @@ SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.po-test1.delius.probatio
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.po-test1.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 
-//USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
+SPG_ISO_FQDN  = "spgw-ext.po-test1.delius.probation.hmpps.dsd.io"
+SPG_MPX_FQDN  = "spgw-mpx-int.po-test1.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-ext.po-test1.delius.probation.hmpps.dsd.io"
 
-//SPG_ISO_FQDN  = "spgw-ext.po-test1.probation.service.justice.gov.uk"
-//SPG_MPX_FQDN  = "spgw-mpx-int.po-test1.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-ext.po-test1.probation.service.justice.gov.uk"
-
-
-SPG_ISO_FQDN  = "localhost"
-SPG_MPX_FQDN  = "localhost"
-SPG_CRC_FQDN  = "localhost"
