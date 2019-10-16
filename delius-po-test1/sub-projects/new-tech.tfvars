@@ -30,7 +30,7 @@ search_conf = {}
 
 # Override default Web Frontend Config
 web_conf = {
-  image_version = "0.2.9"
+  image_version = "0.2.2"
 }
 
 

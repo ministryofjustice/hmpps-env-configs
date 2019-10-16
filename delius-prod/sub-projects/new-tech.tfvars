@@ -54,7 +54,6 @@ web_conf = {
   memory                   = "2048"
   ecs_scaling_min_capacity = 2
   ecs_scaling_max_capacity = 10
-  image_version = "0.2.9"
 }
 
 # Override default Offender Poll Push Config
