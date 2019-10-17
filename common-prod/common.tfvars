@@ -459,7 +459,7 @@ node_max_count    = 20
 node_min_count    = 5
 
 loadrunner_config = {
-  "instance_type" = "m5.2xlarge"
+  "instance_type" = "t3.large"
 }
 
 azure_oasys_proxy_source = [
