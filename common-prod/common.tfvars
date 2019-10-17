@@ -462,6 +462,10 @@ loadrunner_config = {
   "instance_type" = "m5.2xlarge"
 }
 
+azure_oasys_proxy_source = [
+  "51.140.255.11/32" # Public IP of Fix & Go Azure API Gateway used for NDH
+]
+
 #these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
 #var = spg local MQ, data = amazon mq
 SPG_GATEWAY_MQ_URL_SOURCE    = "var"
