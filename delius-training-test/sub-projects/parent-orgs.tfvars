@@ -2,9 +2,6 @@
 
 PO_SPG_CONFIGURATION = {
 
-  #current using proxy address as pattern spg-iso-prod-p01:8181, will become more like egress-prod.psn.probation.service.justice.gov.uk/mtc/
-
-
   PO_ACTIVE_CONNECTIONS = "POSTUB"
   SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
   SPG_CERTIFICATE_PATH = "/unclassified-data/hmpps-delius-training-test/current/"
