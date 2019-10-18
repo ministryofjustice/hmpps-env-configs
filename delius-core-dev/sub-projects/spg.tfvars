@@ -87,7 +87,7 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #as well as displaying the environment in terminals and splash screens
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
-SPG_ENVIRONMENT_CODE = "dev"
+SPG_ENVIRONMENT_CODE = "core-dev"
 SPG_ENVIRONMENT_CN = "dev.probation.service.justice.gov.uk"
 
 
