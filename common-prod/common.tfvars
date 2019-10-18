@@ -326,8 +326,7 @@ default_ansible_vars = {
   alfresco_office_host = "alfresco"
   alfresco_office_port = 443
 
-  #SPG jms may get moved to amazonMQ (and thereby wont be hosted on the mpx server) so rename to jms host and use another dns name
-  #spg_host = "spgw-mpx-int"
+  #spg hostname prefix for generating a url when not using amazonMQ (ie when spg_jms_host_src=var  instead of data (data mode uses the terraform state to generate the url )
   spg_jms_host = "spgw-jms-int"
 
   activemq_data_folder = "/activemq-data"
