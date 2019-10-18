@@ -36,7 +36,7 @@ asg_instance_type_iso = "t2.small"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-po-test2-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/po-test2"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
@@ -73,7 +73,7 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
 SPG_ENVIRONMENT_CODE = "po-test2"
-SPG_ENVIRONMENT_CN = "po-test2.delius.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CN = "po-test2.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
@@ -83,7 +83,7 @@ SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.po-test2.delius.probatio
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.po-test2.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 
-SPG_ISO_FQDN  = "spgw-ext.po-test2.delius.probation.hmpps.dsd.io"
+SPG_ISO_FQDN  = "spgw-ext.po-test2.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.po-test2.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-ext.po-test2.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-ext.po-test2.probation.service.justice.gov.uk"
 

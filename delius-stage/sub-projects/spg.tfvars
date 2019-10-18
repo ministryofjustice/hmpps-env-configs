@@ -31,7 +31,7 @@ asg_instance_type_iso = "t2.small"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-stage-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/stage"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
@@ -73,11 +73,6 @@ SPG_DELIUS_MQ_URL ="tcp://delius-jms.stage.delius.probation.hmpps.dsd.io:61617"
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.stage.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.stage.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-//USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-//SPG_ISO_FQDN  = "spgw-ext.stage.probation.service.justice.gov.uk"
-//SPG_MPX_FQDN  = "spgw-mpx-int.stage.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-ext.stage.probation.service.justice.gov.uk"
-
-SPG_ISO_FQDN  = "localhost"
-SPG_MPX_FQDN  = "localhost"
-SPG_CRC_FQDN  = "localhost"
+SPG_ISO_FQDN  = "spgw-ext.stage.probation.service.justice.gov.uk"
+SPG_MPX_FQDN  = "spgw-mpx-int.stage.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-ext.stage.probation.service.justice.gov.uk"

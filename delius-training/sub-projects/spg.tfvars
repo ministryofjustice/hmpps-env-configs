@@ -31,7 +31,7 @@ asg_instance_type_iso = "t2.small"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-training-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/training"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
@@ -74,7 +74,7 @@ SPG_DELIUS_MQ_URL ="tcp://delius-jms.training.delius.probation.hmpps.dsd.io:6161
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.training.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.training.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-SPG_ISO_FQDN  = "spgw-ext.training.delius.probation.hmpps.dsd.io"
+SPG_ISO_FQDN  = "spgw-ext.training.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.training.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-ext.training.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-ext.training.probation.service.justice.gov.uk"
 

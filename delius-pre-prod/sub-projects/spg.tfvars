@@ -41,7 +41,7 @@ aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-pre-prod-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/pre-prod"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 

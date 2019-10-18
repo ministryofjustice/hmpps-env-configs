@@ -41,7 +41,7 @@ aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-prod-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/prod"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
@@ -97,7 +97,6 @@ SPG_DELIUS_MQ_URL ="tcp://delius-jms.probation.service.justice.gov.uk:61617"
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
 
-//the above are overridden until we are ready to smoke test internally
 
 
 

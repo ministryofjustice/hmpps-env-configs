@@ -17,3 +17,8 @@ ndelius_version = "4.1.7.3"
 
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
+
+#'data'=use amazonMQ
+SPG_GATEWAY_MQ_URL_SOURCE    = "data"
+spg_messaging_broker_url_src = "data"
+spg_jms_host_src             = "data"
