@@ -1,4 +1,4 @@
-image_version = "branch-latest-patch-spg"
+image_version = "branch-latest-DAM-464"
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
@@ -41,7 +41,7 @@ aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-prod-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/prod/prod"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
@@ -69,9 +69,9 @@ SPG_CRC_HOST_TYPE = "crc"
 
 
 
-spg_mpx_asg_desired = 1 #6 when live
-spg_mpx_asg_max = 1 #6 when live
-spg_mpx_asg_min ="1" #3 when live
+spg_iso_asg_desired = 1 #6 when live
+spg_iso_asg_max = 1 #6 when live
+spg_iso_asg_min ="1" #3 when live
 
 spg_iso_service_desired_count = 1 # 6 when live
 spg_iso_ecs_memory = 32100
@@ -97,7 +97,6 @@ SPG_DELIUS_MQ_URL ="tcp://delius-jms.probation.service.justice.gov.uk:61617"
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justice.gov.uk/alfresco/service/noms-spg"
 
-//the above are overridden until we are ready to smoke test internally
 
 
 

@@ -24,30 +24,6 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
-az_asg_desired = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
 
 asg_instance_type_crc = "t2.small"
 asg_instance_type_mpx = "t2.medium"
@@ -59,7 +35,7 @@ aws_broker_deployment_mode = "SINGLE_INSTANCE"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-core-sandpit-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/sandpit"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md

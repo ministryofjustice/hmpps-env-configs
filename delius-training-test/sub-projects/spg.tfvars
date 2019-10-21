@@ -22,30 +22,6 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
-az_asg_desired = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
 
 asg_instance_type_crc = "t2.small"
 asg_instance_type_mpx = "t2.medium"
@@ -55,7 +31,7 @@ asg_instance_type_iso = "t2.small"
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-training-test-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/training-test"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
@@ -67,7 +43,7 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/training-test"
 //spg_mpx_ecs_cpu_units = 1024
 spg_mpx_ecs_memory = 3835
 SPG_MPX_JAVA_MAX_MEM = 3645
-SPG_MPX_HOST_TYPE = "one"
+SPG_MPX_HOST_TYPE = "hyrbid"
 
 //spg_crc_ecs_cpu_units = 1024
 spg_crc_ecs_memory = 1881
@@ -99,12 +75,7 @@ SPG_DELIUS_MQ_URL ="tcp://delius-jms.training-test.delius.probation.hmpps.dsd.io
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.training-test.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.training-test.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-//USING LOCALHOST FOR FQDNs UNTIL CERTS IN PLACE
-//SPG_ISO_FQDN  = "spgw-ext.training-test.probation.service.justice.gov.uk"
-//SPG_MPX_FQDN  = "spgw-mpx-int.training-test.delius.probation.hmpps.dsd.io"
-//SPG_CRC_FQDN  = "spgw-crc-ext.training-test.probation.service.justice.gov.uk"
+SPG_ISO_FQDN  = "spgw-ext.training-test.probation.service.justice.gov.uk"
+SPG_MPX_FQDN  = "spgw-mpx-int.training-test.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-ext.training-test.probation.service.justice.gov.uk"
 
-
-SPG_ISO_FQDN  = "localhost"
-SPG_MPX_FQDN  = "localhost"
-SPG_CRC_FQDN  = "localhost"
