@@ -19,7 +19,8 @@ PO_SPG_CONFIGURATION = {
 
 
 
-  PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
+//  PO_ACTIVE_CONNECTIONS = "PF,STC,MTC,POSTUB"
+  PO_ACTIVE_CONNECTIONS = "POSTUB"
   #PO_XXX_CALLING_VIA_PROXY_URL_REWRITE#  null, "" or "replace_string|replace_with" eg "spgw-ext.pre-prod.probation|spgw-int-psn.probation" (needed so that UD proxy can rewrite urls provided for oAuth signature cert validation)
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
