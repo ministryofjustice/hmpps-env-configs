@@ -47,13 +47,14 @@ alf_rds_props = {
   iops                    = 3000
   storage_type            = "io1"
   allocated_storage       = 1000
-  maintenance_window      = "Sun:06:00-Sun:08:00"
+  maintenance_window      = "Wed:19:30-Wed:21:30"
   backup_window           = "02:00-04:00"
   backup_retention_period = 28
   family                  = "postgres9.6"
   engine                  = "postgres"
   major_engine_version    = "9.6"
-  engine_version          = "9.6.9"
+  replica_engine_version  = "9.6.11"
+  master_engine_version   = "9.6.9"
 }
 
 # ontrol rds deployment
