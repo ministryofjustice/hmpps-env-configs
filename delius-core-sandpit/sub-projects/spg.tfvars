@@ -1,4 +1,4 @@
-image_version = "branch-latest-DAM-329-Switch-JMS-Consumer-To-AmazonMQ"
+image_version = "branch-latest-DAM-482"
 
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
