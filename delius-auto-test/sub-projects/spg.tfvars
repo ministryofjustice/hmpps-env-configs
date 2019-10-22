@@ -7,6 +7,8 @@ cloudwatch_log_retention = 14
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
+route53_strategic_hosted_zone_id = "Z01136542SKGQLV70PD25"
+
 
 # ENVIRONMENT REMOTE STATES
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
@@ -27,7 +29,6 @@ asg_instance_type_crc = "t2.medium"
 asg_instance_type_mpx = "t2.medium"
 asg_instance_type_iso = "t2.medium"
 
-aws_broker_host_instance_type = "mq.t2.micro"
 aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 
 spg_app_name = "spgw"
