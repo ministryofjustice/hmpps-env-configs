@@ -53,7 +53,7 @@ alf_rds_props = {
   family                  = "postgres9.6"
   engine                  = "postgres"
   major_engine_version    = "9.6"
-  replica_engine_version  = "9.6.11"
+  replica_engine_version  = "9.6.15"
   master_engine_version   = "9.6.9"
 }
 
