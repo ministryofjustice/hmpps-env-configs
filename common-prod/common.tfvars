@@ -13,7 +13,7 @@ lb_account_id = "652711504416"
 route53_domain_private = "probation.hmpps.dsd.io"
 
 # ENVIRONMENT REMOTE STATES
-eng_remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
+eng_remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-prod-artefacts-s3bucket"
 
 bastion_remote_state_bucket_name = "tf-eu-west-2-hmpps-bastion-prod-remote-state"
 
