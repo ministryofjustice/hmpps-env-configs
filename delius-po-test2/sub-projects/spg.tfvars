@@ -1,5 +1,5 @@
 #deployment version
-image_version = "branch-latest-DAM-319-Move-ansible-based-PO-endpoint-config-to-hmpps-env-config-project"
+image_version = "master"
 
 
 
