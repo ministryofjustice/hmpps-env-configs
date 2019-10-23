@@ -40,6 +40,8 @@ alf_backups_config = {
   noncurrent_version_expiration_days         = 2560
   provisioned_throughput_in_mibps            = 20
   throughput_mode                            = "provisioned"
+  prod_backups_bucket                        = "tf-eu-west-2-hmpps-delius-prod-alfresco-alf-backups"
+  prod_kms_key_arn                           = "arn:aws:kms:eu-west-2:050243167760:key/f32be75c-beb8-409c-a970-db9de7201473"
 }
 
 alf_rds_props = {
@@ -134,12 +136,12 @@ elk_migration_props = {
 
 # es_admin
 alf_restore_status     = "restore"
-es_admin_instance_type = "m4.large"
+es_admin_instance_type = "c5.xlarge"
 
 es_admin_volume_props = {
   size            = 1000
   type            = "io1"
-  iops            = 500
+  iops            = 32000
   encrypted       = true
   device_name     = "/dev/xvdb"
   create_snapshot = false
