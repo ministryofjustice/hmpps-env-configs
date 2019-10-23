@@ -1,0 +1,21 @@
+--- # all.yml
+region: eu-west-2
+
+# Buckets
+dependencies_bucket:
+  name: tf-eu-west-2-hmpps-eng-dev-delius-core-dependencies-s3bucket
+  arn: arn:aws:s3:::tf-eu-west-2-hmpps-eng-dev-delius-core-dependencies-s3bucket # (also defined in tfvars: dependencies_bucket_arn)
+
+# Delius LDAP
+# TODO update terraform/bootstrap to use ansible vars from here, instead of from the tfvars
+#      currently these vars are mostly unused, as we need releases/tagging in place before we can safely start using them
+ldap_config:
+  protocol: ldap                      # (also defined in tfvars: ldap_config["protocol"])
+  base_root: dc=moj,dc=com
+  base_users: ou=Users,dc=moj,dc=com  # (also defined in tfvars: ldap_config["base_users"])
+  bind_user: cn=admin,dc=moj,dc=com   # (also defined in tfvars: ldap_config["bind_user"])
+  import_data:
+    ldif: LATEST
+    sanitize_ldif: yes
+    base_users: ou=Users,dc=moj,dc=com
+  create_perf_test_users: 0

@@ -246,6 +246,18 @@ default_ansible_vars_apacheds = {
   sanitize_oid_ldif             = "yes"
   perf_test_users               = "0"
 }
+# TODO once we have releases/tagging, we can remove the ansible vars from the above to reduce it down to:
+//ldap_config = {
+//  instance_type = "t3.micro"
+//  protocol = "ldap"
+//  base_users = "ou=Users,dc=moj,dc=com"
+//  bind_user = "cn=admin,dc=moj,dc=com"
+//  disk_config = {
+//    volume_type = "io1"
+//    volume_size = 50
+//    iops        = 500
+//  }
+//}
 
 # Default values for NDelius WebLogic
 instance_type_weblogic = "t2.medium"
