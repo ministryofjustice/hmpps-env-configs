@@ -1,5 +1,5 @@
 #deployment version
-image_version = "master"
+image_version = "latest"
 
 
 
