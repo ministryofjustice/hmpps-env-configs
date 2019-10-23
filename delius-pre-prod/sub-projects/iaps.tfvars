@@ -36,3 +36,5 @@ license_model = "bring-your-own-license"
 storage_encrypted = true
 
 iaps_app_name = "iaps"
+instance_type = "m5.large"
+dashboards_enabled = "true"

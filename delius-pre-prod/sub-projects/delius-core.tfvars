@@ -39,7 +39,7 @@ ansible_vars_apacheds = {
 
 # WebLogic
 instance_type_weblogic = "m5.xlarge"
-instance_count_weblogic_ndelius = "15"
+instance_count_weblogic_ndelius = "30"
 ansible_vars = {
   jvm_mem_args = "-Xms12g -Xmx12g"
   database_sid = "PRENDA"
