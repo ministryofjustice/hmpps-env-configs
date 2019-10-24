@@ -225,14 +225,14 @@ backup_retention_days = 7
 snapshot_retention_days = 7
 
 # Default values for LDAP
-instance_type_ldap = "t3.micro"
+instance_type_ldap = "t3.large"
 ldap_disk_config = {
   volume_type = "io1"
   volume_size = 50
-  iops        = 500
+  iops        = 1000
 }
 default_ansible_vars_apacheds = {
-  workspace     = "/root/bootstrap-workspace"
+  workspace = "/root/bootstrap-workspace"
 
   # LDAP
   ldap_protocol = "ldap"
@@ -242,7 +242,7 @@ default_ansible_vars_apacheds = {
 
   # Data import
   import_users_ldif             = "LATEST"
-  import_users_ldif_base_users  = "cn=Users,dc=moj,dc=com"
+  import_users_ldif_base_users  = "ou=Users,dc=moj,dc=com"
   sanitize_oid_ldif             = "yes"
   perf_test_users               = "0"
 }
@@ -260,14 +260,10 @@ default_ansible_vars_apacheds = {
 //}
 
 # Default values for NDelius WebLogic
-instance_type_weblogic = "t2.medium"
-
+instance_type_weblogic = "t3.medium"
 instance_count_weblogic_ndelius = "6"
-
 instance_count_weblogic_spg = "6"
-
 instance_count_weblogic_interface = "6"
-
 default_ansible_vars = {
   # Server/WebLogic config
   jvm_mem_args            = "-Xms3g -Xmx3g"
