@@ -473,3 +473,7 @@ azure_oasys_proxy_source = [
 SPG_GATEWAY_MQ_URL_SOURCE    = "var"
 spg_messaging_broker_url_src = "var"
 spg_jms_host_src             = "var"
+
+# Parent R53 Zone ID for strategic domain (probation.service.justice.gov.uk)
+strategic_parent_zone_id = "Z2SOZ79CNGAPIF"
+strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_delegation_role"
