@@ -10,9 +10,6 @@ PO_SPG_CONFIGURATION = {
   SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
   SPG_CERTIFICATE_PATH = "/official-data/hmpps-delius-prod/current/"
 
-  //override iso signing cert for aws prod -> po preprod testing
-//  SPG_ISO_SIGNING_COMMON_NAME = "signing.spgw-ext.pre-prod.probation.service.justice.gov.uk"
-
 
   #SPG_PUBLISHED_FQDN_PSNPROXY_INT is an env var used by spg aliases to test SPG over PSN connection regardless of whether SPG
   #aliases and scripts use SPG_ISO_FQDN to test directly
@@ -32,8 +29,7 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_CRC_LIST = "C00"
   PO_POSTUB_CALLING_VIA_PROXY_URL_REWRITE = "spgw-ext.probation,spgw-int-psn.probation"
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
-#  PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
-  PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.probation.service.justice.gov.uk"
+  PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
   PO_POSTUB_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/POSTUB/cxf/CRC-100"
   PO_POSTUB_PROXIED_URL = "https://spgw-crc-ext.probation.service.justice.gov.uk:9001/cxf/CRC-100"
 

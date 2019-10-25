@@ -66,7 +66,7 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
 SPG_ENVIRONMENT_CODE = "training"
-SPG_ENVIRONMENT_CN = "training.delius.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CN = "training.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
