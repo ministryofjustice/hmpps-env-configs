@@ -7,7 +7,6 @@ cloudwatch_log_retention = 14
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
-route53_strategic_hosted_zone_id = "Z01136542SKGQLV70PD25"
 
 
 # ENVIRONMENT REMOTE STATES
