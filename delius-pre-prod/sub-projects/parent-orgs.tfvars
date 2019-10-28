@@ -36,8 +36,8 @@ PO_SPG_CONFIGURATION = {
   PO_PF_CALLING_VIA_PROXY_URL_REWRITE = "spgw-ext.pre-prod.probation,spgw-ext-psn.pre-prod.probation"
   PO_PF_TLS_COMMON_NAME = "shard-api-pre.interservefls.gse.gov.uk"
   PO_PF_SIGNING_COMMON_NAME = "signing-shard-api-pre.interservefls.gse.gov.uk"
-  PO_PF_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/PF/cxf/CRC-101"
-  PO_PF_PROXIED_URL = "https://shard-api-pre.interservefls.gse.gov.uk:9001/cxf/CRC-100"
+  PO_PF_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/PF/cxf/CRC-101"
+  PO_PF_PROXIED_URL = "https://shard-api-pre.interservefls.gse.gov.uk:9001/cxf/CRC-101"
 
 
   PO_STC_NAME = "SEETEC"
