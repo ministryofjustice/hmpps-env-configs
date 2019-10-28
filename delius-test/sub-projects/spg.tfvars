@@ -1,4 +1,4 @@
-image_version = "branch-latest-DAM-464"
+image_version = "latest"
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
@@ -8,7 +8,6 @@ cloudwatch_log_retention = 14
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
-route53_strategic_hosted_zone_id = "Z07178803FHEZ05W7I44W"
 
 # ENVIRONMENT REMOTE STATES
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"

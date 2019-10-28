@@ -7,7 +7,6 @@ cloudwatch_log_retention = 14
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
-route53_strategic_hosted_zone_id = "Z071220410EDH9Z5ALD4Q"
 
 # ENVIRONMENT REMOTE STATES
 eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
@@ -66,7 +65,7 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
 SPG_ENVIRONMENT_CODE = "training"
-SPG_ENVIRONMENT_CN = "training.delius.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CN = "training.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"

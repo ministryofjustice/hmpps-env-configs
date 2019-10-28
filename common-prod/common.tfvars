@@ -40,6 +40,8 @@ alf_backups_config = {
   noncurrent_version_expiration_days         = 2560
   provisioned_throughput_in_mibps            = 20
   throughput_mode                            = "provisioned"
+  prod_backups_bucket                        = "tf-eu-west-2-hmpps-delius-prod-alfresco-alf-backups"
+  prod_kms_key_arn                           = "arn:aws:kms:eu-west-2:050243167760:key/f32be75c-beb8-409c-a970-db9de7201473"
 }
 
 alf_rds_props = {
@@ -134,12 +136,12 @@ elk_migration_props = {
 
 # es_admin
 alf_restore_status     = "restore"
-es_admin_instance_type = "m4.large"
+es_admin_instance_type = "c5.xlarge"
 
 es_admin_volume_props = {
   size            = 1000
   type            = "io1"
-  iops            = 500
+  iops            = 32000
   encrypted       = true
   device_name     = "/dev/xvdb"
   create_snapshot = false
@@ -276,11 +278,11 @@ backup_retention_days = 30
 snapshot_retention_days = 30
 
 # Default values for LDAP
-instance_type_ldap = "i3.xlarge"
+instance_type_ldap = "m5.8xlarge"
 ldap_disk_config = {
   volume_type = "io1"
   volume_size = 100
-  iops        = 1500
+  iops        = 5000
 }
 default_ansible_vars_apacheds = {
   workspace = "/root/bootstrap-workspace"
@@ -293,20 +295,16 @@ default_ansible_vars_apacheds = {
 
   # Data import
   import_users_ldif            = "LATEST"
-  import_users_ldif_base_users = "cn=Users,dc=moj,dc=com"
+  import_users_ldif_base_users = "ou=Users,dc=moj,dc=com"
   sanitize_oid_ldif            = "yes"
   perf_test_users              = "0"
 }
 
 # Default values for NDelius WebLogic
 instance_type_weblogic = "m5.xlarge"
-
 instance_count_weblogic_ndelius = "30"
-
 instance_count_weblogic_spg = "6"
-
 instance_count_weblogic_interface = "6"
-
 default_ansible_vars = {
   # Server/WebLogic config
   jvm_mem_args            = "-Xms12g -Xmx12g"
@@ -475,3 +473,7 @@ azure_oasys_proxy_source = [
 SPG_GATEWAY_MQ_URL_SOURCE    = "var"
 spg_messaging_broker_url_src = "var"
 spg_jms_host_src             = "var"
+
+# Parent R53 Zone ID for strategic domain (probation.service.justice.gov.uk)
+strategic_parent_zone_id = "Z2SOZ79CNGAPIF"
+strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_delegation_role"
