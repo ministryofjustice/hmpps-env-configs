@@ -60,7 +60,7 @@ SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 #as well as displaying the environment in terminals and splash screens
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
-SPG_ENVIRONMENT_CODE = "sandpit"
+SPG_ENVIRONMENT_CODE = "core-sandpit"
 SPG_ENVIRONMENT_CN = "sandpit.probation.service.justice.gov.uk"
 
 #SPG_GATEWAY_MQ_URL_SOURCE = "var"
