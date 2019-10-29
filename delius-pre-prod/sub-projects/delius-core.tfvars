@@ -39,7 +39,6 @@ ansible_vars_apacheds = {
 instance_type_weblogic = "m5.xlarge"
 instance_count_weblogic_ndelius = "30"
 ansible_vars = {
-  jvm_mem_args = "-Xms12g -Xmx12g"
   database_sid = "PRENDA"
   ndelius_log_level = "ERROR"
   nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"

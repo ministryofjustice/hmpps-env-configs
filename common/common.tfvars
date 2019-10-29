@@ -268,7 +268,7 @@ instance_count_weblogic_spg = "6"
 instance_count_weblogic_interface = "6"
 default_ansible_vars = {
   # Server/WebLogic config
-  jvm_mem_args            = "-Xms3g -Xmx3g"
+  jvm_mem_args            = "-Xms3g -Xmx3g -XX:MaxPermSize=512m"
   domain_name             = "NDelius" # This is defined by the AMI, so should not be overridden
   server_name             = "AdminServer"
   weblogic_admin_username = "weblogic"
