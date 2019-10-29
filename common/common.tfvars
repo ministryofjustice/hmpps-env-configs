@@ -29,6 +29,8 @@ oracle_db_operation = {
 
 alfresco_app_name = "alfresco"
 
+alf_cloudwatch_log_retention = 14
+
 spg_app_name = "spg"
 
 # Alfresco
@@ -54,7 +56,7 @@ alf_rds_props = {
   engine                  = "postgres"
   major_engine_version    = "9.6"
   replica_engine_version  = "9.6.15"
-  master_engine_version   = "9.6.9"
+  master_engine_version   = "9.6.15"
 }
 
 # ontrol rds deployment
