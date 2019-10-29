@@ -11,13 +11,13 @@ route53_sub_domain = "delius-pre-prod.alfresco"
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
 # ALFRESCO RDS INSTANCE
-rds_instance_class = "db.t2.large"
+rds_instance_class = "db.m4.2xlarge"
 
-rds_backup_retention_period = 2
+rds_backup_retention_period = 7
 
 rds_monitoring_interval = 5
 
-rds_allocated_storage = "1000"
+rds_allocated_storage = "2000"
 
 # Self Signed Certs
 self_signed_ca_algorithm = "RSA"
@@ -50,53 +50,28 @@ allowed_cidr_block = [
   "213.48.246.99/32",   #BCL
 ]
 
-# ALFRESCO AMI
-# OLD AMI ID: ami-0241900188f67b9c6
-alfresco_instance_ami = {
-  az1 = "ami-0d891eb6bea9cfa8c"
-
-  az2 = "ami-0d891eb6bea9cfa8c"
-
-  az3 = "ami-0d891eb6bea9cfa8c"
-}
-
 # ASG Configuration
-az_asg_desired = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
+alfresco_asg_props = {
+  asg_desired       = 4
+  asg_min           = 4
+  asg_max           = 4
+  asg_instance_type = "m5.2xlarge"
+  asg_ami           = "ami-08a7a5a1231a5830e"
+  ebs_volume_size   = 1000
 }
 
-az_asg_max = {
-  az1 = "2"
+# jvm heap
+alfresco_jvm_memory = "24G"
 
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type = "m4.xlarge"
-
-alfresco_jvm_memory = "8G"
+alfresco_volume_size = 60
 
 # common
 allowed_ssh_cidr = [
-  "109.148.137.148/32", #Don Home
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
 ]
 
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "spgw-jms-int.pre-prod.delius.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "tcp://spgw-jms-int.pre-prod.delius.probation.hmpps.dsd.io:61616"

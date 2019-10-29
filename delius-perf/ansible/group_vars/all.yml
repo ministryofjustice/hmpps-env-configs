@@ -3,5 +3,6 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-perf
 simple_environment_name: perf
-ndelius_version: "4.2.9"
+ndelius_version: "4.2.9.6"
 catalog: DCAT
+data_classification: official-data

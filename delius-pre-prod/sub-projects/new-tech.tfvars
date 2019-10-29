@@ -14,19 +14,52 @@ delius_api_upper_cpu_trigger = 10
 
 # Override default casenotes Config
 casenotes_conf = {
-
+  cpu    = "1024"
+  memory = "2048"
+  env_pull_base_url = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/offenders/events/case_notes_for_delius"
 }
+
 # Override default PDF Generator Config
-pdfgenerator_conf = {}
+pdfgenerator_conf = {
+  cpu                      = "1024"
+  memory                   = "2048"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+}
 
 # Override default Offender API Config
 offenderapi_conf = {
-    env_oracledb_servicename = "PRENDA_TAF"
+  env_oracledb_servicename = "PRENDA_TAF"
+  cpu                      = "2048"
+  memory                   = "4096"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
 }
 
 # Override default Elasticsearch Config
 search_conf = {
-    es_instance_count = 3
-    es_zone_aware_enabled = true
-    es_ebs_size = 50
+  es_instance_count = 3
+  es_zone_aware_enabled = true
+  es_ebs_size = 50
+  es_instance_type      = "m5.xlarge.elasticsearch"
 }
+
+# Override default Web Frontend Config
+web_conf = {
+  cpu                      = "2048"
+  memory                   = "2048"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+}
+
+# Override default Offender Poll Push Config
+offenderpollpush_conf = {
+  cpu    = "3072"
+  memory = "4096"
+}
+
+offender_api_allowed_cidrs = [
+  "51.141.53.111/32", # Public IP of azure fortinet
+]
+
+dashboards_enabled = "true"

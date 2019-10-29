@@ -1,0 +1,6 @@
+--- # misdsd_primarydb.yml
+
+database_global_database_name: DMTDSD
+database_taf_service_name: DMTDSD_TAF
+database_primary_unique_name: DMTDSD
+database_primary_sid: DMTDSD

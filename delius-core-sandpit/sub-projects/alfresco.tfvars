@@ -50,47 +50,20 @@ allowed_cidr_block = [
   "213.48.246.99/32",   #BCL
 ]
 
-# ALFRESCO AMI
-alfresco_instance_ami = {
-  az1 = ""
-
-  az2 = ""
-
-  az3 = ""
-}
-
 # ASG Configuration
-az_asg_desired = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
+alfresco_asg_props = {
+  asg_desired       = 1
+  asg_min           = 1
+  asg_max           = 2
+  asg_instance_type = "m4.xlarge"
+  asg_ami           = "ami-0daf390b7cd42be97"
+  ebs_volume_size   = 512
 }
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type = "t2.large"
 
 # common
 allowed_ssh_cidr = [
-  "109.148.137.148/32", #Don Home
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
 ]
 
 alfresco_app_name = "alfresco"

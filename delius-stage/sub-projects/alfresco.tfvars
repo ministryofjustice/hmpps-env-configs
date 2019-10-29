@@ -50,53 +50,25 @@ allowed_cidr_block = [
   "213.48.246.99/32",   #BCL
 ]
 
-# ALFRESCO AMI
-# OLD AMI ID: ami-0241900188f67b9c6
-alfresco_instance_ami = {
-  az1 = "ami-0d891eb6bea9cfa8c"
-
-  az2 = "ami-0d891eb6bea9cfa8c"
-
-  az3 = "ami-0d891eb6bea9cfa8c"
-}
-
 # ASG Configuration
-az_asg_desired = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
+alfresco_asg_props = {
+  asg_desired       = 1
+  asg_min           = 1
+  asg_max           = 2
+  asg_instance_type = "m4.xlarge"
+  asg_ami           = "ami-0daf390b7cd42be97"
+  ebs_volume_size   = 512
 }
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type = "m4.xlarge"
 
 alfresco_jvm_memory = "8G"
 
 # common
 allowed_ssh_cidr = [
-  "109.148.137.148/32", #Don Home
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
 ]
 
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "spgw-jms-int.stage.delius.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "tcp://spgw-jms-int.stage.delius.probation.hmpps.dsd.io:61616"

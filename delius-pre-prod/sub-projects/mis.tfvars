@@ -35,27 +35,27 @@ self_signed_server_early_renewal_hours = 336
 #Instance size for bcs
 bcs_instance_type  = "m5.2xlarge"
 bcs_root_size = 75
-bcs_server_count = 1 
+bcs_server_count = 3
 
 #Instance size for bfs
 bfs_instance_type  = "m5.2xlarge"
 bfs_root_size = 75
-bfs_server_count = 1 
+bfs_server_count = 1
 
 #Instance size for bps
 bps_instance_type  = "m5.2xlarge"
 bps_root_size = 75
-bps_server_count = 1 
+bps_server_count = 3
 
 #Instance size for bws
 bws_instance_type  = "m5.2xlarge"
 bws_root_size = 75
-bws_server_count = 1 
+bws_server_count = 2
 
 #Instance size for dis
 dis_instance_type  = "m5.2xlarge"
 dis_root_size = 75
-dis_server_count = 1 
+dis_server_count = 1
 
 
 
@@ -73,8 +73,8 @@ bws-health_check = [
 ## MIS Datamart
 db_size_mis = {
   database_size  = "x_large"
-  instance_type  = "r5.4xlarge"
-  disk_iops      = 1000
+  instance_type  = "r5.12xlarge"
+  disk_iops      = 5000
   disks_quantity = 16          # Do not decrease this
   disk_size      = 1000        # Do not decrease this
 
@@ -161,3 +161,20 @@ ansible_vars_misdsd_db = {
 }
 
 legacy_environment_name = "500"
+
+#Nextcloud
+nextcloud_health_check = [
+  {
+    target              = "TCP:80"
+    interval            = 30
+    healthy_threshold   = 10
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
+
+nextcloud_instance_type = "m5.4xlarge"
+rds_instance_class      = "db.m5.xlarge"
+
+#monitoring
+alarms_enabled = "true"

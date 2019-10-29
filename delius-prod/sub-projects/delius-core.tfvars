@@ -32,9 +32,9 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "m5.xlarge"
 ansible_vars_apacheds = {
-  jvm_mem_args = "12228"  # (in MB)
+  import_users_ldif = "LATEST"
+  import_users_ldif_base_users = "ou=Users,dc=moj,dc=com"
 }
 
 # WebLogic
@@ -45,10 +45,48 @@ ansible_vars = {
   database_sid = "PRDNDA"
   ndelius_log_level = "ERROR"
   ndelius_analytics_tag = "UA-122274748-1"
-  nomis_url = "https://gateway.prod.nomis-api.hmpps.dsd.io/elite2api"
+  nomis_url = "https://gateway.nomis-api.service.justice.gov.uk/elite2api"
 }
 
-env_user_access_cidr_blocks = []
+env_user_access_cidr_blocks = [
+  # Parent Organisation IP ranges
+  # -MTCNovo
+  "62.25.109.202/32",
+
+  # -SEETEC
+  "80.86.46.16/30",
+  "195.224.76.229/32",
+  "51.179.199.82/32", #ROK user outbound for wales,DDC,BGSW - requested via slack support channel https://mojdt.slack.com/archives/GNXRQ5HUN/p1570199298064800
+
+  # -Interserve
+  "46.227.51.224/29",
+  "46.227.51.232/29",
+  "46.227.51.240/28",
+  "51.179.196.131/32",
+
+  # -Meganexus
+  "51.179.210.36/32",
+  "83.151.209.178/32",  # PF SPG Server Public IP/NAT
+  "83.151.209.179/32", # PF SPG Server Public IP/NAT 2
+  "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
+  "49.248.250.6/32",    # Meganexus India (Gateway IP)
+
+  # -Sodexo Justice Services
+  "80.86.46.16/31",
+  "80.86.46.18/32",
+
+  # -RRP (Reducing Reoffending Partnership)
+  "62.253.83.37/32",
+
+  # - ARCC
+  "51.179.193.241/32",
+
+  # - EOS
+  "5.153.255.210/32",   # EOS Public IP
+
+  # - CFO
+  "194.168.183.130/32",
+]
 
 # DSS Batch Task
 dss_job_envvars = [
@@ -69,7 +107,22 @@ dss_job_envvars = [
     "value" = "https://interface-app-internal.probation.service.justice.gov.uk/NDeliusDSS/UpdateOffender"
   },
   {
+    "name" = "DSS_HMPSSERVERURL"
+    "value" = "https://www.offloc.service.justice.gov.uk/"
+  },
+  {
     "name" = "DSS_PROJECT"
     "value" = "delius"
-  }
+  },
+  {
+    "name" = "JAVA_OPTS"
+    "value" = "-Xms1024m -Xmx2048m"
+}
+]
+
+# Make the National Delius front-end pingdom report available to the public:
+pingdom_publicreports = ["ndelius_frontend"]
+
+azure_community_proxy_source = [
+  "51.141.53.111/32" # Public IP of azure fortinet
 ]

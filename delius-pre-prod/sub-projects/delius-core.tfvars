@@ -32,14 +32,12 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "m5.xlarge"
 ansible_vars_apacheds = {
-  jvm_mem_args = "12228"  # (in MB)
 }
 
 # WebLogic
 instance_type_weblogic = "m5.xlarge"
-instance_count_weblogic_ndelius = "15"
+instance_count_weblogic_ndelius = "30"
 ansible_vars = {
   jvm_mem_args = "-Xms12g -Xmx12g"
   database_sid = "PRENDA"
@@ -53,7 +51,7 @@ env_user_access_cidr_blocks = []
 dss_job_envvars = [
   {
     "name" = "DSS_TESTMODE"
-    "value" =  "false"
+    "value" =  "true"
   },
   {
     "name" = "DSS_TESTINGAUTOCORRECT"
@@ -70,5 +68,13 @@ dss_job_envvars = [
   {
     "name" = "DSS_PROJECT"
     "value" = "delius"
+  },
+  {
+    "name" = "JAVA_OPTS"
+    "value" = "-Xms1024m -Xmx2048m"
   }
+]
+
+azure_community_proxy_source = [
+  "51.141.53.111/32" # Public IP of azure fortinet
 ]

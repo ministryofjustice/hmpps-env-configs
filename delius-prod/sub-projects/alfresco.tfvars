@@ -39,59 +39,30 @@ self_signed_server_early_renewal_hours = 336
 # ALLOWED CIDRS
 
 allowed_cidr_block = [
-  "109.148.151.107/32", #Don Home
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
-  "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
-  "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
-  "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
-  "35.178.206.119/32",  #SPG instance public NAT address
-  "194.75.210.208/28",  #BCL
-  "213.48.246.99/32",   #BCL
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
+  "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
+  "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
+  "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
+  "35.178.206.119/32", #SPG instance public NAT address
+  "194.75.210.208/28", #BCL
+  "213.48.246.99/32",  #BCL
 ]
 
-# ALFRESCO AMI
-# OLD AMI ID: ami-0241900188f67b9c6
-alfresco_instance_ami = {
-  az1 = "ami-0d891eb6bea9cfa8c"
-
-  az2 = "ami-0d891eb6bea9cfa8c"
-
-  az3 = "ami-0d891eb6bea9cfa8c"
-}
-
 # ASG Configuration
-az_asg_desired = {
-  az1 = "2"
-
-  az2 = "1"
-
-  az3 = "1"
+alfresco_asg_props = {
+  asg_desired       = 4
+  asg_min           = 4
+  asg_max           = 4
+  asg_instance_type = "m5.2xlarge"
+  asg_ami           = "ami-08a7a5a1231a5830e"
+  ebs_volume_size   = 1000
 }
-
-az_asg_max = {
-  az1 = "3"
-
-  az2 = "3"
-
-  az3 = "3"
-}
-
-az_asg_min = {
-  az1 = "2"
-
-  az2 = "1"
-
-  az3 = "1"
-}
-
-asg_instance_type = "m4.2xlarge"
 
 # jvm heap
 alfresco_jvm_memory = "24G"
 
-# cache disk
-alf_ebs_volume_size = "1000"
+alfresco_volume_size = 60
 
 # common
 allowed_ssh_cidr = [
@@ -103,4 +74,4 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "spgw-jms-int.prod.delius.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "tcp://spgw-jms-int.probation.service.justice.gov.uk:61616"

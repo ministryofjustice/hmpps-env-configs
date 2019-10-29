@@ -22,40 +22,17 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
-# ASG Configuration
-az_asg_desired = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "1"
-
-  az2 = "0"
-
-  az3 = "0"
-}
 
 asg_instance_type_crc = "t2.small"
 asg_instance_type_mpx = "t2.medium"
 asg_instance_type_iso = "t2.small"
 
+aws_broker_deployment_mode = "SINGLE_INSTANCE"
 
 spg_app_name = "spgw"
 
 s3_bucket_config = "tf-eu-west-2-hmpps-delius-core-dev-spgw-s3bucket"
-spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/non-prod/dev"
+spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 
@@ -83,18 +60,21 @@ SPG_ISO_HOST_TYPE = "iso"
 SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 
 
+#SPG_ENVIRONMENT_CN represents the strategic public DNS gov domain, and is used by SPG to know the name of the certificates it imports
+#as well as displaying the environment in terminals and splash screens
+#eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
 SPG_ENVIRONMENT_CODE = "dev"
-SPG_ENVIRONMENT_CN = "dev.delius-core.probation.hmpps.dsd.io"
+SPG_ENVIRONMENT_CN = "dev.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://spg-internal.dev.delius-core.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.dev.delius-core.probation.hmpps.dsd.io:61617"
 
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.dev.delius-core.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.dev.delius-core.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-SPG_ISO_FQDN  = "spgw-ext.autotest.delius.probation.hmpps.dsd.io"
-SPG_MPX_FQDN  = "spgw-mpx-int.autotest.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-int.autotest.delius.probation.hmpps.dsd.io"
+SPG_ISO_FQDN  = "spgw-ext.dev.probation.service.justice.gov.uk"
+SPG_MPX_FQDN  = "spgw-mpx-int.dev.delius-core.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-ext.dev.probation.service.justice.gov.uk"
 

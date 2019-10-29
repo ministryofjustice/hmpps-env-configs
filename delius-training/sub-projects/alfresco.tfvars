@@ -49,42 +49,15 @@ allowed_cidr_block = [
   "213.48.246.99/32",  #BCL
 ]
 
-# ALFRESCO AMI
-# OLD AMI ID: ami-0241900188f67b9c6
-alfresco_instance_ami = {
-  az1 = "ami-0d891eb6bea9cfa8c"
-
-  az2 = "ami-0d891eb6bea9cfa8c"
-
-  az3 = "ami-0d891eb6bea9cfa8c"
-}
-
 # ASG Configuration
-az_asg_desired = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
+alfresco_asg_props = {
+  asg_desired       = 1
+  asg_min           = 1
+  asg_max           = 2
+  asg_instance_type = "m4.xlarge"
+  asg_ami           = "ami-0daf390b7cd42be97"
+  ebs_volume_size   = 512
 }
-
-az_asg_max = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-az_asg_min = {
-  az1 = "2"
-
-  az2 = "0"
-
-  az3 = "0"
-}
-
-asg_instance_type = "m4.xlarge"
 
 alfresco_jvm_memory = "8G"
 
@@ -98,7 +71,7 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "spgw-jms-int.training.delius.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "tcp://spgw-jms-int.training.delius.probation.hmpps.dsd.io:61616"
 
 # restore dataset
 alf_restore_status = "restore"

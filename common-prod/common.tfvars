@@ -21,49 +21,144 @@ eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
 
 bastion_role_arn = "arn:aws:iam::077643444046:role/terraform"
 
+# required for security group rules
+oracle_db_operation = {
+  eng_remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-prod-remote-state"
+  eng_role_arn                 = "arn:aws:iam::077643444046:role/terraform"
+}
+
 alfresco_app_name = "alfresco"
 
 spg_app_name = "spgw"
 
 # Alfresco
 alf_backups_config = {
-  transition_days                            = 7
-  expiration_days                            = 180
+  transition_days                            = 30
+  expiration_days                            = 2560
   noncurrent_version_transition_days         = 30
   noncurrent_version_transition_glacier_days = 60
   noncurrent_version_expiration_days         = 2560
+  provisioned_throughput_in_mibps            = 20
+  throughput_mode                            = "provisioned"
+  prod_backups_bucket                        = "tf-eu-west-2-hmpps-delius-prod-alfresco-alf-backups"
+  prod_kms_key_arn                           = "arn:aws:kms:eu-west-2:050243167760:key/f32be75c-beb8-409c-a970-db9de7201473"
 }
+
+alf_rds_props = {
+  instance_class          = "db.m5.2xlarge"
+  iops                    = 3000
+  storage_type            = "io1"
+  allocated_storage       = 1000
+  maintenance_window      = "Wed:19:30-Wed:21:30"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 28
+  family                  = "postgres9.6"
+  engine                  = "postgres"
+  major_engine_version    = "9.6"
+  replica_engine_version  = "9.6.15"
+  master_engine_version   = "9.6.9"
+}
+
+# ontrol rds deployment
+alf_data_import = "disabled"
+
+alf_rds_migration_parameters = [
+  {
+    name         = "maintenance_work_mem"
+    value        = 8388608
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "max_wal_size"
+    value        = 256
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "checkpoint_timeout"
+    value        = 1800
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "synchronous_commit"
+    value        = "Off"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "wal_buffers"
+    value        = 8192
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "autovacuum"
+    value        = "Off"
+    apply_method = "pending-reboot"
+  }
+]
 
 # elk
 elk_backups_config = {
-  transition_days = 7
-  expiration_days = 2560
+  transition_days                 = 28
+  expiration_days                 = 2560
+  provisioned_throughput_in_mibps = 20
+  throughput_mode                 = "provisioned"
 }
 
 # elasticsearch
 # jvm
-es_jvm_heap_size = "8g"
+es_jvm_heap_size = "16g"
 
 # memory
-es_ecs_memory = "9000"
+es_ecs_memory = "26000"
 
-es_ecs_mem_limit = "8500"
+es_ecs_mem_limit = "25500"
 
-# instance type
-es_instance_type = "i3.xlarge"
+elk_migration_props = {
+  min_size                        = 3
+  max_size                        = 3
+  desired                         = 3
+  ecs_cpu_units                   = 500
+  ecs_memory                      = 18000
+  jvm_heap_size                   = "16g"
+  image_url                       = "mojdigitalstudio/hmpps-elasticsearch-5:latest"
+  kibana_image_url                = "mojdigitalstudio/hmpps-kibana-5:latest"
+  logstash_image_url              = "mojdigitalstudio/hmpps-logstash:latest"
+  block_device                    = "/dev/nvme0n1"
+  es_master_nodes                 = 2
+  ecs_service_desired_count       = 3
+  instance_type                   = "i3.xlarge"
+  kibana_instance_type            = "m4.large"
+  kibana_desired_count            = 2
+  kibana_asg_size                 = 2
+  logstash_desired_count          = 2
+  provisioned_throughput_in_mibps = 50
+  throughput_mode                 = "provisioned"
+}
+
+# es_admin
+alf_restore_status     = "restore"
+es_admin_instance_type = "c5.xlarge"
+
+es_admin_volume_props = {
+  size            = 1000
+  type            = "io1"
+  iops            = 32000
+  encrypted       = true
+  device_name     = "/dev/xvdb"
+  create_snapshot = false
+}
 
 ## Delius Core
 weblogic_domain_ports = {
-  weblogic_port      = "7001"
-  weblogic_tls_port  = "7002"
+  weblogic_port      = "80"
+  weblogic_tls_port  = "443" # currently unused, as tls is terminated at the load-balancer
   activemq_port      = "61617"
   spg_jms_broker     = "61616"
   spg_jms_broker_ssl = "61617"
 }
 
 ldap_ports = {
-  ldap     = "10389"
-  ldap_tls = "10636"
+  ldap     = "389"
+  ldap_tls = "636" # currently unused, as the ldap can only be accessed internally
 }
 
 #SPG Partner Gateway
@@ -90,11 +185,25 @@ user_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "18.130.105.155/32", #Engineering Jenkins prod AZ 1
-  "18.130.54.20/32",   #Engineering Jenkins prod AZ 2
-  "18.130.87.166/32",  #Engineering Jenkins prod AZ 3
+  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
   "194.75.210.208/28", #BCL
   "213.48.246.99/32",  #BCL
+  "195.59.75.0/24",    # ARK internet (DOM1)
+  "194.33.192.0/25",   # ARK internet (DOM1)
+  "194.33.193.0/25",   # ARK internet (DOM1)
+  "194.33.196.0/25",   # ARK internet (DOM1)
+  "194.33.197.0/25",   # ARK internet (DOM1)
+  "212.137.36.230/32", # Quantum
+  "62.25.109.197/32",  # Quantum
+  "195.92.38.16/28",   # Quantum
+  "62.25.106.209/32",  # OMNI
+  "195.92.40.49/32",   # OMNI
+  "62.232.198.64/28",  # I2N 
+  "81.187.190.127/32", # Lazzurs Home
+  "3.10.56.113/32",    # PSN Proxy A
+  "35.178.173.171/32", # PSN Proxy B
+  "82.38.248.151/32",  # Steve James Office
+  "213.86.81.13/32",   # Zaizi London Office
 ]
 
 # jenkins access
@@ -102,9 +211,7 @@ jenkins_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "18.130.105.155/32", #Engineering Jenkins prod AZ 1
-  "18.130.54.20/32",   #Engineering Jenkins prod AZ 2
-  "18.130.87.166/32",  #Engineering Jenkins prod AZ 3
+  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
 ]
 
 #SPG has activeMQ running incomming
@@ -170,44 +277,34 @@ backup_retention_days = 30
 # How long do we keep our instance volume snapshots for
 snapshot_retention_days = 30
 
-# Default values for ApacheDS LDAP
-instance_type_ldap = "m5.xlarge"
-
-ldap_slave_asg_min = "1"
-
-ldap_slave_asg_desired = "2"
-
-ldap_slave_asg_max = "10"
-
+# Default values for LDAP
+instance_type_ldap = "m5.8xlarge"
+ldap_disk_config = {
+  volume_type = "io1"
+  volume_size = 100
+  iops        = 5000
+}
 default_ansible_vars_apacheds = {
-  # ApacheDS
-  jvm_mem_args               = "12228" # (in MB)
-  apacheds_version           = "apacheds-2.0.0.AM25-default"
-  apacheds_install_directory = "/var/lib/apacheds-2.0.0.AM25/default"
-  apacheds_lib_directory     = "/opt/apacheds-2.0.0.AM25"
-  workspace                  = "/tmp/apacheds-bootstrap"
-  log_level                  = "WARN"
+  workspace = "/root/bootstrap-workspace"
 
   # LDAP
   ldap_protocol = "ldap"
-  bind_user     = "uid=admin,ou=system"
-  partition_id  = "moj"
+  bind_user     = "cn=admin,dc=moj,dc=com"
   base_root     = "dc=moj,dc=com"
+  base_users    = "ou=Users,dc=moj,dc=com"
 
   # Data import
-  import_users_ldif = "LATEST"
-  sanitize_oid_ldif = "yes"
+  import_users_ldif            = "LATEST"
+  import_users_ldif_base_users = "ou=Users,dc=moj,dc=com"
+  sanitize_oid_ldif            = "yes"
+  perf_test_users              = "0"
 }
 
 # Default values for NDelius WebLogic
 instance_type_weblogic = "m5.xlarge"
-
 instance_count_weblogic_ndelius = "30"
-
 instance_count_weblogic_spg = "6"
-
 instance_count_weblogic_interface = "6"
-
 default_ansible_vars = {
   # Server/WebLogic config
   jvm_mem_args            = "-Xms12g -Xmx12g"
@@ -217,28 +314,21 @@ default_ansible_vars = {
   server_listen_address   = "0.0.0.0"
 
   # Database
-  setup_datasources = "true"
-  database_host     = "delius-db"
+  setup_datasources      = "true"
+  database_host          = "delius-db"
+  database_min_pool_size = 50
+  database_max_pool_size = 100
 
   # Alfresco
   alfresco_host        = "alfresco"
-  alfresco_port        = 80
+  alfresco_port        = 443
   alfresco_office_host = "alfresco"
   alfresco_office_port = 443
 
-  #SPG jms may get moved to amazonMQ (and thereby wont be hosted on the mpx server) so rename to jms host and use another dns name
-  #spg_host = "spgw-mpx-int"
+  #spg hostname prefix for generating a url when not using amazonMQ (ie when spg_jms_host_src=var  instead of data (data mode uses the terraform state to generate the url )
   spg_jms_host = "spgw-jms-int"
 
   activemq_data_folder = "/activemq-data"
-
-  # LDAP
-  ldap_host          = "ldap-elb"
-  ldap_readonly_host = "ldap-readonly-elb"
-  partition_id       = "moj"
-  ldap_base          = "dc=moj,dc=com"
-  ldap_user_base     = "cn=Users,dc=moj,dc=com"
-  ldap_group_base    = "cn=EISUsers,cn=Users,dc=moj,dc=com"
 
   # App Config
   ndelius_display_name  = "National Delius"
@@ -250,7 +340,7 @@ default_ansible_vars = {
   # New Tech
   newtech_search_url             = "/newTech"
   newtech_pdfgenerator_url       = "/newTech"
-  newtech_pdfgenerator_templates = "shortFormatPreSentenceReport"
+  newtech_pdfgenerator_templates = "shortFormatPreSentenceReport|paroleParom1Report"
   newtech_pdfgenerator_secret    = "ThisIsASecretKey" # TODO pull from param store
 
   # User Management Tool
@@ -296,13 +386,13 @@ dss_min_vcpu = 0
 
 dss_max_vcpu = 8
 
-dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:4.3.1"
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.0"
 
 dss_job_vcpus = 1
 
-dss_job_memory = 256
+dss_job_memory = 3096
 
-dss_job_schedule = "cron(00 05 * * ? *)"
+dss_job_schedule = "cron(00 07 * * ? *)"
 
 dss_job_retries = 1
 
@@ -316,7 +406,7 @@ dss_job_ulimits = [
   },
 ]
 
-# Testing/Chaosmonkey 
+# Testing/Chaosmonkey
 ce_instances = ["m5.large", "c5.large"]
 
 ce_min_vcpu = 0
@@ -361,3 +451,29 @@ chaosmonkey_job_envvars = [
 ]
 
 chaosmonkey_job_ulimits = []
+
+delius_core_haproxy_instance_type  = "t3.large"
+delius_core_haproxy_instance_count = "3"
+
+# Shared ECS Cluster
+ecs_instance_type = "m4.xlarge"
+node_max_count    = 20
+node_min_count    = 5
+
+loadrunner_config = {
+  "instance_type" = "t3.large"
+}
+
+azure_oasys_proxy_source = [
+  "51.140.255.11/32" # Public IP of Fix & Go Azure API Gateway used for NDH
+]
+
+#these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
+#var = spg local MQ, data = amazon mq
+SPG_GATEWAY_MQ_URL_SOURCE    = "var"
+spg_messaging_broker_url_src = "var"
+spg_jms_host_src             = "var"
+
+# Parent R53 Zone ID for strategic domain (probation.service.justice.gov.uk)
+strategic_parent_zone_id = "Z2SOZ79CNGAPIF"
+strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_delegation_role"
