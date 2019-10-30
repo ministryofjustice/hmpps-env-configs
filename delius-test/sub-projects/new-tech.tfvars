@@ -45,7 +45,9 @@ offender_api_allowed_cidrs_secured = [
   "217.33.148.210/32", # Digital studio
   "35.178.209.113/32", # cloudplatform-live1-1
   "3.8.51.207/32",     # cloudplatform-live1-2
-  "35.177.252.54/32"   # cloudplatform-live1-3
+  "35.177.252.54/32",  # cloudplatform-live1-3
+  "35.178.254.97",     # licences AWS
+  "52.56.156.121"      # licences AWS
 ]
 offender_api_allowed_cidrs_healthkick = [
   "35.177.252.195/32" # healthkick
