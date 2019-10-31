@@ -22,7 +22,8 @@ pdfgenerator_conf = {}
 
 # Override default Offender API Config
 offenderapi_conf = {
-    env_oracledb_servicename = "TSTNDA_TAF"
+  env_oracledb_servicename = "TSTNDA_TAF"
+  image_version = "0.1.16"
 }
 
 # Override default Elasticsearch Config
