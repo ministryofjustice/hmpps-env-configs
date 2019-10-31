@@ -58,9 +58,9 @@ SPG_MPX_HOST_TYPE = "hybrid"
 
 ### CRC ###
 
-spg_crc_asg_desired = 1
-spg_crc_asg_max = 2
-spg_crc_asg_min = 1
+spg_crc_asg_desired = 0
+spg_crc_asg_max = 0
+spg_crc_asg_min = 0
 spg_crc_ecs_memory = 1881
 SPG_CRC_JAVA_MAX_MEM = 1691
 SPG_CRC_HOST_TYPE = "crc"
@@ -68,10 +68,10 @@ SPG_CRC_HOST_TYPE = "crc"
 
 ### ISO ###
 
-spg_iso_asg_desired = 1
-spg_iso_asg_max = 2
-spg_iso_asg_min = 1
-spg_iso_service_desired_count = 1
+spg_iso_asg_desired = 0
+spg_iso_asg_max = 0
+spg_iso_asg_min = 0
+spg_iso_service_desired_count = 0
 spg_iso_ecs_memory = 1881
 SPG_ISO_JAVA_MAX_MEM = 1691
 SPG_ISO_HOST_TYPE = "iso"
@@ -96,6 +96,6 @@ SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.training-test.delius.pro
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.training-test.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 
-SPG_ISO_FQDN  = "spgw-ext.training-test.probation.service.justice.gov.uk"
-SPG_MPX_FQDN  = "spgw-mpx-int.training-test.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-ext.training-test.probation.service.justice.gov.uk"
+SPG_ISO_FQDN  = "localhost"
+SPG_MPX_FQDN  = "localhost"
+SPG_CRC_FQDN  = "localhost"
