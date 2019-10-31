@@ -19,10 +19,10 @@ PO_SPG_CONFIGURATION = {
   #PO_XXX_CALLING_VIA_PROXY_URL_REWRITE#  null, "" or "replace_string|replace_with" eg "spgw-ext.pre-prod.probation|spgw-int-psn.probation" (needed so that UD proxy can rewrite urls provided for oAuth signature cert validation)
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
-  POSTUB_CRC_SCHEMA_0_9_13 = "C00,C04,C05,C06,C07,C20"
+  POSTUB_CRC_SCHEMA_0_9_13 = "C00,C04,C06,C07,C20"
 
   PO_POSTUB_NAME = "PO STUB"
-  PO_POSTUB_CRC_LIST = "C00,C04,C05,C06,C07,C20" # PF only have C05 active in PPL
+  PO_POSTUB_CRC_LIST = "C00,C04,C06,C07,C20" # PF only have C05 active in PPL
 
   PO_POSTUB_CALLING_VIA_PROXY_URL_REWRITE = "spgw-ext.pre-prod.probation,spgw-int-psn.pre-prod.probation"
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
