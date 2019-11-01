@@ -30,6 +30,7 @@ pdfgenerator_conf = {}
 # Override default Offender API Config
 offenderapi_conf = {
     env_oracledb_servicename = "TRTNDA_TAF"
+    image_version = "0.1.18"
 }
 
 # Override default Elasticsearch Config
@@ -56,3 +57,5 @@ offender_api_allowed_secure_cidrs = [
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32"  # healthkick
 ]
+
+dashboards_enabled = "true"
