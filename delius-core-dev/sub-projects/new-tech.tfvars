@@ -22,7 +22,9 @@ casenotes_conf = {
 pdfgenerator_conf = {}
 
 # Override default Offender API Config
-offenderapi_conf = {}
+offenderapi_conf = {
+  image_version = "0.1.18"
+}
 
 # Override default Elasticsearch Config
 search_conf = {}
