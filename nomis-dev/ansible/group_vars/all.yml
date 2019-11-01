@@ -1,7 +1,0 @@
---- # nomis-dev all.yml
-region: eu-west-2
-project_name: nomis
-environment_name: nomis-dev
-simple_environment_name: nomis
-catalog: DCAT
-data_classification: unclassified-data
