@@ -34,14 +34,12 @@ ansible_vars_oracle_db = {
 # LDAP
 instance_type_ldap = "m5.xlarge"
 ansible_vars_apacheds = {
-  jvm_mem_args = "12228"  # (in MB)
 }
 
 # WebLogic
 instance_type_weblogic = "m5.xlarge"
 instance_count_weblogic_ndelius = "15"
 ansible_vars = {
-  jvm_mem_args = "-Xms12g -Xmx12g"
   database_sid = "STGNDA"
   nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"
 }

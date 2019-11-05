@@ -44,6 +44,8 @@ alf_backups_config = {
   prod_kms_key_arn                           = "arn:aws:kms:eu-west-2:050243167760:key/f32be75c-beb8-409c-a970-db9de7201473"
 }
 
+alf_cloudwatch_log_retention = 60
+
 alf_rds_props = {
   instance_class          = "db.m5.2xlarge"
   iops                    = 3000
@@ -301,13 +303,13 @@ default_ansible_vars_apacheds = {
 }
 
 # Default values for NDelius WebLogic
-instance_type_weblogic = "m5.xlarge"
-instance_count_weblogic_ndelius = "30"
-instance_count_weblogic_spg = "6"
+instance_type_weblogic            = "m5.xlarge"
+instance_count_weblogic_ndelius   = "30"
+instance_count_weblogic_spg       = "6"
 instance_count_weblogic_interface = "6"
 default_ansible_vars = {
   # Server/WebLogic config
-  jvm_mem_args            = "-Xms12g -Xmx12g"
+  jvm_mem_args            = "-Xms12g -Xmx12g -XX:MaxPermSize=512m"
   domain_name             = "NDelius" # This is defined by the AMI, so should not be overridden
   server_name             = "AdminServer"
   weblogic_admin_username = "weblogic"
@@ -475,5 +477,5 @@ spg_messaging_broker_url_src = "var"
 spg_jms_host_src             = "var"
 
 # Parent R53 Zone ID for strategic domain (probation.service.justice.gov.uk)
-strategic_parent_zone_id = "Z2SOZ79CNGAPIF"
+strategic_parent_zone_id              = "Z2SOZ79CNGAPIF"
 strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_delegation_role"

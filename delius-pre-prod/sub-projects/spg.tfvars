@@ -1,3 +1,4 @@
+#DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
 image_version = "branch-latest-DAM-464"
 
 # This is used for ALB logs to S3 bucket.
@@ -49,17 +50,22 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
 #Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
 
-spg_mpx_asg_desired = 1 #6 when live
-spg_mpx_asg_max = 1 #6 when live
-spg_mpx_asg_min ="1" #3 when live
 
-spg_mpx_service_desired_count = 1 # 6 when live
+### MPX ###
+
+spg_mpx_asg_desired = 1 #3 when aMQ and identity generator deployed
+spg_mpx_asg_max = 2 #6 when aMQ and identity generator deployed
+spg_mpx_asg_min = 1 #3 when aMQ and identity generator deployed
+
+spg_mpx_service_desired_count = 1 # 3 when aMQ and identity generator deployed
 spg_mpx_ecs_memory = 32100
 SPG_MPX_JAVA_MAX_MEM = 31900
-//spg_mpx_ecs_memory = 32100 1/2 16050
-//SPG_MPX_JAVA_MAX_MEM = 31900 1/2 15850
-
 SPG_MPX_HOST_TYPE = "hybrid"
+//spg_mpx_ecs_memory = 32100 1/2 16050  (half size for runnning 2 x ECS tasks on a large box - needs docker volumes to work across multiple containers, or remove docker volumes)
+//SPG_MPX_JAVA_MAX_MEM = 31900 1/2 15850 (half size for runnning 2 x ECS tasks on a large box)
+
+
+### CRC ###
 
 spg_crc_service_desired_count = 1
 spg_crc_ecs_memory = 32100
@@ -67,12 +73,13 @@ SPG_CRC_JAVA_MAX_MEM = 31900
 SPG_CRC_HOST_TYPE = "crc"
 
 
+### ISO ###
 
-spg_mpx_asg_desired = 1 #6 when live
-spg_mpx_asg_max = 1 #6 when live
-spg_mpx_asg_min ="1" #3 when live
+spg_iso_asg_desired = 1 #6 when live
+spg_iso_asg_max = 2 #6 when live
+spg_iso_asg_min = 1 #3 when live
 
-spg_iso_service_desired_count = 1 # 6 when live
+spg_iso_service_desired_count = 1 # 3 when aMQ and identity generator deployed
 spg_iso_ecs_memory = 32100
 SPG_ISO_JAVA_MAX_MEM = 31900
 SPG_ISO_HOST_TYPE = "iso"
@@ -91,10 +98,11 @@ SPG_ENVIRONMENT_CN = "pre-prod.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://delius-jms.pre-prod.delius.probation.hmpps.dsd.io:61617"
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.delius-pre-prod.internal:61617"
 
 SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.pre-prod.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.pre-prod.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
+
 
 SPG_ISO_FQDN  = "spgw-ext.pre-prod.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.pre-prod.delius.probation.hmpps.dsd.io"

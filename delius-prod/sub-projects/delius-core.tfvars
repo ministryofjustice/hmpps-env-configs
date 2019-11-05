@@ -41,7 +41,6 @@ ansible_vars_apacheds = {
 instance_type_weblogic = "m5.xlarge"
 instance_count_weblogic_ndelius = "30"
 ansible_vars = {
-  jvm_mem_args = "-Xms12g -Xmx12g"
   database_sid = "PRDNDA"
   ndelius_log_level = "ERROR"
   ndelius_analytics_tag = "UA-122274748-1"

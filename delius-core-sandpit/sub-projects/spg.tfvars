@@ -1,3 +1,4 @@
+#DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
 image_version = "branch-latest-DAM-482"
 
 # This is used for ALB logs to S3 bucket.
@@ -39,17 +40,34 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
 #Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
-//spg_mpx_ecs_cpu_units = 1024
-spg_mpx_ecs_memory = 3835
+
+
+### MPX ###
+
+spg_mpx_asg_desired = 1
+spg_mpx_asg_max = 2
+spg_mpx_asg_min = 1
+spg_mpx_service_desired_count = 1
 SPG_MPX_JAVA_MAX_MEM = 3645
 SPG_MPX_HOST_TYPE = "hybrid"
 
-//spg_crc_ecs_cpu_units = 1024
+
+### CRC ###
+
+spg_crc_asg_desired = 1
+spg_crc_asg_max = 2
+spg_crc_asg_min = 1
 spg_crc_ecs_memory = 1881
 SPG_CRC_JAVA_MAX_MEM = 1691
 SPG_CRC_HOST_TYPE = "crc"
 
-//spg_iso_ecs_cpu_units = 1024
+
+### ISO ###
+
+spg_iso_asg_desired = 1
+spg_iso_asg_max = 2
+spg_iso_asg_min = 1
+spg_iso_service_desired_count = 1
 spg_iso_ecs_memory = 1881
 SPG_ISO_JAVA_MAX_MEM = 1691
 SPG_ISO_HOST_TYPE = "iso"
@@ -63,7 +81,7 @@ SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 SPG_ENVIRONMENT_CODE = "core-sandpit"
 SPG_ENVIRONMENT_CN = "sandpit.probation.service.justice.gov.uk"
 
-#SPG_GATEWAY_MQ_URL_SOURCE = "var"
+
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
 SPG_DELIUS_MQ_URL ="tcp://delius-jms.delius-core-sandpit.internal:61617"
 
