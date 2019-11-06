@@ -38,7 +38,10 @@ ansible_vars_apacheds = {
 
 # WebLogic
 instance_type_weblogic = "m5.xlarge"
-instance_count_weblogic_ndelius = "15"
+instance_count_weblogic_ndelius = "6"
+instance_count_weblogic_interface = "3"
+instance_count_weblogic_spg = "3"
+
 ansible_vars = {
   database_sid = "STGNDA"
   nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"
