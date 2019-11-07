@@ -32,6 +32,22 @@ alfresco_app_name = "alfresco"
 spg_app_name = "spgw"
 
 # Alfresco
+# ASG Configuration
+alfresco_asg_props = {
+  asg_desired       = 4
+  asg_min           = 4
+  asg_max           = 4
+  asg_instance_type = "m5.2xlarge"
+  asg_ami           = "ami-08a7a5a1231a5830e"
+  ebs_volume_size   = 1000
+  min_elb_capacity  = 2
+}
+
+# jvm heap
+alfresco_jvm_memory = "24G"
+
+alfresco_volume_size = 60
+
 alf_backups_config = {
   transition_days                            = 30
   expiration_days                            = 2560
