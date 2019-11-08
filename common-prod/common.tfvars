@@ -365,7 +365,7 @@ default_ansible_vars = {
   usermanagement_url = "/umt/"
 
   # NOMIS
-  nomis_url           = "https://gateway.prod.nomis-api.hmpps.dsd.io/elite2api"
+  nomis_url           = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api"
   nomis_client_id     = "delius"
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
 }

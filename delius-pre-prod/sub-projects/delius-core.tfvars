@@ -41,7 +41,6 @@ instance_count_weblogic_ndelius = "30"
 ansible_vars = {
   database_sid = "PRENDA"
   ndelius_log_level = "ERROR"
-  nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"
 }
 
 env_user_access_cidr_blocks = []
