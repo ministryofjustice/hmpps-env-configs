@@ -16,7 +16,7 @@ delius_api_upper_cpu_trigger = 10
 casenotes_conf = {
   cpu    = "1024"
   memory = "2048"
-  env_pull_base_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/nomisapi/offenders/events/case_notes_for_delius"
+  env_pull_base_url = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/nomisapi/offenders/events/case_notes_for_delius"
 }
 
 # Override default PDF Generator Config
