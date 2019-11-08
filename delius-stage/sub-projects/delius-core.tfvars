@@ -44,7 +44,6 @@ instance_count_weblogic_spg = "3"
 
 ansible_vars = {
   database_sid = "STGNDA"
-  nomis_url = "https://gateway.preprod.nomis-api.hmpps.dsd.io/elite2api"
 }
 
 env_user_access_cidr_blocks = []
