@@ -57,6 +57,7 @@ alfresco_asg_props = {
   asg_instance_type = "m5.2xlarge"
   asg_ami           = "ami-08a7a5a1231a5830e"
   ebs_volume_size   = 1000
+  min_elb_capacity  = 2
 }
 
 # jvm heap
