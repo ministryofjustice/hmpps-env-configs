@@ -15,8 +15,6 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
 public_ssl_arn = "arn:aws:acm:eu-west-2:723123699647:certificate/0b97aef6-3c80-48c2-818c-855d493b2d81"
 
-# ENVIRONMENT REMOTE STATES
-eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
 
 # ENVIRONMENT ROLE ARNS
 eng_role_arn = "arn:aws:iam::895523100917:role/terraform"
