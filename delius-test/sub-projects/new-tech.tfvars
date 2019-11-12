@@ -50,3 +50,5 @@ offender_api_allowed_secure_cidrs = [
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32"  # healthkick
 ]
+
+dashboards_enabled = "true"
