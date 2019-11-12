@@ -34,6 +34,19 @@ alf_cloudwatch_log_retention = 14
 spg_app_name = "spg"
 
 # Alfresco
+alfresco_jvm_memory = "8G"
+
+alfresco_asg_props = {
+  asg_desired       = 1
+  asg_min           = 1
+  asg_max           = 2
+  asg_instance_type = "m4.xlarge"
+  asg_ami           = ""
+  ebs_volume_size   = 512
+  min_elb_capacity  = 1
+  ami_name          = "HMPPS Alfresco master*"
+}
+
 alf_backups_config = {
   transition_days                            = 30
   expiration_days                            = 90
