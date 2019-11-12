@@ -83,6 +83,7 @@ env_user_access_cidr_blocks = [
   # - EOS
   "5.153.255.210/32",   # EOS Public IP
 
+  # IP ranges for other interfacing systems
   # - CFO
   "194.168.183.130/32",
 ]
