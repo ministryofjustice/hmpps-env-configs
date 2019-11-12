@@ -85,8 +85,8 @@ SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
 #as well as displaying the environment in terminals and splash screens
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
-SPG_ENVIRONMENT_CODE = "po-test1"
-SPG_ENVIRONMENT_CN = "po-test1.probation.service.justice.gov.uk"
+SPG_ENVIRONMENT_CODE = "po-test"
+SPG_ENVIRONMENT_CN = "po-test.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
@@ -96,6 +96,6 @@ SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.po-test1.delius.probatio
 SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.po-test1.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 
-SPG_ISO_FQDN  = "spgw-ext.po-test1.probation.service.justice.gov.uk"
+SPG_ISO_FQDN  = "spgw-ext.po-test.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.po-test1.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-ext.po-test1.probation.service.justice.gov.uk"
+SPG_CRC_FQDN  = "spgw-crc-ext.po-test.probation.service.justice.gov.uk"
