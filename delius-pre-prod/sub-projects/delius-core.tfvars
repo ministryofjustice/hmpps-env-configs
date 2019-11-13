@@ -111,3 +111,6 @@ dss_job_envvars = [
 azure_community_proxy_source = [
   "51.141.53.111/32" # Public IP of azure fortinet
 ]
+
+# Use dsd.io public zone until transition to gov.uk is complete for this environment
+delius_core_public_zone = "legacy"

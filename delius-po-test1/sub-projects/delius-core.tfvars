@@ -33,7 +33,8 @@ ansible_vars_oracle_db = {
 
 # LDAP
 ansible_vars_apacheds = {
-  import_users_ldif = "IFSR1-190517/OID/IFSR1-190517.ldif"
+  import_users_ldif = "IFSR3-191113/OID/IFSR3-191113.ldif"
+  import_users_ldif_base_users = "cn=Users,dc=moj,dc=com"
 }
 
 # WebLogic
@@ -60,8 +61,8 @@ env_user_access_cidr_blocks = [
   "51.179.196.131/32",
 
   # -Meganexus
-  "51.179.210.36/32",
-  "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
+  #"51.179.210.36/32",  #this mapped to PFs spg server in IFSR1 should no longer be needed - see parent orgs if required
+   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
   "49.248.250.6/32",    # Meganexus India (Gateway IP)
 
   # -Sodexo Justice Services
