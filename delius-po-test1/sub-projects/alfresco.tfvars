@@ -49,18 +49,6 @@ allowed_cidr_block = [
   "213.48.246.99/32",  #BCL
 ]
 
-# ASG Configuration
-alfresco_asg_props = {
-  asg_desired       = 1
-  asg_min           = 1
-  asg_max           = 2
-  asg_instance_type = "m4.xlarge"
-  asg_ami           = ""
-  ebs_volume_size   = 512
-}
-
-alfresco_jvm_memory = "8G"
-
 # common
 allowed_ssh_cidr = [
   "109.148.137.148/32", #Don Home

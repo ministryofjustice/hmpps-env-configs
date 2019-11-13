@@ -41,6 +41,7 @@ alfresco_asg_props = {
   asg_ami           = "ami-0324358f836834251"
   ebs_volume_size   = 1000
   min_elb_capacity  = 2
+  ami_name          = "HMPPS Alfresco master*"
 }
 
 # jvm heap
