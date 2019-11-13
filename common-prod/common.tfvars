@@ -32,6 +32,22 @@ alfresco_app_name = "alfresco"
 spg_app_name = "spgw"
 
 # Alfresco
+# ASG Configuration
+alfresco_asg_props = {
+  asg_desired       = 4
+  asg_min           = 4
+  asg_max           = 4
+  asg_instance_type = "m5.2xlarge"
+  asg_ami           = "ami-0324358f836834251"
+  ebs_volume_size   = 1000
+  min_elb_capacity  = 2
+}
+
+# jvm heap
+alfresco_jvm_memory = "24G"
+
+alfresco_volume_size = 60
+
 alf_backups_config = {
   transition_days                            = 30
   expiration_days                            = 2560
@@ -201,7 +217,6 @@ user_access_cidr_blocks = [
   "62.25.106.209/32",  # OMNI
   "195.92.40.49/32",   # OMNI
   "62.232.198.64/28",  # I2N 
-  "81.187.190.127/32", # Lazzurs Home
   "3.10.56.113/32",    # PSN Proxy A
   "35.178.173.171/32", # PSN Proxy B
   "82.38.248.151/32",  # Steve James Office
@@ -349,7 +364,7 @@ default_ansible_vars = {
   usermanagement_url = "/umt/"
 
   # NOMIS
-  nomis_url           = "https://gateway.prod.nomis-api.hmpps.dsd.io/elite2api"
+  nomis_url           = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api"
   nomis_client_id     = "delius"
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
 }

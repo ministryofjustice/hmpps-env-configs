@@ -2,3 +2,4 @@
 
 database_standby_unique: PRDNDAS1
 database_standby_sid: PRDNDAS1
+database_primary_unique: PRDNDA
