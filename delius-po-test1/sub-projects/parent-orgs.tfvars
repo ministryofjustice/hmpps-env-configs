@@ -1,8 +1,8 @@
 PO_SPG_CONFIGURATION = {
 
   PO_ACTIVE_CONNECTIONS = "PFA,PFB,STC,MTC,POSTUB"
-
-  SPG_CERTIFICATE_PATH = "/unclassified-data/hmpps-delius-po-test2/current/"
+  SPG_CERTIFICATE_BUCKET = "tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket"
+  SPG_CERTIFICATE_PATH = "/unclassified-data/hmpps-delius-po-test1/current/"
 
   PO_POSTUB_NAME = "PO STUB"
   PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
