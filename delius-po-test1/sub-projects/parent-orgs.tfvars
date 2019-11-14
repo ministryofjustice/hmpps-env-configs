@@ -51,7 +51,7 @@ PO_SPG_CONFIGURATION = {
 
   PO_MTC_NAME = "MTC"
   PO_MTC_TLS_COMMON_NAME = "spg-ifsr3.omnia.mtcnovo.net"
-  PO_MTC_SIGNING_COMMON_NAME = "signing.spg-iso-ifsr3.omnia.mtcnovo.net"
+  PO_MTC_SIGNING_COMMON_NAME = "spg-iso-ifsr3.omnia.mtcnovo.net"
   PO_MTC_ENDPOINT_URL = "https://spg-ifsr3.omnia.mtcnovo.net:9001/CRC/CRCendpoint"
   PO_MTC_CRC_LIST = "C16,C17"
 
