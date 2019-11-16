@@ -68,8 +68,8 @@ alf_rds_props = {
   family                  = "postgres9.6"
   engine                  = "postgres"
   major_engine_version    = "9.6"
-  replica_engine_version  = "9.6.15"
-  master_engine_version   = "9.6.15"
+  replica_engine_version  = "9.6.9"
+  master_engine_version   = "9.6.9"
 }
 
 # ontrol rds deployment
