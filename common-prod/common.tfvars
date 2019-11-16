@@ -65,7 +65,7 @@ alf_cloudwatch_log_retention = 60
 
 alf_rds_props = {
   instance_class          = "db.m5.2xlarge"
-  iops                    = 3000
+  iops                    = 10000
   storage_type            = "io1"
   allocated_storage       = 1000
   maintenance_window      = "Wed:19:30-Wed:21:30"
@@ -74,8 +74,8 @@ alf_rds_props = {
   family                  = "postgres9.6"
   engine                  = "postgres"
   major_engine_version    = "9.6"
-  replica_engine_version  = "9.6.15"
-  master_engine_version   = "9.6.15"
+  replica_engine_version  = "9.6.9"
+  master_engine_version   = "9.6.9"
 }
 
 # ontrol rds deployment
