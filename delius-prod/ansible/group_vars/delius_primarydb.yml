@@ -4,3 +4,5 @@ database_global_database: PRDNDA
 database_taf_service: PRDNDA_TAF
 database_primary_unique: PRDNDA
 database_primary_sid: PRDNDA
+rman_level_0_backup_duration_target: "21:00"
+rman_uncompressed_backup: Y

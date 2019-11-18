@@ -4,3 +4,5 @@ database_global_database: TSTNDA
 database_taf_service: TSTNDA_TAF
 database_primary_unique: TSTNDA
 database_primary_sid: TSTNDA
+rman_uncompressed_backup: Y
+rman_level_0_backup_duration_target: "02:00"
