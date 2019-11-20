@@ -6,12 +6,12 @@ egress_80 = true
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size  = "x_large"
+  instance_type  = "r5.xlarge"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
-  disk_size      = 200 # Do not decrease this
-  # total_storage  = 400 # This should equal disks_quantity x disk_size
+  disks_quantity = 16           # Do not decrease this
+  disk_size      = 1000         # Do not decrease this
+  # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
