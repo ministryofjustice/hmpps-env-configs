@@ -171,8 +171,10 @@ nextcloud_health_check = [
   },
 ]
 
-nextcloud_instance_type = "t2.small"
-rds_instance_class      = "db.t2.small"
+nextcloud_instance_type      = "t2.small"
+rds_instance_class           = "db.t2.small"
+mariadb_monitoring_interval  = 30
+rds_allocated_storage        = "500"
 
 #monitoring
 alarms_enabled = "false"
