@@ -21,6 +21,9 @@ PO_SPG_CONFIGURATION = {
   # The list of CRCs who should NOT receive MetaDataUpdate messages (includes PF and MTC CRCs - even though not used in delius-test)
   SPG_DISABLED_META_LIST = "C03,C04,C05,C06,C07,C15,C16,C17,C19,C20"
 
+}
+
+
 //firewall rules for parent_orgs
 
 PO_SPG_FIREWALL_INGRESS_PORT = "9999" #9001 = switched on, 9999 = switched off
@@ -31,9 +34,5 @@ PO_SPG_FIREWALL_INGRESS_RULES = {
   DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
 
   #POSTUB="derived from vpc x 3 NAT"
-
-
-
-
 
 }
