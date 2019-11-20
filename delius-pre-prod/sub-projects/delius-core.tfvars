@@ -62,9 +62,9 @@ env_user_access_cidr_blocks = [
   # -Meganexus
   "51.179.210.36/32",
   "83.151.209.178/32",  # PF SPG Server Public IP/NAT
-  "83.151.209.179/32", # PF SPG Server Public IP/NAT 2
+  "83.151.209.179/32",  # PF SPG Server Public IP/NAT 2
   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
-  "49.248.250.6/32",    # Meganexus India (Gateway IP)
+  "202.189.235.70/32",  # Meganexus India
 
   # -Sodexo Justice Services
   "80.86.46.16/31",
