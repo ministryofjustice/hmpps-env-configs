@@ -7,7 +7,8 @@ egress_80 = true
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size  = "x_large"
-  instance_type  = "r5.xlarge"
+  # instance_type  = "r5.xlarge"
+  instance_type  = "r5.8xlarge"
   disk_iops      = 1000
   disks_quantity = 16           # Do not decrease this
   disk_size      = 1000         # Do not decrease this
