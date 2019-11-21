@@ -9,17 +9,7 @@ public_ssl_arn = ""
 ##     EXAMPLE67XHV
 ## ]
 
-data "terraform_remote_state" "vpc" {
-   backend = "s3"
-
-   config {
-     bucket = "${var.remote_state_bucket_name}"
-     key    = "vpc/terraform.tfstate"
-     region = "${var.region}"
-   }
- }
-
-route53_strategic_hosted_zone_id = "${data.terraform_remote_state.vpc.strategic_public_zone_id[0]}"
+route53_strategic_hosted_zone_id = "Z3GRI9GET5CFF7"
 
 
 ## Delius Core Specific
