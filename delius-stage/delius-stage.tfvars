@@ -4,27 +4,12 @@ aws_nameserver = "10.160.32.2"
 
 public_ssl_arn = ""
 
-# Moved from spg.tfvars
-## This needs to be set after the delius-network-terraform has been built.
-## Should retrives using a data source.
-
-## data "terraform_remote_state" "vpc" {
-##   backend = "s3"
-## 
-##   config {
-##     bucket = "${var.remote_state_bucket_name}"
-##     key    = "vpc/terraform.tfstate"
-##     region = "${var.region}"
-##   }
-## }
-## 
-## route53_strategic_hosted_zone_id = "${data.terraform_remote_state.vpc.strategic_public_zone_id[0]}"
-## 
-## ## example out put
+## ## example output from the delius-network-terraform build
 ## strategic_public_zone_id = [
 ##     EXAMPLE67XHV
 ## ]
-route53_strategic_hosted_zone_id = ""
+
+route53_strategic_hosted_zone_id = "Z3GRI9GET5CFF7"
 
 
 ## Delius Core Specific
