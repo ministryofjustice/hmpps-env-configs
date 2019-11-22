@@ -20,7 +20,12 @@ casenotes_conf = {
 }
 
 # Override default PDF Generator Config
-pdfgenerator_conf = {}
+pdfgenerator_conf = {
+  cpu                      = "1024"
+  memory                   = "2048"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+}
 
 # Override default Offender API Config
 offenderapi_conf = {
@@ -45,10 +50,10 @@ offender_api_allowed_cidrs = [
 ]
 
 offender_api_allowed_secure_cidrs = [
-  "81.134.202.29/32",  # Moj VPN
-  "217.33.148.210/32", # Digital studio
   "35.178.209.113/32", # cloudplatform-live1-1
   "3.8.51.207/32",     # cloudplatform-live1-2
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32"  # healthkick
 ]
+
+dashboards_enabled = "true"

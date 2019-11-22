@@ -6,6 +6,6 @@ role_name: "terraform"
 
 hosted_zones:
 
-  - account_id: 205048117103
+  - account_id: "205048117103"
     zone_name: "stage.delius"
     is_delegated: True

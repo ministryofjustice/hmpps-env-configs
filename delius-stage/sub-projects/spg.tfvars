@@ -1,5 +1,5 @@
 #DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
-image_version = "latest"
+image_version = "branch-latest-DAM-464"
 
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
@@ -31,7 +31,7 @@ asg_instance_type_crc = "t2.small"
 asg_instance_type_mpx = "t2.medium"
 asg_instance_type_iso = "t2.small"
 
-aws_broker_deployment_mode = "SINGLE_INSTANCE"
+aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 
 spg_app_name = "spgw"
 
