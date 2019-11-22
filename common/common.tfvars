@@ -34,6 +34,13 @@ alf_cloudwatch_log_retention = 14
 spg_app_name = "spg"
 
 # Alfresco
+
+# accounts used for updating alfresco ami permissions at release
+alf_account_ids = {
+  hmpps-delius-test          = "728765553488"
+  hmpps-delius-po-test1      = "716683748953"
+}
+
 alfresco_jvm_memory = "8G"
 
 alfresco_asg_props = {
@@ -45,6 +52,7 @@ alfresco_asg_props = {
   ebs_volume_size   = 512
   min_elb_capacity  = 1
   ami_name          = "HMPPS Alfresco master*"
+  image_id          = "ami-07a1af185f1492b21" # used for updating ami launch permissions
 }
 
 alf_backups_config = {
