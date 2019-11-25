@@ -60,3 +60,8 @@ alfresco_app_name = "alfresco"
 
 # spg broker url
 spg_messaging_broker_url = "tcp://spgw-jms-int.pre-prod.delius.probation.hmpps.dsd.io:61616"
+
+alfresco_asg_props = {
+  asg_ami  = ""
+  ami_name = "HMPPS Alfresco *"
+}

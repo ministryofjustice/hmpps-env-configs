@@ -32,6 +32,11 @@ alfresco_app_name = "alfresco"
 spg_app_name = "spgw"
 
 # Alfresco
+# accounts used for updating alfresco ami permissions at release
+alf_account_ids = {
+  hmpps-delius-pre-prod = "010587221707"
+}
+
 # ASG Configuration
 alfresco_asg_props = {
   asg_desired       = 4
@@ -42,6 +47,7 @@ alfresco_asg_props = {
   ebs_volume_size   = 1000
   min_elb_capacity  = 2
   ami_name          = "HMPPS Alfresco master*"
+  image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
 
 # jvm heap
