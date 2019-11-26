@@ -37,8 +37,9 @@ spg_app_name = "spg"
 
 # accounts used for updating alfresco ami permissions at release
 alf_account_ids = {
-  hmpps-delius-test          = "728765553488"
-  hmpps-delius-po-test1      = "716683748953"
+  hmpps-delius-test     = "728765553488"
+  hmpps-delius-training = "330914586320"
+  hmpps-delius-po-test1 = "716683748953"
 }
 
 alfresco_jvm_memory = "8G"
