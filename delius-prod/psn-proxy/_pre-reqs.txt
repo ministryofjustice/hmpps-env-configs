@@ -1,0 +1,4 @@
+#the following scripts were run manually
+mkdir -p /opt/hmpps/proxy-scripts/
+chown -R ec2-user /opt/hmpps
+PATH=/opt/hmpps/proxy-scripts/:$PATH
