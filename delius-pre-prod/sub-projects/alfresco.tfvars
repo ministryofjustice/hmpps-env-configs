@@ -65,3 +65,6 @@ alfresco_asg_props = {
   asg_ami  = ""
   ami_name = "HMPPS Alfresco *"
 }
+
+# used for iam copying from prod backup bucket
+alf_iam_cross_account_perms = true
