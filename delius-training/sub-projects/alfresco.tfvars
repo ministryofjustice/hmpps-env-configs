@@ -63,3 +63,9 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.training.delius.probation.hmpps.d
 
 # restore dataset
 alf_restore_status = "restore"
+
+alfresco_asg_props = {
+  asg_ami  = ""
+  ami_name = "HMPPS Alfresco *"
+  image_id = "ami-0f7eff23903506a77" # used for updating ami launch permissions
+}
