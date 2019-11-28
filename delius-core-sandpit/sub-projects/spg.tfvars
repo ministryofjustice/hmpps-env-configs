@@ -1,5 +1,5 @@
 #DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
-image_version = "develop"
+image_version = "DAM-643-Update-Jackson-Jar-Package"
 
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
