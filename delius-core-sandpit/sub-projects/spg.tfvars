@@ -26,9 +26,9 @@ allowed_cidr_block = [
 ]
 
 
-asg_instance_type_crc = "t2.small"
-asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+asg_instance_type_crc = "t2.medium" // higher spec in sandpit as speeds up build / test cycle
+asg_instance_type_mpx = "t2.medium" // higher spec in sandpit as speeds up build / test cycle
+asg_instance_type_iso = "t2.medium" // higher spec in sandpit as speeds up build / test cycle
 
 aws_broker_deployment_mode = "SINGLE_INSTANCE"
 
