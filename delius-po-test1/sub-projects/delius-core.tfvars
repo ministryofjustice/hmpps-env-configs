@@ -52,6 +52,7 @@ env_user_access_cidr_blocks = [
   # -SEETEC
   "80.86.46.16/30",
   "195.224.76.229/32",
+  "195.153.64.66/32",   # Seetec VPN
 
   # -Interserve
 //  "46.227.51.224/29", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
