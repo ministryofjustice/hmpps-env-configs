@@ -349,18 +349,15 @@ pwm_config = {
 }
 
 # UMT
-umt_config = {
-  version                  = "latest"   # Application version
-  instance_type            = "t3.large" # AWS instance type to use
-  memory                   = 6144       # Memory to assign to ECS container in MB
-  ecs_scaling_min_capacity = 3          # Minimum number of running tasks
-  ecs_scaling_max_capacity = 30         # Maximum number of running tasks
-  ec2_scaling_min_capacity = 3          # Minimum number of running instances
-  ec2_scaling_max_capacity = 30         # Maximum number of running instances
+default_umt_config = {
+  version                  = "1.6.7-SNAPSHOT"   # Application version
+  memory                   = 1024       # Memory to assign to ECS container in MB
+  cpu                      = 512        # CPU to assign to ECS container
+  ecs_scaling_min_capacity = 1          # Minimum number of running tasks
+  ecs_scaling_max_capacity = 10         # Maximum number of running tasks
   ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
-  scale_up_cpu_threshold   = 50         # CPU threshold to trigger scale up of EC2 instances
-  scale_down_cpu_threshold = 15         # CPU threshold to trigger scale down of EC2 instances
 }
+umt_config = {}
 
 # Elasticsearch
 es_jvm_heap_size = "8g"
