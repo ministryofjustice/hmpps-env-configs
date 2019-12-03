@@ -68,5 +68,5 @@ es_s3_repo_name = "snapshot_ifsr3_3"
 
 # ASG Configuration
 alfresco_asg_props = {
-  ami_name = "HMPPS Alfresco *"
+  asg_ami = "ami-0f7eff23903506a77"
 }
