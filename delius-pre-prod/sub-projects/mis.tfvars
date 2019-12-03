@@ -173,8 +173,10 @@ nextcloud_health_check = [
   },
 ]
 
-nextcloud_instance_type = "m5.4xlarge"
-rds_instance_class      = "db.m5.xlarge"
+nextcloud_instance_type      = "m5.4xlarge"
+rds_instance_class           = "db.m5.xlarge"
+mariadb_monitoring_interval  = 5
+rds_allocated_storage        = "1000"
 
 #monitoring
 alarms_enabled = "true"

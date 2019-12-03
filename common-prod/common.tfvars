@@ -32,6 +32,11 @@ alfresco_app_name = "alfresco"
 spg_app_name = "spgw"
 
 # Alfresco
+# accounts used for updating alfresco ami permissions at release
+alf_account_ids = {
+  hmpps-delius-pre-prod = "010587221707"
+}
+
 # ASG Configuration
 alfresco_asg_props = {
   asg_desired       = 4
@@ -42,6 +47,7 @@ alfresco_asg_props = {
   ebs_volume_size   = 1000
   min_elb_capacity  = 2
   ami_name          = "HMPPS Alfresco master*"
+  image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
 
 # jvm heap
@@ -65,7 +71,7 @@ alf_cloudwatch_log_retention = 60
 
 alf_rds_props = {
   instance_class          = "db.m5.2xlarge"
-  iops                    = 3000
+  iops                    = 10000
   storage_type            = "io1"
   allocated_storage       = 1000
   maintenance_window      = "Wed:19:30-Wed:21:30"
@@ -74,8 +80,8 @@ alf_rds_props = {
   family                  = "postgres9.6"
   engine                  = "postgres"
   major_engine_version    = "9.6"
-  replica_engine_version  = "9.6.15"
-  master_engine_version   = "9.6.15"
+  replica_engine_version  = "9.6.9"
+  master_engine_version   = "9.6.9"
 }
 
 # ontrol rds deployment

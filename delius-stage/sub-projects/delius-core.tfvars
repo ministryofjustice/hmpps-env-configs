@@ -6,12 +6,12 @@ egress_80 = true
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size  = "x_large"
+  instance_type  = "r5.12xlarge"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
-  disk_size      = 200 # Do not decrease this
-  # total_storage  = 400 # This should equal disks_quantity x disk_size
+  disks_quantity = 16           # Do not decrease this
+  disk_size      = 1000         # Do not decrease this
+  # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
@@ -24,10 +24,10 @@ ansible_vars_oracle_db = {
   ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
   database_characterset         = "AL32UTF8"
-  database_bootstrap_restore    = "True" # whether primary db has db restore on bootstrap
-  database_backup               = "dbbackup/dev/delius" # path in S3 to directory backup files
-  database_backup_sys_passwd    = "/dbbackup/delius-core-dev/delius-core/oracle-database/db/oradb_sys_password" # ssm parameter store name for db backup password
-  database_backup_location      = "/u01/backup" #default for local testing
+  database_bootstrap_restore    = "False" # whether primary db has db restore on bootstrap
+  database_backup               = "NotApplicable" # path in S3 to directory backup files
+  database_backup_sys_passwd    = "NotApplicable" # ssm parameter store name for db backup password
+  database_backup_location      = "NotApplicable" #default for local testing
   oracle_dbca_template_file     = "database"
 }
 

@@ -33,7 +33,7 @@ ansible_vars_oracle_db = {
 
 # LDAP
 ansible_vars_apacheds = {
-  import_users_ldif = "IFSR1-190517/OID/IFSR1-190517.ldif"
+  import_users_ldif = "LATEST"
 }
 
 # WebLogic
@@ -52,17 +52,18 @@ env_user_access_cidr_blocks = [
   # -SEETEC
   "80.86.46.16/30",
   "195.224.76.229/32",
+  "195.153.64.66/32",   # Seetec VPN
 
   # -Interserve
-  "46.227.51.224/29",
-  "46.227.51.232/29",
-  "46.227.51.240/28",
-  "51.179.196.131/32",
+//  "46.227.51.224/29", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
+//  "46.227.51.232/29", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
+//  "46.227.51.240/28", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
+//  "51.179.196.131/32", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
 
   # -Meganexus
-  "51.179.210.36/32",
+  #"51.179.210.36/32",  #this mapped to PFs spg server in IFSR1 should no longer be needed - see parent orgs if required
   "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
-  "49.248.250.6/32",    # Meganexus India (Gateway IP)
+  "202.189.235.70/32",  # Meganexus India
 
   # -Sodexo Justice Services
   "80.86.46.16/31",

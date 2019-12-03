@@ -14,9 +14,14 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_CRC_LIST = "C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21"
   PO_POSTUB_ENDPOINT_URL = "https://spgw-crc-ext.test.probation.service.justice.gov.uk:9001/cxf/CRC-100"
   PO_POSTUB_PROXIED_URL = "n/a"
-  POSTUB_CRC_SCHEMA_0_9_13 = "C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21"
-}
 
+  POSTUB_CRC_SCHEMA_0_9_13 = "C00,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C15,C16,C17,C18,C19,C20,C21"
+  POSTUB_CRC_SCHEMA_0_9_14 = "C01,C14"
+
+  # The list of CRCs who should NOT receive MetaDataUpdate messages (includes PF and MTC CRCs - even though not used in delius-test)
+  SPG_DISABLED_META_LIST = "C03,C04,C05,C06,C07,C15,C16,C17,C19,C20"
+
+}
 
 
 //firewall rules for parent_orgs
@@ -29,9 +34,5 @@ PO_SPG_FIREWALL_INGRESS_RULES = {
   DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
 
   #POSTUB="derived from vpc x 3 NAT"
-
-
-
-
 
 }
