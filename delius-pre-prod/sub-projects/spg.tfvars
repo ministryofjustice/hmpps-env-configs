@@ -1,5 +1,5 @@
 #DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
-image_version = "branch-latest-DAM-464"
+image_version = "latest"
 
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
@@ -15,8 +15,6 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 route53_strategic_hosted_zone_id = "Z2HN42YS4OOSPY"
 
 
-# ENVIRONMENT REMOTE STATES
-eng-remote_state_bucket_name = "tf-eu-west-2-hmpps-eng-dev-remote-state"
 
 
 # ALLOWED CIDRS
