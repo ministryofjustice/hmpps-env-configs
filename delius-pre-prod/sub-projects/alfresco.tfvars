@@ -61,9 +61,9 @@ alfresco_app_name = "alfresco"
 # spg broker url
 spg_messaging_broker_url = "tcp://spgw-jms-int.pre-prod.delius.probation.hmpps.dsd.io:61616"
 
+# ASG Configuration
 alfresco_asg_props = {
-  asg_ami  = ""
-  ami_name = "HMPPS Alfresco *"
+  asg_ami = "ami-0f7eff23903506a77"
 }
 
 # used for iam copying from prod backup bucket
