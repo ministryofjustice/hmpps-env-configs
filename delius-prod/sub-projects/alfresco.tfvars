@@ -60,3 +60,7 @@ alfresco_app_name = "alfresco"
 
 # spg broker url
 spg_messaging_broker_url = "tcp://spgw-jms-int.probation.service.justice.gov.uk:61616"
+
+alf_rds_props = {
+  instance_class = "db.m5.12xlarge"
+}
