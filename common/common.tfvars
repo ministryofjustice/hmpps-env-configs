@@ -359,6 +359,18 @@ default_umt_config = {
 }
 umt_config = {}
 
+# Approved Premises Tracker API
+default_aptracker_api_config = {
+  version                  = "latest"   # Application version
+  memory                   = 1024       # Memory to assign to ECS container in MB
+  cpu                      = 512        # CPU to assign to ECS container
+  ecs_scaling_min_capacity = 1          # Minimum number of running tasks
+  ecs_scaling_max_capacity = 10         # Maximum number of running tasks
+  ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
+  log_level                = "DEBUG"    # Application log-level
+}
+aptracker_api_config = {}
+
 # Elasticsearch
 es_jvm_heap_size = "8g"
 
