@@ -1,5 +1,5 @@
 #DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
-image_version = "branch-latest-DAM-695"
+image_version = "branch-latest-DAM-695"    # branch 695=Release-SR17a containing SPG-2.4.11.X
 
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
