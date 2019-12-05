@@ -35,6 +35,7 @@ spg_app_name = "spgw"
 # accounts used for updating alfresco ami permissions at release
 alf_account_ids = {
   hmpps-delius-pre-prod = "010587221707"
+  hmpps-delius-stage    = "205048117103"
 }
 
 # ASG Configuration
