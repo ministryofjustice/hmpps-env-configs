@@ -74,11 +74,11 @@ SPG_CRC_HOST_TYPE = "crc"
 
 ### ISO ###
 
-spg_iso_asg_desired = 1 #6 when live
-spg_iso_asg_max = 2 #6 when live
-spg_iso_asg_min = 1 #3 when live
+spg_iso_asg_desired = 3 #6 when live
+spg_iso_asg_max = 6 #6 when live
+spg_iso_asg_min = 3 #3 when live
 
-spg_iso_service_desired_count = 1 # 3 when aMQ and identity generator deployed
+spg_iso_service_desired_count = 3 # 3 when aMQ and identity generator deployed
 spg_iso_ecs_memory = 32100
 SPG_ISO_JAVA_MAX_MEM = 31900
 SPG_ISO_HOST_TYPE = "iso"
