@@ -46,9 +46,9 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 ### MPX ###
 
-spg_mpx_asg_desired = 1
+spg_mpx_asg_desired = 2
 spg_mpx_asg_max = 2
-spg_mpx_asg_min = 1
+spg_mpx_asg_min = 2
 spg_mpx_service_desired_count = 1
 SPG_MPX_JAVA_MAX_MEM = 3645
 SPG_MPX_HOST_TYPE = "hybrid"
