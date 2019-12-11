@@ -1,7 +1,7 @@
 ---
 
 parent_zone_name: "probation.hmpps.dsd.io"
-parent_account_id: 479759138745
+parent_account_id: 570551521311
 role_name: "terraform"
 
 hosted_zones:
