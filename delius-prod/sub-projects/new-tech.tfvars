@@ -71,6 +71,8 @@ offender_api_allowed_secure_cidrs = [
   "35.178.209.113/32", # cloudplatform-live1-1
   "3.8.51.207/32",     # cloudplatform-live1-2
   "35.177.252.54/32",  # cloudplatform-live1-3
-  "35.177.252.195/32"  # healthkick
+  "35.177.252.195/32", # healthkick
+  "51.141.82.211/32"   # azure oauth server
+
 ]
 dashboards_enabled = "true"

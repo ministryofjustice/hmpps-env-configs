@@ -36,6 +36,7 @@ spg_app_name = "spgw"
 alf_account_ids = {
   hmpps-delius-pre-prod = "010587221707"
   hmpps-delius-stage    = "205048117103"
+  hmpps-delius-prod     = "050243167760"
 }
 
 # ASG Configuration
@@ -44,10 +45,10 @@ alfresco_asg_props = {
   asg_min           = 4
   asg_max           = 4
   asg_instance_type = "m5.2xlarge"
-  asg_ami           = "ami-0324358f836834251"
+  asg_ami           = "ami-0f7eff23903506a77"
   ebs_volume_size   = 1000
   min_elb_capacity  = 2
-  ami_name          = "HMPPS Alfresco master*"
+  ami_name          = "HMPPS Alfresco*"
   image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
 
@@ -392,14 +393,26 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                  = "1.6.6"   # Application version
+  version                  = "1.6.6" # Application version
+  memory                   = 2048    # Memory to assign to ECS container in MB
+  cpu                      = 1024    # CPU to assign to ECS container
+  ecs_scaling_min_capacity = 3       # Minimum number of running tasks
+  ecs_scaling_max_capacity = 30      # Maximum number of running tasks
+  ecs_target_cpu           = 60      # CPU target value for scaling of ECS tasks
+}
+umt_config = {}
+
+# Approved Premises Tracker API
+default_aptracker_api_config = {
+  version                  = "1.11"     # Application version
   memory                   = 2048       # Memory to assign to ECS container in MB
   cpu                      = 1024       # CPU to assign to ECS container
   ecs_scaling_min_capacity = 3          # Minimum number of running tasks
   ecs_scaling_max_capacity = 30         # Maximum number of running tasks
   ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
+  log_level                = "INFO"     # Application log-level
 }
-umt_config = {}
+aptracker_api_config = {}
 
 # DSS Batch Task
 dss_batch_instances = ["m5.large", "c5.large"]

@@ -37,9 +37,11 @@ spg_app_name = "spg"
 
 # accounts used for updating alfresco ami permissions at release
 alf_account_ids = {
-  hmpps-delius-test     = "728765553488"
-  hmpps-delius-training = "330914586320"
-  hmpps-delius-po-test1 = "716683748953"
+  hmpps-delius-test      = "728765553488"
+  hmpps-delius-training  = "330914586320"
+  hmpps-delius-po-test1  = "716683748953"
+  hmpps-delius-auto-test = "431912413968"
+  hmpps-delius-core-dev  = "723123699647"
 }
 
 alfresco_jvm_memory = "8G"
@@ -52,7 +54,7 @@ alfresco_asg_props = {
   asg_ami           = ""
   ebs_volume_size   = 512
   min_elb_capacity  = 1
-  ami_name          = "HMPPS Alfresco master*"
+  ami_name          = "HMPPS Alfresco*"
   image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
 
@@ -358,6 +360,18 @@ default_umt_config = {
   ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
 }
 umt_config = {}
+
+# Approved Premises Tracker API
+default_aptracker_api_config = {
+  version                  = "1.12-SNAPSHOT"   # Application version
+  memory                   = 1024       # Memory to assign to ECS container in MB
+  cpu                      = 512        # CPU to assign to ECS container
+  ecs_scaling_min_capacity = 1          # Minimum number of running tasks
+  ecs_scaling_max_capacity = 10         # Maximum number of running tasks
+  ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
+  log_level                = "DEBUG"    # Application log-level
+}
+aptracker_api_config = {}
 
 # Elasticsearch
 es_jvm_heap_size = "8g"
