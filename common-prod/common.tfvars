@@ -225,7 +225,7 @@ user_access_cidr_blocks = [
   "195.92.38.16/28",   # Quantum
   "62.25.106.209/32",  # OMNI
   "195.92.40.49/32",   # OMNI
-  "62.232.198.64/28",  # I2N 
+  "62.232.198.64/28",  # I2N
   "3.10.56.113/32",    # PSN Proxy A
   "35.178.173.171/32", # PSN Proxy B
   "82.38.248.151/32",  # Steve James Office
@@ -259,9 +259,9 @@ database_size_small = {
   instance_type  = "t3.large"
   disk_iops      = 1000
   disks_quantity = 2   # Do not decrease this
-  disk_size      = 100 # Do not decrease this
+  disk_size      = 500 # Do not decrease this
 
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
 
 database_size_medium = {
