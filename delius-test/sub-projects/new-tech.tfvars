@@ -37,6 +37,10 @@ web_conf = {}
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {}
 
+
+# Override default Offender Search Service Config
+offendersearch_conf = {}
+
 offender_api_allowed_cidrs = [
   "81.134.202.29/32", # Moj VPN
   "217.33.148.210/32" # Digital studio
