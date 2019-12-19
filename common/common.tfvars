@@ -68,6 +68,15 @@ alf_backups_config = {
   throughput_mode                            = "provisioned"
 }
 
+# alerts
+alf_ops_alerts = {
+  slack_channel_name = "delius-alerts-alfresco-nonprod"
+  log_level          = "info"
+  messaging_status   = "disabled"
+  runtime            = "python3.7"
+  ssm_token          = "manual-ops-alerts-slack-token"
+}
+
 alf_rds_props = {
   instance_class          = "db.t2.large"
   iops                    = 0
