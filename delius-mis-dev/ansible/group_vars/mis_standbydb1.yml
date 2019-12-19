@@ -1,5 +1,4 @@
 --- # mis_standbydb1.yml
 
-database_standby_unique_name: DMDMISS1
+database_standby_unique: DMDMISS1
 database_standby_sid: DMDMISS1
-database_primary_unique: DMDMIS
