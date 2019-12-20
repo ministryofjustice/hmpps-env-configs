@@ -179,4 +179,4 @@ mariadb_monitoring_interval  = 30
 rds_allocated_storage        = "500"
 
 #monitoring
-alarms_enabled = "true"
+alarms_enabled = "false"
