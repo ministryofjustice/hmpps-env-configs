@@ -344,6 +344,9 @@ default_ansible_vars = {
   nomis_url           = "https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api"
   nomis_client_id     = "delius"
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
+
+  # Approved Premises Tracker API
+  aptracker_api_errors_url = "/aptracker-api/errors/"
 }
 
 # PWM
