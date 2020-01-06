@@ -23,7 +23,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v15"
+rds_engine_version = "12.1.0.2.v17"
 
 maintenance_window = "Mon:00:00-Mon:03:00"
 
