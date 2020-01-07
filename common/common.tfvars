@@ -96,6 +96,63 @@ alf_rds_props = {
 alf_data_import = "disabled"
 
 alf_rds_migration_parameters = []
+alf_db_parameters = [
+  {
+    name  = "max_connections"
+    value = "800"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "autovacuum_analyze_threshold"
+    value = "20000"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "autovacuum_analyze_scale_factor"
+    value = "0.0"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "max_connections"
+    value = "1200"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "work_mem"
+    value = "8388608"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "shared_preload_libraries"
+    value = "pg_stat_statements"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "track_activity_query_size"
+    value = "2048"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "pg_stat_statements.track"
+    value = "ALL"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "pg_stat_statements.max"
+    value = "10000"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "log_statement"
+    value = "mod"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "log_min_duration_statement"
+    value = "5000"
+    apply_method = "pending-reboot"
+  }
+]
 
 # elk
 elk_backups_config = {

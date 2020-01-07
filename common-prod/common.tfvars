@@ -100,33 +100,85 @@ alf_data_import = "disabled"
 
 alf_rds_migration_parameters = [
   {
-    name         = "maintenance_work_mem"
-    value        = 8388608
+    name  = "maintenance_work_mem"
+    value = 8388608
+  },
+  {
+    name  = "max_wal_size"
+    value = 256
+  },
+  {
+    name  = "checkpoint_timeout"
+    value = 1800
+  },
+  {
+    name  = "synchronous_commit"
+    value = "Off"
+  },
+  {
+    name  = "wal_buffers"
+    value = 8192
+  },
+  {
+    name  = "autovacuum"
+    value = "Off"
+  }
+]
+
+alf_db_parameters = [
+  {
+    name         = "max_connections"
+    value        = "800"
     apply_method = "pending-reboot"
   },
   {
-    name         = "max_wal_size"
-    value        = 256
+    name         = "autovacuum_analyze_threshold"
+    value        = "20000"
     apply_method = "pending-reboot"
   },
   {
-    name         = "checkpoint_timeout"
-    value        = 1800
+    name         = "autovacuum_analyze_scale_factor"
+    value        = "0.0"
     apply_method = "pending-reboot"
   },
   {
-    name         = "synchronous_commit"
-    value        = "Off"
+    name         = "max_connections"
+    value        = "1200"
     apply_method = "pending-reboot"
   },
   {
-    name         = "wal_buffers"
-    value        = 8192
+    name         = "work_mem"
+    value        = "8388608"
     apply_method = "pending-reboot"
   },
   {
-    name         = "autovacuum"
-    value        = "Off"
+    name         = "shared_preload_libraries"
+    value        = "pg_stat_statements"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "track_activity_query_size"
+    value        = "2048"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "pg_stat_statements.track"
+    value        = "ALL"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "pg_stat_statements.max"
+    value        = "10000"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "log_statement"
+    value        = "mod"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "log_min_duration_statement"
+    value        = "5000"
     apply_method = "pending-reboot"
   }
 ]
