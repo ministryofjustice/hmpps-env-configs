@@ -98,11 +98,6 @@ alf_data_import = "disabled"
 alf_rds_migration_parameters = []
 alf_db_parameters = [
   {
-    name  = "max_connections"
-    value = "800"
-    apply_method = "pending-reboot"
-  },
-  {
     name  = "autovacuum_analyze_threshold"
     value = "20000"
     apply_method = "pending-reboot"
