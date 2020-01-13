@@ -6,3 +6,10 @@ simple_environment_name: training
 ndelius_version: "4.4.14"
 catalog: DCAT
 data_classification: unclassified-data
+required_patches:
+    p27659043:
+      filename: p27659043_11204180417_Linux-x86-64.zip
+      description: MES Bundle Patch for April 2018 PSU
+      postinstall_sql: postinstall.sql
+      grid_patch: false
+      database_patch: true
