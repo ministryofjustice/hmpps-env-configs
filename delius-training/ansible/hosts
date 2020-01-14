@@ -13,3 +13,5 @@ delius_primarydb
 delius_standbydb1
 delius_standbydb2
 
+[oracle_databases:children]
+delius_dbs
