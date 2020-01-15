@@ -60,7 +60,7 @@ PO_SPG_CONFIGURATION = {
   PO_MTC_PROXIED_URL = "https://spg.omnia.mtcnovo.net:9001/CRC/CRCendpoint"
 
   # The list of CRCs who should NOT receive MetaDtaaUpdate messages (includes PF and MTC)
-  SPG_DISABLED_META_LIST = "C03,C04,C05,C06,C07,C15,C16,C17,C19,C20"
+  SPG_DISABLED_META_LIST = "C03,C05,C06,C07,C15,C16,C17,C19,C20"
 }
 
 
