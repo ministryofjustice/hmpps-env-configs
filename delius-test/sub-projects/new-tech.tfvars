@@ -31,9 +31,7 @@ offenderapi_conf = {
 search_conf = {}
 
 # Override default Web Frontend Config
-web_conf = {
-  image_version = "0.2.2"
-}
+web_conf = {}
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {}
