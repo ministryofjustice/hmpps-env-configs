@@ -1,1 +1,1 @@
-curl https://password-reset.staging.psn.probation.service.justice.gov.uk/ -v
+curl https://password-reset.stage.psn.probation.service.justice.gov.uk/ -v
