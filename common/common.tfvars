@@ -416,12 +416,15 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                  = "1.6.7-SNAPSHOT"   # Application version
-  memory                   = 1024       # Memory to assign to ECS container in MB
-  cpu                      = 512        # CPU to assign to ECS container
-  ecs_scaling_min_capacity = 1          # Minimum number of running tasks
-  ecs_scaling_max_capacity = 10         # Maximum number of running tasks
-  ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
+  version                       = "1.7.0-SNAPSHOT"  # Application version
+  memory                        = 1024              # Memory to assign to ECS container in MB
+  cpu                           = 512               # CPU to assign to ECS container
+  ecs_scaling_min_capacity      = 1                 # Minimum number of running tasks
+  ecs_scaling_max_capacity      = 10                # Maximum number of running tasks
+  ecs_target_cpu                = 60                # CPU target value for scaling of ECS tasks
+  redis_node_type               = "cache.t3.small"  # Instance type to use for the Redis token store cluster
+  redis_node_groups             = 1                 # Number of Redis shards (node groups) in the cluster
+  redis_replicas_per_node_group = 1                 # Number of read-only replicas for each shard (node group)
 }
 umt_config = {}
 
