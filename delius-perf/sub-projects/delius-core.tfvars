@@ -24,23 +24,23 @@ ansible_vars_oracle_db = {
   ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
   database_characterset         = "AL32UTF8"
-  database_bootstrap_restore    = "True" # whether primary db has db restore on bootstrap
-  database_backup               = "dbbackup/dev/delius" # path in S3 to directory backup files
-  database_backup_sys_passwd    = "/dbbackup/delius-core-dev/delius-core/oracle-database/db/oradb_sys_password" # ssm parameter store name for db backup password
-  database_backup_location      = "/u01/backup" #default for local testing
+  database_bootstrap_restore    = "False" # whether primary db has db restore on bootstrap
+  database_backup               = "NotApplicable" # path in S3 to directory backup files
+  database_backup_sys_passwd    = "NotApplicable" # ssm parameter store name for db backup password
+  database_backup_location      = "NotApplicable" #default for local testing
   oracle_dbca_template_file     = "database"
 }
 
 # LDAP
-instance_type_ldap = "m5.xlarge"
 ansible_vars_apacheds = {
-  jvm_mem_args = "12228"  # (in MB)
-  perf_test_users = "10000" # Create 10,000 virtual users for performance testing
+  import_users_ldif = "LATEST"
+  import_users_ldif_base_users = "ou=Users,dc=moj,dc=com"
 }
 
 # WebLogic
 instance_type_weblogic = "m5.xlarge"
-instance_count_weblogic_ndelius = "15"
+instance_count_weblogic_ndelius = "30"
+
 ansible_vars = {
   database_sid = "PERNDA"
   ndelius_log_level = "ERROR"
