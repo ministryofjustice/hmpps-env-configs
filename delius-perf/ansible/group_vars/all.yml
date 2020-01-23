@@ -4,5 +4,5 @@ project_name: delius
 environment_name: delius-perf
 simple_environment_name: perf
 ndelius_version: "4.2.9.6"
-catalog: DCAT
+catalog: PCAT
 data_classification: official-data
