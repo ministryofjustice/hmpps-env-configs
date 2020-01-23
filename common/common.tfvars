@@ -398,7 +398,7 @@ default_ansible_vars = {
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
 
   # Approved Premises Tracker API
-  aptracker_api_errors_url = "/aptracker-api/errors/"
+  aptracker_api_errors_url = "/aptracker-api/errors"
 }
 
 # PWM
