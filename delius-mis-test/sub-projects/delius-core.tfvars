@@ -41,3 +41,6 @@ ansible_vars = {
 
 env_user_access_cidr_blocks = [
 ]
+
+# Use dsd.io public zone until transition to gov.uk is complete for this environment
+delius_core_public_zone = "legacy"
