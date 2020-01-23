@@ -1,0 +1,12 @@
+--- # mis_primarydb.yml
+
+database_global_database: DMDMIS
+database_taf_service: DMDMIS_TAF
+database_primary_unique: DMDMIS
+database_primary_sid: DMDMIS
+required_patches:
+    p18841764:
+      filename: p18841764_112040_Linux-x86-64.zip
+      description: ORA-12592 TNS:BAD PACKET on large datasets
+      grid_patch: true
+      database_patch: true

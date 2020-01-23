@@ -1,6 +1,6 @@
-vpc_supernet = "10.162.16.0/20"
+vpc_supernet = "10.160.48.0/20"
 
-aws_nameserver = "10.162.16.2"
+aws_nameserver = "10.160.48.2"
 
 # Moved from spg.tfvars
 route53_strategic_hosted_zone_id = "Z222MCWUHZK2CF"
@@ -17,3 +17,11 @@ egress_443 = true
 egress_80 = true
 
 ndelius_version = "4.1.7.3"
+
+#Instance size for smtp server
+smtp_instance_type = "m5.xlarge"
+
+#'data'=use amazonMQ
+SPG_GATEWAY_MQ_URL_SOURCE    = "data"
+spg_messaging_broker_url_src = "data"
+spg_jms_host_src             = "data"

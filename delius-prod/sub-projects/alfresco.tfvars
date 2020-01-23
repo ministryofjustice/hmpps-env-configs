@@ -60,3 +60,8 @@ alfresco_app_name = "alfresco"
 
 # spg broker url
 spg_messaging_broker_url = "tcp://spgw-jms-int.probation.service.justice.gov.uk:61616"
+
+# alerts
+alf_ops_alerts = {
+  messaging_status = "enabled"
+}

@@ -37,9 +37,11 @@ spg_app_name = "spg"
 
 # accounts used for updating alfresco ami permissions at release
 alf_account_ids = {
-  hmpps-delius-test     = "728765553488"
-  hmpps-delius-training = "330914586320"
-  hmpps-delius-po-test1 = "716683748953"
+  hmpps-delius-test      = "728765553488"
+  hmpps-delius-training  = "330914586320"
+  hmpps-delius-po-test1  = "716683748953"
+  hmpps-delius-auto-test = "431912413968"
+  hmpps-delius-core-dev  = "723123699647"
 }
 
 alfresco_jvm_memory = "8G"
@@ -52,7 +54,7 @@ alfresco_asg_props = {
   asg_ami           = ""
   ebs_volume_size   = 512
   min_elb_capacity  = 1
-  ami_name          = "HMPPS Alfresco master*"
+  ami_name          = "HMPPS Alfresco*"
   image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
 
@@ -64,6 +66,15 @@ alf_backups_config = {
   noncurrent_version_expiration_days         = 90
   provisioned_throughput_in_mibps            = 50
   throughput_mode                            = "provisioned"
+}
+
+# alerts
+alf_ops_alerts = {
+  slack_channel_name = "delius-alerts-alfresco-nonprod"
+  log_level          = "info"
+  messaging_status   = "disabled"
+  runtime            = "python3.7"
+  ssm_token          = "manual-ops-alerts-slack-token"
 }
 
 alf_rds_props = {
@@ -85,6 +96,58 @@ alf_rds_props = {
 alf_data_import = "disabled"
 
 alf_rds_migration_parameters = []
+alf_db_parameters = [
+  {
+    name  = "autovacuum_analyze_threshold"
+    value = "20000"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "autovacuum_analyze_scale_factor"
+    value = "0.0"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "max_connections"
+    value = "1200"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "work_mem"
+    value = "8388608"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "shared_preload_libraries"
+    value = "pg_stat_statements"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "track_activity_query_size"
+    value = "2048"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "pg_stat_statements.track"
+    value = "ALL"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "pg_stat_statements.max"
+    value = "10000"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "log_statement"
+    value = "mod"
+    apply_method = "pending-reboot"
+  },
+  {
+    name  = "log_min_duration_statement"
+    value = "5000"
+    apply_method = "pending-reboot"
+  }
+]
 
 # elk
 elk_backups_config = {
@@ -174,7 +237,7 @@ user_access_cidr_blocks = [
   "195.92.38.16/28",   # Quantum
   "62.25.106.209/32",  # OMNI
   "195.92.40.49/32",   # OMNI
-  "62.232.198.64/28",  # I2N 
+  "62.232.198.64/28",  # I2N
 ]
 
 # jenkins access
@@ -204,9 +267,9 @@ database_size_small = {
   instance_type  = "t3.large"
   disk_iops      = 1000
   disks_quantity = 2   # Do not decrease this
-  disk_size      = 100 # Do not decrease this
+  disk_size      = 500 # Do not decrease this
 
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
 
 database_size_medium = {
@@ -333,6 +396,9 @@ default_ansible_vars = {
   nomis_url           = "https://gateway.t3.nomis-api.hmpps.dsd.io/elite2api"
   nomis_client_id     = "delius"
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
+
+  # Approved Premises Tracker API
+  aptracker_api_errors_url = "/aptracker-api/errors/"
 }
 
 # PWM
@@ -350,14 +416,29 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                  = "1.6.7-SNAPSHOT"   # Application version
+  version                       = "1.7.0-SNAPSHOT"  # Application version
+  memory                        = 1024              # Memory to assign to ECS container in MB
+  cpu                           = 512               # CPU to assign to ECS container
+  ecs_scaling_min_capacity      = 1                 # Minimum number of running tasks
+  ecs_scaling_max_capacity      = 10                # Maximum number of running tasks
+  ecs_target_cpu                = 60                # CPU target value for scaling of ECS tasks
+  redis_node_type               = "cache.t3.small"  # Instance type to use for the Redis token store cluster
+  redis_node_groups             = 1                 # Number of Redis shards (node groups) in the cluster
+  redis_replicas_per_node_group = 1                 # Number of read-only replicas for each shard (node group)
+}
+umt_config = {}
+
+# Approved Premises Tracker API
+default_aptracker_api_config = {
+  version                  = "1.12-SNAPSHOT"   # Application version
   memory                   = 1024       # Memory to assign to ECS container in MB
   cpu                      = 512        # CPU to assign to ECS container
   ecs_scaling_min_capacity = 1          # Minimum number of running tasks
   ecs_scaling_max_capacity = 10         # Maximum number of running tasks
   ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
+  log_level                = "DEBUG"    # Application log-level
 }
-umt_config = {}
+aptracker_api_config = {}
 
 # Elasticsearch
 es_jvm_heap_size = "8g"

@@ -1,0 +1,19 @@
+--- # delius_primarydb.yml
+
+database_global_database: DMDNDA
+database_taf_service: DMDNDA_TAF
+database_primary_unique: DMDNDA
+database_primary_sid: DMDNDA
+cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
+required_patches:
+    p20807155:
+      filename: p20807155_112040_Linux-x86-64.zip
+      description: ORA-07445 Updating Table with CLOB
+      grid_patch: false
+      database_patch: true
+    p27659043:
+      filename: p27659043_11204180417_Linux-x86-64.zip
+      description: MES Bundle Patch for April 2018 PSU
+      postinstall_sql: postinstall.sql
+      grid_patch: false
+      database_patch: true

@@ -177,4 +177,15 @@ mariadb_monitoring_interval  = 5
 rds_allocated_storage        = "1000"
 
 #monitoring
-alarms_enabled = "true"
+mis_alarms_enabled = "true"
+
+#DIS LB Healtcheck
+dis-health_check = [
+  {
+    target              = "HTTP:8080/DataServices/"
+    interval            = 30
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]

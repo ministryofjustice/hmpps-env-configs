@@ -35,6 +35,9 @@ spg_app_name = "spgw"
 # accounts used for updating alfresco ami permissions at release
 alf_account_ids = {
   hmpps-delius-pre-prod = "010587221707"
+  hmpps-delius-stage    = "205048117103"
+  hmpps-delius-prod     = "050243167760"
+  hmpps-delius-perf     = "130975965028"
 }
 
 # ASG Configuration
@@ -43,10 +46,10 @@ alfresco_asg_props = {
   asg_min           = 4
   asg_max           = 4
   asg_instance_type = "m5.2xlarge"
-  asg_ami           = "ami-0324358f836834251"
+  asg_ami           = "ami-0f7eff23903506a77"
   ebs_volume_size   = 1000
   min_elb_capacity  = 2
-  ami_name          = "HMPPS Alfresco master*"
+  ami_name          = "HMPPS Alfresco*"
   image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
 
@@ -69,6 +72,15 @@ alf_backups_config = {
 
 alf_cloudwatch_log_retention = 60
 
+# alerts
+alf_ops_alerts = {
+  slack_channel_name = "delius-alerts-alfresco-production"
+  log_level          = "info"
+  messaging_status   = "disabled"
+  runtime            = "python3.7"
+  ssm_token          = "manual-ops-alerts-slack-token"
+}
+
 alf_rds_props = {
   instance_class          = "db.m5.2xlarge"
   iops                    = 10000
@@ -89,33 +101,80 @@ alf_data_import = "disabled"
 
 alf_rds_migration_parameters = [
   {
-    name         = "maintenance_work_mem"
-    value        = 8388608
+    name  = "maintenance_work_mem"
+    value = 8388608
+  },
+  {
+    name  = "max_wal_size"
+    value = 256
+  },
+  {
+    name  = "checkpoint_timeout"
+    value = 1800
+  },
+  {
+    name  = "synchronous_commit"
+    value = "Off"
+  },
+  {
+    name  = "wal_buffers"
+    value = 8192
+  },
+  {
+    name  = "autovacuum"
+    value = "Off"
+  }
+]
+
+alf_db_parameters = [
+  {
+    name         = "autovacuum_analyze_threshold"
+    value        = "20000"
     apply_method = "pending-reboot"
   },
   {
-    name         = "max_wal_size"
-    value        = 256
+    name         = "autovacuum_analyze_scale_factor"
+    value        = "0.0"
     apply_method = "pending-reboot"
   },
   {
-    name         = "checkpoint_timeout"
-    value        = 1800
+    name         = "max_connections"
+    value        = "1200"
     apply_method = "pending-reboot"
   },
   {
-    name         = "synchronous_commit"
-    value        = "Off"
+    name         = "work_mem"
+    value        = "8388608"
     apply_method = "pending-reboot"
   },
   {
-    name         = "wal_buffers"
-    value        = 8192
+    name         = "shared_preload_libraries"
+    value        = "pg_stat_statements"
     apply_method = "pending-reboot"
   },
   {
-    name         = "autovacuum"
-    value        = "Off"
+    name         = "track_activity_query_size"
+    value        = "2048"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "pg_stat_statements.track"
+    value        = "ALL"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "pg_stat_statements.max"
+    value        = "10000"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "log_statement"
+    value        = "mod"
+    apply_method = "pending-reboot"
+  },
+  {
+    name         = "log_min_duration_statement"
+    value        = "5000"
     apply_method = "pending-reboot"
   }
 ]
@@ -223,7 +282,7 @@ user_access_cidr_blocks = [
   "195.92.38.16/28",   # Quantum
   "62.25.106.209/32",  # OMNI
   "195.92.40.49/32",   # OMNI
-  "62.232.198.64/28",  # I2N 
+  "62.232.198.64/28",  # I2N
   "3.10.56.113/32",    # PSN Proxy A
   "35.178.173.171/32", # PSN Proxy B
   "82.38.248.151/32",  # Steve James Office
@@ -257,9 +316,9 @@ database_size_small = {
   instance_type  = "t3.large"
   disk_iops      = 1000
   disks_quantity = 2   # Do not decrease this
-  disk_size      = 100 # Do not decrease this
+  disk_size      = 500 # Do not decrease this
 
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
 
 database_size_medium = {
@@ -374,6 +433,9 @@ default_ansible_vars = {
   nomis_url           = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api"
   nomis_client_id     = "delius"
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
+
+  # Approved Premises Tracker API
+  aptracker_api_errors_url = "/aptracker-api/errors/"
 }
 
 # PWM
@@ -391,14 +453,29 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                  = "1.6.6"   # Application version
-  memory                   = 2048       # Memory to assign to ECS container in MB
-  cpu                      = 1024       # CPU to assign to ECS container
-  ecs_scaling_min_capacity = 3          # Minimum number of running tasks
-  ecs_scaling_max_capacity = 30         # Maximum number of running tasks
-  ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
+  version                       = "1.6.6"           # Application version
+  memory                        = 2048              # Memory to assign to ECS container in MB
+  cpu                           = 1024              # CPU to assign to ECS container
+  ecs_scaling_min_capacity      = 3                 # Minimum number of running tasks
+  ecs_scaling_max_capacity      = 30                # Maximum number of running tasks
+  ecs_target_cpu                = 60                # CPU target value for scaling of ECS tasks
+  redis_node_type               = "cache.m5.large"  # Instance type to use for the Redis token store cluster
+  redis_node_groups             = 4                 # Number of Redis shards (node groups) in the cluster
+  redis_replicas_per_node_group = 1                 # Number of read-only replicas for each shard (node group)
 }
 umt_config = {}
+
+# Approved Premises Tracker API
+default_aptracker_api_config = {
+  version                  = "1.11" # Application version
+  memory                   = 2048   # Memory to assign to ECS container in MB
+  cpu                      = 1024   # CPU to assign to ECS container
+  ecs_scaling_min_capacity = 3      # Minimum number of running tasks
+  ecs_scaling_max_capacity = 30     # Maximum number of running tasks
+  ecs_target_cpu           = 60     # CPU target value for scaling of ECS tasks
+  log_level                = "INFO" # Application log-level
+}
+aptracker_api_config = {}
 
 # DSS Batch Task
 dss_batch_instances = ["m5.large", "c5.large"]

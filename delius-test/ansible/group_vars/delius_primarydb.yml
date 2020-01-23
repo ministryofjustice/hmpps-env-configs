@@ -7,3 +7,11 @@ database_primary_sid: TSTNDA
 rman_uncompressed_backup: Y
 rman_level_0_backup_duration_target: "02:00"
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo"
+delius_users:
+  amarke_ro:
+  mberridge_ro:
+  mwillis_ro:
+  pphillips_ro:
+  smitchell_ro:
+  mwetherall_ro:
+  
