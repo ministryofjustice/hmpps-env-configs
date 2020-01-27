@@ -238,7 +238,6 @@ user_access_cidr_blocks = [
   "62.25.106.209/32",  # OMNI
   "195.92.40.49/32",   # OMNI
   "62.232.198.64/28",  # I2N
-  "51.137.128.165/32", # NDH Bridge
 ]
 
 # jenkins access
@@ -526,6 +525,7 @@ loadrunner_config = {
 
 azure_oasys_proxy_source = [
   "51.140.255.11/32" # Public IP of Fix & Go Azure API Gateway used for NDH
+  "51.137.128.165/32", # NDH Bridge
 ]
 
 
