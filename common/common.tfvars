@@ -318,6 +318,9 @@ ldap_disk_config = {
   volume_size = 50
   iops        = 1000
 }
+ldap_config = {
+  backup_retention_days = 7
+}
 default_ansible_vars_apacheds = {
   workspace = "/root/bootstrap-workspace"
 
