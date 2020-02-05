@@ -32,9 +32,10 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
+ldap_config = {
+  backup_retention_days = 90
+}
 ansible_vars_apacheds = {
-  import_users_ldif = "LATEST"
-  import_users_ldif_base_users = "ou=Users,dc=moj,dc=com"
 }
 
 # WebLogic

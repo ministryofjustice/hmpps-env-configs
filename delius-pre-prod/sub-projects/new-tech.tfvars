@@ -59,6 +59,11 @@ offenderpollpush_conf = {
   memory = "4096"
 }
 
+# Override default Offender Search Service Config
+offendersearch_conf = {
+  env_jwt_public_key       = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBalRkdXRLS2VQUkJlQWNrZ1M2cC8NCmxWK2Q1WXFiM3ExOHo2VXdoMU1OWXhwM0hxWXBZVis5MnlGeGUyUTVSN0tWakl5S3kyZkdBanNXeStlU04yM1QNCkZURVVUeXdHdnc0SkJrRGRoaUUvKy80SjR2TWFHMzBYN29GdE9JUWIwaENFQVlWM3o4emc1WVd2OGZlRkVnWGcNCkp3SjVCc2krU0NvajNIZDlERXk1ZGZaTTljL3BoOXN5YWpLU1ZiQW8rRCtXanhQWHU4UndRSk9BU0g0NUVwclQNCjNJMy9NdllyY1ZvdkN4UVZyUWNwYzNiY0U0bHpYdFlSVy9wSWpHUVpBKy9WYjNXZXZuR1FiYndTNHp6eXkzazgNCkRCZ0pzQVJlVDI1eHp0ckptRGlZZXBHYkVKVHV0alRqR2NVOG1qUjRWZ3gwdHdqMk9DMzBES3dXbGlrMzhXTWwNCk5RSURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0="
+}
+
 offender_api_allowed_cidrs = [
   "51.141.53.111/32" # Public IP of azure fortinet
 ]
@@ -69,6 +74,13 @@ offender_api_allowed_secure_cidrs = [
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32", # healthkick
   "51.140.228.7/32"    # azure oauth server
+]
+
+offender_search_allowed_secure_cidrs = [
+  "35.178.209.113/32", # cloudplatform-live1-1
+  "3.8.51.207/32",     # cloudplatform-live1-2
+  "35.177.252.54/32",  # cloudplatform-live1-3
+  "35.177.252.195/32", # healthkick
 ]
 
 dashboards_enabled = "true"
