@@ -11,7 +11,7 @@ cloudwatch_log_retention = 14
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
-
+esc_container_stop_timeout = "310s"
 
 
 # ALLOWED CIDRS
