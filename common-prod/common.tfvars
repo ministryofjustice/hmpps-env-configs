@@ -37,6 +37,7 @@ alf_account_ids = {
   hmpps-delius-pre-prod = "010587221707"
   hmpps-delius-stage    = "205048117103"
   hmpps-delius-prod     = "050243167760"
+  hmpps-delius-perf     = "130975965028"
 }
 
 # ASG Configuration
@@ -66,6 +67,7 @@ alf_backups_config = {
   provisioned_throughput_in_mibps            = 20
   throughput_mode                            = "provisioned"
   prod_backups_bucket                        = "tf-eu-west-2-hmpps-delius-prod-alfresco-alf-backups"
+  prod_storage_bucket                        = "tf-eu-west-2-hmpps-delius-prod-alfresco-storage-s3bucket"
   prod_kms_key_arn                           = "arn:aws:kms:eu-west-2:050243167760:key/f32be75c-beb8-409c-a970-db9de7201473"
 }
 
@@ -366,6 +368,9 @@ ldap_disk_config = {
   volume_size = 100
   iops        = 5000
 }
+ldap_config = {
+  backup_retention_days = 7
+}
 default_ansible_vars_apacheds = {
   workspace = "/root/bootstrap-workspace"
 
@@ -434,7 +439,7 @@ default_ansible_vars = {
   nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
 
   # Approved Premises Tracker API
-  aptracker_api_errors_url = "/aptracker-api/errors/"
+  aptracker_api_errors_url = "/aptracker-api/errors"
 }
 
 # PWM
@@ -452,15 +457,15 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                       = "1.6.6"           # Application version
-  memory                        = 2048              # Memory to assign to ECS container in MB
-  cpu                           = 1024              # CPU to assign to ECS container
-  ecs_scaling_min_capacity      = 3                 # Minimum number of running tasks
-  ecs_scaling_max_capacity      = 30                # Maximum number of running tasks
-  ecs_target_cpu                = 60                # CPU target value for scaling of ECS tasks
-  redis_node_type               = "cache.m5.large"  # Instance type to use for the Redis token store cluster
-  redis_node_groups             = 4                 # Number of Redis shards (node groups) in the cluster
-  redis_replicas_per_node_group = 1                 # Number of read-only replicas for each shard (node group)
+  version                       = "1.6.6"          # Application version
+  memory                        = 2048             # Memory to assign to ECS container in MB
+  cpu                           = 1024             # CPU to assign to ECS container
+  ecs_scaling_min_capacity      = 3                # Minimum number of running tasks
+  ecs_scaling_max_capacity      = 30               # Maximum number of running tasks
+  ecs_target_cpu                = 60               # CPU target value for scaling of ECS tasks
+  redis_node_type               = "cache.m5.large" # Instance type to use for the Redis token store cluster
+  redis_node_groups             = 4                # Number of Redis shards (node groups) in the cluster
+  redis_replicas_per_node_group = 1                # Number of read-only replicas for each shard (node group)
 }
 umt_config = {}
 

@@ -18,3 +18,4 @@ required_patches:
       postinstall_sql: postinstall.sql
       grid_patch: false
       database_patch: true
+delegated_account_id: "205048117103"
