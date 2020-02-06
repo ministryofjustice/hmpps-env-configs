@@ -90,7 +90,7 @@ alf_db_parameters = [
   },
   {
     name         = "work_mem"
-    value        = "1398101"
+    value        = "16384"
     apply_method = "pending-reboot"
   },
   {
