@@ -39,6 +39,7 @@ offenderapi_conf = {
   ecs_scaling_min_capacity = 2
   ecs_scaling_max_capacity = 10
   env_jwt_public_key       = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBcEpHbWFqeklvTzlXUmNqMDNlU20NCkV5YlNic0loR2Q2RFZUNHFRYVJFNnA3dEg3WmlKSW9Fa3NzNGQ4WmEwaG5hYnBrQmpZNjBLc2cxbm15emhlWVINCithWXVtc0gxbm1JcmJ4ZCtqV043T3A2V1pteWRBU3JMek1XWVdBYlNHOHBXMXkxY1RwdkRaMTlBSGJTYTRRL2UNCkp0ZXAxbHArMjJ1RzFuZE1UcHJUZDY0S05HMmZ0cHJld2hRMXhOcXZrVFo2aEJ1UUVSSjMxYVFwZEU4TUExcUsNCkNacjdUMnFOTUFNY2ROWmJrQWpGNUs5cTRqVnRCRjdZcU95cnRPUmZOV2phQmhYcDlOU3RhYkJNcFRFN1A2by8NClhJaU9rcmltNjlzaG1OdDhVRlU3WUlJN0ZvejgzM29HZnk2dmtDRjRxcGpIZ0RNc21STjc1UXRrRmRtaU8xaDgNCnB3SURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0="
+  env_features_noms_update_custody = "true"
 }
 
 # Override default Elasticsearch Config
@@ -63,6 +64,11 @@ offenderpollpush_conf = {
   memory = "4096"
 }
 
+# Override default Offender Search Service Config
+offendersearch_conf = {
+  env_jwt_public_key       = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBcEpHbWFqeklvTzlXUmNqMDNlU20NCkV5YlNic0loR2Q2RFZUNHFRYVJFNnA3dEg3WmlKSW9Fa3NzNGQ4WmEwaG5hYnBrQmpZNjBLc2cxbm15emhlWVINCithWXVtc0gxbm1JcmJ4ZCtqV043T3A2V1pteWRBU3JMek1XWVdBYlNHOHBXMXkxY1RwdkRaMTlBSGJTYTRRL2UNCkp0ZXAxbHArMjJ1RzFuZE1UcHJUZDY0S05HMmZ0cHJld2hRMXhOcXZrVFo2aEJ1UUVSSjMxYVFwZEU4TUExcUsNCkNacjdUMnFOTUFNY2ROWmJrQWpGNUs5cTRqVnRCRjdZcU95cnRPUmZOV2phQmhYcDlOU3RhYkJNcFRFN1A2by8NClhJaU9rcmltNjlzaG1OdDhVRlU3WUlJN0ZvejgzM29HZnk2dmtDRjRxcGpIZ0RNc21STjc1UXRrRmRtaU8xaDgNCnB3SURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0="
+}
+
 offender_api_allowed_cidrs = [
   "51.141.53.111/32" # Public IP of azure fortinet
 ]
@@ -74,5 +80,11 @@ offender_api_allowed_secure_cidrs = [
   "35.177.252.195/32", # healthkick
   "51.141.82.211/32"   # azure oauth server
 
+]offender_search_allowed_secure_cidrs = [
+  "35.178.209.113/32", # cloudplatform-live1-1
+  "3.8.51.207/32",     # cloudplatform-live1-2
+  "35.177.252.54/32",  # cloudplatform-live1-3
+  "35.177.252.195/32", # healthkick
 ]
+
 dashboards_enabled = "true"

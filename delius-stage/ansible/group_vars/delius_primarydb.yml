@@ -8,3 +8,5 @@ rman_level_0_backup_duration_target: "21:00"
 rman_uncompressed_backup: Y
 delius_users:
   jstanley_ro:
+  amarke_ro:
+  arichardson_ro:
