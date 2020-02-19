@@ -90,4 +90,6 @@ SPG_ISO_FQDN  = "spgw-ext.sandpit.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.sandpit.delius-core.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.sandpit.probation.service.justice.gov.uk"
 
+SPG_GATEWAY_MQ_URL_SOURCE="data"
+
 
