@@ -99,3 +99,5 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.perf.delius.probation.h
 SPG_ISO_FQDN  = "spgw-ext.perf.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.perf.delius.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.perf.probation.service.justice.gov.uk"
+
+SPG_GATEWAY_MQ_URL_SOURCE="data"
