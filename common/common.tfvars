@@ -433,7 +433,7 @@ umt_config = {}
 
 # Approved Premises Tracker API
 default_aptracker_api_config = {
-  version                  = "1.12-SNAPSHOT"   # Application version
+  version                  = "1.13"   # Application version
   memory                   = 1024       # Memory to assign to ECS container in MB
   cpu                      = 512        # CPU to assign to ECS container
   ecs_scaling_min_capacity = 1          # Minimum number of running tasks
