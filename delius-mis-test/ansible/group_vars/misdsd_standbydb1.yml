@@ -1,3 +1,4 @@
 --- # misdsd_standbydb1.yml
 
-database_standby_unique_name: DMTDSDS1
+database_standby_unique: DMTDSDS1
+database_standby_sid: DMTDSDS1
