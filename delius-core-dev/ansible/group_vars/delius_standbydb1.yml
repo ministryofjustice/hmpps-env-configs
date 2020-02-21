@@ -4,3 +4,4 @@ database_standby_unique: DNDAS1
 database_standby_sid: DNDAS1
 database_parameters:
    control_management_pack_access: NONE
+   undo_retention: 999
