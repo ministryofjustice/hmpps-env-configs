@@ -48,6 +48,11 @@ ansible_vars = {
 
 env_user_access_cidr_blocks = []
 
+# UMT
+umt_config = {
+  version = "1.7.0"
+}
+
 # DSS Batch Task
 dss_job_envvars = [
   {
