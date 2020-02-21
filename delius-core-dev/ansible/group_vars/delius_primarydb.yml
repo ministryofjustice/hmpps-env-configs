@@ -4,3 +4,7 @@ database_global_database: DNDA
 database_taf_service: DNDA_TAF
 database_primary_unique: DNDA
 database_primary_sid: DNDA
+database_parameters:
+   job_queue_processes: 11
+   undo_retention: 960
+   log_checkpoints_to_alert: FALSE
