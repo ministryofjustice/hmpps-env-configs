@@ -8,4 +8,3 @@ database_parameters:
    job_queue_processes: 11
    undo_retention: 960
    log_checkpoints_to_alert: FALSE
-   control_management_pack_access: DIAGNOSTIC
