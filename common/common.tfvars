@@ -433,7 +433,7 @@ umt_config = {}
 
 # Approved Premises Tracker API
 default_aptracker_api_config = {
-  version                  = "1.12-SNAPSHOT"   # Application version
+  version                  = "1.13"   # Application version
   memory                   = 1024       # Memory to assign to ECS container in MB
   cpu                      = 512        # CPU to assign to ECS container
   ecs_scaling_min_capacity = 1          # Minimum number of running tasks
@@ -442,6 +442,34 @@ default_aptracker_api_config = {
   log_level                = "DEBUG"    # Application log-level
 }
 aptracker_api_config = {}
+
+# Delius GDPR compliance tool
+default_gdpr_config = {
+  api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
+  api_version                 = "0.11"                 # Application version
+  api_memory                  = 512                    # Memory to assign to API container
+  api_cpu                     = 512                    # CPU to assign to API container
+  cron_identifyduplicates     = "-"                    # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders      = "-"                    #
+  cron_retainedoffendersiicsa = "-"                    #
+  cron_eligiblefordeletion    = "-"                    #
+  cron_deleteoffenders        = "-"                    #
+  cron_destructionlogclearing = "-"                    #
+  ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
+  ui_version                  = "0.11"                 # Application version
+  ui_memory                   = 512                    # Memory to assign to UI container
+  ui_cpu                      = 512                    # CPU to assign to UI container
+  db_instance_class           = "db.t3.small"          # Instance type to use for the database
+  db_storage                  = 30                     # Allocated database storage in GB
+  db_maintenance_window       = "Wed:21:00-Wed:23:00"  # Maintenance window for database patching/upgrades
+  db_backup_window            = "19:00-21:00"          # Daily window to take RDS backups
+  db_backup_retention_period  = 1                      # Number of days to retain RDS backups for
+  scaling_min_capacity        = 1                      # Minimum number of running tasks per service
+  scaling_max_capacity        = 5                      # Maximum number of running tasks per service
+  target_cpu                  = 60                     # CPU target value for scaling of ECS tasks
+  log_level                   = "DEBUG"                # Application log-level
+}
+gdpr_config = {}
 
 # Elasticsearch
 es_jvm_heap_size = "8g"

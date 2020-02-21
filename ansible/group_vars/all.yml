@@ -21,4 +21,4 @@ ldap_config:
     sanitize_ldif: yes
     base_users: ou=Users,dc=moj,dc=com
   create_perf_test_users: 0
-  rbac_version: 4.5.2                 # This default should match the version in Prod
+  rbac_version: 4.5.6                 # This default should match the version in Prod
