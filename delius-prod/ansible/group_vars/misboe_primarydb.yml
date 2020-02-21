@@ -4,3 +4,5 @@ database_global_database: PRDBOE
 database_taf_service: PRDBOE_TAF
 database_primary_unique: PRDBOE
 database_primary_sid: PRDBOE
+database_parameters:
+   control_management_pack_access: DIAGNOSTIC
