@@ -419,7 +419,7 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                       = "1.7.1-SNAPSHOT"  # Application version
+  version                       = "1.7.2-SNAPSHOT"  # Application version
   memory                        = 1024              # Memory to assign to ECS container in MB
   cpu                           = 512               # CPU to assign to ECS container
   ecs_scaling_min_capacity      = 1                 # Minimum number of running tasks
