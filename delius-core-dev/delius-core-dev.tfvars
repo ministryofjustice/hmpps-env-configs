@@ -14,5 +14,5 @@ spg_jms_host_src             = "data"
 #lambda auto start stop vars
 start_cloudwatch_schedule_expression = "cron(00 05 ? * MON-FRI *)"
 stop_cloudwatch_schedule_expression  = "cron(00 19 ? * MON-FRI *)"
-ec2_schedule                         = "false"
-autoscaling_schedule                 = "false"
+ec2_schedule                         = "true"
+autoscaling_schedule                 = "true"
