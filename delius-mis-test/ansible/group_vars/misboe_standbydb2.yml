@@ -1,3 +1,4 @@
 --- # misboe_standbydb2.yml
 
-database_standby_unique_name: DMTBOES2
+database_standby_unique: DMTBOES2
+database_standby_sid: DMTBOES2

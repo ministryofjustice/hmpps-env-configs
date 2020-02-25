@@ -4,6 +4,8 @@ database_global_database: PRENDA
 database_taf_service: PRENDA_TAF
 database_primary_unique: PRENDA
 database_primary_sid: PRENDA
+database_parameters:
+   control_management_pack_access: DIAGNOSTIC+TUNING
 rman_level_0_backup_duration_target: "21:00"
 rman_uncompressed_backup: Y
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"

@@ -419,7 +419,7 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                       = "1.7.0-SNAPSHOT"  # Application version
+  version                       = "1.7.2-SNAPSHOT"  # Application version
   memory                        = 1024              # Memory to assign to ECS container in MB
   cpu                           = 512               # CPU to assign to ECS container
   ecs_scaling_min_capacity      = 1                 # Minimum number of running tasks
@@ -446,7 +446,7 @@ aptracker_api_config = {}
 # Delius GDPR compliance tool
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "0.11"                 # Application version
+  api_version                 = "0.13.0"               # Application version
   api_memory                  = 512                    # Memory to assign to API container
   api_cpu                     = 512                    # CPU to assign to API container
   cron_identifyduplicates     = "-"                    # Batch schedules. Set to "-" to disable.
@@ -456,7 +456,7 @@ default_gdpr_config = {
   cron_deleteoffenders        = "-"                    #
   cron_destructionlogclearing = "-"                    #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
-  ui_version                  = "0.11"                 # Application version
+  ui_version                  = "0.13.0"               # Application version
   ui_memory                   = 512                    # Memory to assign to UI container
   ui_cpu                      = 512                    # CPU to assign to UI container
   db_instance_class           = "db.t3.small"          # Instance type to use for the database

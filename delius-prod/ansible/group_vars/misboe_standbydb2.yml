@@ -2,3 +2,5 @@
 
 database_standby_unique: PRDBOES2
 database_standby_sid: PRDBOES2
+database_parameters:
+   control_management_pack_access: DIAGNOSTIC
