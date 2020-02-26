@@ -6,9 +6,3 @@ simple_environment_name: pre-prod
 ndelius_version: "4.4.14"
 catalog: PCAT
 data_classification: official-data
-required_patches:
-    p20807155:
-      filename: p20807155_112040_Linux-x86-64.zip
-      description: ORA-07445 Updating Table with CLOB
-      grid_patch: false
-      database_patch: true
