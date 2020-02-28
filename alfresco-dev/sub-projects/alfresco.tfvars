@@ -52,8 +52,6 @@ allowed_cidr_block = [
 # ASG Configuration
 alfresco_asg_props = {
   ami_name = "HMPPS Alfresco *"
-  asg_ami  = "ami-02cbb5b42580f394d"
-  image_id = "ami-02cbb5b42580f394d"
 }
 
 spg_messaging_broker_url_src = ""
