@@ -97,6 +97,21 @@ alf_rds_props = {
   master_engine_version   = "9.6.9"
 }
 
+# alf solr
+alf_solr_config = {
+  ebs_size           = 2000
+  ebs_iops           = 500
+  ebs_type           = "io1"
+  ebs_device_name    = "/dev/xvdc"
+  java_xms           = "8000m"
+  java_xmx           = "8000m"
+  alf_jvm_memory     = "8000m"
+  schedule           = "cron(0 01 * * ? *)"
+  cold_storage_after = 14
+  delete_after       = 120
+  snap_tag           = "CreateSnapshotSolr"
+}
+
 # ontrol rds deployment
 alf_data_import = "disabled"
 
