@@ -43,6 +43,11 @@ ansible_vars = {
   ndelius_log_level = "ERROR"
 }
 
+# UMT
+umt_config = {
+  version = "1.7.2"
+}
+
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -MTCNovo
