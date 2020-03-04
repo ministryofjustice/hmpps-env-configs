@@ -11,7 +11,7 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
 esc_container_stop_timeout = "310s"
 
-deployment_minimum_healthy_percent = "20"
+
 
 # ALLOWED CIDRS
 allowed_cidr_block = [
