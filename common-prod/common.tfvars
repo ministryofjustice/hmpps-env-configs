@@ -512,14 +512,14 @@ default_gdpr_config = {
   ui_version                  = "0.16.0"               # Application version
   ui_memory                   = 1024                   # Memory to assign to UI container
   ui_cpu                      = 1024                   # CPU to assign to UI container
+  ui_scaling_min_capacity     = 2                      # Minimum number of running tasks per service
+  ui_scaling_max_capacity     = 10                     # Maximum number of running tasks per service
+  ui_target_cpu               = 60                     # CPU target value for scaling of ECS tasks
   db_instance_class           = "db.m5.large"          # Instance type to use for the database
   db_storage                  = 100                    # Allocated database storage in GB
   db_maintenance_window       = "Wed:21:00-Wed:23:00"  # Maintenance window for database patching/upgrades
   db_backup_window            = "19:00-21:00"          # Daily window to take RDS backups
   db_backup_retention_period  = 14                     # Number of days to retain RDS backups for
-  scaling_min_capacity        = 1                      # Minimum number of running tasks per service
-  scaling_max_capacity        = 1                      # Maximum number of running tasks per service
-  target_cpu                  = 60                     # CPU target value for scaling of ECS tasks
   log_level                   = "INFO"                 # Application log-level
 }
 gdpr_config = {}
