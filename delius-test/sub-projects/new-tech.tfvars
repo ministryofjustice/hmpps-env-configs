@@ -27,6 +27,7 @@ offenderapi_conf = {
   memory        = "2048"
   env_features_noms_update_custody = "true"
   env_features_noms_update_booking_number = "true"
+  env_features_noms_update_keydates = "true"
 }
 
 # Override default Elasticsearch Config
