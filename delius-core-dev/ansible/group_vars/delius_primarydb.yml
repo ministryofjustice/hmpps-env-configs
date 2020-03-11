@@ -4,4 +4,4 @@ database_global_database: DNDA
 database_taf_service: DNDA_TAF
 database_primary_unique: DNDA
 database_primary_sid: DNDA
-osb_ws_chunk_size: 524288000
+osb_ws_chunk_size: 104857600
