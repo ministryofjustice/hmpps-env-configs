@@ -77,6 +77,7 @@ db_size_mis = {
   disk_size      = 1000        # Do not decrease this
 
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
+  high_availability_count = 0
 }
 
 ansible_vars_mis_db = {
@@ -107,6 +108,8 @@ db_size_misboe = {
   disk_size      = 500        # Do not decrease this
 
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
+
+  high_availability_count = 0
 }
 
 ansible_vars_misboe_db = {
@@ -137,6 +140,8 @@ db_size_misdsd = {
   disk_size      = 500        # Do not decrease this
 
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
+
+  high_availability_count = 0
 }
 
 ansible_vars_misdsd_db = {
