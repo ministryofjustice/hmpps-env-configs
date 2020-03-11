@@ -6,6 +6,7 @@ database_primary_unique: STGNDA
 database_primary_sid: STGNDA
 rman_level_0_backup_duration_target: "21:00"
 rman_uncompressed_backup: Y
+oracle_osbws_chunk_size: 104857600
 delius_users:
   jstanley_ro:
   amarke_ro:
@@ -15,3 +16,4 @@ delius_users:
   jevans_ro:
   cfaulkner_ro:
   ebrindley_ro:
+  
