@@ -399,7 +399,6 @@ default_ansible_vars_apacheds = {
   import_users_ldif            = "LATEST"
   import_users_ldif_base_users = "ou=Users,dc=moj,dc=com"
   sanitize_oid_ldif            = "yes"
-  perf_test_users              = "0"
 }
 
 # Default values for NDelius WebLogic
