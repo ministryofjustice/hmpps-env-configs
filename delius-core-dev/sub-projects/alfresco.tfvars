@@ -59,11 +59,3 @@ alfresco_app_name = "alfresco"
 
 # spg broker url
 spg_messaging_broker_url = "tcp://spgw-jms-int.dev.delius-core.probation.hmpps.dsd.io:61616"
-
-# ASG Configuration & Alfresco release ami
-# This will override the version defined in common/common.tfvars
-# If a specific ami is required uncomment lines below and provide the ami_id
-alfresco_asg_props = {
-  asg_ami  = "ami-0f7eff23903506a77"
-  image_id = "ami-0f7eff23903506a77"
-}
