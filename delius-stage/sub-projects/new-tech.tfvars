@@ -27,6 +27,11 @@ pdfgenerator_conf = {
   ecs_scaling_max_capacity = 10
 }
 
+# Override default Offender Search Service Config
+offendersearch_conf = {
+  env_oauth2_jwt_jwk_set_uri = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/.well-known/jwks.json"
+}
+
 # Override default Offender API Config
 offenderapi_conf = {
   env_oracledb_servicename = "STGNDA_TAF"
