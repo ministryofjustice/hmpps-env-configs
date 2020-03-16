@@ -47,7 +47,7 @@ ansible_vars = {
 
 # User Management
 umt_config = {
-  version = "latest"
+  version = "1.6.6"
 }
 
 env_user_access_cidr_blocks = []

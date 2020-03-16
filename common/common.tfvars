@@ -327,7 +327,7 @@ backup_retention_days = 7
 snapshot_retention_days = 7
 
 # Default values for LDAP
-instance_type_ldap = "t3.large"
+instance_type_ldap = "t3.small"
 ldap_disk_config = {
   volume_type = "io1"
   volume_size = 50
