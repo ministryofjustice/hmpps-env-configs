@@ -179,7 +179,7 @@ mariadb_monitoring_interval  = 5
 rds_allocated_storage        = "1000"
 
 #monitoring
-mis_alarms_enabled = "false"
+mis_alarms_enabled = "true"
 
 #DIS LB Healtcheck
 dis-health_check = [
