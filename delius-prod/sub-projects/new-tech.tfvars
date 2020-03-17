@@ -83,6 +83,7 @@ offender_api_allowed_secure_cidrs = [
   "35.177.252.195/32", # healthkick
   "51.141.82.211/32",  # azure oauth server
   "194.168.183.130/32", # CATS+ access
+  "51.141.53.111/32", # Public IP of azure fortinet
 
 ]offender_search_allowed_secure_cidrs = [
   "35.178.209.113/32", # cloudplatform-live1-1
