@@ -66,7 +66,7 @@ alf_restore_status = "restore"
 
 # ASG Configuration
 alfresco_asg_props = {
-  asg_ami  = "ami-0f7eff23903506a77"
+  asg_ami  = "ami-024bdaa974371ea6b"
   ami_name = "HMPPS Alfresco *"
-  image_id = "ami-0f7eff23903506a77" # used for updating ami launch permissions
+  image_id = "ami-024bdaa974371ea6b" # used for updating ami launch permissions
 }
