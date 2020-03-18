@@ -1,0 +1,12 @@
+--- # mis_standbydb1.yml
+
+database_standby_unique: STGMISS1
+database_standby_sid: STGMISS1
+database_parameters:
+   control_management_pack_access: DIAGNOSTIC
+required_patches:
+    p18841764:
+      filename: p18841764_112040_Linux-x86-64.zip
+      description: ORA-12592 TNS:BAD PACKET on large datasets
+      grid_patch: true
+      database_patch: true
