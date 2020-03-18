@@ -1,0 +1,6 @@
+--- # misdsd_primarydb.yml
+
+database_global_database: STGDSD
+database_taf_service: STGDSD_TAF
+database_primary_unique: STGDSD
+database_primary_sid: STGDSD
