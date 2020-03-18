@@ -17,11 +17,11 @@ delius_standbydb2
 delius-db-1.probation.service.justice.gov.uk
 
 [mis_primarydb]
-mis-db-1.delius-stage.internal
+mis-db-1.stage.delius.probation.hmpps.dsd.io
 [mis_standbydb1]
-mis-db-2.delius-stage.internal
+mis-db-2.stage.delius.probation.hmpps.dsd.io
 [mis_standbydb2]
-mis-db-3.delius-stage.internal
+mis-db-3.stage.delius.probation.hmpps.dsd.io
 
 [mis_dbs:children]
 mis_primarydb
@@ -29,11 +29,11 @@ mis_standbydb1
 mis_standbydb2
 
 [misboe_primarydb]
-misboe-db-1.delius-stage.internal
+misboe-db-1.stage.delius.probation.hmpps.dsd.io
 [misboe_standbydb1]
-misboe-db-2.delius-stage.internal
+misboe-db-2.stage.delius.probation.hmpps.dsd.io
 [misboe_standbydb2]
-misboe-db-3.delius-stage.internal
+misboe-db-3.stage.delius.probation.hmpps.dsd.io
 
 [misboe_dbs:children]
 misboe_primarydb
@@ -41,11 +41,11 @@ misboe_standbydb1
 misboe_standbydb2
 
 [misdsd_primarydb]
-misdsd-db-1.delius-stage.internal
+misdsd-db-1.stage.delius.probation.hmpps.dsd.io
 [misdsd_standbydb1]
-misdsd-db-2.delius-stage.internal
+misdsd-db-2.stage.delius.probation.hmpps.dsd.io
 [misdsd_standbydb2]
-misdsd-db-3.delius-stage.internal
+misdsd-db-3.stage.delius.probation.hmpps.dsd.io
 
 [misdsd_dbs:children]
 misdsd_primarydb
