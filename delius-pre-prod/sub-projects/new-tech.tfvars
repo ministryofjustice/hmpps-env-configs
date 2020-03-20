@@ -63,6 +63,8 @@ offenderpollpush_conf = {
 # Override default Offender Search Service Config
 offendersearch_conf = {
   env_oauth2_jwt_jwk_set_uri = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/.well-known/jwks.json"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
 }
 
 offender_api_allowed_cidrs = [
