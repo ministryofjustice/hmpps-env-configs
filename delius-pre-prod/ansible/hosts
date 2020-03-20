@@ -13,6 +13,8 @@ delius_primarydb
 delius_standbydb1
 delius_standbydb2
 
+[source_rds_iaps]
+delius-db-1.probation.service.justice.gov.uk
 
 [mis_primarydb]
 mis-db-1.pre-prod.delius.probation.hmpps.dsd.io
