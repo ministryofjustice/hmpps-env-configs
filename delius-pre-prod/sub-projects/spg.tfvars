@@ -1,5 +1,5 @@
 #DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
-image_version = "latest"
+image_version = "branch-latest-DAM-695"
 
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
@@ -51,9 +51,9 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 ### MPX ###
 
-spg_mpx_asg_desired = 1 #3 when aMQ and identity generator deployed
-spg_mpx_asg_max = 2 #6 when aMQ and identity generator deployed
-spg_mpx_asg_min = 1 #3 when aMQ and identity generator deployed
+spg_mpx_asg_desired = 3 #3 when aMQ and identity generator deployed
+spg_mpx_asg_max = 3 #6 when aMQ and identity generator deployed
+spg_mpx_asg_min = 3 #3 when aMQ and identity generator deployed
 
 spg_mpx_service_desired_count = 1 # 3 when aMQ and identity generator deployed
 spg_mpx_ecs_memory = 32100
