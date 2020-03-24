@@ -55,7 +55,7 @@ alfresco_asg_props = {
   ebs_volume_size   = 512
   min_elb_capacity  = 1
   ami_name          = "HMPPS Alfresco*"
-  image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
+  image_id = "ami-024bdaa974371ea6b" # used for updating ami launch permissions
 }
 
 alf_backups_config = {
