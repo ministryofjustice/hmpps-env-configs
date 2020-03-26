@@ -57,11 +57,14 @@ web_conf = {
 offenderpollpush_conf = {
   cpu    = "3072"
   memory = "4096"
+  env_sns_arn_topic = "arn:aws:sns:eu-west-2:754256621582:cloud-platform-Digital-Prison-Services-dbe10e8d9c1f4d100f0c723d5d9b754e"
 }
 
 # Override default Offender Search Service Config
 offendersearch_conf = {
-  env_jwt_public_key       = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBalRkdXRLS2VQUkJlQWNrZ1M2cC8NCmxWK2Q1WXFiM3ExOHo2VXdoMU1OWXhwM0hxWXBZVis5MnlGeGUyUTVSN0tWakl5S3kyZkdBanNXeStlU04yM1QNCkZURVVUeXdHdnc0SkJrRGRoaUUvKy80SjR2TWFHMzBYN29GdE9JUWIwaENFQVlWM3o4emc1WVd2OGZlRkVnWGcNCkp3SjVCc2krU0NvajNIZDlERXk1ZGZaTTljL3BoOXN5YWpLU1ZiQW8rRCtXanhQWHU4UndRSk9BU0g0NUVwclQNCjNJMy9NdllyY1ZvdkN4UVZyUWNwYzNiY0U0bHpYdFlSVy9wSWpHUVpBKy9WYjNXZXZuR1FiYndTNHp6eXkzazgNCkRCZ0pzQVJlVDI1eHp0ckptRGlZZXBHYkVKVHV0alRqR2NVOG1qUjRWZ3gwdHdqMk9DMzBES3dXbGlrMzhXTWwNCk5RSURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0="
+  env_oauth2_jwt_jwk_set_uri = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/.well-known/jwks.json"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
 }
 
 offender_api_allowed_cidrs = [
@@ -73,7 +76,9 @@ offender_api_allowed_secure_cidrs = [
   "3.8.51.207/32",     # cloudplatform-live1-2
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32", # healthkick
-  "51.140.228.7/32"    # azure oauth server
+  "51.140.228.7/32",   # azure oauth server
+  "194.168.183.130/32", # CATS+ access
+  "51.141.53.111/32", # Public IP of azure fortinet
 ]
 
 offender_search_allowed_secure_cidrs = [

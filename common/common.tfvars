@@ -55,7 +55,7 @@ alfresco_asg_props = {
   ebs_volume_size   = 512
   min_elb_capacity  = 1
   ami_name          = "HMPPS Alfresco*"
-  image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
+  image_id = "ami-024bdaa974371ea6b" # used for updating ami launch permissions
 }
 
 alf_backups_config = {
@@ -90,6 +90,21 @@ alf_rds_props = {
   major_engine_version    = "9.6"
   replica_engine_version  = "9.6.9"
   master_engine_version   = "9.6.9"
+}
+
+# alf solr
+alf_solr_config = {
+  ebs_size           = 100
+  ebs_iops           = 100
+  ebs_type           = "gp2"
+  ebs_device_name    = "/dev/xvdc"
+  java_xms           = "4000m"
+  java_xmx           = "4000m"
+  alf_jvm_memory     = "4000m"
+  schedule           = "cron(0 01 * * ? *)"
+  cold_storage_after = 14
+  delete_after       = 120
+  snap_tag           = "CreateSnapshotSolr"  
 }
 
 # ontrol rds deployment
@@ -312,7 +327,7 @@ backup_retention_days = 7
 snapshot_retention_days = 7
 
 # Default values for LDAP
-instance_type_ldap = "t3.large"
+instance_type_ldap = "t3.small"
 ldap_disk_config = {
   volume_type = "io1"
   volume_size = 50
@@ -334,7 +349,6 @@ default_ansible_vars_apacheds = {
   import_users_ldif             = "LATEST"
   import_users_ldif_base_users  = "ou=Users,dc=moj,dc=com"
   sanitize_oid_ldif             = "yes"
-  perf_test_users               = "0"
 }
 # TODO once we have releases/tagging, we can remove the ansible vars from the above to reduce it down to:
 //ldap_config = {
@@ -408,10 +422,10 @@ default_ansible_vars = {
 pwm_config = {
   instance_type            = "t3.large" # AWS instance type to use
   memory                   = 6144       # Memory to assign to ECS container in MB
-  ecs_scaling_min_capacity = 3          # Minimum number of running tasks
-  ecs_scaling_max_capacity = 30         # Maximum number of running tasks
-  ec2_scaling_min_capacity = 3          # Minimum number of running instances
-  ec2_scaling_max_capacity = 30         # Maximum number of running instances
+  ecs_scaling_min_capacity = 1          # Minimum number of running tasks
+  ecs_scaling_max_capacity = 10         # Maximum number of running tasks
+  ec2_scaling_min_capacity = 1          # Minimum number of running instances
+  ec2_scaling_max_capacity = 10         # Maximum number of running instances
   ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
   scale_up_cpu_threshold   = 50         # CPU threshold to trigger scale up of EC2 instances
   scale_down_cpu_threshold = 15         # CPU threshold to trigger scale down of EC2 instances
@@ -419,7 +433,7 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                       = "1.7.2-SNAPSHOT"  # Application version
+  version                       = "1.7.3-SNAPSHOT"  # Application version
   memory                        = 1024              # Memory to assign to ECS container in MB
   cpu                           = 512               # CPU to assign to ECS container
   ecs_scaling_min_capacity      = 1                 # Minimum number of running tasks
@@ -427,7 +441,7 @@ default_umt_config = {
   ecs_target_cpu                = 60                # CPU target value for scaling of ECS tasks
   redis_node_type               = "cache.t3.small"  # Instance type to use for the Redis token store cluster
   redis_node_groups             = 1                 # Number of Redis shards (node groups) in the cluster
-  redis_replicas_per_node_group = 1                 # Number of read-only replicas for each shard (node group)
+  redis_replicas_per_node_group = 0                 # Number of read-only replicas for each shard (node group)
 }
 umt_config = {}
 
@@ -446,7 +460,7 @@ aptracker_api_config = {}
 # Delius GDPR compliance tool
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "0.13.0"               # Application version
+  api_version                 = "0.21.0"               # Application version
   api_memory                  = 512                    # Memory to assign to API container
   api_cpu                     = 512                    # CPU to assign to API container
   cron_identifyduplicates     = "-"                    # Batch schedules. Set to "-" to disable.
@@ -456,17 +470,17 @@ default_gdpr_config = {
   cron_deleteoffenders        = "-"                    #
   cron_destructionlogclearing = "-"                    #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
-  ui_version                  = "0.13.0"               # Application version
+  ui_version                  = "0.21.0"               # Application version
   ui_memory                   = 512                    # Memory to assign to UI container
   ui_cpu                      = 512                    # CPU to assign to UI container
+  ui_scaling_min_capacity     = 1                      # Minimum number of running tasks per service
+  ui_scaling_max_capacity     = 10                     # Maximum number of running tasks per service
+  ui_target_cpu               = 60                     # CPU target value for scaling of ECS tasks
   db_instance_class           = "db.t3.small"          # Instance type to use for the database
   db_storage                  = 30                     # Allocated database storage in GB
   db_maintenance_window       = "Wed:21:00-Wed:23:00"  # Maintenance window for database patching/upgrades
   db_backup_window            = "19:00-21:00"          # Daily window to take RDS backups
   db_backup_retention_period  = 1                      # Number of days to retain RDS backups for
-  scaling_min_capacity        = 1                      # Minimum number of running tasks per service
-  scaling_max_capacity        = 5                      # Maximum number of running tasks per service
-  target_cpu                  = 60                     # CPU target value for scaling of ECS tasks
   log_level                   = "DEBUG"                # Application log-level
 }
 gdpr_config = {}

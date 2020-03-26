@@ -6,7 +6,7 @@ lb_account_id = "652711504416"
 cloudwatch_log_retention = 14
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
-route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
+route53_hosted_zone_id = "Z2QF2SEPISTMNB"
 
 public_ssl_arn = "arn:aws:acm:eu-west-2:723123699647:certificate/0b97aef6-3c80-48c2-818c-855d493b2d81"
 
@@ -33,31 +33,29 @@ self_signed_server_validity_period_hours = 2160
 self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
-bcs_instance_type  = "t2.xlarge"
+bcs_instance_type  = "m5.2xlarge"
 bcs_root_size = 75
 bcs_server_count = 1
 
 #Instance size for bfs
-bfs_instance_type  = "t2.xlarge"
+bfs_instance_type  = "m5.2xlarge"
 bfs_root_size = 75
 bfs_server_count = 1
 
 #Instance size for bps
-bps_instance_type  = "t2.xlarge"
+bps_instance_type  = "m5.2xlarge"
 bps_root_size = 75
 bps_server_count = 1
 
 #Instance size for bws
-bws_instance_type  = "t2.xlarge"
+bws_instance_type  = "m5.2xlarge"
 bws_root_size = 75
 bws_server_count = 1
 
 #Instance size for dis
-dis_instance_type  = "t2.xlarge"
+dis_instance_type  = "m5.2xlarge"
 dis_root_size = 75
 dis_server_count = 1
-
-
 
 bws-health_check = [
   {
@@ -72,19 +70,20 @@ bws-health_check = [
 # Databases
 ## MIS Datamart
 db_size_mis = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size  = "x_large"
+  instance_type  = "r5.4xlarge"
   disk_iops      = 5000
-  disks_quantity = 2          # Do not decrease this
-  disk_size      = 5000        # Do not decrease this
+  disks_quantity = 16          # Do not decrease this
+  disk_size      = 1000        # Do not decrease this
 
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
+  high_availability_count = 0
 }
 
 ansible_vars_mis_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMDMIS"
-  database_sid                  = "DMDMIS"
+  database_global_database_name = "SANMIS"
+  database_sid                  = "SANMIS"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/mis-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/mis-database/db/oradb_system_password"
@@ -109,12 +108,14 @@ db_size_misboe = {
   disk_size      = 500        # Do not decrease this
 
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
+
+  high_availability_count = 0
 }
 
 ansible_vars_misboe_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMDBOE"
-  database_sid                  = "DMDBOE"
+  database_global_database_name = "SANBOE"
+  database_sid                  = "SANBOE"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/misboe-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/misboe-database/db/oradb_system_password"
@@ -139,12 +140,14 @@ db_size_misdsd = {
   disk_size      = 500        # Do not decrease this
 
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
+
+  high_availability_count = 0
 }
 
 ansible_vars_misdsd_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMDDSD"
-  database_sid                  = "DMDDSD"
+  database_global_database_name = "SANDSD"
+  database_sid                  = "SANDSD"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/misdsd-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/misdsd-database/db/oradb_system_password"
@@ -160,7 +163,7 @@ ansible_vars_misdsd_db = {
   oracle_dbca_template_file  = "database"
 }
 
-legacy_environment_name = "100"
+legacy_environment_name = "410"
 
 #Nextcloud
 nextcloud_health_check = [
@@ -173,13 +176,13 @@ nextcloud_health_check = [
   },
 ]
 
-nextcloud_instance_type      = "t2.small"
-rds_instance_class           = "db.t2.small"
-mariadb_monitoring_interval  = 30
-rds_allocated_storage        = "500"
+nextcloud_instance_type      = "m5.4xlarge"
+rds_instance_class           = "db.m5.xlarge"
+mariadb_monitoring_interval  = 5
+rds_allocated_storage        = "1000"
 
 #monitoring
-mis_alarms_enabled = "true"
+mis_alarms_enabled = "false"
 
 #DIS LB Healtcheck
 dis-health_check = [

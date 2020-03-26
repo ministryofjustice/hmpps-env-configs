@@ -15,10 +15,10 @@ ldap_config:
   base_users: ou=Users,dc=moj,dc=com  # (also defined in tfvars: ldap_config["base_users"])
   base_roles: cn=ndRoleCatalogue,ou=Users,dc=moj,dc=com
   base_service_users: cn=EISUsers,ou=Users,dc=moj,dc=com
+  base_groups: ou=Groups,dc=moj,dc=com
   bind_user: cn=admin,dc=moj,dc=com   # (also defined in tfvars: ldap_config["bind_user"])
   import_data:
     ldif: LATEST
     sanitize_ldif: yes
     base_users: ou=Users,dc=moj,dc=com
-  create_perf_test_users: 0
   rbac_version: 4.5.6                 # This default should match the version in Prod

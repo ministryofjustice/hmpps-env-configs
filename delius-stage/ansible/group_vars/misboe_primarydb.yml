@@ -1,0 +1,8 @@
+--- # misboe_primarydb.yml
+
+database_global_database: STGBOE
+database_taf_service: STGBOE_TAF
+database_primary_unique: STGBOE
+database_primary_sid: STGBOE
+database_parameters:
+   control_management_pack_access: DIAGNOSTIC

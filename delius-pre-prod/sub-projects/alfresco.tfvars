@@ -68,3 +68,8 @@ alfresco_asg_props = {
 
 # used for iam copying from prod backup bucket
 alf_iam_cross_account_perms = true
+
+# RDs
+alf_rds_props = {
+  snapshot_identifier = "alfresco-preprod-refresh"
+}
