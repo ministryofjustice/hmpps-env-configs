@@ -11,9 +11,6 @@ spg_messaging_broker_url_src = "data"
 spg_jms_host_src             = "data"
 
 #lambda auto start stop vars
-start_cloudwatch_schedule_expression = "cron(00 06 ? * MON-FRI *)"
-stop_cloudwatch_schedule_expression  = "cron(00 20 ? * MON-FRI *)"
 ec2_schedule                         = "true"
 autoscaling_schedule                 = "true"
-auto_stop_rule_enabled               = "true"
-auto_start_rule_enabled              = "true"
+calendar_rule_enabled                = "true"
