@@ -99,17 +99,20 @@ alf_rds_props = {
 
 # alf solr
 alf_solr_config = {
-  ebs_size           = 2000
-  ebs_iops           = 500
-  ebs_type           = "io1"
-  ebs_device_name    = "/dev/xvdc"
-  java_xms           = "8000m"
-  java_xmx           = "8000m"
-  alf_jvm_memory     = "8000m"
-  schedule           = "cron(0 01 * * ? *)"
-  cold_storage_after = 14
-  delete_after       = 120
-  snap_tag           = "CreateSnapshotSolr"
+  ebs_size             = 2000
+  ebs_iops             = 500
+  ebs_type             = "io1"
+  ebs_device_name      = "/dev/xvdc"
+  java_xms             = "8000m"
+  java_xmx             = "8000m"
+  alf_jvm_memory       = "8000m"
+  schedule             = "cron(0 01 * * ? *)"
+  cold_storage_after   = 14
+  delete_after         = 120
+  snap_tag             = "CreateSnapshotSolr"
+  ebs_temp_device_name = "/dev/xvdd"
+  ebs_temp_size        = 200
+  ebs_temp_type        = "gp2"
 }
 
 # ontrol rds deployment
@@ -498,28 +501,28 @@ aptracker_api_config = {}
 # Delius GDPR compliance tool
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "0.22.0"               # Application version
-  api_memory                  = 4196                   # Memory to assign to API container
-  api_cpu                     = 2048                   # CPU to assign to API container
-  cron_identifyduplicates     = "-"                    # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "-"                    #
-  cron_retainedoffendersiicsa = "-"                    #
-  cron_eligiblefordeletion    = "-"                    #
-  cron_deleteoffenders        = "-"                    #
-  cron_destructionlogclearing = "-"                    #
+  api_version                 = "0.22.0" # Application version
+  api_memory                  = 4196     # Memory to assign to API container
+  api_cpu                     = 2048     # CPU to assign to API container
+  cron_identifyduplicates     = "-"      # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders      = "-"      #
+  cron_retainedoffendersiicsa = "-"      #
+  cron_eligiblefordeletion    = "-"      #
+  cron_deleteoffenders        = "-"      #
+  cron_destructionlogclearing = "-"      #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
-  ui_version                  = "0.22.0"               # Application version
-  ui_memory                   = 1024                   # Memory to assign to UI container
-  ui_cpu                      = 1024                   # CPU to assign to UI container
-  ui_scaling_min_capacity     = 2                      # Minimum number of running tasks per service
-  ui_scaling_max_capacity     = 10                     # Maximum number of running tasks per service
-  ui_target_cpu               = 60                     # CPU target value for scaling of ECS tasks
-  db_instance_class           = "db.m5.large"          # Instance type to use for the database
-  db_storage                  = 100                    # Allocated database storage in GB
-  db_maintenance_window       = "Wed:21:00-Wed:23:00"  # Maintenance window for database patching/upgrades
-  db_backup_window            = "19:00-21:00"          # Daily window to take RDS backups
-  db_backup_retention_period  = 14                     # Number of days to retain RDS backups for
-  log_level                   = "INFO"                 # Application log-level
+  ui_version                  = "0.22.0"              # Application version
+  ui_memory                   = 1024                  # Memory to assign to UI container
+  ui_cpu                      = 1024                  # CPU to assign to UI container
+  ui_scaling_min_capacity     = 2                     # Minimum number of running tasks per service
+  ui_scaling_max_capacity     = 10                    # Maximum number of running tasks per service
+  ui_target_cpu               = 60                    # CPU target value for scaling of ECS tasks
+  db_instance_class           = "db.m5.large"         # Instance type to use for the database
+  db_storage                  = 100                   # Allocated database storage in GB
+  db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
+  db_backup_window            = "19:00-21:00"         # Daily window to take RDS backups
+  db_backup_retention_period  = 14                    # Number of days to retain RDS backups for
+  log_level                   = "INFO"                # Application log-level
 }
 gdpr_config = {}
 

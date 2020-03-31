@@ -104,7 +104,10 @@ alf_solr_config = {
   schedule           = "cron(0 01 * * ? *)"
   cold_storage_after = 14
   delete_after       = 120
-  snap_tag           = "CreateSnapshotSolr"  
+  snap_tag           = "CreateSnapshotSolr"
+  ebs_temp_device_name = "/dev/xvdd"
+  ebs_temp_size        = 20
+  ebs_temp_type        = "gp2" 
 }
 
 # ontrol rds deployment
