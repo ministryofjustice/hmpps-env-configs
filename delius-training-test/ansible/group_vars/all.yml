@@ -13,3 +13,8 @@ required_patches:
       postinstall_sql: postinstall.sql
       grid_patch: false
       database_patch: true
+    p18371441:
+      filename: p18371441_112040_Linux-x86-64.zip
+      description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
+      grid_patch: false
+      database_patch: true
