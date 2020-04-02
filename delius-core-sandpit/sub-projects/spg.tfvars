@@ -99,6 +99,7 @@ SPG_GATEWAY_MQ_URL_SOURCE="data"
 
 SPG_ENV_VARS = {
 
-  SPG_DOCUMENT_REST_SERVICE_BASE_URL  ="https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io"
-  SPG_DOCUMENT_REST_SERVICE_HEALTH_CHECK_URL_PATH ="/alfresco/service/noms-spg/notificationStatus"
+  SPG_DOCUMENT_REST_SERVICE_BASE_URL  = "https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io"
+  SPG_DOCUMENT_REST_SERVICE_HEALTH_CHECK_URL_PATH = "/alfresco/service/noms-spg/notificationStatus"
+  SPG_PXY_FQDN = "spgw-dpg-ext.sandpit.probation.service.justice.gov.uk"
 }
