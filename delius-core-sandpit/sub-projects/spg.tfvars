@@ -99,9 +99,10 @@ SPG_GATEWAY_MQ_URL_SOURCE="data"
 
 SPG_ENV_VARS = {
 
-  SPG_ALFRESCO_BASE_URL  = "https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io"
+  SPG_ALFRESCO_BASE_URL        = "https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io"
   SPG_ALFRESCO_HEALTH_ENDPOINT = "/alfresco/service/noms-spg/notificationStatus"
 
-  SPG_ISO_PROTOTYPE_FQDN = "spgw-prototype-ext.sandpit.probation.service.justice.gov.uk"
-
+  SPG_ISO_PROTOTYPE_FQDN    = "spgw-prototype-ext.sandpit.probation.service.justice.gov.uk"
+  SPG_PO_FACING_DOMAIN      = "spgw-ext.sandpit.probation.service.justice.gov.uk" #used for wsdl & wadl published addresses. For non PSN, this matches the ISO_FQDN, ie spgw-ext.test.probation. for PSN this would be spgw-ext-psn.probation.service.justice.gov.uk
+  SPG_PO_STUB_FACING_DOMAIN = "spgw-ext.sandpit.probation.service.justice.gov.uk" #used by alfresco-proxy client test. For non PSN, this matches the ISO_FQDN, ie spgw-ext.test.probation, in PSN it needs to be the internal address of the proxy , typically spgw-int-psn.probation.service.justice.gov.uk
 }
