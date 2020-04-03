@@ -79,6 +79,15 @@ offender_api_allowed_secure_cidrs = [
   "51.140.228.7/32",   # azure oauth server
   "194.168.183.130/32", # CATS+ access
   "51.141.53.111/32", # Public IP of azure fortinet
+  "34.252.4.39/32", # Analytics platform
+  "34.251.212.33/32", # Analytics platform
+  "34.250.17.221/32", # Analytics platform
+  "34.247.31.101/32", # Analytics platform
+  "3.248.11.160/32", # Analytics platform
+  "54.194.123.60/32", # Analytics platform
+  "34.249.60.91/32", # Analytics platform
+  "34.251.199.153/32", # Analytics platform
+  "34.249.194.106/32", # Analytics platform
 ]
 
 offender_search_allowed_secure_cidrs = [
