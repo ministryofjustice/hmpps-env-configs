@@ -93,3 +93,15 @@ SPG_CRC_FQDN  = "spgw-crc-ext.sandpit.probation.service.justice.gov.uk"
 SPG_GATEWAY_MQ_URL_SOURCE="data"
 
 
+#new spg env vars dynamic list
+#some of these could be derived from terraform remote state
+#contents are not enforced
+
+SPG_ENV_VARS = {
+
+  SPG_ALFRESCO_BASE_URL  = "https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io"
+  SPG_ALFRESCO_HEALTH_ENDPOINT = "/alfresco/service/noms-spg/notificationStatus"
+
+  SPG_ISO_PROTOTYPE_FQDN = "spgw-prototype-ext.sandpit.probation.service.justice.gov.uk"
+
+}
