@@ -380,29 +380,36 @@ backup_retention_days = 30
 snapshot_retention_days = 30
 
 # Default values for LDAP
-instance_type_ldap = "m5.8xlarge"
-ldap_disk_config = {
-  volume_type = "io1"
-  volume_size = 100
-  iops        = 5000
-}
-ldap_config = {
+default_ldap_config = {
+  # ASG
+  instance_type         = "m5.2xlarge"
+  instance_count        = 3
+  # Connection
+  protocol              = "ldap"
+  port                  = 389
+  bind_user             = "cn=admin,dc=moj,dc=com"
+  #bind_password        = "${environment_name}/${project_name}/apacheds/apacheds/ldap_admin_password"
+  # Structure
+  base_root             = "dc=moj,dc=com"
+  base_users            = "ou=Users,dc=moj,dc=com"
+  base_service_users    = "cn=EISUsers,ou=Users,dc=moj,dc=com"
+  base_roles            = "cn=ndRoleCatalogue,ou=Users,dc=moj,dc=com"
+  base_role_groups      = "cn=ndRoleGroups,ou=Users,dc=moj,dc=com"
+  base_groups           = "ou=Groups,dc=moj,dc=com"
+  # Logging
+  log_level             = "stats,sync"
+  # Backups
+  backup_frequency      = "hourly"
   backup_retention_days = 7
+  # Performance/tuning
+  query_time_limit      = 30 # seconds
+  db_max_size           = 53687091200 # bytes (=50GB)
+  # Disk
+  disk_volume_type      = "io1"
+  disk_volume_size      = 100 # GB
+  disk_iops             = 5000
 }
-default_ansible_vars_apacheds = {
-  workspace = "/root/bootstrap-workspace"
-
-  # LDAP
-  ldap_protocol = "ldap"
-  bind_user     = "cn=admin,dc=moj,dc=com"
-  base_root     = "dc=moj,dc=com"
-  base_users    = "ou=Users,dc=moj,dc=com"
-
-  # Data import
-  import_users_ldif            = "LATEST"
-  import_users_ldif_base_users = "ou=Users,dc=moj,dc=com"
-  sanitize_oid_ldif            = "yes"
-}
+ldap_config = {}
 
 # Default values for NDelius WebLogic
 instance_type_weblogic            = "m5.xlarge"

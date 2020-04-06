@@ -32,12 +32,6 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
-# LDAP
-ansible_vars_apacheds = {
-  import_users_ldif = "seed.ldif"
-  import_users_ldif_base_users = "cn=Users,dc=moj,dc=com"
-}
-
 # WebLogic
 ansible_vars = {
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
