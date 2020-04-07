@@ -1,6 +1,3 @@
-#DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
-image_version = "latest"
-
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
@@ -10,6 +7,9 @@ cloudwatch_log_retention = 14
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
+
+
+esc_container_stop_timeout = "310s"
 
 
 
@@ -96,3 +96,5 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.dev.delius-core.probati
 SPG_ISO_FQDN  = "spgw-ext.dev.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.dev.delius-core.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.dev.probation.service.justice.gov.uk"
+
+SPG_GATEWAY_MQ_URL_SOURCE="data"
