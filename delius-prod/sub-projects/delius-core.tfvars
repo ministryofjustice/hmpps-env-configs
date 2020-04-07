@@ -35,8 +35,6 @@ ansible_vars_oracle_db = {
 ldap_config = {
   backup_retention_days = 90
 }
-ansible_vars_apacheds = {
-}
 
 # WebLogic
 instance_type_weblogic = "m5.xlarge"

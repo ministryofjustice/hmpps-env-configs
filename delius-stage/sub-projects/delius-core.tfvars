@@ -32,8 +32,8 @@ ansible_vars_oracle_db = {
 }
 
 # LDAP
-instance_type_ldap = "m5.xlarge"
-ansible_vars_apacheds = {
+ldap_config = {
+  instance_type = "m5.xlarge"
 }
 
 # WebLogic

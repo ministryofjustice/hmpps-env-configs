@@ -35,10 +35,6 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file  = "database"
 }
 
-# LDAP
-ansible_vars_apacheds = {
-}
-
 # WebLogic
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"

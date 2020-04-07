@@ -31,11 +31,6 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
-# LDAP
-ansible_vars_apacheds = {
-  import_users_ldif = "IFSR3-190517/OID/IFSR3-190517.ldif"
-}
-
 # WebLogic
 instance_count_weblogic_interface = "0"
 ansible_vars = {
