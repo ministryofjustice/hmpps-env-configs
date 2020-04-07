@@ -1,6 +1,3 @@
-#DOCKER IMAGE VERSION OF THE SPG DEPLOYABLE CODE
-image_version = "develop"
-
 # This is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
@@ -10,6 +7,9 @@ cloudwatch_log_retention = 14
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
+
+esc_container_stop_timeout = "310s"
+
 
 
 
@@ -90,4 +90,19 @@ SPG_ISO_FQDN  = "spgw-ext.sandpit.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.sandpit.delius-core.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.sandpit.probation.service.justice.gov.uk"
 
+SPG_GATEWAY_MQ_URL_SOURCE="data"
 
+
+#new spg env vars dynamic list
+#some of these could be derived from terraform remote state
+#contents are not enforced
+
+SPG_ENV_VARS = {
+
+  SPG_ALFRESCO_BASE_URL        = "https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io"
+  SPG_ALFRESCO_HEALTH_ENDPOINT = "/alfresco/service/noms-spg/notificationStatus"
+
+  SPG_ISO_PROTOTYPE_FQDN    = "spgw-prototype-ext.sandpit.probation.service.justice.gov.uk"
+  SPG_PO_FACING_DOMAIN      = "spgw-ext.sandpit.probation.service.justice.gov.uk" #used for wsdl & wadl published addresses. For non PSN, this matches the ISO_FQDN, ie spgw-ext.test.probation. for PSN this would be spgw-ext-psn.probation.service.justice.gov.uk
+  SPG_PO_STUB_FACING_DOMAIN = "spgw-ext.sandpit.probation.service.justice.gov.uk" #used by alfresco-proxy client test. For non PSN, this matches the ISO_FQDN, ie spgw-ext.test.probation, in PSN it needs to be the internal address of the proxy , typically spgw-int-psn.probation.service.justice.gov.uk
+}

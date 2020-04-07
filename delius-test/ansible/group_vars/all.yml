@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-test
 simple_environment_name: test
-ndelius_version: "4.6.4"
+ndelius_version: "4.6.6"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
@@ -16,5 +16,10 @@ required_patches:
       filename: p27659043_11204180417_Linux-x86-64.zip
       description: MES Bundle Patch for April 2018 PSU
       postinstall_sql: postinstall.sql
+      grid_patch: false
+      database_patch: true
+    p18371441:
+      filename: p18371441_112040_Linux-x86-64.zip
+      description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
       grid_patch: false
       database_patch: true
