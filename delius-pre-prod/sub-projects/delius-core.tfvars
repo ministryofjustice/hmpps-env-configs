@@ -31,10 +31,6 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
-# LDAP
-ansible_vars_apacheds = {
-}
-
 # WebLogic
 instance_type_weblogic = "m5.xlarge"
 instance_count_weblogic_ndelius = "30"
