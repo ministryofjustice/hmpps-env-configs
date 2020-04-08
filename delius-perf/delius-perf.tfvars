@@ -14,7 +14,7 @@ instance_type_weblogic = "t2.large"
 instance_type_db = "t2.large"
 
 egress_443 = true
-egress_80 = true
+egress_80  = true
 
 ndelius_version = "4.1.7.3"
 
@@ -25,3 +25,4 @@ smtp_instance_type = "m5.xlarge"
 SPG_GATEWAY_MQ_URL_SOURCE    = "data"
 spg_messaging_broker_url_src = "data"
 spg_jms_host_src             = "data"
+
