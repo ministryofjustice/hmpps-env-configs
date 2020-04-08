@@ -6,6 +6,22 @@ availability_zone = {
   az3 = "eu-west-2c"
 }
 
+aws_account_ids = {
+  delius-core-non-prod       = "723123699647"
+  hmpps-delius-auto-test     = "431912413968"
+  hmpps-delius-test          = "728765553488"
+  hmpps-delius-perf          = "130975965028"
+  hmpps-delius-stage         = "205048117103"
+  hmpps-delius-mis-dev       = "479759138745"
+  hmpps-delius-mis-test      = "349354156492"
+  hmpps-delius-po-test1      = "716683748953"
+  hmpps-delius-po-test2      = "645753425509"
+  hmpps-delius-training      = "330914586320"
+  hmpps-delius-training-test = "130847504577"
+  hmpps-delius-pre-prod      = "010587221707"
+  hmpps-delius-prod          = "050243167760"
+}
+
 # LB Account is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
