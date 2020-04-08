@@ -111,7 +111,7 @@ alf_solr_config = {
   delete_after         = 120
   snap_tag             = "CreateSnapshotSolr"
   ebs_temp_device_name = "/dev/xvdd"
-  ebs_temp_size        = 500
+  ebs_temp_size        = 2000
   ebs_temp_type        = "gp2"
 }
 
