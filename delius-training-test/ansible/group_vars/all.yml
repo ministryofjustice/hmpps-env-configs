@@ -18,3 +18,8 @@ required_patches:
       description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
       grid_patch: false
       database_patch: true
+    p20807155:
+      filename: p20807155_112040_Linux-x86-64.zip
+      description: ORA-07445 Updating Table with CLOB
+      grid_patch: false
+      database_patch: true
