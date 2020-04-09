@@ -1,6 +1,0 @@
---- # misboe_standbydb2.yml
-
-database_standby_unique: STGBOES2
-database_standby_sid: STGBOES2
-database_parameters:
-   control_management_pack_access: DIAGNOSTIC
