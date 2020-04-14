@@ -419,7 +419,7 @@ default_ldap_config = {
   backup_retention_days = 7
   # Performance/tuning
   query_time_limit      = 30 # seconds
-  db_max_size           = 53687091200 # bytes (=50GB)
+  db_max_size           = "53687091200" # bytes (=50GB)
   # Disk
   disk_volume_type      = "io1"
   disk_volume_size      = 100 # GB
