@@ -20,6 +20,8 @@ aws_account_ids = {
   hmpps-delius-training-test = "130847504577"
   hmpps-delius-pre-prod      = "010587221707"
   hmpps-delius-prod          = "050243167760"
+  hmpps-probation            = "570551521311"
+  cloud-platform             = "754256621582"
 }
 
 # LB Account is used for ALB logs to S3 bucket.
