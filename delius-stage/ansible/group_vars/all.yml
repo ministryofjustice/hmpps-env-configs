@@ -7,3 +7,9 @@ ndelius_version: "4.5.7"
 catalog: PCAT
 data_classification: official-data
 delegated_account_id: "205048117103"
+required_patches:
+    p18371441:
+      filename: p18371441_112040_Linux-x86-64.zip
+      description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
+      grid_patch: false
+      database_patch: true
