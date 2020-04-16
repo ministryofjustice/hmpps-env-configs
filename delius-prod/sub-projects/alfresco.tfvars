@@ -65,3 +65,8 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.probation.service.justice.gov.uk:
 alf_ops_alerts = {
   messaging_status = "enabled"
 }
+
+# db instance size override
+alf_rds_props = {
+  instance_class = "db.m5.12xlarge"
+}

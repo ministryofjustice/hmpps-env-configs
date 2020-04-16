@@ -4,7 +4,7 @@ database_global_database: PERNDA
 database_taf_service: PERNDA_TAF
 database_primary_unique: PERNDA
 database_primary_sid: PERNDA
-rman_level_0_backup_duration_target: "21:00"
+rman_level_0_backup_duration_target: "12:00"
 rman_uncompressed_backup: Y
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
 required_patches:

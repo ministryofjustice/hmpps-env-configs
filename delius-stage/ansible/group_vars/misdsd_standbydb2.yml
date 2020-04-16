@@ -1,4 +1,0 @@
---- # misdsd_standbydb2.yml
-
-database_standby_unique: STGDSDS2
-database_standby_sid: STGDSDS2
