@@ -24,6 +24,10 @@ aws_account_ids = {
   cloud-platform             = "754256621582"
 }
 
+cloudplatform_data = {
+  cidr_range  = "172.20.0.0/16"
+}
+
 # LB Account is used for ALB logs to S3 bucket.
 # This is fixed for each region. if region changes, this changes
 lb_account_id = "652711504416"
