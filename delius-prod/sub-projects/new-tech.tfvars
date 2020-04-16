@@ -41,6 +41,7 @@ offenderapi_conf = {
   env_jwt_public_key       = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBcEpHbWFqeklvTzlXUmNqMDNlU20NCkV5YlNic0loR2Q2RFZUNHFRYVJFNnA3dEg3WmlKSW9Fa3NzNGQ4WmEwaG5hYnBrQmpZNjBLc2cxbm15emhlWVINCithWXVtc0gxbm1JcmJ4ZCtqV043T3A2V1pteWRBU3JMek1XWVdBYlNHOHBXMXkxY1RwdkRaMTlBSGJTYTRRL2UNCkp0ZXAxbHArMjJ1RzFuZE1UcHJUZDY0S05HMmZ0cHJld2hRMXhOcXZrVFo2aEJ1UUVSSjMxYVFwZEU4TUExcUsNCkNacjdUMnFOTUFNY2ROWmJrQWpGNUs5cTRqVnRCRjdZcU95cnRPUmZOV2phQmhYcDlOU3RhYkJNcFRFN1A2by8NClhJaU9rcmltNjlzaG1OdDhVRlU3WUlJN0ZvejgzM29HZnk2dmtDRjRxcGpIZ0RNc21STjc1UXRrRmRtaU8xaDgNCnB3SURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0="
   env_features_noms_update_custody = "true"
   env_features_noms_update_booking_number = "true"
+  env_features_noms_update_keydates = "true"
 }
 
 # Override default Elasticsearch Config
@@ -63,11 +64,14 @@ web_conf = {
 offenderpollpush_conf = {
   cpu    = "3072"
   memory = "4096"
+  env_sns_arn_topic = "arn:aws:sns:eu-west-2:754256621582:cloud-platform-Digital-Prison-Services-c2d997878cd24eef94e60f1404977153"
 }
 
 # Override default Offender Search Service Config
 offendersearch_conf = {
-  env_jwt_public_key       = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBcEpHbWFqeklvTzlXUmNqMDNlU20NCkV5YlNic0loR2Q2RFZUNHFRYVJFNnA3dEg3WmlKSW9Fa3NzNGQ4WmEwaG5hYnBrQmpZNjBLc2cxbm15emhlWVINCithWXVtc0gxbm1JcmJ4ZCtqV043T3A2V1pteWRBU3JMek1XWVdBYlNHOHBXMXkxY1RwdkRaMTlBSGJTYTRRL2UNCkp0ZXAxbHArMjJ1RzFuZE1UcHJUZDY0S05HMmZ0cHJld2hRMXhOcXZrVFo2aEJ1UUVSSjMxYVFwZEU4TUExcUsNCkNacjdUMnFOTUFNY2ROWmJrQWpGNUs5cTRqVnRCRjdZcU95cnRPUmZOV2phQmhYcDlOU3RhYkJNcFRFN1A2by8NClhJaU9rcmltNjlzaG1OdDhVRlU3WUlJN0ZvejgzM29HZnk2dmtDRjRxcGpIZ0RNc21STjc1UXRrRmRtaU8xaDgNCnB3SURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0="
+  env_oauth2_jwt_jwk_set_uri = "https://gateway.prod.nomis-api.service.hmpps.dsd.io/auth/.well-known/jwks.json"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
 }
 
 offender_api_allowed_cidrs = [
@@ -79,9 +83,21 @@ offender_api_allowed_secure_cidrs = [
   "3.8.51.207/32",     # cloudplatform-live1-2
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32", # healthkick
-  "51.141.82.211/32"   # azure oauth server
+  "51.141.82.211/32",  # azure oauth server
+  "194.168.183.130/32", # CATS+ access
+  "51.141.53.111/32", # Public IP of azure fortinet
+  "34.252.4.39/32", # Analytics platform
+  "34.251.212.33/32", # Analytics platform
+  "34.250.17.221/32", # Analytics platform
+  "34.247.31.101/32", # Analytics platform
+  "3.248.11.160/32", # Analytics platform
+  "54.194.123.60/32", # Analytics platform
+  "34.249.60.91/32", # Analytics platform
+  "34.251.199.153/32", # Analytics platform
+  "34.249.194.106/32", # Analytics platform
+]
 
-]offender_search_allowed_secure_cidrs = [
+offender_search_allowed_secure_cidrs = [
   "35.178.209.113/32", # cloudplatform-live1-1
   "3.8.51.207/32",     # cloudplatform-live1-2
   "35.177.252.54/32",  # cloudplatform-live1-3

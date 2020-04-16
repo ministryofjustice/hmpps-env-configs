@@ -10,3 +10,8 @@ required_patches:
       postinstall_sql: postinstall.sql
       grid_patch: false
       database_patch: true
+    p20807155:
+      filename: p20807155_112040_Linux-x86-64.zip
+      description: ORA-07445 Updating Table with CLOB
+      grid_patch: false
+      database_patch: true

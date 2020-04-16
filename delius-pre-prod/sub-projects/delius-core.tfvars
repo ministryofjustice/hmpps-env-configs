@@ -31,16 +31,17 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
-# LDAP
-ansible_vars_apacheds = {
-}
-
 # WebLogic
 instance_type_weblogic = "m5.xlarge"
 instance_count_weblogic_ndelius = "30"
 ansible_vars = {
   database_sid = "PRENDA"
   ndelius_log_level = "ERROR"
+}
+
+# UMT
+umt_config = {
+  version = "1.7.2"
 }
 
 env_user_access_cidr_blocks = [

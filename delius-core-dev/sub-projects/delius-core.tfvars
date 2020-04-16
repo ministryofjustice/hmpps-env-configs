@@ -31,18 +31,17 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
-# LDAP
-ansible_vars_apacheds = {
-  import_users_ldif = "seed.ldif"
-  import_users_ldif_base_users = "cn=Users,dc=moj,dc=com"
-}
-
 # WebLogic
 ansible_vars = {
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
   ndelius_training_mode = "development"
   ndelius_log_level = "DEBUG"
   database_sid = "DNDA"
+}
+
+# User Management
+umt_config = {
+  version = "latest"
 }
 
 env_user_access_cidr_blocks = []
