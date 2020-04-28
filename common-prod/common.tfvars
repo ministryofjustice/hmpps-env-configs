@@ -121,7 +121,7 @@ alf_rds_props = {
 
 # alf solr
 alf_solr_config = {
-  ebs_size             = 5000
+  ebs_size             = 10000
   ebs_iops             = 500
   ebs_type             = "io1"
   ebs_device_name      = "/dev/xvdc"
