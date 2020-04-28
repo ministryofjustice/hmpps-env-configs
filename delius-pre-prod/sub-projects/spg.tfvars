@@ -52,10 +52,10 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 ### MPX ###
 
 spg_mpx_asg_desired = 3 #3 when aMQ and identity generator deployed
-spg_mpx_asg_max = 3 #6 when aMQ and identity generator deployed
+spg_mpx_asg_max = 6 #6 when aMQ and identity generator deployed
 spg_mpx_asg_min = 3 #3 when aMQ and identity generator deployed
 
-spg_mpx_service_desired_count = 1 # 3 when aMQ and identity generator deployed
+spg_mpx_service_desired_count = 3 # 3 when aMQ and identity generator deployed
 spg_mpx_ecs_memory = 32100
 SPG_MPX_JAVA_MAX_MEM = 31900
 SPG_MPX_HOST_TYPE = "hybrid"

@@ -3,7 +3,7 @@ vpc_supernet = "10.160.48.0/20"
 aws_nameserver = "10.160.48.2"
 
 # Moved from spg.tfvars
-route53_strategic_hosted_zone_id = "Z222MCWUHZK2CF"
+route53_strategic_hosted_zone_id = "Z2B72ITPJW013I"
 
 public_ssl_arn = ""
 

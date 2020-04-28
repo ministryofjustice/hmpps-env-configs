@@ -17,7 +17,7 @@ PO_SPG_CONFIGURATION = {
   PO_STC_NAME = "SEETEC"
   PO_STC_TLS_COMMON_NAME = "integration-testing-spg420.seetec.co.uk"
   PO_STC_SIGNING_COMMON_NAME = "integration-testing-spg420.seetec.co.uk"
-  PO_STC_ENDPOINT_URL = "https://integration-testing-spg420.seetec.co.uk:9001/cxf/ExampleSecurityProxyToCRC"
+  PO_STC_ENDPOINT_URL = "https://integration-testing-spg420.seetec.co.uk:9001/NOMSInbound.svc"
   PO_STC_CRC_LIST = "C21"
 
   PO_MTC_NAME = "MTC"
