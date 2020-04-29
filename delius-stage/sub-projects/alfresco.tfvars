@@ -71,5 +71,5 @@ alfresco_asg_props = {
 
 # RDs
 alf_rds_props = {
-  snapshot_identifier = "alf-stage-2020-04-18"
+  snapshot_identifier = "alfresco-stage-28-04-2020"
 }
