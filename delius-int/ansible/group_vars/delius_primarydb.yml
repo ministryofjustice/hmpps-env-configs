@@ -1,0 +1,6 @@
+--- # delius_primarydb.yml
+
+database_global_database: INTNDA
+database_taf_service: INTNDA_TAF
+database_primary_unique: INTNDA
+database_primary_sid: INTNDA
