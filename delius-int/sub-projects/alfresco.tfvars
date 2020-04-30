@@ -65,8 +65,3 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.int.delius.probation.hmpps.dsd.io
 alf_restore_status = "restore"
 
 es_s3_repo_name = "snapshot_ifsr3_3"
-
-# ASG Configuration
-alfresco_asg_props = {
-  asg_ami = "ami-0f7eff23903506a77"
-}
