@@ -121,7 +121,7 @@ alf_rds_props = {
 
 # alf solr
 alf_solr_config = {
-  ebs_size             = 5000
+  ebs_size             = 10000
   ebs_iops             = 500
   ebs_type             = "io1"
   ebs_device_name      = "/dev/xvdc"
@@ -133,7 +133,7 @@ alf_solr_config = {
   delete_after         = 120
   snap_tag             = "CreateSnapshotSolr"
   ebs_temp_device_name = "/dev/xvdd"
-  ebs_temp_size        = 2000
+  ebs_temp_size        = 10000
   ebs_temp_type        = "gp2"
 }
 

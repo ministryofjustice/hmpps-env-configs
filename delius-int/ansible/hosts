@@ -1,12 +1,12 @@
 [loadrunner]
-loadrunner.po-test1.delius.probation.hmpps.dsd.io
+loadrunner.int.delius.probation.hmpps.dsd.io
 
 [delius_primarydb]
-delius-db-1.po-test1.delius.probation.hmpps.dsd.io
+delius-db-1.int.delius.probation.hmpps.dsd.io
 [delius_standbydb1]
-delius-db-2.po-test1.delius.probation.hmpps.dsd.io
+delius-db-2.int.delius.probation.hmpps.dsd.io
 [delius_standbydb2]
-delius-db-3.po-test1.delius.probation.hmpps.dsd.io
+delius-db-3.int.delius.probation.hmpps.dsd.io
 
 [delius_dbs:children]
 delius_primarydb

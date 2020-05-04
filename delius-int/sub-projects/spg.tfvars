@@ -29,7 +29,7 @@ aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 
 spg_app_name = "spgw"
 
-s3_bucket_config = "tf-eu-west-2-hmpps-delius-po-test1-spgw-s3bucket"
+s3_bucket_config  = "tf-eu-west-2-hmpps-delius-int-spgw-s3bucket"
 spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
@@ -42,54 +42,54 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 ### MPX ###
 
-spg_mpx_asg_desired = 1
-spg_mpx_asg_max = 2
-spg_mpx_asg_min = 1
+spg_mpx_asg_desired           = 1
+spg_mpx_asg_max               = 2
+spg_mpx_asg_min               = 1
 spg_mpx_service_desired_count = 1
-SPG_MPX_JAVA_MAX_MEM = 3645
-SPG_MPX_HOST_TYPE = "hybrid"
+SPG_MPX_JAVA_MAX_MEM          = 3645
+SPG_MPX_HOST_TYPE             = "hybrid"
 
 
 ### CRC ###
 
-spg_crc_asg_desired = 1
-spg_crc_asg_max = 2
-spg_crc_asg_min = 1
-spg_crc_ecs_memory = 1881
+spg_crc_asg_desired  = 1
+spg_crc_asg_max      = 2
+spg_crc_asg_min      = 1
+spg_crc_ecs_memory   = 1881
 SPG_CRC_JAVA_MAX_MEM = 1691
-SPG_CRC_HOST_TYPE = "crc"
+SPG_CRC_HOST_TYPE    = "crc"
 
 
 ### ISO ###
 
-spg_iso_asg_desired = 1
-spg_iso_asg_max = 2
-spg_iso_asg_min = 1
+spg_iso_asg_desired           = 1
+spg_iso_asg_max               = 2
+spg_iso_asg_min               = 1
 spg_iso_service_desired_count = 1
-spg_iso_ecs_memory = 1881
-SPG_ISO_JAVA_MAX_MEM = 1691
-SPG_ISO_HOST_TYPE = "iso"
+spg_iso_ecs_memory            = 1881
+SPG_ISO_JAVA_MAX_MEM          = 1691
+SPG_ISO_HOST_TYPE             = "iso"
 
 
 
-SPG_GENERIC_BUILD_INV_DIR= "/tmp/spg/ansible/inventories/generic-default"
+SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 
 
 #SPG_ENVIRONMENT_CN represents the strategic public DNS gov domain, and is used by SPG to know the name of the certificates it imports
 #as well as displaying the environment in terminals and splash screens
 #eg spgw-ext.{{ SPG_ENVIRONMENT_CN }}.pfx
 
-SPG_ENVIRONMENT_CODE = "po-test"
-SPG_ENVIRONMENT_CN = "po-test.probation.service.justice.gov.uk"
+SPG_ENVIRONMENT_CODE = "int"
+SPG_ENVIRONMENT_CN   = "int.probation.service.justice.gov.uk"
 
 
-SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://delius-jms.delius-po-test1.internal:61617"
+SPG_GATEWAY_MQ_URL = "tcp://localhost:61616"
+SPG_DELIUS_MQ_URL  = "tcp://delius-jms.delius-int.internal:61617"
 
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.po-test1.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.po-test1.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  = "https://alfresco.int.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL = "https://alfresco.int.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
 
-SPG_ISO_FQDN  = "spgw-ext.po-test.probation.service.justice.gov.uk"
-SPG_MPX_FQDN  = "spgw-mpx-int.po-test1.delius.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-ext.po-test.probation.service.justice.gov.uk"
+SPG_ISO_FQDN = "spgw-ext.int.probation.service.justice.gov.uk"
+SPG_MPX_FQDN = "spgw-mpx-int.int.delius.probation.hmpps.dsd.io"
+SPG_CRC_FQDN = "spgw-crc-ext.int.probation.service.justice.gov.uk"

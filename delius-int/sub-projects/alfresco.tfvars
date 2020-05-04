@@ -5,10 +5,10 @@ lb_account_id = "652711504416"
 # VPC variables
 cloudwatch_log_retention = 14
 
-route53_sub_domain = "delius-po-test1.alfresco"
+route53_sub_domain = "delius-int.alfresco"
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
-route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
+route53_hosted_zone_id = "Z07994061MPNV6FIA40HF"
 
 # ALFRESCO RDS INSTANCE
 rds_instance_class = "db.t2.large"
@@ -59,14 +59,9 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "tcp://spgw-jms-int.po-test1.delius.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "tcp://spgw-jms-int.int.delius.probation.hmpps.dsd.io:61616"
 
 # restore dataset
 alf_restore_status = "restore"
 
 es_s3_repo_name = "snapshot_ifsr3_3"
-
-# ASG Configuration
-alfresco_asg_props = {
-  asg_ami = "ami-0f7eff23903506a77"
-}
