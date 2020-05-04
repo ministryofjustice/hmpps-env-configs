@@ -35,7 +35,7 @@ ansible_vars_oracle_db = {
 instance_count_weblogic_interface = "0"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
-  database_sid         = "POT1NDA"
+  database_sid         = "INTNDA"
 }
 
 env_user_access_cidr_blocks = [
