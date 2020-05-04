@@ -16,8 +16,8 @@ db_size_delius_core = {
 
 ansible_vars_oracle_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "POT1NDA"
-  database_sid                  = "POT1NDA"
+  database_global_database_name = "INTNDA"
+  database_sid                  = "INTNDA"
   ## oradb_sys_password            = "/${environment_name}/delius-core/oracle-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_sysman_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_sysman_password"
@@ -35,7 +35,7 @@ ansible_vars_oracle_db = {
 instance_count_weblogic_interface = "0"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
-  database_sid         = "POT1NDA"
+  database_sid         = "INTNDA"
 }
 
 env_user_access_cidr_blocks = [
