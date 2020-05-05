@@ -15,7 +15,7 @@ aws_account_ids = {
   hmpps-delius-mis-dev       = "479759138745"
   hmpps-delius-mis-test      = "349354156492"
   hmpps-delius-po-test1      = "716683748953"
-  hmpps-delius-po-test2      = "645753425509"
+  hmpps-delius-int           = "645753425509"
   hmpps-delius-training      = "330914586320"
   hmpps-delius-training-test = "130847504577"
   hmpps-delius-pre-prod      = "010587221707"
@@ -62,6 +62,7 @@ alf_account_ids = {
   hmpps-delius-test      = "728765553488"
   hmpps-delius-training  = "330914586320"
   hmpps-delius-po-test1  = "716683748953"
+  hmpps-delius-int       = "645753425509"
   hmpps-delius-auto-test = "431912413968"
   hmpps-delius-core-dev  = "723123699647"
 }
