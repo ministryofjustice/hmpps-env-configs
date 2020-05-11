@@ -97,3 +97,8 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.training.delius.probati
 SPG_ISO_FQDN  = "spgw-ext.training.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.training.delius.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.training.probation.service.justice.gov.uk"
+
+
+SPG_ENV_VARS = {
+  SPG_INTERNAL_SCHEMA_VERSION = "0-9-14"
+}
