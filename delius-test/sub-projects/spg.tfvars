@@ -40,6 +40,8 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 #Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
 
 
+deployment_minimum_healthy_percent = 50
+
 ### MPX ###
 asg_instance_type_iso = "t2.medium"
 spg_mpx_asg_desired = 2
