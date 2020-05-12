@@ -37,9 +37,9 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
-#Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
+#for MPX/ISO Java MAX MEM needs to be approx 1.5GB less than available ecs memory to allow for things like clamscan & sshd etc
 
-
+deployment_minimum_healthy_percent_crc = 100 #crc should not use rolling deployments in the test environment, as it may be in use by the test team
 deployment_minimum_healthy_percent = 50
 
 ### MPX ###
