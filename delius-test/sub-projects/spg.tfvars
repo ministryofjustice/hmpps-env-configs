@@ -65,10 +65,10 @@ SPG_CRC_HOST_TYPE = "crc"
 
 ### ISO ###
 asg_instance_type_mpx = "t2.medium"
-spg_iso_asg_desired = 1
+spg_iso_asg_desired = 2
 spg_iso_asg_max = 2
 spg_iso_asg_min = 1
-spg_iso_service_desired_count = 1
+spg_iso_service_desired_count = 2
 spg_iso_ecs_memory = 3096
 SPG_ISO_JAVA_MAX_MEM = 2048
 SPG_ISO_HOST_TYPE = "iso"
