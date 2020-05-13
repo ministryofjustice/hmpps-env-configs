@@ -23,7 +23,7 @@ allowed_cidr_block = [
 
 asg_instance_type_crc = "t2.small"
 asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+asg_instance_type_iso = "t2.medium"
 
 aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 
