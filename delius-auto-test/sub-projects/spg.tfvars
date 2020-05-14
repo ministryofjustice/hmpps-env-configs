@@ -43,7 +43,7 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
-#Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
+#Java needs to be approx 1.5gig less than available memory to allow for things like clamscan (1.2gig and growing) & sshd & filebeat etc
 
 
 ### MPX ###
@@ -52,7 +52,8 @@ spg_mpx_asg_desired = 1
 spg_mpx_asg_max = 2
 spg_mpx_asg_min = 1
 spg_mpx_service_desired_count = 1
-SPG_MPX_JAVA_MAX_MEM = 2048
+spg_mpx_ecs_memory = 3900
+SPG_MPX_JAVA_MAX_MEM = 2442
 SPG_MPX_HOST_TYPE = "hybrid"
 
 
@@ -62,7 +63,7 @@ spg_crc_asg_desired = 1
 spg_crc_asg_max = 2
 spg_crc_asg_min = 1
 spg_crc_ecs_memory = 1881
-SPG_CRC_JAVA_MAX_MEM = 1691
+SPG_CRC_JAVA_MAX_MEM = 1500
 SPG_CRC_HOST_TYPE = "crc"
 
 
@@ -72,8 +73,8 @@ spg_iso_asg_desired = 1
 spg_iso_asg_max = 2
 spg_iso_asg_min = 1
 spg_iso_service_desired_count = 1
-spg_iso_ecs_memory = 1881
-SPG_ISO_JAVA_MAX_MEM = 2048
+spg_iso_ecs_memory = 3900
+SPG_ISO_JAVA_MAX_MEM = 2442
 SPG_ISO_HOST_TYPE = "iso"
 
 
