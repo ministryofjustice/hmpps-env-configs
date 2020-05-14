@@ -64,8 +64,8 @@ SPG_MPX_HOST_TYPE = "hybrid"
 ### CRC ###
 
 spg_crc_service_desired_count = 1
-spg_crc_ecs_memory = 32100
-SPG_CRC_JAVA_MAX_MEM = 31900
+spg_crc_ecs_memory = 1881
+SPG_CRC_JAVA_MAX_MEM = 1691
 SPG_CRC_HOST_TYPE = "crc"
 
 
