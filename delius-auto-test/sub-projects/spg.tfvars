@@ -27,9 +27,6 @@ allowed_cidr_block = [
 ]
 
 
-asg_instance_type_crc = "t2.small"
-asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.medium"
 
 aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 
@@ -47,6 +44,7 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 ### MPX ###
+asg_instance_type_mpx = "t2.medium"
 
 spg_mpx_asg_desired = 1
 spg_mpx_asg_max = 2
@@ -58,6 +56,7 @@ SPG_MPX_HOST_TYPE = "hybrid"
 
 
 ### CRC ###
+asg_instance_type_crc = "t2.small"
 
 spg_crc_asg_desired = 1
 spg_crc_asg_max = 2
@@ -68,6 +67,7 @@ SPG_CRC_HOST_TYPE = "crc"
 
 
 ### ISO ###
+asg_instance_type_iso = "t2.medium"
 
 spg_iso_asg_desired = 1
 spg_iso_asg_max = 2

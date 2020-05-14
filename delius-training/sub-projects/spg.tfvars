@@ -46,6 +46,7 @@ asg_instance_type_mpx = "t2.medium"
 spg_mpx_asg_desired = 1
 spg_mpx_asg_max = 2
 spg_mpx_asg_min = 1
+spg_mpx_service_desired_count = 1
 spg_mpx_ecs_memory = 3900
 SPG_MPX_JAVA_MAX_MEM = 2442
 SPG_MPX_HOST_TYPE = "hybrid"

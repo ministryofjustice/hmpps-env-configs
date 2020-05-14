@@ -44,7 +44,7 @@ spg_mpx_asg_max               = 2
 spg_mpx_asg_min               = 1
 spg_mpx_service_desired_count = 1
 spg_mpx_ecs_memory            = 3900
-SPG_MPX_JAVA_MAX_MEM          = 2442
+SPG_MPX_JAVA_MAX_MEM = 2442
 SPG_MPX_HOST_TYPE             = "hybrid"
 
 
@@ -65,7 +65,7 @@ spg_iso_asg_max               = 2
 spg_iso_asg_min               = 1
 spg_iso_service_desired_count = 1
 spg_iso_ecs_memory            = 3900
-SPG_ISO_JAVA_MAX_MEM          = 2442
+SPG_ISO_JAVA_MAX_MEM = 2442
 SPG_ISO_HOST_TYPE             = "iso"
 
 

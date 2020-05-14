@@ -56,7 +56,7 @@ spg_mpx_asg_min = 4 #3 when aMQ and identity generator deployed
 
 spg_mpx_service_desired_count = 6 # 3 when aMQ and identity generator deployed
 spg_mpx_ecs_memory = 32100
-SPG_MPX_JAVA_MAX_MEM = 30500
+SPG_MPX_JAVA_MAX_MEM = 30600
 SPG_MPX_HOST_TYPE = "hybrid"
 
 
@@ -78,7 +78,7 @@ spg_iso_asg_min = 3 #3 when live
 
 spg_iso_service_desired_count = 3 # 3 when aMQ and identity generator deployed
 spg_iso_ecs_memory = 32100
-SPG_ISO_JAVA_MAX_MEM = 30500
+SPG_ISO_JAVA_MAX_MEM = 30600
 SPG_ISO_HOST_TYPE = "iso"
 
 
