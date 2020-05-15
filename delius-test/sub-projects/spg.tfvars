@@ -48,8 +48,8 @@ spg_mpx_asg_desired = 2
 spg_mpx_asg_max = 4
 spg_mpx_asg_min = 0
 spg_mpx_service_desired_count = 2
-spg_mpx_ecs_memory = 3096
-SPG_MPX_JAVA_MAX_MEM = 2048
+spg_mpx_ecs_memory = 3900
+SPG_MPX_JAVA_MAX_MEM = 2442
 SPG_MPX_HOST_TYPE = "hybrid"
 
 
@@ -59,7 +59,7 @@ spg_crc_asg_desired = 1
 spg_crc_asg_max = 2
 spg_crc_asg_min = 1
 spg_crc_ecs_memory = 1881
-SPG_CRC_JAVA_MAX_MEM = 1691
+SPG_CRC_JAVA_MAX_MEM = 1500
 SPG_CRC_HOST_TYPE = "crc"
 
 
@@ -69,8 +69,8 @@ spg_iso_asg_desired = 2
 spg_iso_asg_max = 2
 spg_iso_asg_min = 1
 spg_iso_service_desired_count = 2
-spg_iso_ecs_memory = 3096
-SPG_ISO_JAVA_MAX_MEM = 2048
+spg_iso_ecs_memory = 3900
+SPG_ISO_JAVA_MAX_MEM = 2442
 SPG_ISO_HOST_TYPE = "iso"
 
 
