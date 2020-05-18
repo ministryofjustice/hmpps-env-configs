@@ -39,6 +39,6 @@ iaps_app_name = "iaps"
 
 instance_type = "m5.large"
 
-psn_proxy_endpoint = "im-proxy.psn.probation.service.justice.gov.uk;"
+psn_proxy_endpoint = "im-proxy.psn.probation.service.justice.gov.uk"
 
 dashboards_enabled = "true"
