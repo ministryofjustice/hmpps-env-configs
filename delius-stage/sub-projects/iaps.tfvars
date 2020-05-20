@@ -42,3 +42,12 @@ instance_type = "m5.large"
 psn_proxy_endpoint = "data-im-proxy-int-psn.stage.probation.service.justice.gov.uk"
 
 dashboards_enabled = "true"
+
+
+# IAPS Appserver ASG Configuration
+iaps_asg_props = {
+  owners            = ["895523100917"]
+  ami_name          = "HMPPS IAPS Windows Server master*"
+  ami_id            = "ami-075d55ae08f16e8e6"
+  image_tag_version = "1.0.0"
+}
