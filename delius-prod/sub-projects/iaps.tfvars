@@ -9,7 +9,7 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "Z2SOZ79CNGAPIF"
 
 # IAPS RDS INSTANCE
-rds_instance_class = "db.t2.large"
+rds_instance_class = "db.t3.large"
 
 rds_backup_retention_period = 2
 
@@ -23,7 +23,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v15"
+rds_engine_version = "12.1.0.2.v19"
 
 rds_character_set_name = "WE8ISO8859P15"
 
@@ -42,3 +42,12 @@ instance_type = "m5.large"
 psn_proxy_endpoint = "im-proxy.psn.probation.service.justice.gov.uk"
 
 dashboards_enabled = "true"
+
+
+# ASG Configuration
+iaps_asg_props = {
+  owners            = ["895523100917"]
+  ami_name          = "HMPPS IAPS Windows Server master*"
+  ami_id            = "ami-0b0b4f72bb83a9410"
+  image_tag_version = "1.0.0"
+}

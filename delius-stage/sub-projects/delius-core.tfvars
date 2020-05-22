@@ -50,14 +50,14 @@ env_user_access_cidr_blocks = []
 
 # UMT
 umt_config = {
-  version = "1.7.2"
+  version = "1.7.3"
 }
 
 # DSS Batch Task
 dss_job_envvars = [
   {
     "name" = "DSS_TESTMODE"
-    "value" =  "true"
+    "value" = "false"
   },
   {
     "name" = "DSS_TESTINGAUTOCORRECT"
@@ -72,7 +72,15 @@ dss_job_envvars = [
     "value" = "https://interface-app-internal.stage.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
   },
   {
+    "name" = "DSS_HMPSSERVERURL"
+    "value" = "https://www.offloc.service.justice.gov.uk/"
+  },
+  {
     "name" = "DSS_PROJECT"
     "value" = "delius"
+  },
+  {
+    "name" = "JAVA_OPTS"
+    "value" = "-Xms1024m -Xmx2048m"
   }
 ]

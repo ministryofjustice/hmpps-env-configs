@@ -6,3 +6,9 @@ simple_environment_name: prod
 ndelius_version: "4.4.14"
 catalog: PCAT
 data_classification: official-data
+required_patches:
+    p18371441:
+      filename: p18371441_112040_Linux-x86-64.zip
+      description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
+      grid_patch: false
+      database_patch: true

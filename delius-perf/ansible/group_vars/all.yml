@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-perf
 simple_environment_name: perf
-ndelius_version: "4.4.14"
+ndelius_version: "4_6_10-session-persistence_3"
 catalog: PCAT
 data_classification: official-data
 required_patches:
