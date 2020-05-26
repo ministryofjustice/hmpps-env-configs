@@ -4,6 +4,7 @@ database_global_database: STGMIS
 database_taf_service: STGMIS_TAF
 database_primary_unique: STGMIS
 database_primary_sid: STGMIS
+rman_level_0_backup_duration_target: "19:00"
 database_parameters:
    control_management_pack_access: DIAGNOSTIC
 required_patches:

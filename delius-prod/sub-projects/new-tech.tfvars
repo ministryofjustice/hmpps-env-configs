@@ -39,10 +39,10 @@ offenderapi_conf = {
   ecs_scaling_min_capacity = 2
   ecs_scaling_max_capacity = 10
   env_jwt_public_key       = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBcEpHbWFqeklvTzlXUmNqMDNlU20NCkV5YlNic0loR2Q2RFZUNHFRYVJFNnA3dEg3WmlKSW9Fa3NzNGQ4WmEwaG5hYnBrQmpZNjBLc2cxbm15emhlWVINCithWXVtc0gxbm1JcmJ4ZCtqV043T3A2V1pteWRBU3JMek1XWVdBYlNHOHBXMXkxY1RwdkRaMTlBSGJTYTRRL2UNCkp0ZXAxbHArMjJ1RzFuZE1UcHJUZDY0S05HMmZ0cHJld2hRMXhOcXZrVFo2aEJ1UUVSSjMxYVFwZEU4TUExcUsNCkNacjdUMnFOTUFNY2ROWmJrQWpGNUs5cTRqVnRCRjdZcU95cnRPUmZOV2phQmhYcDlOU3RhYkJNcFRFN1A2by8NClhJaU9rcmltNjlzaG1OdDhVRlU3WUlJN0ZvejgzM29HZnk2dmtDRjRxcGpIZ0RNc21STjc1UXRrRmRtaU8xaDgNCnB3SURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0="
-  env_features_noms_update_custody = "true"
-  env_features_noms_update_booking_number = "true"
-  env_features_noms_update_keydates = "true"
-  env_features_noms_update_noms_number = "true"
+  env_features_noms_update_custody = "false"
+  env_features_noms_update_booking_number = "false"
+  env_features_noms_update_keydates = "false"
+  env_features_noms_update_noms_number = "false"
 }
 
 # Override default Elasticsearch Config
