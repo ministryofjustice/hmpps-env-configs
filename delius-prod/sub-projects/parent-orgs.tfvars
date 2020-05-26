@@ -22,8 +22,8 @@ PO_SPG_CONFIGURATION = {
   #PO_XXX_CALLING_VIA_PROXY_URL_REWRITE#  null, "" or "replace_string|replace_with" eg "spgw-ext.pre-prod.probation|spgw-int-psn.probation" (needed so that UD proxy can rewrite urls provided for oAuth signature cert validation)
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
-  CRC_SCHEMA_0_9_13 = "C16,C17"
-  CRC_SCHEMA_0_9_14 = "C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C18,C19,C20,C21"
+  CRC_SCHEMA_0_9_13 = "C16,C17,C21"
+  CRC_SCHEMA_0_9_14 = "C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C18,C19,C20"
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
   PO_POSTUB_NAME = "PO STUB"
