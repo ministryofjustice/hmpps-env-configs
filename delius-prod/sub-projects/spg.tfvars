@@ -6,7 +6,7 @@ image_version = "branch-latest-DAM-695"
 lb_account_id = "652711504416"
 
 # VPC variables
-cloudwatch_log_retention = 14
+cloudwatch_log_retention = 90
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
