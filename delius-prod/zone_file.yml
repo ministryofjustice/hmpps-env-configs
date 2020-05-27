@@ -12,6 +12,6 @@ hosted_zones:
     is_apex: True
 
 # # Created manually at present, jenkins dev cannot assume jenkins prod, needs discussion
-#   - account_id: 050243167760
-#     zone_name: "delius"
-#     is_delegated: True
+#account_id: 050243167760
+#zone_name: "delius"
+#is_delegated: True

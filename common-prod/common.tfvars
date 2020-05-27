@@ -530,7 +530,7 @@ aptracker_api_config = {}
 # Delius GDPR compliance tool
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "0.24.0" # Application version
+  api_version                 = "0.25.1" # Application version
   api_memory                  = 4196     # Memory to assign to API container
   api_cpu                     = 2048     # CPU to assign to API container
   cron_identifyduplicates     = "-"      # Batch schedules. Set to "-" to disable.
@@ -540,7 +540,7 @@ default_gdpr_config = {
   cron_deleteoffenders        = "-"      #
   cron_destructionlogclearing = "-"      #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
-  ui_version                  = "0.24.0"              # Application version
+  ui_version                  = "0.25.0"              # Application version
   ui_memory                   = 1024                  # Memory to assign to UI container
   ui_cpu                      = 1024                  # CPU to assign to UI container
   ui_scaling_min_capacity     = 2                     # Minimum number of running tasks per service
