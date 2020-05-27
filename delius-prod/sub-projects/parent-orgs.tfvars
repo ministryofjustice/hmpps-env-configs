@@ -48,6 +48,9 @@ PO_SPG_CONFIGURATION = {
   PO_MTC_SIGNING_COMMON_NAME = "spg-iso.omnia.mtcnovo.net"
   PO_MTC_ENDPOINT_URL = "https://spgw-int-psn.probation.service.justice.gov.uk:9001/MTC/CRC/CRCendpoint"
   PO_MTC_PROXIED_URL = "https://spg.omnia.mtcnovo.net:9001/CRC/CRCendpoint"
+
+  # The list of CRCs who should NOT receive MetaDtaaUpdate messages (includes PF and MTC)
+  SPG_DISABLED_META_LIST = "C03,C05,C06,C07,C15,C16,C17,C19,C20"
 }
 
 
