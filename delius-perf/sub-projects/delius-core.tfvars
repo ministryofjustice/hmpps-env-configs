@@ -12,6 +12,8 @@ db_size_delius_core = {
   disks_quantity = 16           # Do not decrease this
   disk_size      = 1000         # Do not decrease this
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
+  # high_availability_count [ 0 | 1 | 2 ] 0 for primary only
+  high_availability_count = 1
 }
 
 ansible_vars_oracle_db = {
