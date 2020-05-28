@@ -16,9 +16,3 @@ required_patches:
 database:
     delius:
         high_availability_count: 1
-    mis:
-        high_availability_count: 1
-    misboe:
-        high_availability_count: 1
-    misdsd:
-        high_availability_count: 1
