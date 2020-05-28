@@ -61,7 +61,9 @@ offender_api_allowed_secure_cidrs = [
   "3.8.51.207/32",     # cloudplatform-live1-2
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32", # healthkick
-  "51.140.222.8/32",   # azure oauth server
+  "51.140.222.8/32",   # azure hmpps-auth legacy server
+  "51.11.121.230/32",  # azure hmpps-auth nomisapi-t3 
+  "51.11.124.2/32",    # azure hmpps-auth nomisapi-t2
   "194.168.183.130/32", # CATS+ access (Daresbury Office)
   "92.237.170.161/32", # CATS+ access (Carl Sixsmith Home Office) - TODO Note: this has been added temporarily to aid/support the current WFH situation.
   "51.141.45.69/32", # Public IP of azure fortinet (test)
