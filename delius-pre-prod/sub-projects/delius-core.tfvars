@@ -34,8 +34,6 @@ ansible_vars_oracle_db = {
 }
 
 # WebLogic
-instance_type_weblogic = "m5.xlarge"
-instance_count_weblogic_ndelius = "30"
 ansible_vars = {
   database_sid = "PRENDA"
   ndelius_log_level = "ERROR"
