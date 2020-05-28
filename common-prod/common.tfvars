@@ -436,8 +436,8 @@ ldap_config = {}
 # Default values for NDelius WebLogic
 instance_type_weblogic            = "m5.xlarge"
 instance_count_weblogic_ndelius   = "30"
-instance_count_weblogic_spg       = "6"
-instance_count_weblogic_interface = "6"
+instance_count_weblogic_spg       = "3"
+instance_count_weblogic_interface = "3"
 default_ansible_vars = {
   # Server/WebLogic config
   jvm_mem_args            = "-Xms12g -Xmx12g -XX:MaxPermSize=512m"
