@@ -23,3 +23,7 @@ required_patches:
       description: ORA-07445 Updating Table with CLOB
       grid_patch: false
       database_patch: true
+# high_availability_count [ 0 | 1 | 2 ] 0 for primary only
+database:
+    delius:
+        high_availability_count: 0

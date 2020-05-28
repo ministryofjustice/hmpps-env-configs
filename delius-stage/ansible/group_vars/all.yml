@@ -13,3 +13,13 @@ required_patches:
       description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
       grid_patch: false
       database_patch: true
+# high_availability_count [ 0 | 1 | 2 ] 0 for primary only
+database:
+    delius:
+        high_availability_count: 1
+    mis:
+        high_availability_count: 1
+    misboe:
+        high_availability_count: 1
+    misdsd:
+        high_availability_count: 1
