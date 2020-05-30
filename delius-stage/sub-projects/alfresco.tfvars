@@ -66,7 +66,9 @@ alf_iam_cross_account_perms = true
 
 # ASG Configuration
 alfresco_asg_props = {
-  asg_ami = "ami-0f7eff23903506a77"
+  asg_desired       = 2
+  asg_min           = 2
+  asg_max           = 2
 }
 
 # RDs
