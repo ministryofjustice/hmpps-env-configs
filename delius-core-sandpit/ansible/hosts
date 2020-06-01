@@ -23,3 +23,10 @@ delius-db-11.sandpit.delius-core.probation.hmpps.dsd.io
 delius-db-22.sandpit.delius-core.probation.hmpps.dsd.io
 [delius_test_standbydb2]
 delius-db-33.sandpit.delius-core.probation.hmpps.dsd.io
+
+[oracle_11g]
+oracle-11g.sandpit.delius-core.probation.hmpps.dsd.io
+[oracle_18c]
+oracle-18c.sandpit.delius-core.probation.hmpps.dsd.io
+[oracle_19c]
+oracle-19c.sandpit.delius-core.probation.hmpps.dsd.io

@@ -37,8 +37,6 @@ ldap_config = {
 }
 
 # WebLogic
-instance_type_weblogic = "m5.xlarge"
-instance_count_weblogic_ndelius = "30"
 ansible_vars = {
   database_sid = "PRDNDA"
   ndelius_log_level = "ERROR"
@@ -125,3 +123,7 @@ pingdom_publicreports = ["ndelius_frontend"]
 azure_community_proxy_source = [
   "51.141.53.111/32" # Public IP of azure fortinet
 ]
+
+# In production, the "legacy" public zone actually refers to the .gov.uk domain, and the strategic domain isn't created.
+# This means we must point delius-core to the "legacy" zone for prod, until we manage to take out the manual/conditional bits.
+delius_core_public_zone = "legacy"

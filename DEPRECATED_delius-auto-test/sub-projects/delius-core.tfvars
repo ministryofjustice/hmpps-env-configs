@@ -39,6 +39,11 @@ ansible_vars = {
   database_sid = "DATNDA"
 }
 
+# User Management
+umt_config = {
+  version = "latest"
+}
+
 env_user_access_cidr_blocks = []
 
 # DSS Batch Task

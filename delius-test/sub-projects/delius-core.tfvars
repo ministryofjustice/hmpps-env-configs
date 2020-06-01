@@ -12,7 +12,6 @@ db_size_delius_core = {
   disk_iops      = 1000
   disks_quantity = 4           # Do not decrease this
   disk_size      = 500         # Do not decrease this
-
   # total_storage  = 2000 # This should equal disks_quantity x disk_size
 }
 
@@ -35,6 +34,9 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file  = "database"
 }
 
+# enable ingress from the CI (Jenkins/AWS Codepipeline)
+ci_db_ingress_1521 = true
+
 # WebLogic
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
@@ -43,7 +45,7 @@ ansible_vars = {
 
 # User Management
 umt_config = {
-  version = "1.6.6"
+  version = "latest"
 }
 
 env_user_access_cidr_blocks = []

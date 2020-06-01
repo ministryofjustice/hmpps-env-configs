@@ -31,6 +31,9 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file     = "database"
 }
 
+# enable ingress from the CI (Jenkins/AWS Codepipeline)
+ci_db_ingress_1521 = true
+
 # WebLogic
 ansible_vars = {
   ndelius_display_name = "National Delius - DEVELOPMENT USE ONLY"
