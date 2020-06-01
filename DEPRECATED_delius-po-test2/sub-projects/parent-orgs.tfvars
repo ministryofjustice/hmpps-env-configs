@@ -47,9 +47,6 @@ PO_SPG_FIREWALL_INGRESS_PORT = "9999" #9001 = switched on, 9999 = switched off
 
 PO_SPG_FIREWALL_INGRESS_RULES = {
 
-  DIGITAL_STUDIO_VPN = "81.134.202.29/32"
-  DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
-
   #POSTUB="derived from vpc x 3 NAT"
 
   #PSNPROXY = "N/A for this environment"
