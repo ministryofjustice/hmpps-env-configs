@@ -85,7 +85,7 @@ offender_api_allowed_secure_cidrs = [
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32", # healthkick
   "51.141.82.211/32",  # azure hmpps-auth legacy server
-  "51.11.125.53/32",   # azure hmpps-auth nomisapi-prod
+  "40.81.114.76/32",   # azure hmpps-auth nomisapi-prod
   "194.168.183.130/32", # CATS+ access
   "51.141.53.111/32", # Public IP of azure fortinet
   "34.252.4.39/32", # Analytics platform
