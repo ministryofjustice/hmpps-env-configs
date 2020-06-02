@@ -47,7 +47,7 @@ env_user_access_cidr_blocks = []
 
 # UMT
 umt_config = {
-  version = "1.7.3"
+  version = "1.7.4"
 }
 
 # DSS Batch Task
