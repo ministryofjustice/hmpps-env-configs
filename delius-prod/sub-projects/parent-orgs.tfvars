@@ -22,7 +22,8 @@ PO_SPG_CONFIGURATION = {
   #PO_XXX_CALLING_VIA_PROXY_URL_REWRITE#  null, "" or "replace_string|replace_with" eg "spgw-ext.pre-prod.probation|spgw-int-psn.probation" (needed so that UD proxy can rewrite urls provided for oAuth signature cert validation)
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
-  POSTUB_CRC_SCHEMA_0_9_13 = "C00"
+  CRC_SCHEMA_0_9_13 = "C16,C17"
+  CRC_SCHEMA_0_9_14 = "C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C18,C19,C20,C21"
 
   #THERE IS NO C00 in ND prod yet, nor an assigned crc for testing
   PO_POSTUB_NAME = "PO STUB"
@@ -59,9 +60,6 @@ PO_SPG_CONFIGURATION = {
 PO_SPG_FIREWALL_INGRESS_PORT = "9001" #9001 = switched on, 9999 = switched off
 
 PO_SPG_FIREWALL_INGRESS_RULES = {
-
-  DIGITAL_STUDIO_VPN = "81.134.202.29/32"
-  DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
 
   #POSTUB="no longer derived from vpc x 3 NAT as part of LB terraform as now external facing"
 

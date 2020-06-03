@@ -108,4 +108,6 @@ SPG_ENV_VARS = {
   SPG_ISO_PROTOTYPE_FQDN    = "spgw-prototype-ext.sandpit.probation.service.justice.gov.uk"
   SPG_PO_FACING_DOMAIN      = "spgw-ext.sandpit.probation.service.justice.gov.uk" #used for wsdl & wadl published addresses. For non PSN, this matches the ISO_FQDN, ie spgw-ext.test.probation. for PSN this would be spgw-ext-psn.probation.service.justice.gov.uk
   SPG_PO_STUB_FACING_DOMAIN = "spgw-ext.sandpit.probation.service.justice.gov.uk" #used by alfresco-proxy client test. For non PSN, this matches the ISO_FQDN, ie spgw-ext.test.probation, in PSN it needs to be the internal address of the proxy , typically spgw-int-psn.probation.service.justice.gov.uk
+
+  SPG_INTERNAL_SCHEMA_VERSION = "0-9-13"
 }

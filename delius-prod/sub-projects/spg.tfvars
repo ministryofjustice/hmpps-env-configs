@@ -106,3 +106,8 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.probation.service.justi
 SPG_ISO_FQDN  = "spgw-ext.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.probation.service.justice.gov.uk"
 SPG_CRC_FQDN  = "spgw-crc-ext.probation.service.justice.gov.uk"
+
+
+SPG_ENV_VARS = {
+  SPG_INTERNAL_SCHEMA_VERSION = "0-9-14"
+}

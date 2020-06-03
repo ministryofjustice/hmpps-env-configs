@@ -105,3 +105,7 @@ SPG_MPX_FQDN  = "spgw-mpx-int.perf.delius.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.perf.probation.service.justice.gov.uk"
 
 SPG_GATEWAY_MQ_URL_SOURCE="data"
+
+SPG_ENV_VARS = {
+  SPG_INTERNAL_SCHEMA_VERSION = "0-9-14"
+}

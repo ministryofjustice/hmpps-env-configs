@@ -97,3 +97,8 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.training-test.delius.pr
 SPG_ISO_FQDN  = "localhost"
 SPG_MPX_FQDN  = "localhost"
 SPG_CRC_FQDN  = "localhost"
+
+
+SPG_ENV_VARS = {
+  SPG_INTERNAL_SCHEMA_VERSION = "0-9-14"
+}

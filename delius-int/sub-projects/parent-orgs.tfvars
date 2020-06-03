@@ -10,8 +10,8 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_CRC_LIST            = "C00,C01,C15,C22,C23"
   PO_POSTUB_ENDPOINT_URL        = "https://{{ lookup('env','SPG_CRC_FQDN') }}:9001/cxf/CRC-100"
 
-  POSTUB_CRC_SCHEMA_0_9_10 = "C01"
-  POSTUB_CRC_SCHEMA_0_9_13 = "C00,C15,C22,C23"
+  CRC_SCHEMA_0_9_13 = "C16,C17"
+  CRC_SCHEMA_0_9_14 = "C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C18,C19,C20,C21"
 
   #uses same cert for signing as tls in IFSR3 env
   PO_STC_NAME                = "SEETEC"
@@ -35,9 +35,6 @@ PO_SPG_CONFIGURATION = {
 PO_SPG_FIREWALL_INGRESS_PORT = "9001" #9001 = switched on, 9999 = switched off
 
 PO_SPG_FIREWALL_INGRESS_RULES = {
-
-  DIGITAL_STUDIO_VPN       = "81.134.202.29/32"
-  DIGITAL_STUDIO_SHEFFIELD = "217.33.148.210/32"
 
   #POSTUB="derived from vpc x 3 NAT"
   #PSNPROXY = "N/A for this environment"
