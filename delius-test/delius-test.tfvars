@@ -9,7 +9,6 @@ SPG_GATEWAY_MQ_URL_SOURCE    = "data"
 spg_messaging_broker_url_src = "data"
 spg_jms_host_src             = "data"
 
-
 #lambda auto start stop vars
 ec2_schedule                         = "true"
 autoscaling_schedule                 = "true"
