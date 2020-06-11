@@ -16,3 +16,7 @@ required_patches:
 database:
     delius:
         high_availability_count: 1
+database_autotasks:
+      sql_tuning_advisor: disabled
+      auto_space_advisor: disabled
+      auto_optimizer_stats_collection: disabled
