@@ -37,3 +37,10 @@ database:
         high_availability_count: 0
     misdsd:
         high_availability_count: 0
+database_autotasks:
+      sql_tuning_advisor: disabled
+      auto_space_advisor: disabled
+autotask_windows:
+        weekday:
+                start_time: "06:20"
+                duration_mins: 30
