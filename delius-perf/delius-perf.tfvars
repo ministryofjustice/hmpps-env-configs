@@ -9,14 +9,10 @@ public_ssl_arn = ""
 
 ## Delius Core Specific
 
-instance_type_weblogic = "t2.large"
-
 instance_type_db = "t2.large"
 
 egress_443 = true
 egress_80  = true
-
-ndelius_version = "4.1.7.3"
 
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
@@ -31,3 +27,4 @@ ec2_schedule                         = "true"
 autoscaling_schedule                 = "true"
 calendar_rule_enabled                = "true"
 autostop_notify_rule_enabled         = "true"
+create_autostop_instance             = "true"

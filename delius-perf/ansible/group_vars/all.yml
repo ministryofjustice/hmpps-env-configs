@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-perf
 simple_environment_name: perf
-ndelius_version: "4_6_10-session-persistence_3"
+ndelius_version: "4_6_10-session-persistence_5"
 catalog: PCAT
 data_classification: official-data
 required_patches:
@@ -12,3 +12,11 @@ required_patches:
       description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
       grid_patch: false
       database_patch: true
+# high_availability_count [ 0 | 1 | 2 ] 0 for primary only
+database:
+    delius:
+        high_availability_count: 1
+database_autotasks:
+      sql_tuning_advisor: disabled
+      auto_space_advisor: disabled
+      auto_optimizer_stats_collection: disabled

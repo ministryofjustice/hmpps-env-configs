@@ -163,23 +163,25 @@ ansible_vars_misdsd_db = {
 legacy_environment_name = "100"
 
 #Nextcloud
+nextcloud_instance_type      = "t2.small"
+rds_instance_class           = "db.t2.small"
+mariadb_monitoring_interval  = 30
+rds_allocated_storage        = "500"
+nextcloud_instance_count     = 2
+
+#Nextcloud LB Healtcheck
 nextcloud_health_check = [
   {
-    target              = "TCP:80"
+    target              = "HTTP:80/index.php/login"
     interval            = 30
-    healthy_threshold   = 10
+    healthy_threshold   = 2
     unhealthy_threshold = 2
     timeout             = 5
   },
 ]
 
-nextcloud_instance_type      = "t2.small"
-rds_instance_class           = "db.t2.small"
-mariadb_monitoring_interval  = 30
-rds_allocated_storage        = "500"
-
 #monitoring
-mis_alarms_enabled = "true"
+mis_alarms_enabled = "false"
 
 #DIS LB Healtcheck
 dis-health_check = [

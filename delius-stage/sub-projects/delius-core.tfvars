@@ -37,21 +37,13 @@ ldap_config = {
 }
 
 # WebLogic
-instance_type_weblogic = "m5.xlarge"
 instance_count_weblogic_ndelius = "6"
-instance_count_weblogic_interface = "3"
-instance_count_weblogic_spg = "3"
 
 ansible_vars = {
   database_sid = "STGNDA"
 }
 
 env_user_access_cidr_blocks = []
-
-# UMT
-umt_config = {
-  version = "1.7.3"
-}
 
 # DSS Batch Task
 dss_job_envvars = [

@@ -14,14 +14,10 @@ route53_strategic_hosted_zone_id = "Z3GRI9GET5CFF7"
 
 ## Delius Core Specific
 
-instance_type_weblogic = "t2.large"
-
 instance_type_db = "t2.large"
 
 egress_443 = true
 egress_80 = true
-
-ndelius_version = "4.1.7.3"
 
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
