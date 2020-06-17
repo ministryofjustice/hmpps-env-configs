@@ -507,8 +507,6 @@ default_gdpr_config = {
 }
 gdpr_config = {}
 
-# Elasticsearch
-es_jvm_heap_size = "8g"
 
 # DSS Batch Task
 dss_batch_instances = ["m5.large", "c5.large"]
