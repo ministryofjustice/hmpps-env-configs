@@ -22,7 +22,12 @@ pdfgenerator_conf = {}
 
 # Override default Offender API Config
 offenderapi_conf = {
-    env_oracledb_servicename = "PERNDA_TAF"
+  env_oracledb_servicename = "PERNDA_TAF"
+  cpu                      = "2048"
+  memory                   = "4096"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+  env_oauth2_jwt_jwk_set_uri = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/.well-known/jwks.json"
 }
 
 # Override default Elasticsearch Config
@@ -51,5 +56,6 @@ offender_api_allowed_secure_cidrs = [
   "35.178.209.113/32", # cloudplatform-live1-1
   "3.8.51.207/32",     # cloudplatform-live1-2
   "35.177.252.54/32",  # cloudplatform-live1-3
-  "35.177.252.195/32"  # healthkick
+  "35.177.252.195/32",  # healthkick
+  "194.168.183.130/32" # CATS+ access
 ]
