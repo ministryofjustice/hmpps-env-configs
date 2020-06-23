@@ -27,6 +27,9 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
 ]
 
+servicemix_logs_alarm_enabled=true
+# Check servicemix logs every 5 minutes
+servicemix_log_alarm_evaluation_period="1"
 
 //NOTE in ukcloud servers are spec'd at 32GIG ram
 //I think could easily get away with 4, but need to performance test
