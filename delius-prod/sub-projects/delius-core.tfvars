@@ -44,6 +44,13 @@ ansible_vars = {
   nomis_url = "https://gateway.nomis-api.service.justice.gov.uk/elite2api"
 }
 
+# Approved Premises Tracking API
+# (This service is currently disabled in Production)
+aptracker_api_config = {
+  ecs_scaling_min_capacity = 0
+  ecs_scaling_max_capacity = 0
+}
+
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -MTCNovo
