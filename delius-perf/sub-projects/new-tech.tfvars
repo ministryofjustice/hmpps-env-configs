@@ -43,7 +43,11 @@ web_conf = {
 }
 
 # Override default Offender Poll Push Config
-offenderpollpush_conf = {}
+offenderpollpush_conf = {
+  cpu    = "3072"
+  memory = "4096"
+  env_sns_arn_topic = "arn:aws:sns:eu-west-2:754256621582:cloud-platform-Digital-Prison-Services-31651e5217b97de528d32e6164d0d53a"
+}
 
 offender_api_allowed_cidrs = [
   "81.134.202.29/32", # Moj VPN
