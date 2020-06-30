@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-po-test1
 simple_environment_name: po-test1
-ndelius_version: "4.6.13"
+ndelius_version: "4.6.14"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
@@ -36,3 +36,7 @@ database:
 database_autotasks:
       sql_tuning_advisor: disabled
       auto_space_advisor: disabled
+autotask_windows:
+        weekday:
+                start_time: "06:20"
+                duration_mins: 30

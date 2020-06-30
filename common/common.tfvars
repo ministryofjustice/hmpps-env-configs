@@ -455,7 +455,7 @@ pwm_config = {
 
 # UMT
 default_umt_config = {
-  version                       = "1.7.4"  # Application version
+  version                       = "1.7.5"  # Application version
   memory                        = 1024              # Memory to assign to ECS container in MB
   cpu                           = 512               # CPU to assign to ECS container
   ecs_scaling_min_capacity      = 1                 # Minimum number of running tasks
@@ -507,8 +507,6 @@ default_gdpr_config = {
 }
 gdpr_config = {}
 
-# Elasticsearch
-es_jvm_heap_size = "8g"
 
 # DSS Batch Task
 dss_batch_instances = ["m5.large", "c5.large"]
