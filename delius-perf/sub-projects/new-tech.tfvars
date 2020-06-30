@@ -22,7 +22,12 @@ pdfgenerator_conf = {}
 
 # Override default Offender API Config
 offenderapi_conf = {
-    env_oracledb_servicename = "PERNDA_TAF"
+  env_oracledb_servicename = "PERNDA_TAF"
+  cpu                      = "2048"
+  memory                   = "4096"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+  env_oauth2_jwt_jwk_set_uri = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/.well-known/jwks.json"
 }
 
 # Override default Elasticsearch Config
@@ -38,7 +43,11 @@ web_conf = {
 }
 
 # Override default Offender Poll Push Config
-offenderpollpush_conf = {}
+offenderpollpush_conf = {
+  cpu    = "3072"
+  memory = "4096"
+  env_sns_arn_topic = "arn:aws:sns:eu-west-2:754256621582:cloud-platform-Digital-Prison-Services-31651e5217b97de528d32e6164d0d53a"
+}
 
 offender_api_allowed_cidrs = [
   "81.134.202.29/32", # Moj VPN
@@ -51,5 +60,6 @@ offender_api_allowed_secure_cidrs = [
   "35.178.209.113/32", # cloudplatform-live1-1
   "3.8.51.207/32",     # cloudplatform-live1-2
   "35.177.252.54/32",  # cloudplatform-live1-3
-  "35.177.252.195/32"  # healthkick
+  "35.177.252.195/32",  # healthkick
+  "194.168.183.130/32" # CATS+ access
 ]
