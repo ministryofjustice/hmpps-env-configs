@@ -3,7 +3,7 @@
 lb_account_id = "652711504416"
 
 # VPC variables
-cloudwatch_log_retention = 14
+cloudwatch_log_retention = 90
 
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
@@ -22,9 +22,8 @@ allowed_cidr_block = [
 ]
 
 
-asg_instance_type_crc = "t2.small"
-asg_instance_type_mpx = "t2.medium"
-asg_instance_type_iso = "t2.small"
+
+
 
 aws_broker_deployment_mode = "SINGLE_INSTANCE"
 
@@ -38,37 +37,40 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
-#Java needs to be approx 200MB less than available memory to allow for things like clamscan & sshd etc (this is a guestimate)
+#for MPX/ISO Java MAX MEM needs to be approx 1.5GB less than available ecs memory to allow for things like clamscan & sshd etc
 
+deployment_minimum_healthy_percent_crc = 100 #crc should not use rolling deployments in the test environment, as it may be in use by the test team
+deployment_minimum_healthy_percent = 50
 
 ### MPX ###
-
+asg_instance_type_iso = "t2.medium"
 spg_mpx_asg_desired = 2
 spg_mpx_asg_max = 4
 spg_mpx_asg_min = 0
 spg_mpx_service_desired_count = 2
-SPG_MPX_JAVA_MAX_MEM = 3645
+spg_mpx_ecs_memory = 3900
+SPG_MPX_JAVA_MAX_MEM = 2442
 SPG_MPX_HOST_TYPE = "hybrid"
 
 
 ### CRC ###
-
+asg_instance_type_crc = "t2.small"
 spg_crc_asg_desired = 1
 spg_crc_asg_max = 2
 spg_crc_asg_min = 1
 spg_crc_ecs_memory = 1881
-SPG_CRC_JAVA_MAX_MEM = 1691
+SPG_CRC_JAVA_MAX_MEM = 1500
 SPG_CRC_HOST_TYPE = "crc"
 
 
 ### ISO ###
-
-spg_iso_asg_desired = 1
+asg_instance_type_mpx = "t2.medium"
+spg_iso_asg_desired = 2
 spg_iso_asg_max = 2
 spg_iso_asg_min = 1
-spg_iso_service_desired_count = 1
-spg_iso_ecs_memory = 1881
-SPG_ISO_JAVA_MAX_MEM = 1691
+spg_iso_service_desired_count = 2
+spg_iso_ecs_memory = 3900
+SPG_ISO_JAVA_MAX_MEM = 2442
 SPG_ISO_HOST_TYPE = "iso"
 
 
