@@ -48,6 +48,6 @@ dashboards_enabled = "true"
 iaps_asg_props = {
   owners            = "895523100917"
   ami_name          = "HMPPS IAPS Windows Server master*"
-  ami_id            = "ami-0b0b4f72bb83a9410"
+  ami_id            = "ami-00d40f926ee31fcd6"
   image_tag_version = "1.0.0"
 }
