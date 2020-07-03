@@ -46,7 +46,7 @@ dashboards_enabled = "true"
 
 # ASG Configuration
 iaps_asg_props = {
-  owners            = ["895523100917"]
+  owners            = "895523100917"
   ami_name          = "HMPPS IAPS Windows Server master*"
   ami_id            = "ami-0b0b4f72bb83a9410"
   image_tag_version = "1.0.0"
