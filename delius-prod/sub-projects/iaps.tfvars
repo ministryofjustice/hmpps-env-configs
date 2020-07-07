@@ -11,7 +11,7 @@ route53_hosted_zone_id = "Z2SOZ79CNGAPIF"
 # IAPS RDS INSTANCE
 rds_instance_class = "db.t3.large"
 
-rds_backup_retention_period = 2
+rds_backup_retention_period = 15
 
 rds_monitoring_interval = 5
 
@@ -23,7 +23,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v19"
+rds_engine_version = "12.1.0.2.v20"
 
 rds_character_set_name = "WE8ISO8859P15"
 
