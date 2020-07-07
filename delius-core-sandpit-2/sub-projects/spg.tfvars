@@ -84,14 +84,18 @@ SPG_ENVIRONMENT_CN = "sandpit-2.probation.service.justice.gov.uk"
 
 
 SPG_GATEWAY_MQ_URL="tcp://localhost:61616"
-SPG_DELIUS_MQ_URL ="tcp://delius-jms.delius-core-sandpit-2.internal:61617"
+#overide from sandpit-2 to sandpit, as sandpit-2 delius does not exist
+SPG_DELIUS_MQ_URL ="tcp://delius-jms.delius-core-sandpit.internal:61617"
 
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.sandpit-2.delius-core.probation.hmpps.dsd.io/alfresco/service/admin-spg"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.sandpit-2.delius-core.probation.hmpps.dsd.io/alfresco/service/noms-spg"
 
-SPG_ISO_FQDN  = "spgw-ext.sandpit-2.probation.service.justice.gov.uk"
-SPG_MPX_FQDN  = "spgw-mpx-int.sandpit-2.delius-core.probation.hmpps.dsd.io"
-SPG_CRC_FQDN  = "spgw-crc-ext.sandpit-2.probation.service.justice.gov.uk"
+#overide from sandpit-2 to sandpit, as sandpit-2 alfresco  does not exist
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io/alfresco/service/noms-spg"
+
+#overide from sandpit-2 to sandpit, as legacy sandpit-2 does not exist
+SPG_ISO_FQDN  = "spgw-ext.sandpit.probation.service.justice.gov.uk"
+SPG_MPX_FQDN  = "spgw-mpx-int.sandpit.delius-core.probation.hmpps.dsd.io"
+SPG_CRC_FQDN  = "spgw-crc-ext.sandpit.probation.service.justice.gov.uk"
 
 SPG_GATEWAY_MQ_URL_SOURCE="data"
 
@@ -101,8 +105,8 @@ SPG_GATEWAY_MQ_URL_SOURCE="data"
 #contents are not enforced
 
 SPG_ENV_VARS = {
-
-  SPG_ALFRESCO_BASE_URL        = "https://alfresco.sandpit-2.delius-core.probation.hmpps.dsd.io"
+  #overide from sandpit-2 to sandpit, as sandpit-2 alfresco  does not exist
+  SPG_ALFRESCO_BASE_URL        = "https://alfresco.sandpit.delius-core.probation.hmpps.dsd.io"
   SPG_ALFRESCO_HEALTH_ENDPOINT = "/alfresco/service/noms-spg/notificationStatus"
 
   SPG_ISO_PROTOTYPE_FQDN    = "spgw-prototype-ext.sandpit-2.probation.service.justice.gov.uk"
