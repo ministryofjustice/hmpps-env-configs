@@ -15,6 +15,7 @@ delius_users:
   mwillis_ro:
   pphillips_ro:
   smitchell_ro:
+  nhodgkinson_ro:
 required_patches:
     p27659043:
       filename: p27659043_11204180417_Linux-x86-64.zip
