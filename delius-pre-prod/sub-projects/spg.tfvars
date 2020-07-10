@@ -36,7 +36,9 @@ s3_bucket_config = "tf-eu-west-2-hmpps-delius-pre-prod-spgw-s3bucket"
 spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
-
+servicemix_logs_alarm_enabled=true
+# Check back servicemix logs every for 10 hours, every 5 minutes
+servicemix_log_alarm_evaluation_period="120"
 
 #ecs cpu units set to null (default appears to be 1024 across micro/small/medium)
 #ecs memory is instance memory less headroom required for the service (see hmpps-delius-spg-shared-terraform/README_ECS_MEMORY_AND_CPU_LIMITS.md
