@@ -58,4 +58,4 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "tcp://spgw-jms-int.dev.delius-core.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "ssl://b-65e57018-bd00-4e01-a3c9-38ed47e56b4c-1.mq.eu-west-2.amazonaws.com:61617"

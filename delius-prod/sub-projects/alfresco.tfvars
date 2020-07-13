@@ -59,7 +59,7 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "tcp://spgw-jms-int.probation.service.justice.gov.uk:61616"
+spg_messaging_broker_url = "failover:(ssl://b-4bb496b9-c0c8-4c1b-8f35-92977841323d-1.mq.eu-west-2.amazonaws.com:61617,ssl://b-4bb496b9-c0c8-4c1b-8f35-92977841323d-2.mq.eu-west-2.amazonaws.com:61617)"
 
 # alerts
 alf_ops_alerts = {

@@ -59,7 +59,7 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "tcp://spgw-jms-int.pre-prod.delius.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "failover:(ssl://b-30f96100-1b04-4fb2-9dbd-a6dbe6db038e-1.mq.eu-west-2.amazonaws.com:61617,ssl://b-30f96100-1b04-4fb2-9dbd-a6dbe6db038e-2.mq.eu-west-2.amazonaws.com:61617)"
 
 # ASG Configuration
 alfresco_asg_props = {

@@ -59,7 +59,7 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "tcp://spgw-jms-int.po-test1.delius.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "failover:(ssl://b-386fd0bc-9c66-43e9-a5e5-28ff8bb5a6b5-1.mq.eu-west-2.amazonaws.com:61617,ssl://b-386fd0bc-9c66-43e9-a5e5-28ff8bb5a6b5-2.mq.eu-west-2.amazonaws.com:61617)"
 
 # restore dataset
 alf_restore_status = "restore"
