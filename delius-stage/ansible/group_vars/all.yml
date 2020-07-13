@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-stage
 simple_environment_name: stage
-ndelius_version: "4.6.14"
+ndelius_version: "4.6.14.1"
 catalog: PCAT
 data_classification: official-data
 delegated_account_id: "205048117103"
@@ -18,11 +18,11 @@ database:
     delius:
         high_availability_count: 1
     mis:
-        high_availability_count: 1
+        high_availability_count: 0
     misboe:
-        high_availability_count: 1
+        high_availability_count: 0
     misdsd:
-        high_availability_count: 1
+        high_availability_count: 0
 database_autotasks:
       sql_tuning_advisor: disabled
       auto_space_advisor: disabled

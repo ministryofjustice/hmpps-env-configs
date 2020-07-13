@@ -1,0 +1,4 @@
+--- # delius_standbydb2.yml
+
+database_standby_unique: SANNDAS2
+database_standby_sid: SANNDAS2
