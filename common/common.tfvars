@@ -594,9 +594,10 @@ azure_oasys_proxy_source = [
 
 #these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')
 #var = spg local MQ, data = amazon mq
-SPG_GATEWAY_MQ_URL_SOURCE    = "var"
-spg_messaging_broker_url_src = "var"
-spg_jms_host_src             = "var"
+
+SPG_GATEWAY_MQ_URL_SOURCE    = "data"
+spg_messaging_broker_url_src = "data"
+spg_jms_host_src             = "data"
 
 # Parent R53 Zone ID for strategic domain (probation.service.justice.gov.uk)
 strategic_parent_zone_id = "Z2SOZ79CNGAPIF"

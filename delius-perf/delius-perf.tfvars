@@ -17,10 +17,7 @@ egress_80  = true
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
 
-#'data'=use amazonMQ
-SPG_GATEWAY_MQ_URL_SOURCE    = "data"
-spg_messaging_broker_url_src = "data"
-spg_jms_host_src             = "data"
+
 
 #lambda auto start stop vars
 ec2_schedule                         = "true"
