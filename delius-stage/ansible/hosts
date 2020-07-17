@@ -5,13 +5,10 @@ loadrunner.stage.delius.probation.hmpps.dsd.io
 delius-db-1.stage.delius.probation.hmpps.dsd.io
 [delius_standbydb1]
 delius-db-2.stage.delius.probation.hmpps.dsd.io
-[delius_standbydb2]
-delius-db-3.stage.delius.probation.hmpps.dsd.io
 
 [delius_dbs:children]
 delius_primarydb
 delius_standbydb1
-delius_standbydb2
 
 [source_rds_iaps]
 delius-db-1.probation.service.justice.gov.uk
