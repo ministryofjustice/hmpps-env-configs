@@ -30,6 +30,7 @@ offenderapi_conf = {
   env_features_noms_update_booking_number = "true"
   env_features_noms_update_keydates = "true"
   env_features_noms_update_noms_number = "true"
+  enable_public_lb = true
 }
 
 # Override default Elasticsearch Config
