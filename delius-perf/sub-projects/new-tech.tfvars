@@ -27,7 +27,7 @@ offenderapi_conf = {
   memory                   = "4096"
   ecs_scaling_min_capacity = 2
   ecs_scaling_max_capacity = 10
-  env_oauth2_jwt_jwk_set_uri = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/auth/.well-known/jwks.json"
+  env_oauth2_jwt_jwk_set_uri = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
 }
 
 # Override default Elasticsearch Config
