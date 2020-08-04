@@ -1,0 +1,7 @@
+--- # misboe_standbydb1.yml
+
+database_standby_unique: DATBOES1
+database_standby_sid: DATBOES1
+database_parameters:
+   sga_max_size: 1G
+   sga_target: 1G

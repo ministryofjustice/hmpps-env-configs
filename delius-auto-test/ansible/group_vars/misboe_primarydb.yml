@@ -1,0 +1,9 @@
+--- # misboe_primarydb.yml
+
+database_global_database: DATBOE
+database_taf_service: DATBOE_TAF
+database_primary_unique: DATBOE
+database_primary_sid: DATBOE
+database_parameters:
+   sga_max_size: 1G
+   sga_target: 1G
