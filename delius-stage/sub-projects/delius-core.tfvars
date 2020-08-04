@@ -36,6 +36,11 @@ ldap_config = {
   instance_type = "m5.xlarge"
 }
 
+# User Management
+umt_config = {
+  version = "latest"
+}
+
 # WebLogic
 instance_count_weblogic_ndelius = "6"
 
