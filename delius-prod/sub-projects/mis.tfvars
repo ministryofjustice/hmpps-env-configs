@@ -77,8 +77,8 @@ db_size_mis = {
   # disk_size      = 1000        # Do not decrease this
 
   disks_quantity      = 16   # Do not decrease this
-  disks_quantity_data = 9
-  disk_iops_data      = 1000
+  disks_quantity_data = 8
+  disk_iops_data      = 5000
   disk_iops_flash     = 500
   disk_size_data      = 1000 # Do not decrease this
   disk_size_flash     = 1000 # Do not decrease this
