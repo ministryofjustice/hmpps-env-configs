@@ -47,10 +47,16 @@ bws-health_check = [
 db_size_mis = {
   database_size  = "small"
   instance_type  = "t3.large"
-  disk_iops      = 1000
-  disks_quantity = 4          # Do not decrease this
-  disk_size      = 200        # increased by 100 # Do not decrease this
+  # disk_iops      = 1000
+  # disks_quantity = 4          # Do not decrease this
+  # disk_size      = 200        # increased by 100 # Do not decrease this
 
+  disks_quantity      = 2   # Do not decrease this
+  disks_quantity_data = 1
+  disk_iops_data      = 5000
+  disk_iops_flash     = 500
+  disk_size_data      = 500 # Do not decrease this
+  disk_size_flash     = 500 # Do not decrease this
   # total_storage  = 800 # This should equal disks_quantity x disk_size
 }
 
@@ -77,11 +83,17 @@ ansible_vars_mis_db = {
 db_size_misboe = {
   database_size  = "small"
   instance_type  = "t3.large"
-  disk_iops      = 1000
-  disks_quantity = 2          # Do not decrease this
-  disk_size      = 100        # Do not decrease this
+  # disk_iops      = 1000
+  # disks_quantity = 2          # Do not decrease this
+  # disk_size      = 100        # Do not decrease this
 
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  disks_quantity      = 2   # Do not decrease this
+  disks_quantity_data = 1
+  disk_iops_data      = 1000
+  disk_iops_flash     = 500
+  disk_size_data      = 500 # Do not decrease this
+  disk_size_flash     = 500 # Do not decrease this
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_misboe_db = {
@@ -107,11 +119,17 @@ ansible_vars_misboe_db = {
 db_size_misdsd = {
   database_size  = "small"
   instance_type  = "t3.large"
-  disk_iops      = 1000
-  disks_quantity = 2          # Do not decrease this
-  disk_size      = 100        # Do not decrease this
+  # disk_iops      = 1000
+  # disks_quantity = 2          # Do not decrease this
+  # disk_size      = 100        # Do not decrease this
 
-  # total_storage  = 200 # This should equal disks_quantity x disk_size
+  disks_quantity      = 2   # Do not decrease this
+  disks_quantity_data = 1
+  disk_iops_data      = 1000
+  disk_iops_flash     = 500
+  disk_size_data      = 500 # Do not decrease this
+  disk_size_flash     = 500 # Do not decrease this
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_misdsd_db = {
