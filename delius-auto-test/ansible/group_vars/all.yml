@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-auto-test
 simple_environment_name: auto-test
-ndelius_version: "4.2.9.6"
+ndelius_version: "4.7.6"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
