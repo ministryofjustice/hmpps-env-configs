@@ -28,11 +28,11 @@ database:
     delius:
         high_availability_count: 1
     mis:
-        high_availability_count: 1
+        high_availability_count: 0
     misboe:
-        high_availability_count: 1
+        high_availability_count: 0
     misdsd:
-        high_availability_count: 1
+        high_availability_count: 0
 database_autotasks:
       sql_tuning_advisor: disabled
       auto_space_advisor: disabled
