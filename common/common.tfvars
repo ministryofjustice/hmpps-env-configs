@@ -381,7 +381,7 @@ default_ldap_config = {
   # Disk
   disk_volume_type      = "io1"
   disk_volume_size      = 30 # GB
-  disk_iops             = 1000
+  disk_iops             = 100
 }
 ldap_config = {}
 
