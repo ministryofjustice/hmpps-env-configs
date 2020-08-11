@@ -122,8 +122,8 @@ db_size_mis = {
 
 ansible_vars_mis_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMTMIS"
-  database_sid                  = "DMTMIS"
+  database_global_database_name = "DATMIS"
+  database_sid                  = "DATMIS"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/mis-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/mis-database/db/oradb_system_password"
@@ -160,8 +160,8 @@ db_size_misboe = {
 
 ansible_vars_misboe_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMTBOE"
-  database_sid                  = "DMTBOE"
+  database_global_database_name = "DATBOE"
+  database_sid                  = "DATBOE"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/misboe-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/misboe-database/db/oradb_system_password"
@@ -196,8 +196,8 @@ db_size_misdsd = {
 
 ansible_vars_misdsd_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMTDSD"
-  database_sid                  = "DMTDSD"
+  database_global_database_name = "DATDSD"
+  database_sid                  = "DATDSD"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/misdsd-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/misdsd-database/db/oradb_system_password"

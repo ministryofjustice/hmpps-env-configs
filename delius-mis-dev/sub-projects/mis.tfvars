@@ -185,6 +185,8 @@ nextcloud_instance_type      = "t2.small"
 rds_instance_class           = "db.t2.small"
 mariadb_monitoring_interval  = 30
 rds_allocated_storage        = "500"
+number_cache_clusters        = 1
+nextcloud_redis_node_type    = "cache.t3.small"
 
 #Nextcloud LB Healtcheck
 nextcloud_health_check = [
