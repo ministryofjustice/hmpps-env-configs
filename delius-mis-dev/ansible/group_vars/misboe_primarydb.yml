@@ -4,3 +4,6 @@ database_global_database: DMDBOE
 database_taf_service: DMDBOE_TAF
 database_primary_unique: DMDBOE
 database_primary_sid: DMDBOE
+database_parameters:
+   sga_max_size: 1G
+   sga_target: 1G

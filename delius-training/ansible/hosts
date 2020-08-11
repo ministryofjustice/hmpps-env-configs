@@ -5,13 +5,10 @@ loadrunner.training.delius.probation.hmpps.dsd.io
 delius-db-1.training.delius.probation.hmpps.dsd.io
 [delius_standbydb1]
 delius-db-2.training.delius.probation.hmpps.dsd.io
-[delius_standbydb2]
-delius-db-3.training.delius.probation.hmpps.dsd.io
 
 [delius_dbs:children]
 delius_primarydb
 delius_standbydb1
-delius_standbydb2
 
 [oracle_databases:children]
 delius_dbs

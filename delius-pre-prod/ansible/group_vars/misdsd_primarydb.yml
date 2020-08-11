@@ -4,3 +4,4 @@ database_global_database: PREDSD
 database_taf_service: PREDSD_TAF
 database_primary_unique: PREDSD
 database_primary_sid: PREDSD
+oracle_osbws_chunk_size: 104857600

@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-test
 simple_environment_name: test
-ndelius_version: "4.7.2.1"
+ndelius_version: "4.7.6"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
@@ -28,11 +28,11 @@ database:
     delius:
         high_availability_count: 1
     mis:
-        high_availability_count: 1
+        high_availability_count: 0
     misboe:
-        high_availability_count: 1
+        high_availability_count: 0
     misdsd:
-        high_availability_count: 1
+        high_availability_count: 0
 database_autotasks:
       sql_tuning_advisor: disabled
       auto_space_advisor: disabled

@@ -357,7 +357,7 @@ snapshot_retention_days = 7
 default_ldap_config = {
   # ASG
   instance_type         = "t3.small"
-  instance_count        = 3
+  instance_count        = 2
   # Connection
   protocol              = "ldap"
   port                  = 389
@@ -381,7 +381,7 @@ default_ldap_config = {
   # Disk
   disk_volume_type      = "io1"
   disk_volume_size      = 30 # GB
-  disk_iops             = 1000
+  disk_iops             = 500
 }
 ldap_config = {}
 

@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-auto-test
 simple_environment_name: auto-test
-ndelius_version: "4.2.9.6"
+ndelius_version: "4.7.6"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
@@ -23,3 +23,15 @@ required_patches:
       description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
       grid_patch: false
       database_patch: true
+database:
+    delius:
+        high_availability_count: 2
+    mis:
+        high_availability_count: 2
+    misboe:
+        high_availability_count: 2
+    misdsd:
+        high_availability_count: 2
+database_autotasks:
+      sql_tuning_advisor: disabled
+      auto_space_advisor: disabled

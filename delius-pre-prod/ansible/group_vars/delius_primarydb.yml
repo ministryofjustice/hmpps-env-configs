@@ -16,6 +16,21 @@ delius_users:
   pphillips_ro:
   smitchell_ro:
   nhodgkinson_ro:
+  asottana_ro:
+  asetchi_ro:
+  bfortescue_ro:
+  cbarnett_ro:
+  cemeagi_ro:
+  dnicholson_ro:
+  dfuller_ro:
+  jbrowning_ro:
+  jwatson_ro:
+  jdilks_ro:
+  kgray_ro:
+  ldelaney_ro:
+  phoward_ro:
+  pivanov_ro:
+
 required_patches:
     p27659043:
       filename: p27659043_11204180417_Linux-x86-64.zip

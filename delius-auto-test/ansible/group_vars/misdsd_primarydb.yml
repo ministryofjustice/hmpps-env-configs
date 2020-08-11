@@ -1,0 +1,9 @@
+--- # misdsd_primarydb.yml
+
+database_global_database: DATDSD
+database_taf_service: DATDSD_TAF
+database_primary_unique: DATDSD
+database_primary_sid: DATDSD
+database_parameters:
+   sga_max_size: 1G
+   sga_target: 1G

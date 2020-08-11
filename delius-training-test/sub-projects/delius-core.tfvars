@@ -11,7 +11,18 @@ db_size_delius_core = {
   disk_iops      = 1000
   disks_quantity = 2  # Do not decrease this
   disk_size      = 200 # Do not decrease this
-  # total_storage  = 400 # This should equal disks_quantity x disk_size
+  ## total_storage  = 400 # This should equal disks_quantity x disk_size
+
+  # ## This is suggested config for when the
+  # ## https://github.com/ministryofjustice/hmpps-oracle-database is set to version 1.0.0 or higher
+  # ## remove above four lines and uncomment below
+  # disks_quantity      = 2   # Do not decrease this
+  # disks_quantity_data = 1
+  # disk_iops_data      = 1000
+  # disk_iops_flash     = 500
+  # disk_size_data      = 200 # Do not decrease this
+  # disk_size_flash     = 200 # Do not decrease this
+  # ## total_storage  = 400 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
