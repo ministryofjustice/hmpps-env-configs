@@ -32,6 +32,34 @@ self_signed_server_validity_period_hours = 2160
 
 self_signed_server_early_renewal_hours = 336
 
+legacy_environment_name = "800"
+
+#Instance size for bcs
+bcs_instance_type  = "t2.xlarge"
+bcs_root_size = 75
+bcs_server_count = 1
+
+#Instance size for bfs
+bfs_instance_type  = "t2.xlarge"
+bfs_root_size = 75
+bfs_server_count = 1
+
+#Instance size for bps
+bps_instance_type  = "t2.xlarge"
+bps_root_size = 75
+bps_server_count = 1
+
+#Instance size for bws
+bws_instance_type  = "t2.xlarge"
+bws_root_size = 75
+bws_server_count = 1
+
+#Instance size for dis
+dis_instance_type  = "t2.xlarge"
+dis_root_size = 75
+dis_server_count = 1
+
+#BWS LB Healtcheck
 bws-health_check = [
   {
     target              = "HTTP:8080/BOE/BI"
@@ -41,6 +69,38 @@ bws-health_check = [
     timeout             = 5
   },
 ]
+
+#DIS LB Healtcheck
+dis-health_check = [
+  {
+    target              = "HTTP:8080/DataServices/"
+    interval            = 30
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
+
+#Nextcloud LB Healtcheck
+nextcloud_health_check = [
+  {
+    target              = "HTTP:80/index.php/login"
+    interval            = 30
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 5
+  },
+]
+
+#Nextcloud
+nextcloud_instance_type      = "t2.small"
+rds_instance_class           = "db.t2.small"
+mariadb_monitoring_interval  = 30
+rds_allocated_storage        = "500"
+
+#monitoring
+mis_alarms_enabled = "false"
+
 
 # Databases
 ## MIS Datamart
@@ -62,8 +122,8 @@ db_size_mis = {
 
 ansible_vars_mis_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMTMIS"
-  database_sid                  = "DMTMIS"
+  database_global_database_name = "DATMIS"
+  database_sid                  = "DATMIS"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/mis-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/mis-database/db/oradb_system_password"
@@ -78,6 +138,8 @@ ansible_vars_mis_db = {
   database_backup_location   = "NotApplicable" #default for local testing
   oracle_dbca_template_file  = "database"
 }
+
+
 
 ## Business Objects Repo
 db_size_misboe = {
@@ -98,8 +160,8 @@ db_size_misboe = {
 
 ansible_vars_misboe_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMTBOE"
-  database_sid                  = "DMTBOE"
+  database_global_database_name = "DATBOE"
+  database_sid                  = "DATBOE"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/misboe-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/misboe-database/db/oradb_system_password"
@@ -134,8 +196,8 @@ db_size_misdsd = {
 
 ansible_vars_misdsd_db = {
   service_user_name             = "oracle"
-  database_global_database_name = "DMTDSD"
-  database_sid                  = "DMTDSD"
+  database_global_database_name = "DATDSD"
+  database_sid                  = "DATDSD"
 
   ## oradb_sys_password            = "/${environment_name}/${project}/misdsd-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/misdsd-database/db/oradb_system_password"
