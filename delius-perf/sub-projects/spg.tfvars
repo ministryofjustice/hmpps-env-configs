@@ -57,7 +57,7 @@ SPG_MPX_HOST_TYPE = "hybrid"
 
 
 ### CRC ###
-asg_instance_type_crc = "t2.small"
+asg_instance_type_crc = "t2.medium"
 spg_crc_service_desired_count = 1
 spg_crc_ecs_memory = 1881
 SPG_CRC_JAVA_MAX_MEM = 1500
