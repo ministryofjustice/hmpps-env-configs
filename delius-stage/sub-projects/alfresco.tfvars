@@ -75,3 +75,5 @@ alfresco_asg_props = {
 alf_rds_props = {
   snapshot_identifier = "alfresco-database-snapshot"
 }
+
+alf_snapshot_identifier = "alfresco-database-snapshot"
