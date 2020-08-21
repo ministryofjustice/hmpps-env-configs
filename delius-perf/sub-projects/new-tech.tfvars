@@ -62,5 +62,6 @@ offender_api_allowed_secure_cidrs = [
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32",  # healthkick
   "194.168.183.130/32", # CATS+ access
-  "54.76.254.148/32" # DXW
+  "54.76.254.148/32", # DXW
+  "54.76.254.149/32" # DXW
 ]
