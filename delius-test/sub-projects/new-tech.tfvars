@@ -78,6 +78,7 @@ offender_api_allowed_secure_cidrs = [
   "34.249.60.91/32", # Analytics platform
   "34.251.199.153/32", # Analytics platform
   "34.249.194.106/32", # Analytics platform
+  "54.76.254.148/32", # DXW
 ]
 
 offender_search_allowed_secure_cidrs = [
