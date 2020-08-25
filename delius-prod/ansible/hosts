@@ -13,10 +13,8 @@ delius_standbydb2
 
 
 [mis_primarydb]
-mis-db-1.probation.service.justice.gov.uk
-[mis_standbydb1]
 mis-db-2.probation.service.justice.gov.uk
-[mis_standbydb2]
+[mis_standbydb1]
 mis-db-3.probation.service.justice.gov.uk
 
 [mis_dbs:children]
