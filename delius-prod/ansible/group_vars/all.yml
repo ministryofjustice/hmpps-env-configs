@@ -15,9 +15,9 @@ required_patches:
 # high_availability_count [ 0 | 1 | 2 ] 0 for primary only
 database:
     delius:
-        high_availability_count: 2
+        high_availability_count: 1
     mis:
-        high_availability_count: 2
+        high_availability_count: 1
     misboe:
         high_availability_count: 2
     misdsd:
