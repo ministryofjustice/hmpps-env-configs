@@ -2,8 +2,8 @@
 
 database_global_database: PRDNDA
 database_taf_service: PRDNDA_TAF
-database_primary_unique: PRDNDA
-database_primary_sid: PRDNDA
+database_primary_unique: PRDNDAS1
+database_primary_sid: PRDNDAS1
 database_parameters:
    control_management_pack_access: DIAGNOSTIC+TUNING
 rman_level_0_backup_duration_target: "21:00"
