@@ -54,7 +54,7 @@ bws_server_count = 2
 
 #Instance size for dis
 dis_instance_type  = "m5.2xlarge"
-dis_root_size = 100
+dis_root_size = 75
 dis_server_count = 1
 
 bws-health_check = [
