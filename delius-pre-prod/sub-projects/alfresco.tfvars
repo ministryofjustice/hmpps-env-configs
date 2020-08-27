@@ -73,3 +73,5 @@ alf_iam_cross_account_perms = true
 alf_rds_props = {
   snapshot_identifier = "alfresco-preprod-refresh"
 }
+
+alf_snapshot_identifier = "alfresco-preprod-refresh"

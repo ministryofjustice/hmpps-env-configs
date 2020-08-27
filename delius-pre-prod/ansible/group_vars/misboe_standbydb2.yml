@@ -2,3 +2,6 @@
 
 database_standby_unique: PREBOES2
 database_standby_sid: PREBOES2
+database_parameters:
+   sga_max_size: 3G
+   sga_target: 3G

@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-prod
 simple_environment_name: prod
-ndelius_version: "4.6.14.1"
+ndelius_version: "4.7.7"
 catalog: PCAT
 data_classification: official-data
 required_patches:
@@ -15,7 +15,7 @@ required_patches:
 # high_availability_count [ 0 | 1 | 2 ] 0 for primary only
 database:
     delius:
-        high_availability_count: 2
+        high_availability_count: 1
     mis:
         high_availability_count: 2
     misboe:
