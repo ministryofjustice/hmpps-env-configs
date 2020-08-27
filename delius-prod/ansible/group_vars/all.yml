@@ -17,7 +17,7 @@ database:
     delius:
         high_availability_count: 1
     mis:
-        high_availability_count: 1
+        high_availability_count: 2
     misboe:
         high_availability_count: 2
     misdsd:
