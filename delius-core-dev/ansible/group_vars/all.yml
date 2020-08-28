@@ -47,6 +47,6 @@ ndelius_oauth_config:
   client_secret: /delius-core-dev/delius-core/weblogic/ndelius-domain/oauth-client-secret
   callback_url: https://ndelius.dev.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
   user_info_endpoint: /api/user/me
-  username_attribute: username
+  username_attribute: user_name
   display_name: DOM1
-  scope: read
+  scope:
