@@ -7,34 +7,80 @@ cloudwatch_log_retention = 14
 
 # Origial ported tfavrs from beanstalk env_config
 delius_api_min_asg_size = 1
+
 delius_api_max_asg_size = 4
+
 delius_api_instance_type = "t2.micro"
+
 delius_api_lower_cpu_trigger = 5
+
 delius_api_upper_cpu_trigger = 10
 
 # Override default casenotes Config
 casenotes_conf = {
+  cpu    = "1024"
+  memory = "2048"
+  env_pull_base_url  ="https://gateway.nomis-api-auto-test.service.justice.gov.uk/nomisapi/offenders/events/case_notes_for_delius"
 
 }
 
 # Override default PDF Generator Config
-pdfgenerator_conf = {}
+pdfgenerator_conf = {
+  cpu                      = "1024"
+  memory                   = "2048"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+}
 
 # Override default Offender API Config
 offenderapi_conf = {
-    env_oracledb_servicename ="DATNDA_TAF"
+  env_oracledb_servicename ="DATNDA_TAF"
+  cpu                      = "2048"
+  memory                   = "4096"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+  env_jwt_public_key       = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBcEpHbWFqeklvTzlXUmNqMDNlU20NCkV5YlNic0loR2Q2RFZUNHFRYVJFNnA3dEg3WmlKSW9Fa3NzNGQ4WmEwaG5hYnBrQmpZNjBLc2cxbm15emhlWVINCithWXVtc0gxbm1JcmJ4ZCtqV043T3A2V1pteWRBU3JMek1XWVdBYlNHOHBXMXkxY1RwdkRaMTlBSGJTYTRRL2UNCkp0ZXAxbHArMjJ1RzFuZE1UcHJUZDY0S05HMmZ0cHJld2hRMXhOcXZrVFo2aEJ1UUVSSjMxYVFwZEU4TUExcUsNCkNacjdUMnFOTUFNY2ROWmJrQWpGNUs5cTRqVnRCRjdZcU95cnRPUmZOV2phQmhYcDlOU3RhYkJNcFRFN1A2by8NClhJaU9rcmltNjlzaG1OdDhVRlU3WUlJN0ZvejgzM29HZnk2dmtDRjRxcGpIZ0RNc21STjc1UXRrRmRtaU8xaDgNCnB3SURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0="
+  env_oauth2_jwt_jwk_set_uri = "https://sign-in.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+  env_features_noms_update_custody = "false"
+  env_features_noms_update_booking_number = "false"
+  env_features_noms_update_keydates = "false"
+  env_features_noms_update_noms_number = "false"
 }
 
 # Override default Elasticsearch Config
-search_conf = {}
+search_conf = {
+  es_instance_count     = 3
+  es_zone_aware_enabled = true
+  es_ebs_size           = 50
+  es_instance_type      = "m5.xlarge.elasticsearch"
+}
 
 # Override default Web Frontend Config
 web_conf = {
   image_version = "0.2.9"
+  cpu                      = "2048"
+  memory                   = "2048"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
 }
 
 # Override default Offender Poll Push Config
-offenderpollpush_conf = {}
+offenderpollpush_conf = {
+  cpu    = "3072"
+  memory = "4096"
+  env_sns_arn_topic = "arn:aws:sns:eu-west-2:754256621582:cloud-platform-Digital-Prison-Services-c2d997878cd24eef94e60f1404977153"
+}
+
+# Override default Offender Search Service Config
+offendersearch_conf = {
+  env_oauth2_jwt_jwk_set_uri = "https://sign-in.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+  ecs_scaling_min_capacity = 2
+  ecs_scaling_max_capacity = 10
+}
+
+offender_api_allowed_cidrs = [
+  # "51.141.53.111/32" # Public IP of azure fortinet
+]
 
 offender_api_allowed_cidrs = [
   "81.134.202.29/32", # Moj VPN
