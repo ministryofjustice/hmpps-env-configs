@@ -1,7 +1,7 @@
 --- # mis_standbydb1.yml
 
-database_standby_unique: PRDMISS2
-database_standby_sid: PRDMISS2
+database_standby_unique: PRDMISS1
+database_standby_sid: PRDMISS1
 database_parameters:
    control_management_pack_access: DIAGNOSTIC
 required_patches:
