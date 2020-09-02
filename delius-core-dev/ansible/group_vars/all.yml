@@ -49,4 +49,4 @@ ndelius_oauth_config:
   user_info_endpoint: /api/user/me
   username_attribute: username
   display_name: DOM1
-  scope:
+  scope: delius
