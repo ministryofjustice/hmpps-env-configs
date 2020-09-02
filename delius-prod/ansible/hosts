@@ -2,11 +2,11 @@
 loadrunner.probation.service.justice.gov.uk
 
 [delius_primarydb]
-delius-db-2.probation.service.justice.gov.uk
-[delius_standbydb1]
-delius-db-3.probation.service.justice.gov.uk
-[delius_standbydb2]
 delius-db-1.probation.service.justice.gov.uk
+[delius_standbydb1]
+delius-db-2.probation.service.justice.gov.uk
+[delius_standbydb2]
+delius-db-3.probation.service.justice.gov.uk
 
 [delius_dbs:children]
 delius_primarydb
@@ -15,11 +15,11 @@ delius_standbydb2
 
 
 [mis_primarydb]
-mis-db-2.probation.service.justice.gov.uk
-[mis_standbydb1]
-mis-db-3.probation.service.justice.gov.uk
-[mis_standbydb2]
 mis-db-1.probation.service.justice.gov.uk
+[mis_standbydb1]
+mis-db-2.probation.service.justice.gov.uk
+[mis_standbydb2]
+mis-db-3.probation.service.justice.gov.uk
 
 [mis_dbs:children]
 mis_primarydb
