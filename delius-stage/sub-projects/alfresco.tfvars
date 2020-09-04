@@ -70,11 +70,9 @@ alfresco_asg_props = {
   asg_min           = 2
   asg_max           = 2
   asg_instance_type = "m5.2xlarge"
-  asg_ami           = "ami-0f7eff23903506a77"
   ebs_volume_size   = 1000
   min_elb_capacity  = 2
   ami_name          = "HMPPS Alfresco*"
-  image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
 
 # RDS
