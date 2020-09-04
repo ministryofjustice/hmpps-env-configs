@@ -65,7 +65,7 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.pre-prod.delius.probation.hmpps.d
 alf_iam_cross_account_perms = 1
 
 # RDS
-alf_snapshot_identifier = "alfresco-preprod-refresh"
+alf_snapshot_identifier = "alfresco-database-snapshot"
 
 alf_rds_props = {
   instance_class          = "db.m5.2xlarge"
@@ -80,5 +80,5 @@ alf_rds_props = {
   major_engine_version    = "9.6"
   replica_engine_version  = "9.6.9"
   master_engine_version   = "9.6.9"
-  snapshot_identifier     = "alfresco-preprod-refresh"
+  snapshot_identifier     = "alfresco-database-snapshot"
 }
