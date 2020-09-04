@@ -63,7 +63,11 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.probation.service.justice.gov.uk:
 
 # alerts
 alf_ops_alerts = {
-  messaging_status = "enabled"
+  slack_channel_name = "delius-alerts-alfresco-production"
+  log_level          = "info"
+  messaging_status   = "enabled"
+  runtime            = "python3.7"
+  ssm_token          = "manual-ops-alerts-slack-token"
 }
 
 # db instance size override
