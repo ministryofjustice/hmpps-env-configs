@@ -68,5 +68,17 @@ alf_ops_alerts = {
 
 # db instance size override
 alf_rds_props = {
-  instance_class = "db.m5.12xlarge"
+  instance_class          = "db.m5.12xlarge"
+  iops                    = 10000
+  storage_type            = "io1"
+  allocated_storage       = 1000
+  maintenance_window      = "Wed:19:30-Wed:21:30"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 28
+  family                  = "postgres9.6"
+  engine                  = "postgres"
+  major_engine_version    = "9.6"
+  replica_engine_version  = "9.6.9"
+  master_engine_version   = "9.6.9"
+  snapshot_identifier     = "alfresco-database-snapshot"
 }

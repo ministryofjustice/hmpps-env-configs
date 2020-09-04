@@ -67,11 +67,24 @@ alfresco_asg_props = {
 }
 
 # used for iam copying from prod backup bucket
-alf_iam_cross_account_perms = true
+alf_iam_cross_account_perms = 1
 
-# RDs
-alf_rds_props = {
-  snapshot_identifier = "alfresco-preprod-refresh"
-}
+# RDS
 
 alf_snapshot_identifier = "alfresco-preprod-refresh"
+
+alf_rds_props = {
+  instance_class          = "db.m5.2xlarge"
+  iops                    = 10000
+  storage_type            = "io1"
+  allocated_storage       = 1000
+  maintenance_window      = "Wed:19:30-Wed:21:30"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 28
+  family                  = "postgres9.6"
+  engine                  = "postgres"
+  major_engine_version    = "9.6"
+  replica_engine_version  = "9.6.9"
+  master_engine_version   = "9.6.9"
+  snapshot_identifier     = "alfresco-database-snapshot"
+}
