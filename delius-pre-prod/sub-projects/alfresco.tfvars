@@ -70,7 +70,6 @@ alfresco_asg_props = {
 alf_iam_cross_account_perms = 1
 
 # RDS
-
 alf_snapshot_identifier = "alfresco-preprod-refresh"
 
 alf_rds_props = {
@@ -86,5 +85,5 @@ alf_rds_props = {
   major_engine_version    = "9.6"
   replica_engine_version  = "9.6.9"
   master_engine_version   = "9.6.9"
-  snapshot_identifier     = "alfresco-database-snapshot"
+  snapshot_identifier     = "alfresco-preprod-refresh"
 }

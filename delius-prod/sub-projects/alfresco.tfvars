@@ -84,5 +84,4 @@ alf_rds_props = {
   major_engine_version    = "9.6"
   replica_engine_version  = "9.6.9"
   master_engine_version   = "9.6.9"
-  snapshot_identifier     = "alfresco-database-snapshot"
 }
