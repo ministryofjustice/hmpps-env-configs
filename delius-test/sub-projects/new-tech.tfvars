@@ -38,7 +38,7 @@ search_conf = {}
 
 # Override default Web Frontend Config
 web_conf = {
-  env_offender_search_provider           = "offender.search.provider"
+  env_offender_search_provider           = "probation-offender-search"
   env_probation_search_base_url          = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk/"
   env_hmpps_auth_base_url                = "https://sign-in-dev.hmpps.service.justice.gov.uk/"
   env_nomis_api_base_url                 = "https://api-dev.prison.service.justice.gov.uk/"
