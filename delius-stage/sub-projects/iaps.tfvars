@@ -48,7 +48,7 @@ dashboards_enabled = "true"
 iaps_asg_props = {
   owners            = "895523100917"
   ami_name          = "HMPPS IAPS Windows Server master*"
-  ami_id            = "ami-075d55ae08f16e8e6"
+  ami_id            = "ami-061a833926cd59750"
   image_tag_version = "1.0.0"
   # for pinning stage IAPS server deployment
   launch_template_id = "lt-01eef5355623b3cf8"
