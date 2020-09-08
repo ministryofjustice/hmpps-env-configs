@@ -47,6 +47,10 @@ ansible_vars = {
   nomis_url = "https://gateway.nomis-api.service.justice.gov.uk/elite2api"
 }
 
+umt_config = {
+  version = "1.8.0"
+}
+
 # Approved Premises Tracking API
 # (This service is currently disabled in Production)
 aptracker_api_config = {
