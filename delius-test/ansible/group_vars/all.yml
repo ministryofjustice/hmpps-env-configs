@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-test
 simple_environment_name: test
-ndelius_version: "4.7.8"
+ndelius_version: "4.7.8.2"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
@@ -41,12 +41,12 @@ autotask_windows:
                 start_time: "06:20"
                 duration_mins: 30
 
-ndelius_oauth_config:
-  url: https://sign-in-dev.hmpps.service.justice.gov.uk/auth
-  client_id: delius-unilink-dev
-  client_secret: /delius-test/delius/weblogic/ndelius-domain/oauth-client-secret
-  callback_url: https://ndelius.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
-  user_info_endpoint: /api/user/me
-  username_attribute: username
-  display_name: DOM1
-  scope: delius
+#ndelius_oauth_config:
+#  url: https://sign-in-dev.hmpps.service.justice.gov.uk/auth
+#  client_id: delius-unilink-dev
+#  client_secret: /delius-test/delius/weblogic/ndelius-domain/oauth-client-secret
+#  callback_url: https://ndelius.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
+#  user_info_endpoint: /api/user/me
+#  username_attribute: username
+#  display_name: DOM1
+#  scope: delius
