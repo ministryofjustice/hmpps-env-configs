@@ -58,3 +58,8 @@ iaps_asg_props = {
 iaps_asg_suspended_processes = {
   processes = ["Launch", "Terminate", "HealthCheck", "ReplaceUnhealthy", "AZRebalance", "AlarmNotification", "ScheduledActions", "AddToLoadBalancer"]
 }
+
+# IAPS V2 Appserver ASG Configuration
+iaps_asgv2_props = {
+  ami_id = "ami-09d83bacb56c9facb"
+}
