@@ -7,17 +7,6 @@ ndelius_version: "4.7.6"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
-    p20807155:
-      filename: p20807155_112040_Linux-x86-64.zip
-      description: ORA-07445 Updating Table with CLOB
-      grid_patch: false
-      database_patch: true
-    p27659043:
-      filename: p27659043_11204180417_Linux-x86-64.zip
-      description: MES Bundle Patch for April 2018 PSU
-      postinstall_sql: postinstall.sql
-      grid_patch: false
-      database_patch: true
     p18371441:
       filename: p18371441_112040_Linux-x86-64.zip
       description: ORA-19755 from RMAN recover of file with missing BCT file during duplicate
@@ -35,3 +24,7 @@ database:
 database_autotasks:
       sql_tuning_advisor: disabled
       auto_space_advisor: disabled
+autotask_windows:
+        weekday:
+                start_time: "06:20"
+                duration_mins: 30

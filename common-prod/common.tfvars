@@ -60,6 +60,7 @@ alf_account_ids = {
   hmpps-delius-stage    = "205048117103"
   hmpps-delius-prod     = "050243167760"
   hmpps-delius-perf     = "130975965028"
+  eng-non-prod          = "895523100917"
 }
 
 # ASG Configuration
@@ -68,11 +69,9 @@ alfresco_asg_props = {
   asg_min           = 4
   asg_max           = 4
   asg_instance_type = "m5.2xlarge"
-  asg_ami           = "ami-0f7eff23903506a77"
   ebs_volume_size   = 1000
   min_elb_capacity  = 2
   ami_name          = "HMPPS Alfresco*"
-  image_id          = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
 
 # jvm heap
@@ -429,7 +428,7 @@ default_ldap_config = {
   # Disk
   disk_volume_type = "io1"
   disk_volume_size = 100 # GB
-  disk_iops        = 1000
+  disk_iops        = 5000
 }
 ldap_config = {}
 
@@ -501,7 +500,7 @@ pwm_config = {}
 
 # UMT
 default_umt_config = {
-  version                       = "1.7.5"          # Application version
+  version                       = "1.9.0"          # Application version
   memory                        = 2048             # Memory to assign to ECS container in MB
   cpu                           = 1024             # CPU to assign to ECS container
   ecs_scaling_min_capacity      = 2                # Minimum number of running tasks

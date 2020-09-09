@@ -6,23 +6,15 @@ egress_80 = true
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
-  database_size  = "x_large"
-  instance_type  = "r5.4xlarge"
-  disk_iops      = 1000
-  disks_quantity = 16           # Do not decrease this
-  disk_size      = 1000         # Do not decrease this
-  ## total_storage  = 16000 # This should equal disks_quantity x disk_size
-
-  # ## This is suggested config for when the
-  # ## https://github.com/ministryofjustice/hmpps-oracle-database is set to version 1.0.0 or higher
-  # ## remove above four lines and uncomment below
-  # disks_quantity      = 16   # Do not decrease this
-  # disks_quantity_data = 8
-  # disk_iops_data      = 1000
-  # disk_iops_flash     = 500
-  # disk_size_data      = 1000 # Do not decrease this
-  # disk_size_flash     = 1000 # Do not decrease this
-  # ## total_storage  = 16000 # This should equal disks_quantity x disk_size
+  database_size       = "x_large"
+  instance_type       = "r5.4xlarge"
+  disks_quantity      = 16   # Do not decrease this
+  disks_quantity_data = 10
+  disk_iops_data      = 1000
+  disk_iops_flash     = 500
+  disk_size_data      = 1000 # Do not decrease this
+  disk_size_flash     = 1000 # Do not decrease this
+  ## total_storage    = 16000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
@@ -53,6 +45,10 @@ ansible_vars = {
   ndelius_log_level = "ERROR"
   ndelius_analytics_tag = "UA-122274748-1"
   nomis_url = "https://gateway.nomis-api.service.justice.gov.uk/elite2api"
+}
+
+umt_config = {
+  version = "1.8.0"
 }
 
 # Approved Premises Tracking API
