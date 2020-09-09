@@ -53,13 +53,12 @@ SPG_MPX_HOST_TYPE = "hybrid"
 
 
 ### CRC ###
-asg_instance_type_crc = "t2.small"
-
+asg_instance_type_crc = "t2.medium"
 spg_crc_asg_desired = 1
 spg_crc_asg_max = 2
 spg_crc_asg_min = 1
-spg_crc_ecs_memory = 1881
-SPG_CRC_JAVA_MAX_MEM = 1500
+spg_crc_ecs_memory = 3900
+SPG_CRC_JAVA_MAX_MEM = 2442
 SPG_CRC_HOST_TYPE = "crc"
 
 
@@ -97,7 +96,6 @@ SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.auto-test.delius.probat
 SPG_ISO_FQDN  = "spgw-ext.auto-test.probation.service.justice.gov.uk"
 SPG_MPX_FQDN  = "spgw-mpx-int.auto-test.delius.probation.hmpps.dsd.io"
 SPG_CRC_FQDN  = "spgw-crc-ext.auto-test.probation.service.justice.gov.uk"
-
 
 SPG_ENV_VARS = {
   SPG_INTERNAL_SCHEMA_VERSION = "0-9-14"

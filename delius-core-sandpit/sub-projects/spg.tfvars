@@ -50,8 +50,7 @@ SPG_MPX_HOST_TYPE = "hybrid"
 
 
 ### CRC ###
-asg_instance_type_crc = "t2.medium" // higher spec in sandpit as speeds up build / test cycle
-
+asg_instance_type_crc = "t2.medium"
 spg_crc_asg_desired = 1
 spg_crc_asg_max = 2
 spg_crc_asg_min = 1
