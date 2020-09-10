@@ -39,7 +39,7 @@ iaps_app_name = "iaps"
 
 instance_type = "t3.medium"
 
-psn_proxy_endpoint = "data-im-proxy-int-psn.stage.probation.service.justice.gov.uk"
+psn_proxy_endpoint = "data-im-proxy-int-psn.dev.probation.service.justice.gov.uk"
 
 dashboards_enabled = "true"
 
