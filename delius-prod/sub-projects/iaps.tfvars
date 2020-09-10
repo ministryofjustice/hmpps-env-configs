@@ -50,4 +50,16 @@ iaps_asg_props = {
   ami_name          = "HMPPS IAPS Windows Server master*"
   ami_id            = "ami-00d40f926ee31fcd6"
   image_tag_version = "1.0.0"
+  # for pinning stage IAPS server deployment
+  launch_template_id = "lt-037d4a6184720ead9"
+  launch_template_name = "delius-prod-delius-iaps-pri-tpl-20190920090854215500000001"
+}
+
+iaps_asg_suspended_processes = {
+  processes = ["Launch", "Terminate", "HealthCheck", "ReplaceUnhealthy", "AZRebalance", "AlarmNotification", "ScheduledActions", "AddToLoadBalancer"]
+}
+
+# IAPS V2 Appserver ASG Configuration
+iaps_asgv2_props = {
+  ami_id = "ami-0941e634f68155a95"
 }
