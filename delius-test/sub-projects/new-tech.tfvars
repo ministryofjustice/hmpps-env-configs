@@ -47,6 +47,7 @@ web_conf = {
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {
   env_sns_arn_topic = "arn:aws:sns:eu-west-2:754256621582:cloud-platform-Digital-Prison-Services-453cac1179377186788c5fcd12525870"
+  desired_count     = 0
 }
 
 
