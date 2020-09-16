@@ -65,4 +65,4 @@ iaps_asgv2_props = {
 }
 
 # monitoring overrides - used to specify the instance name we use in the env
-iaps_monitoring_rds_db_instance_identifier = ""
+iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-stage-iaps"
