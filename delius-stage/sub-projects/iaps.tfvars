@@ -63,3 +63,8 @@ iaps_asg_suspended_processes = {
 iaps_asgv2_props = {
   ami_id = "ami-057ab0802db21890d"
 }
+
+# monitoring overrides - used to specify the instance name we use in the env
+iaps_monitoring_props = {
+  rds_db_instance_identifier = ""
+}
