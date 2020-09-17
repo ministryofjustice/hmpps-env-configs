@@ -71,6 +71,7 @@ offenderpollpush_conf = {
   cpu    = "3072"
   memory = "4096"
   env_sns_arn_topic = "arn:aws:sns:eu-west-2:754256621582:cloud-platform-Digital-Prison-Services-c2d997878cd24eef94e60f1404977153"
+  desired_count     = 0
 }
 
 # Override default Offender Search Service Config
