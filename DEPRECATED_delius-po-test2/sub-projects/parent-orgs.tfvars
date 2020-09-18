@@ -5,10 +5,10 @@ PO_SPG_CONFIGURATION = {
   SPG_CERTIFICATE_PATH = "/unclassified-data/hmpps-delius-po-test2/current/"
 
   PO_POSTUB_NAME = "PO STUB"
-  PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
-  PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
+  PO_POSTUB_TLS_COMMON_NAME = "spgw-crc-ext.po-test2.probation.service.justice.gov.uk"
+  PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.po-test2.probation.service.justice.gov.uk"
   PO_POSTUB_CRC_LIST = "C00,C01,C15,C22,C23"
-  PO_POSTUB_ENDPOINT_URL = "https://{{ lookup('env','SPG_CRC_FQDN') }}:9001/cxf/CRC-100"
+  PO_POSTUB_ENDPOINT_URL = "https://spgw-crc-ext.po-test2.probation.service.justice.gov.uk:9001/cxf/CRC-100"
 
   CRC_SCHEMA_0_9_10 = "C01"
   CRC_SCHEMA_0_9_13 = "C00,C15,C22,C23"
