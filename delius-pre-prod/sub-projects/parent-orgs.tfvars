@@ -26,8 +26,8 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_CRC_LIST = "C00,C04,C06,C07,C20" # PF only have C05 active in PPL
 
   PO_POSTUB_CALLING_VIA_PROXY_URL_REWRITE = "spgw-ext.pre-prod.probation,spgw-int-psn.pre-prod.probation"
-  PO_POSTUB_TLS_COMMON_NAME = "{{ lookup('env','SPG_CRC_FQDN') }}"
-  PO_POSTUB_SIGNING_COMMON_NAME = "signing.{{ lookup('env','SPG_CRC_FQDN') }}"
+  PO_POSTUB_TLS_COMMON_NAME = "spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
+  PO_POSTUB_SIGNING_COMMON_NAME = "signing.spgw-crc-ext.pre-prod.probation.service.justice.gov.uk"
   PO_POSTUB_ENDPOINT_URL = "https://spgw-int-psn.pre-prod.probation.service.justice.gov.uk:9001/POSTUB/cxf/CRC-100"
   PO_POSTUB_PROXIED_URL = "https://spgw-crc-ext.pre-prod.probation.service.justice.gov.uk:9001/cxf/CRC-100"
 
