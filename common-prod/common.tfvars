@@ -580,7 +580,7 @@ dss_job_ulimits = [
 ]
 
 # Testing/Chaosmonkey
-ce_instances = ["c5.large", "c5.xlarge"]
+ce_instances = ["m5.large", "c5.xlarge"]
 
 ce_min_vcpu = 0
 
