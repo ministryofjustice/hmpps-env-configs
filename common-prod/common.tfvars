@@ -553,7 +553,7 @@ default_gdpr_config = {
 gdpr_config = {}
 
 # DSS Batch Task
-dss_batch_instances = ["m5.large", "c5.large"]
+dss_batch_instances = ["m5.large", "c5.xlarge"]
 
 dss_min_vcpu = 0
 
