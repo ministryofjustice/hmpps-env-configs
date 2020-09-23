@@ -64,18 +64,5 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.auto-test.delius.probation.hmpps.
 # restore dataset
 alf_restore_status = "restore"
 
-alf_rds_props = {
-  instance_class          = "db.t2.large"
-  iops                    = 0
-  storage_type            = "gp2"
-  allocated_storage       = 100
-  maintenance_window      = "Wed:19:30-Wed:21:30"
-  backup_window           = "02:00-04:00"
-  backup_retention_period = 7
-  family                  = "postgres9.6"
-  engine                  = "postgres"
-  major_engine_version    = "9.6"
-  replica_engine_version  = "9.6.9"
-  master_engine_version   = "9.6.9"
-  snapshot_identifier     = "alfresco-database-snapshot"
-}
+# RDS
+alf_snapshot_identifier = "alfresco-database-snapshot"
