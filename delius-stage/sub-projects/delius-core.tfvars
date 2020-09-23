@@ -85,5 +85,9 @@ dss_job_envvars = [
   {
     "name" = "JAVA_OPTS"
     "value" = "-Xms1024m -Xmx2048m"
+  },
+  {
+    "name" = "PARSEERRORMAXLIMITOVERRIDE"
+    "value" = "20"
   }
 ]

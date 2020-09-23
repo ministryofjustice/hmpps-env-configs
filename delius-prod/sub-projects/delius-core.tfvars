@@ -126,7 +126,11 @@ dss_job_envvars = [
   {
     "name" = "JAVA_OPTS"
     "value" = "-Xms1024m -Xmx3072m"
-}
+  },
+  {
+    "name" = "PARSEERRORMAXLIMITOVERRIDE"
+    "value" = "20"
+  }
 ]
 
 # Make the National Delius front-end pingdom report available to the public:
