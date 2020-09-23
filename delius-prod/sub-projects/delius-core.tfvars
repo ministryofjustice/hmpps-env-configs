@@ -58,6 +58,9 @@ env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -MTCNovo
   "62.25.109.202/32",
+  # The following IPs are to be enabled for Production once testing is complete in PO-Test and Pre-Prod:
+  #"52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
+  #"52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
 
   # -SEETEC
   "80.86.46.16/30",
