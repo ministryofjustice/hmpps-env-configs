@@ -553,7 +553,7 @@ default_gdpr_config = {
 gdpr_config = {}
 
 # DSS Batch Task
-dss_batch_instances = ["m5.large", "c5.xlarge"]
+dss_batch_instances = ["m5.large", "c5.large"]
 
 dss_min_vcpu = 0
 
@@ -563,7 +563,7 @@ dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.2"
 
 dss_job_vcpus = 1
 
-dss_job_memory = 4096
+dss_job_memory = 3096
 
 dss_job_schedule = "cron(00 7 * * ? *)"
 
