@@ -38,6 +38,10 @@ offenderapi_conf = {
   env_oauth2_jwt_jwk_set_uri = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
 }
 
+offendersearch_conf = {
+  env_oauth2_jwt_jwk_set_uri = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+}
+
 offender_api_allowed_cidrs = [
   "81.134.202.29/32", # Moj VPN
   "217.33.148.210/32" # Digital studio
