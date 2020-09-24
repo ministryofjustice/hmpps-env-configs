@@ -54,6 +54,9 @@ ansible_vars = {
 env_user_access_cidr_blocks = []
 
 # DSS Batch Task
+
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.6"
+
 dss_job_envvars = [
   {
     "name" = "DSS_TESTMODE"
@@ -82,5 +85,9 @@ dss_job_envvars = [
   {
     "name" = "JAVA_OPTS"
     "value" = "-Xms1024m -Xmx2048m"
+  },
+  {
+    "name" = "PARSEERRORMAXLIMITOVERRIDE"
+    "value" = "20"
   }
 ]

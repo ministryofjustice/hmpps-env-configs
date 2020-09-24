@@ -559,13 +559,15 @@ dss_min_vcpu = 0
 
 dss_max_vcpu = 8
 
-dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.0"
+
+# moved to environment level vars
+# dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.2"
 
 dss_job_vcpus = 1
 
 dss_job_memory = 3096
 
-dss_job_schedule = "cron(00 07 * * ? *)"
+dss_job_schedule = "cron(00 7 * * ? *)"
 
 dss_job_retries = 1
 
@@ -580,7 +582,7 @@ dss_job_ulimits = [
 ]
 
 # Testing/Chaosmonkey
-ce_instances = ["m5.large", "c5.large"]
+ce_instances = ["m5.large", "c5.xlarge"]
 
 ce_min_vcpu = 0
 
