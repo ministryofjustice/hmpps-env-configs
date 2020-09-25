@@ -16,3 +16,8 @@ required_patches:
       postinstall_sql: postinstall.sql
       grid_patch: false
       database_patch: true
+delius_users:
+  jstanley_ro:
+  dbarnett_ro:
+  schippendale_ro:
+  ksmith_ro:
