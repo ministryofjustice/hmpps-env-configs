@@ -68,3 +68,7 @@ alfresco_app_name = "alfresco"
 
 # restore dataset
 alf_restore_status = "restore"
+
+alf_elk_service_map = {
+  create_service_role = 1
+}
