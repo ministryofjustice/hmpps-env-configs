@@ -22,6 +22,7 @@ PO_SPG_CONFIGURATION = {
   # The list of CRCs who should NOT receive MetaDataUpdate messages (includes PF and MTC CRCs - even though not used in delius-test)
   SPG_DISABLED_META_LIST = "C03,C04,C05,C06,C07,C15,C16,C17,C19,C20"
 
+}
 
 
 //firewall rules for parent_orgs
