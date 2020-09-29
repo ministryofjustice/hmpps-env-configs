@@ -3,5 +3,5 @@ regions:
   - eu-west-2
 keyed_groups:
   # Allow selection by tag eg. hosts: tag_aws_autoscaling_groupName_myasg
- - prefix: tag
+  - prefix: tag
     key: tags
