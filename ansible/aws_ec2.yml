@@ -5,3 +5,7 @@ keyed_groups:
   # Allow selection by tag eg. hosts: tag_aws_autoscaling_groupName_myasg
   - prefix: tag
     key: tags
+hostnames:
+  - tag:Name
+compose:
+  ansible_host: private_ip_address
