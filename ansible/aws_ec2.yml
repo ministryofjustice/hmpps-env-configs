@@ -1,0 +1,7 @@
+plugin: aws_ec2
+regions:
+  - eu-west-2
+keyed_groups:
+  # Allow selection by tag eg. hosts: tag_aws_autoscaling_groupName_myasg
+ - prefix: tag
+    key: tags
