@@ -94,3 +94,17 @@ alf_rds_props = {
   master_engine_version   = "9.6.9"
   snapshot_identifier     = "alfresco-database-snapshot"
 }
+
+alf_elk_service_map = {
+  instance_type         = "m5.xlarge.elasticsearch"
+  dedicated_master_type = "m5.large.elasticsearch"
+  es_ebs_type           = "gp2"
+  es_ebs_size           = 300
+  backup_units_count    = 2
+  snapshot_unit_count   = 90
+  indices_unit_count    = 180
+}
+
+alf_backups_map = {
+  backups_expiration = 100
+}
