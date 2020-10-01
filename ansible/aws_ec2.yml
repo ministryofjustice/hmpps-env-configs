@@ -8,4 +8,4 @@ keyed_groups:
 hostnames:
   - tag:Name
 compose:
-  ansible_host: private_ip_address
+  ansible_host: instance_id # Instance ID is used for connecting via SSM Session Manager
