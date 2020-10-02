@@ -12,3 +12,15 @@ autoscaling_schedule                 = "true"
 calendar_rule_enabled                = "true"
 autostop_notify_rule_enabled         = "true"
 create_autostop_instance             = "true"
+
+oracle_backup_schedule = {
+  delius = {
+    daily_schedule = [
+      "30 05 ? * TUE *",
+      "30 05 ? * WED *",
+      "30 05 ? * THU *",
+      "30 05 ? * FRI *"
+    ]
+    weekly_schedule = "30 05 ? * MON *"
+  }
+}
