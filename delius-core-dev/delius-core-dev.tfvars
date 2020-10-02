@@ -7,13 +7,12 @@ route53_strategic_hosted_zone_id = "Z3JN6545N8RW90"
 
 
 #lambda auto start stop vars
-ec2_schedule                 = "true"
-autoscaling_schedule         = "true"
-calendar_rule_enabled        = "true"
-autostop_notify_rule_enabled = "true"
-create_autostop_instance     = "true"
+ec2_schedule                         = "true"
+autoscaling_schedule                 = "true"
+calendar_rule_enabled                = "true"
+autostop_notify_rule_enabled         = "true"
+create_autostop_instance             = "true"
 
-# Daily and weekly backup schedules for Delius/MIS Oracle Databases:
 oracle_backup_schedule = {
   delius = {
     daily_schedule = [
