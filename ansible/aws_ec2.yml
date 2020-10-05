@@ -15,4 +15,4 @@ hostnames:
   - tag:InventoryHost
   - instance-id
 compose:
-  ansible_host: instance-id # Instance ID is used for connecting via SSM Session Manager
+  ansible_host: instance_id # Instance ID is used for connecting via SSM Session Manager
