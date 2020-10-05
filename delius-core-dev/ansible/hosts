@@ -2,11 +2,11 @@
 loadrunner.dev.delius-core.probation.hmpps.dsd.io
 
 [delius_primarydb]
-delius-core-dev-delius-db-1 ansible_host=delius-db-1.dev.delius-core.probation.hmpps.dsd.io
+delius-db-1.dev.delius-core.probation.hmpps.dsd.io
 [delius_standbydb1]
-delius-core-dev-delius-db-2 ansible_host=delius-db-2.dev.delius-core.probation.hmpps.dsd.io
+delius-db-2.dev.delius-core.probation.hmpps.dsd.io
 [delius_standbydb2]
-delius-core-dev-delius-db-3 ansible_host=delius-db-3.dev.delius-core.probation.hmpps.dsd.io
+delius-db-3.dev.delius-core.probation.hmpps.dsd.io
 
 [delius_dbs:children]
 delius_primarydb
