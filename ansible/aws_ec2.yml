@@ -2,10 +2,17 @@ plugin: aws_ec2
 regions:
   - eu-west-2
 keyed_groups:
-  # Allow selection by tag eg. hosts: tag_aws_autoscaling_groupName_myasg
+  # Allow selection by tag eg. hosts: tag_Name_myname
   - prefix: tag
     key: tags
+  # Allow selection by Name eg. hosts: name_myname
+  - prefix: name
+    key: tags['Name']
+  # Allow selection by ASG name eg. hosts: asg_myasg
+  - prefix: asg
+    key: tags['aws:autoscaling:groupName']
 hostnames:
-  - tag:Name
+  - tag:InventoryHost
+  - instance-id
 compose:
   ansible_host: instance_id # Instance ID is used for connecting via SSM Session Manager
