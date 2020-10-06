@@ -96,7 +96,7 @@ env_user_access_cidr_blocks = [
 ]
 
 # DSS Batch Task
-dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.0"
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.6"
 
 dss_job_envvars = [
   {
