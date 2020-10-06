@@ -37,6 +37,8 @@ spg_build_inv_dir = "/tmp/ansible/inventories/hmpps/generic-default"
 
 
 servicemix_logs_alarm_enabled=true
+activemq_alarm_enabled=true
+
 # Check back servicemix logs every for 10 hours, every 5 minutes
 servicemix_log_alarm_evaluation_period="120"
 
