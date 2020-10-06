@@ -25,6 +25,8 @@ allowed_cidr_block = [
 ]
 
 servicemix_logs_alarm_enabled=true
+activemq_alarm_enabled=true
+
 # Check servicemix logs every 5 minutes
 servicemix_log_alarm_evaluation_period="1"
 
