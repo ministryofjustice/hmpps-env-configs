@@ -18,8 +18,11 @@ PO_SPG_CONFIGURATION = {
   PO_POSTUB_PROXIED_URL = "n/a"
   CRC_SCHEMA_0_9_13 = "C00,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C15,C16,C17,C18,C19,C20,C21"
   CRC_SCHEMA_0_9_14 = "C01,C14"
-}
 
+  # The list of CRCs who should NOT receive MetaDataUpdate messages (includes PF and MTC CRCs - even though not used in delius-test)
+  SPG_DISABLED_META_LIST = "C03,C04,C05,C06,C07,C15,C16,C17,C19,C20"
+
+}
 
 
 //firewall rules for parent_orgs
