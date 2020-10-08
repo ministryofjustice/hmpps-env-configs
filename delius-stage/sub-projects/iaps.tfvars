@@ -48,6 +48,21 @@ dashboards_enabled = "true"
 iaps_asg_props = {
   owners            = "895523100917"
   ami_name          = "HMPPS IAPS Windows Server master*"
-  ami_id            = "ami-075d55ae08f16e8e6"
+  ami_id            = "ami-061a833926cd59750"
   image_tag_version = "1.0.0"
+  # for pinning stage IAPS server deployment
+  launch_template_id = "lt-01eef5355623b3cf8"
+  launch_template_name = "delius-stage-delius-iaps-pri-tpl-20200113121918038900000001"
 }
+
+iaps_asg_suspended_processes = {
+  processes = []
+}
+
+# IAPS V2 Appserver ASG Configuration
+iaps_asgv2_props = {
+  ami_id = "ami-057ab0802db21890d"
+}
+
+# monitoring overrides - used to specify the instance name we use in the env
+iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-stage-iaps"

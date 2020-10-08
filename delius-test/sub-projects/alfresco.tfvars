@@ -70,3 +70,7 @@ alfresco_asg_props = {
   ami_name = "HMPPS Alfresco *"
   image_id = "ami-024bdaa974371ea6b" # used for updating ami launch permissions
 }
+
+alf_elk_service_map = {
+  domain_name_type              = "short" 
+}

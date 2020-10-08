@@ -4,3 +4,6 @@ database_global_database: PREBOE
 database_taf_service: PREBOE_TAF
 database_primary_unique: PREBOE
 database_primary_sid: PREBOE
+database_parameters:
+   sga_max_size: 3G
+   sga_target: 3G

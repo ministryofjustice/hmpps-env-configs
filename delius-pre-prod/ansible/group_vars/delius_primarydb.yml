@@ -30,6 +30,8 @@ delius_users:
   ldelaney_ro:
   phoward_ro:
   pivanov_ro:
+  ajohnson_ro:
+  pmintzas_ro:
 
 required_patches:
     p27659043:

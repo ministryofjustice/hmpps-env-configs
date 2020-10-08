@@ -1,0 +1,7 @@
+#public certs and private keys are here in official-data/environment
+
+#they are generated as part of the spg certificate orchestration process, currently run in jenkins
+
+
+
+https://s3.console.aws.amazon.com/s3/buckets/tf-eu-west-2-hmpps-eng-dev-certificates-private-s3bucket

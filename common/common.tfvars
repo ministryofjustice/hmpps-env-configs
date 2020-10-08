@@ -66,6 +66,8 @@ alf_account_ids = {
   hmpps-delius-int           = "645753425509"
   hmpps-delius-auto-test     = "431912413968"
   hmpps-delius-core-dev      = "723123699647"
+  hmpps-alfresco-dev         = "563502482979"
+  eng-non-prod               = "895523100917"
 }
 
 alfresco_jvm_memory = "8G"
@@ -381,7 +383,7 @@ default_ldap_config = {
   # Disk
   disk_volume_type      = "io1"
   disk_volume_size      = 30 # GB
-  disk_iops             = 500
+  disk_iops             = 1000
 }
 ldap_config = {}
 
@@ -453,7 +455,7 @@ pwm_config = {}
 
 # UMT
 default_umt_config = {
-  version                       = "1.7.5"           # Application version
+  version                       = "1.9.0"           # Application version
   memory                        = 1024              # Memory to assign to ECS container in MB
   cpu                           = 512               # CPU to assign to ECS container
   ecs_scaling_min_capacity      = 1                 # Minimum number of running tasks
@@ -507,19 +509,19 @@ gdpr_config = {}
 
 
 # DSS Batch Task
-dss_batch_instances = ["m5.large", "c5.large"]
+dss_batch_instances = ["m5.large", "c5.xlarge"]
 
 dss_min_vcpu = 0
 
 dss_max_vcpu = 8
 
-dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.0"
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.6"
 
 dss_job_vcpus = 1
 
 dss_job_memory = 256
 
-dss_job_schedule = "cron(00 23 * * ? *)"
+dss_job_schedule = "cron(00 07 * * ? *)"
 
 dss_job_retries = 1
 

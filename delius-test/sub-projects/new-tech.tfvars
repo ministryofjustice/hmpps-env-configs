@@ -37,11 +37,17 @@ offenderapi_conf = {
 search_conf = {}
 
 # Override default Web Frontend Config
-web_conf = {}
+web_conf = {
+  env_offender_search_provider           = "probation-offender-search"
+  env_probation_search_base_url          = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk/"
+  env_hmpps_auth_base_url                = "https://sign-in-dev.hmpps.service.justice.gov.uk/"
+  env_nomis_api_base_url                 = "https://api-dev.prison.service.justice.gov.uk/"
+}
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {
   env_sns_arn_topic = "arn:aws:sns:eu-west-2:754256621582:cloud-platform-Digital-Prison-Services-453cac1179377186788c5fcd12525870"
+  desired_count     = 0
 }
 
 
@@ -78,6 +84,7 @@ offender_api_allowed_secure_cidrs = [
   "34.249.60.91/32", # Analytics platform
   "34.251.199.153/32", # Analytics platform
   "34.249.194.106/32", # Analytics platform
+  "54.76.254.148/32", # DXW
 ]
 
 offender_search_allowed_secure_cidrs = [

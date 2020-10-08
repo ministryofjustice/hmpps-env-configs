@@ -34,17 +34,17 @@ self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
 bcs_instance_type  = "m5.2xlarge"
-bcs_root_size = 75
+bcs_root_size = 100
 bcs_server_count = 3
 
 #Instance size for bfs
 bfs_instance_type  = "m5.2xlarge"
-bfs_root_size = 75
+bfs_root_size = 100
 bfs_server_count = 1
 
 #Instance size for bps
 bps_instance_type  = "m5.2xlarge"
-bps_root_size = 75
+bps_root_size = 100
 bps_server_count = 3
 
 #Instance size for bws

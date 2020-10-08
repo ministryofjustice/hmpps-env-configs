@@ -61,15 +61,38 @@ alfresco_app_name = "alfresco"
 # spg broker url
 spg_messaging_broker_url = "tcp://spgw-jms-int.pre-prod.delius.probation.hmpps.dsd.io:61616"
 
-# ASG Configuration
-alfresco_asg_props = {
-  asg_ami = "ami-0f7eff23903506a77"
+# used for iam copying from prod backup bucket
+alf_iam_cross_account_perms = 1
+
+# RDS
+alf_snapshot_identifier = "alfresco-database-snapshot"
+
+alf_rds_props = {
+  instance_class          = "db.m5.2xlarge"
+  iops                    = 10000
+  storage_type            = "io1"
+  allocated_storage       = 1000
+  maintenance_window      = "Wed:19:30-Wed:21:30"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 28
+  family                  = "postgres9.6"
+  engine                  = "postgres"
+  major_engine_version    = "9.6"
+  replica_engine_version  = "9.6.9"
+  master_engine_version   = "9.6.9"
+  snapshot_identifier     = "alfresco-database-snapshot"
 }
 
-# used for iam copying from prod backup bucket
-alf_iam_cross_account_perms = true
+alf_elk_service_map = {
+  instance_type         = "m5.xlarge.elasticsearch"
+  dedicated_master_type = "m5.large.elasticsearch"
+  es_ebs_type           = "gp2"
+  es_ebs_size           = 300
+  backup_units_count    = 2
+  snapshot_unit_count   = 90
+  indices_unit_count    = 180
+}
 
-# RDs
-alf_rds_props = {
-  snapshot_identifier = "alfresco-preprod-refresh"
+alf_backups_map = {
+  backups_expiration = 100
 }

@@ -2,3 +2,5 @@
 
 database_standby_unique: SANNDAS1
 database_standby_sid: SANNDAS1
+database_parameters:
+   db_recovery_file_dest_size: 100G

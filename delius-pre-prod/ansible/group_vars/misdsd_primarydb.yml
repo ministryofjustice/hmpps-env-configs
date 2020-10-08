@@ -5,3 +5,6 @@ database_taf_service: PREDSD_TAF
 database_primary_unique: PREDSD
 database_primary_sid: PREDSD
 oracle_osbws_chunk_size: 104857600
+database_parameters:
+   sga_max_size: 5G
+   sga_target: 5G

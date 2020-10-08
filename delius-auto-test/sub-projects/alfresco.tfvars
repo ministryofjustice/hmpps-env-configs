@@ -63,3 +63,6 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.auto-test.delius.probation.hmpps.
 
 # restore dataset
 alf_restore_status = "restore"
+
+# RDS
+alf_snapshot_identifier = "alfresco-database-snapshot"

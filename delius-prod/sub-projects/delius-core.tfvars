@@ -6,23 +6,15 @@ egress_80 = true
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
-  database_size  = "x_large"
-  instance_type  = "r5.4xlarge"
-  disk_iops      = 1000
-  disks_quantity = 16           # Do not decrease this
-  disk_size      = 1000         # Do not decrease this
-  ## total_storage  = 16000 # This should equal disks_quantity x disk_size
-
-  # ## This is suggested config for when the
-  # ## https://github.com/ministryofjustice/hmpps-oracle-database is set to version 1.0.0 or higher
-  # ## remove above four lines and uncomment below
-  # disks_quantity      = 16   # Do not decrease this
-  # disks_quantity_data = 8
-  # disk_iops_data      = 1000
-  # disk_iops_flash     = 500
-  # disk_size_data      = 1000 # Do not decrease this
-  # disk_size_flash     = 1000 # Do not decrease this
-  # ## total_storage  = 16000 # This should equal disks_quantity x disk_size
+  database_size       = "x_large"
+  instance_type       = "r5.4xlarge"
+  disks_quantity      = 16   # Do not decrease this
+  disks_quantity_data = 10
+  disk_iops_data      = 1000
+  disk_iops_flash     = 500
+  disk_size_data      = 1000 # Do not decrease this
+  disk_size_flash     = 1000 # Do not decrease this
+  ## total_storage    = 16000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_oracle_db = {
@@ -104,6 +96,8 @@ env_user_access_cidr_blocks = [
 ]
 
 # DSS Batch Task
+dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.6"
+
 dss_job_envvars = [
   {
     "name" = "DSS_TESTMODE"
@@ -131,8 +125,12 @@ dss_job_envvars = [
   },
   {
     "name" = "JAVA_OPTS"
-    "value" = "-Xms1024m -Xmx2048m"
-}
+    "value" = "-Xms1024m -Xmx3072m"
+  },
+  {
+    "name" = "PARSEERRORMAXLIMITOVERRIDE"
+    "value" = "30"
+  }
 ]
 
 # Make the National Delius front-end pingdom report available to the public:
