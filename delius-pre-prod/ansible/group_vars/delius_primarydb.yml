@@ -32,6 +32,7 @@ delius_users:
   pivanov_ro:
   ajohnson_ro:
   pmintzas_ro:
+  acraik_ro:
 
 required_patches:
     p27659043:
