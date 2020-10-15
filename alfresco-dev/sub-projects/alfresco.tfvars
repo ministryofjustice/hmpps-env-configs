@@ -70,5 +70,5 @@ alfresco_app_name = "alfresco"
 alf_restore_status = "restore"
 
 alf_elk_service_map = {
-  create_service_role = 1
+  create_service_role = 0
 }
