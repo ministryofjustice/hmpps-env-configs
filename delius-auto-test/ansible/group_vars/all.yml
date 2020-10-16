@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-auto-test
 simple_environment_name: auto-test
-ndelius_version: "4.7.8.3_oracle18c"
+ndelius_version: "4.7.8.6_oracle18c"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
