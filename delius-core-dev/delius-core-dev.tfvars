@@ -15,12 +15,7 @@ create_autostop_instance             = "true"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule = [
-      "30 05 ? * TUE *",
-      "30 05 ? * WED *",
-      "30 05 ? * THU *",
-      "30 05 ? * FRI *"
-    ]
-    weekly_schedule = "30 05 ? * MON *"
+    daily_schedule  = "30 05 ? * 2-5 *"
+    weekly_schedule = "30 05 ? * 1 *"
   }
 }
