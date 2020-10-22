@@ -57,16 +57,6 @@ dis_instance_type  = "m5.2xlarge"
 dis_root_size = 75
 dis_server_count = 1
 
-bws-health_check = [
-  {
-    target              = "HTTP:8080/BOE/BI"
-    interval            = 30
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    timeout             = 5
-  },
-]
-
 # Databases
 ## MIS Datamart
 db_size_mis = {
@@ -181,27 +171,5 @@ mariadb_monitoring_interval  = 5
 rds_allocated_storage        = "1000"
 nextcloud_instance_count     = 3
 
-#Nextcloud LB Healtcheck
-nextcloud_health_check = [
-  {
-    target              = "HTTP:80/index.php/login"
-    interval            = 30
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    timeout             = 5
-  },
-]
-
 #monitoring
 mis_alarms_enabled = "false"
-
-#DIS LB Healtcheck
-dis-health_check = [
-  {
-    target              = "HTTP:8080/DataServices/"
-    interval            = 30
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    timeout             = 5
-  },
-]

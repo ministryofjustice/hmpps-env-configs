@@ -59,39 +59,6 @@ dis_instance_type  = "t2.xlarge"
 dis_root_size = 75
 dis_server_count = 1
 
-#BWS LB Healtcheck
-bws-health_check = [
-  {
-    target              = "HTTP:8080/BOE/BI"
-    interval            = 30
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    timeout             = 5
-  },
-]
-
-#DIS LB Healtcheck
-dis-health_check = [
-  {
-    target              = "HTTP:8080/DataServices/"
-    interval            = 30
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    timeout             = 5
-  },
-]
-
-#Nextcloud LB Healtcheck
-nextcloud_health_check = [
-  {
-    target              = "HTTP:80/index.php/login"
-    interval            = 30
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    timeout             = 5
-  },
-]
-
 #Nextcloud
 nextcloud_instance_type      = "t2.small"
 rds_instance_class           = "db.t2.small"
