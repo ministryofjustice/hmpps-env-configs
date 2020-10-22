@@ -11,3 +11,22 @@ autostop_notify_rule_enabled         = "true"
 tagged_user                          = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A>"
 channel                              = "auto-stop-alerts"
 create_autostop_instance             = "true"
+
+oracle_backup_schedule = {
+  delius = {
+    daily_schedule  = "30 05 ? * 2-5 *"
+    weekly_schedule = "30 05 ? * 1 *"
+  },
+  mis = {
+    daily_schedule  = "30 05 ? * 2-5 *"
+    weekly_schedule = "30 05 ? * 1 *"
+  },
+  misboe = {
+    daily_schedule  = "30 05 ? * 2-5 *"
+    weekly_schedule = "30 05 ? * 1 *"
+  },
+  misdsd = {
+    daily_schedule  = "30 05 ? * 2-5 *"
+    weekly_schedule = "30 05 ? * 1 *"
+  }
+}
