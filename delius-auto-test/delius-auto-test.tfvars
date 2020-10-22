@@ -20,5 +20,13 @@ oracle_backup_schedule = {
   mis = {
     daily_schedule  = "30 05 ? * 2-5 *"
     weekly_schedule = "30 05 ? * 1 *"
+  },
+  misboe = {
+    daily_schedule  = "30 05 ? * 2-5 *"
+    weekly_schedule = "30 05 ? * 1 *"
+  },
+  misdsd = {
+    daily_schedule  = "30 05 ? * 2-5 *"
+    weekly_schedule = "30 05 ? * 1 *"
   }
 }
