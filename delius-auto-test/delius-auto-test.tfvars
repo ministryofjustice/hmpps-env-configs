@@ -14,19 +14,19 @@ create_autostop_instance             = "true"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 05 ? * 2-5 *"
-    weekly_schedule = "30 05 ? * 1 *"
+    daily_schedule  = "30 05 ? * 3-6 *"
+    weekly_schedule = "30 05 ? * 2 *"
   },
   mis = {
-    daily_schedule  = "30 05 ? * 2-5 *"
-    weekly_schedule = "30 05 ? * 1 *"
+    daily_schedule  = "30 05 ? * 3-6 *"
+    weekly_schedule = "30 05 ? * 2 *"
   },
   misboe = {
-    daily_schedule  = "30 05 ? * 2-5 *"
-    weekly_schedule = "30 05 ? * 1 *"
+    daily_schedule  = "30 05 ? * 3-6 *"
+    weekly_schedule = "30 05 ? * 2 *"
   },
   misdsd = {
-    daily_schedule  = "30 05 ? * 2-5 *"
-    weekly_schedule = "30 05 ? * 1 *"
+    daily_schedule  = "30 05 ? * 3-6 *"
+    weekly_schedule = "30 05 ? * 2 *"
   }
 }
