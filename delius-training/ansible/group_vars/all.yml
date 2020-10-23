@@ -34,3 +34,6 @@ autotask_windows:
         weekday:
                 start_time: "06:20"
                 duration_mins: 30
+database_parameters:
+   sga_max_size: 1G
+   sga_target: 1G
