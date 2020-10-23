@@ -62,7 +62,7 @@ web_conf = {
   ecs_scaling_min_capacity = 2
   ecs_scaling_max_capacity = 10
   env_offender_search_provider           = "probation-offender-search"
-  env_probation_search_base_url          = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk/"
+  env_probation_search_base_url          = "https://probation-offender-search-staging.hmpps.service.justice.gov.uk/"
   env_hmpps_auth_base_url                = "https://sign-in-preprod.hmpps.service.justice.gov.uk/"
   env_nomis_api_base_url                 = "https://api-preprod.prison.service.justice.gov.uk/"
 }
