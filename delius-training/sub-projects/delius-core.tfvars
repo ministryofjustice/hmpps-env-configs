@@ -53,8 +53,8 @@ env_user_access_cidr_blocks = [
   "195.224.76.229/32",
   "195.153.64.66/32",  # Seetec VPN
   "62.232.148.165/32", # Seetec IP addresses provided 19/10/2020 by Jon Kennerly
-  "83.71.136.162",     #
-  "213.86.23.194",     #
+  "83.71.136.162/32",  #
+  "213.86.23.194/32",  #
 ]
 
 # DSS Batch Task
