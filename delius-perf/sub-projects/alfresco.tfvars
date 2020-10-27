@@ -101,6 +101,9 @@ alf_backups_map = {
   backups_expiration = 300
 }
 
-alf_config_map = {
+alf_asg_map = {
   alf_deploy_iwp_fix = 1
+  asg_desired       = 3
+  asg_min           = 3
+  asg_max           = 3
 }
