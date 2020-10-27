@@ -100,3 +100,7 @@ alf_elk_service_map = {
 alf_backups_map = {
   backups_expiration = 300
 }
+
+alf_config_map = {
+  alf_deploy_iwp_fix = 1
+}
