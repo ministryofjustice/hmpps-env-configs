@@ -565,7 +565,7 @@ dss_job_vcpus = 1
 
 dss_job_memory = 3096
 
-dss_job_schedule = "cron(00 7 * * ? *)"
+dss_job_schedule = "cron(00 8 * * ? *)"
 
 dss_job_retries = 1
 

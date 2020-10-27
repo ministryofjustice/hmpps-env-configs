@@ -521,7 +521,7 @@ dss_job_vcpus = 1
 
 dss_job_memory = 256
 
-dss_job_schedule = "cron(00 07 * * ? *)"
+dss_job_schedule = "cron(00 8 * * ? *)"
 
 dss_job_retries = 1
 
