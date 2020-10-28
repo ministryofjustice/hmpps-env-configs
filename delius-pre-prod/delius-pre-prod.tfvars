@@ -14,3 +14,21 @@ egress_80 = true
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
 
+oracle_backup_schedule = {
+  delius = {
+    daily_schedule  = "00 03 ? * 2-7 *"
+    weekly_schedule = "00 02 ? * 1 *"
+  },
+  mis = {
+    daily_schedule  = "00 03 ? * 2-7 *"
+    weekly_schedule = "00 06 ? * 1 *"
+  },
+  misboe = {
+    daily_schedule  = "00 03 ? * 2-7 *"
+    weekly_schedule = "00 06 ? * 1 *"
+  },
+  misdsd = {
+    daily_schedule  = "00 03 ? * 2-7 *"
+    weekly_schedule = "00 06 ? * 1 *"
+  }
+}

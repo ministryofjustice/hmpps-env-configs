@@ -25,3 +25,10 @@ autoscaling_schedule                 = "true"
 calendar_rule_enabled                = "true"
 autostop_notify_rule_enabled         = "true"
 create_autostop_instance             = "true"
+
+oracle_backup_schedule = {
+  delius = {
+    daily_schedule  = "30 06 ? * 3-6 *"
+    weekly_schedule = "30 06 ? * 2 *"
+  }
+}
