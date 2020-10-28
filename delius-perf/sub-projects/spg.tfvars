@@ -27,8 +27,6 @@ allowed_cidr_block = [
 //NOTE in ukcloud servers are spec'd at 32GIG ram
 //I think could easily get away with 4, but need to performance test
 
-asg_instance_type_iso = "t2.2xlarge"
-
 aws_broker_deployment_mode = "ACTIVE_STANDBY_MULTI_AZ"
 
 spg_app_name = "spgw"
