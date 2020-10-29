@@ -65,7 +65,8 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.stage.delius.probation.hmpps.dsd.
 alf_iam_cross_account_perms = 1
 
 # ASG Configuration
-alfresco_asg_props = {
+alf_asg_map = {
+  alf_deploy_iwp_fix = 1
   asg_desired       = 2
   asg_min           = 2
   asg_max           = 2
@@ -107,11 +108,4 @@ alf_elk_service_map = {
 
 alf_backups_map = {
   backups_expiration = 100
-}
-
-alf_asg_map = {
-  alf_deploy_iwp_fix = 1
-  asg_desired       = 2
-  asg_min           = 2
-  asg_max           = 2
 }
