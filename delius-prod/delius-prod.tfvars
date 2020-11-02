@@ -36,3 +36,22 @@ oracle_backup_schedule = {
     weekly_schedule = "00 03 ? * 1 *"
   }
 }
+
+oracle_validate_backup_schedule = {
+  delius = {
+    host     =  "delius_standbydb2"
+    schedule =  "00 15 ? * 4 *"
+  },
+  mis = {
+    host     =  "mis_standbydb2"
+    schedule =  "00 15 ? * 4 *"
+  },
+  misboe = {
+    host     =  "misboe_standbydb2"
+    schedule =  "00 15 ? * 4 *"
+  }
+  misdsd = {
+    host     =  "misdsd_standbydb2"
+    schedule =  "00 15 ? * 4 *"
+  }
+}

@@ -18,3 +18,10 @@ oracle_backup_schedule = {
     weekly_schedule = "30 06 ? * 2 *"
   }
 }
+
+oracle_validate_backup_schedule = {
+  delius = {
+    host     =  "delius_primarydb"
+    schedule =  "46 14 ? * 2,4,6 *"
+  }
+}
