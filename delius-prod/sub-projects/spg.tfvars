@@ -84,7 +84,8 @@ spg_iso_ecs_memory = 32100
 SPG_ISO_JAVA_MAX_MEM = 30600
 SPG_ISO_HOST_TYPE = "iso"
 
-
+# ELK stack
+is_elk_prod=true
 
 SPG_GENERIC_BUILD_INV_DIR = "/tmp/spg/ansible/inventories/generic-default"
 
