@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius-core
 environment_name: delius-core-dev
 simple_environment_name: dev
-ndelius_version: "4.7.8.10g_oracle18c"
+ndelius_version: "4.7.8.10h_oracle18c"
 catalog: DCAT
 data_classification: unclassified-data
 required_patches:
