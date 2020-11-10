@@ -62,17 +62,13 @@ dis_server_count = 1
 db_size_mis = {
   database_size  = "x_large"
   instance_type  = "r5.12xlarge"
-  # disk_iops      = 5000
-  # disks_quantity = 16          # Do not decrease this
-  # disk_size      = 1000        # Do not decrease this
-
-  disks_quantity      = 16   # Do not decrease this
-  disks_quantity_data = 8
+  disks_quantity      = 8   # Do not decrease this
+  disks_quantity_data = 4
   disk_iops_data      = 5000
   disk_iops_flash     = 500
   disk_size_data      = 1000 # Do not decrease this
   disk_size_flash     = 1000 # Do not decrease this
-  # total_storage  = 16000 # This should equal disks_quantity x disk_size
+  # total_storage  = 8000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_mis_db = {
