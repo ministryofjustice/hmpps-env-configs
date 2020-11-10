@@ -172,4 +172,4 @@ rds_allocated_storage        = "1000"
 nextcloud_instance_count     = 3
 
 #monitoring
-mis_alarms_enabled = "false"
+mis_alarms_enabled = "true"
