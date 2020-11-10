@@ -177,4 +177,4 @@ number_cache_clusters        = 2
 nextcloud_redis_node_type    = "cache.t3.small"
 
 #monitoring
-mis_alarms_enabled = "false"
+mis_alarms_enabled = "true"
