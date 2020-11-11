@@ -51,7 +51,9 @@ umt_config = {
   version = "latest"
 }
 
-env_user_access_cidr_blocks = []
+env_user_access_cidr_blocks = [
+  "54.76.254.148/32" # DXW VPN
+]
 
 # DSS Batch Task
 dss_job_envvars = [
