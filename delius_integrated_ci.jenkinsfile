@@ -24,7 +24,7 @@ def run_ansible(environment_name) {
 }
 
 pipeline {
-    agent { label "jenkins_slave"}
+    agent { label "jenkins_agent"}
 
     stages {
         stage ('Notify build started') {

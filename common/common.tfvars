@@ -265,7 +265,7 @@ user_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
+  "35.176.246.202/32", #Engineering Jenkins non prod windows agent
   "18.130.186.182/32", #TEST  test-test-windows-injector-0
   "35.178.200.180/32", #TEST  test-test-windows-injector-1
   "35.176.195.86/32",  #TEST  test-test-windows-loadrunner
@@ -289,7 +289,7 @@ jenkins_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
+  "35.176.246.202/32", #Engineering Jenkins non prod windows agent
 ]
 
 #SPG has activeMQ running incomming
