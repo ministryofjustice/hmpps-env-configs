@@ -309,7 +309,7 @@ user_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
+  "35.176.246.202/32", #Engineering Jenkins non prod windows agent
   "194.75.210.208/28", #BCL
   "213.48.246.99/32",  #BCL
   "195.59.75.0/24",    # ARK internet (DOM1)
@@ -334,7 +334,7 @@ jenkins_access_cidr_blocks = [
   "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "35.176.246.202/32", #Engineering Jenkins non prod windows slave
+  "35.176.246.202/32", #Engineering Jenkins non prod windows agent
 ]
 
 #SPG has activeMQ running incomming
