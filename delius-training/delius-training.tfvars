@@ -31,3 +31,10 @@ oracle_validate_backup_schedule = {
     schedule =  "00 09 ? * 4 *"
   }
 }
+
+oracle_flashback_schedule = {
+  delius = {
+    restorepoint   =  "TRAINING"
+    schedule       =  "30 06 ? * 2 *"
+  }
+}
