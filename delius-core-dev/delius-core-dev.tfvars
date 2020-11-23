@@ -19,10 +19,3 @@ oracle_backup_schedule = {
     weekly_schedule = "30 06 ? * 2 *"
   }
 }
-
-oracle_flashback_schedule = {
-  delius = {
-    restorepoint   =  "DOESNOTEXIST"
-    schedule       =  "30 06 ? * 2 *"
-  }
-}
