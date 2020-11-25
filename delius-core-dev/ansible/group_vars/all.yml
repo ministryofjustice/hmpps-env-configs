@@ -51,4 +51,4 @@ ndelius_oauth_config:
   display_name: DOM1
   scope: delius
   
-prepare_a_case_url: "http://prepare-case-probation.service.justice.gov.uk/"
+prepare_a_case_url: http://prepare-case-probation.service.justice.gov.uk/
