@@ -51,7 +51,11 @@ ansible_vars = {
   database_sid = "STGNDA"
 }
 
-env_user_access_cidr_blocks = []
+env_user_access_cidr_blocks = [
+  # Parent Organisation IP ranges
+  # -RRP (Reducing Reoffending Partnership)
+  "62.253.83.37/32"
+]
 
 # DSS Batch Task
 
