@@ -485,9 +485,6 @@ default_ansible_vars = {
 
   # Approved Premises Tracker API
   aptracker_api_errors_url = "/aptracker-api/errors"
-  
-  # Prepare a case for sentencing service
-  prepare_a_case_url = "https://prepare-case-probation.service.justice.gov.uk/"
 }
 
 # Password Self-Service Tool (PWM)
