@@ -50,3 +50,6 @@ ndelius_oauth_config:
  username_attribute: username
  display_name: DOM1
  scope: delius
+
+# Prepare a case for sentencing service
+prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/

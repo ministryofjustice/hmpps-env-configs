@@ -26,3 +26,6 @@ database:
 database_autotasks:
       sql_tuning_advisor: disabled
       auto_space_advisor: disabled
+      
+# Prepare a case for sentencing service
+prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/
