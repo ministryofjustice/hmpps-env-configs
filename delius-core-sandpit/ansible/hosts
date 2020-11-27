@@ -30,3 +30,6 @@ oracle-11g.sandpit.delius-core.probation.hmpps.dsd.io
 oracle-18c.sandpit.delius-core.probation.hmpps.dsd.io
 [oracle_19c]
 oracle-19c.sandpit.delius-core.probation.hmpps.dsd.io
+
+[ldap:children]
+asg_delius_core_sandpit_ldap
