@@ -7,7 +7,7 @@ database_primary_sid: PRDMIS
 database_parameters:
    control_management_pack_access: DIAGNOSTIC
 rman_retention_policy: RECOVERY WINDOW OF 366 DAYS
-rman_level_0_backup_duration_target: "19:00"
+rman_level_0_backup_duration_target: "15:00"
 required_patches:
     p18841764:
       filename: p18841764_112040_Linux-x86-64.zip
