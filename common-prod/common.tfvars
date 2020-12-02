@@ -65,9 +65,10 @@ alf_account_ids = {
 
 # ASG Configuration
 alfresco_asg_props = {
-  asg_desired       = 4
-  asg_min           = 4
-  asg_max           = 4
+  alf_deploy_iwp_fix = 1
+  asg_desired       = 3
+  asg_min           = 3
+  asg_max           = 3
   asg_instance_type = "m5.2xlarge"
   ebs_volume_size   = 1000
   min_elb_capacity  = 2
