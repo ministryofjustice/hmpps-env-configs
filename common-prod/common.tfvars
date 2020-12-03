@@ -391,6 +391,13 @@ database_size_x_large = {
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
 
+database_high_availability_count = {
+  delius = 2
+  mis    = 2
+  misboe = 2
+  misdsd = 2
+}
+
 # How long we keep our indices for in elastic search in days
 retention_period = 365
 

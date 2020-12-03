@@ -30,3 +30,10 @@ oracle_backup_schedule = {
     weekly_schedule = "30 06 ? * 2 *"
   }
 }
+
+database_high_availability_count = {
+  delius = 1
+  mis    = 2
+  misboe = 2
+  misdsd = 2
+}
