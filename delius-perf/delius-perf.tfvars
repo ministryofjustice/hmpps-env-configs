@@ -28,7 +28,7 @@ create_autostop_instance             = "true"
 
 database_high_availability_count = {
   delius = 1
-  mis    = 2
-  misboe = 2
-  misdsd = 2
+  mis    = 0
+  misboe = 0
+  misdsd = 0
 }
