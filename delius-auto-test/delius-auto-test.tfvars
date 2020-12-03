@@ -32,7 +32,7 @@ oracle_backup_schedule = {
 }
 
 database_high_availability_count = {
-  delius = 1
+  delius = 2
   mis    = 2
   misboe = 2
   misdsd = 2
