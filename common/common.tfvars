@@ -25,7 +25,7 @@ aws_account_ids = {
 }
 
 cloudplatform_data = {
-  cidr_range  = "172.20.0.0/16"
+  cidr_range = "172.20.0.0/16"
 }
 
 # LB Account is used for ALB logs to S3 bucket.
@@ -81,7 +81,7 @@ alfresco_asg_props = {
   ebs_volume_size   = 512
   min_elb_capacity  = 1
   ami_name          = "HMPPS Alfresco*"
-  image_id = "ami-024bdaa974371ea6b" # used for updating ami launch permissions
+  image_id          = "ami-024bdaa974371ea6b" # used for updating ami launch permissions
 }
 
 alf_backups_config = {
@@ -120,17 +120,17 @@ alf_rds_props = {
 
 # alf solr
 alf_solr_config = {
-  ebs_size           = 100
-  ebs_iops           = 100
-  ebs_type           = "gp2"
-  ebs_device_name    = "/dev/xvdc"
-  java_xms           = "4000m"
-  java_xmx           = "4000m"
-  alf_jvm_memory     = "4000m"
-  schedule           = "cron(0 01 * * ? *)"
-  cold_storage_after = 14
-  delete_after       = 120
-  snap_tag           = "CreateSnapshotSolr"
+  ebs_size             = 100
+  ebs_iops             = 100
+  ebs_type             = "gp2"
+  ebs_device_name      = "/dev/xvdc"
+  java_xms             = "4000m"
+  java_xmx             = "4000m"
+  alf_jvm_memory       = "4000m"
+  schedule             = "cron(0 01 * * ? *)"
+  cold_storage_after   = 14
+  delete_after         = 120
+  snap_tag             = "CreateSnapshotSolr"
   ebs_temp_device_name = "/dev/xvdd"
   ebs_temp_size        = 20
   ebs_temp_type        = "gp2"
@@ -142,53 +142,53 @@ alf_data_import = "disabled"
 alf_rds_migration_parameters = []
 alf_db_parameters = [
   {
-    name  = "autovacuum_analyze_threshold"
-    value = "20000"
+    name         = "autovacuum_analyze_threshold"
+    value        = "20000"
     apply_method = "pending-reboot"
   },
   {
-    name  = "autovacuum_analyze_scale_factor"
-    value = "0.0"
+    name         = "autovacuum_analyze_scale_factor"
+    value        = "0.0"
     apply_method = "pending-reboot"
   },
   {
-    name  = "max_connections"
-    value = "1200"
+    name         = "max_connections"
+    value        = "1200"
     apply_method = "pending-reboot"
   },
   {
-    name  = "work_mem"
-    value = "8388608"
+    name         = "work_mem"
+    value        = "8388608"
     apply_method = "pending-reboot"
   },
   {
-    name  = "shared_preload_libraries"
-    value = "pg_stat_statements"
+    name         = "shared_preload_libraries"
+    value        = "pg_stat_statements"
     apply_method = "pending-reboot"
   },
   {
-    name  = "track_activity_query_size"
-    value = "2048"
+    name         = "track_activity_query_size"
+    value        = "2048"
     apply_method = "pending-reboot"
   },
   {
-    name  = "pg_stat_statements.track"
-    value = "ALL"
+    name         = "pg_stat_statements.track"
+    value        = "ALL"
     apply_method = "pending-reboot"
   },
   {
-    name  = "pg_stat_statements.max"
-    value = "10000"
+    name         = "pg_stat_statements.max"
+    value        = "10000"
     apply_method = "pending-reboot"
   },
   {
-    name  = "log_statement"
-    value = "mod"
+    name         = "log_statement"
+    value        = "mod"
     apply_method = "pending-reboot"
   },
   {
-    name  = "log_min_duration_statement"
-    value = "5000"
+    name         = "log_min_duration_statement"
+    value        = "5000"
     apply_method = "pending-reboot"
   }
 ]
@@ -214,7 +214,7 @@ es_ecs_mem_limit = "8500"
 es_instance_type = "m5d.xlarge"
 
 # es_admin
-alf_restore_status     = "restore"
+alf_restore_status = "restore"
 
 es_admin_instance_type = "t2.large"
 
@@ -346,6 +346,13 @@ database_size_x_large = {
   # total_storage  = 16000 # This should equal disks_quantity x disk_size
 }
 
+database_high_availability_count = {
+  delius = 0
+  mis    = 0
+  misboe = 0
+  misdsd = 0
+}
+
 # How long we keep our indices for in elastic search in days
 retention_period = 60
 
@@ -358,39 +365,39 @@ snapshot_retention_days = 7
 # Default values for LDAP
 default_ldap_config = {
   # ASG
-  instance_type         = "t3.small"
-  instance_count        = 2
+  instance_type  = "t3.small"
+  instance_count = 2
   # Connection
-  protocol              = "ldap"
-  port                  = 389
-  bind_user             = "cn=admin,dc=moj,dc=com"
+  protocol  = "ldap"
+  port      = 389
+  bind_user = "cn=admin,dc=moj,dc=com"
   #bind_password        = "${environment_name}/${project_name}/apacheds/apacheds/ldap_admin_password"
   # Structure
-  base_root             = "dc=moj,dc=com"
-  base_users            = "ou=Users,dc=moj,dc=com"
-  base_service_users    = "cn=EISUsers,ou=Users,dc=moj,dc=com"
-  base_roles            = "cn=ndRoleCatalogue,ou=Users,dc=moj,dc=com"
-  base_role_groups      = "cn=ndRoleGroups,ou=Users,dc=moj,dc=com"
-  base_groups           = "ou=Groups,dc=moj,dc=com"
+  base_root          = "dc=moj,dc=com"
+  base_users         = "ou=Users,dc=moj,dc=com"
+  base_service_users = "cn=EISUsers,ou=Users,dc=moj,dc=com"
+  base_roles         = "cn=ndRoleCatalogue,ou=Users,dc=moj,dc=com"
+  base_role_groups   = "cn=ndRoleGroups,ou=Users,dc=moj,dc=com"
+  base_groups        = "ou=Groups,dc=moj,dc=com"
   # Logging
-  log_level             = "stats,sync"
+  log_level = "stats,sync"
   # Backups
   backup_frequency      = "daily"
   backup_retention_days = 7
   # Performance/tuning
-  query_time_limit      = 30 # seconds
-  db_max_size           = "16106127360" # bytes (=15GB)
+  query_time_limit = 30            # seconds
+  db_max_size      = "16106127360" # bytes (=15GB)
   # Disk
-  disk_volume_type      = "io1"
-  disk_volume_size      = 30 # GB
-  disk_iops             = 1000
+  disk_volume_type = "io1"
+  disk_volume_size = 30 # GB
+  disk_iops        = 1000
 }
 ldap_config = {}
 
 # Default values for NDelius WebLogic
-instance_type_weblogic = "t3.medium"
-instance_count_weblogic_ndelius = "3"
-instance_count_weblogic_spg = "3"
+instance_type_weblogic            = "t3.medium"
+instance_count_weblogic_ndelius   = "3"
+instance_count_weblogic_spg       = "3"
 instance_count_weblogic_interface = "3"
 default_ansible_vars = {
   # Server/WebLogic config
@@ -455,55 +462,55 @@ pwm_config = {}
 
 # UMT
 default_umt_config = {
-  version                       = "1.9.0"           # Application version
-  memory                        = 1024              # Memory to assign to ECS container in MB
-  cpu                           = 512               # CPU to assign to ECS container
-  ecs_scaling_min_capacity      = 1                 # Minimum number of running tasks
-  ecs_scaling_max_capacity      = 10                # Maximum number of running tasks
-  ecs_target_cpu                = 60                # CPU target value for scaling of ECS tasks
-  redis_node_type               = "cache.t3.small"  # Instance type to use for the Redis token store cluster
-  redis_node_groups             = 1                 # Number of Redis shards (node groups) in the cluster
-  redis_replicas_per_node_group = 0                 # Number of read-only replicas for each shard (node group)
+  version                       = "1.9.0"          # Application version
+  memory                        = 1024             # Memory to assign to ECS container in MB
+  cpu                           = 512              # CPU to assign to ECS container
+  ecs_scaling_min_capacity      = 1                # Minimum number of running tasks
+  ecs_scaling_max_capacity      = 10               # Maximum number of running tasks
+  ecs_target_cpu                = 60               # CPU target value for scaling of ECS tasks
+  redis_node_type               = "cache.t3.small" # Instance type to use for the Redis token store cluster
+  redis_node_groups             = 1                # Number of Redis shards (node groups) in the cluster
+  redis_replicas_per_node_group = 0                # Number of read-only replicas for each shard (node group)
 }
 umt_config = {}
 
 # Approved Premises Tracker API
 default_aptracker_api_config = {
-  version                  = "1.13"   # Application version
-  memory                   = 1024       # Memory to assign to ECS container in MB
-  cpu                      = 512        # CPU to assign to ECS container
-  ecs_scaling_min_capacity = 1          # Minimum number of running tasks
-  ecs_scaling_max_capacity = 10         # Maximum number of running tasks
-  ecs_target_cpu           = 60         # CPU target value for scaling of ECS tasks
-  log_level                = "DEBUG"    # Application log-level
+  version                  = "1.13"  # Application version
+  memory                   = 1024    # Memory to assign to ECS container in MB
+  cpu                      = 512     # CPU to assign to ECS container
+  ecs_scaling_min_capacity = 1       # Minimum number of running tasks
+  ecs_scaling_max_capacity = 10      # Maximum number of running tasks
+  ecs_target_cpu           = 60      # CPU target value for scaling of ECS tasks
+  log_level                = "DEBUG" # Application log-level
 }
 aptracker_api_config = {}
 
 # Delius GDPR compliance tool
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "0.25.1"               # Application version
-  api_memory                  = 512                    # Memory to assign to API container
-  api_cpu                     = 512                    # CPU to assign to API container
-  cron_identifyduplicates     = "-"                    # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "-"                    #
-  cron_retainedoffendersiicsa = "-"                    #
-  cron_eligiblefordeletion    = "-"                    #
-  cron_deleteoffenders        = "-"                    #
-  cron_destructionlogclearing = "-"                    #
+  api_version                 = "0.25.1" # Application version
+  api_memory                  = 512      # Memory to assign to API container
+  api_cpu                     = 512      # CPU to assign to API container
+  cron_identifyduplicates     = "-"      # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders      = "-"      #
+  cron_retainedoffendersiicsa = "-"      #
+  cron_eligiblefordeletion    = "-"      #
+  cron_deleteoffenders        = "-"      #
+  cron_destructionlogclearing = "-"      #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
-  ui_version                  = "0.25.0"               # Application version
-  ui_memory                   = 512                    # Memory to assign to UI container
-  ui_cpu                      = 512                    # CPU to assign to UI container
-  ui_scaling_min_capacity     = 1                      # Minimum number of running tasks per service
-  ui_scaling_max_capacity     = 10                     # Maximum number of running tasks per service
-  ui_target_cpu               = 60                     # CPU target value for scaling of ECS tasks
-  db_instance_class           = "db.t3.small"          # Instance type to use for the database
-  db_storage                  = 30                     # Allocated database storage in GB
-  db_maintenance_window       = "Wed:21:00-Wed:23:00"  # Maintenance window for database patching/upgrades
-  db_backup_window            = "19:00-21:00"          # Daily window to take RDS backups
-  db_backup_retention_period  = 1                      # Number of days to retain RDS backups for
-  log_level                   = "DEBUG"                # Application log-level
+  ui_version                  = "0.25.0"              # Application version
+  ui_memory                   = 512                   # Memory to assign to UI container
+  ui_cpu                      = 512                   # CPU to assign to UI container
+  ui_scaling_min_capacity     = 1                     # Minimum number of running tasks per service
+  ui_scaling_max_capacity     = 10                    # Maximum number of running tasks per service
+  ui_target_cpu               = 60                    # CPU target value for scaling of ECS tasks
+  db_instance_class           = "db.t3.small"         # Instance type to use for the database
+  db_storage                  = 30                    # Allocated database storage in GB
+  db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
+  db_backup_window            = "19:00-21:00"         # Daily window to take RDS backups
+  db_backup_retention_period  = 1                     # Number of days to retain RDS backups for
+  log_level                   = "DEBUG"               # Application log-level
 }
 gdpr_config = {}
 
@@ -581,7 +588,7 @@ chaosmonkey_job_envvars = [
 
 chaosmonkey_job_ulimits = []
 
-delius_core_haproxy_instance_type = "t3.micro"
+delius_core_haproxy_instance_type  = "t3.micro"
 delius_core_haproxy_instance_count = "3"
 
 loadrunner_config = {
@@ -589,7 +596,7 @@ loadrunner_config = {
 }
 
 azure_oasys_proxy_source = [
-  "51.140.255.11/32", # Public IP of Fix & Go Azure API Gateway used for NDH
+  "51.140.255.11/32",  # Public IP of Fix & Go Azure API Gateway used for NDH
   "51.137.128.165/32", # NDH Bridge
 ]
 
@@ -602,5 +609,5 @@ spg_messaging_broker_url_src = "data"
 spg_jms_host_src             = "data"
 
 # Parent R53 Zone ID for strategic domain (probation.service.justice.gov.uk)
-strategic_parent_zone_id = "Z2SOZ79CNGAPIF"
+strategic_parent_zone_id              = "Z2SOZ79CNGAPIF"
 strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_delegation_role"

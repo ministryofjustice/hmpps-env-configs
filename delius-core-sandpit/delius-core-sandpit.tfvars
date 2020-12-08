@@ -25,3 +25,10 @@ oracle_validate_backup_schedule = {
     schedule =  "46 14 ? * 2,4,6 *"
   }
 }
+
+database_high_availability_count = {
+  delius = 2
+  mis    = 0
+  misboe = 0
+  misdsd = 0
+}
