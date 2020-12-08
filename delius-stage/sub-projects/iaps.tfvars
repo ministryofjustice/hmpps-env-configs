@@ -13,7 +13,7 @@ rds_instance_class = "db.t3.xlarge"
 
 rds_backup_retention_period = 15
 
-rds_monitoring_interval = 0
+rds_monitoring_interval = 5
 
 rds_allocated_storage = "500"
 
