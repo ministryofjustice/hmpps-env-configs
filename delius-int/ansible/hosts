@@ -9,3 +9,6 @@ delius_primarydb
 
 [oracle_databases:children]
 delius_dbs
+
+[ldap:children]
+asg_delius_int_ldap

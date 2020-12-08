@@ -59,3 +59,6 @@ delius_dbs
 mis_dbs
 misboe_dbs
 misdsd_dbs
+
+[ldap:children]
+asg_delius_pre_prod_ldap

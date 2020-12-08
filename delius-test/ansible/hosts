@@ -13,3 +13,5 @@ delius_standbydb1
 [oracle_databases:children]
 delius_dbs
 
+[ldap:children]
+asg_delius_test_ldap

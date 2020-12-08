@@ -15,3 +15,6 @@ delius_standbydb2
 
 [oracle_databases:children]
 delius_dbs
+
+[ldap:children]
+asg_delius_core_dev_ldap
