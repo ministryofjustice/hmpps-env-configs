@@ -56,7 +56,7 @@ iaps_asg_props = {
 }
 
 iaps_asg_suspended_processes = {
-  processes = []
+  processes = {}
 }
 
 # IAPS V2 Appserver ASG Configuration
