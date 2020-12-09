@@ -34,6 +34,7 @@ delius_users:
   pmintzas_ro:
   acraik_ro:
   imak_ro:
+  jpyke_ro:
 
 required_patches:
     p27659043:
