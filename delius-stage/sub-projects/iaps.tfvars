@@ -55,9 +55,8 @@ iaps_asg_props = {
   launch_template_name = "delius-stage-delius-iaps-pri-tpl-20200113121918038900000001"
 }
 
-iaps_asg_suspended_processes = {
-  processes = []
-}
+iaps_asg_suspended_processes = []
+
 
 # IAPS V2 Appserver ASG Configuration
 iaps_asgv2_props = {
