@@ -55,9 +55,7 @@ iaps_asg_props = {
   launch_template_name = "delius-prod-delius-iaps-pri-tpl-20190920090854215500000001"
 }
 
-iaps_asg_suspended_processes = {
-  processes = ["Launch", "Terminate", "HealthCheck", "ReplaceUnhealthy", "AZRebalance", "AlarmNotification", "ScheduledActions", "AddToLoadBalancer"]
-}
+iaps_asg_suspended_processes = ["Launch", "Terminate", "HealthCheck", "ReplaceUnhealthy", "AZRebalance", "AlarmNotification", "ScheduledActions", "AddToLoadBalancer"]
 
 # IAPS V2 Appserver ASG Configuration
 iaps_asgv2_props = {

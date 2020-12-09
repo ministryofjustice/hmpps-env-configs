@@ -79,7 +79,8 @@ env_user_access_cidr_blocks = [
   "5.153.255.210/32",   # EOS Public IP
 
   # IP ranges for PTTP 'MoJ Official Devices'
-  "51.149.251.0/24",
+  "51.149.251.0/24", # Pre-Production
+  
 ]
 
 # DSS Batch Task
