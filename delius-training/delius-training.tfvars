@@ -38,3 +38,10 @@ oracle_flashback_schedule = {
     schedule       =  "30 06 ? * 2 *"
   }
 }
+
+database_high_availability_count = {
+  delius = 1
+  mis    = 0
+  misboe = 0
+  misdsd = 0
+}

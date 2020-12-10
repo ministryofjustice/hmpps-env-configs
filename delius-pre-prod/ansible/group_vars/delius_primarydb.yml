@@ -33,6 +33,8 @@ delius_users:
   ajohnson_ro:
   pmintzas_ro:
   acraik_ro:
+  imak_ro:
+  jpyke_ro:
 
 required_patches:
     p27659043:
