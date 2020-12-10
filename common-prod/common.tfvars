@@ -480,7 +480,7 @@ default_ansible_vars = {
   # New Tech
   newtech_search_url             = "/newTech"
   newtech_pdfgenerator_url       = "/newTech"
-  newtech_pdfgenerator_templates = "shortFormatPreSentenceReport|paroleParom1Report"
+  newtech_pdfgenerator_templates = "shortFormatPreSentenceReport|paroleParom1Report|oralReport"
   newtech_pdfgenerator_secret    = "ThisIsASecretKey" # TODO pull from param store
 
   # User Management Tool
