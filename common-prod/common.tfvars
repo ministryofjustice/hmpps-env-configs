@@ -66,13 +66,13 @@ alf_account_ids = {
 # ASG Configuration
 alfresco_asg_props = {
   alf_deploy_iwp_fix = 1
-  asg_desired       = 3
-  asg_min           = 3
-  asg_max           = 3
-  asg_instance_type = "m5.2xlarge"
-  ebs_volume_size   = 1000
-  min_elb_capacity  = 2
-  ami_name          = "HMPPS Alfresco*"
+  asg_desired        = 3
+  asg_min            = 3
+  asg_max            = 3
+  asg_instance_type  = "m5.2xlarge"
+  ebs_volume_size    = 1000
+  min_elb_capacity   = 2
+  ami_name           = "HMPPS Alfresco*"
 }
 
 # jvm heap
@@ -559,6 +559,12 @@ default_gdpr_config = {
   log_level                   = "INFO"                # Application log-level
 }
 gdpr_config = {}
+
+# Delius-Core Slack alarms:
+delius_alarms_config = {
+  enabled     = true
+  quiet_hours = [0, 3] # 00:00-03:00 to coincide with WebLogic nightly restart
+}
 
 # DSS Batch Task
 dss_batch_instances = ["m5.large", "c5.large"]
