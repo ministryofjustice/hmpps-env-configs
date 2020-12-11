@@ -54,7 +54,7 @@ ansible_vars = {
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -RRP (Reducing Reoffending Partnership)
-  "62.253.83.37/32"
+  "62.253.83.37/32",
 
   # IP ranges for PTTP 'MoJ Official Devices'
   "51.149.251.0/24", # Pre-Production Devices for testing
