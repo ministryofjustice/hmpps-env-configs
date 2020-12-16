@@ -386,11 +386,12 @@ default_ldap_config = {
   backup_retention_days = 7
   # Performance/tuning
   query_time_limit = 30            # seconds
-  db_max_size      = "16106127360" # bytes (=15GB)
-  # Disk
-  disk_volume_type = "io1"
+  db_max_size      = "16106127360" # bytes, stored on EFS (=15GB)
+  # Disk (system data + logs)
+  disk_volume_type = "gp2"
   disk_volume_size = 30 # GB
-  disk_iops        = 1000
+  # EFS (ldap data)
+  efs_throughput_mode = "bursting"
 }
 ldap_config = {}
 
