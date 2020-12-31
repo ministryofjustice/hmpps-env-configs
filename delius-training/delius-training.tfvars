@@ -32,13 +32,12 @@ oracle_validate_backup_schedule = {
   }
 }
 
-# Temporarily remove flashback of Training Database for 28th December 2020 (ALS-2472)
-# oracle_flashback_schedule = {
-#  delius = {
-#    restorepoint   =  "TRAINING"
-#    schedule       =  "30 06 ? * 2 *"
-#  }
-#}
+oracle_flashback_schedule = {
+  delius = {
+    restorepoint   =  "TRAINING"
+    schedule       =  "30 06 ? * 2 *"
+  }
+}
 
 database_high_availability_count = {
   delius = 1
