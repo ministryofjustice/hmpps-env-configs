@@ -55,6 +55,9 @@ env_user_access_cidr_blocks = [
   "62.232.148.165/32", # Seetec IP addresses provided 19/10/2020 by Jon Kennerly
   "83.71.136.162/32",  #
   "213.86.23.194/32",  #
+
+  # -Sopra Steria
+  "195.206.180.12/32", # Dedicated IP provided by Nicki Berry on 24/12/2020 (ALS-2487)
 ]
 
 # DSS Batch Task
