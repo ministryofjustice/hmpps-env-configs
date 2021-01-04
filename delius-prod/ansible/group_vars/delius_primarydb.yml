@@ -10,15 +10,4 @@ rman_level_0_backup_duration_target: "21:00"
 rman_uncompressed_backup: Y
 rman_retention_policy: RECOVERY WINDOW OF 366 DAYS
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
-required_patches:
-    p27659043:
-      filename: p27659043_11204180417_Linux-x86-64.zip
-      description: MES Bundle Patch for April 2017 PSU
-      postinstall_sql: postinstall.sql
-      grid_patch: false
-      database_patch: true
-    p20807155:
-      filename: p20807155_112040_Linux-x86-64.zip
-      description: ORA-07445 Updating Table with CLOB
-      grid_patch: false
-      database_patch: true
+
