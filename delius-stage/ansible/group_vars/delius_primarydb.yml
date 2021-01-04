@@ -8,18 +8,6 @@ rman_level_0_backup_duration_target: "21:00"
 rman_uncompressed_backup: Y
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
 oracle_osbws_chunk_size: 104857600
-required_patches:
-    p20807155:
-      filename: p20807155_112040_Linux-x86-64.zip
-      description: ORA-07445 Updating Table with CLOB
-      grid_patch: false
-      database_patch: true
-    p27659043:
-      filename: p27659043_11204180417_Linux-x86-64.zip
-      description: MES Bundle Patch for April 2018 PSU
-      postinstall_sql: postinstall.sql
-      grid_patch: false
-      database_patch: true
 delius_users:
   jstanley_ro:
   amarke_ro:

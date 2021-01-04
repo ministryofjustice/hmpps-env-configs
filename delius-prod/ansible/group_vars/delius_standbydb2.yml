@@ -5,15 +5,4 @@ database_standby_sid: PRDNDAS2
 database_primary_unique: PRDNDA
 database_parameters:
    control_management_pack_access: DIAGNOSTIC+TUNING
-required_patches:
-    p27659043:
-      filename: p27659043_11204180417_Linux-x86-64.zip
-      description: MES Bundle Patch for April 2017 PSU
-      postinstall_sql: postinstall.sql
-      grid_patch: false
-      database_patch: true
-    p20807155:
-      filename: p20807155_112040_Linux-x86-64.zip
-      description: ORA-07445 Updating Table with CLOB
-      grid_patch: false
-      database_patch: true
+
