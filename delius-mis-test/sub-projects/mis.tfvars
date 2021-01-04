@@ -92,7 +92,6 @@ ansible_vars_mis_db = {
 
   ## oradb_sys_password            = "/${environment_name}/${project}/mis-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/mis-database/db/oradb_system_password"
-  ## oradb_sysman_password         = "/${environment_name}/${project}/mis-database/db/oradb_sysman_password"
   ## oradb_dbsnmp_password         = "/${environment_name}/${project}/mis-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/${project}/mis-database/db/oradb_asmsnmp_password"
   database_characterset = "AL32UTF8"
@@ -128,7 +127,6 @@ ansible_vars_misboe_db = {
 
   ## oradb_sys_password            = "/${environment_name}/${project}/misboe-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/misboe-database/db/oradb_system_password"
-  ## oradb_sysman_password         = "/${environment_name}/${project}/misboe-database/db/oradb_sysman_password"
   ## oradb_dbsnmp_password         = "/${environment_name}/${project}/misboe-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/${project}/misboe-database/db/oradb_asmsnmp_password"
   database_characterset = "AL32UTF8"
@@ -164,7 +162,6 @@ ansible_vars_misdsd_db = {
 
   ## oradb_sys_password            = "/${environment_name}/${project}/misdsd-database/db/oradb_sys_password"
   ## oradb_system_password         = "/${environment_name}/${project}/misdsd-database/db/oradb_system_password"
-  ## oradb_sysman_password         = "/${environment_name}/${project}/misdsd-database/db/oradb_sysman_password"
   ## oradb_dbsnmp_password         = "/${environment_name}/${project}/misdsd-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/${project}/misdsd-database/db/oradb_asmsnmp_password"
   database_characterset = "AL32UTF8"
