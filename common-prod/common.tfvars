@@ -137,6 +137,11 @@ alf_solr_config = {
   ebs_temp_type        = "gp2"
 }
 
+solr_config_overrides = {
+  instance_type = "m5.8xlarge"
+  ha_instance_type = "r5.xlarge"
+}
+
 # ontrol rds deployment
 alf_data_import = "disabled"
 
