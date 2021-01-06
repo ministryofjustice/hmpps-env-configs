@@ -138,8 +138,10 @@ alf_solr_config = {
 }
 
 solr_config_overrides = {
-  instance_type = "m5.8xlarge"
-  ha_instance_type = "r5.xlarge"
+  instance_type = "m5.4xlarge"
+  ha_instance_type = "r5.4xlarge"
+  java_xms             = "16000m"
+  java_xmx             = "48000m"
 }
 
 # ontrol rds deployment
