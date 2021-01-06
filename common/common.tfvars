@@ -450,6 +450,12 @@ default_ansible_vars = {
   aptracker_api_errors_url = "/aptracker-api/errors"
 }
 
+# Delius ActiveMQ
+default_activemq_config = {
+  efs_throughput_mode = "bursting"
+}
+activemq_config = {}
+
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
   version      = "1.9.1"
