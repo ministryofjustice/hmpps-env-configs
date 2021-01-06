@@ -21,5 +21,5 @@ ndelius_oauth_config:
  callback_url: https://ndelius.auto-test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
  user_info_endpoint: /api/user/me
  username_attribute: username
- display_name: justice.gov.uk credentials
+ display_name: Login using justice.gov.uk credentials
  scope: delius                
