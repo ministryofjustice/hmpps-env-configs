@@ -497,6 +497,13 @@ default_ansible_vars = {
   aptracker_api_errors_url = "/aptracker-api/errors"
 }
 
+# Delius ActiveMQ
+default_activemq_config = {
+  efs_throughput_mode        = "provisioned"
+  efs_provisioned_throughput = 10 # MiB/s
+}
+activemq_config = {}
+
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
   version      = "1.9.1"
