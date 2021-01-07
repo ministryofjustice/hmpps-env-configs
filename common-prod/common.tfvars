@@ -127,7 +127,7 @@ alf_solr_config = {
   ebs_device_name      = "/dev/xvdc"
   java_xms             = "8000m"
   java_xmx             = "16000m"
-  alf_jvm_memory       = "8000m"
+  alf_jvm_memory       = "48G"
   schedule             = "cron(0 01 * * ? *)"
   cold_storage_after   = 14
   delete_after         = 120
@@ -135,6 +135,14 @@ alf_solr_config = {
   ebs_temp_device_name = "/dev/xvdd"
   ebs_temp_size        = 10000
   ebs_temp_type        = "gp2"
+}
+
+solr_config_overrides = {
+  instance_type = "m5.8xlarge"
+  ha_instance_type = "r5.4xlarge"
+  java_xms             = "16000m"
+  java_xmx             = "48000m"
+  alf_jvm_memory       = "48000m"
 }
 
 # ontrol rds deployment
