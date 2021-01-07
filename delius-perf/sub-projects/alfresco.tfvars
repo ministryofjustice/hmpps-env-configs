@@ -107,14 +107,3 @@ alf_asg_map = {
   asg_min           = 3
   asg_max           = 3
 }
-
-solr_config_map = {
-  ebs_size             = 5000
-  ebs_iops             = 5000
-  ebs_iops             = 2000
-  ebs_temp_size        = 5000
-  ebs_type             = "io2"
-  instance_type        = "m5.2xlarge"
-  java_xms             = "24000m"
-  java_xmx             = "24000m"
-}
