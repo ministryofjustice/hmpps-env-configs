@@ -65,3 +65,8 @@ spg_messaging_broker_url = "tcp://spgw-jms-int.int.delius.probation.hmpps.dsd.io
 alf_restore_status = "restore"
 
 es_s3_repo_name = "snapshot_ifsr3_3"
+
+alf_elk_service_map = {
+  domain_name_type    = "short"
+  create_service_role = 1
+}
