@@ -580,7 +580,7 @@ gdpr_config = {}
 # Delius-Core Slack alarms:
 delius_alarms_config = {
   enabled     = true
-  quiet_hours = [0, 3] # 00:00-03:00 to coincide with WebLogic nightly restart
+  quiet_hours = [23, 3] # 23:00-03:00 to coincide with WebLogic nightly restart
 }
 
 # DSS Batch Task
