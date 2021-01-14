@@ -508,7 +508,7 @@ default_ansible_vars = {
 # Delius ActiveMQ
 default_activemq_config = {
   efs_throughput_mode        = "provisioned"
-  efs_provisioned_throughput = 10 # MiB/s
+  efs_provisioned_throughput = 16 # MiB/s
 }
 activemq_config = {}
 
