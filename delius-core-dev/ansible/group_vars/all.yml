@@ -21,7 +21,7 @@ ndelius_oauth_config:
   callback_url: https://ndelius.dev.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
   user_info_endpoint: /api/user/me
   username_attribute: username
-  display_name: DOM1
+  display_name: Login using justice.gov.uk credentials
   scope: delius
   
 # Prepare a case for sentencing service
