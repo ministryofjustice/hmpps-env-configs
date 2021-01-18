@@ -13,33 +13,40 @@ delius_api_lower_cpu_trigger = 5
 delius_api_upper_cpu_trigger = 10
 
 # Override default casenotes Config
-casenotes_conf = {
-
-}
+casenotes_conf = {}
 
 # Override default PDF Generator Config
 pdfgenerator_conf = {}
 
 # Override default Offender API Config
 offenderapi_conf = {
-    env_oracledb_servicename = "POT1NDA_TAF"
+  env_oracledb_servicename = "INTNDA_TAF"
+  env_jwt_public_key = "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF6Y3g3WWJ3MkJBV3Y3U3NFSVVHUAppeUpTSURndHFCeDE5VHdtN3VJM1RYNXpSY3JabFV4Y0VtUEpHVWd5K0QySkloVmxxbWVxd0dWMkNOT3FaQmdHCmo4ZUpHQTU5aUlUemU4ZG1SSk5JYzdsNmxESmc5RE5KVk9pTHFVbFpGRENJcXplSTYzb3E2dWhjY2c1RFBpVE4KcU9HWmM4dXBOK3c1ZFpyTnYrMkdMZ3hLMnBldE1VL0JoWWVXZjNLdllJTzE2djF1dm5GT0dPMTNIb1d1NUJ0ZApTdC9UZ2NsRmhWTEVkR3c3WGJpWUhuTlpJZGh3YU5RaVlnbVhtalpWZE15Q1BETW8xMExrVjFwM1V5MTVwTU14ClVwc2xKYU8wNlZIYXJtY3ZWYzNleHg5NlpHTjE2T2U4ZWZoeG5Rdmhzd0ZrbXlYT25sSForNDI1MnJHcHlKTG8KbHdJREFRQUIKLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg=="
+  env_oauth2_jwt_jwk_set_uri = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+  memory = "2048"
+  env_features_noms_update_custody = "true"
+  env_features_noms_update_booking_number = "true"
+  env_features_noms_update_keydates = "true"
+  env_features_noms_update_noms_number = "true"
+  env_smoke_test_aware = "true"
+  enable_public_lb = false
 }
 
 # Override default Elasticsearch Config
 search_conf = {}
 
 # Override default Web Frontend Config
-web_conf = {
-  image_version = "0.2.2"
-}
-
+web_conf = {}
 
 # Override default Offender Poll Push Config
 offenderpollpush_conf = {}
 
+# Override default Offender Search Service Config
+offendersearch_conf = {}
+
 offender_api_allowed_cidrs = [
   "81.134.202.29/32", # Moj VPN
-  "217.33.148.210/32" # Digital studio
+  "217.33.148.210/32", # Digital studio
 ]
 
 offender_api_allowed_secure_cidrs = [
@@ -50,3 +57,7 @@ offender_api_allowed_secure_cidrs = [
   "35.177.252.54/32",  # cloudplatform-live1-3
   "35.177.252.195/32"  # healthkick
 ]
+
+offender_search_allowed_secure_cidrs = []
+
+dashboards_enabled = "true"
