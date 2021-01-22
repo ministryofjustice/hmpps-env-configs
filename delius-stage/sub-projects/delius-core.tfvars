@@ -57,6 +57,9 @@ env_user_access_cidr_blocks = [
 
   # IP ranges for PTTP 'MoJ Official Devices'
   "51.149.251.0/24", # Pre-Production Devices for testing
+
+  # -MTCNovo
+  "62.25.109.202/32",
 ]
 
 # DSS Batch Task
