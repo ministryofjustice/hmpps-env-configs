@@ -33,6 +33,9 @@ offenderapi_conf = {
   env_features_apply_limited_access_markers = "true"
   env_smoke_test_aware = "true"
   enable_public_lb = true
+  env_features_noms_update_multiple_events_update_bulk_key_dates = "false"
+  env_features_noms_update_multiple_events_update_key_dates = "false"
+  env_features_noms_update_multiple_events_update_prison_location = "false"
 }
 
 # Override default Elasticsearch Config
