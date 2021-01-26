@@ -4,3 +4,6 @@ database_global_database: INTNDA
 database_taf_service: INTNDA_TAF
 database_primary_unique: INTNDA
 database_primary_sid: INTNDA
+delius_users:
+  mryall_ro:
+  ebrindley_ro:
