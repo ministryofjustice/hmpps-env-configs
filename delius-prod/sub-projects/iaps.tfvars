@@ -59,8 +59,8 @@ iaps_asg_suspended_processes = ["Launch", "Terminate", "HealthCheck", "ReplaceUn
 
 # IAPS V2 Appserver ASG Configuration
 iaps_asgv2_props = {
-  ami_id            = "ami-072799f8d43192f6f"
-  image_tag_version = "0.32.0"
+  ami_id            = "ami-0398dce8f96c37cc4"
+  image_tag_version = "0.35.0"
 }
 
 
