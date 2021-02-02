@@ -23,7 +23,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v21"
+rds_engine_version = "12.1.0.2.v22"
 
 rds_character_set_name = "WE8ISO8859P15"
 
@@ -39,10 +39,9 @@ iaps_app_name = "iaps"
 
 instance_type = "m5.large"
 
-psn_proxy_endpoint = "im-proxy.psn.probation.service.justice.gov.uk"
+psn_proxy_endpoint = "data-im-proxy.psn.probation.service.justice.gov.uk"
 
 dashboards_enabled = "true"
-
 
 # ASG Configuration
 iaps_asg_props = {
@@ -67,3 +66,4 @@ iaps_asgv2_props = {
 
 # monitoring overrides - used to specify the instance name we use in the env
 iaps_monitoring_rds_db_instance_identifier = ""
+copy_tags_to_snapshot = true

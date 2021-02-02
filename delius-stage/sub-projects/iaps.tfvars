@@ -9,11 +9,11 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "Z1XOU6Z3TY3K2F"
 
 # IAPS RDS INSTANCE
-rds_instance_class = "db.t3.xlarge"
+rds_instance_class = "db.t3.large"
 
 rds_backup_retention_period = 15
 
-rds_monitoring_interval = 0
+rds_monitoring_interval = 5
 
 rds_allocated_storage = "500"
 
@@ -23,7 +23,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v21"
+rds_engine_version = "12.1.0.2.v22"
 
 rds_character_set_name = "WE8ISO8859P15"
 
@@ -68,4 +68,4 @@ iaps_asgv2_props = {
 iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-stage-iaps"
 
 copy_tags_to_snapshot = true
-auto_minor_version_upgrade = false
+auto_minor_version_upgrade = true
