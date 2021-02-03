@@ -138,11 +138,11 @@ alf_solr_config = {
 }
 
 solr_config_overrides = {
-  instance_type = "m5.8xlarge"
+  instance_type    = "m5.8xlarge"
   ha_instance_type = "r5.4xlarge"
-  java_xms             = "16000m"
-  java_xmx             = "48000m"
-  alf_jvm_memory       = "48000m"
+  java_xms         = "16000m"
+  java_xmx         = "48000m"
+  alf_jvm_memory   = "48000m"
 }
 
 # ontrol rds deployment
@@ -576,6 +576,18 @@ default_gdpr_config = {
   log_level                   = "INFO"                # Application log-level
 }
 gdpr_config = {}
+
+# Delius API
+default_delius_api_config = {
+  image_url     = "public.ecr.aws/s8p2y7q3/delius-api"
+  image_version = "latest" # Application version
+  memory        = 2048     # Memory to assign to API container
+  cpu           = 1024     # CPU to assign to API container
+  min_capacity  = 2        # Minimum number of running tasks per service
+  max_capacity  = 10       # Maximum number of running tasks per service
+  target_cpu    = 60       # % CPU target value for scaling of ECS tasks
+}
+delius_api_config = {}
 
 # Delius-Core Slack alarms:
 delius_alarms_config = {
