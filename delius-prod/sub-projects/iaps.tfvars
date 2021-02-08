@@ -45,12 +45,13 @@ dashboards_enabled = "true"
 
 # ASG Configuration
 iaps_asg_props = {
-  owners            = "895523100917"
-  ami_name          = "HMPPS IAPS Windows Server master*"
-  ami_id            = "ami-00d40f926ee31fcd6"
-  image_tag_version = "1.0.0"
+  create_iaps_v1_asg = true
+  owners             = "895523100917"
+  ami_name           = "HMPPS IAPS Windows Server master*"
+  ami_id             = "ami-00d40f926ee31fcd6"
+  image_tag_version  = "1.0.0"
   # for pinning stage IAPS server deployment
-  launch_template_id = "lt-037d4a6184720ead9"
+  launch_template_id   = "lt-037d4a6184720ead9"
   launch_template_name = "delius-prod-delius-iaps-pri-tpl-20190920090854215500000001"
 }
 
