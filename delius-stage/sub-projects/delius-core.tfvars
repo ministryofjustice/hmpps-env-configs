@@ -71,7 +71,7 @@ env_user_access_cidr_blocks = [
   "62.25.109.202/32",
 
   # -i2n (Northgate)
-  "86.188.107.240/32", # Helen Curtis Home IP
+  "86.188.107.240/32", # HC Home IP
 
 ]
 
