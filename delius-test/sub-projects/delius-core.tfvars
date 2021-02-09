@@ -50,6 +50,15 @@ umt_config = {
   version = "latest"
 }
 
+# Delius API
+delius_api_environment = {
+  TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+  SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+}
+delius_api_secrets = {
+  APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-test/delius/newtech/offenderapi/appinsights_key"
+}
+
 env_user_access_cidr_blocks = [
   "54.76.254.148/32" # DXW VPN
 ]
@@ -57,23 +66,23 @@ env_user_access_cidr_blocks = [
 # DSS Batch Task
 dss_job_envvars = [
   {
-    "name" = "DSS_TESTMODE"
-    "value" =  "true"
-  },
-  {
-    "name" = "DSS_TESTINGAUTOCORRECT"
+    "name"  = "DSS_TESTMODE"
     "value" = "true"
   },
   {
-    "name" = "DSS_ENVIRONMENT"
+    "name"  = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name"  = "DSS_ENVIRONMENT"
     "value" = "delius-test"
   },
   {
-    "name" = "DSS_DSSWEBSERVERURL"
+    "name"  = "DSS_DSSWEBSERVERURL"
     "value" = "https://interface-app-internal.test.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
   },
   {
-    "name" = "DSS_PROJECT"
+    "name"  = "DSS_PROJECT"
     "value" = "delius"
   }
 ]
