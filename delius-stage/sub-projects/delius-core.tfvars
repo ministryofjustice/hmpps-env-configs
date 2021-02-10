@@ -70,8 +70,8 @@ env_user_access_cidr_blocks = [
   # -MTCNovo
   "62.25.109.202/32",
 
-  # -i2n (Northgate)
-  "86.188.107.240/32", # HC Home IP
+  # -i2n (Northgate) bastion IP traffic
+  "62.232.198.68/32", 
 
 ]
 
