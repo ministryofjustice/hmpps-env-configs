@@ -50,7 +50,6 @@ ansible_vars = {
   database_sid = "STGNDA"
 }
 
-
 # Delius API
 delius_api_environment = {
   TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in.hmpps.service.justice.gov.uk/auth"
@@ -76,6 +75,10 @@ env_user_access_cidr_blocks = [
 
   # -i2n (Northgate) bastion IP traffic
   "62.232.198.68/32",
+
+  # -Sodexo Justice Services
+  "80.86.46.16/31",
+  "80.86.46.18/32",
 
 ]
 
