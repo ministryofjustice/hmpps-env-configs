@@ -71,7 +71,11 @@ env_user_access_cidr_blocks = [
   "62.25.109.202/32",
 
   # -i2n (Northgate) bastion IP traffic
-  "62.232.198.68/32", 
+  "62.232.198.68/32",
+  
+  # -Sodexo Justice Services
+  "80.86.46.16/31",
+  "80.86.46.18/32",
 
 ]
 
