@@ -54,9 +54,12 @@ ansible_vars = {
 delius_api_environment = {
   TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+  SPRING_DATASOURCE_USERNAME                            = "DELIUS_POOL"
+  SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-stage/delius/newtech/offenderapi/appinsights_key"
+  SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_pool_password"
 }
 
 env_user_access_cidr_blocks = [
@@ -72,7 +75,7 @@ env_user_access_cidr_blocks = [
 
   # -i2n (Northgate) bastion IP traffic
   "62.232.198.68/32",
-
+  
   # -Sodexo Justice Services
   "80.86.46.16/31",
   "80.86.46.18/32",
