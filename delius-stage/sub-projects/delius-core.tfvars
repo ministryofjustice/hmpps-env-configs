@@ -54,12 +54,12 @@ ansible_vars = {
 delius_api_environment = {
   TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
-  SPRING_DATASOURCE_USERNAME                            = "DELIUS_POOL"
+  SPRING_DATASOURCE_USERNAME                            = "DELIUS_APP_SCHEMA"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-stage/delius/newtech/offenderapi/appinsights_key"
-  SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_pool_password"
+  SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_app_schema_password"
 }
 
 env_user_access_cidr_blocks = [
@@ -75,7 +75,7 @@ env_user_access_cidr_blocks = [
 
   # -i2n (Northgate) bastion IP traffic
   "62.232.198.68/32",
-  
+
   # -Sodexo Justice Services
   "80.86.46.16/31",
   "80.86.46.18/32",
@@ -84,7 +84,7 @@ env_user_access_cidr_blocks = [
   "80.86.46.16/30",
   "195.224.76.229/32",
   "51.179.199.82/32", #ROK user outbound for wales,DDC,BGSW - requested via slack support channel https://mojdt.slack.com/archives/GNXRQ5HUN/p1570199298064800
-  "195.153.64.66/32",   # Seetec VPN
+  "195.153.64.66/32", # Seetec VPN
 ]
 
 # DSS Batch Task
