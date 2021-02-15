@@ -80,6 +80,11 @@ env_user_access_cidr_blocks = [
   "80.86.46.16/31",
   "80.86.46.18/32",
 
+  # -SEETEC
+  "80.86.46.16/30",
+  "195.224.76.229/32",
+  "51.179.199.82/32", #ROK user outbound for wales,DDC,BGSW - requested via slack support channel https://mojdt.slack.com/archives/GNXRQ5HUN/p1570199298064800
+  "195.153.64.66/32",   # Seetec VPN
 ]
 
 # DSS Batch Task
