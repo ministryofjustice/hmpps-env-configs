@@ -68,3 +68,6 @@ iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-stage-ia
 
 copy_tags_to_snapshot = true
 auto_minor_version_upgrade = true
+
+# for use when we need to restore db from RDS snapshot
+snapshot_identifier = ""

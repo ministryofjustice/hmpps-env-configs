@@ -68,3 +68,6 @@ iaps_asgv2_props = {
 # monitoring overrides - used to specify the instance name we use in the env
 iaps_monitoring_rds_db_instance_identifier = ""
 copy_tags_to_snapshot = true
+
+# for use when we need to restore db from RDS snapshot
+snapshot_identifier = ""
