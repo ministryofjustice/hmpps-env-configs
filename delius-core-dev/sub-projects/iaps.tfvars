@@ -74,3 +74,5 @@ iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-code-dev
 
 copy_tags_to_snapshot = true
 auto_minor_version_upgrade = true
+
+snapshot_identifier = "rds:tf-eu-west-2-hmpps-delius-core-dev-iaps-2021-02-10-03-10"
