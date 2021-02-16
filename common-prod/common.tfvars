@@ -309,7 +309,13 @@ spg_partnergateway_domain_ports = {
   https               = "443"  # not yet implemented, would be used for devops non tunnelled console admin (ie hawtio)
 }
 
-#TODO: allow JMX ports for weblogic domains from bastion or admin
+# internal MOJ access
+internal_moj_access_cidr_blocks = [
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
+  "194.75.210.208/28", #BCL
+  "213.48.246.99/32",  #BCL
+]
 
 # public / user access
 user_access_cidr_blocks = [
