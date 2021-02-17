@@ -11,16 +11,15 @@ database_autotasks:
       sql_tuning_advisor: disabled
       auto_space_advisor: disabled
       
-# ND 4.9.6 Fixed the issue where missing auth details caused an error.  Removing for now.
-#ndelius_oauth_config:
-# url: https://sign-in-dev.hmpps.service.justice.gov.uk/auth
-# client_id: delius-unilink-dev
-# client_secret: /delius-stage/delius/weblogic/ndelius-domain/oauth-client-secret
-# callback_url: https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
-# user_info_endpoint: /api/user/me
-# username_attribute: username
-# display_name: Login using justice.gov.uk credentials
-# scope: delius
+ndelius_oauth_config:
+ url: https://sign-in-stage.hmpps.service.justice.gov.uk/auth
+ client_id: delius-unilink-stage
+ client_secret: /delius-stage/delius/weblogic/ndelius-domain/oauth-client-secret
+ callback_url: https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
+ user_info_endpoint: /api/user/me
+ username_attribute: username
+ display_name: Login using justice.gov.uk credentials
+ scope: delius
  
 # Prepare a case for sentencing service
 prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/
