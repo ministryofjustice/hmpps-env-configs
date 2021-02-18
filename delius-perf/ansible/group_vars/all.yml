@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-perf
 simple_environment_name: perf
-ndelius_version: "4.7.8.10_oracle18c"
+ndelius_version: "4.9.11"
 catalog: PCAT
 data_classification: official-data
 database_autotasks:
