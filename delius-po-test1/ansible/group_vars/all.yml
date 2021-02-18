@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-po-test1
 simple_environment_name: po-test1
-ndelius_version: "4.9.9"
+ndelius_version: "4.9.11"
 catalog: DCAT
 data_classification: unclassified-data
 database_autotasks:
