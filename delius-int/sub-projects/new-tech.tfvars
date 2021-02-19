@@ -30,6 +30,7 @@ offenderapi_conf = {
   env_features_noms_update_noms_number = "true"
   env_smoke_test_aware = "true"
   enable_public_lb = false
+  env_deliusapi_baseurl = "https://delius-api.test.probation.service.justice.gov.uk/"
 }
 
 # Override default Elasticsearch Config
