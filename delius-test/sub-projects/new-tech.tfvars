@@ -36,6 +36,7 @@ offenderapi_conf = {
   env_features_noms_update_multiple_events_update_bulk_key_dates = "false"
   env_features_noms_update_multiple_events_update_key_dates = "true"
   env_features_noms_update_multiple_events_update_prison_location = "true"
+  env_deliusapi_baseurl = "http://delius-api.ecs.cluster:8080/"
 }
 
 # Override default Elasticsearch Config
