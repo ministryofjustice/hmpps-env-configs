@@ -25,7 +25,7 @@ required_patches:
 ndelius_oauth_config:
   url: https://sign-in-preprod.hmpps.service.justice.gov.uk/auth
   client_id: delius-unilink-preprod
-  client_secret: /delius-preprod/delius/weblogic/ndelius-domain/oauth-client-secret
+  client_secret: /delius-pre-prod/delius/weblogic/ndelius-domain/oauth-client-secret
   callback_url: https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/auth/token.jsp
   user_info_endpoint: /api/user/me
   username_attribute: username
