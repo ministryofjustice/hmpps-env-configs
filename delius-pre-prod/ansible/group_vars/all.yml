@@ -21,3 +21,13 @@ required_patches:
       grid_patch: false
       database_patch: true
       target_version: "19.9"
+
+ndelius_oauth_config:
+  url: https://sign-in-preprod.hmpps.service.justice.gov.uk/auth
+  client_id: delius-unilink-preprod
+  client_secret: /delius-pre-prod/delius/weblogic/ndelius-domain/oauth-client-secret
+  callback_url: https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/auth/token.jsp
+  user_info_endpoint: /api/user/me
+  username_attribute: username
+  display_name: Login using justice.gov.uk credentials
+  scope: delius
