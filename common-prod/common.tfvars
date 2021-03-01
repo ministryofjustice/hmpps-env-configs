@@ -699,3 +699,8 @@ spg_jms_host_src             = "data"
 # Parent R53 Zone ID for strategic domain (probation.service.justice.gov.uk)
 strategic_parent_zone_id              = "Z2SOZ79CNGAPIF"
 strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_delegation_role"
+
+# ACM alerts
+acm_alerts_config = {
+  slack_channel       = "delius-aws-acm-alerts"
+}
