@@ -59,8 +59,7 @@ delius_api_environment = {
   SPRING_JPA_PROPERTIES_HIBERNATE_SHOW_SQL              = "true"
 }
 delius_api_secrets = {
-  APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-core-dev/delius-core/newtech/offenderapi/appinsights_key"
-  SPRING_DATASOURCE_PASSWORD     = "/delius-core-dev/delius-core/delius-database/db/delius_api_pool_password"
+  SPRING_DATASOURCE_PASSWORD = "/delius-core-dev/delius-core/delius-database/db/delius_api_pool_password"
 }
 
 env_user_access_cidr_blocks = []

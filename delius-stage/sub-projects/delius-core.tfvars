@@ -52,6 +52,7 @@ ansible_vars = {
 
 # Delius API
 delius_api_environment = {
+  SPRING_PROFILES_ACTIVE                                = "applicationinsights"
   TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
