@@ -585,13 +585,12 @@ gdpr_config = {}
 
 # Delius API
 default_delius_api_config = {
-  image_url     = "public.ecr.aws/s8p2y7q3/delius-api"
-  image_version = "latest" # Application version
-  memory        = 4096     # Memory to assign to API container
-  cpu           = 2048     # CPU to assign to API container
-  min_capacity  = 2        # Minimum number of running tasks per service
-  max_capacity  = 10       # Maximum number of running tasks per service
-  target_cpu    = 60       # % CPU target value for scaling of ECS tasks
+  image_url    = "public.ecr.aws/hmpps/delius-api" # image_version is managed externally in CircleCI
+  memory       = 4096                              # Memory to assign to API container
+  cpu          = 2048                              # CPU to assign to API container
+  min_capacity = 2                                 # Minimum number of running tasks per service
+  max_capacity = 10                                # Maximum number of running tasks per service
+  target_cpu   = 60                                # % CPU target value for scaling of ECS tasks
 }
 delius_api_config = {}
 

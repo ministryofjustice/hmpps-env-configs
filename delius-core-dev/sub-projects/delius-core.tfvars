@@ -53,12 +53,13 @@ umt_config = {
 delius_api_environment = {
   TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
-  SPRING_DATASOURCE_USERNAME                            = "DELIUS_APP_SCHEMA"
+  SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+  LOGGING_LEVEL_ORG_HIBERNATE_SQL                       = "DEBUG"
+  SPRING_JPA_PROPERTIES_HIBERNATE_SHOW_SQL              = "true"
 }
 delius_api_secrets = {
-  APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-core-dev/delius-core/newtech/offenderapi/appinsights_key"
-  SPRING_DATASOURCE_PASSWORD     = "/delius-core-dev/delius-core/delius-database/db/delius_app_schema_password"
+  SPRING_DATASOURCE_PASSWORD = "/delius-core-dev/delius-core/delius-database/db/delius_api_pool_password"
 }
 
 env_user_access_cidr_blocks = []
