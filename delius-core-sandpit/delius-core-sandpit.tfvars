@@ -16,7 +16,6 @@ oracle_backup_schedule = {
   delius = {
     daily_schedule  = "30 06 ? * 3-6 *"
     weekly_schedule = "30 06 ? * 2 *"
-    delete_defunct  = "yes"
   }
 }
 
@@ -26,6 +25,8 @@ oracle_validate_backup_schedule = {
     schedule =  "46 14 ? * 2,4,6 *"
   }
 }
+
+oracle_delete_unused_dbids = "true"
 
 database_high_availability_count = {
   delius = 2
