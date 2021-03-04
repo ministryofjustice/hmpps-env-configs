@@ -16,6 +16,7 @@ oracle_backup_schedule = {
   delius = {
     daily_schedule  = "30 06 ? * 3-6 *"
     weekly_schedule = "30 06 ? * 2 *"
+    delete_defunct  = "yes"
   }
 }
 
