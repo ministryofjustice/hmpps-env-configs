@@ -14,7 +14,7 @@ create_autostop_instance             = "true"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 10 ? * 3-6 *"
+    daily_schedule  = "50 10 ? * 3-6 *"
     weekly_schedule = "30 06 ? * 2 *"
   }
 }
@@ -26,7 +26,7 @@ oracle_validate_backup_schedule = {
   }
 }
 
-# oracle_delete_unused_dbids = "yes"
+oracle_delete_unused_dbids = "yes"
 
 database_high_availability_count = {
   delius = 2
