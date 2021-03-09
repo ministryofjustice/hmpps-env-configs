@@ -175,3 +175,6 @@ nextcloud_redis_node_type    = "cache.t3.small"
 
 #monitoring
 mis_alarms_enabled = "true"
+
+# mis fsx
+fsx_copy_tags_to_backups = false

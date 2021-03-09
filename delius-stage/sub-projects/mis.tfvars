@@ -170,3 +170,6 @@ nextcloud_instance_count     = 3
 
 #monitoring
 mis_alarms_enabled = "true"
+
+# mis fsx
+fsx_copy_tags_to_backups = true
