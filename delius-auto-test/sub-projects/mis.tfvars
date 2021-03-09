@@ -176,3 +176,6 @@ ansible_vars_misdsd_db = {
   database_backup_location   = "NotApplicable" #default for local testing
   oracle_dbca_template_file  = "database"
 }
+
+# mis fsx
+fsx_copy_tags_to_backups = true
