@@ -62,6 +62,11 @@ delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD = "/delius-core-dev/delius-core/delius-database/db/delius_api_pool_password"
 }
 
+# PDF Generator Service
+pdf_generator_config = {
+  env_DEBUG_LOG = true
+}
+
 env_user_access_cidr_blocks = []
 
 # DSS Batch Task

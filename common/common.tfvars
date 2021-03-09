@@ -538,6 +538,17 @@ default_delius_api_config = {
 }
 delius_api_config = {}
 
+# PDF Generator Service
+default_pdf_generator_config = {
+  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
+  memory       = 512
+  cpu          = 1024
+  min_capacity = 1
+  max_capacity = 10
+  target_cpu   = 60
+}
+pdf_generator_config = {}
+
 # Delius-Core Slack alarms
 delius_alarms_config = {
   enabled     = true
@@ -643,5 +654,5 @@ strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_dele
 
 # ACM alerts
 acm_alerts_config = {
-  slack_channel       = "delius-aws-acm-alerts"
+  slack_channel = "delius-aws-acm-alerts"
 }
