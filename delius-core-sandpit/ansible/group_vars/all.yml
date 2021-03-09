@@ -46,7 +46,7 @@ required_patches:
       target_version: "19.9"
     p30616738:
       filename: p30616738_199000DBRU_Linux-x86-64.zip
-      description: Data Pump does not support compatibility above 19.0
+      description: ORA-600 [qesrLoopOverSetRowP:rows] From Query In Job That Used To Work In 11g (Doc ID 2596180.1) 
       grid_patch: false
       database_patch: true
       target_version: "19.9"
