@@ -599,11 +599,23 @@ default_pdf_generator_config = {
   image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
   memory       = 2048
   cpu          = 1024
-  min_capacity = 1
+  min_capacity = 2
   max_capacity = 10
   target_cpu   = 60
 }
 pdf_generator_config = {}
+
+# New Tech Web Service
+default_new_tech_config = {
+  image_url     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-web"
+  memory        = 2048
+  cpu           = 2048
+  min_capacity  = 2
+  max_capacity  = 10
+  target_cpu    = 60
+  env_BASE_PATH = "/newTech/"
+}
+new_tech_config = {}
 
 # Delius-Core Slack alarms:
 delius_alarms_config = {
