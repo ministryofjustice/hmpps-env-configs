@@ -1,14 +1,11 @@
 # delius-int  delius-core.tfvars
 ## Delius Core Specific
 
-egress_443 = true
-egress_80  = true
-
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size       = "small"
   instance_type       = "t3.large"
-  disks_quantity      = 2   # Do not decrease this
+  disks_quantity      = 2 # Do not decrease this
   disks_quantity_data = 1
   disk_iops_data      = 1000
   disk_iops_flash     = 500

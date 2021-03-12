@@ -1,9 +1,6 @@
 # delius-prod  delius-core.tfvar
 ## Delius Core Specific
 
-egress_443 = true
-egress_80  = true
-
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size       = "x_large"

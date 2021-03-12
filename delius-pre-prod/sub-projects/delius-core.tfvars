@@ -1,14 +1,11 @@
 # delius-pre-prod  delius-core.tfvar
 ## Delius Core Specific
 
-egress_443 = true
-egress_80 = true
-
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size       = "x_large"
   instance_type       = "r5.4xlarge"
-  disks_quantity      = 16   # Do not decrease this
+  disks_quantity      = 16 # Do not decrease this
   disks_quantity_data = 10
   disk_iops_data      = 1000
   disk_iops_flash     = 500
@@ -25,17 +22,17 @@ ansible_vars_oracle_db = {
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
-  database_characterset         = "AL32UTF8"
-  database_bootstrap_restore    = "False" # whether primary db has db restore on bootstrap
-  database_backup               = "NotApplicable" # path in S3 to directory backup files
-  database_backup_sys_passwd    = "NotApplicable" # ssm parameter store name for db backup password
-  database_backup_location      = "NotApplicable" #default for local testing
-  oracle_dbca_template_file     = "database"
+  database_characterset      = "AL32UTF8"
+  database_bootstrap_restore = "False"         # whether primary db has db restore on bootstrap
+  database_backup            = "NotApplicable" # path in S3 to directory backup files
+  database_backup_sys_passwd = "NotApplicable" # ssm parameter store name for db backup password
+  database_backup_location   = "NotApplicable" #default for local testing
+  oracle_dbca_template_file  = "database"
 }
 
 # WebLogic
 ansible_vars = {
-  database_sid = "PRENDA"
+  database_sid      = "PRENDA"
   ndelius_log_level = "ERROR"
 }
 
@@ -50,7 +47,7 @@ env_user_access_cidr_blocks = [
   "80.86.46.16/30",
   "195.224.76.229/32",
   "51.179.199.82/32", #ROK user outbound for wales,DDC,BGSW - requested via slack support channel https://mojdt.slack.com/archives/GNXRQ5HUN/p1570199298064800
-  "195.153.64.66/32",   # Seetec VPN
+  "195.153.64.66/32", # Seetec VPN
 
   # -Interserve
   "46.227.51.224/29",
@@ -76,33 +73,33 @@ env_user_access_cidr_blocks = [
   "51.179.197.1/32",
 
   # - EOS
-  "5.153.255.210/32",   # EOS Public IP
+  "5.153.255.210/32", # EOS Public IP
 ]
 
 # DSS Batch Task
 dss_job_envvars = [
   {
-    "name" = "DSS_TESTMODE"
-    "value" =  "true"
-  },
-  {
-    "name" = "DSS_TESTINGAUTOCORRECT"
+    "name"  = "DSS_TESTMODE"
     "value" = "true"
   },
   {
-    "name" = "DSS_ENVIRONMENT"
+    "name"  = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name"  = "DSS_ENVIRONMENT"
     "value" = "delius-pre-prod"
   },
   {
-    "name" = "DSS_DSSWEBSERVERURL"
+    "name"  = "DSS_DSSWEBSERVERURL"
     "value" = "https://interface-app-internal.pre-prod.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
   },
   {
-    "name" = "DSS_PROJECT"
+    "name"  = "DSS_PROJECT"
     "value" = "delius"
   },
   {
-    "name" = "JAVA_OPTS"
+    "name"  = "JAVA_OPTS"
     "value" = "-Xms1024m -Xmx2048m"
   }
 ]

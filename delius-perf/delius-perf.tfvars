@@ -11,20 +11,17 @@ public_ssl_arn = ""
 
 instance_type_db = "t2.large"
 
-egress_443 = true
-egress_80  = true
-
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
 
 
 
 #lambda auto start stop vars
-ec2_schedule                         = "true"
-autoscaling_schedule                 = "true"
-calendar_rule_enabled                = "true"
-autostop_notify_rule_enabled         = "true"
-create_autostop_instance             = "true"
+ec2_schedule                 = "true"
+autoscaling_schedule         = "true"
+calendar_rule_enabled        = "true"
+autostop_notify_rule_enabled = "true"
+create_autostop_instance     = "true"
 
 database_high_availability_count = {
   delius = 1

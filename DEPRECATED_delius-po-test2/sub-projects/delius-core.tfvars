@@ -1,15 +1,12 @@
 # delius-po-test2  delius-core.tfvars
 ## Delius Core Specific
 
-egress_443 = true
-egress_80 = true
-
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size  = "small"
   instance_type  = "t3.large"
   disk_iops      = 1000
-  disks_quantity = 2  # Do not decrease this
+  disks_quantity = 2   # Do not decrease this
   disk_size      = 300 # Do not decrease this
   # total_storage  = 400 # This should equal disks_quantity x disk_size
 }
@@ -22,19 +19,19 @@ ansible_vars_oracle_db = {
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
-  database_characterset         = "AL32UTF8"
-  database_bootstrap_restore    = "True" # whether primary db has db restore on bootstrap
-  database_backup               = "dbbackup/dev/delius" # path in S3 to directory backup files
-  database_backup_sys_passwd    = "/dbbackup/delius-core-dev/delius-core/oracle-database/db/oradb_sys_password" # ssm parameter store name for db backup password
-  database_backup_location      = "/u01/backup" #default for local testing
-  oracle_dbca_template_file     = "database"
+  database_characterset      = "AL32UTF8"
+  database_bootstrap_restore = "True"                                                                        # whether primary db has db restore on bootstrap
+  database_backup            = "dbbackup/dev/delius"                                                         # path in S3 to directory backup files
+  database_backup_sys_passwd = "/dbbackup/delius-core-dev/delius-core/oracle-database/db/oradb_sys_password" # ssm parameter store name for db backup password
+  database_backup_location   = "/u01/backup"                                                                 #default for local testing
+  oracle_dbca_template_file  = "database"
 }
 
 # WebLogic
 instance_count_weblogic_interface = "0"
 ansible_vars = {
   ndelius_display_name = "National Delius - TEST USE ONLY"
-  database_sid = "POT2NDA"
+  database_sid         = "POT2NDA"
 }
 
 env_user_access_cidr_blocks = [
@@ -70,29 +67,29 @@ env_user_access_cidr_blocks = [
   "51.179.197.1/32",
 
   # - EOS
-  "5.153.255.210/32",   # EOS Public IP
+  "5.153.255.210/32", # EOS Public IP
 ]
 
 # DSS Batch Task
 dss_job_envvars = [
   {
-    "name" = "DSS_TESTMODE"
-    "value" =  "true"
-  },
-  {
-    "name" = "DSS_TESTINGAUTOCORRECT"
+    "name"  = "DSS_TESTMODE"
     "value" = "true"
   },
   {
-    "name" = "DSS_ENVIRONMENT"
+    "name"  = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name"  = "DSS_ENVIRONMENT"
     "value" = "delius-po-test2"
   },
   {
-    "name" = "DSS_DSSWEBSERVERURL"
+    "name"  = "DSS_DSSWEBSERVERURL"
     "value" = "https://interface-app-internal.po-test2.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
   },
   {
-    "name" = "DSS_PROJECT"
+    "name"  = "DSS_PROJECT"
     "value" = "delius"
   }
 ]
