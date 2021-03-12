@@ -617,6 +617,17 @@ default_new_tech_config = {
 }
 new_tech_config = {}
 
+# Community API
+default_community_api_config = {
+  image_url    = "quay.io/hmpps/community-api"
+  memory       = 4096
+  cpu          = 2048
+  min_capacity = 2
+  max_capacity = 10
+  target_cpu   = 60
+}
+community_api_config = {}
+
 # Delius-Core Slack alarms:
 delius_alarms_config = {
   enabled     = true
