@@ -619,14 +619,33 @@ new_tech_config = {}
 
 # Community API
 default_community_api_config = {
-  image_url    = "quay.io/hmpps/community-api"
-  memory       = 4096
-  cpu          = 2048
-  min_capacity = 2
-  max_capacity = 10
-  target_cpu   = 60
+  image_url        = "quay.io/hmpps/community-api"
+  memory           = 4096
+  cpu              = 2048
+  min_capacity     = 2
+  max_capacity     = 10
+  target_cpu       = 60
+  enable_public_lb = false
 }
 community_api_config = {}
+default_community_api_ingress = [ # Common CIDR ranges for ingress in all non-production environments
+  "35.178.209.113/32",            # cloudplatform-live1-1
+  "3.8.51.207/32",                # cloudplatform-live1-2
+  "35.177.252.54/32",             # cloudplatform-live1-3
+  "35.177.252.195/32",            # healthkick
+  "34.252.4.39/32",               # Analytics platform
+  "34.251.212.33/32",             # Analytics platform
+  "34.250.17.221/32",             # Analytics platform
+  "34.247.31.101/32",             # Analytics platform
+  "3.248.11.160/32",              # Analytics platform
+  "54.194.123.60/32",             # Analytics platform
+  "34.249.60.91/32",              # Analytics platform
+  "34.251.199.153/32",            # Analytics platform
+  "34.249.194.106/32",            # Analytics platform
+  "194.168.183.130/32",           # CATS+ access (Daresbury Office)
+  "51.141.53.111/32",             # Public IP of azure fortinet (prod)
+]
+community_api_ingress = [] # Override this per-environment for specific ingress rules
 
 # Delius-Core Slack alarms:
 delius_alarms_config = {

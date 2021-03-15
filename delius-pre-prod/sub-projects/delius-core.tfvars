@@ -36,6 +36,12 @@ ansible_vars = {
   ndelius_log_level = "ERROR"
 }
 
+# Community API
+community_api_ingress = [
+  "51.140.228.7/32",  # azure hmpps-auth legacy server
+  "20.39.163.219/32", # azure hmpps-auth nomisapi-preprod
+]
+
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -MTCNovo

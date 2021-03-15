@@ -59,13 +59,12 @@ delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD     = "/delius-test/delius/delius-database/db/delius_api_pool_password"
 }
 
+# Community API
 community_api_ingress = [
-  "51.141.45.69/32",   # Public IP of azure fortinet (test)
-  "51.140.222.8/32",   # azure hmpps-auth legacy server
-  "20.39.162.11/32",   # azure hmpps-auth nomisapi-t3
-  "20.39.161.240/32",  # azure hmpps-auth nomisapi-t2
-  "92.237.170.161/32", # CATS+ access (Carl Sixsmith Home Office) TODO check whether this can now be removed
-  "54.76.254.148/32",  # DXW
+  "51.140.222.8/32",  # azure hmpps-auth legacy server
+  "20.39.162.11/32",  # azure hmpps-auth nomisapi-t3
+  "20.39.161.240/32", # azure hmpps-auth nomisapi-t2
+  "54.76.254.148/32", # DXW
 ]
 
 env_user_access_cidr_blocks = [

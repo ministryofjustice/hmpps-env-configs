@@ -563,19 +563,13 @@ new_tech_config = {}
 
 # Community API
 default_community_api_config = {
-  image_url    = "quay.io/hmpps/community-api"
-  memory       = 2048
-  cpu          = 1024
-  min_capacity = 1
-  max_capacity = 10
-  target_cpu   = 60
-
-  # TODO separate into common / dev:
-  env_SPRING_PROFILES_ACTIVE                                = "oracle"
-  env_SPRING_DATASOURCE_USERNAME                            = "delius_pool"
-  env_DEBUG                                                 = "true"
-  env_SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
-  env_DELIUSAPI_BASEURL                                     = "http://delius-api.ecs.cluster:8080/"
+  image_url        = "quay.io/hmpps/community-api"
+  memory           = 2048
+  cpu              = 2048
+  min_capacity     = 1
+  max_capacity     = 10
+  target_cpu       = 60
+  enable_public_lb = true
 }
 community_api_config = {}
 default_community_api_ingress = [ # Common CIDR ranges for ingress in all non-production environments
@@ -593,6 +587,7 @@ default_community_api_ingress = [ # Common CIDR ranges for ingress in all non-pr
   "34.251.199.153/32",            # Analytics platform
   "34.249.194.106/32",            # Analytics platform
   "194.168.183.130/32",           # CATS+ access (Daresbury Office)
+  "51.141.45.69/32",              # Public IP of azure fortinet (test)
 ]
 community_api_ingress = [] # Override this per-environment for specific ingress rules
 

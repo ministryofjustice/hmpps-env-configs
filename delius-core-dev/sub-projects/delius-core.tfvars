@@ -64,6 +64,14 @@ pdf_generator_config = {
   env_DEBUG_LOG = true
 }
 
+# Community API
+community_api_ingress = [
+  "51.140.222.8/32",  # azure hmpps-auth legacy server
+  "20.39.162.11/32",  # azure hmpps-auth nomisapi-t3
+  "20.39.161.240/32", # azure hmpps-auth nomisapi-t2
+  "54.76.254.148/32", # DXW
+]
+
 env_user_access_cidr_blocks = []
 
 # DSS Batch Task
