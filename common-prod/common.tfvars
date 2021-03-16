@@ -120,12 +120,13 @@ alf_rds_props = {
 }
 
 alf_database_map = {
-  aurora_instance_class = "db.r5.2xlarge"
-  aurora_name           = "alf-database-svc"
-  aurora_engine_version = "9.6.19"
-  aurora_replica_count  = "2"
-  replica_scale_min     = "2"
-  replica_scale_max     = "4"
+  aurora_instance_class    = "db.r5.2xlarge"
+  aurora_name              = "alf-database-svc"
+  aurora_engine_version    = "9.6.19"
+  aurora_replica_count     = "2"
+  aurora_replica_scale_min = "2"
+  aurora_replica_scale_max = "4"
+  aurora_snapshot          = "alfresco-aurora-snapshot"
 }
 
 # alf solr
