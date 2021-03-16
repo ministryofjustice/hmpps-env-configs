@@ -545,13 +545,13 @@ umt_config = {}
 
 # Approved Premises Tracker API
 default_aptracker_api_config = {
-  version                  = "1.13" # Application version
-  memory                   = 2048   # Memory to assign to ECS container in MB
-  cpu                      = 1024   # CPU to assign to ECS container
-  ecs_scaling_min_capacity = 2      # Minimum number of running tasks
-  ecs_scaling_max_capacity = 10     # Maximum number of running tasks
-  ecs_target_cpu           = 60     # CPU target value for scaling of ECS tasks
-  log_level                = "INFO" # Application log-level
+  version      = "1.13" # Application version
+  memory       = 2048   # Memory to assign to ECS container in MB
+  cpu          = 1024   # CPU to assign to ECS container
+  min_capacity = 0      # Minimum number of running tasks
+  max_capacity = 0      # Maximum number of running tasks
+  target_cpu   = 60     # CPU target value for scaling of ECS tasks
+  log_level    = "INFO" # Application log-level
 }
 aptracker_api_config = {}
 

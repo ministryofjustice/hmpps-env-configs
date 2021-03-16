@@ -489,13 +489,14 @@ umt_config = {}
 
 # Approved Premises Tracker API
 default_aptracker_api_config = {
-  version                  = "1.13"  # Application version
-  memory                   = 1024    # Memory to assign to ECS container in MB
-  cpu                      = 512     # CPU to assign to ECS container
-  ecs_scaling_min_capacity = 1       # Minimum number of running tasks
-  ecs_scaling_max_capacity = 10      # Maximum number of running tasks
-  ecs_target_cpu           = 60      # CPU target value for scaling of ECS tasks
-  log_level                = "DEBUG" # Application log-level
+  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-aptracker-api"
+  version      = "1.13"  # Application version
+  memory       = 1024    # Memory to assign to ECS container in MB
+  cpu          = 1024    # CPU to assign to ECS container
+  min_capacity = 1       # Minimum number of running tasks
+  max_capacity = 10      # Maximum number of running tasks
+  target_cpu   = 60      # CPU target value for scaling of ECS tasks
+  log_level    = "DEBUG" # Application log-level
 }
 aptracker_api_config = {}
 
