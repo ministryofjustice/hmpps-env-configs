@@ -119,7 +119,7 @@ alf_rds_props = {
 }
 
 alf_database_map = {
-  aurora_instance_class    = "db.r5.2xlarge"
+  aurora_instance_class    = "db.r5.large"
   aurora_name              = "alf-database-svc"
   aurora_engine_version    = "9.6.19"
   aurora_replica_count     = "1"
