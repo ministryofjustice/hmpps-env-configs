@@ -20,4 +20,4 @@ oracle_backup_schedule = {
   }
 }
 
-oracle_delete_unused_dbids = "yes"
+oracle_delete_unused_dbids = "no"
