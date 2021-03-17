@@ -70,3 +70,6 @@ es_s3_repo_name = "snapshot_ifsr3_3"
 alfresco_asg_props = {
   asg_ami = "ami-0f7eff23903506a77"
 }
+
+# RDS 
+alf_snapshot_identifier = "alfresco-database-snapshot"
