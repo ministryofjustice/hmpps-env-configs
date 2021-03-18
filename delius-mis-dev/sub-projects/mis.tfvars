@@ -61,6 +61,7 @@ dis_server_count = 1
 dfi_instance_type  = "t2.xlarge"
 dfi_root_size = 75
 dfi_server_count = 1
+dfi_server_resources = 1
 
 # Databases
 ## MIS Datamart
