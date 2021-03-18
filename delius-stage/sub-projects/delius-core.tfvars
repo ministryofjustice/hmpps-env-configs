@@ -72,7 +72,8 @@ env_user_access_cidr_blocks = [
   "51.149.251.0/24", # Pre-Production Devices for testing
 
   # -MTCNovo
-  "62.25.109.202/32",
+  "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
+  "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
 
   # -i2n (Northgate) bastion IP traffic
   "62.232.198.68/32",

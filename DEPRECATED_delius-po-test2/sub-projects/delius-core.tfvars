@@ -41,7 +41,8 @@ env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
 
   # -MTCNovo
-  "62.25.109.202/32",
+  "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
+  "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
 
   # -SEETEC
   "80.86.46.16/30",
