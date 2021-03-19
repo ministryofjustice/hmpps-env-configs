@@ -71,9 +71,8 @@ env_user_access_cidr_blocks = [
   # -MTCNovo
   "62.25.109.202/32",# MTCNovo old frontend desktops Egress IP (Pre March 2021)
   "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
-  # The following IPs are to be enabled for Production once testing is complete in PO-Test and Pre-Prod:
-  #"52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
-  #"52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
 
   # -SEETEC
   "80.86.46.16/30",
