@@ -119,6 +119,15 @@ alf_rds_props = {
   master_engine_version   = "9.6.9"
 }
 
+alf_database_map = {
+  aurora_instance_class = "db.r5.2xlarge"
+  aurora_name           = "alf-database-svc"
+  aurora_engine_version = "9.6.19"
+  aurora_replica_count  = "2"
+  replica_scale_min     = "2"
+  replica_scale_max     = "4"
+}
+
 # alf solr
 alf_solr_config = {
   ebs_size             = 10000
