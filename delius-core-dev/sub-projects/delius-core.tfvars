@@ -51,7 +51,7 @@ umt_config = {
 
 # Delius API
 delius_api_environment = {
-  TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api-dev.prison.service.justice.gov.uk"
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"

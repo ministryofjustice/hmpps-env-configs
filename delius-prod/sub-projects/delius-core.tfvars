@@ -56,7 +56,7 @@ aptracker_api_config = {
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
-  TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in.hmpps.service.justice.gov.uk/auth"
+  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api.prison.service.justice.gov.uk"
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
