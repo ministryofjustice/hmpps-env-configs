@@ -520,6 +520,7 @@ activemq_config = {}
 
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
+  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/pwm"
   version      = "1.9.1"
   memory       = 2048
   cpu          = 1024
@@ -531,12 +532,13 @@ pwm_config = {}
 
 # UMT
 default_umt_config = {
+  image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
   version                       = "1.9.0"          # Application version
   memory                        = 4096             # Memory to assign to ECS container in MB
   cpu                           = 1024             # CPU to assign to ECS container
-  ecs_scaling_min_capacity      = 2                # Minimum number of running tasks
-  ecs_scaling_max_capacity      = 10               # Maximum number of running tasks
-  ecs_target_cpu                = 60               # CPU target value for scaling of ECS tasks
+  min_capacity                  = 2                # Minimum number of running tasks
+  max_capacity                  = 10               # Maximum number of running tasks
+  target_cpu                    = 60               # CPU target value for scaling of ECS tasks
   redis_node_type               = "cache.m5.large" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 2                # Number of Redis shards (node groups) in the cluster
   redis_replicas_per_node_group = 1                # Number of read-only replicas for each shard (node group)
@@ -545,6 +547,7 @@ umt_config = {}
 
 # Approved Premises Tracker API
 default_aptracker_api_config = {
+  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-aptracker-api"
   version      = "1.13" # Application version
   memory       = 2048   # Memory to assign to ECS container in MB
   cpu          = 1024   # CPU to assign to ECS container
