@@ -40,7 +40,7 @@ bcs_server_count = 1
 #Instance size for bfs
 bfs_instance_type  = "t2.xlarge"
 bfs_root_size = 75
-bfs_server_count = 1
+bfs_server_count = 0
 
 #Instance size for bps
 bps_instance_type  = "t2.xlarge"
@@ -56,12 +56,6 @@ bws_server_count = 1
 dis_instance_type  = "t2.xlarge"
 dis_root_size = 75
 dis_server_count = 1
-
-#Instance size for dfi
-dfi_instance_type  = "t2.xlarge"
-dfi_root_size = 75
-dfi_server_count = 1
-dfi_server_resources = 1
 
 # Databases
 ## MIS Datamart
