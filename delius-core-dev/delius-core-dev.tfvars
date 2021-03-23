@@ -27,4 +27,4 @@ database_high_availability_count = {
   misdsd = 0
 }
 
-oracle_delete_unused_dbids = "no"
+oracle_delete_unused_dbids = "yes"
