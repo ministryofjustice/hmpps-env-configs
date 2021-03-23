@@ -7,3 +7,4 @@ database_primary_sid: PREBOE
 database_parameters:
    sga_max_size: 3G
    sga_target: 3G
+rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
