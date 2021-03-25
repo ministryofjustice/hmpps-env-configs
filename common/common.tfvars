@@ -468,15 +468,19 @@ default_activemq_config = {
 }
 activemq_config = {}
 
+# Default ECS scaling config. Can be overridden per-service.
+common_ecs_scaling_config = {
+  memory       = 1024 # Memory to assign to ECS container in MB
+  cpu          = 512  # CPU to assign to ECS container (1024 units = 1 vCPU)
+  min_capacity = 1    # Minimum number of running tasks
+  max_capacity = 5    # Maximum number of running tasks
+  target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
+}
+
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
-  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/pwm"
-  version      = "1.9.1"
-  memory       = 1024
-  cpu          = 1024
-  min_capacity = 1
-  max_capacity = 10
-  target_cpu   = 60
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/pwm"
+  version   = "1.9.1"
 }
 pwm_config = {}
 
@@ -484,11 +488,6 @@ pwm_config = {}
 default_umt_config = {
   image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
   version                       = "1.9.0"          # Application version
-  memory                        = 1024             # Memory to assign to ECS container in MB
-  cpu                           = 1024             # CPU to assign to ECS container
-  min_capacity                  = 1                # Minimum number of running tasks
-  max_capacity                  = 10               # Maximum number of running tasks
-  target_cpu                    = 60               # CPU target value for scaling of ECS tasks
   redis_node_type               = "cache.t3.small" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 1                # Number of Redis shards (node groups) in the cluster
   redis_replicas_per_node_group = 0                # Number of read-only replicas for each shard (node group)
@@ -497,14 +496,9 @@ umt_config = {}
 
 # Approved Premises Tracker API
 default_aptracker_api_config = {
-  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-aptracker-api"
-  version      = "1.13"  # Application version
-  memory       = 1024    # Memory to assign to ECS container in MB
-  cpu          = 1024    # CPU to assign to ECS container
-  min_capacity = 1       # Minimum number of running tasks
-  max_capacity = 10      # Maximum number of running tasks
-  target_cpu   = 60      # CPU target value for scaling of ECS tasks
-  log_level    = "DEBUG" # Application log-level
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-aptracker-api"
+  version   = "1.13"  # Application version
+  log_level = "DEBUG" # Application log-level
 }
 aptracker_api_config = {}
 
@@ -512,8 +506,6 @@ aptracker_api_config = {}
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
   api_version                 = "0.25.1" # Application version
-  api_memory                  = 1024     # Memory to assign to API container
-  api_cpu                     = 1024     # CPU to assign to API container
   cron_identifyduplicates     = "-"      # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders      = "-"      #
   cron_retainedoffendersiicsa = "-"      #
@@ -522,11 +514,6 @@ default_gdpr_config = {
   cron_destructionlogclearing = "-"      #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
   ui_version                  = "0.25.0"              # Application version
-  ui_memory                   = 1024                  # Memory to assign to UI container
-  ui_cpu                      = 1024                  # CPU to assign to UI container
-  ui_scaling_min_capacity     = 1                     # Minimum number of running tasks per service
-  ui_scaling_max_capacity     = 10                    # Maximum number of running tasks per service
-  ui_target_cpu               = 60                    # CPU target value for scaling of ECS tasks
   db_instance_class           = "db.t3.small"         # Instance type to use for the database
   db_storage                  = 30                    # Allocated database storage in GB
   db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
@@ -538,34 +525,21 @@ gdpr_config = {}
 
 # Delius API
 default_delius_api_config = {
-  image_url    = "public.ecr.aws/hmpps/delius-api" # image_version is managed externally in CircleCI
-  memory       = 2048                              # Memory to assign to API container
-  cpu          = 1024                              # CPU to assign to API container
-  min_capacity = 1                                 # Minimum number of running tasks per service
-  max_capacity = 10                                # Maximum number of running tasks per service
-  target_cpu   = 60                                # % CPU target value for scaling of ECS tasks
+  image_url = "public.ecr.aws/hmpps/delius-api" # image_version is managed externally in CircleCI
+  memory    = 2048                              # Memory to assign to API container
+  cpu       = 1024                              # CPU to assign to ECS container (1024 units = 1 vCPU)
 }
 delius_api_config = {}
 
 # PDF Generator Service
 default_pdf_generator_config = {
-  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
-  memory       = 512
-  cpu          = 1024
-  min_capacity = 1
-  max_capacity = 10
-  target_cpu   = 60
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
 }
 pdf_generator_config = {}
 
 # New Tech Web Service
 default_new_tech_config = {
   image_url     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-web"
-  memory        = 512
-  cpu           = 1024
-  min_capacity  = 1
-  max_capacity  = 10
-  target_cpu    = 60
   env_BASE_PATH = "/newTech/"
 }
 new_tech_config = {}
@@ -575,9 +549,6 @@ default_community_api_config = {
   image_url        = "quay.io/hmpps/community-api"
   memory           = 2048
   cpu              = 2048
-  min_capacity     = 1
-  max_capacity     = 10
-  target_cpu       = 60
   enable_public_lb = true
 }
 community_api_config = {}
