@@ -9,6 +9,8 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "Z2SOZ79CNGAPIF"
 
 # IAPS RDS INSTANCE
+multi_az = true
+
 rds_instance_class = "db.t3.large"
 
 rds_backup_retention_period = 15
