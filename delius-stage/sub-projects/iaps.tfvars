@@ -37,6 +37,12 @@ storage_encrypted = true
 
 iaps_app_name = "iaps"
 
+#========================
+# IAPS EC2 ASG
+#========================
+# Flag to decommission IAPS v1 for each environment
+deploy_iaps_v1 = false
+
 instance_type = "t3.medium"
 
 psn_proxy_endpoint = "data-im-proxy-int-psn.stage.probation.service.justice.gov.uk"
@@ -57,7 +63,9 @@ iaps_asg_props = {
 
 iaps_asg_suspended_processes = []
 
+#====================================
 # IAPS V2 Appserver ASG Configuration
+#====================================
 iaps_asgv2_props = {
   ami_id            = "ami-0398dce8f96c37cc4"
   image_tag_version = "0.35.0"
