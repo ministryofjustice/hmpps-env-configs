@@ -474,8 +474,8 @@ activemq_config = {}
 
 # Default ECS scaling config. Can be overridden per-service.
 common_ecs_scaling_config = {
-  memory       = 1024 # Memory to assign to ECS container in MB
-  cpu          = 512  # CPU to assign to ECS container (1024 units = 1 vCPU)
+  memory       = 2048 # Memory to assign to ECS container in MB
+  cpu          = 1024 # CPU to assign to ECS container (1024 units = 1 vCPU)
   min_capacity = 1    # Minimum number of running tasks
   max_capacity = 5    # Maximum number of running tasks
   target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
@@ -518,6 +518,8 @@ default_gdpr_config = {
   cron_destructionlogclearing = "-"      #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
   ui_version                  = "0.25.0"              # Application version
+  ui_memory                   = 1024                  # Memory to assign to UI container
+  ui_cpu                      = 512                   # CPU to assign to UI container
   db_instance_class           = "db.t3.small"         # Instance type to use for the database
   db_storage                  = 30                    # Allocated database storage in GB
   db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
@@ -530,8 +532,6 @@ gdpr_config = {}
 # Delius API
 default_delius_api_config = {
   image_url = "public.ecr.aws/hmpps/delius-api" # image_version is managed externally in CircleCI
-  memory    = 2048                              # Memory to assign to API container
-  cpu       = 1024                              # CPU to assign to ECS container (1024 units = 1 vCPU)
 }
 delius_api_config = {}
 
@@ -551,8 +551,6 @@ new_tech_config = {}
 # Community API
 default_community_api_config = {
   image_url        = "quay.io/hmpps/community-api"
-  memory           = 2048
-  cpu              = 2048
   enable_public_lb = true
 }
 community_api_config = {}

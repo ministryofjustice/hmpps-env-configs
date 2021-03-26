@@ -548,8 +548,7 @@ pwm_config = {}
 default_umt_config = {
   image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
   version                       = "1.9.0"          # Application version
-  memory                        = 4096             # Memory to assign to ECS container in MB
-  cpu                           = 1024             # CPU to assign to ECS container (1024 units = 1 vCPU)
+  memory                        = 4096             # Additional memory required to support Redis caching
   redis_node_type               = "cache.m5.large" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 2                # Number of Redis shards (node groups) in the cluster
   redis_replicas_per_node_group = 1                # Number of read-only replicas for each shard (node group)
@@ -600,8 +599,6 @@ delius_api_config = {}
 # PDF Generator
 default_pdf_generator_config = {
   image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
-  memory       = 2048
-  cpu          = 1024
   min_capacity = 2
   max_capacity = 10
   target_cpu   = 60
@@ -726,7 +723,7 @@ delius_core_haproxy_instance_count = "3"
 
 # Shared ECS Cluster
 ecs_instance_type = "m4.xlarge"
-node_max_count    = 20
+node_max_count    = 30
 node_min_count    = 5
 
 loadrunner_config = {
