@@ -40,7 +40,7 @@ bcs_server_count = 1
 #Instance size for bfs
 bfs_instance_type  = "t2.xlarge"
 bfs_root_size = 75
-bfs_server_count = 1
+bfs_server_count = 0
 
 #Instance size for bps
 bps_instance_type  = "t2.xlarge"
