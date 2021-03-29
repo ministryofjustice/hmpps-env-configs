@@ -11,6 +11,8 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 #========================
 # IAPS RDS INSTANCE
 #========================
+multi_az = false
+
 rds_instance_class = "db.t3.micro"
 
 rds_backup_retention_period = 2
@@ -79,5 +81,4 @@ copy_tags_to_snapshot = true
 auto_minor_version_upgrade = true
 
 # for use when we need to restore db from RDS snapshot
-# snapshot_identifier = "rds:tf-eu-west-2-hmpps-delius-core-dev-iaps-2021-02-10-03-10"
 snapshot_identifier = ""

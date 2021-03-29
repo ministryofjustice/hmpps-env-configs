@@ -9,6 +9,8 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "Z2SOZ79CNGAPIF"
 
 # IAPS RDS INSTANCE
+multi_az = true
+
 rds_instance_class = "db.t3.large"
 
 rds_backup_retention_period = 15
@@ -76,4 +78,4 @@ iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-prod-iap
 copy_tags_to_snapshot = true
 
 # for use when we need to restore db from RDS snapshot
-snapshot_identifier = ""
+snapshot_identifier = "iaps-pre-rds-fix"
