@@ -78,4 +78,4 @@ copy_tags_to_snapshot = true
 auto_minor_version_upgrade = true
 
 # for use when we need to restore db from RDS snapshot
-snapshot_identifier = "rds:tf-eu-west-2-hmpps-delius-core-dev-iaps-2021-02-10-03-10"
+snapshot_identifier = ""
