@@ -43,7 +43,7 @@ iaps_app_name = "iaps"
 # IAPS EC2 ASG
 #========================
 # Flag to decommission IAPS v1 for each environment
-deploy_iaps_v1 = true
+deploy_iaps_v1 = false
 
 instance_type = "m5.large"
 
