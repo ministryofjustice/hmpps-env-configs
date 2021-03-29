@@ -55,3 +55,5 @@ oracle_validate_backup_schedule = {
     schedule =  "00 15 ? * 4 *"
   }
 }
+
+oracle_delete_unused_dbids = "no"

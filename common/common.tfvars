@@ -118,6 +118,16 @@ alf_rds_props = {
   master_engine_version   = "9.6.9"
 }
 
+alf_database_map = {
+  aurora_instance_class    = "db.r5.large"
+  aurora_name              = "alf-database-svc"
+  aurora_engine_version    = "9.6.19"
+  aurora_replica_count     = "1"
+  aurora_replica_scale_min = "1"
+  aurora_replica_scale_max = "2"
+  aurora_snapshot          = "alfresco-aurora-snapshot"
+}
+
 # alf solr
 alf_solr_config = {
   ebs_size             = 100
@@ -256,7 +266,13 @@ spg_partnergateway_domain_ports = {
   https               = "443"  # not yet implemented, would be used for devops non tunnelled console admin (ie hawtio)
 }
 
-#TODO: allow JMX ports for weblogic domains from bastion or admin
+# internal MOJ access
+internal_moj_access_cidr_blocks = [
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
+  "194.75.210.208/28", #BCL
+  "213.48.246.99/32",  #BCL
+]
 
 # public / user access
 user_access_cidr_blocks = [
@@ -523,13 +539,12 @@ gdpr_config = {}
 
 # Delius API
 default_delius_api_config = {
-  image_url     = "public.ecr.aws/s8p2y7q3/delius-api"
-  image_version = "latest" # Application version
-  memory        = 2048     # Memory to assign to API container
-  cpu           = 1024     # CPU to assign to API container
-  min_capacity  = 1        # Minimum number of running tasks per service
-  max_capacity  = 10       # Maximum number of running tasks per service
-  target_cpu    = 60       # % CPU target value for scaling of ECS tasks
+  image_url    = "public.ecr.aws/hmpps/delius-api" # image_version is managed externally in CircleCI
+  memory       = 2048                              # Memory to assign to API container
+  cpu          = 1024                              # CPU to assign to API container
+  min_capacity = 1                                 # Minimum number of running tasks per service
+  max_capacity = 10                                # Maximum number of running tasks per service
+  target_cpu   = 60                                # % CPU target value for scaling of ECS tasks
 }
 delius_api_config = {}
 
@@ -635,3 +650,8 @@ spg_jms_host_src             = "data"
 # Parent R53 Zone ID for strategic domain (probation.service.justice.gov.uk)
 strategic_parent_zone_id              = "Z2SOZ79CNGAPIF"
 strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_delegation_role"
+
+# ACM alerts
+acm_alerts_config = {
+  slack_channel       = "delius-aws-acm-alerts"
+}

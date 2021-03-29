@@ -39,6 +39,12 @@ storage_encrypted = true
 
 iaps_app_name = "iaps"
 
+#========================
+# IAPS EC2 ASG
+#========================
+# Flag to decommission IAPS v1 for each environment
+deploy_iaps_v1 = true
+
 instance_type = "m5.large"
 
 psn_proxy_endpoint = "data-im-proxy.psn.probation.service.justice.gov.uk"
@@ -59,16 +65,16 @@ iaps_asg_props = {
 
 iaps_asg_suspended_processes = ["Launch", "Terminate", "HealthCheck", "ReplaceUnhealthy", "AZRebalance", "AlarmNotification", "ScheduledActions", "AddToLoadBalancer"]
 
+#====================================
 # IAPS V2 Appserver ASG Configuration
+#====================================
 iaps_asgv2_props = {
   ami_id            = "ami-0398dce8f96c37cc4"
   image_tag_version = "0.35.0"
 }
 
-
-
 # monitoring overrides - used to specify the instance name we use in the env
-iaps_monitoring_rds_db_instance_identifier = ""
+iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-prod-iaps"
 copy_tags_to_snapshot = true
 
 # for use when we need to restore db from RDS snapshot

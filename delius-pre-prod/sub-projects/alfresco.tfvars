@@ -96,3 +96,5 @@ alf_elk_service_map = {
 alf_backups_map = {
   backups_expiration = 100
 }
+
+solr_cmis_managed = true

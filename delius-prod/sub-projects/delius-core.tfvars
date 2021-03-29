@@ -55,23 +55,24 @@ aptracker_api_config = {
 
 # Delius API
 delius_api_environment = {
-  TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in.hmpps.service.justice.gov.uk/auth"
+  SPRING_PROFILES_ACTIVE                                = "applicationinsights"
+  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api.prison.service.justice.gov.uk"
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
-  SPRING_DATASOURCE_USERNAME                            = "DELIUS_POOL"
+  SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-prod/delius/newtech/offenderapi/appinsights_key"
-  SPRING_DATASOURCE_PASSWORD     = "/delius-prod/delius/delius-database/db/delius_pool_password"
+  SPRING_DATASOURCE_PASSWORD     = "/delius-prod/delius/delius-database/db/delius_api_pool_password"
 }
 
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -MTCNovo
-  "62.25.109.202/32",
-  # The following IPs are to be enabled for Production once testing is complete in PO-Test and Pre-Prod:
-  #"52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
-  #"52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
+  "62.25.109.202/32",# MTCNovo old frontend desktops Egress IP (Pre March 2021)
+  "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
+  "52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
 
   # -SEETEC
   "80.86.46.16/30",

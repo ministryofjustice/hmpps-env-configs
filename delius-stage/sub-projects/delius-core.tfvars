@@ -52,14 +52,15 @@ ansible_vars = {
 
 # Delius API
 delius_api_environment = {
-  TOKENVERIFICATION_API_BASE_URL                        = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+  SPRING_PROFILES_ACTIVE                                = "applicationinsights"
+  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api-preprod.prison.service.justice.gov.uk"
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
-  SPRING_DATASOURCE_USERNAME                            = "DELIUS_APP_SCHEMA"
+  SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-stage/delius/newtech/offenderapi/appinsights_key"
-  SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_app_schema_password"
+  SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_api_pool_password"
 }
 
 env_user_access_cidr_blocks = [
@@ -71,7 +72,8 @@ env_user_access_cidr_blocks = [
   "51.149.251.0/24", # Pre-Production Devices for testing
 
   # -MTCNovo
-  "62.25.109.202/32",
+  "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
+  "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
 
   # -i2n (Northgate) bastion IP traffic
   "62.232.198.68/32",

@@ -3,8 +3,37 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-pre-prod
 simple_environment_name: pre-prod
-ndelius_version: "4.8.13.3"
+ndelius_version: "4.9.11.2"
 catalog: PCAT
 data_classification: official-data
 delegated_account_id: "010587221707"
+required_patches:
+    p31810213:
+      filename: p31810213_199000DBRU_Linux-x86-64.zip
+      description: Ora-600 [kghuclientasp_04] after upgrade to 19c database (Doc ID 2730880.1)
+      grid_patch: false
+      database_patch: true
+      target_version: "19.9"
+    p30828205:
+      filename: p30828205_199000DBRU_Linux-x86-64.zip
+      description: Data Pump does not support compatibility above 19.0
+      postinstall_sql: postinstall.sql
+      grid_patch: false
+      database_patch: true
+      target_version: "19.9"
+    p30616738:
+      filename: p30616738_199000DBRU_Linux-x86-64.zip
+      description: ORA-600 [qesrLoopOverSetRowP:rows] From Query In Job That Used To Work In 11g (Doc ID 2596180.1) 
+      grid_patch: false
+      database_patch: true
+      target_version: "19.9"
 
+ndelius_oauth_config:
+  url: https://sign-in-preprod.hmpps.service.justice.gov.uk/auth
+  client_id: delius-unilink-preprod
+  client_secret: /delius-pre-prod/delius/weblogic/ndelius-domain/oauth-client-secret
+  callback_url: https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/auth/token.jsp
+  user_info_endpoint: /api/user/me
+  username_attribute: username
+  display_name: Login using justice.gov.uk credentials
+  scope: delius

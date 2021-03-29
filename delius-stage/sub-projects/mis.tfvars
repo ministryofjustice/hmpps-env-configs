@@ -57,6 +57,12 @@ dis_instance_type  = "m5.2xlarge"
 dis_root_size = 75
 dis_server_count = 1
 
+#Instance size for dfi
+dfi_instance_type  = "m5.8xlarge"
+dfi_root_size = 75
+dfi_server_count = 1
+dfi_server_resources = 1
+
 # Databases
 ## MIS Datamart
 db_size_mis = {
@@ -170,3 +176,6 @@ nextcloud_instance_count     = 3
 
 #monitoring
 mis_alarms_enabled = "true"
+
+# mis fsx
+fsx_copy_tags_to_backups = true

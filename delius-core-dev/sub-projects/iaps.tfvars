@@ -44,11 +44,14 @@ iaps_app_name = "iaps"
 #========================
 # IAPS EC2 ASG
 #========================
+# Flag to decommission IAPS v1 for each environment
+deploy_iaps_v1 = false
+
 instance_type = "t3.micro"
 
 psn_proxy_endpoint = "data-im-proxy-int-psn.dev.probation.service.justice.gov.uk"
 
-dashboards_enabled = "true"
+dashboards_enabled = "false"
 
 # IAPS Appserver ASG Configuration
 iaps_asg_props = {
@@ -72,7 +75,7 @@ iaps_asgv2_props = {
 
 
 # monitoring overrides - used to specify the instance name we use in the env
-iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-code-dev-iaps"
+iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-core-dev-iaps"
 
 copy_tags_to_snapshot = true
 auto_minor_version_upgrade = true

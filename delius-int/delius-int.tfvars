@@ -19,3 +19,5 @@ oracle_backup_schedule = {
     weekly_schedule = "30 06 ? * 2 *"
   }
 }
+
+oracle_delete_unused_dbids = "yes"

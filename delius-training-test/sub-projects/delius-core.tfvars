@@ -2,13 +2,13 @@
 ## Delius Core Specific
 
 egress_443 = true
-egress_80 = true
+egress_80  = true
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size       = "small"
   instance_type       = "t3.large"
-  disks_quantity      = 2   # Do not decrease this
+  disks_quantity      = 2 # Do not decrease this
   disks_quantity_data = 1
   disk_iops_data      = 1000
   disk_iops_flash     = 500
@@ -25,25 +25,26 @@ ansible_vars_oracle_db = {
   ## oradb_system_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_system_password"
   ## oradb_dbsnmp_password         = "/${environment_name}/delius-core/oracle-database/db/oradb_dbsnmp_password"
   ## oradb_asmsnmp_password        = "/${environment_name}/delius-core/oracle-database/db/oradb_asmsnmp_password"
-  database_characterset         = "AL32UTF8"
-  database_bootstrap_restore    = "True" # whether primary db has db restore on bootstrap
-  database_backup               = "dbbackup/dev/delius" # path in S3 to directory backup files
-  database_backup_sys_passwd    = "/dbbackup/delius-core-dev/delius-core/oracle-database/db/oradb_sys_password" # ssm parameter store name for db backup password
-  database_backup_location      = "/u01/backup" #default for local testing
-  oracle_dbca_template_file     = "database"
+  database_characterset      = "AL32UTF8"
+  database_bootstrap_restore = "True"                                                                        # whether primary db has db restore on bootstrap
+  database_backup            = "dbbackup/dev/delius"                                                         # path in S3 to directory backup files
+  database_backup_sys_passwd = "/dbbackup/delius-core-dev/delius-core/oracle-database/db/oradb_sys_password" # ssm parameter store name for db backup password
+  database_backup_location   = "/u01/backup"                                                                 #default for local testing
+  oracle_dbca_template_file  = "database"
 }
 
 # WebLogic
 ansible_vars = {
-  ndelius_display_name = "National Delius - TEST USE ONLY"
+  ndelius_display_name  = "National Delius - TEST USE ONLY"
   ndelius_training_mode = "training"
-  database_sid = "TRTNDA"
+  database_sid          = "TRTNDA"
 }
 
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -MTCNovo
-  "62.25.109.202/32",
+  "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
+  "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
 
   # -SEETEC
   "80.86.46.16/30",
@@ -74,29 +75,32 @@ env_user_access_cidr_blocks = [
   "51.179.197.1/32",
 
   # - EOS
-  "5.153.255.210/32",   # EOS Public IP
+  "5.153.255.210/32", # EOS Public IP
+
+  # -Sopra Steria
+  "195.206.180.12/32", # Dedicated IP provided by Nicki Berry on 26/02/2020
 ]
 
 # DSS Batch Task
 dss_job_envvars = [
   {
-    "name" = "DSS_TESTMODE"
-    "value" =  "true"
-  },
-  {
-    "name" = "DSS_TESTINGAUTOCORRECT"
+    "name"  = "DSS_TESTMODE"
     "value" = "true"
   },
   {
-    "name" = "DSS_ENVIRONMENT"
+    "name"  = "DSS_TESTINGAUTOCORRECT"
+    "value" = "true"
+  },
+  {
+    "name"  = "DSS_ENVIRONMENT"
     "value" = "delius-training-test"
   },
   {
-    "name" = "DSS_DSSWEBSERVERURL"
+    "name"  = "DSS_DSSWEBSERVERURL"
     "value" = "https://interface-app-internal.training-test.delius.probation.hmpps.dsd.io/NDeliusDSS/UpdateOffender"
   },
   {
-    "name" = "DSS_PROJECT"
+    "name"  = "DSS_PROJECT"
     "value" = "delius"
   }
 ]
