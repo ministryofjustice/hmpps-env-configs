@@ -537,6 +537,28 @@ default_gdpr_config = {
 }
 gdpr_config = {}
 
+# Delius Merge tool
+default_merge_config = {
+  api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-api"
+  api_version                 = "latest" # Application version
+  api_memory                  = 512      # Memory to assign to API container
+  api_cpu                     = 512      # CPU to assign to API container
+  ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-ui"
+  ui_version                  = "latest"              # Application version
+  ui_memory                   = 512                   # Memory to assign to UI container
+  ui_cpu                      = 512                   # CPU to assign to UI container
+  ui_scaling_min_capacity     = 1                     # Minimum number of running tasks per service
+  ui_scaling_max_capacity     = 10                    # Maximum number of running tasks per service
+  ui_target_cpu               = 60                    # CPU target value for scaling of ECS tasks
+  db_instance_class           = "db.t3.small"         # Instance type to use for the database
+  db_storage                  = 30                    # Allocated database storage in GB
+  db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
+  db_backup_window            = "19:00-21:00"         # Daily window to take RDS backups
+  db_backup_retention_period  = 1                     # Number of days to retain RDS backups for
+  log_level                   = "DEBUG"               # Application log-level
+}
+merge_config = {}
+
 # Delius API
 default_delius_api_config = {
   image_url    = "public.ecr.aws/hmpps/delius-api" # image_version is managed externally in CircleCI
