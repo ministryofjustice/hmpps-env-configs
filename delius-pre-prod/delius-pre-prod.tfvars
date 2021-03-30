@@ -52,4 +52,4 @@ oracle_validate_backup_schedule = {
   }
 }
 
-oracle_delete_unused_dbids = "no"
+oracle_delete_unused_dbids = "yes"
