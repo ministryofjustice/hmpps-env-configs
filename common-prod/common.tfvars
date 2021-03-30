@@ -620,7 +620,7 @@ default_community_api_config = {
   enable_public_lb = false
 }
 community_api_config = {}
-default_community_api_ingress = [ # Common CIDR ranges for ingress in all non-production environments
+default_community_api_ingress = [ # Common CIDR ranges for ingress in all production environments
   "35.178.209.113/32",            # cloudplatform-live1-1
   "3.8.51.207/32",                # cloudplatform-live1-2
   "35.177.252.54/32",             # cloudplatform-live1-3
