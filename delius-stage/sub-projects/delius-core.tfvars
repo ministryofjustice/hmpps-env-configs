@@ -60,6 +60,13 @@ delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_api_pool_password"
 }
 
+merge_config = {
+  api_min_capacity = 1
+  api_max_capacity = 1
+  ui_scaling_min_capacity     = 2
+  ui_scaling_max_capacity     = 10
+}
+
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -RRP (Reducing Reoffending Partnership)
