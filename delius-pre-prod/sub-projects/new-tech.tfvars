@@ -43,6 +43,7 @@ offenderapi_conf = {
   env_features_noms_update_multiple_events_update_bulk_key_dates = "false"
   env_features_noms_update_multiple_events_update_key_dates = "true"
   env_features_noms_update_multiple_events_update_prison_location = "true"
+  env_features_apply_limited_access_markers = "true"
 }
 
 # Override default Elasticsearch Config
