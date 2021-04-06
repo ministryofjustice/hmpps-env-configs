@@ -184,3 +184,7 @@ mis_alarms_enabled = "true"
 
 # mis fsx
 fsx_copy_tags_to_backups = false
+
+fsx_bfs_fileshare_size = 300      # GiB
+fsx_bfs_fileshare_throughput = 64 # MB/s
+
