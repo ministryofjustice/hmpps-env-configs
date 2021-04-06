@@ -172,4 +172,7 @@ nextcloud_instance_count     = 3
 mis_alarms_enabled = "true"
 
 # mis fsx
-fsx_copy_tags_to_backups = true
+fsx_copy_tags_to_backups = false
+
+fsx_bfs_fileshare_size = 600      # GiB
+fsx_bfs_fileshare_throughput = 128 # MB/s

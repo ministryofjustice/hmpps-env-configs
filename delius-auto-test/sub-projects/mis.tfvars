@@ -178,4 +178,7 @@ ansible_vars_misdsd_db = {
 }
 
 # mis fsx
-fsx_copy_tags_to_backups = true
+fsx_copy_tags_to_backups = false
+
+fsx_bfs_fileshare_size = 300      # GiB
+fsx_bfs_fileshare_throughput = 64 # MB/s
