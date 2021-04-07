@@ -576,6 +576,9 @@ new_tech_config = {}
 default_community_api_config = {
   image_url        = "quay.io/hmpps/community-api"
   enable_public_lb = true
+
+  # Default environment variables: (will be overridden by CircleCI, see https://github.com/ministryofjustice/community-api/blob/main/.circleci/config.yml )
+  env_SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
 }
 community_api_config = {}
 default_community_api_ingress = [ # Common CIDR ranges for ingress in all non-production environments
