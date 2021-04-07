@@ -50,6 +50,10 @@ allowed_cidr_block = [
   "213.48.246.99/32",   #BCL
 ]
 
+alfresco_access_cidr_blocks = [
+  "51.149.250.0/24",   #Moj Official Prisons
+]
+
 # common
 allowed_ssh_cidr = [
   "81.134.202.29/32",  #Moj VPN
