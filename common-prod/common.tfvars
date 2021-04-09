@@ -622,17 +622,27 @@ delius_api_config = {}
 
 # PDF Generator
 default_pdf_generator_config = {
-  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
-  min_capacity = 2
-  max_capacity = 10
-  target_cpu   = 60
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
 }
 pdf_generator_config = {}
 
 # New Tech Web Service
 default_new_tech_config = {
-  image_url     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-web"
-  env_BASE_PATH = "/newTech/"
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-web"
+
+  # Default environment variables.
+  # These will be overridden by CircleCI for certain environments, see https://github.com/ministryofjustice/ndelius-new-tech/blob/main/.circleci/config.yml
+  env_BASE_PATH                        = "/newTech/"
+  env_PARAMS_USER_TOKEN_VALID_DURATION = "1h"
+  env_PRISONER_API_PROVIDER            = "elite"
+  env_OFFENDER_SEARCH_PROVIDER         = "probation-offender-search"
+  env_STORE_PROVIDER                   = "alfresco"
+  env_STORE_ALFRESCO_USER              = "N00"
+  env_DELIUS_API_BASE_URL              = "http://community-api.ecs.cluster:8080/api/"
+  env_PDF_GENERATOR_URL                = "http://pdf-generator.ecs.cluster:8080/"
+  env_HMPPS_AUTH_BASE_URL              = "https://sign-in-preprod.hmpps.service.justice.gov.uk/"
+  env_NOMIS_API_BASE_URL               = "https://api-preprod.prison.service.justice.gov.uk/"
+  env_PROBATION_OFFENDER_SEARCH_URL    = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk/"
 }
 new_tech_config = {}
 
@@ -643,7 +653,8 @@ default_community_api_config = {
   cpu              = 2048
   enable_public_lb = false
 
-  # Default environment variables: (will be overridden by CircleCI, see https://github.com/ministryofjustice/community-api/blob/main/.circleci/config.yml )
+  # Default environment variables.
+  # These will be overridden by CircleCI for certain environments, see https://github.com/ministryofjustice/community-api/blob/main/.circleci/config.yml
   env_SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
 }
 community_api_config = {}
