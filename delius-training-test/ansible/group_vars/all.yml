@@ -11,7 +11,7 @@ database_autotasks:
       auto_space_advisor: disabled
 autotask_windows:
         weekday:
-                start_time: "06:20"
+                start_time: "05:50"
                 duration_mins: 30
 required_patches:
     p31810213:
