@@ -24,20 +24,20 @@ smtp_instance_type = "m5.xlarge"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "00 00 ? * 2-7 *"
-    weekly_schedule = "00 02 ? * 1 *"
+    daily_schedule  = "00 23 ? * 1-6 *"
+    weekly_schedule = "00 01 ? * 1 *"
   },
   mis = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 02 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 01 ? * 1 *"
   },
   misboe = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 02 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 01 ? * 1 *"
   },
   misdsd = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 02 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 01 ? * 1 *"
   }
 }
 

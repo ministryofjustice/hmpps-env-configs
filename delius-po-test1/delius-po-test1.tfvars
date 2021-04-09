@@ -18,15 +18,15 @@ route53_strategic_hosted_zone_id = "Z3UY5M35HRRNTE"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 06 ? * 3-6 *"
-    weekly_schedule = "30 06 ? * 2 *"
+    daily_schedule  = "30 05 ? * 3-6 *"
+    weekly_schedule = "30 05 ? * 2 *"
   }
 }
 
 oracle_validate_backup_schedule = {
   delius = {
     host     =  "delius_standbydb1"
-    schedule =  "00 09 ? * 3 *"
+    schedule =  "00 08 ? * 3 *"
   }
 }
 
