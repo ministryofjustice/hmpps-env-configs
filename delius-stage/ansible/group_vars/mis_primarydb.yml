@@ -7,8 +7,7 @@ database_primary_sid: STGMIS
 rman_level_0_backup_duration_target: "19:00"
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
 database_parameters:
-   sga_max_size: 92G
-   sga_target: 92G
-   pga_aggregate_target: 8G
-   pga_aggregate_limit: 16G
-   processes: 3500
+   sga_max_size: 60G
+   sga_target: 60G
+   pga_aggregate_target: 12G
+   pga_aggregate_limit: 24G
