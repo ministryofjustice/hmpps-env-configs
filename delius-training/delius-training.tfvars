@@ -20,22 +20,22 @@ create_autostop_instance             = "true"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 06 ? * 4-6 *"
-    weekly_schedule = "30 06 ? * 3 *"
+    daily_schedule  = "30 05 ? * 4-6 *"
+    weekly_schedule = "30 05 ? * 3 *"
   }
 }
 
 oracle_validate_backup_schedule = {
   delius = {
     host     =  "delius_standbydb1"
-    schedule =  "00 09 ? * 4 *"
+    schedule =  "00 08 ? * 4 *"
   }
 }
 
 oracle_flashback_schedule = {
   delius = {
     restorepoint   =  "TRAINING"
-    schedule       =  "30 06 ? * 2 *"
+    schedule       =  "30 05 ? * 2 *"
   }
 }
 
