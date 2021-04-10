@@ -105,3 +105,4 @@ alf_backups_map = {
   backups_expiration = 300
 }
 
+solr_cmis_managed = true
