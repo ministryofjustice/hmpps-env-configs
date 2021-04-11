@@ -4,6 +4,6 @@ database_standby_unique: PRDBOES1
 database_standby_sid: PRDBOES1
 database_parameters:
    control_management_pack_access: DIAGNOSTIC
-   sga_max_size: 3G
-   sga_target: 3G
-   pga_target: 2G
+   sga_max_size: 5G
+   sga_target: 5G
+   pga_aggregate_target: 256M
