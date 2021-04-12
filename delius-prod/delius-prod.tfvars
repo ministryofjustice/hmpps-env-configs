@@ -8,12 +8,9 @@ public_ssl_arn = ""
 
 instance_type_db = "t2.large"
 
-egress_443 = true
-egress_80 = true
-
 route53_domain_private = "service.justice.gov.uk"
 
-subdomain              = "probation"
+subdomain = "probation"
 
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
@@ -39,20 +36,20 @@ oracle_backup_schedule = {
 
 oracle_validate_backup_schedule = {
   delius = {
-    host     =  "delius_standbydb2"
-    schedule =  "00 14 ? * 4 *"
+    host     = "delius_standbydb2"
+    schedule = "00 14 ? * 4 *"
   },
   mis = {
-    host     =  "mis_standbydb2"
-    schedule =  "00 14 ? * 4 *"
+    host     = "mis_standbydb2"
+    schedule = "00 14 ? * 4 *"
   },
   misboe = {
-    host     =  "misboe_standbydb2"
-    schedule =  "00 14 ? * 4 *"
+    host     = "misboe_standbydb2"
+    schedule = "00 14 ? * 4 *"
   }
   misdsd = {
-    host     =  "misdsd_standbydb2"
-    schedule =  "00 14 ? * 4 *"
+    host     = "misdsd_standbydb2"
+    schedule = "00 14 ? * 4 *"
   }
 }
 

@@ -16,9 +16,6 @@ route53_strategic_hosted_zone_id = "Z3GRI9GET5CFF7"
 
 instance_type_db = "t2.large"
 
-egress_443 = true
-egress_80 = true
-
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
 
