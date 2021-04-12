@@ -4,3 +4,7 @@ database_standby_unique: PREMISS1
 database_standby_sid: PREMISS1
 database_parameters:
    control_management_pack_access: DIAGNOSTIC
+   sga_max_size: 175G
+   sga_target: 175G
+   pga_aggregate_target: 35G
+   pga_aggregate_limit: 70G
