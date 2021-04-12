@@ -36,32 +36,50 @@ self_signed_server_early_renewal_hours = 336
 bcs_instance_type  = "t2.xlarge"
 bcs_root_size = 75
 bcs_server_count = 1
+bcs_disable_api_termination = false
+bcs_ebs_optimized = false
+bcs_hibernation = false
 
 #Instance size for bfs
 bfs_instance_type  = "t2.xlarge"
 bfs_root_size = 75
 bfs_server_count = 0
+bfs_disable_api_termination = false
+bfs_ebs_optimized = false
+bfs_hibernation = false
 
 #Instance size for bps
 bps_instance_type  = "t2.xlarge"
 bps_root_size = 75
 bps_server_count = 1
+bps_disable_api_termination = false
+bps_ebs_optimized = false
+bps_hibernation = false
 
 #Instance size for bws
 bws_instance_type  = "t2.xlarge"
 bws_root_size = 75
 bws_server_count = 1
+bws_disable_api_termination = false
+bws_ebs_optimized = false
+bws_hibernation = false
 
 #Instance size for dis
 dis_instance_type  = "t2.xlarge"
 dis_root_size = 75
 dis_server_count = 1
+dis_disable_api_termination = false
+dis_ebs_optimized = false
+dis_hibernation = false
 
 #Instance size for dfi
 dfi_instance_type  = "t2.xlarge"
 dfi_root_size = 75
 dfi_server_count = 1
 dfi_server_resources = 1
+dfi_disable_api_termination = false
+dfi_ebs_optimized = false
+dfi_hibernation = false
 
 # Databases
 ## MIS Datamart
