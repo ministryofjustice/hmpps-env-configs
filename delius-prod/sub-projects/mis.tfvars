@@ -33,27 +33,27 @@ self_signed_server_validity_period_hours = 2160
 self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
-bcs_instance_type  = "m5.2xlarge"
+bcs_instance_type  = "m5.8xlarge"
 bcs_root_size = 100
 bcs_server_count = 3
 
 #Instance size for bfs
-bfs_instance_type  = "m5.2xlarge"
+bfs_instance_type  = "m5.8xlarge"
 bfs_root_size = 100
 bfs_server_count = 1
 
 #Instance size for bps
-bps_instance_type  = "m5.2xlarge"
+bps_instance_type  = "m5.8xlarge"
 bps_root_size = 100
 bps_server_count = 3
 
 #Instance size for bws
-bws_instance_type  = "m5.2xlarge"
+bws_instance_type  = "m5.8xlarge"
 bws_root_size = 75
 bws_server_count = 2
 
 #Instance size for dis
-dis_instance_type  = "m5.2xlarge"
+dis_instance_type  = "m5.8xlarge"
 dis_root_size = 75
 dis_server_count = 1
 
