@@ -1,9 +1,6 @@
 # delius-core-dev  delius-core.tfvars
 ## Delius Core Specific
 
-egress_443 = true
-egress_80  = true
-
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size       = "small"
@@ -61,6 +58,19 @@ delius_api_environment = {
 delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD = "/delius-core-dev/delius-core/delius-database/db/delius_api_pool_password"
 }
+
+# PDF Generator Service
+pdf_generator_config = {
+  env_DEBUG_LOG = true
+}
+
+# Community API
+community_api_ingress = [
+  "51.140.222.8/32",  # azure hmpps-auth legacy server
+  "20.39.162.11/32",  # azure hmpps-auth nomisapi-t3
+  "20.39.161.240/32", # azure hmpps-auth nomisapi-t2
+  "54.76.254.148/32", # DXW
+]
 
 env_user_access_cidr_blocks = []
 

@@ -528,25 +528,27 @@ default_activemq_config = {
 }
 activemq_config = {}
 
+# Default ECS scaling config. Can be overridden per-service.
+common_ecs_scaling_config = {
+  memory       = 2048 # Memory to assign to ECS container in MB
+  cpu          = 1024 # CPU to assign to ECS container (1024 units = 1 vCPU)
+  min_capacity = 2    # Minimum number of running tasks
+  max_capacity = 10   # Maximum number of running tasks
+  target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
+}
+
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
-  version      = "1.9.1"
-  memory       = 2048
-  cpu          = 1024
-  min_capacity = 2
-  max_capacity = 10
-  target_cpu   = 60
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/pwm"
+  version   = "1.9.1"
 }
 pwm_config = {}
 
 # UMT
 default_umt_config = {
+  image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
   version                       = "1.9.0"          # Application version
-  memory                        = 4096             # Memory to assign to ECS container in MB
-  cpu                           = 1024             # CPU to assign to ECS container
-  ecs_scaling_min_capacity      = 2                # Minimum number of running tasks
-  ecs_scaling_max_capacity      = 10               # Maximum number of running tasks
-  ecs_target_cpu                = 60               # CPU target value for scaling of ECS tasks
+  memory                        = 4096             # Additional memory required to support Redis caching
   redis_node_type               = "cache.m5.large" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 2                # Number of Redis shards (node groups) in the cluster
   redis_replicas_per_node_group = 1                # Number of read-only replicas for each shard (node group)
@@ -555,13 +557,11 @@ umt_config = {}
 
 # Approved Premises Tracker API
 default_aptracker_api_config = {
-  version                  = "1.13" # Application version
-  memory                   = 2048   # Memory to assign to ECS container in MB
-  cpu                      = 1024   # CPU to assign to ECS container
-  ecs_scaling_min_capacity = 2      # Minimum number of running tasks
-  ecs_scaling_max_capacity = 10     # Maximum number of running tasks
-  ecs_target_cpu           = 60     # CPU target value for scaling of ECS tasks
-  log_level                = "INFO" # Application log-level
+  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-aptracker-api"
+  version      = "1.13" # Application version
+  log_level    = "INFO" # Application log-level
+  min_capacity = 0      # Service has not yet been enabled in prod environments
+  max_capacity = 0
 }
 aptracker_api_config = {}
 
@@ -569,8 +569,6 @@ aptracker_api_config = {}
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
   api_version                 = "0.25.1" # Application version
-  api_memory                  = 4096     # Memory to assign to API container
-  api_cpu                     = 2048     # CPU to assign to API container
   cron_identifyduplicates     = "-"      # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders      = "-"      #
   cron_retainedoffendersiicsa = "-"      #
@@ -580,10 +578,7 @@ default_gdpr_config = {
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
   ui_version                  = "0.25.0"              # Application version
   ui_memory                   = 1024                  # Memory to assign to UI container
-  ui_cpu                      = 1024                  # CPU to assign to UI container
-  ui_scaling_min_capacity     = 2                     # Minimum number of running tasks per service
-  ui_scaling_max_capacity     = 10                    # Maximum number of running tasks per service
-  ui_target_cpu               = 60                    # CPU target value for scaling of ECS tasks
+  ui_cpu                      = 512                   # CPU to assign to UI container
   db_instance_class           = "db.m5.large"         # Instance type to use for the database
   db_storage                  = 100                   # Allocated database storage in GB
   db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
@@ -595,38 +590,89 @@ gdpr_config = {}
 
 # Delius Merge compliance tool
 default_merge_config = {
-  api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-api"
-  api_version                 = "0.11.1" # Application version
-  api_memory                  = 4096     # Memory to assign to API container
-  api_cpu                     = 2048     # CPU to assign to API container
-  api_min_capacity            = 0        # Not enabled in production yet
-  api_max_capacity            = 0        # Maximum number of running tasks per service
-  ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-ui"
-  ui_version                  = "0.11.0"              # Application version
-  ui_memory                   = 1024                  # Memory to assign to UI container
-  ui_cpu                      = 1024                  # CPU to assign to UI container
-  ui_scaling_min_capacity     = 0                     # Minimum number of running tasks per service
-  ui_scaling_max_capacity     = 0                     # Maximum number of running tasks per service
-  ui_target_cpu               = 60                    # CPU target value for scaling of ECS tasks
-  db_instance_class           = "db.m5.large"         # Instance type to use for the database
-  db_storage                  = 100                   # Allocated database storage in GB
-  db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
-  db_backup_window            = "19:00-21:00"         # Daily window to take RDS backups
-  db_backup_retention_period  = 14                    # Number of days to retain RDS backups for
-  log_level                   = "INFO"                # Application log-level
+  api_image_url              = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-api"
+  api_version                = "0.11.1" # Application version
+  api_min_capacity           = 0        # Not enabled in production yet
+  api_max_capacity           = 0
+  ui_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-ui"
+  ui_version                 = "0.11.0" # Application version
+  ui_memory                  = 1024     # Memory to assign to UI container
+  ui_cpu                     = 512      # CPU to assign to UI container
+  ui_min_capacity            = 0        # Not enabled in production yet
+  ui_max_capacity            = 0
+  db_instance_class          = "db.m5.large"         # Instance type to use for the database
+  db_storage                 = 100                   # Allocated database storage in GB
+  db_maintenance_window      = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
+  db_backup_window           = "19:00-21:00"         # Daily window to take RDS backups
+  db_backup_retention_period = 14                    # Number of days to retain RDS backups for
+  log_level                  = "INFO"                # Application log-level
 }
 merge_config = {}
 
 # Delius API
 default_delius_api_config = {
-  image_url    = "public.ecr.aws/hmpps/delius-api" # image_version is managed externally in CircleCI
-  memory       = 4096                              # Memory to assign to API container
-  cpu          = 2048                              # CPU to assign to API container
-  min_capacity = 2                                 # Minimum number of running tasks per service
-  max_capacity = 10                                # Maximum number of running tasks per service
-  target_cpu   = 60                                # % CPU target value for scaling of ECS tasks
+  image_url = "public.ecr.aws/hmpps/delius-api" # image_version is managed externally in CircleCI
+  memory    = 4096
+  cpu       = 2048
 }
 delius_api_config = {}
+
+# PDF Generator
+default_pdf_generator_config = {
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
+}
+pdf_generator_config = {}
+
+# New Tech Web Service
+default_new_tech_config = {
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-web"
+
+  # Default environment variables.
+  # These will be overridden by CircleCI for certain environments, see https://github.com/ministryofjustice/ndelius-new-tech/blob/main/.circleci/config.yml
+  env_BASE_PATH                        = "/newTech/"
+  env_PARAMS_USER_TOKEN_VALID_DURATION = "1h"
+  env_PRISONER_API_PROVIDER            = "elite"
+  env_OFFENDER_SEARCH_PROVIDER         = "probation-offender-search"
+  env_STORE_PROVIDER                   = "alfresco"
+  env_STORE_ALFRESCO_USER              = "N00"
+  env_DELIUS_API_BASE_URL              = "http://community-api.ecs.cluster:8080/api/"
+  env_PDF_GENERATOR_URL                = "http://pdf-generator.ecs.cluster:8080/"
+  env_HMPPS_AUTH_BASE_URL              = "https://sign-in-preprod.hmpps.service.justice.gov.uk/"
+  env_NOMIS_API_BASE_URL               = "https://api-preprod.prison.service.justice.gov.uk/"
+  env_PROBATION_OFFENDER_SEARCH_URL    = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk/"
+}
+new_tech_config = {}
+
+# Community API
+default_community_api_config = {
+  image_url        = "quay.io/hmpps/community-api"
+  memory           = 4096
+  cpu              = 2048
+  enable_public_lb = false
+
+  # Default environment variables.
+  # These will be overridden by CircleCI for certain environments, see https://github.com/ministryofjustice/community-api/blob/main/.circleci/config.yml
+  env_SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+}
+community_api_config = {}
+default_community_api_ingress = [ # Common CIDR ranges for ingress in all production environments
+  "35.178.209.113/32",            # cloudplatform-live1-1
+  "3.8.51.207/32",                # cloudplatform-live1-2
+  "35.177.252.54/32",             # cloudplatform-live1-3
+  "35.177.252.195/32",            # healthkick
+  "34.252.4.39/32",               # Analytics platform
+  "34.251.212.33/32",             # Analytics platform
+  "34.250.17.221/32",             # Analytics platform
+  "34.247.31.101/32",             # Analytics platform
+  "3.248.11.160/32",              # Analytics platform
+  "54.194.123.60/32",             # Analytics platform
+  "34.249.60.91/32",              # Analytics platform
+  "34.251.199.153/32",            # Analytics platform
+  "34.249.194.106/32",            # Analytics platform
+  "194.168.183.130/32",           # CATS+ access (Daresbury Office)
+  "51.141.53.111/32",             # Public IP of azure fortinet (prod)
+]
+community_api_ingress = [] # Override this per-environment for specific ingress rules
 
 # Delius-Core Slack alarms:
 delius_alarms_config = {
@@ -712,7 +758,7 @@ delius_core_haproxy_instance_count = "3"
 
 # Shared ECS Cluster
 ecs_instance_type = "m4.xlarge"
-node_max_count    = 20
+node_max_count    = 30
 node_min_count    = 5
 
 loadrunner_config = {
@@ -735,5 +781,5 @@ strategic_parent_zone_delegation_role = "arn:aws:iam::050243167760:role/r53_dele
 
 # ACM alerts
 acm_alerts_config = {
-  slack_channel       = "delius-aws-acm-alerts"
+  slack_channel = "delius-aws-acm-alerts"
 }

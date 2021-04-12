@@ -8,9 +8,6 @@ public_ssl_arn = ""
 
 instance_type_db = "t2.large"
 
-egress_443 = true
-egress_80 = true
-
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
 
@@ -35,20 +32,20 @@ oracle_backup_schedule = {
 
 oracle_validate_backup_schedule = {
   delius = {
-    host     =  "delius_standbydb2"
-    schedule =  "00 08 ? * 5 *"
+    host     = "delius_standbydb2"
+    schedule = "00 08 ? * 5 *"
   },
   mis = {
-    host     =  "mis_standbydb2"
-    schedule =  "00 08 ? * 5 *"
+    host     = "mis_standbydb2"
+    schedule = "00 08 ? * 5 *"
   },
   misboe = {
-    host     =  "misboe_standbydb2"
-    schedule =  "00 08 ? * 5 *"
+    host     = "misboe_standbydb2"
+    schedule = "00 08 ? * 5 *"
   }
   misdsd = {
-    host     =  "misdsd_standbydb2"
-    schedule =  "00 08 ? * 5 *"
+    host     = "misdsd_standbydb2"
+    schedule = "00 08 ? * 5 *"
   }
 }
 

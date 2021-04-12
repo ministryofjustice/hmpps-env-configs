@@ -1,9 +1,6 @@
 # delius-prod  delius-core.tfvar
 ## Delius Core Specific
 
-egress_443 = true
-egress_80  = true
-
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size       = "x_large"
@@ -65,6 +62,12 @@ delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-prod/delius/newtech/offenderapi/appinsights_key"
   SPRING_DATASOURCE_PASSWORD     = "/delius-prod/delius/delius-database/db/delius_api_pool_password"
 }
+
+# Community API
+community_api_ingress = [
+  "51.141.82.211/32", # azure hmpps-auth legacy server
+  "40.81.114.76/32",  # azure hmpps-auth nomisapi-prod
+]
 
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
