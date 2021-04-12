@@ -6,6 +6,7 @@ database_primary_unique: PREBOE
 database_primary_sid: PREBOE
 oracle_osbws_chunk_size: 104857600
 database_parameters:
-   sga_max_size: 3G
-   sga_target: 3G
+   sga_max_size: 5G
+   sga_target: 5G
+   pga_aggregate_target: 256M
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
