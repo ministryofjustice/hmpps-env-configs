@@ -7,6 +7,6 @@ database_primary_sid: STGBOE
 database_parameters:
    sga_max_size: 3G
    sga_target: 3G
-   pga_aggregate_target: 2G
+   pga_aggregate_target: 1500M
    pga_aggregate_limit: 3G
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
