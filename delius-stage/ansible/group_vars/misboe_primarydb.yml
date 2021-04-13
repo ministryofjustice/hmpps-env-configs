@@ -5,7 +5,8 @@ database_taf_service: STGBOE_TAF
 database_primary_unique: STGBOE
 database_primary_sid: STGBOE
 database_parameters:
-   sga_max_size: 5G
-   sga_target: 5G
-   pga_aggregate_target: 256M
+   sga_max_size: 3G
+   sga_target: 3G
+   pga_aggregate_target: 2G
+   pga_aggregate_limit: 3G
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
