@@ -6,5 +6,5 @@ database_parameters:
    control_management_pack_access: DIAGNOSTIC
    sga_max_size: 3G
    sga_target: 3G
-   pga_aggregate_target: 2G
+   pga_aggregate_target: 1500M
    pga_aggregate_limit: 3G
