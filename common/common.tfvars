@@ -412,7 +412,8 @@ default_ldap_config = {
 ldap_config = {}
 
 # Default values for NDelius WebLogic
-instance_type_weblogic            = "t3.medium"
+instance_type_weblogic            = "t3.medium" # 2 vCPU x 4GB
+instance_type_activemq            = "t3.medium" # 2 vCPU x 4GB
 instance_count_weblogic_ndelius   = "3"
 instance_count_weblogic_spg       = "3"
 instance_count_weblogic_interface = "3"
