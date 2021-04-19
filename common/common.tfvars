@@ -464,6 +464,9 @@ default_ansible_vars = {
 
   # Approved Premises Tracker API
   aptracker_api_errors_url = "/aptracker-api/errors"
+
+  merge_ui_url = "/merge/ui"
+  merge_api_url = "/merge/api"
 }
 
 # Delius ActiveMQ
