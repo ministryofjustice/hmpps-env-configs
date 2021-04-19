@@ -9,7 +9,7 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "Z1XOU6Z3TY3K2F"
 
 # IAPS RDS INSTANCE
-multi_az = false
+multi_az = false # temp set until next SSM IAPS RDS restore which will be Multi-AZ = True
 
 rds_instance_class = "db.t3.large"
 

@@ -8,51 +8,48 @@ public_ssl_arn = ""
 
 instance_type_db = "t2.large"
 
-egress_443 = true
-egress_80 = true
-
 route53_domain_private = "service.justice.gov.uk"
 
-subdomain              = "probation"
+subdomain = "probation"
 
 #Instance size for smtp server
 smtp_instance_type = "m5.xlarge"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 03 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 02 ? * 1 *"
   },
   mis = {
-    daily_schedule  = "00 00 ? * 2-7 *"
-    weekly_schedule = "00 00 ? * 1 *"
+    daily_schedule  = "00 23 ? * 1-6 *"
+    weekly_schedule = "00 23 ? * 7 *"
   },
   misboe = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 03 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 02 ? * 1 *"
   },
   misdsd = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 03 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 02 ? * 1 *"
   }
 }
 
 oracle_validate_backup_schedule = {
   delius = {
-    host     =  "delius_standbydb2"
-    schedule =  "00 15 ? * 4 *"
+    host     = "delius_standbydb2"
+    schedule = "00 14 ? * 4 *"
   },
   mis = {
-    host     =  "mis_standbydb2"
-    schedule =  "00 15 ? * 4 *"
+    host     = "mis_standbydb2"
+    schedule = "00 14 ? * 4 *"
   },
   misboe = {
-    host     =  "misboe_standbydb2"
-    schedule =  "00 15 ? * 4 *"
+    host     = "misboe_standbydb2"
+    schedule = "00 14 ? * 4 *"
   }
   misdsd = {
-    host     =  "misdsd_standbydb2"
-    schedule =  "00 15 ? * 4 *"
+    host     = "misdsd_standbydb2"
+    schedule = "00 14 ? * 4 *"
   }
 }
 

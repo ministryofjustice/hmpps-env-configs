@@ -43,7 +43,7 @@ iaps_app_name = "iaps"
 # IAPS EC2 ASG
 #========================
 # Flag to decommission IAPS v1 for each environment
-deploy_iaps_v1 = true
+deploy_iaps_v1 = false
 
 instance_type = "m5.large"
 
@@ -78,4 +78,4 @@ iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-prod-iap
 copy_tags_to_snapshot = true
 
 # for use when we need to restore db from RDS snapshot
-snapshot_identifier = ""
+snapshot_identifier = "iaps-pre-rds-fix"

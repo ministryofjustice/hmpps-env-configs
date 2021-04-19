@@ -63,3 +63,7 @@ Note: This action will not bump the tag if the HEAD commit has already been tagg
 ```
 
 ## Additional info
+
+### MOJ CIDR Ranges
+
+https://github.com/ministryofjustice/moj-ip-addresses/blob/main/moj-cidr-addresses.yml

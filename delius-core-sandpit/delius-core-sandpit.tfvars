@@ -14,15 +14,15 @@ create_autostop_instance             = "true"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 06 ? * 3-6 *"
-    weekly_schedule = "30 06 ? * 2 *"
+    daily_schedule  = "30 05 ? * 3-6 *"
+    weekly_schedule = "30 05 ? * 2 *"
   }
 }
 
 oracle_validate_backup_schedule = {
   delius = {
     host     =  "delius_primarydb"
-    schedule =  "46 14 ? * 2,4,6 *"
+    schedule =  "46 13 ? * 2,4,6 *"
   }
 }
 

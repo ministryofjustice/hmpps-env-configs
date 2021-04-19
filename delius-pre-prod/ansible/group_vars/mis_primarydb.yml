@@ -6,4 +6,8 @@ database_primary_unique: PREMIS
 database_primary_sid: PREMIS
 database_parameters:
    control_management_pack_access: DIAGNOSTIC
+   sga_max_size: 175G
+   sga_target: 175G
+   pga_aggregate_target: 35G
+   pga_aggregate_limit: 70G
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS

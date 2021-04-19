@@ -1,9 +1,6 @@
 # delius-stage  delius-core.tfvar
 ## Delius Core Specific
 
-egress_443 = true
-egress_80  = true
-
 # ref ../../common/common.tfvars
 db_size_delius_core = {
   database_size       = "x_large"
@@ -61,6 +58,13 @@ delius_api_environment = {
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-stage/delius/newtech/offenderapi/appinsights_key"
   SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_api_pool_password"
+}
+
+merge_config = {
+  api_min_capacity = 1
+  api_max_capacity = 1
+  ui_scaling_min_capacity     = 2
+  ui_scaling_max_capacity     = 10
 }
 
 env_user_access_cidr_blocks = [
