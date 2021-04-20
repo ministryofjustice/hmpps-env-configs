@@ -1,14 +1,14 @@
 
 rds_engine = "sqlserver-se"
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport
-rds_engine_version = "15.00.4073.23.v1" 
-rds_family         = "sqlserver-se-15.0" # SQL Server Standard Edition
+rds_engine_version       = "15.00.4073.23.v1" 
+rds_family               = "sqlserver-se-15.0" # SQL Server Standard Edition
 rds_major_engine_version = "15.00"
-rds_instance_class = "db.t3.xlarge"
+rds_instance_class       = "db.t3.xlarge"
 
-rds_storage_type = "gp2"
+rds_storage_type          = "gp2"
 rds_allocated_storage     = "500"
-rds_max_allocated_storage = "100"
+rds_max_allocated_storage = "1000"
 rds_storage_encrypted     = true
 
 # https://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html
@@ -36,8 +36,9 @@ rds_deletion_protection     = false
 
 rds_performance_insights_enabled          = true
 rds_performance_insights_retention_period = 7
-rds_create_monitoring_role                = true
-rds_monitoring_interval                   = 5
+
+rds_create_monitoring_role = true
+rds_monitoring_interval    = 5
 
 rds_options                   = [ ]
 
