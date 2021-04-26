@@ -1,4 +1,16 @@
+#=====================================================
+# ASG
+#=====================================================
+cporacle_asg_props = {
+    ami_id                = "ami-0b73a8cf2d56ca8a9" #"ami-07c04e88f232dc18a"
+    ami_image_tag_version = "0.74.0"
+    instance_type         = "t3.large"
+    ebs_volume_size       = 60
+}
 
+#=====================================================
+# RDS
+#=====================================================
 rds_engine = "sqlserver-se"
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport
 rds_engine_version       = "15.00.4073.23.v1" 
