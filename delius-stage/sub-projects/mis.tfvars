@@ -33,43 +33,43 @@ self_signed_server_validity_period_hours = 2160
 self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
-bcs_instance_type  = "m5.2xlarge"
+bcs_instance_type  = "m5.8xlarge"
 bcs_root_size = 75
 bcs_server_count = 3
 bcs_disable_api_termination = false
-bcs_ebs_optimized = false
+bcs_ebs_optimized = true
 bcs_hibernation = false
 
 #Instance size for bfs
-bfs_instance_type  = "m5.2xlarge"
+bfs_instance_type  = "m5.8xlarge"
 bfs_root_size = 75
 bfs_server_count = 1
 bfs_disable_api_termination = false
-bfs_ebs_optimized = false
+bfs_ebs_optimized = true
 bfs_hibernation = false
 
 #Instance size for bps
-bps_instance_type  = "m5.2xlarge"
+bps_instance_type  = "m5.8xlarge"
 bps_root_size = 75
 bps_server_count = 3
 bps_disable_api_termination = false
-bps_ebs_optimized = false
+bps_ebs_optimized = true
 bps_hibernation = false
 
 #Instance size for bws
-bws_instance_type  = "m5.2xlarge"
+bws_instance_type  = "m5.8xlarge"
 bws_root_size = 75
 bws_server_count = 2
 bws_disable_api_termination = false
-bws_ebs_optimized = false
+bws_ebs_optimized = true
 bws_hibernation = false
 
 #Instance size for dis
-dis_instance_type  = "m5.2xlarge"
+dis_instance_type  = "m5.8xlarge"
 dis_root_size = 75
 dis_server_count = 1
 dis_disable_api_termination = false
-dis_ebs_optimized = false
+dis_ebs_optimized = true
 dis_hibernation = false
 
 #Instance size for dfi
@@ -78,7 +78,7 @@ dfi_root_size = 75
 dfi_server_count = 1
 dfi_server_resources = 1
 dfi_disable_api_termination = false
-dfi_ebs_optimized = false
+dfi_ebs_optimized = true
 dfi_hibernation = false
 
 # Databases
