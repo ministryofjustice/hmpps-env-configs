@@ -9,7 +9,6 @@ database_parameters:
    adg_account_info_tracking: GLOBAL
 rman_level_0_backup_duration_target: "21:00"
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
-rman_uncompressed_backup: Y
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
 delius_users:
   amarke_ro:
