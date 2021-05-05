@@ -101,6 +101,3 @@ dss_job_envvars = [
     "value" = "delius"
   }
 ]
-
-# Use dsd.io public zone until transition to gov.uk is complete for this environment
-delius_core_public_zone = "legacy"
