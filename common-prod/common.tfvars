@@ -352,6 +352,7 @@ user_access_cidr_blocks = [
   "35.178.173.171/32", # PSN Proxy B
   "82.38.248.151/32",  # Steve James Office
   "213.86.81.13/32",   # Zaizi London Office
+  "35.178.165.173/32", # Bastion Dev for FoxyProxy
 ]
 
 # jenkins access
