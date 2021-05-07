@@ -767,8 +767,14 @@ loadrunner_config = {
   "instance_type" = "t3.large"
 }
 
-azure_oasys_proxy_source = [
-  "51.140.255.11/32" # Public IP of Fix & Go Azure API Gateway used for NDH
+interface_access_cidr_blocks = [
+  "51.140.255.11/32", # ndelius-prod appgateway. Public IP of Fix & Go Azure API Gateway used for NDH / OASys
+  "51.141.53.111/32", # PDMLX0052 internet proxy.
+  "20.49.225.111/32", # aks-studio-hosting-live-1.  For prometheus
+  "51.11.125.6/32",   # hmpps-prod-ukwest-appgw1.  Replacement appgateway for ndelius-prod
+  "51.11.126.195/32", # hmpps-prod-ukwest-appgw2.  Replacement appgateway for ndelius-prod
+  "20.77.144.238/32", # hmpps-prod-uksouth-appgw1  Replacement appgateway for ndelius-prod
+  "20.77.145.26/32",  # hmpps-prod-uksouth-appgw2.  Replacement appgateway for ndelius-prod
 ]
 
 #these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')

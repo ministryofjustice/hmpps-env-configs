@@ -698,9 +698,12 @@ loadrunner_config = {
   "instance_type" = "t3.micro"
 }
 
-azure_oasys_proxy_source = [
-  "51.140.255.11/32",  # Public IP of Fix & Go Azure API Gateway used for NDH
-  "51.137.128.165/32", # NDH Bridge
+interface_access_cidr_blocks = [
+  "51.137.128.165/32", # ndelius-dev appgateway.  NDH Bridge for OASys
+  "51.141.45.69/32",   # MGMLX0051 internet proxy.  For adhoc testing
+  "20.49.136.163/32",  # aks-studio-hosting-dev-1.  For prometheus
+  "51.132.83.238/32",  # hmpps-devtest-ukwest-appgw1.  Replacement appgateway for ndelius-dev
+  "51.132.83.154/32",  # hmpps-devtest-ukwest-appgw2.  Replacement appgateway for ndelius-dev
 ]
 
 

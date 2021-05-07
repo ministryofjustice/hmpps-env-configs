@@ -72,10 +72,10 @@ community_api_ingress = [
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
   # -MTCNovo
-  "62.25.109.202/32",# MTCNovo old frontend desktops Egress IP (Pre March 2021)
+  "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
   "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
-  "52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
-  "52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.48.146/32",  # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.64.210/32",  # MTCNovo ZScaler internet-facing IP addresses
 
   # -SEETEC
   "80.86.46.16/30",
@@ -156,10 +156,6 @@ dss_job_envvars = [
 
 # Make the National Delius front-end pingdom report available to the public:
 pingdom_publicreports = ["ndelius_frontend"]
-
-azure_community_proxy_source = [
-  "51.141.53.111/32" # Public IP of azure fortinet
-]
 
 # In production, the "legacy" public zone actually refers to the .gov.uk domain, and the strategic domain isn't created.
 # This means we must point delius-core to the "legacy" zone for prod, until we manage to take out the manual/conditional bits.
