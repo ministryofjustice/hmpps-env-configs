@@ -298,7 +298,6 @@ user_access_cidr_blocks = [
   "62.25.106.209/32",  # OMNI
   "195.92.40.49/32",   # OMNI
   "62.232.198.64/28",  # I2N
-  "35.178.165.173/32", # Bastion Dev for FoxyProxy
 ]
 
 # jenkins access
