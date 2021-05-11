@@ -5,3 +5,8 @@ database_standby_sid: PREDSDS2
 database_parameters:
    sga_max_size: 5G
    sga_target: 5G
+sqlnet_parameters:
+   grid:
+         SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
+   database:
+         SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
