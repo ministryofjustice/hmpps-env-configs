@@ -2,3 +2,8 @@
 
 database_standby_unique: PRDDSDS1
 database_standby_sid: PRDDSDS1
+sqlnet_parameters:
+   grid:
+         SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
+   database:
+         SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
