@@ -493,7 +493,7 @@ pwm_config = {}
 # UMT
 default_umt_config = {
   image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
-  version                       = "1.9.0"          # Application version
+  version                       = "1.10.0"         # Application version
   redis_node_type               = "cache.t3.small" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 1                # Number of Redis shards (node groups) in the cluster
   redis_replicas_per_node_group = 0                # Number of read-only replicas for each shard (node group)
