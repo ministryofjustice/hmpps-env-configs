@@ -7,3 +7,8 @@ database_primary_sid: INTNDA
 delius_users:
   mryall_ro:
   ebrindley_ro:
+database_parameters:
+   sga_max_size: 3280M
+   sga_target: 3280M
+   pga_aggregate_target: 1640M
+   pga_aggregate_limit: 3280M
