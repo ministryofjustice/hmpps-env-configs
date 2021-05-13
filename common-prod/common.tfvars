@@ -350,7 +350,6 @@ user_access_cidr_blocks = [
   "62.232.198.64/28",  # I2N
   "3.10.56.113/32",    # PSN Proxy A
   "35.178.173.171/32", # PSN Proxy B
-  "82.38.248.151/32",  # Steve James Office
   "213.86.81.13/32",   # Zaizi London Office
 ]
 
