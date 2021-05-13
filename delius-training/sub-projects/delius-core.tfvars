@@ -54,10 +54,6 @@ env_user_access_cidr_blocks = [
 
   # -Sopra Steria
   "195.206.180.12/32", # Dedicated IP provided by Nicki Berry on 24/12/2020 (ALS-2487)
-
-  # IP ranges for PTTP MoJ Official Devices provided by Bruce Storrie on 12/05/2021 (ALS-3484)
-  "51.149.250.0/24",
-  "51.149.251.0/24",
 ]
 
 # DSS Batch Task

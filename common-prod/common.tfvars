@@ -352,6 +352,8 @@ user_access_cidr_blocks = [
   "35.178.173.171/32", # PSN Proxy B
   "82.38.248.151/32",  # Steve James Office
   "213.86.81.13/32",   # Zaizi London Office
+  "51.149.250.0/24",   # PTTP
+  "51.149.251.0/24",   # PTTP
 ]
 
 # jenkins access
