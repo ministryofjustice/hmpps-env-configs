@@ -107,3 +107,5 @@ alf_asg_map = {
   asg_min           = 3
   asg_max           = 3
 }
+
+solr_cmis_managed = true
