@@ -74,6 +74,7 @@ env_user_access_cidr_blocks = [
 
   # IP ranges for PTTP 'MoJ Official Devices'
   "51.149.251.0/24", # Pre-Production Devices for testing
+  "51.149.250.0/24", # Additional range provided by Bruce Storrie on 12/05/2021 (ALS-3484)
 
   # -MTCNovo
   "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)

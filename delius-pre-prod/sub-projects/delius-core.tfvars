@@ -47,8 +47,8 @@ env_user_access_cidr_blocks = [
   # -MTCNovo
   "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
   "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
-  "52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
-  "52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.48.146/32",  # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.64.210/32",  # MTCNovo ZScaler internet-facing IP addresses
 
   # -SEETEC
   "80.86.46.16/30",
@@ -109,10 +109,6 @@ dss_job_envvars = [
     "name"  = "JAVA_OPTS"
     "value" = "-Xms1024m -Xmx2048m"
   }
-]
-
-azure_community_proxy_source = [
-  "51.141.53.111/32" # Public IP of azure fortinet
 ]
 
 # Use dsd.io public zone until transition to gov.uk is complete for this environment

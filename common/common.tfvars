@@ -492,7 +492,7 @@ pwm_config = {}
 # UMT
 default_umt_config = {
   image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
-  version                       = "1.9.0"          # Application version
+  version                       = "1.10.0"         # Application version
   redis_node_type               = "cache.t3.small" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 1                # Number of Redis shards (node groups) in the cluster
   redis_replicas_per_node_group = 0                # Number of read-only replicas for each shard (node group)
@@ -697,9 +697,12 @@ loadrunner_config = {
   "instance_type" = "t3.micro"
 }
 
-azure_oasys_proxy_source = [
-  "51.140.255.11/32",  # Public IP of Fix & Go Azure API Gateway used for NDH
-  "51.137.128.165/32", # NDH Bridge
+interface_access_cidr_blocks = [
+  "51.137.128.165/32", # ndelius-dev appgateway.  NDH Bridge for OASys
+  "51.141.45.69/32",   # MGMLX0051 internet proxy.  For adhoc testing
+  "20.49.136.163/32",  # aks-studio-hosting-dev-1.  For prometheus
+  "51.132.83.238/32",  # hmpps-devtest-ukwest-appgw1.  Replacement appgateway for ndelius-dev
+  "51.132.83.154/32",  # hmpps-devtest-ukwest-appgw2.  Replacement appgateway for ndelius-dev
 ]
 
 

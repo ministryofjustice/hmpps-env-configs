@@ -33,6 +33,11 @@ required_patches:
       grid_patch: false
       database_patch: true
       target_version: "19.9"
+database_parameters:
+   sga_max_size: 3280M
+   sga_target: 3280M
+   pga_aggregate_target: 1640M
+   pga_aggregate_limit: 3280M
 
 
 ndelius_oauth_config:

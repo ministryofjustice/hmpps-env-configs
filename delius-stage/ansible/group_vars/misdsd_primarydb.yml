@@ -8,3 +8,8 @@ database_parameters:
    sga_max_size: 1G
    sga_target: 1G
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
+sqlnet_parameters:
+   grid:
+         SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
+   database:
+         SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
