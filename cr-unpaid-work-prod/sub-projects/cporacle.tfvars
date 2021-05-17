@@ -1,11 +1,21 @@
 #=====================================================
-# ASG
+# ASG - Website
 #=====================================================
 cporacle_asg_props = {
 ami_id                = "ami-0b73a8cf2d56ca8a9"
 ami_image_tag_version = "0.74.0"
 instance_type         = "t3.large"
 ebs_volume_size       = 60
+}
+
+#=====================================================
+# ASG - API
+#=====================================================
+cporacle_api_asg_props = {
+    ami_id                = "ami-0b73a8cf2d56ca8a9"
+    ami_image_tag_version = "0.74.0"
+    instance_type         = "t3.large"
+    ebs_volume_size       = 60
 }
 
 #=====================================================
