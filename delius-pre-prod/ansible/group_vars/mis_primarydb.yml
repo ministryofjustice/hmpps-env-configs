@@ -11,3 +11,4 @@ database_parameters:
    pga_aggregate_target: 35G
    pga_aggregate_limit: 70G
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
+rman_uncompressed_backup: Y
