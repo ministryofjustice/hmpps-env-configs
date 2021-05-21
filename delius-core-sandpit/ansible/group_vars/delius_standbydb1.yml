@@ -9,3 +9,11 @@ database_parameters:
    sga_target: 3280M
    pga_aggregate_target: 1640M
    pga_aggregate_limit: 3280M
+required_patches:
+    p26749785:
+      filename: p26749785_199000DBRU_Generic.zip
+      description: PERF_DIAG NEED TO HAVE MORE CONTROL IN DICTIONARY FOR AUTO_STATS_ADVISOR_TASK
+      grid_patch: false
+      database_patch: true
+      datapatch_required: true
+      target_version: "19.9"
