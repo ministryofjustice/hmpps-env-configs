@@ -24,6 +24,21 @@ aws_account_ids = {
   cloud-platform             = "754256621582"
 }
 
+## cr = community rehabilitation
+cr_account_ids = {
+  hmpps-cr-jira-non-production        = "529698415668"
+  hmpps-cr-jira-production            = "172219029581"
+  hmpps-cr-jitbit-non-production      = "377957503799"
+  hmpps-cr-jitbit-production          = "097456858629"
+  hmpps-cr-unpaid-work-non-production = "964150688482"
+  hmpps-cr-unpaid-work-production     = "787475932003"
+}
+
+aws_engineering_account_ids = {
+  non-prod = "895523100917"
+  prod     = "077643444046"
+}
+
 cloudplatform_data = {
   cidr_range = "172.20.0.0/16"
 }
