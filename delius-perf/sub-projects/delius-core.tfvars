@@ -38,6 +38,19 @@ ansible_vars = {
   ndelius_log_level = "ERROR"
 }
 
+# Delius API
+delius_api_environment = {
+  SPRING_PROFILES_ACTIVE                                = "applicationinsights"
+  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api-preprod.prison.service.justice.gov.uk"
+  SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+  SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
+  SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+}
+delius_api_secrets = {
+  APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-perf/delius/newtech/offenderapi/appinsights_key"
+  SPRING_DATASOURCE_PASSWORD     = "/delius-perf/delius/delius-database/db/delius_api_pool_password"
+}
+
 env_user_access_cidr_blocks = []
 
 # Delius-Core Slack alarms
