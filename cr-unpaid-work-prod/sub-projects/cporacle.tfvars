@@ -1,12 +1,24 @@
 #=====================================================
-# ASG
+# ASG - Website
 #=====================================================
 cporacle_asg_props = {
-ami_id                = "ami-0b73a8cf2d56ca8a9"
-ami_image_tag_version = "0.74.0"
-instance_type         = "t3.large"
-ebs_volume_size       = 60
+  ami_id                = "ami-0b73a8cf2d56ca8a9"
+  ami_image_tag_version = "0.74.0"
+  instance_type         = "t3.large"
+  ebs_volume_size       = 60
 }
+
+#=====================================================
+# ASG - API
+#=====================================================
+
+cporacle_api_asg_props = {
+  ami_id                = "ami-0b73a8cf2d56ca8a9"
+  ami_image_tag_version = "0.74.0"
+  instance_type         = "t3.large"
+  ebs_volume_size       = 60
+}
+
 
 #=====================================================
 # RDS
@@ -67,3 +79,9 @@ rds_publicly_accessible = false
 rds_allow_major_version_upgrade = false
 rds_allow_auto_minor_version_upgrade = true
 rds_apply_immediately = true
+
+#=====================================================
+# LOGS
+#=====================================================
+
+log_retention = "90"
