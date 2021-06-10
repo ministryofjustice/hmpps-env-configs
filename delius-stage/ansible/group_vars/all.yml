@@ -43,3 +43,5 @@ ndelius_oauth_config:
  
 # Prepare a case for sentencing service
 prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/
+
+management_server: 10.160.32.88

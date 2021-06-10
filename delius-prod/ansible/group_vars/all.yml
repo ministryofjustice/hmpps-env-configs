@@ -28,3 +28,5 @@ required_patches:
       target_version: "19.9"
       
 prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/
+
+management_server: 10.160.17.71

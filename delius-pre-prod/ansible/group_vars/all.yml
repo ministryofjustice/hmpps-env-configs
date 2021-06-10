@@ -37,3 +37,5 @@ ndelius_oauth_config:
   username_attribute: username
   display_name: Login using justice.gov.uk credentials
   scope: delius
+
+management_server: 10.160.0.245
