@@ -170,6 +170,8 @@ solr_config_overrides = {
   alf_jvm_memory   = "48000m"
 }
 
+solr_cmis_managed = true
+
 # ontrol rds deployment
 alf_data_import = "disabled"
 
