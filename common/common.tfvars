@@ -161,6 +161,8 @@ alf_solr_config = {
   ebs_temp_type        = "gp2"
 }
 
+solr_cmis_managed = true
+
 # ontrol rds deployment
 alf_data_import = "disabled"
 
