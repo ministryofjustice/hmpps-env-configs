@@ -10,6 +10,8 @@ database_parameters:
    pga_aggregate_target: 1500M
    pga_aggregate_limit: 3G
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
+database_autotasks:
+      statistics_advisor: disabled
 required_patches:
     p26749785:
       filename: p26749785_199000DBRU_Generic.zip
