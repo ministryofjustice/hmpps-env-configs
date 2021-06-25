@@ -19,3 +19,5 @@ required_patches:
       database_patch: true
       datapatch_required: true
       target_version: "19.9"
+database_autotasks:
+      statistics_advisor: disabled
