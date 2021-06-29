@@ -4,3 +4,11 @@ database_global_database: DMDMIS
 database_taf_service: DMDMIS_TAF
 database_primary_unique: DMDMIS
 database_primary_sid: DMDMIS
+required_patches:
+    p26749785:
+      filename: p32044533_199000DBRU_Linux-x86-64.zip
+      description: ORA-600 [OPIFCH2:ROWSETSEARLYRET] LOGGED IN DATABASE ALERT LOG
+      grid_patch: false
+      database_patch: true
+      datapatch_required: false
+      target_version: "19.9"
