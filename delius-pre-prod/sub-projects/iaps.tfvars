@@ -59,3 +59,6 @@ options_local = {
 parameters_local = {
   max_string_size = "EXTENDED"
 }
+
+copy_tags_to_snapshot = true
+auto_minor_version_upgrade = true
