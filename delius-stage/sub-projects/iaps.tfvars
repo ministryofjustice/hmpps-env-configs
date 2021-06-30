@@ -83,17 +83,3 @@ auto_minor_version_upgrade = true
 snapshot_identifier = ""
 
 
-options_local = {
-  OEM_AGENT = {
-    options = {
-      port =  "3872",
-      version = "13.4.0.9.v1",
-      vpc_security_group_memberships  = ""
-    }
-    settings = { 
-      OMS_HOST = "oem-db-1.engineering-prod.probation.hmpps.dsd.io"
-      OMS_PORT = "4903"
-      AGENT_REGISTRATION_PASSWORD = ""
-    }
-  }
-}
