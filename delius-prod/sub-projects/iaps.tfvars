@@ -79,4 +79,3 @@ copy_tags_to_snapshot = true
 
 # for use when we need to restore db from RDS snapshot
 snapshot_identifier = "iaps-pre-rds-fix"
-
