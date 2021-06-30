@@ -9,7 +9,9 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "ZL1RSLMZP6BJA"
 
 # IAPS RDS INSTANCE
-rds_instance_class = "db.t2.large"
+multi_az = false
+
+rds_instance_class = "db.t3.xlarge"
 
 rds_backup_retention_period = 2
 
@@ -23,7 +25,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v15"
+rds_engine_version = "12.1.0.2.v23"
 
 rds_character_set_name = "WE8ISO8859P15"
 
