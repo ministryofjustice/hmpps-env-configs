@@ -13,11 +13,12 @@ database_parameters:
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
 required_patches:
     p26749785:
-      filename: p26749785_199000DBRU_Generic.zip
+      patch_files:
+         - target_version: "19.9"
+           filename: p26749785_199000DBRU_Generic.zip
       description: PERF_DIAG NEED TO HAVE MORE CONTROL IN DICTIONARY FOR AUTO_STATS_ADVISOR_TASK
       grid_patch: false
       database_patch: true
       datapatch_required: true
-      target_version: "19.9"
 database_autotasks:
       statistics_advisor: disabled
