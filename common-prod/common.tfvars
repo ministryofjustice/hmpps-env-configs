@@ -453,7 +453,7 @@ snapshot_retention_days = 30
 # Default values for LDAP
 default_ldap_config = {
   # ASG
-  instance_type  = "c5.9xlarge"
+  instance_type  = "m5.8xlarge"
   instance_count = 3
   # Connection
   protocol  = "ldap"
