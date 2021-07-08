@@ -776,8 +776,8 @@ delius_core_haproxy_instance_type  = "t3.large"
 delius_core_haproxy_instance_count = "3"
 
 # Shared ECS Cluster
-ecs_instance_type = "m4.xlarge"
-node_max_count    = 30
+ecs_instance_type = "m5.2xlarge"
+node_max_count    = 50
 node_min_count    = 5
 
 loadrunner_config = {
