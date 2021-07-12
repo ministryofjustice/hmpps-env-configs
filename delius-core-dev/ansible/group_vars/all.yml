@@ -32,7 +32,7 @@ required_patches:
     p30616738:
       patch_files:
          - target_version: "19.9"
-      filename: p30616738_199000DBRU_Linux-x86-64.zip
+           filename: p30616738_199000DBRU_Linux-x86-64.zip
       description: ORA-600 [qesrLoopOverSetRowP:rows] From Query In Job That Used To Work In 11g (Doc ID 2596180.1) 
       grid_patch: false
       database_patch: true
