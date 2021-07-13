@@ -556,6 +556,19 @@ common_ecs_scaling_config = {
   target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
 }
 
+# Delius Application
+default_delius_app_config = {
+  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic"
+  version      = "5.1.1"
+  memory       = 16384 # 16GB
+  min_capacity = 20
+  max_capacity = 40
+
+  env_USER_MEM_ARGS = "-Xms14G -Xmx14G"
+  env_ANALYTICS_TAG = "UA-122274748-2"
+}
+delius_app_config = {}
+
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
   image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/pwm"

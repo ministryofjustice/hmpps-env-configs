@@ -501,6 +501,19 @@ common_ecs_scaling_config = {
   target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
 }
 
+# Delius Application
+default_delius_app_config = {
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic"
+  version   = "5.1.1"
+  memory    = 4096 # 4GB
+  cpu       = 2048
+
+  env_USER_MEM_ARGS     = "-Xms3584m -Xmx3584m" # 3.5GB
+  env_ANALYTICS_TAG     = "UA-122274748-2"
+  env_LOG_LEVEL_NDELIUS = "DEBUG"
+}
+delius_app_config = {}
+
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
   image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/pwm"
@@ -750,29 +763,29 @@ cr_ancillary_admin_cidrs = [
 ]
 
 cr_ancillary_access_cidrs = [
-  "195.59.75.0/24",    # ARK internet (DOM1)
-  "194.33.192.0/25",   # ARK internet (DOM1)
-  "194.33.193.0/25",   # ARK internet (DOM1)
-  "194.33.196.0/25",   # ARK internet (DOM1)
-  "194.33.197.0/25",   # ARK internet (DOM1)
+  "195.59.75.0/24",  # ARK internet (DOM1)
+  "194.33.192.0/25", # ARK internet (DOM1)
+  "194.33.193.0/25", # ARK internet (DOM1)
+  "194.33.196.0/25", # ARK internet (DOM1)
+  "194.33.197.0/25", # ARK internet (DOM1)
 ]
 
 # London Region not support yet, so metrics are not yet publised, can be enabled at later stage for Route53 endpoint monitor
 cr_ancillary_route53_healthcheck_access_cidrs = [
-  "15.177.0.0/18",      # GLOBAL Region
-  "54.251.31.128/26",   # ap-southeast-1 Region
-  "54.255.254.192/26",  # ap-southeast-1 Region
-  "176.34.159.192/26",  # eu-west-1 Region
-  "54.228.16.0/26",     # eu-west-1 Region
-  "107.23.255.0/26",    # us-east-1 Region
-  "54.243.31.192/26",   # us-east-1 Region
+  "15.177.0.0/18",     # GLOBAL Region
+  "54.251.31.128/26",  # ap-southeast-1 Region
+  "54.255.254.192/26", # ap-southeast-1 Region
+  "176.34.159.192/26", # eu-west-1 Region
+  "54.228.16.0/26",    # eu-west-1 Region
+  "107.23.255.0/26",   # us-east-1 Region
+  "54.243.31.192/26",  # us-east-1 Region
 ]
 
 cr_ancillary_route53_healthcheck_access_ipv6_cidrs = [
-  "2406:da18:7ff:f800::/53",    # ap-southeast-1 Region
-  "2406:da18:fff:f800::/53",    # ap-southeast-1 Region
-  "2a05:d018:fff:f800::/53",    # eu-west-1 Region
-  "2a05:d018:7ff:f800::/53",    # eu-west-1 Region
-  "2600:1f18:7fff:f800::/53",   # us-east-1 Region
-  "2600:1f18:3fff:f800::/53",   # us-east-1 Region
+  "2406:da18:7ff:f800::/53",  # ap-southeast-1 Region
+  "2406:da18:fff:f800::/53",  # ap-southeast-1 Region
+  "2a05:d018:fff:f800::/53",  # eu-west-1 Region
+  "2a05:d018:7ff:f800::/53",  # eu-west-1 Region
+  "2600:1f18:7fff:f800::/53", # us-east-1 Region
+  "2600:1f18:3fff:f800::/53", # us-east-1 Region
 ]
