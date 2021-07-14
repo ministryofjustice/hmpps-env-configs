@@ -511,7 +511,7 @@ pwm_config = {}
 # UMT
 default_umt_config = {
   image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
-  version                       = "1.10.0"         # Application version
+  version                       = "1.11.0"         # Application version
   redis_node_type               = "cache.t3.small" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 1                # Number of Redis shards (node groups) in the cluster
   redis_replicas_per_node_group = 0                # Number of read-only replicas for each shard (node group)
@@ -750,29 +750,29 @@ cr_ancillary_admin_cidrs = [
 ]
 
 cr_ancillary_access_cidrs = [
-  "195.59.75.0/24",    # ARK internet (DOM1)
-  "194.33.192.0/25",   # ARK internet (DOM1)
-  "194.33.193.0/25",   # ARK internet (DOM1)
-  "194.33.196.0/25",   # ARK internet (DOM1)
-  "194.33.197.0/25",   # ARK internet (DOM1)
+  "195.59.75.0/24",  # ARK internet (DOM1)
+  "194.33.192.0/25", # ARK internet (DOM1)
+  "194.33.193.0/25", # ARK internet (DOM1)
+  "194.33.196.0/25", # ARK internet (DOM1)
+  "194.33.197.0/25", # ARK internet (DOM1)
 ]
 
 # London Region not support yet, so metrics are not yet publised, can be enabled at later stage for Route53 endpoint monitor
 cr_ancillary_route53_healthcheck_access_cidrs = [
-  "15.177.0.0/18",      # GLOBAL Region
-  "54.251.31.128/26",   # ap-southeast-1 Region
-  "54.255.254.192/26",  # ap-southeast-1 Region
-  "176.34.159.192/26",  # eu-west-1 Region
-  "54.228.16.0/26",     # eu-west-1 Region
-  "107.23.255.0/26",    # us-east-1 Region
-  "54.243.31.192/26",   # us-east-1 Region
+  "15.177.0.0/18",     # GLOBAL Region
+  "54.251.31.128/26",  # ap-southeast-1 Region
+  "54.255.254.192/26", # ap-southeast-1 Region
+  "176.34.159.192/26", # eu-west-1 Region
+  "54.228.16.0/26",    # eu-west-1 Region
+  "107.23.255.0/26",   # us-east-1 Region
+  "54.243.31.192/26",  # us-east-1 Region
 ]
 
 cr_ancillary_route53_healthcheck_access_ipv6_cidrs = [
-  "2406:da18:7ff:f800::/53",    # ap-southeast-1 Region
-  "2406:da18:fff:f800::/53",    # ap-southeast-1 Region
-  "2a05:d018:fff:f800::/53",    # eu-west-1 Region
-  "2a05:d018:7ff:f800::/53",    # eu-west-1 Region
-  "2600:1f18:7fff:f800::/53",   # us-east-1 Region
-  "2600:1f18:3fff:f800::/53",   # us-east-1 Region
+  "2406:da18:7ff:f800::/53",  # ap-southeast-1 Region
+  "2406:da18:fff:f800::/53",  # ap-southeast-1 Region
+  "2a05:d018:fff:f800::/53",  # eu-west-1 Region
+  "2a05:d018:7ff:f800::/53",  # eu-west-1 Region
+  "2600:1f18:7fff:f800::/53", # us-east-1 Region
+  "2600:1f18:3fff:f800::/53", # us-east-1 Region
 ]
