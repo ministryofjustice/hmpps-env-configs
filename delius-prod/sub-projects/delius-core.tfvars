@@ -111,6 +111,12 @@ env_user_access_cidr_blocks = [
   # IP ranges for other interfacing systems
   # - CFO
   "194.168.183.130/32",
+
+  # Requested by Mark Hosmer ALS-3983
+  "51.149.249.0/27",
+  "51.149.249.32/27",
+  "194.33.248.0/24",
+  "194.33.249.0/24",
 ]
 
 # DSS Batch Task
