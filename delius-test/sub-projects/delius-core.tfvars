@@ -36,11 +36,6 @@ ansible_vars_oracle_db = {
 ci_db_ingress_1521 = true
 
 # WebLogic
-ansible_vars = {
-  ndelius_display_name = "National Delius - TEST USE ONLY"
-  database_sid         = "TSTNDA"
-}
-
 delius_app_config = {
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
 

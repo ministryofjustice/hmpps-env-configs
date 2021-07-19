@@ -33,21 +33,14 @@ ansible_vars_oracle_db = {
 # enable ingress from the CI (Jenkins/AWS Codepipeline)
 ci_db_ingress_1521 = true
 
-# WebLogic
-instance_count_weblogic_interface = "0"
-ansible_vars = {
-  ndelius_display_name = "National Delius - TEST USE ONLY"
-  database_sid         = "POT1NDA"
-}
-
 env_user_access_cidr_blocks = [
   # Parent Organisation IP ranges
 
   # -MTCNovo
   "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
   "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
-  "52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
-  "52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.48.146/32",  # MTCNovo ZScaler internet-facing IP addresses
+  "52.56.64.210/32",  # MTCNovo ZScaler internet-facing IP addresses
 
   # -SEETEC
   "80.86.46.16/30",

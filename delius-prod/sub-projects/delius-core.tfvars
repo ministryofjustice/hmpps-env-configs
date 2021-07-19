@@ -36,11 +36,9 @@ ldap_config = {
 }
 
 # WebLogic
-ansible_vars = {
-  database_sid          = "PRDNDA"
-  ndelius_log_level     = "ERROR"
-  ndelius_analytics_tag = "UA-122274748-1"
-  nomis_url             = "https://gateway.nomis-api.service.justice.gov.uk/elite2api"
+delius_app_config = {
+  env_ANALYTICS_TAG                 = "UA-122274748-1"
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
 }
 
 # Approved Premises Tracking API

@@ -33,13 +33,6 @@ ansible_vars_oracle_db = {
 # enable ingress from the CI (Jenkins/AWS Codepipeline)
 ci_db_ingress_1521 = true
 
-# WebLogic
-instance_count_weblogic_interface = "0"
-ansible_vars = {
-  ndelius_display_name = "National Delius - TEST USE ONLY"
-  database_sid         = "INTNDA"
-}
-
 env_user_access_cidr_blocks = []
 
 # DSS Batch Task

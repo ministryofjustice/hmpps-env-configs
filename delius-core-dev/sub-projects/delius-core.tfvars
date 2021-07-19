@@ -33,12 +33,19 @@ ansible_vars_oracle_db = {
 # enable ingress from the CI (Jenkins/AWS Codepipeline)
 ci_db_ingress_1521 = true
 
-# WebLogic
-ansible_vars = {
-  ndelius_display_name  = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level     = "DEBUG"
-  database_sid          = "DNDA"
+# Delius WebLogic
+delius_app_config = {
+  env_TRAINING_MODE_APP_NAME = "National Delius - DEVELOPMENT USE ONLY"
+  env_TRAINING_MODE          = "development"
+
+  env_OAUTH_URL                       = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+  env_OAUTH_CALLBACK_URL              = "https://ndelius.dev.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_LOGIN_NAME                = "Login using justice.gov.uk credentials"
+  env_OAUTH_USER_INFO_ENDPOINT        = "/api/user/me"
+  env_OAUTH_DELIUS_USERNAME_ATTRIBUTE = "username"
+  env_OAUTH_DEFAULT_SCOPE             = "delius"
+  env_OAUTH_CLIENT_ID                 = "delius-unilink-dev"
+  secret_OAUTH_CLIENT_SECRET          = "/delius-core-dev/delius-core/weblogic/ndelius-domain/oauth-client-secret"
 }
 
 # User Management

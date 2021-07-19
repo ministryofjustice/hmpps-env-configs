@@ -33,14 +33,6 @@ ansible_vars_oracle_db = {
 # enable ingress from the CI (Jenkins/AWS Codepipeline)
 ci_db_ingress_1521 = true
 
-# WebLogic
-ansible_vars = {
-  ndelius_display_name  = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level     = "DEBUG"
-  database_sid          = "DATNDA"
-}
-
 # User Management
 umt_config = {
   version = "latest"

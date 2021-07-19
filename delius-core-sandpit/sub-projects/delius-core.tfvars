@@ -30,14 +30,6 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file  = "database"
 }
 
-# WebLogic
-ansible_vars = {
-  ndelius_display_name  = "National Delius - DEVELOPMENT USE ONLY"
-  ndelius_training_mode = "development"
-  ndelius_log_level     = "DEBUG"
-  database_sid          = "SANNDA"
-}
-
 # User Management
 umt_config = {
   version = "latest"

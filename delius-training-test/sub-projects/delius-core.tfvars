@@ -31,10 +31,9 @@ ansible_vars_oracle_db = {
 }
 
 # WebLogic
-ansible_vars = {
-  ndelius_display_name  = "National Delius - TEST USE ONLY"
-  ndelius_training_mode = "training"
-  database_sid          = "TRTNDA"
+delius_app_config = {
+  env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
+  env_TRAINING_MODE          = "training"
 }
 
 env_user_access_cidr_blocks = [

@@ -33,11 +33,6 @@ ansible_vars_oracle_db = {
 # enable ingress from the CI (Jenkins/AWS Codepipeline)
 ci_db_ingress_1521 = true
 
-ansible_vars = {
-  database_sid      = "PERNDA"
-  ndelius_log_level = "ERROR"
-}
-
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
