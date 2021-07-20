@@ -484,68 +484,25 @@ default_ldap_config = {
 }
 ldap_config = {}
 
-# Default values for NDelius WebLogic
-instance_type_weblogic            = "r5.large"   # 2 vCPU x 16GB
-instance_type_activemq            = "c5.2xlarge" # 8 vCPU x 16GB
-instance_count_weblogic_ndelius   = "30"
-instance_count_weblogic_spg       = "3"
-instance_count_weblogic_interface = "3"
-default_ansible_vars = {
-  # Server/WebLogic config
-  jvm_mem_args            = "-Xms12g -Xmx12g -XX:MaxPermSize=512m"
-  domain_name             = "NDelius" # This is defined by the AMI, so should not be overridden
-  server_name             = "AdminServer"
-  weblogic_admin_username = "weblogic"
-  server_listen_address   = "0.0.0.0"
-
-  # Database
-  setup_datasources      = "true"
-  database_host          = "delius-db"
-  database_min_pool_size = 50
-  database_max_pool_size = 100
-
-  # Alfresco
-  alfresco_host        = "alfresco"
-  alfresco_port        = 443
-  alfresco_office_host = "alfresco"
-  alfresco_office_port = 443
-
-  #spg hostname prefix for generating a url when not using amazonMQ (ie when spg_jms_host_src=var  instead of data (data mode uses the terraform state to generate the url )
-  spg_jms_host = "spgw-jms-int"
-
-  activemq_data_folder = "/activemq-data"
-
-  # App Config
-  ndelius_display_name  = "National Delius"
-  ndelius_training_mode = "production" # development, training, production
-  ndelius_log_level     = "ERROR"
-  ndelius_analytics_tag = "UA-122274748-2"
-  ldap_passfile         = "/u01/app/oracle/middleware/user_projects/domains/NDelius/password.keyfile"
-
-  # New Tech
-  newtech_search_url             = "/newTech"
-  newtech_pdfgenerator_url       = "/newTech"
-  newtech_pdfgenerator_templates = "shortFormatPreSentenceReport|paroleParom1Report|oralReport"
-  newtech_pdfgenerator_secret    = "ThisIsASecretKey" # TODO pull from param store
-
-  # User Management Tool
-  usermanagement_url = "/umt/"
-
-  # NOMIS
-  nomis_url           = "https://gateway.preprod.nomis-api.service.hmpps.dsd.io/elite2api"
-  nomis_client_id     = "delius"
-  nomis_client_secret = "ThisIsASecretKey" # TODO pull from param store
-
-  # Approved Premises Tracker API
-  aptracker_api_errors_url = "/aptracker-api/errors"
+# Default Delius Application (WebLogic) config
+default_delius_app_config = {
+  image_url         = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest" # Version is managed by Ansible ̰
+  min_capacity      = 20
+  max_capacity      = 40
+  memory            = 16384 # 16GB
+  env_USER_MEM_ARGS = "-Xms14G -Xmx14G"
 }
+delius_app_config = {}
 
-# Delius ActiveMQ
-default_activemq_config = {
-  efs_throughput_mode        = "provisioned"
-  efs_provisioned_throughput = 16 # MiB/s
+# Default Delius Interfaces (WebLogic) config
+default_delius_eis_config = {
+  image_url         = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest-eis" # Version is managed by Ansible
+  min_capacity      = 2
+  max_capacity      = 10
+  memory            = 16384 # 16GB
+  env_USER_MEM_ARGS = "-Xms14G -Xmx14G"
 }
-activemq_config = {}
+delius_eis_config = {}
 
 # Default ECS scaling config. Can be overridden per-service.
 common_ecs_scaling_config = {

@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius-core
 environment_name: delius-core-dev
 simple_environment_name: dev
-ndelius_version: "5.1.0.2"
+ndelius_version: "5.1.1"
 catalog: DCAT
 data_classification: unclassified-data
 database_autotasks:
@@ -42,16 +42,3 @@ database_parameters:
    pga_aggregate_target: 1640M
    pga_aggregate_limit: 3280M
 
-
-ndelius_oauth_config:
-  url: https://sign-in-dev.hmpps.service.justice.gov.uk/auth
-  client_id: delius-unilink-dev
-  client_secret: /delius-core-dev/delius-core/weblogic/ndelius-domain/oauth-client-secret
-  callback_url: https://ndelius.dev.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
-  user_info_endpoint: /api/user/me
-  username_attribute: username
-  display_name: Login using justice.gov.uk credentials
-  scope: delius
-  
-# Prepare a case for sentencing service
-prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/

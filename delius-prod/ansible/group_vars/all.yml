@@ -31,7 +31,8 @@ required_patches:
       grid_patch: false
       database_patch: true
       target_version: "19.9"
-      
+
+# DEPRECATED - remove after WebLogic upgrade (ALS-2957):
 prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/
 
 management_server: 10.160.17.71

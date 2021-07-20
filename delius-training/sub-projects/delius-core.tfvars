@@ -31,9 +31,8 @@ ansible_vars_oracle_db = {
 }
 
 # WebLogic
-ansible_vars = {
-  database_sid          = "TRNDA"
-  ndelius_training_mode = "training"
+delius_app_config = {
+  env_TRAINING_MODE = "training"
 }
 
 env_user_access_cidr_blocks = [

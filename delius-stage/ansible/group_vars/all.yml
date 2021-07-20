@@ -33,18 +33,17 @@ required_patches:
       description: ORA-600 [qesrLoopOverSetRowP:rows] From Query In Job That Used To Work In 11g (Doc ID 2596180.1) 
       grid_patch: false
       database_patch: true
-      
+
+# DEPRECATED - remove after WebLogic upgrade (ALS-2957):
 ndelius_oauth_config:
- url: https://sign-in-stage.hmpps.service.justice.gov.uk/auth
- client_id: delius-unilink-stage
- client_secret: /delius-stage/delius/weblogic/ndelius-domain/oauth-client-secret
- callback_url: https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
- user_info_endpoint: /api/user/me
- username_attribute: username
- display_name: Login using justice.gov.uk credentials
- scope: delius
- 
-# Prepare a case for sentencing service
+  url: https://sign-in-stage.hmpps.service.justice.gov.uk/auth
+  client_id: delius-unilink-stage
+  client_secret: /delius-stage/delius/weblogic/ndelius-domain/oauth-client-secret
+  callback_url: https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp
+  user_info_endpoint: /api/user/me
+  username_attribute: username
+  display_name: Login using justice.gov.uk credentials
+  scope: delius
 prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/
 
 management_server: 10.160.32.88
