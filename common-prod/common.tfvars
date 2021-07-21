@@ -484,6 +484,21 @@ default_ldap_config = {
 }
 ldap_config = {}
 
+# Shared ECS Cluster
+node_min_count    = 5
+node_max_count    = 50
+ecs_instance_type = "r5.2xlarge" /* Memory-optimized instances, based on usage. If usage becomes more dynamic in future,
+                                  * we should move to multiple ASGs and make use of placement strategies/constraints. */
+
+# Default ECS scaling config. These options can be overridden per-service below.
+common_ecs_scaling_config = {
+  memory       = 2048 # Memory to assign to ECS container in MB
+  cpu          = 1024 # CPU to assign to ECS container (1024 units = 1 vCPU)
+  min_capacity = 2    # Minimum number of running tasks
+  max_capacity = 10   # Maximum number of running tasks
+  target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
+}
+
 # Default Delius Application (WebLogic) config
 default_delius_app_config = {
   image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest" # Version is managed by Ansible ̰
@@ -506,15 +521,6 @@ default_delius_eis_config = {
 }
 delius_eis_config = {}
 
-# Default ECS scaling config. Can be overridden per-service.
-common_ecs_scaling_config = {
-  memory       = 2048 # Memory to assign to ECS container in MB
-  cpu          = 1024 # CPU to assign to ECS container (1024 units = 1 vCPU)
-  min_capacity = 2    # Minimum number of running tasks
-  max_capacity = 10   # Maximum number of running tasks
-  target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
-}
-
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
   image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/pwm"
@@ -522,7 +528,7 @@ default_pwm_config = {
 }
 pwm_config = {}
 
-# UMT
+# User Management Tool (UMT)
 default_umt_config = {
   image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
   version                       = "1.11.0"         # Application version
@@ -733,11 +739,6 @@ chaosmonkey_job_ulimits = []
 
 delius_core_haproxy_instance_type  = "t3.large"
 delius_core_haproxy_instance_count = "3"
-
-# Shared ECS Cluster
-ecs_instance_type = "m5.2xlarge"
-node_max_count    = 50
-node_min_count    = 5
 
 loadrunner_config = {
   "instance_type" = "t3.large"

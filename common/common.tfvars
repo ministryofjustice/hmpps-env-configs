@@ -430,6 +430,15 @@ default_ldap_config = {
 }
 ldap_config = {}
 
+# Default ECS scaling config. These options can be overridden per-service below.
+common_ecs_scaling_config = {
+  memory       = 2048 # Memory to assign to ECS container in MB
+  cpu          = 1024 # CPU to assign to ECS container (1024 units = 1 vCPU)
+  min_capacity = 1    # Minimum number of running tasks
+  max_capacity = 5    # Maximum number of running tasks
+  target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
+}
+
 # Default Delius Application (WebLogic) config
 default_delius_app_config = {
   image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest" # Version is managed by Ansible
@@ -449,15 +458,6 @@ default_delius_eis_config = {
   env_LOG_LEVEL_NDELIUS = "DEBUG"
 }
 delius_eis_config = {}
-
-# Default ECS scaling config. Can be overridden per-service.
-common_ecs_scaling_config = {
-  memory       = 2048 # Memory to assign to ECS container in MB
-  cpu          = 1024 # CPU to assign to ECS container (1024 units = 1 vCPU)
-  min_capacity = 1    # Minimum number of running tasks
-  max_capacity = 5    # Maximum number of running tasks
-  target_cpu   = 60   # CPU target value for auto-scaling of ECS tasks
-}
 
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
