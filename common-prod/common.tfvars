@@ -486,21 +486,23 @@ ldap_config = {}
 
 # Default Delius Application (WebLogic) config
 default_delius_app_config = {
-  image_url         = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest" # Version is managed by Ansible ̰
-  min_capacity      = 20
-  max_capacity      = 40
-  memory            = 16384 # 16GB
-  env_USER_MEM_ARGS = "-Xms14G -Xmx14G"
+  image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest" # Version is managed by Ansible ̰
+  min_capacity          = 20
+  max_capacity          = 40
+  memory                = 16384 # 16GB
+  env_USER_MEM_ARGS     = "-Xms14G -Xmx14G"
+  env_LOG_LEVEL_NDELIUS = "INFO"
 }
 delius_app_config = {}
 
 # Default Delius Interfaces (WebLogic) config
 default_delius_eis_config = {
-  image_url         = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest-eis" # Version is managed by Ansible
-  min_capacity      = 2
-  max_capacity      = 10
-  memory            = 16384 # 16GB
-  env_USER_MEM_ARGS = "-Xms14G -Xmx14G"
+  image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest-eis" # Version is managed by Ansible
+  min_capacity          = 2
+  max_capacity          = 10
+  memory                = 16384 # 16GB
+  env_USER_MEM_ARGS     = "-Xms14G -Xmx14G"
+  env_LOG_LEVEL_NDELIUS = "INFO"
 }
 delius_eis_config = {}
 
