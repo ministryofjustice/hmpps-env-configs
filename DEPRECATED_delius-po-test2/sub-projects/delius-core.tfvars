@@ -35,40 +35,6 @@ ansible_vars = {
 }
 
 env_user_access_cidr_blocks = [
-  # Parent Organisation IP ranges
-
-  # -MTCNovo
-  "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
-  "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
-
-  # -SEETEC
-  "80.86.46.16/30",
-  "195.224.76.229/32",
-
-  # -Interserve (Purple Futures)
-  "46.227.51.224/29",
-  "46.227.51.232/29",
-  "46.227.51.240/28",
-  "51.179.196.131/32", #interserve desktop users public IP
-
-  # -Meganexus (Purple Futures)
-  "83.151.209.178/32",  # PF SPG Server Public IP/NAT
-  "83.151.209.179/32",  # PF SPG Server Public IP/NAT 2
-  "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
-  "202.189.235.70/32",  # Meganexus India
-
-  # -Sodexo Justice Services
-  "80.86.46.16/31",
-  "80.86.46.18/32",
-
-  # -RRP (Reducing Reoffending Partnership)
-  "62.253.83.37/32",
-
-  # - ARCC/DTV (Achieving Real Change in Communities - Durham & Tees Valley)
-  "51.179.197.1/32",
-
-  # - EOS
-  "5.153.255.210/32", # EOS Public IP
 ]
 
 # DSS Batch Task

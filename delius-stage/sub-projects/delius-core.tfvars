@@ -78,26 +78,8 @@ merge_config = {
 }
 
 env_user_access_cidr_blocks = [
-  # Parent Organisation IP ranges
-  # -RRP (Reducing Reoffending Partnership)
-  "62.253.83.37/32",
-
-  # -MTCNovo
-  "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
-  "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
-
   # -i2n (Northgate) bastion IP traffic
   "62.232.198.68/32",
-
-  # -Sodexo Justice Services
-  "80.86.46.16/31",
-  "80.86.46.18/32",
-
-  # -SEETEC
-  "80.86.46.16/30",
-  "195.224.76.229/32",
-  "51.179.199.82/32", #ROK user outbound for wales,DDC,BGSW - requested via slack support channel https://mojdt.slack.com/archives/GNXRQ5HUN/p1570199298064800
-  "195.153.64.66/32", # Seetec VPN
 ]
 
 # DSS Batch Task

@@ -34,42 +34,6 @@ ansible_vars_oracle_db = {
 ci_db_ingress_1521 = true
 
 env_user_access_cidr_blocks = [
-  # Parent Organisation IP ranges
-
-  # -MTCNovo
-  "62.25.109.202/32", # MTCNovo old frontend desktops Egress IP (Pre March 2021)
-  "192.57.152.98/32", # MTCNovo new frontend desktops Egress IP (March 2021 on)
-  "52.56.48.146/32",  # MTCNovo ZScaler internet-facing IP addresses
-  "52.56.64.210/32",  # MTCNovo ZScaler internet-facing IP addresses
-
-  # -SEETEC
-  "80.86.46.16/30",
-  "195.224.76.229/32",
-  "195.153.64.66/32", # Seetec VPN
-
-  # -Interserve
-  //  "46.227.51.224/29", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
-  //  "46.227.51.232/29", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
-  //  "46.227.51.240/28", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
-  //  "51.179.196.131/32", removed 25/11/2019 by request of perry sutherland https://mojdt.slack.com/archives/GNPCZF3J5/p1574431551042500
-
-  # -Meganexus
-  #"51.179.210.36/32",  #this mapped to PFs spg server in IFSR1 should no longer be needed - see parent orgs if required
-  "213.105.186.130/31", # Meganexus London (Firewall IP + Gateway IP)
-  "202.189.235.70/32",  # Meganexus India
-
-  # -Sodexo Justice Services
-  "80.86.46.16/31",
-  "80.86.46.18/32",
-
-  # -RRP (Reducing Reoffending Partnership)
-  "62.253.83.37/32",
-
-  # - ARCC/DTV (Achieving Real Change in Communities - Durham & Tees Valley)
-  "51.179.197.1/32",
-
-  # - EOS
-  "5.153.255.210/32", # EOS Public IP
 ]
 
 # DSS Batch Task
