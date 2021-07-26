@@ -36,21 +36,6 @@ delius_app_config = {
 }
 
 env_user_access_cidr_blocks = [
-  # Parent Organisation IP ranges
-
-  # -MTCNovo
-  "62.25.109.202/32",
-  "52.56.48.146/32", # MTCNovo ZScaler internet-facing IP addresses
-  "52.56.64.210/32", # MTCNovo ZScaler internet-facing IP addresses
-
-  # -SEETEC
-  "80.86.46.16/30",
-  "195.224.76.229/32",
-  "195.153.64.66/32",  # Seetec VPN
-  "62.232.148.165/32", # Seetec IP addresses provided 19/10/2020 by Jon Kennerly
-  "83.71.136.162/32",  #
-  "213.86.23.194/32",  #
-
   # -Sopra Steria
   "195.206.180.12/32", # Dedicated IP provided by Nicki Berry on 24/12/2020 (ALS-2487)
 ]
