@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-perf
 simple_environment_name: perf
-ndelius_version: "5.1.2"
+ndelius_version: "5.1.3"
 catalog: PCAT
 data_classification: official-data
 database_autotasks:
