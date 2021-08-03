@@ -2,3 +2,13 @@
 
 database_standby_unique: DATMISS2
 database_standby_sid: DATMISS2
+required_patches:
+    p32044533:
+      patch_files:
+         - target_version: "19.9"
+           filename: p32044533_199000DBRU_Linux-x86-64.zip
+      description: ORA-600 [OPIFCH2:ROWSETSEARLYRET] LOGGED IN DATABASE ALERT LOG
+      grid_patch: false
+      database_patch: true
+      datapatch_required: false
+      replaces_patch: "30616738"
