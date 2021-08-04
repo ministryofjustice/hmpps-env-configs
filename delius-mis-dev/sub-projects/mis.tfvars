@@ -40,14 +40,6 @@ bcs_disable_api_termination = false
 bcs_ebs_optimized = false
 bcs_hibernation = false
 
-#Instance size for bfs
-bfs_instance_type  = "t2.xlarge"
-bfs_root_size = 75
-bfs_server_count = 0
-bfs_disable_api_termination = false
-bfs_ebs_optimized = false
-bfs_hibernation = false
-
 #Instance size for bps
 bps_instance_type  = "t2.xlarge"
 bps_root_size = 75
@@ -205,4 +197,3 @@ fsx_copy_tags_to_backups = false
 
 fsx_bfs_fileshare_size = 300      # GiB
 fsx_bfs_fileshare_throughput = 64 # MB/s
-

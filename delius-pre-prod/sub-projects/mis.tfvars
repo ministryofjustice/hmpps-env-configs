@@ -40,14 +40,6 @@ bcs_disable_api_termination = false
 bcs_ebs_optimized = false
 bcs_hibernation = false
 
-#Instance size for bfs
-bfs_instance_type  = "m5.2xlarge"
-bfs_root_size = 75
-bfs_server_count = 1
-bfs_disable_api_termination = false
-bfs_ebs_optimized = false
-bfs_hibernation = false
-
 #Instance size for bps
 bps_instance_type  = "m5.2xlarge"
 bps_root_size = 75
