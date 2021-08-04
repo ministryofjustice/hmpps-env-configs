@@ -4,6 +4,12 @@ aws_nameserver = "10.160.32.2"
 
 public_ssl_arn = ""
 
+## lambda auto start stop vars
+## Autostop will only be enabled for MIS Windows servers and MIS Oracle Databases
+delius_overide_autostop_tags = "False"
+mis_overide_autostop_tags    = "True"
+
+
 ## ## example output from the delius-network-terraform build
 ## strategic_public_zone_id = [
 ##     EXAMPLE67XHV

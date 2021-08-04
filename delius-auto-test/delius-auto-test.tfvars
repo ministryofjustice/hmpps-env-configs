@@ -11,6 +11,7 @@ autoscaling_schedule                 = "true"
 calendar_rule_enabled                = "true"
 autostop_notify_rule_enabled         = "true"
 create_autostop_instance             = "true"
+mis_overide_autostop_tags            = "True"
 
 oracle_backup_schedule = {
   delius = {
