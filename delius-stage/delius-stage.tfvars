@@ -6,8 +6,15 @@ public_ssl_arn = ""
 
 ## lambda auto start stop vars
 ## Autostop will only be enabled for MIS Windows servers and MIS Oracle Databases
-delius_overide_autostop_tags = "False"
-mis_overide_autostop_tags    = "True"
+ec2_schedule                         = "true"
+autoscaling_schedule                 = "true"
+calendar_rule_enabled                = "true"
+autostop_notify_rule_enabled         = "true"
+tagged_user                          = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A> <@U8F91EGG3> <@UNY29P4P9>"
+channel                              = "auto-stop-alerts"
+create_autostop_instance             = "true"
+delius_overide_autostop_tags         = "False"
+mis_overide_autostop_tags            = "True"
 
 
 ## ## example output from the delius-network-terraform build
