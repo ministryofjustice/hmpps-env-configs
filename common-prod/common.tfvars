@@ -808,3 +808,5 @@ cr_ancillary_route53_healthcheck_access_ipv6_cidrs = [
   "2600:1f18:7fff:f800::/53", # us-east-1 Region
   "2600:1f18:3fff:f800::/53", # us-east-1 Region
 ]
+
+vpn_remote_state_bucket_name = "tf-eu-west-2-hmpps-bastion-dev-remote-state"
