@@ -535,7 +535,7 @@ pwm_config = {}
 # User Management Tool (UMT)
 default_umt_config = {
   image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
-  version                       = "1.12.0"         # Application version
+  version                       = "1.12.1"         # Application version
   memory                        = 4096             # Additional memory required to support Redis caching
   redis_node_type               = "cache.m5.large" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 2                # Number of Redis shards (node groups) in the cluster
