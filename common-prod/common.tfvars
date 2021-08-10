@@ -506,7 +506,7 @@ default_delius_app_config = {
   min_capacity                          = 25
   max_capacity                          = 40
   memory                                = 16384 # 16GB
-  env_USER_MEM_ARGS                     = "-Xms15G -Xmx15G"
+  env_USER_MEM_ARGS                     = "-XX:MaxRAMPercentage=90.0"
   env_LOG_LEVEL_NDELIUS                 = "INFO"
   env_JDBC_CONNECTION_POOL_MIN_CAPACITY = 50
   env_JDBC_CONNECTION_POOL_MAX_CAPACITY = 100
@@ -518,7 +518,7 @@ default_delius_eis_config = {
   image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest-eis" # Version is managed by Ansible
 
   memory                                = 16384 # 16GB
-  env_USER_MEM_ARGS                     = "-Xms15G -Xmx15G"
+  env_USER_MEM_ARGS                     = "-XX:MaxRAMPercentage=90.0"
   env_LOG_LEVEL_NDELIUS                 = "INFO"
   env_JDBC_CONNECTION_POOL_MIN_CAPACITY = 50
   env_JDBC_CONNECTION_POOL_MAX_CAPACITY = 100
