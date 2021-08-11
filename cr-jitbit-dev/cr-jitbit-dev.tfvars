@@ -18,3 +18,7 @@ mail_account = [
   "dtv.secureinfo",
   "dtv.iom",
 ]
+
+cr_jitbit_access_cidrs = [
+  "82.69.56.90/32", #Steven Horner - #Req 10/Aug/2021
+]
