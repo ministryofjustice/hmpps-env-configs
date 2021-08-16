@@ -11,7 +11,7 @@ autoscaling_schedule                 = "true"
 calendar_rule_enabled                = "true"
 autostop_notify_rule_enabled         = "true"
 create_autostop_instance             = "true"
-mis_overide_autostop_tags            = "True"
+mis_overide_autostop_tags            = "True"     ##Set autostop tag key value for MIS Servers
 
 oracle_backup_schedule = {
   delius = {

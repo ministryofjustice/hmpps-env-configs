@@ -11,7 +11,7 @@ autostop_notify_rule_enabled         = "true"
 tagged_user                          = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A>"
 channel                              = "auto-stop-alerts"
 create_autostop_instance             = "true"
-mis_overide_autostop_tags            = "True"
+mis_overide_autostop_tags            = "True"     ##Set autostop tag key value for MIS Servers
 
 oracle_backup_schedule = {
   delius = {
