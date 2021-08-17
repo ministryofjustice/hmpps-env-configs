@@ -21,7 +21,7 @@ mail_account = [
 
 cr_jitbit_access_cidrs = []
 
-# AutoStop
+# Auto Start/Stop
 autostop_enable              = "true"
 autoscaling_schedule         = "true"
 rds_schedule                 = "true"
