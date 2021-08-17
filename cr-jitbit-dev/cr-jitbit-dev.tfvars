@@ -20,3 +20,10 @@ mail_account = [
 ]
 
 cr_jitbit_access_cidrs = []
+
+# AutoStop
+autostop_enable              = "true"
+autoscaling_schedule         = "true"
+rds_schedule                 = "true"
+autostop_notification_enable = "true"
+channel                      = "cr-alert-jitbit-nonprod"
