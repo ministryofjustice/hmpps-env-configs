@@ -34,3 +34,11 @@ asg_stop_resources_tag_phase2 = "Phase2"
 
 # Set RDS to Single AZ in Dev to support Auto Start/Stop
 jitbit_data_import = true
+
+alarms_config = {
+    enabled     = true
+    quiet_hours = [18, 6]
+}
+
+# Temp disable failover lambda in Dev in support of Auto Start/Stop will be addressed shortly
+failover_lambda_enable = "false"
