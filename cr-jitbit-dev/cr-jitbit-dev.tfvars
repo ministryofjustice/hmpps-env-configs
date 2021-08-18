@@ -33,7 +33,7 @@ rds_stop_resources_tag_phase1 = "Phase1"
 asg_stop_resources_tag_phase2 = "Phase2"
 
 # Set RDS to Single AZ in Dev to support Auto Start/Stop
-jitbit_data_import = true
+disable_multi_az = true
 
 alarms_config = {
     enabled     = true
