@@ -27,3 +27,10 @@ autoscaling_schedule         = "true"
 rds_schedule                 = "true"
 autostop_notification_enable = "true"
 channel                      = "cr-alert-jitbit-nonprod"
+
+# Tags for Auto Start/Stop
+rds_stop_resources_tag_phase1 = "Phase1"
+asg_stop_resources_tag_phase2 = "Phase2"
+
+# Set RDS to Single AZ in Dev to support Auto Start/Stop
+jitbit_data_import = true
