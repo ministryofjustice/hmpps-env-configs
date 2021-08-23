@@ -430,6 +430,17 @@ default_ldap_config = {
 }
 ldap_config = {}
 
+# Default values for Elasticsearch
+default_contact_search_config = {
+  instance_count                = 1
+  instance_type                 = "t3.medium.elasticsearch"
+  dedicated_master_enabled      = false
+  volume_size                   = 64
+  volume_type                   = "gp2"
+  automated_snapshot_start_hour = 23
+}
+contact_search_config = {}
+
 # Default ECS scaling config. These options can be overridden per-service below.
 common_ecs_scaling_config = {
   memory       = 2048 # Memory to assign to ECS container in MB
