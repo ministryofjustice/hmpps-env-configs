@@ -65,7 +65,7 @@ dis_ebs_optimized = true
 dis_hibernation = false
 
 #Instance size for dfi
-dfi_instance_type  = "m5.8xlarge"
+dfi_instance_type  = "m5.xlarge"
 dfi_root_size = 75
 dfi_server_count = 1
 dfi_server_resources = 1
