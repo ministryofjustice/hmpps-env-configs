@@ -39,6 +39,3 @@ alarms_config = {
     enabled     = true
     quiet_hours = [18, 8]
 }
-
-# Temp disable failover lambda in Dev in support of Auto Start/Stop will be addressed shortly
-failover_lambda_enable = "false"
