@@ -25,7 +25,6 @@ cr_jitbit_access_cidrs = []
 autostop_enable              = "true"
 autoscaling_schedule         = "true"
 rds_schedule                 = "true"
-autostop_notification_enable = "true"
 channel                      = "cr-alert-jitbit-nonprod"
 
 # Tags for Auto Start/Stop
