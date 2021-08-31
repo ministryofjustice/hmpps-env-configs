@@ -14,11 +14,10 @@ tagged_user                          = "<@U76HZPL7R>"
 channel                              = "auto-stop-alerts"
 create_autostop_instance             = "true"
 
-# Temporary earlier start to backups during Unification Work requested by Jane Bircher
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "00 05 ? * 3-6 *"
-    weekly_schedule = "00 05 ? * 2 *"
+    daily_schedule  = "30 05 ? * 3-6 *"
+    weekly_schedule = "30 05 ? * 2 *"
   }
 }
 
