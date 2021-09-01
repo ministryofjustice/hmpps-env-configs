@@ -453,7 +453,7 @@ common_ecs_scaling_config = {
 # Default Delius Application (WebLogic) config
 default_delius_app_config = {
   image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest" # Version is managed by Ansible
-  cpu                   = 2048
+  min_capacity          = 2
   memory                = 4096 # 4GB
   env_USER_MEM_ARGS     = "-XX:MaxRAMPercentage=90.0"
   env_LOG_LEVEL_NDELIUS = "DEBUG"
@@ -463,8 +463,7 @@ delius_app_config = {}
 # Default Delius Interfaces (WebLogic) config
 default_delius_eis_config = {
   image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest-eis" # Version is managed by Ansible
-  cpu                   = 2048
-  memory                = 4096 # 4GB
+  memory                = 4096                                                                            # 4GB
   env_USER_MEM_ARGS     = "-XX:MaxRAMPercentage=90.0"
   env_LOG_LEVEL_NDELIUS = "DEBUG"
 }
