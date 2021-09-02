@@ -1,0 +1,20 @@
+--- # misboe_primarydb.yml
+
+database_global_database: INTBOE
+database_taf_service: INTBOE_TAF
+database_primary_unique: INTBOE
+database_primary_sid: INTBOE
+database_parameters:
+   sga_max_size: 1G
+   sga_target: 1G
+required_patches:
+    p26749785:
+      patch_files:
+          - target_version: "19.9"
+            filename: p26749785_199000DBRU_Generic.zip
+      description: PERF_DIAG NEED TO HAVE MORE CONTROL IN DICTIONARY FOR AUTO_STATS_ADVISOR_TASK
+      grid_patch: false
+      database_patch: true
+      datapatch_required: true
+database_autotasks:
+      statistics_advisor: disabled
