@@ -7,6 +7,24 @@ delius-db-1.int.delius.probation.hmpps.dsd.io
 [delius_dbs:children]
 delius_primarydb
 
+[mis_primarydb]
+mis-db-1.int.delius.probation.hmpps.dsd.io
+
+[mis_dbs:children]
+mis_primarydb
+
+[misboe_primarydb]
+misboe-db-1.int.delius.probation.hmpps.dsd.io
+
+[misboe_dbs:children]
+misboe_primarydb
+
+[misdsd_primarydb]
+misdsd-db-1.int.delius.probation.hmpps.dsd.io
+
+[misdsd_dbs:children]
+misdsd_primarydb
+
 [oracle_databases:children]
 delius_dbs
 
