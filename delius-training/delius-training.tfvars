@@ -32,13 +32,12 @@ oracle_validate_backup_schedule = {
   }
 }
 
-# Temporarily disable Monday flashback due to date entry (request from Julie Whelan)
-#oracle_flashback_schedule = {
-#  delius = {
-#    restorepoint   =  "TRAINING"
-#    schedule       =  "30 05 ? * 2 *"
-#  }
-#}
+oracle_flashback_schedule = {
+  delius = {
+    restorepoint   =  "TRAINING"
+    schedule       =  "30 05 ? * 2 *"
+  }
+}
 
 database_high_availability_count = {
   delius = 1
