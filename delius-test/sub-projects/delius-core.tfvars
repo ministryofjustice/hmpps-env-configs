@@ -40,6 +40,7 @@ delius_app_config = {
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
 
   env_OAUTH_URL                       = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+  env_OAUTH_TOKEN_VERIFICATION_URL    = "https://token-verification-api-dev.prison.service.justice.gov.uk/token/verify"
   env_OAUTH_CALLBACK_URL              = "https://ndelius.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
   env_OAUTH_LOGIN_NAME                = "Login using justice.gov.uk credentials"
   env_OAUTH_USER_INFO_ENDPOINT        = "/api/user/me"
