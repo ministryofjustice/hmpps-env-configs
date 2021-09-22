@@ -54,3 +54,10 @@ oracle_validate_backup_schedule = {
 }
 
 oracle_delete_unused_dbids = "no"
+
+database_high_availability_count = {
+  delius = 2
+  mis    = 2
+  misboe = 2
+  misdsd = 2
+}
