@@ -20,3 +20,5 @@ mail_account = [
 ]
 
 cr_jitbit_access_cidrs = []
+
+channel = "cr-alert-jitbit-prod"

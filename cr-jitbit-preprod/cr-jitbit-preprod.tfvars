@@ -22,10 +22,10 @@ mail_account = [
 cr_jitbit_access_cidrs = []
 
 # Auto Start/Stop
-autostop_enable                   = "false"
-autoscaling_schedule              = "false"
-rds_schedule                      = "false"
-autostartstop_notification_enable = "false"
+autostop_enable                   = "true"
+autoscaling_schedule              = "true"
+rds_schedule                      = "true"
+autostartstop_notification_enable = "true"
 channel                           = "cr-alert-jitbit-nonprod"
 
 # Tags for Auto Start/Stop
@@ -36,6 +36,6 @@ asg_stop_resources_tag_phase2 = "PreProdPhase2"
 disable_multi_az = true
 
 alarms_config = {
-    enabled     = false
+    enabled     = true
     quiet_hours = [18, 8]
 }
