@@ -45,14 +45,14 @@ delius_app_config = {
   min_capacity = 1
   max_capacity = 5
 
-  env_OAUTH_URL                       = "https://sign-in-stage.hmpps.service.justice.gov.uk/auth"
-  env_OAUTH_CALLBACK_URL              = "https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
-  env_OAUTH_LOGIN_NAME                = "Login using justice.gov.uk credentials"
-  env_OAUTH_USER_INFO_ENDPOINT        = "/api/user/me"
-  env_OAUTH_DELIUS_USERNAME_ATTRIBUTE = "username"
-  env_OAUTH_DEFAULT_SCOPE             = "delius"
-  env_OAUTH_CLIENT_ID                 = "delius-unilink-stage"
-  secret_OAUTH_CLIENT_SECRET          = "/delius-stage/delius/weblogic/ndelius-domain/oauth-client-secret"
+  ##env_OAUTH_URL                       = "https://sign-in-stage.hmpps.service.justice.gov.uk/auth"
+  ##env_OAUTH_CALLBACK_URL              = "https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
+  ##env_OAUTH_LOGIN_NAME                = "Login using justice.gov.uk credentials"
+  ##env_OAUTH_USER_INFO_ENDPOINT        = "/api/user/me"
+  ##env_OAUTH_DELIUS_USERNAME_ATTRIBUTE = "username"
+  ##env_OAUTH_DEFAULT_SCOPE             = "delius"
+  ##env_OAUTH_CLIENT_ID                 = "delius-unilink-stage"
+  ##secret_OAUTH_CLIENT_SECRET          = "/delius-stage/delius/weblogic/ndelius-domain/oauth-client-secret"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
 }
