@@ -46,6 +46,13 @@ delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD     = "/delius-perf/delius/delius-database/db/delius_api_pool_password"
 }
 
+merge_config = {
+  api_min_capacity = 1
+  api_max_capacity = 1
+  ui_min_capacity  = 2
+  ui_max_capacity  = 10
+}
+
 env_user_access_cidr_blocks = []
 
 # Delius-Core Slack alarms
