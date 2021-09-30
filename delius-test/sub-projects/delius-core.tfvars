@@ -43,7 +43,7 @@ delius_app_config = {
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
 
-  env_PREPARE_CASE_FOR_SENTENCE_URL   = "https://prepare-case-probation.service.justice.gov.uk"
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
 }
 
 # User Management
@@ -58,6 +58,7 @@ delius_api_environment = {
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+  FEATURES_INDEX_CONTACTS_ON_DEMAND                     = "true"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-test/delius/newtech/offenderapi/appinsights_key"
