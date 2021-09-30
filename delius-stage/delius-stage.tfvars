@@ -33,7 +33,7 @@ route53_strategic_hosted_zone_id = "Z3GRI9GET5CFF7"
 instance_type_db = "t2.large"
 
 #Instance size for smtp server
-smtp_instance_type = "m5.xlarge"
+smtp_instance_type = "m5.large"
 
 oracle_backup_schedule = {
   delius = {
