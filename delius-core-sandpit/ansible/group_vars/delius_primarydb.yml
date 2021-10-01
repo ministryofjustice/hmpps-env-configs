@@ -18,3 +18,6 @@ delius_users:
   jpyke_ro:
   imak_ro:
   mryall_ro:
+# Following flag enables functionality to preserve audited_interaction data into
+# a repository database
+preserve_audited_interaction: true
