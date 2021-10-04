@@ -32,15 +32,15 @@ ansible_vars_oracle_db = {
 
 # WebLogic
 delius_app_config = {
-  env_OAUTH_URL                       = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
-  env_OAUTH_TOKEN_VERIFICATION_URL    = "https://token-verification-api-preprod.prison.service.justice.gov.uk/token/verify"
-  env_OAUTH_CALLBACK_URL              = "https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/auth/token.jsp"
-  env_OAUTH_LOGIN_NAME                = "Login using justice.gov.uk credentials"
-  env_OAUTH_USER_INFO_ENDPOINT        = "/api/user/me"
-  env_OAUTH_DELIUS_USERNAME_ATTRIBUTE = "username"
-  env_OAUTH_DEFAULT_SCOPE             = "delius"
-  env_OAUTH_CLIENT_ID                 = "delius-unilink-preprod"
-  secret_OAUTH_CLIENT_SECRET          = "/delius-pre-prod/delius/weblogic/ndelius-domain/oauth-client-secret"
+  # oauth
+  env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+  # user sign-in
+  env_OAUTH_LOGIN_ENABLED          = "true"
+  env_OAUTH_CLIENT_ID              = "delius-unilink-preprod"
+  secret_OAUTH_CLIENT_SECRET       = "/delius-pre-prod/delius/weblogic/ndelius-domain/oauth-client-secret"
+  env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api-preprod.prison.service.justice.gov.uk/token/verify"
+  env_OAUTH_CALLBACK_URL           = "https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_DEFAULT_SCOPE          = "delius"
 }
 
 # Delius API
