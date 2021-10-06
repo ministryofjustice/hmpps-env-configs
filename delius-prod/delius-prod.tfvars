@@ -13,7 +13,7 @@ route53_domain_private = "service.justice.gov.uk"
 subdomain = "probation"
 
 #Instance size for smtp server
-smtp_instance_type = "m5.xlarge"
+smtp_instance_type = "m5.large"
 
 oracle_backup_schedule = {
   delius = {
