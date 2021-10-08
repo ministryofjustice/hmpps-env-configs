@@ -192,3 +192,6 @@ fsx_copy_tags_to_backups = false
 
 fsx_bfs_fileshare_size = 600      # GiB
 fsx_bfs_fileshare_throughput = 128 # MB/s
+
+# NDMIS LB Management
+lb_management_rule_enabled = "true"  # Enable or disable mis-lb-management cloudwatch Event rules. When enabled this will block access to NDMIS app via LB at scheduled times. ie 18:30 to 23:30
