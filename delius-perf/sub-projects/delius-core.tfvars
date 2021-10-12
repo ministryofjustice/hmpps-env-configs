@@ -33,6 +33,15 @@ ansible_vars_oracle_db = {
 # enable ingress from the CI (Jenkins/AWS Codepipeline)
 ci_db_ingress_1521 = true
 
+# WebLogic
+delius_app_config = {
+  # oauth
+  env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-perf/delius/weblogic/ndelius-domain/api-client-secret"
+}
+
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
