@@ -25,7 +25,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v23"
+rds_engine_version = "12.1.0.2.v24"
 
 rds_character_set_name = "WE8ISO8859P15"
 
@@ -95,4 +95,9 @@ options_local = {
       AGENT_REGISTRATION_PASSWORD = ""
     }
   }
+}
+
+# Disable Oracle Management Packs for IAPS DB
+parameters_local = {
+  control_management_pack_access = "NONE"
 }
