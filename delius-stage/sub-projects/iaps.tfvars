@@ -99,5 +99,5 @@ options_local = {
 
 # Disable Oracle Management Packs for IAPS DB
 parameters_local = {
-  control_management_pack_access = NONE
+  control_management_pack_access = "NONE"
 }
