@@ -671,7 +671,11 @@ default_community_api_ingress = [ # Common CIDR ranges for ingress in all produc
   "34.251.199.153/32",            # Analytics platform
   "34.249.194.106/32",            # Analytics platform
   "194.168.183.130/32",           # CATS+ access (Daresbury Office)
-  "51.141.53.111/32",             # Public IP of azure fortinet (prod)
+  "51.141.53.111/32",             # Public IP of Azure FortiNet (prod)
+  "52.142.189.87/32",             # Public IP of Azure Firewall
+  "52.142.189.118/32",            # Public IP of Azure Firewall
+  "20.90.217.127/32",             # Public IP of Azure Firewall
+  "20.90.217.135/32",             # Public IP of Azure Firewall
 ]
 community_api_ingress = [] # Override this per-environment for specific ingress rules
 
@@ -762,13 +766,17 @@ loadrunner_config = {
 }
 
 interface_access_cidr_blocks = [
-  "51.140.255.11/32", # ndelius-prod appgateway. Public IP of Fix & Go Azure API Gateway used for NDH / OASys
-  "51.141.53.111/32", # PDMLX0052 internet proxy.
-  "20.49.225.111/32", # aks-studio-hosting-live-1.  For prometheus
-  "51.11.125.6/32",   # hmpps-prod-ukwest-appgw1.  Replacement appgateway for ndelius-prod
-  "51.11.126.195/32", # hmpps-prod-ukwest-appgw2.  Replacement appgateway for ndelius-prod
-  "20.77.144.238/32", # hmpps-prod-uksouth-appgw1  Replacement appgateway for ndelius-prod
-  "20.77.145.26/32",  # hmpps-prod-uksouth-appgw2.  Replacement appgateway for ndelius-prod
+  "51.140.255.11/32",  # ndelius-prod appgateway. Public IP of Fix & Go Azure API Gateway used for NDH / OASys
+  "51.141.53.111/32",  # PDMLX0052 internet proxy.  Public IP of Azure FortiNet (prod)
+  "20.49.225.111/32",  # aks-studio-hosting-live-1.  For prometheus
+  "51.11.125.6/32",    # hmpps-prod-ukwest-appgw1.  Replacement appgateway for ndelius-prod
+  "51.11.126.195/32",  # hmpps-prod-ukwest-appgw2.  Replacement appgateway for ndelius-prod
+  "20.77.144.238/32",  # hmpps-prod-uksouth-appgw1  Replacement appgateway for ndelius-prod
+  "20.77.145.26/32",   # hmpps-prod-uksouth-appgw2.  Replacement appgateway for ndelius-prod
+  "52.142.189.87/32",  # Public IP of Azure Firewall
+  "52.142.189.118/32", # Public IP of Azure Firewall
+  "20.90.217.127/32",  # Public IP of Azure Firewall
+  "20.90.217.135/32",  # Public IP of Azure Firewall
 ]
 
 #these 3 vars dictate whether or not to use AmazonMQ, vs spg-mpx-broker ('data'|'var')

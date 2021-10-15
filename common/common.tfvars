@@ -596,7 +596,11 @@ default_community_api_ingress = [ # Common CIDR ranges for ingress in all non-pr
   "34.251.199.153/32",            # Analytics platform
   "34.249.194.106/32",            # Analytics platform
   "194.168.183.130/32",           # CATS+ access (Daresbury Office)
-  "51.141.45.69/32",              # Public IP of azure fortinet (test)
+  "51.141.45.69/32",              # Public IP of Azure FortiNet (test)
+  "52.142.189.87/32",             # Public IP of Azure Firewall
+  "52.142.189.118/32",            # Public IP of Azure Firewall
+  "20.90.217.127/32",             # Public IP of Azure Firewall
+  "20.90.217.135/32",             # Public IP of Azure Firewall
 ]
 community_api_ingress = [] # Override this per-environment for specific ingress rules
 
@@ -688,10 +692,14 @@ loadrunner_config = {
 
 interface_access_cidr_blocks = [
   "51.137.128.165/32", # ndelius-dev appgateway.  NDH Bridge for OASys
-  "51.141.45.69/32",   # MGMLX0051 internet proxy.  For adhoc testing
+  "51.141.45.69/32",   # MGMLX0051 internet proxy.  Public IP of Azure FortiNet (test)
   "20.49.136.163/32",  # aks-studio-hosting-dev-1.  For prometheus
   "51.132.83.238/32",  # hmpps-devtest-ukwest-appgw1.  Replacement appgateway for ndelius-dev
   "51.132.83.154/32",  # hmpps-devtest-ukwest-appgw2.  Replacement appgateway for ndelius-dev
+  "52.142.189.87/32",  # Public IP of Azure Firewall
+  "52.142.189.118/32", # Public IP of Azure Firewall
+  "20.90.217.127/32",  # Public IP of Azure Firewall
+  "20.90.217.135/32",  # Public IP of Azure Firewall
 ]
 
 
