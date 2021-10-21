@@ -39,20 +39,19 @@ ci_db_ingress_1521 = true
 delius_app_config = {
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
 
+  # oauth
+  env_OAUTH_URL = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+  # user sign-in
+  env_OAUTH_LOGIN_ENABLED    = "false"
+  env_OAUTH_CLIENT_ID        = "delius-ui"
+  secret_OAUTH_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/oauth-client-secret"
+  env_OAUTH_CALLBACK_URL     = "https://ndelius.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_DEFAULT_SCOPE    = "delius"
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
-  # user sign-in
-  env_OAUTH_CLIENT_ID                 = "delius-ui"
-  secret_OAUTH_CLIENT_SECRET          = "/delius-test/delius/weblogic/ndelius-domain/oauth-client-secret"
-  env_OAUTH_URL                       = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
-  env_OAUTH_TOKEN_VERIFICATION_URL    = "https://token-verification-api-dev.prison.service.justice.gov.uk/token/verify"
-  env_OAUTH_CALLBACK_URL              = "https://ndelius.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
-  env_OAUTH_LOGIN_NAME                = "Login using justice.gov.uk credentials"
-  env_OAUTH_USER_INFO_ENDPOINT        = "/api/user/me"
-  env_OAUTH_DELIUS_USERNAME_ATTRIBUTE = "username"
-  env_OAUTH_DEFAULT_SCOPE             = "delius"
-  env_PREPARE_CASE_FOR_SENTENCE_URL   = "https://prepare-case-probation.service.justice.gov.uk"
+
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
 }
 
 # User Management
@@ -67,6 +66,7 @@ delius_api_environment = {
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+  FEATURES_INDEX_CONTACTS_ON_DEMAND                     = "true"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-test/delius/newtech/offenderapi/appinsights_key"

@@ -37,6 +37,19 @@ ldap_config = {
 
 # WebLogic
 delius_app_config = {
+  # oauth
+  env_OAUTH_URL = "https://sign-in.hmpps.service.justice.gov.uk/auth"
+  # user sign-in
+  env_OAUTH_LOGIN_ENABLED          = "false"
+  env_OAUTH_CLIENT_ID              = "delius-ui"
+  secret_OAUTH_CLIENT_SECRET       = "/delius-prod/delius/weblogic/ndelius-domain/oauth-client-secret"
+  env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api.prison.service.justice.gov.uk/token/verify"
+  env_OAUTH_CALLBACK_URL           = "https://ndelius.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_DEFAULT_SCOPE          = "delius"
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-prod/delius/weblogic/ndelius-domain/api-client-secret"
+
   env_ANALYTICS_TAG                 = "UA-122274748-1"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
 }
@@ -55,6 +68,7 @@ delius_api_environment = {
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+  FEATURES_INDEX_CONTACTS_ON_DEMAND                     = "true"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-prod/delius/newtech/offenderapi/appinsights_key"

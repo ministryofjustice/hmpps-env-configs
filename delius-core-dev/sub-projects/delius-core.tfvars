@@ -38,18 +38,17 @@ delius_app_config = {
   env_TRAINING_MODE_APP_NAME = "National Delius - DEVELOPMENT USE ONLY"
   env_TRAINING_MODE          = "development"
 
+  # oauth
+  env_OAUTH_URL = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+  # user sign-in
+  env_OAUTH_LOGIN_ENABLED    = "true"
+  env_OAUTH_CLIENT_ID        = "delius-ui"
+  secret_OAUTH_CLIENT_SECRET = "/delius-core-dev/delius-core/weblogic/ndelius-domain/oauth-client-secret"
+  env_OAUTH_CALLBACK_URL     = "https://ndelius.dev.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_DEFAULT_SCOPE    = "delius"
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-core-dev/delius-core/weblogic/ndelius-domain/api-client-secret"
-  # user sign-in
-  env_OAUTH_CLIENT_ID                 = "delius-ui"
-  secret_OAUTH_CLIENT_SECRET          = "/delius-core-dev/delius-core/weblogic/ndelius-domain/oauth-client-secret"
-  env_OAUTH_URL                       = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
-  env_OAUTH_CALLBACK_URL              = "https://ndelius.dev.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
-  env_OAUTH_LOGIN_NAME                = "Login using justice.gov.uk credentials"
-  env_OAUTH_USER_INFO_ENDPOINT        = "/api/user/me"
-  env_OAUTH_DELIUS_USERNAME_ATTRIBUTE = "username"
-  env_OAUTH_DEFAULT_SCOPE             = "delius"
 }
 
 # User Management
@@ -65,6 +64,7 @@ delius_api_environment = {
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
   LOGGING_LEVEL_ORG_HIBERNATE_SQL                       = "DEBUG"
   SPRING_JPA_PROPERTIES_HIBERNATE_SHOW_SQL              = "true"
+  FEATURES_INDEX_CONTACTS_ON_DEMAND                     = "true"
 }
 delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD = "/delius-core-dev/delius-core/delius-database/db/delius_api_pool_password"

@@ -9,7 +9,7 @@ public_ssl_arn = ""
 instance_type_db = "t2.large"
 
 #Instance size for smtp server
-smtp_instance_type = "m5.xlarge"
+smtp_instance_type = "m5.large"
 
 oracle_backup_schedule = {
   delius = {

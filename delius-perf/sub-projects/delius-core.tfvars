@@ -33,6 +33,15 @@ ansible_vars_oracle_db = {
 # enable ingress from the CI (Jenkins/AWS Codepipeline)
 ci_db_ingress_1521 = true
 
+# WebLogic
+delius_app_config = {
+  # oauth
+  env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-perf/delius/weblogic/ndelius-domain/api-client-secret"
+}
+
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
@@ -40,10 +49,18 @@ delius_api_environment = {
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+  FEATURES_INDEX_CONTACTS_ON_DEMAND                     = "true"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-perf/delius/newtech/offenderapi/appinsights_key"
   SPRING_DATASOURCE_PASSWORD     = "/delius-perf/delius/delius-database/db/delius_api_pool_password"
+}
+
+merge_config = {
+  api_min_capacity = 1
+  api_max_capacity = 1
+  ui_min_capacity  = 2
+  ui_max_capacity  = 10
 }
 
 env_user_access_cidr_blocks = []

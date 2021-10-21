@@ -42,17 +42,14 @@ umt_config = {
 
 # WebLogic
 delius_app_config = {
-  min_capacity = 1
+  min_capacity = 2
   max_capacity = 5
 
-  env_OAUTH_URL                       = "https://sign-in-stage.hmpps.service.justice.gov.uk/auth"
-  env_OAUTH_CALLBACK_URL              = "https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
-  env_OAUTH_LOGIN_NAME                = "Login using justice.gov.uk credentials"
-  env_OAUTH_USER_INFO_ENDPOINT        = "/api/user/me"
-  env_OAUTH_DELIUS_USERNAME_ATTRIBUTE = "username"
-  env_OAUTH_DEFAULT_SCOPE             = "delius"
-  env_OAUTH_CLIENT_ID                 = "delius-unilink-stage"
-  secret_OAUTH_CLIENT_SECRET          = "/delius-stage/delius/weblogic/ndelius-domain/oauth-client-secret"
+  # oauth
+  env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
 }
@@ -64,6 +61,7 @@ delius_api_environment = {
   SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+  FEATURES_INDEX_CONTACTS_ON_DEMAND                     = "true"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-stage/delius/newtech/offenderapi/appinsights_key"

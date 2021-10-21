@@ -178,7 +178,7 @@ ansible_vars_misdsd_db = {
 legacy_environment_name = "000"
 
 #Nextcloud
-nextcloud_instance_type      = "m5.4xlarge"
+nextcloud_instance_type      = "m5.2xlarge"
 rds_instance_class           = "db.m5.xlarge"
 mariadb_monitoring_interval  = 5
 rds_allocated_storage        = "1000"
@@ -192,3 +192,6 @@ fsx_copy_tags_to_backups = false
 
 fsx_bfs_fileshare_size = 600      # GiB
 fsx_bfs_fileshare_throughput = 128 # MB/s
+
+# NDMIS LB Management
+lb_management_rule_enabled = "true"  # Enable or disable mis-lb-management cloudwatch Event rules. When enabled this will block access to NDMIS app via LB at scheduled times. ie 18:30 to 23:30
