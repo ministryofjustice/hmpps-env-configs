@@ -38,3 +38,6 @@ delius_users:
   jpyke_ro:
   mhalma_ro:
   mryall_ro:
+# Following option determines the repository to use for preserving audited interaction data
+# (If not set then the data is not preserved)
+audited_interaction_repo: PRDNDA
