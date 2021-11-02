@@ -20,8 +20,8 @@ create_autostop_instance             = "true"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 05 ? * 4-6 *"
-    weekly_schedule = "30 05 ? * 3 *"
+    daily_schedule  = "30 06 ? * 4-6 *"
+    weekly_schedule = "30 06 ? * 3 *"
   }
 }
 
@@ -32,12 +32,13 @@ oracle_validate_backup_schedule = {
   }
 }
 
-oracle_flashback_schedule = {
-  delius = {
-    restorepoint   =  "TRAINING"
-    schedule       =  "30 05 ? * 2 *"
-  }
-}
+# Request from Julie Whelan to suppress flashback on 1st November
+#oracle_flashback_schedule = {
+#  delius = {
+#    restorepoint   =  "TRAINING"
+#    schedule       =  "30 06 ? * 2 *"
+#  }
+#}
 
 database_high_availability_count = {
   delius = 1

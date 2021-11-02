@@ -46,11 +46,11 @@ delius_app_config = {
   env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api.prison.service.justice.gov.uk/token/verify"
   env_OAUTH_CALLBACK_URL           = "https://ndelius.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
   env_OAUTH_DEFAULT_SCOPE          = "delius"
+  env_OAUTH_LOGIN_NAME             = ""
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-prod/delius/weblogic/ndelius-domain/api-client-secret"
 
-  env_ANALYTICS_TAG                 = "UA-122274748-1"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
 }
 
