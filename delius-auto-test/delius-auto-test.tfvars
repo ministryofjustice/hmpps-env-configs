@@ -15,20 +15,20 @@ mis_overide_autostop_tags            = "True"     ##Set autostop tag key value f
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 05 ? * 3-6 *"
-    weekly_schedule = "30 05 ? * 2 *"
+    daily_schedule  = "30 06 ? * 3-6 *"
+    weekly_schedule = "30 06 ? * 2 *"
   },
   mis = {
-    daily_schedule  = "30 05 ? * 3-6 *"
-    weekly_schedule = "30 05 ? * 2 *"
+    daily_schedule  = "30 06 ? * 3-6 *"
+    weekly_schedule = "30 06 ? * 2 *"
   },
   misboe = {
-    daily_schedule  = "30 05 ? * 3-6 *"
-    weekly_schedule = "30 05 ? * 2 *"
+    daily_schedule  = "30 06 ? * 3-6 *"
+    weekly_schedule = "30 06 ? * 2 *"
   },
   misdsd = {
-    daily_schedule  = "30 05 ? * 3-6 *"
-    weekly_schedule = "30 05 ? * 2 *"
+    daily_schedule  = "30 06 ? * 3-6 *"
+    weekly_schedule = "30 06 ? * 2 *"
   }
 }
 
