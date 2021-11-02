@@ -6,6 +6,3 @@ database_primary_unique: PERNDA
 database_primary_sid: PERNDA
 rman_level_0_backup_duration_target: "12:00"
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
-# Following option determines the repository to use for preserving audited interaction data
-# (If not set then the data is not preserved)
-audited_interaction_repo: PRDNDA
