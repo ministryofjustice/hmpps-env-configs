@@ -534,6 +534,7 @@ default_merge_config = {
   db_maintenance_window      = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
   db_backup_window           = "19:00-21:00"         # Daily window to take RDS backups
   db_backup_retention_period = 1                     # Number of days to retain RDS backups for
+  schedule                   = "0 0/10 * * * *"      # When to run the merge/unmerge scheduled process
   log_level                  = "DEBUG"               # Application log-level
 }
 merge_config = {}
