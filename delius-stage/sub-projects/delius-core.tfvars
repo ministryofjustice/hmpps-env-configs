@@ -30,7 +30,7 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file  = "database"
 }
 
-# LDAP
+# LDAPhttps://github.com/ministryofjustice/hmpps-engineering-platform-terraform/pull/430
 ldap_config = {
   instance_type = "m5.xlarge"
 }

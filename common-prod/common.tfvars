@@ -340,8 +340,17 @@ spg_partnergateway_domain_ports = {
 internal_moj_access_cidr_blocks = [
   "81.134.202.29/32",  #Moj VPN
   "217.33.148.210/32", #Digital studio
-  "194.75.210.208/28", #BCL
-  "213.48.246.99/32",  #BCL
+  "194.75.210.216/29", # Unilink AOVPN
+  "78.33.10.50/31",    # Unilink AOVPN
+  "78.33.10.52/30",    # Unilink AOVPN
+  "78.33.10.56/30",    # Unilink AOVPN
+  "78.33.10.60/32",    # Unilink AOVPN
+  "78.33.32.99/32",    # Unilink AOVPN
+  "78.33.32.100/30",   # Unilink AOVPN
+  "78.33.32.104/30",   # Unilink AOVPN
+  "78.33.32.108/32",   # Unilink AOVPN
+  "217.138.45.109/32", # Unilink AOVPN
+  "217.138.45.110/32", # Unilink AOVPN
 ]
 
 # public / user access
@@ -352,8 +361,17 @@ user_access_cidr_blocks = [
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
   "35.176.246.202/32", #Engineering Jenkins non prod windows agent
-  "194.75.210.208/28", #BCL
-  "213.48.246.99/32",  #BCL
+  "194.75.210.216/29", # Unilink AOVPN
+  "78.33.10.50/31",    # Unilink AOVPN
+  "78.33.10.52/30",    # Unilink AOVPN
+  "78.33.10.56/30",    # Unilink AOVPN
+  "78.33.10.60/32",    # Unilink AOVPN
+  "78.33.32.99/32",    # Unilink AOVPN
+  "78.33.32.100/30",   # Unilink AOVPN
+  "78.33.32.104/30",   # Unilink AOVPN
+  "78.33.32.108/32",   # Unilink AOVPN
+  "217.138.45.109/32", # Unilink AOVPN
+  "217.138.45.110/32", # Unilink AOVPN
   "195.59.75.0/24",    # ARK internet (DOM1)
   "194.33.192.0/25",   # ARK internet (DOM1)
   "194.33.193.0/25",   # ARK internet (DOM1)
