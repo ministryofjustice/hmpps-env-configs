@@ -509,7 +509,7 @@ default_contact_search_config = {
   dedicated_master_enabled      = true
   dedicated_master_count        = 3 # See https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains-dedicatedmasternodes.html
   dedicated_master_type         = "m6g.large.elasticsearch"
-  volume_size                   = 128
+  volume_size                   = 256
   volume_type                   = "gp2"
   automated_snapshot_start_hour = 23
 }
