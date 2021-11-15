@@ -36,6 +36,6 @@ oracle_duplicate_schedule = {
     target_host     = "delius_primarydb"
     source_db       = "PRDNDA"
     source_bucket   = "eu-west-2-del-prod-oracledb-backups"
-    schedule       =  "00 17 ? * 6 *"
+    schedule       =  "00 20 ? * 6 *"
   }
 }
