@@ -505,7 +505,7 @@ ldap_config = {}
 # Default values for Elasticsearch
 default_contact_search_config = {
   instance_count                = 6
-  instance_type                 = "r6g.large.elasticsearch"
+  instance_type                 = "r6g.xlarge.elasticsearch"
   dedicated_master_enabled      = true
   dedicated_master_count        = 3 # See https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains-dedicatedmasternodes.html
   dedicated_master_type         = "m6g.large.elasticsearch"
