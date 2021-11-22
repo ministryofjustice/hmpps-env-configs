@@ -66,7 +66,6 @@ delius_api_environment = {
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
   LOGGING_LEVEL_ORG_HIBERNATE_SQL                       = "DEBUG"
   SPRING_JPA_PROPERTIES_HIBERNATE_SHOW_SQL              = "true"
-  FEATURES_INDEX_CONTACTS_ON_DEMAND                     = "true"
 }
 delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD = "/delius-core-dev/delius-core/delius-database/db/delius_api_pool_password"
