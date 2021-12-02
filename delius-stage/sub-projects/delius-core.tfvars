@@ -67,6 +67,12 @@ delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_api_pool_password"
 }
 
+# Community API
+community_api_ingress = [
+  "51.140.228.7/32",  # azure hmpps-auth legacy server
+  "20.39.163.219/32", # azure hmpps-auth nomisapi-preprod
+]
+
 env_user_access_cidr_blocks = [
   # -i2n (Northgate) bastion IP traffic
   "62.232.198.68/32",
