@@ -610,7 +610,7 @@ gdpr_config = {}
 # Delius Merge compliance tool
 default_merge_config = {
   api_image_url              = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-api"
-  api_version                = "0.20.1" # Application version
+  api_version                = "0.20.2" # Application version
   ui_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-ui"
   ui_version                 = "0.20.0"              # Application version
   ui_memory                  = 1024                  # Memory to assign to UI container
