@@ -64,13 +64,13 @@ oracle_db_operation = {
   eng_role_arn                 = "arn:aws:iam::895523100917:role/terraform"
 }
 
+# Alfresco
 alfresco_app_name = "alfresco"
 
 alf_cloudwatch_log_retention = 14
+alf_push_to_cloudwatch = "yes"
 
 spg_app_name = "spg"
-
-# Alfresco
 
 # accounts used for updating alfresco ami permissions at release
 alf_account_ids = {
