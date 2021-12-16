@@ -65,6 +65,7 @@ oracle_db_operation = {
 }
 
 alfresco_app_name = "alfresco"
+alf_push_to_cloudwatch = "yes"
 
 spg_app_name = "spgw"
 
@@ -88,6 +89,11 @@ alfresco_asg_props = {
   ebs_volume_size    = 1000
   min_elb_capacity   = 2
   ami_name           = "HMPPS Alfresco*"
+}
+
+alf_ecs_config = {
+  ecs_instance_type = "m5.2xlarge"
+  node_max_count    = "6"
 }
 
 # jvm heap
