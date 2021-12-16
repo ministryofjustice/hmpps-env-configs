@@ -91,7 +91,7 @@ alfresco_asg_props = {
   ami_name           = "HMPPS Alfresco*"
 }
 
-alf_ecs_config = {
+alf_config_overrides = {
   ecs_instance_type = "m5.2xlarge"
   node_max_count    = "6"
 }
