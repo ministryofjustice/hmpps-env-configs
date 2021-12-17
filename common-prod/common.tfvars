@@ -155,6 +155,11 @@ alfresco_share_configs = {
   memory            = "16000"
 }
 
+# content
+alfresco_content_configs = {
+  memory          = "25000"
+  heap_size       = "24000"
+}
 
 # alf solr
 alfresco_search_solr_configs = {
