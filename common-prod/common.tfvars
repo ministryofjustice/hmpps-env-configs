@@ -92,7 +92,7 @@ alfresco_asg_props = {
 }
 
 alf_config_overrides = {
-  ecs_instance_type = "m5.2xlarge"
+  ecs_instance_type = "m5.8xlarge"
   node_max_count    = "6"
 }
 
@@ -150,7 +150,21 @@ alf_database_map = {
   aurora_snapshot          = "alfresco-aurora-snapshot"
 }
 
+#share
+alfresco_share_configs = {
+  memory            = "16000"
+}
+
+
 # alf solr
+alfresco_search_solr_configs = {
+  ebs_size  = "10000"
+  ebs_iops  = "16000"
+  ebs_type  = "gp2"
+  heap_size = "48000"
+  memory    = "50000"
+}
+
 alf_solr_config = {
   ebs_size             = 10000
   ebs_iops             = 500
