@@ -16,6 +16,7 @@ autotask_windows:
 database_parameters:
    sga_max_size: 1G
    sga_target: 1G
+   db_recovery_file_dest_size: 400G
 required_patches:
     p31810213:
       patch_files:
