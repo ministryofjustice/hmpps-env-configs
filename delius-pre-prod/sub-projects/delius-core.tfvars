@@ -47,6 +47,22 @@ delius_app_config = {
   secret_API_CLIENT_SECRET = "/delius-pre-prod/delius/weblogic/ndelius-domain/api-client-secret"
 }
 
+# GDPR
+gdpr_config = {
+  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 1
+  ui_min_capacity  = 2
+  ui_max_capacity  = 10
+}
+
+# Merge
+merge_config = {
+  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 1
+  ui_min_capacity  = 2
+  ui_max_capacity  = 10
+}
+
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
