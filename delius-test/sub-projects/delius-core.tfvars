@@ -56,6 +56,22 @@ delius_app_config = {
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
 }
 
+# GDPR
+gdpr_config = {
+  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 1
+  ui_min_capacity  = 1
+  ui_max_capacity  = 5
+}
+
+# Merge
+merge_config = {
+  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 1
+  ui_min_capacity  = 1
+  ui_max_capacity  = 5
+}
+
 # User Management
 umt_config = {
   version = "latest"
