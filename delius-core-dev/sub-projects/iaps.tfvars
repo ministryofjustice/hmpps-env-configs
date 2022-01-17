@@ -13,13 +13,13 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 #========================
 multi_az = false
 
-rds_instance_class = "db.t3.micro"
+rds_instance_class = "db.t3.large"
 
 rds_backup_retention_period = 2
 
 rds_monitoring_interval = 5
 
-rds_allocated_storage = "50"
+rds_allocated_storage = "500"
 
 rds_family = "oracle-ee-12.1"
 
@@ -27,7 +27,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v23"
+rds_engine_version = "12.1.0.2.v25"
 
 rds_character_set_name = "WE8ISO8859P15"
 
@@ -47,7 +47,7 @@ iaps_app_name = "iaps"
 # Flag to decommission IAPS v1 for each environment
 deploy_iaps_v1 = false
 
-instance_type = "t3.micro"
+instance_type = "t3.medium"
 
 psn_proxy_endpoint = "data-im-proxy-int-psn.dev.probation.service.justice.gov.uk"
 
