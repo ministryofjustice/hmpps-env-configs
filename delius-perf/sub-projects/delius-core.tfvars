@@ -46,6 +46,12 @@ delius_app_config = {
 gdpr_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
+  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders      = "-" #
+  cron_retainedoffendersiicsa = "-" #
+  cron_eligiblefordeletion    = "-" #
+  cron_deleteoffenders        = "-" #
+  cron_destructionlogclearing = "-" #
   ui_min_capacity  = 2
   ui_max_capacity  = 10
 }
