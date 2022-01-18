@@ -612,7 +612,7 @@ aptracker_api_config = {}
 # Delius GDPR compliance tool
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "0.25.1" # Application version
+  api_version                 = "0.25.2" # Application version
   api_min_capacity            = 0        # This service is only enabled in specific environments
   api_max_capacity            = 0
   ui_min_capacity             = 0
