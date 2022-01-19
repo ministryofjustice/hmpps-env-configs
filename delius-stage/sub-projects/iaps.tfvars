@@ -89,7 +89,7 @@ options_local = {
       version = "13.4.0.9.v1",
       vpc_security_group_memberships  = ""
     }
-    settings = { 
+    settings = {
       OMS_HOST = "oem-db-1.engineering-prod.probation.hmpps.dsd.io"
       OMS_PORT = "4903"
       AGENT_REGISTRATION_PASSWORD = ""
@@ -101,3 +101,8 @@ options_local = {
 parameters_local = {
   control_management_pack_access = "NONE"
 }
+
+iaps_proxy_access_cidr_blocks = [
+  # -i2n (Northgate) AWS Account
+  "10.60.0.0/16",
+]

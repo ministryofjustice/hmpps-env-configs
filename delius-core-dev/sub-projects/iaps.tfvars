@@ -82,3 +82,8 @@ auto_minor_version_upgrade = true
 
 # for use when we need to restore db from RDS snapshot
 snapshot_identifier = ""
+
+iaps_proxy_access_cidr_blocks = [
+  # -i2n (Northgate) AWS Account
+  "10.80.0.0/16",
+]
