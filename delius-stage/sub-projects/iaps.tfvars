@@ -102,7 +102,10 @@ parameters_local = {
   control_management_pack_access = "NONE"
 }
 
+# IAPS Proxy
 iaps_proxy_access_cidr_blocks = [
   # -i2n (Northgate) AWS Account
   "10.60.0.0/16",
 ]
+
+iaps_proxy_monitoring_enabled = "1"  #Enable IAPS Proxy Monitoring in the environment
