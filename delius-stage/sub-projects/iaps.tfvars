@@ -105,7 +105,9 @@ parameters_local = {
 # IAPS Proxy
 iaps_proxy_access_cidr_blocks = [
   # -i2n (Northgate) AWS Account
-  "10.60.0.0/16",
+  "10.110.96.0/24",
+  "10.110.97.0/24",
+  "10.110.98.0/24",
 ]
 
 iaps_proxy_monitoring_enabled = "0"  #Enable IAPS Proxy Monitoring in the environment

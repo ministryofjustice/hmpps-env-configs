@@ -86,5 +86,7 @@ snapshot_identifier = ""
 # IAPS Proxy
 iaps_proxy_access_cidr_blocks = [
   # -i2n (Northgate) AWS Account
-  "10.80.0.0/16",
+  "10.110.96.0/24",
+  "10.110.97.0/24",
+  "10.110.98.0/24",
 ]
