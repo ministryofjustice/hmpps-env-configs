@@ -2,8 +2,8 @@
 # ASG - Website
 #=====================================================
 cporacle_asg_props = {
-    ami_id                = "ami-075aee96003143402"
-    ami_image_tag_version = "0.101.0"
+    ami_id                = "ami-0f2996850ea7d2908"
+    ami_image_tag_version = "0.103.0"
     instance_type         = "m4.xlarge"
     ebs_volume_size       = 60
 }
@@ -13,8 +13,8 @@ cporacle_asg_props = {
 #=====================================================
 
 cporacle_api_asg_props = {
-    ami_id                = "ami-075aee96003143402"
-    ami_image_tag_version = "0.101.0"
+    ami_id                = "ami-0f2996850ea7d2908"
+    ami_image_tag_version = "0.103.0"
     instance_type         = "m4.xlarge"
     ebs_volume_size       = 60
 }
@@ -25,7 +25,7 @@ cporacle_api_asg_props = {
 #=====================================================
 rds_engine = "sqlserver-se"
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport
-rds_engine_version       = "15.00.4073.23.v1" 
+rds_engine_version       = "15.00.4073.23.v1"
 rds_family               = "sqlserver-se-15.0" # SQL Server Standard Edition
 rds_major_engine_version = "15.00"
 rds_instance_class       = "db.t3.xlarge"
