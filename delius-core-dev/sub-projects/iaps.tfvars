@@ -58,7 +58,7 @@ iaps_asg_props = {
   create_iaps_v1_asg = false
   owners             = "895523100917"
   ami_name           = "HMPPS IAPS Windows Server master*"
-  ami_id             = "ami-0b2aa4f9fd850693c"
+  ami_id             = "ami-061a833926cd59750"
   image_tag_version  = "1.0.0"
   # for pinning stage IAPS server deployment
   launch_template_id   = ""
