@@ -69,8 +69,8 @@ iaps_asg_suspended_processes = []
 # IAPS V2 Appserver ASG Configuration
 #====================================
 iaps_asgv2_props = {
-  ami_id            = "ami-0398dce8f96c37cc4"
-  image_tag_version = "0.35.0"
+  ami_id            = "ami-0195418351bd43f4f"
+  image_tag_version = "0.38.0"
 }
 
 # monitoring overrides - used to specify the instance name we use in the env
