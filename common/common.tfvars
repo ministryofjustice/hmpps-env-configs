@@ -285,8 +285,9 @@ spg_partnergateway_domain_ports = {
 
 # internal MOJ access
 internal_moj_access_cidr_blocks = [
-  "81.134.202.29/32",  #Moj VPN
-  "217.33.148.210/32", #Digital studio
+  "81.134.202.29/32",  # Moj VPN
+  "35.176.93.186/32",  # MOJ GlobalProtect
+  "217.33.148.210/32", # Digital studio
   "194.75.210.216/29", # Unilink AOVPN
   "78.33.10.50/31",    # Unilink AOVPN
   "78.33.10.52/30",    # Unilink AOVPN
@@ -302,12 +303,13 @@ internal_moj_access_cidr_blocks = [
 
 # public / user access
 user_access_cidr_blocks = [
-  "81.134.202.29/32",  #Moj VPN
-  "217.33.148.210/32", #Digital studio
-  "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
-  "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
-  "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
-  "35.176.246.202/32", #Engineering Jenkins non prod windows agent
+  "81.134.202.29/32",  # MOJ VPN
+  "35.176.93.186/32",  # MOJ GlobalProtect
+  "217.33.148.210/32", # Digital studio
+  "35.176.14.16/32",   # Engineering Jenkins non prod AZ 1
+  "35.177.83.160/32",  # Engineering Jenkins non prod AZ 2
+  "18.130.108.149/32", # Engineering Jenkins non prod AZ 3
+  "35.176.246.202/32", # Engineering Jenkins non prod windows agent
   "18.130.186.182/32", #TEST  test-test-windows-injector-0
   "35.178.200.180/32", #TEST  test-test-windows-injector-1
   "35.176.195.86/32",  #TEST  test-test-windows-loadrunner
@@ -333,8 +335,16 @@ user_access_cidr_blocks = [
   "62.25.106.209/32",  # OMNI
   "195.92.40.49/32",   # OMNI
   "62.232.198.64/28",  # I2N
-  "51.149.250.0/24",   # PTTP
-  "51.149.251.0/24",   # PTTP
+  "51.149.250.0/24",   # PTTP / MoJO Production Account BYOIP CIDR range
+  "51.149.251.0/24",   # PTTP / MoJO Production Account BYOIP CIDR range - PreProd
+  "51.149.249.0/29",   # ARK Corsham Internet Egress Exponential-E
+  "194.33.249.0/29",   # ARK Corsham Internet Egress Vodafone
+  "51.149.249.32/29",  # ARK Corsham Internet Egress Exponential-E
+  "194.33.248.0/29",   # ARK Corsham Internet Egress Vodafone
+  "20.49.214.199/32",  # Azure Landing Zone Egress
+  "20.49.214.228/32",  # Azure Landing Zone Egress
+  "195.89.157.56/29",  # HMP Five Wells
+  "195.59.215.184/29", # HMP Five Wells
 ]
 
 # jenkins access
