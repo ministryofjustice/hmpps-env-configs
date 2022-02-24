@@ -152,17 +152,20 @@ alf_database_map = {
 
 #share
 alfresco_share_configs = {
+  cpu    = "8192"
   memory = "16000"
 }
 
 # content
 alfresco_content_configs = {
+  cpu       = "8192"
   memory    = "25000"
   heap_size = "24000"
 }
 
 # alf solr
 alfresco_search_solr_configs = {
+  cpu       = "8192"
   ebs_size  = "10000"
   ebs_iops  = "16000"
   ebs_type  = "gp2"
