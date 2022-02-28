@@ -110,4 +110,4 @@ iaps_proxy_access_cidr_blocks = [
   "10.110.98.0/24",
 ]
 
-iaps_proxy_monitoring_enabled = "1"  #Enable IAPS Proxy Monitoring in the environment
+iaps_proxy_monitoring_enabled = "0"  #Enable IAPS Proxy Monitoring in the environment
