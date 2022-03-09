@@ -78,3 +78,14 @@ alfresco_asg_props = {
   ami_name = "HMPPS Alfresco *"
   image_id = "ami-0f7eff23903506a77" # used for updating ami launch permissions
 }
+
+alf_rds_props = {
+  instance_class          = "db.t2.large"
+  iops                    = 0
+  storage_type            = "gp2"
+  allocated_storage       = 100
+  maintenance_window      = "Wed:19:30-Wed:21:30"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 7
+  engine_version = "11.14"
+}
