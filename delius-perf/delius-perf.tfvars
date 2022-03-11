@@ -31,11 +31,11 @@ database_high_availability_count = {
 }
 
 # Define Weekly Schedule for Running Oracle Database Duplicate from Prod to Perf for the Delius DB
-oracle_duplicate_schedule = {
-  delius = {
-    target_host     = "delius_primarydb"
-    source_db       = "PRDNDA"
-    source_bucket   = "eu-west-2-del-prod-oracledb-backups"
-    schedule       =  "00 20 ? * 6 *"
-  }
-}
+# oracle_duplicate_schedule = {
+#   delius = {
+#     target_host     = "delius_primarydb"
+#     source_db       = "PRDNDA"
+#     source_bucket   = "eu-west-2-del-prod-oracledb-backups"
+#     schedule       =  "00 20 ? * 6 *"
+#   }
+# }
