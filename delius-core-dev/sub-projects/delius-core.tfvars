@@ -51,6 +51,8 @@ delius_app_config = {
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-core-dev/delius-core/weblogic/ndelius-domain/api-client-secret"
+  # gov.uk notify
+  secret_NOTIFICATION_API_KEY = "/delius-core-dev/delius-core/delius-application/govuk-notify/api-key"
 }
 
 # User Management

@@ -52,6 +52,8 @@ delius_app_config = {
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
+  # gov.uk notify
+  secret_NOTIFICATION_API_KEY = "/delius-test/delius/delius-application/govuk-notify/api-key"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
 }
@@ -70,7 +72,7 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 1
   ui_max_capacity  = 5
-  schedule         = "0 0/1 * * * *"      # When to run the merge/unmerge scheduled process
+  schedule         = "0 0/1 * * * *" # When to run the merge/unmerge scheduled process
 }
 
 # User Management
