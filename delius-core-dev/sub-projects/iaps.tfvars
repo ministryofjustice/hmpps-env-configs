@@ -69,7 +69,7 @@ iaps_asg_suspended_processes = []
 
 # IAPS V2 Appserver ASG Configuration
 iaps_asgv2_props = {
-  ami_id            = "ami-0f7c7307cdc35e596"
+  ami_id            = "ami-0f6ec0484f4d9b54f"
   image_tag_version = "0.41.0"
 }
 
