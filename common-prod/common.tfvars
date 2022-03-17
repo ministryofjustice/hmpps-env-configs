@@ -158,9 +158,8 @@ alfresco_share_configs = {
 
 # content
 alfresco_content_configs = {
-  cpu       = "8192"
-  memory    = "25000"
-  heap_size = "24000"
+  cpu       = "16384"
+  memory    = "98304"
 }
 
 # alf solr
