@@ -220,6 +220,11 @@ alf_db_parameters = [
   }
 ]
 
+# content
+alfresco_content_configs = {
+  desired_count = 2
+}
+
 # elk
 elk_backups_config = {
   transition_days                 = 2
