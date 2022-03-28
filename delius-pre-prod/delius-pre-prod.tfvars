@@ -13,39 +13,39 @@ smtp_instance_type = "m5.large"
 
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 02 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 01 ? * 1 *"
   },
   mis = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 06 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 05 ? * 1 *"
   },
   misboe = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 06 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 05 ? * 1 *"
   },
   misdsd = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 06 ? * 1 *"
+    daily_schedule  = "00 02 ? * 2-7 *"
+    weekly_schedule = "00 05 ? * 1 *"
   }
 }
 
 oracle_validate_backup_schedule = {
   delius = {
     host     = "delius_standbydb2"
-    schedule = "00 08 ? * 5 *"
+    schedule = "00 07 ? * 5 *"
   },
   mis = {
     host     = "mis_standbydb2"
-    schedule = "00 08 ? * 5 *"
+    schedule = "00 07 ? * 5 *"
   },
   misboe = {
     host     = "misboe_standbydb2"
-    schedule = "00 08 ? * 5 *"
+    schedule = "00 07 ? * 5 *"
   }
   misdsd = {
     host     = "misdsd_standbydb2"
-    schedule = "00 08 ? * 5 *"
+    schedule = "00 07 ? * 5 *"
   }
 }
 
