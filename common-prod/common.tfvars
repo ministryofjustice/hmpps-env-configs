@@ -162,6 +162,12 @@ alfresco_content_configs = {
   memory    = "98304"
 }
 
+# read only
+alfresco_ro_content_configs = {
+  cpu       = "16384"
+  memory    = "98304"
+}
+
 # alf solr
 alfresco_search_solr_configs = {
   cpu       = "8192"
@@ -170,6 +176,12 @@ alfresco_search_solr_configs = {
   ebs_type  = "gp2"
   heap_size = "48000"
   memory    = "50000"
+}
+
+# alfresco transform
+alfresco_transform_core_aio_configs= {
+  cpu       = "4096"
+  memory    = "16384"
 }
 
 alf_solr_config = {
