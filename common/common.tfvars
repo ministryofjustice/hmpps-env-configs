@@ -222,7 +222,7 @@ alf_db_parameters = [
 
 # content
 alfresco_content_configs = {
-  desired_count = 2
+  desired_count = 1
 }
 
 # elk
