@@ -10,6 +10,10 @@ required_patches:
       patch_files:
          - target_version: "19.9"
            filename: p26749785_199000DBRU_Generic.zip
+         - target_version: "19.12"
+           filename: p26749785_1912000DBRU_Generic.zip
+         - target_version: "19.14"
+           filename: p26749785_1914000DBRU_Generic.zip
       description: PERF_DIAG NEED TO HAVE MORE CONTROL IN DICTIONARY FOR AUTO_STATS_ADVISOR_TASK
       grid_patch: false
       database_patch: true
