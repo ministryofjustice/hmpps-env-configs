@@ -50,6 +50,8 @@ delius_app_config = {
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-prod/delius/weblogic/ndelius-domain/api-client-secret"
+  # gov.uk notify
+  secret_NOTIFICATION_API_KEY = "/delius-prod/delius/delius-application/govuk-notify/api-key"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
 }
