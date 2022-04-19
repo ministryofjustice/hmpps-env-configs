@@ -23,3 +23,9 @@ required_patches:
       database_patch: true
       datapatch_required: false
       replaces_patch: "30616738"
+delius_users:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:

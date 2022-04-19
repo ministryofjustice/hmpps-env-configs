@@ -11,3 +11,9 @@ sqlnet_parameters:
          SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
    database:
          SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
+delius_users:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:

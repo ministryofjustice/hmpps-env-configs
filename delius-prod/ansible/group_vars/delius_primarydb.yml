@@ -13,3 +13,8 @@ rman_retention_policy: RECOVERY WINDOW OF 366 DAYS
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
 delius_users:
   nhodgkinson_ro:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:

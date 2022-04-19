@@ -19,3 +19,9 @@ required_patches:
       grid_patch: false
       database_patch: true
       datapatch_required: true   
+delius_users:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:
