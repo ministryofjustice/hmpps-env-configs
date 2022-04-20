@@ -40,3 +40,7 @@ database_high_availability_count = {
   misboe = 2
   misdsd = 2
 }
+
+oracle_rotate_passwords_schedule = {
+    schedule       =  "45 15 ? * WED *"
+}
