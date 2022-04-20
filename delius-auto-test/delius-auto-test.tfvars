@@ -42,5 +42,5 @@ database_high_availability_count = {
 }
 
 oracle_rotate_passwords_schedule = {
-    schedule       =  "45 15 ? * WED *"
+    schedule_expression   =  "50 15 ? * WED *"
 }
