@@ -5,3 +5,9 @@ database_taf_service: POT1NDA_TAF
 database_primary_unique: POT1NDA
 database_primary_sid: POT1NDA
 oracle_osbws_chunk_size: 104857600
+delius_users:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:

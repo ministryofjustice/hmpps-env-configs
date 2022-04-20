@@ -18,6 +18,11 @@ delius_users:
   jpyke_ro:
   imak_ro:
   mryall_ro:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:
 # Following option determines the repository to use for preserving audited interaction data
 # (If not set then the data is not preserved)
 audited_interaction_repo: TSTNDA
