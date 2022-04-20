@@ -4,6 +4,12 @@ database_global_database: DATMIS
 database_taf_service: DATMIS_TAF
 database_primary_unique: DATMIS
 database_primary_sid: DATMIS
+delius_users:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:
 required_patches:
     p32044533:
       patch_files:

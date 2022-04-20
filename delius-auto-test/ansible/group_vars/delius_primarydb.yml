@@ -9,6 +9,11 @@ delius_users:
   dbarnett_ro:
   schippendale_ro:
   ksmith_ro:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:
 database_parameters:
    sga_max_size: 3280M
    sga_target: 3280M
