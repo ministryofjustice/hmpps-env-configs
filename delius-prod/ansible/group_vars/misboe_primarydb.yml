@@ -24,3 +24,9 @@ required_patches:
       datapatch_required: true
 database_autotasks:
       statistics_advisor: disabled
+delius_users:
+  bbuchan_dba:
+  rsingh_dba:
+  dreid_dba:
+  sgandalwar_dba:
+  kmoss_dba:
