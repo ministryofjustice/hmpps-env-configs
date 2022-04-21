@@ -34,3 +34,7 @@ database_high_availability_count = {
   misboe = 0
   misdsd = 0
 }
+
+oracle_rotate_passwords_schedule = {
+    schedule_expression   =  "00 11 ? * TUE *"
+}

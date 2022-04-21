@@ -40,3 +40,8 @@ database_high_availability_count = {
   misboe = 2
   misdsd = 2
 }
+
+# Times are GMT
+oracle_rotate_passwords_schedule = {
+    schedule_expression   =  "00 10 ? * TUE *"
+}
