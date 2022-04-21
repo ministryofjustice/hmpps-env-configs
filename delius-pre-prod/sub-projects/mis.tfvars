@@ -117,6 +117,7 @@ db_size_misboe = {
   disks_quantity_data = 1
   disk_iops_data      = 1000
   disk_iops_flash     = 500
+  disk_iops_root      = 1000
   disk_size_data      = 500 # Do not decrease this
   disk_size_flash     = 500 # Do not decrease this
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
