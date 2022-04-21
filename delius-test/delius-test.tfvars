@@ -39,5 +39,5 @@ database_high_availability_count = {
 oracle_delete_unused_dbids = "yes"
 
 oracle_rotate_passwords_schedule = {
-    schedule_expression   =  "00 14 ? * WED *"
+    schedule_expression   =  "00 14 ? * TUE *"
 }
