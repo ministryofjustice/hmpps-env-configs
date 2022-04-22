@@ -66,10 +66,11 @@ merge_config = {
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
-  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api-preprod.prison.service.justice.gov.uk"
-  SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
   SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
   SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+  SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api-preprod.prison.service.justice.gov.uk"
+  PRE-SENTENCE-SERVICE_BASEURL                          = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
 }
 delius_api_secrets = {
   APPINSIGHTS_INSTRUMENTATIONKEY = "/delius-pre-prod/delius/newtech/offenderapi/appinsights_key"

@@ -62,12 +62,13 @@ umt_config = {
 
 # Delius API
 delius_api_environment = {
-  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api-dev.prison.service.justice.gov.uk"
-  SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
-  SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
-  SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
   LOGGING_LEVEL_ORG_HIBERNATE_SQL                       = "DEBUG"
   SPRING_JPA_PROPERTIES_HIBERNATE_SHOW_SQL              = "true"
+  SPRING_DATASOURCE_USERNAME                            = "DELIUS_API_POOL"
+  SPRING_DATASOURCE_TYPE                                = "oracle.jdbc.pool.OracleDataSource"
+  SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
+  TOKENVERIFICATION_API_BASE_URL                        = "https://token-verification-api-dev.prison.service.justice.gov.uk"
+  PRE-SENTENCE-SERVICE_BASEURL                          = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
 }
 delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD = "/delius-core-dev/delius-core/delius-database/db/delius_api_pool_password"
