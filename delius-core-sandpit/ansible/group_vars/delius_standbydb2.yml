@@ -9,3 +9,4 @@ database_parameters:
    sga_target: 3280M
    pga_aggregate_target: 1640M
    pga_aggregate_limit: 3280M
+active_data_guard: true
