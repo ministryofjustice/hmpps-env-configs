@@ -114,4 +114,9 @@ alf_backups_map = {
   backups_expiration = 300
 }
 
+alfresco_search_solr_configs_overrides = {
+  backup_cold_storage_after = 14
+  backup_delete_after       = 120
+}
+
 solr_cmis_managed = true
