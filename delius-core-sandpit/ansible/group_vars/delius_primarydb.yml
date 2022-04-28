@@ -26,3 +26,4 @@ delius_users:
 # Following option determines the repository to use for preserving audited interaction data
 # (If not set then the data is not preserved)
 audited_interaction_repo: TSTNDA
+oracle_software: 1.2.3.4
