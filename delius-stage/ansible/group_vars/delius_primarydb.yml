@@ -35,3 +35,10 @@ delius_users:
 # (If not set then the data is not preserved)
 # DISABLED FOR CRC MIGRATION TESTING
 #audited_interaction_repo: PRDNDA
+oracle_software:
+      version: 19.12
+      superset_patch: p32895426_190000_Linux-x86-64.zip
+      ojvm_patch: p32876380_190000_Linux-x86-64.zip
+      opatch:
+          version: 12.2.0.1.25
+          filename: p6880880_190000_Linux-x86-64.zip
