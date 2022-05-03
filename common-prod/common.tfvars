@@ -164,8 +164,8 @@ alfresco_content_configs = {
 
 # read only
 alfresco_ro_content_configs = {
-  cpu       = "16384"
-  memory    = "98304"
+  cpu       = "4096"
+  memory    = "32768"
 }
 
 # alf solr
