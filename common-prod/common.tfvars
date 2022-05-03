@@ -171,10 +171,10 @@ alfresco_ro_content_configs = {
 # alf solr
 alfresco_search_solr_configs = {
   cpu       = "24576"
-  ebs_size  = "10000"
-  ebs_iops  = "16000"
-  ebs_type  = "gp2"
   memory    = "98304"
+  ebs_size  = "10000"
+  ebs_iops  = "8000"
+  ebs_type  = "gp3"
 }
 
 # alfresco transform
