@@ -174,7 +174,6 @@ alfresco_search_solr_configs = {
   ebs_size  = "10000"
   ebs_iops  = "16000"
   ebs_type  = "gp2"
-  heap_size = "48000"
   memory    = "98304"
 }
 
