@@ -33,7 +33,7 @@ self_signed_server_validity_period_hours = 2160
 self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
-bcs_instance_type  = "m5.8xlarge"
+bcs_instance_type  = "m5.4xlarge"
 bcs_root_size = 75
 bcs_server_count = 3
 bcs_disable_api_termination = false
@@ -41,7 +41,7 @@ bcs_ebs_optimized = true
 bcs_hibernation = false
 
 #Instance size for bps
-bps_instance_type  = "m5.8xlarge"
+bps_instance_type  = "m5.4xlarge"
 bps_root_size = 75
 bps_server_count = 3
 bps_disable_api_termination = false
@@ -49,7 +49,7 @@ bps_ebs_optimized = true
 bps_hibernation = false
 
 #Instance size for bws
-bws_instance_type  = "m5.8xlarge"
+bws_instance_type  = "m5.4xlarge"
 bws_root_size = 75
 bws_server_count = 2
 bws_disable_api_termination = false
