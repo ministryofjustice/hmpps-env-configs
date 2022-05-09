@@ -84,6 +84,7 @@ community_api_ingress = [
 ]
 
 env_user_access_cidr_blocks = [
+  "194.75.245.154/32", # Temporary access for external auditor Craig Dunn <craig.dunn@digitalaccessibilitycentre.org>.  To be removed after 9th July 2022.
 ]
 
 # DSS Batch Task
