@@ -7,7 +7,7 @@ public_ssl_arn = ""
 ## lambda auto start stop vars
 ## Autostop will only be enabled for MIS Windows servers and MIS Oracle Databases
 ec2_schedule                         = "true"
-# calendar_rule_enabled                = "true"
+calendar_rule_enabled                = "true"
 
 ## Due to requirement to enable autostop for a subset of MIS resources below vars have been added to target the correct resources only
 ## As the autostop key value is defined on env level, the below are to override the tag accordingly
