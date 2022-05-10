@@ -126,7 +126,7 @@ alf_ops_alerts = {
 }
 
 alf_rds_props = {
-  instance_class          = "db.m5.2xlarge"
+  instance_class          = "db.r5.xlarge"
   iops                    = 10000
   storage_type            = "io1"
   allocated_storage       = 1000
