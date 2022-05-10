@@ -126,7 +126,7 @@ alf_ops_alerts = {
 }
 
 alf_rds_props = {
-  instance_class          = "db.m5.2xlarge"
+  instance_class          = "db.r5.xlarge"
   iops                    = 10000
   storage_type            = "io1"
   allocated_storage       = 1000
@@ -339,7 +339,7 @@ es_admin_instance_type = "c5.xlarge"
 es_admin_volume_props = {
   size            = 1000
   type            = "io1"
-  iops            = 32000
+  iops            = 8000
   encrypted       = true
   device_name     = "/dev/xvdb"
   create_snapshot = false
