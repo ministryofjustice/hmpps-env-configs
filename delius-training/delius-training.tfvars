@@ -18,10 +18,11 @@ tagged_user                          = "<@U0167SAA7V5>"
 channel                              = "auto-stop-alerts"
 create_autostop_instance             = "true"
 
+# oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 05 ? * 4-6 *"
-    weekly_schedule = "30 05 ? * 3 *"
+    daily_schedule  = "30 06 ? * 4-6 *"
+    weekly_schedule = "30 06 ? * 3 *"
   }
 }
 
