@@ -25,7 +25,7 @@ rds_major_engine_version = "12.1"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v26"
+rds_engine_version = "12.1.0.2.v27"
 
 rds_character_set_name = "WE8ISO8859P15"
 
