@@ -62,4 +62,4 @@ parameters_local = {
 }
 
 copy_tags_to_snapshot = true
-auto_minor_version_upgrade = true
+auto_minor_version_upgrade = false
