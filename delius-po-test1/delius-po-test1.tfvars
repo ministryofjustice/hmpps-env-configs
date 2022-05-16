@@ -16,10 +16,11 @@ route53_strategic_hosted_zone_id = "Z3UY5M35HRRNTE"
 #channel                              = "po_test_delius_test_alerts"
 #create_autostop_instance             = "true"
 
+# oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "00 02 ? * 2-7 *"
-    weekly_schedule = "00 01 ? * 1 *"
+    daily_schedule  = "00 03 ? * 2-7 *"
+    weekly_schedule = "00 02 ? * 1 *"
   }
 }
 
