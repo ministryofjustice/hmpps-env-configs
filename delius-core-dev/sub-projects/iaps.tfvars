@@ -78,7 +78,7 @@ iaps_asgv2_props = {
 iaps_monitoring_rds_db_instance_identifier = "tf-eu-west-2-hmpps-delius-core-dev-iaps"
 
 copy_tags_to_snapshot = true
-auto_minor_version_upgrade = true
+auto_minor_version_upgrade = false
 
 # for use when we need to restore db from RDS snapshot
 snapshot_identifier = ""

@@ -39,6 +39,8 @@ storage_encrypted = true
 
 iaps_app_name = "iaps"
 
+auto_minor_version_upgrade = false
+
 #========================
 # IAPS EC2 ASG
 #========================
@@ -104,3 +106,4 @@ iaps_proxy_access_cidr_blocks = [
 ]
 
 iaps_proxy_monitoring_enabled = "1"  #Enable IAPS Proxy Monitoring in the environment
+
