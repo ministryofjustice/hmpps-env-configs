@@ -88,6 +88,22 @@ db_size_mis = {
   # total_storage  = 8000 # This should equal disks_quantity x disk_size
 }
 
+## MIS Datamart standby instances.
+## This variable was added to give us better granularity over standby instance
+## settings in non-prod environments to reduce cost
+db_size_mis_standby = {
+  database_size  = "x_large"
+  instance_type  = "r5.12xlarge"
+  disks_quantity      = 8   # Do not decrease this
+  disks_quantity_data = 4
+  disk_iops_data      = 2500
+  disk_iops_flash     = 500
+  disk_iops_root      = 1000
+  disk_size_data      = 1000 # Do not decrease this
+  disk_size_flash     = 1000 # Do not decrease this
+  # total_storage  = 8000 # This should equal disks_quantity x disk_size
+}
+
 ansible_vars_mis_db = {
   service_user_name             = "oracle"
   database_global_database_name = "PREMIS"

@@ -80,6 +80,20 @@ db_size_mis = {
   high_availability_count = 0
 }
 
+## MIS Datamart standby instances.
+## This variable was added to give us better granularity over standby instance
+## settings in non-prod environments to reduce cost
+db_size_mis_standby = {
+  database_size  = "x_large"
+  instance_type  = "r5.4xlarge"
+  disk_iops      = 5000
+  disks_quantity = 16          # Do not decrease this
+  disk_size      = 1000        # Do not decrease this
+
+  # total_storage  = 16000 # This should equal disks_quantity x disk_size
+  high_availability_count = 0
+}
+
 ansible_vars_mis_db = {
   service_user_name             = "oracle"
   database_global_database_name = "SANMIS"
