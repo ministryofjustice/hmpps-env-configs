@@ -8,7 +8,6 @@ availability_zone = {
 
 aws_account_ids = {
   delius-core-non-prod       = "723123699647"
-  hmpps-delius-auto-test     = "431912413968"
   hmpps-delius-test          = "728765553488"
   hmpps-delius-perf          = "130975965028"
   hmpps-delius-stage         = "205048117103"
@@ -79,7 +78,6 @@ alf_account_ids = {
   hmpps-delius-training-test = "130847504577"
   hmpps-delius-po-test1      = "716683748953"
   hmpps-delius-int           = "645753425509"
-  hmpps-delius-auto-test     = "431912413968"
   hmpps-delius-core-dev      = "723123699647"
   hmpps-alfresco-dev         = "563502482979"
   eng-non-prod               = "895523100917"

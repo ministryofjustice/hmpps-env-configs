@@ -8,7 +8,6 @@ availability_zone = {
 
 aws_account_ids = {
   delius-core-non-prod       = "723123699647"
-  hmpps-delius-auto-test     = "431912413968"
   hmpps-delius-test          = "728765553488"
   hmpps-delius-perf          = "130975965028"
   hmpps-delius-stage         = "205048117103"
