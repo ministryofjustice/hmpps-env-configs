@@ -39,3 +39,7 @@ oracle_duplicate_schedule = {
     schedule       =  "00 20 ? * 6 *"
   }
 }
+
+oracle_rotate_passwords_schedule = {
+    schedule_expression   =  "00 10 ? * WED *"
+}
