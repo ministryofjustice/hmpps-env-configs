@@ -36,3 +36,6 @@ required_patches:
       description: ORA-600 [qesrLoopOverSetRowP:rows] From Query In Job That Used To Work In 11g (Doc ID 2596180.1) 
       grid_patch: false
       database_patch: true
+emcli: /u01/app/oracle/oem/middleware/bin/emcli
+emctl_oem: /u01/app/oracle/oem/middleware/bin/emctl
+emctl_agent: /u01/app/oracle/oem13c_agent/agent_inst/bin/emctl
