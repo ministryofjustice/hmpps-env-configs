@@ -43,3 +43,4 @@ ndelius_oauth_config:
   scope: delius
 
 management_server: 10.160.0.245
+emctl_agent: /u01/app/oracle/oem13c_agent/agent_inst/bin/emctl
