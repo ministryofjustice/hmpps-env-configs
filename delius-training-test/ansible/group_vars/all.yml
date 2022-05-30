@@ -41,3 +41,4 @@ database_parameters:
    sga_target: 3280M
    pga_aggregate_target: 1640M
    pga_aggregate_limit: 3280M
+emctl_agent: /u01/app/oracle/oem13c_agent/agent_inst/bin/emctl
