@@ -81,3 +81,15 @@ alf_restore_status = "restore"
 alf_elk_service_map = {
   create_service_role = 0
 }
+
+alfresco_content_configs = {
+  image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-content"
+}
+
+alfresco_ro_content_configs = {
+  image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-content"
+}
+
+alfresco_share_configs = {
+  image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-share"
+}
