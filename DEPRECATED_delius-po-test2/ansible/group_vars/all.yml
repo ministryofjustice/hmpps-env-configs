@@ -1,8 +1,0 @@
---- # delius-po-test2 all.yml
-region: eu-west-2
-project_name: delius
-environment_name: delius-po-test2
-simple_environment_name: po-test2
-ndelius_version: "4.2.9.6"
-catalog: DCAT
-data_classification: unclassified-data
