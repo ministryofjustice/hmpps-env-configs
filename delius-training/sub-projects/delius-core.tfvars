@@ -3,14 +3,19 @@
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
-  database_size       = "small"
-  instance_type       = "t3.large"
-  disks_quantity      = 2 # Do not decrease this
-  disks_quantity_data = 1
-  disk_iops_data      = 1000
-  disk_iops_flash     = 500
-  disk_size_data      = 500 # Do not decrease this
-  disk_size_flash     = 500 # Do not decrease this
+  database_size        = "small"
+  instance_type        = "t3.large"
+  disk_type_data       = "io1" # Requires iops and throughput to be set
+  disk_throughput_data = 750   # Only relevant when disks_volume_type = "gp3"
+  disk_type_root       = "io1" # Requires iops and throughput to be set
+  disk_throughput_root = 125   # Only relevant when disks_volume_type = "gp3"
+  disks_quantity       = 2     # Do not decrease this
+  disks_quantity_data  = 1
+  disk_iops_root       = 1000
+  disk_iops_data       = 1000
+  disk_iops_flash      = 500
+  disk_size_data       = 500 # Do not decrease this
+  disk_size_flash      = 500 # Do not decrease this
   ## total_storage    = 1000 # This should equal disks_quantity x disk_size
 }
 
