@@ -33,8 +33,7 @@ delius_users:
   kmoss_dba:
 # Following option determines the repository to use for preserving audited interaction data
 # (If not set then the data is not preserved)
-# DISABLED FOR CRC MIGRATION TESTING
-#audited_interaction_repo: PRDNDA
+audited_interaction_repo: PRDNDA
 oracle_software:
       version: 19.14
       superset_patch: p33509923_190000_Linux-x86-64.zip
