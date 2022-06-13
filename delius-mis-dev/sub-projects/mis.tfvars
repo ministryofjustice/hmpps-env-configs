@@ -85,11 +85,16 @@ db_size_mis = {
   disks_quantity      = 2   # Do not decrease this
   disks_quantity_data = 1
   disk_iops_data      = 5000
-  disk_iops_flash     = 500
-  disk_iops_root      = 1000
+  disk_iops_flash     = 3000
+  disk_iops_root      = 3000
   disk_size_data      = 5000 # Do not decrease this
   disk_size_flash     = 5000 # Do not decrease this
   # total_storage  = 10000 # This should equal disks_quantity x disk_size
+
+  disk_type_root = "gp3"
+  disk_throughput_root = 125
+  disk_type_data = "gp3"
+  disk_throughput_data = 125
 }
 
 ## MIS Datamart standby instances.
@@ -141,11 +146,16 @@ db_size_misboe = {
   disks_quantity      = 2   # Do not decrease this
   disks_quantity_data = 1
   disk_iops_data      = 1000
-  disk_iops_flash     = 500
-  disk_iops_root      = 1000
+  disk_iops_flash     = 3000
+  disk_iops_root      = 3000
   disk_size_data      = 500 # Do not decrease this
   disk_size_flash     = 500 # Do not decrease this
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
+
+  disk_type_root = "gp3"
+  disk_throughput_root = 125
+  disk_type_data = "gp3"
+  disk_throughput_data = 125
 }
 
 ansible_vars_misboe_db = {
@@ -177,11 +187,16 @@ db_size_misdsd = {
   disks_quantity      = 2   # Do not decrease this
   disks_quantity_data = 1
   disk_iops_data      = 1000
-  disk_iops_flash     = 500
-  disk_iops_root      = 1000
+  disk_iops_flash     = 3000
+  disk_iops_root      = 3000
   disk_size_data      = 500 # Do not decrease this
   disk_size_flash     = 500 # Do not decrease this
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
+
+  disk_type_root = "gp3"
+  disk_throughput_root = 125
+  disk_type_data = "gp3"
+  disk_throughput_data = 125
 }
 
 ansible_vars_misdsd_db = {
