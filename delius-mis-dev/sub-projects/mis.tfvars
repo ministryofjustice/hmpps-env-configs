@@ -145,7 +145,7 @@ db_size_misboe = {
 
   disks_quantity      = 2   # Do not decrease this
   disks_quantity_data = 1
-  disk_iops_data      = 1000
+  disk_iops_data      = 3000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
   disk_size_data      = 500 # Do not decrease this
@@ -186,7 +186,7 @@ db_size_misdsd = {
 
   disks_quantity      = 2   # Do not decrease this
   disks_quantity_data = 1
-  disk_iops_data      = 1000
+  disk_iops_data      = 3000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
   disk_size_data      = 500 # Do not decrease this
