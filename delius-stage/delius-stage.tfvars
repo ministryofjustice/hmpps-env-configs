@@ -64,6 +64,10 @@ database_high_availability_count = {
   misdsd = 0
 }
 
+database_primary = {
+  delius = true
+}
+
 oracle_rotate_passwords_schedule = {
     schedule_expression   =  "00 16 ? * WED *"
 }

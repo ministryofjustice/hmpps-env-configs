@@ -37,6 +37,10 @@ database_high_availability_count = {
   misdsd = 0
 }
 
+database_primary = {
+  delius = true
+}
+
 oracle_delete_unused_dbids = "yes"
 
 oracle_rotate_passwords_schedule = {

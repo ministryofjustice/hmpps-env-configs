@@ -415,6 +415,10 @@ database_high_availability_count = {
   misdsd = 0
 }
 
+database_primary = {
+  delius = true
+}
+
 # How long we keep our indices for in elastic search in days
 retention_period = 60
 

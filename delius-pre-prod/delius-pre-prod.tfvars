@@ -74,3 +74,7 @@ database_high_availability_count = {
   misboe = 1
   misdsd = 1
 }
+
+database_primary = {
+  delius = true
+}
