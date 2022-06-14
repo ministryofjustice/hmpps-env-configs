@@ -33,76 +33,81 @@ self_signed_server_validity_period_hours = 2160
 self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
-bcs_instance_type  = "t2.xlarge"
-bcs_root_size = 75
-bcs_server_count = 1
+bcs_instance_type           = "t2.xlarge"
+bcs_root_size               = 75
+bcs_server_count            = 1
 bcs_disable_api_termination = false
-bcs_ebs_optimized = false
-bcs_hibernation = false
+bcs_ebs_optimized           = false
+bcs_hibernation             = false
 
 #Instance size for bps
-bps_instance_type  = "t2.xlarge"
-bps_root_size = 75
-bps_server_count = 1
+bps_instance_type           = "t2.xlarge"
+bps_root_size               = 75
+bps_server_count            = 1
 bps_disable_api_termination = false
-bps_ebs_optimized = false
-bps_hibernation = false
+bps_ebs_optimized           = false
+bps_hibernation             = false
 
 #Instance size for bws
-bws_instance_type  = "t2.xlarge"
-bws_root_size = 75
-bws_server_count = 1
+bws_instance_type           = "t2.xlarge"
+bws_root_size               = 75
+bws_server_count            = 1
 bws_disable_api_termination = false
-bws_ebs_optimized = false
-bws_hibernation = false
+bws_ebs_optimized           = false
+bws_hibernation             = false
 
 #Instance size for dis
-dis_instance_type  = "t2.xlarge"
-dis_root_size = 75
-dis_server_count = 1
+dis_instance_type           = "t2.xlarge"
+dis_root_size               = 75
+dis_server_count            = 1
 dis_disable_api_termination = false
-dis_ebs_optimized = false
-dis_hibernation = false
+dis_ebs_optimized           = false
+dis_hibernation             = false
 
 #Instance size for dfi
-dfi_instance_type  = "t2.xlarge"
-dfi_root_size = 75
-dfi_server_count = 1
-dfi_server_resources = 1
+dfi_instance_type           = "t2.xlarge"
+dfi_root_size               = 75
+dfi_server_count            = 1
+dfi_server_resources        = 1
 dfi_disable_api_termination = false
-dfi_ebs_optimized = false
-dfi_hibernation = false
+dfi_ebs_optimized           = false
+dfi_hibernation             = false
 
 # Databases
 ## MIS Datamart
 db_size_mis = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size = "small"
+  instance_type = "t3.large"
   # disk_iops      = 5000
   # disks_quantity = 2          # Do not decrease this
   # disk_size      = 5000        # Do not decrease this
 
-  disks_quantity      = 2   # Do not decrease this
+  disks_quantity      = 2 # Do not decrease this
   disks_quantity_data = 1
   disk_iops_data      = 5000
-  disk_iops_flash     = 500
-  disk_iops_root      = 1000
+  disk_iops_flash     = 3000
+  disk_iops_root      = 3000
   disk_size_data      = 5000 # Do not decrease this
   disk_size_flash     = 5000 # Do not decrease this
   # total_storage  = 10000 # This should equal disks_quantity x disk_size
+
+  disk_type_root       = "gp3"
+  disk_throughput_root = 125
+  disk_type_data       = "gp3"
+  disk_throughput_data = 125
 }
 
 ## MIS Datamart standby instances.
 ## This variable was added to give us better granularity over standby instance
 ## settings in non-prod environments to reduce cost
 db_size_mis_standby = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size = "small"
+  instance_type = "t3.large"
   # disk_iops      = 5000
   # disks_quantity = 2          # Do not decrease this
   # disk_size      = 5000        # Do not decrease this
 
-  disks_quantity      = 2   # Do not decrease this
+  disks_quantity      = 2 # Do not decrease this
   disks_quantity_data = 1
   disk_iops_data      = 5000
   disk_iops_flash     = 500
@@ -132,20 +137,25 @@ ansible_vars_mis_db = {
 
 ## Business Objects Repo
 db_size_misboe = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size = "small"
+  instance_type = "t3.large"
   # disk_iops      = 1000
   # disks_quantity = 2          # Do not decrease this
   # disk_size      = 500        # Do not decrease this
 
-  disks_quantity      = 2   # Do not decrease this
+  disks_quantity      = 2 # Do not decrease this
   disks_quantity_data = 1
-  disk_iops_data      = 1000
-  disk_iops_flash     = 500
-  disk_iops_root      = 1000
+  disk_iops_data      = 3000
+  disk_iops_flash     = 3000
+  disk_iops_root      = 3000
   disk_size_data      = 500 # Do not decrease this
   disk_size_flash     = 500 # Do not decrease this
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
+
+  disk_type_root       = "gp3"
+  disk_throughput_root = 125
+  disk_type_data       = "gp3"
+  disk_throughput_data = 125
 }
 
 ansible_vars_misboe_db = {
@@ -168,20 +178,25 @@ ansible_vars_misboe_db = {
 
 ## Data Services Repo
 db_size_misdsd = {
-  database_size  = "small"
-  instance_type  = "t3.large"
+  database_size = "small"
+  instance_type = "t3.large"
   # disk_iops      = 1000
   # disks_quantity = 2          # Do not decrease this
   # disk_size      = 500        # Do not decrease this
 
-  disks_quantity      = 2   # Do not decrease this
+  disks_quantity      = 2 # Do not decrease this
   disks_quantity_data = 1
-  disk_iops_data      = 1000
-  disk_iops_flash     = 500
-  disk_iops_root      = 1000
+  disk_iops_data      = 3000
+  disk_iops_flash     = 3000
+  disk_iops_root      = 3000
   disk_size_data      = 500 # Do not decrease this
   disk_size_flash     = 500 # Do not decrease this
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
+
+  disk_type_root       = "gp3"
+  disk_throughput_root = 125
+  disk_type_data       = "gp3"
+  disk_throughput_data = 125
 }
 
 ansible_vars_misdsd_db = {
@@ -205,12 +220,12 @@ ansible_vars_misdsd_db = {
 legacy_environment_name = "100"
 
 #Nextcloud
-nextcloud_instance_type      = "t2.small"
-rds_instance_class           = "db.t2.small"
-mariadb_monitoring_interval  = 30
-rds_allocated_storage        = "500"
-number_cache_clusters        = 2
-nextcloud_redis_node_type    = "cache.t3.small"
+nextcloud_instance_type     = "t2.small"
+rds_instance_class          = "db.t2.small"
+mariadb_monitoring_interval = 30
+rds_allocated_storage       = "500"
+number_cache_clusters       = 2
+nextcloud_redis_node_type   = "cache.t3.small"
 
 #monitoring
 mis_alarms_enabled = "true"
@@ -218,5 +233,5 @@ mis_alarms_enabled = "true"
 # mis fsx
 fsx_copy_tags_to_backups = false
 
-fsx_bfs_fileshare_size = 300      # GiB
-fsx_bfs_fileshare_throughput = 64 # MB/s
+fsx_bfs_fileshare_size       = 300 # GiB
+fsx_bfs_fileshare_throughput = 64  # MB/s
