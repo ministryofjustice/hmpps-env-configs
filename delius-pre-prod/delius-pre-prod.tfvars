@@ -49,15 +49,15 @@ oracle_validate_backup_schedule = {
     schedule = "00 07 ? * 5 *"
   },
   mis = {
-    host     = "mis_standbydb2"
+    host     = "mis_standbydb1"
     schedule = "00 07 ? * 5 *"
   },
   misboe = {
-    host     = "misboe_standbydb2"
+    host     = "misboe_standbydb1"
     schedule = "00 07 ? * 5 *"
   }
   misdsd = {
-    host     = "misdsd_standbydb2"
+    host     = "misdsd_standbydb1"
     schedule = "00 07 ? * 5 *"
   }
 }
