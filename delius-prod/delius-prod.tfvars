@@ -41,15 +41,15 @@ oracle_validate_backup_schedule = {
     schedule = "00 13 ? * 4 *"
   },
   mis = {
-    host     = "mis_standbydb2"
+    host     = "mis_standbydb1"
     schedule = "00 13 ? * 4 *"
   },
   misboe = {
-    host     = "misboe_standbydb2"
+    host     = "misboe_standbydb1"
     schedule = "00 13 ? * 4 *"
   }
   misdsd = {
-    host     = "misdsd_standbydb2"
+    host     = "misdsd_standbydb1"
     schedule = "00 13 ? * 4 *"
   }
 }
@@ -58,4 +58,11 @@ oracle_delete_unused_dbids = "no"
 
 oracle_rotate_passwords_schedule = {
     schedule_expression   =  "00 14 ? * WED *"
+}
+
+database_high_availability_count = {
+  delius = 2
+  mis    = 1
+  misboe = 1
+  misdsd = 1
 }

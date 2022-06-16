@@ -1,9 +1,0 @@
---- # misdsd_standbydb2.yml
-
-database_standby_unique: PRDDSDS2
-database_standby_sid: PRDDSDS2
-sqlnet_parameters:
-   grid:
-         SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
-   database:
-         SQLNET.INBOUND_CONNECTION_TIMEOUT: 300
