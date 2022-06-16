@@ -25,13 +25,13 @@ oracle_backup_schedule = {
 
 oracle_validate_backup_schedule = {
   delius = {
-    host     =  "delius_standbydb1"
-    schedule =  "00 07 ? * 3 *"
+    host     =  "delius_primarydb"
+    schedule =  "00 16 ? * 3 *"
   }
 }
 
 database_high_availability_count = {
-  delius = 1
+  delius = 0
   mis    = 0
   misboe = 0
   misdsd = 0
