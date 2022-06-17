@@ -58,7 +58,7 @@ oracle_backup_schedule = {
 oracle_delete_unused_dbids = "yes"
 
 database_high_availability_count = {
-  delius = 1
+  delius = 0
   mis    = 0
   misboe = 0
   misdsd = 0
