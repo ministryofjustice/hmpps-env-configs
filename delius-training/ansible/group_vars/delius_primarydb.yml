@@ -17,4 +17,3 @@ oracle_software:
       opatch:
           version: 12.2.0.1.25
           filename: p6880880_190000_Linux-x86-64.zip
-audited_interaction_repo: TSTNDA
