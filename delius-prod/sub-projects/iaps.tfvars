@@ -21,7 +21,7 @@ rds_allocated_storage = "500"
 
 rds_family = "oracle-ee-19"
 
-rds_major_engine_version = "19.0.0.0"
+rds_major_engine_version = "19"
 
 rds_engine = "oracle-ee"
 
@@ -40,6 +40,8 @@ storage_encrypted = true
 iaps_app_name = "iaps"
 
 auto_minor_version_upgrade = false
+
+allow_major_version_upgrade = true
 
 #========================
 # IAPS EC2 ASG
