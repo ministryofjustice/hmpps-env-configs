@@ -41,7 +41,7 @@ iaps_app_name = "iaps"
 
 auto_minor_version_upgrade = false
 
-allow_major_version_upgrade = true
+allow_major_version_upgrade = false
 
 #========================
 # IAPS EC2 ASG
