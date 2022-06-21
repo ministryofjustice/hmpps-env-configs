@@ -19,6 +19,7 @@ smtp_instance_type = "m5.large"
 #lambda auto start stop vars
 ec2_schedule                 = "true"
 autoscaling_schedule         = "true"
+rds_schedule                 = "true"
 calendar_rule_enabled        = "true"
 autostop_notify_rule_enabled = "true"
 create_autostop_instance     = "true"
