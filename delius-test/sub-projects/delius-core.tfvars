@@ -77,7 +77,7 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 1
   ui_max_capacity  = 5
-  schedule         = "0 0/1 * * * *" # When to run the merge/unmerge scheduled process
+  schedule         = "0 5/10 7-23 ? * MON-FRI" # When to run the merge/unmerge scheduled process
 }
 
 # User Management
