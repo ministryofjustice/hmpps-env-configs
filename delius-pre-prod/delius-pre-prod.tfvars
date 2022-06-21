@@ -45,7 +45,7 @@ oracle_backup_schedule = {
 
 oracle_validate_backup_schedule = {
   delius = {
-    host     = "delius_standbydb2"
+    host     = "delius_standbydb1"
     schedule = "00 07 ? * 5 *"
   },
   mis = {
@@ -69,7 +69,7 @@ oracle_rotate_passwords_schedule = {
 }
 
 database_high_availability_count = {
-  delius = 2
+  delius = 1
   mis    = 1
   misboe = 1
   misdsd = 1
