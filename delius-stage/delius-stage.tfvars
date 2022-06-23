@@ -6,13 +6,14 @@ public_ssl_arn = ""
 
 ## lambda auto start stop vars
 ## Autostop will only be enabled for MIS Windows servers and MIS Oracle Databases
-ec2_schedule                         = "true"
-autoscaling_schedule                 = "true"
-calendar_rule_enabled                = "true"
-autostop_notify_rule_enabled         = "true"
-tagged_user                          = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A> <@U8F91EGG3> <@UNY29P4P9>"
-channel                              = "auto-stop-alerts"
-create_autostop_instance             = "true"
+ec2_schedule                 = "true"
+autoscaling_schedule         = "true"
+rds_schedule                 = "true"
+calendar_rule_enabled        = "true"
+autostop_notify_rule_enabled = "true"
+tagged_user                  = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A> <@U8F91EGG3> <@UNY29P4P9>"
+channel                      = "auto-stop-alerts"
+create_autostop_instance     = "true"
 
 ## Due to requirement to enable autostop for a subset of MIS resources below vars have been added to target the correct resources only
 ## As the autostop key value is defined on env level, the below are to override the tag accordingly
@@ -38,7 +39,7 @@ smtp_instance_type = "m5.large"
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "00 00 ? * 2-7 *"
+    daily_schedule  = "00 03 ? * 2-7 *"
     weekly_schedule = "00 02 ? * 1 *"
   },
   mis = {
@@ -58,7 +59,7 @@ oracle_backup_schedule = {
 oracle_delete_unused_dbids = "yes"
 
 database_high_availability_count = {
-  delius = 1
+  delius = 0
   mis    = 0
   misboe = 0
   misdsd = 0
