@@ -79,7 +79,7 @@ env_user_access_cidr_blocks = []
 
 # Delius-Core Slack alarms
 delius_alarms_config = {
-  enabled     = true
+  enabled     = false
   quiet_hours = [19, 7] # 19:00-07:00 to coincide with auto-stop/start
 }
 
