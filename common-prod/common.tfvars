@@ -155,29 +155,33 @@ alfresco_share_configs = {
 
 # content
 alfresco_content_configs = {
-  cpu       = "16384"
-  memory    = "98304"
+  cpu             = "16384"
+  memory          = "98304"
+  db_pool_initial = 100
+  db_pool_max     = 1500
 }
 
 # read only
 alfresco_ro_content_configs = {
-  cpu       = "4096"
-  memory    = "32768"
+  cpu             = "4096"
+  memory          = "32768"
+  db_pool_initial = 100
+  db_pool_max     = 1500
 }
 
 # alf solr
 alfresco_search_solr_configs = {
-  cpu       = "24576"
-  memory    = "98304"
-  ebs_size  = "10000"
-  ebs_iops  = "8000"
-  ebs_type  = "gp3"
+  cpu      = "24576"
+  memory   = "98304"
+  ebs_size = "10000"
+  ebs_iops = "8000"
+  ebs_type = "gp3"
 }
 
 # alfresco transform
-alfresco_transform_core_aio_configs= {
-  cpu       = "4096"
-  memory    = "16384"
+alfresco_transform_core_aio_configs = {
+  cpu    = "4096"
+  memory = "16384"
 }
 
 alf_solr_config = {

@@ -216,7 +216,15 @@ alf_db_parameters = [
 
 # content
 alfresco_content_configs = {
-  desired_count = 1
+  desired_count   = 1
+  db_pool_initial = 100
+  db_pool_max     = 300
+}
+
+# read-only
+alfresco_ro_content_configs = {
+  db_pool_initial = 100
+  db_pool_max     = 300
 }
 
 # elk
