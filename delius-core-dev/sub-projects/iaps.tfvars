@@ -21,13 +21,13 @@ rds_monitoring_interval = 5
 
 rds_allocated_storage = "500"
 
-rds_family = "oracle-ee-12.1"
+rds_family = "oracle-ee-19"
 
-rds_major_engine_version = "12.1"
+rds_major_engine_version = "19"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "12.1.0.2.v27"
+rds_engine_version = "19.0.0.0.ru-2022-01.rur-2022-01.r1"
 
 rds_character_set_name = "WE8ISO8859P15"
 
@@ -40,6 +40,8 @@ license_model = "bring-your-own-license"
 storage_encrypted = true
 
 iaps_app_name = "iaps"
+
+allow_major_version_upgrade = true
 
 #========================
 # IAPS EC2 ASG
