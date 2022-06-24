@@ -8,7 +8,7 @@ public_ssl_arn = ""
 ## Autostop will only be enabled for MIS Windows servers and MIS Oracle Databases
 ec2_schedule                 = "true"
 autoscaling_schedule         = "true"
-rds_schedule                 = "true"
+rds_schedule                 = "false"
 calendar_rule_enabled        = "true"
 autostop_notify_rule_enabled = "true"
 tagged_user                  = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A> <@U8F91EGG3> <@UNY29P4P9>"
