@@ -7,11 +7,12 @@ route53_strategic_hosted_zone_id = "Z3JN6545N8RW90"
 
 
 #lambda auto start stop vars
-ec2_schedule                         = "true"
-autoscaling_schedule                 = "true"
-calendar_rule_enabled                = "true"
-autostop_notify_rule_enabled         = "true"
-create_autostop_instance             = "true"
+ec2_schedule                 = "true"
+rds_schedule                 = "true"
+autoscaling_schedule         = "true"
+calendar_rule_enabled        = "true"
+autostop_notify_rule_enabled = "true"
+create_autostop_instance     = "true"
 
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
@@ -31,5 +32,5 @@ database_high_availability_count = {
 oracle_delete_unused_dbids = "yes"
 
 oracle_rotate_passwords_schedule = {
-    schedule_expression   =  "00 9 ? * TUE *"
+  schedule_expression = "00 9 ? * TUE *"
 }
