@@ -20,7 +20,6 @@ Initially the Structure will be as follows and a new dir per env:
 ├── delius-core-dev
 ├── delius-core-playpit
 ├── delius-core-sandpit
-├── delius-perf
 ├── delius-preprod
 ├── delius-prod
 ├── delius-stage
