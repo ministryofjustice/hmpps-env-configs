@@ -84,10 +84,14 @@ alf_elk_service_map = {
 
 alfresco_content_configs = {
   image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-content"
+  db_pool_initial = 100
+  db_pool_max     = 300
 }
 
 alfresco_ro_content_configs = {
   image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-content"
+  db_pool_initial = 100
+  db_pool_max     = 300
 }
 
 alfresco_share_configs = {
