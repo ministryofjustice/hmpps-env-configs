@@ -86,10 +86,6 @@ db_size_mis = {
   disk_size_data      = 1000 # Do not decrease this
   disk_size_flash     = 1000 # Do not decrease this
   # total_storage  = 8000 # This should equal disks_quantity x disk_size
-  disk_type_root       = "io1"
-  disk_throughput_root = null
-  disk_type_data       = "io1"
-  disk_throughput_data = null
 }
 
 ## MIS Datamart standby instances.
