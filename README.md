@@ -18,8 +18,6 @@ Initially the Structure will be as follows and a new dir per env:
 ```
 ├── common
 ├── delius-core-dev
-├── delius-core-playpit
-├── delius-core-sandpit
 ├── delius-preprod
 ├── delius-prod
 ├── delius-stage
