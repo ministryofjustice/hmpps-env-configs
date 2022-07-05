@@ -42,5 +42,4 @@ ndelius_oauth_config:
   display_name: Login using justice.gov.uk credentials
   scope: delius
 
-management_server: 10.160.0.245
 emctl_agent: /u01/app/oracle/oem13c_agent/agent_inst/bin/emctl
