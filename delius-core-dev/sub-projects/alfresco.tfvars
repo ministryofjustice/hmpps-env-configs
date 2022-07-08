@@ -68,3 +68,15 @@ alfresco_app_name = "alfresco"
 
 # spg broker url
 spg_messaging_broker_url = "tcp://spgw-jms-int.dev.delius-core.probation.hmpps.dsd.io:61616"
+
+# Environment-specific configuration for alfresco-database RDS instance
+alf_rds_props = {
+  instance_class          = "db.t2.large"
+  iops                    = 0
+  storage_type            = "gp2"
+  allocated_storage       = 100
+  maintenance_window      = "Wed:19:30-Wed:21:30"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 7
+  engine_version          = "11.14"
+}

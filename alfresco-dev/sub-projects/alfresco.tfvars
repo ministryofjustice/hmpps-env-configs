@@ -97,3 +97,15 @@ alfresco_ro_content_configs = {
 alfresco_share_configs = {
   image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-share"
 }
+
+# Environment-specific configuration for alfresco-database RDS instance
+alf_rds_props = {
+  instance_class          = "db.t2.large"
+  iops                    = 0
+  storage_type            = "gp2"
+  allocated_storage       = 100
+  maintenance_window      = "Wed:19:30-Wed:21:30"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 7
+  engine_version          = "11.14"
+}

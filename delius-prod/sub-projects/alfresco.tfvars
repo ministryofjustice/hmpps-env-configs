@@ -83,7 +83,7 @@ alf_ops_alerts = {
   ssm_token          = "/alfresco/slack/token"
 }
 
-# db instance size override
+# Environment-specific configuration for alfresco-database RDS instance
 alf_rds_props = {
   instance_class          = "db.m5.12xlarge"
   iops                    = 10000
@@ -97,6 +97,7 @@ alf_rds_props = {
   major_engine_version    = "9.6"
   replica_engine_version  = "9.6.9"
   master_engine_version   = "9.6.9"
+  engine_version          = "11.14"
 }
 
 alf_elk_service_map = {

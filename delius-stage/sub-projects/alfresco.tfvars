@@ -93,6 +93,7 @@ alf_asg_map = {
 
 alf_snapshot_identifier = "alfresco-database-snapshot"
 
+# Environment-specific configuration for alfresco-database RDS instance
 alf_rds_props = {
   instance_class          = "db.m5.2xlarge"
   iops                    = 10000
@@ -107,6 +108,7 @@ alf_rds_props = {
   replica_engine_version  = "9.6.9"
   master_engine_version   = "9.6.9"
   snapshot_identifier     = "alfresco-database-snapshot"
+  engine_version          = "11.14"
 }
 
 alf_elk_service_map = {

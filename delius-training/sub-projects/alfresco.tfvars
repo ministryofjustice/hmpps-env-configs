@@ -87,5 +87,5 @@ alf_rds_props = {
   maintenance_window      = "Wed:19:30-Wed:21:30"
   backup_window           = "02:00-04:00"
   backup_retention_period = 7
-  engine_version = "11.14"
+  engine_version          = "11.14"
 }
