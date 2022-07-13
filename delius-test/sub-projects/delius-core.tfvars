@@ -6,7 +6,7 @@ db_size_delius_core = {
   database_size        = "medium"
   instance_type        = "r5.xlarge"
   disk_type_data       = "gp3" # Requires iops and throughput to be set
-  disk_throughput_data = 150   # Only relevant when disks_volume_type = "gp3"
+  disk_throughput_data = 125   # Only relevant when disks_volume_type = "gp3"
   disk_type_root       = "gp3" # Requires iops and throughput to be set
   disk_throughput_root = 125   # Only relevant when disks_volume_type = "gp3"
   disks_quantity       = 4     # Do not decrease this
