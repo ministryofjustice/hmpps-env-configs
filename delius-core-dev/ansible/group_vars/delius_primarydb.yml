@@ -22,3 +22,4 @@ oracle_software:
           version: 12.2.0.1.29
           filename: p6880880_190000_Linux-x86-64.12.2.0.1.29.zip
 audited_interaction_repo: TSTNDA
+fsfo_mode: observe
