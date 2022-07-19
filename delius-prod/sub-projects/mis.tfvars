@@ -86,6 +86,10 @@ db_size_mis = {
   disk_size_data      = 1000 # Do not decrease this
   disk_size_flash     = 1000 # Do not decrease this
   # total_storage  = 8000 # This should equal disks_quantity x disk_size
+  disk_type_root       = "io1"
+  disk_throughput_root = 0
+  disk_type_data       = "io1"
+  disk_throughput_data = 0
 }
 
 ## MIS Datamart standby instances.
@@ -102,6 +106,10 @@ db_size_mis_standby = {
   disk_size_data      = 1000 # Do not decrease this
   disk_size_flash     = 1000 # Do not decrease this
   # total_storage  = 8000 # This should equal disks_quantity x disk_size
+  disk_type_root       = "io1"
+  disk_throughput_root = 0
+  disk_type_data       = "io1"
+  disk_throughput_data = 0
 }
 
 ansible_vars_mis_db = {
