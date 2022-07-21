@@ -22,3 +22,7 @@ mail_account = [
 cr_jitbit_access_cidrs = []
 
 channel = "cr-alert-jitbit-prod"
+
+# FSx file system
+storage_capacity = 320
+# throughput_capacity = 16 # To increase storage_capacity, throughput_capacity needs to be at least 16
