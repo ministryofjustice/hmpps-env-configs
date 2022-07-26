@@ -567,6 +567,8 @@ node_max_count    = 50
 ecs_instance_type = "r5.2xlarge" /* Memory-optimized instances, based on usage. If usage becomes more dynamic in future,
                                   * we should move to multiple ASGs and make use of placement strategies/constraints. */
 
+ecs_cluster_target_capacity = 99 # This value allows for one idling instance to be available in the cluster
+
 # Default ECS scaling config. These options can be overridden per-service below.
 common_ecs_scaling_config = {
   memory       = 2048 # Memory to assign to ECS container in MB
