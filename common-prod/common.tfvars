@@ -7,16 +7,16 @@ availability_zone = {
 }
 
 aws_account_ids = {
-  delius-core-non-prod       = "723123699647"
-  hmpps-delius-test          = "728765553488"
-  hmpps-delius-stage         = "205048117103"
-  hmpps-delius-mis-dev       = "479759138745"
-  hmpps-delius-mis-test      = "349354156492"
-  hmpps-delius-training      = "330914586320"
-  hmpps-delius-pre-prod      = "010587221707"
-  hmpps-delius-prod          = "050243167760"
-  hmpps-probation            = "570551521311"
-  cloud-platform             = "754256621582"
+  delius-core-non-prod  = "723123699647"
+  hmpps-delius-test     = "728765553488"
+  hmpps-delius-stage    = "205048117103"
+  hmpps-delius-mis-dev  = "479759138745"
+  hmpps-delius-mis-test = "349354156492"
+  hmpps-delius-training = "330914586320"
+  hmpps-delius-pre-prod = "010587221707"
+  hmpps-delius-prod     = "050243167760"
+  hmpps-probation       = "570551521311"
+  cloud-platform        = "754256621582"
 }
 
 ## cr = community rehabilitation
@@ -434,6 +434,9 @@ user_access_cidr_blocks = [
   "20.49.214.228/32",  # Azure Landing Zone Egress
   "195.89.157.56/29",  # HMP Five Wells
   "195.59.215.184/29", # HMP Five Wells
+  "35.178.209.113/32", # cloudplatform-live-1
+  "3.8.51.207/32",     # cloudplatform-live-2
+  "35.177.252.54/32",  # cloudplatform-live-3
 ]
 
 # jenkins access
@@ -728,9 +731,9 @@ default_community_api_config = {
 }
 community_api_config = {}
 default_community_api_ingress = [ # Common CIDR ranges for ingress in all production environments
-  "35.178.209.113/32",            # cloudplatform-live1-1
-  "3.8.51.207/32",                # cloudplatform-live1-2
-  "35.177.252.54/32",             # cloudplatform-live1-3
+  "35.178.209.113/32",            # cloudplatform-live-1
+  "3.8.51.207/32",                # cloudplatform-live-2
+  "35.177.252.54/32",             # cloudplatform-live-3
   "35.177.252.195/32",            # healthkick
   "34.252.4.39/32",               # Analytics platform
   "34.251.212.33/32",             # Analytics platform
