@@ -473,6 +473,8 @@ default_contact_search_config = {
 }
 contact_search_config = {}
 
+ecs_cluster_target_capacity = 99 # This value allows for one idling instance to be available in the cluster
+
 # Default ECS scaling config. These options can be overridden per-service below.
 common_ecs_scaling_config = {
   memory       = 2048 # Memory to assign to ECS container in MB
