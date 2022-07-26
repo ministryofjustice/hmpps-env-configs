@@ -121,7 +121,7 @@ alf_ops_alerts = {
 
 alf_rds_props = {
   instance_class          = "db.r5.xlarge"
-  iops                    = 10000
+  iops                    = 5000
   storage_type            = "io1"
   allocated_storage       = 1000
   maintenance_window      = "Wed:19:30-Wed:21:30"
