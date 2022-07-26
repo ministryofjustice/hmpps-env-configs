@@ -79,7 +79,7 @@ alf_snapshot_identifier = "alfresco-database-snapshot"
 # Environment-specific configuration for alfresco-database RDS instance
 alf_rds_props = {
   instance_class          = "db.m5.2xlarge"
-  iops                    = 10000
+  iops                    = 5000
   storage_type            = "io1"
   allocated_storage       = 1000
   maintenance_window      = "Wed:19:30-Wed:21:30"
