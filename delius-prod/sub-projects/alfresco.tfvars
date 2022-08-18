@@ -85,7 +85,7 @@ alf_ops_alerts = {
 
 # Environment-specific configuration for alfresco-database RDS instance
 alf_rds_props = {
-  instance_class          = "db.m5.12xlarge"
+  instance_class          = "db.m5.8xlarge"
   iops                    = 5000
   storage_type            = "io1"
   allocated_storage       = 1000
