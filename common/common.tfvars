@@ -11,7 +11,6 @@ aws_account_ids = {
   hmpps-delius-test     = "728765553488"
   hmpps-delius-stage    = "205048117103"
   hmpps-delius-mis-dev  = "479759138745"
-  hmpps-delius-mis-test = "349354156492"
   hmpps-delius-training = "330914586320"
   hmpps-delius-pre-prod = "010587221707"
   hmpps-delius-prod     = "050243167760"
