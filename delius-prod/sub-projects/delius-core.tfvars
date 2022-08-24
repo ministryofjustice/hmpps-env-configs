@@ -45,7 +45,7 @@ delius_app_config = {
   # oauth
   env_OAUTH_URL = "https://sign-in.hmpps.service.justice.gov.uk/auth"
   # user sign-in
-  env_OAUTH_LOGIN_ENABLED          = "false"
+  env_OAUTH_LOGIN_ENABLED          = "true"
   env_OAUTH_CLIENT_ID              = "delius-ui"
   secret_OAUTH_CLIENT_SECRET       = "/delius-prod/delius/weblogic/ndelius-domain/oauth-client-secret"
   env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api.prison.service.justice.gov.uk/token/verify"
