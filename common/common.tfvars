@@ -617,7 +617,7 @@ new_tech_config = {}
 default_community_api_config = {
   image_url        = "quay.io/hmpps/community-api"
   cpu              = 2048
-  enable_public_lb = true
+  enable_public_lb = false # Disabled due to XSS redirect vulnerability in Swagger (See https://dsdmoj.atlassian.net/browse/PI-403)
 
   # Default environment variables.
   # These will be overridden by CircleCI for certain environments, see https://github.com/ministryofjustice/community-api/blob/main/.circleci/config.yml
