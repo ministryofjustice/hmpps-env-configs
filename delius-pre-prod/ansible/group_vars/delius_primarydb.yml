@@ -46,6 +46,7 @@ delius_users:
   kmoss_dba:
   abritton_ro:
   smcallister_ro:
+  swatson_ro:
 oracle_software:
   version: 19.14
   superset_patch: p33509923_190000_Linux-x86-64.zip
