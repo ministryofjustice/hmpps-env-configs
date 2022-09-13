@@ -1,5 +1,0 @@
---- # delius_standbydb1.yml
-
-database_standby_unique: DMTNDAS1
-database_standby_sid: DMTNDAS1
-database_primary_unique: DMTNDA

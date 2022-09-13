@@ -7,16 +7,15 @@ availability_zone = {
 }
 
 aws_account_ids = {
-  delius-core-non-prod       = "723123699647"
-  hmpps-delius-test          = "728765553488"
-  hmpps-delius-stage         = "205048117103"
-  hmpps-delius-mis-dev       = "479759138745"
-  hmpps-delius-mis-test      = "349354156492"
-  hmpps-delius-training      = "330914586320"
-  hmpps-delius-pre-prod      = "010587221707"
-  hmpps-delius-prod          = "050243167760"
-  hmpps-probation            = "570551521311"
-  cloud-platform             = "754256621582"
+  delius-core-non-prod  = "723123699647"
+  hmpps-delius-test     = "728765553488"
+  hmpps-delius-stage    = "205048117103"
+  hmpps-delius-mis-dev  = "479759138745"
+  hmpps-delius-training = "330914586320"
+  hmpps-delius-pre-prod = "010587221707"
+  hmpps-delius-prod     = "050243167760"
+  hmpps-probation       = "570551521311"
+  cloud-platform        = "754256621582"
 }
 
 ## cr = community rehabilitation
@@ -121,7 +120,7 @@ alf_ops_alerts = {
 
 alf_rds_props = {
   instance_class          = "db.r5.xlarge"
-  iops                    = 10000
+  iops                    = 5000
   storage_type            = "io1"
   allocated_storage       = 1000
   maintenance_window      = "Wed:19:30-Wed:21:30"
@@ -378,6 +377,7 @@ internal_moj_access_cidr_blocks = [
   "35.176.93.186/32",  # MOJ GlobalProtect
   "217.33.148.210/32", # Digital studio
   "194.75.210.216/29", # Unilink AOVPN
+  "83.98.63.176/29",   # Unilink AOVPN
   "78.33.10.50/31",    # Unilink AOVPN
   "78.33.10.52/30",    # Unilink AOVPN
   "78.33.10.56/30",    # Unilink AOVPN
@@ -400,6 +400,7 @@ user_access_cidr_blocks = [
   "18.130.108.149/32", # Engineering Jenkins non prod AZ 3
   "35.176.246.202/32", # Engineering Jenkins non prod windows agent
   "194.75.210.216/29", # Unilink AOVPN
+  "83.98.63.176/29",   # Unilink AOVPN
   "78.33.10.50/31",    # Unilink AOVPN
   "78.33.10.52/30",    # Unilink AOVPN
   "78.33.10.56/30",    # Unilink AOVPN
@@ -434,6 +435,9 @@ user_access_cidr_blocks = [
   "20.49.214.228/32",  # Azure Landing Zone Egress
   "195.89.157.56/29",  # HMP Five Wells
   "195.59.215.184/29", # HMP Five Wells
+  "35.178.209.113/32", # cloudplatform-live-1
+  "3.8.51.207/32",     # cloudplatform-live-2
+  "35.177.252.54/32",  # cloudplatform-live-3
 ]
 
 # jenkins access
@@ -566,6 +570,8 @@ node_min_count    = 5
 node_max_count    = 50
 ecs_instance_type = "r5.2xlarge" /* Memory-optimized instances, based on usage. If usage becomes more dynamic in future,
                                   * we should move to multiple ASGs and make use of placement strategies/constraints. */
+
+ecs_cluster_target_capacity = 99 # This value allows for one idling instance to be available in the cluster
 
 # Default ECS scaling config. These options can be overridden per-service below.
 common_ecs_scaling_config = {
@@ -726,9 +732,9 @@ default_community_api_config = {
 }
 community_api_config = {}
 default_community_api_ingress = [ # Common CIDR ranges for ingress in all production environments
-  "35.178.209.113/32",            # cloudplatform-live1-1
-  "3.8.51.207/32",                # cloudplatform-live1-2
-  "35.177.252.54/32",             # cloudplatform-live1-3
+  "35.178.209.113/32",            # cloudplatform-live-1
+  "3.8.51.207/32",                # cloudplatform-live-2
+  "35.177.252.54/32",             # cloudplatform-live-3
   "35.177.252.195/32",            # healthkick
   "34.252.4.39/32",               # Analytics platform
   "34.251.212.33/32",             # Analytics platform

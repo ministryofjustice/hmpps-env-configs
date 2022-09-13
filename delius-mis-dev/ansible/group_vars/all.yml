@@ -1,4 +1,4 @@
---- # delius-mis-test all.yml
+---
 region: eu-west-2
 project_name: delius
 environment_name: delius-mis-dev
