@@ -292,6 +292,7 @@ internal_moj_access_cidr_blocks = [
   "35.176.93.186/32",  # MOJ GlobalProtect
   "217.33.148.210/32", # Digital studio
   "194.75.210.216/29", # Unilink AOVPN
+  "83.98.63.176/29",   # Unilink AOVPN
   "78.33.10.50/31",    # Unilink AOVPN
   "78.33.10.52/30",    # Unilink AOVPN
   "78.33.10.56/30",    # Unilink AOVPN
@@ -317,6 +318,7 @@ user_access_cidr_blocks = [
   "35.178.200.180/32", #TEST  test-test-windows-injector-1
   "35.176.195.86/32",  #TEST  test-test-windows-loadrunner
   "194.75.210.216/29", # Unilink AOVPN
+  "83.98.63.176/29",   # Unilink AOVPN
   "78.33.10.50/31",    # Unilink AOVPN
   "78.33.10.52/30",    # Unilink AOVPN
   "78.33.10.56/30",    # Unilink AOVPN
