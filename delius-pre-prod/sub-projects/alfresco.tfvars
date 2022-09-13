@@ -47,6 +47,7 @@ allowed_cidr_block = [
   "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
   "35.178.206.119/32",  #SPG instance public NAT address
   "194.75.210.216/29",  # Unilink AOVPN
+  "83.98.63.176/29",    # Unilink AOVPN
   "78.33.10.50/31",     # Unilink AOVPN
   "78.33.10.52/30",     # Unilink AOVPN
   "78.33.10.56/30",     # Unilink AOVPN
