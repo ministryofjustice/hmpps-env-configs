@@ -67,11 +67,12 @@ gdpr_config = {
   ui_max_capacity  = 10
   api_version      = "0.27.0"
   ui_version       = "0.27.0"
+  # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders      = "-" #
   cron_retainedoffendersiicsa = "-" #
   cron_eligiblefordeletion    = "-" #
-  cron_deleteoffenders        = "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
+  cron_deleteoffenders        = "-" # Disabled 
   cron_destructionlogclearing = "-" #
 }
 
