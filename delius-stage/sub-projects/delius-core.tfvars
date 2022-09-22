@@ -71,7 +71,7 @@ gdpr_config = {
   cron_retainedoffenders      = "-" #
   cron_retainedoffendersiicsa = "-" #
   cron_eligiblefordeletion    = "-" #
-  cron_deleteoffenders        = "0 0 13 ? * MON-FRI" # Run at 1300 Monday to Friday
+  cron_deleteoffenders        = "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   cron_destructionlogclearing = "-" #
 }
 
