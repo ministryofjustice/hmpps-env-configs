@@ -67,6 +67,12 @@ gdpr_config = {
   ui_max_capacity  = 10
   api_version      = "0.27.0"
   ui_version       = "0.27.0"
+  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders      = "-" #
+  cron_retainedoffendersiicsa = "-" #
+  cron_eligiblefordeletion    = "-" #
+  cron_deleteoffenders        = "0 0 13 ? * MON-FRI" # Run at 1300 Monday to Friday
+  cron_destructionlogclearing = "-" #
 }
 
 # Merge
