@@ -65,6 +65,7 @@ oracle_validate_backup_schedule = {
 oracle_delete_unused_dbids = "yes"
 
 oracle_rotate_passwords_schedule = {
+    forks = "10"
     schedule_expression   =  "00 12 ? * WED *"
 }
 
