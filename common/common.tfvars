@@ -542,6 +542,8 @@ default_gdpr_config = {
   api_max_capacity            = 0
   ui_min_capacity             = 0
   ui_max_capacity             = 0
+  # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
+  # Example "0 0 13 ? * MON-FRI" Will trigger once at 1300 Monday to Friday
   cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders      = "-" #
   cron_retainedoffendersiicsa = "-" #
