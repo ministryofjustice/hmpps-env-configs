@@ -363,6 +363,12 @@ jenkins_access_cidr_blocks = [
   "35.176.246.202/32", #Engineering Jenkins non prod windows agent
 ]
 
+moj_cloud_platform_cidr_blocks = [
+  "35.178.209.113/32", # cloudplatform-live-1
+  "3.8.51.207/32",     # cloudplatform-live-2
+  "35.177.252.54/32",  # cloudplatform-live-3
+]
+
 #SPG has activeMQ running incomming
 #database talks to activemq on spg weblogic domain
 #spg talks to spg-weblogic-domain over activemq
