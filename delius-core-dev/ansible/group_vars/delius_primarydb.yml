@@ -19,7 +19,7 @@ oracle_software:
       superset_patch: p34130714_190000_Linux-x86-64.zip
       ojvm_patch: p34086870_190000_Linux-x86-64.zip    
       opatch:
-          version: 12.2.0.1.29
+          version: 12.2.0.1.32
           filename: p6880880_190000_Linux-x86-64.12.2.0.1.32.zip
 audited_interaction_repo: TSTNDA
 fsfo_mode: observe
