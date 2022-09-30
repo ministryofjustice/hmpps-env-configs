@@ -42,12 +42,12 @@ ci_db_ingress_1521 = true
 
 # WebLogic
 delius_app_config = {
-  
+
   # Increase min capacity due to issues with regression pack execution
   # DST-12284 Intermittent 502 Bad Gateway / 504 Gateway Timeout errors
   min_capacity = 6
   max_capacity = 10
-    
+
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
 
   # oauth
@@ -71,10 +71,12 @@ delius_app_config = {
 
 # GDPR
 gdpr_config = {
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity = 1
-  ui_min_capacity  = 1
-  ui_max_capacity  = 5
+  api_min_capacity  = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity  = 1
+  ui_min_capacity   = 1
+  ui_max_capacity   = 5
+  db_instance_class = "db.m5.large"
+  db_storage        = 100
 }
 
 # Merge
