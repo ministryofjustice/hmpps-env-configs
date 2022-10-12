@@ -2,3 +2,12 @@
 
 database_standby_unique: DNDAS1
 database_standby_sid: DNDAS1
+required_patches:
+    p34476155:
+      patch_files:
+         - target_version: "19.16"
+           filename: p34476155_1916000DBRU_Linux-x86-64.zip
+      description: INTERMITTENT DURATION NOT ACTIVE ISSUE WITH SDO FUNCTIONS
+      grid_patch: false
+      database_patch: true
+      datapatch_required: false
