@@ -79,12 +79,13 @@ gdpr_config = {
   db_storage        = 100
   # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
-  cron_identifyduplicates     = "0 0 9 ? * MON" # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "0 0 9 ? * TUE" #
-  cron_retainedoffendersiicsa = "0 0 9 ? * WED" #
-  cron_eligiblefordeletion    = "0 0 9 ? * THU" #
-  cron_deleteoffenders        = "0 0 9 ? * FRI" #  
-  cron_destructionlogclearing = "-" #
+  # "0 0 9 ? * MON" Monday at 9am
+  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders      = "-" # disabled
+  cron_retainedoffendersiicsa = "-" # disabled
+  cron_eligiblefordeletion    = "-" # disabled
+  cron_deleteoffenders        = "-" # disabled
+  cron_destructionlogclearing = "-" # disabled
 }
 
 # Merge
