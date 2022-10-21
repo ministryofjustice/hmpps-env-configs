@@ -57,7 +57,7 @@ bws_ebs_optimized = true
 bws_hibernation = false
 
 #Instance size for dis
-dis_instance_type  = "m5.8xlarge"
+dis_instance_type  = "m5.12xlarge"
 dis_root_size = 75
 dis_server_count = 1
 dis_disable_api_termination = false
