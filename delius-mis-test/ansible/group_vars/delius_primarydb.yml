@@ -1,7 +1,0 @@
---- # delius_primarydb.yml
-
-database_global_database: DMTNDA
-database_taf_service: DMTNDA_TAF
-database_primary_unique: DMTNDA
-database_primary_sid: DMTNDA
-cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"

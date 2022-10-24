@@ -46,6 +46,7 @@ allowed_cidr_block = [
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
   "35.178.206.119/32", #SPG instance public NAT address
   "194.75.210.216/29", # Unilink AOVPN
+  "83.98.63.176/29",   # Unilink AOVPN
   "78.33.10.50/31",    # Unilink AOVPN
   "78.33.10.52/30",    # Unilink AOVPN
   "78.33.10.56/30",    # Unilink AOVPN
@@ -83,13 +84,29 @@ alf_elk_service_map = {
 }
 
 alfresco_content_configs = {
-  image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-content"
+  image_url       = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-content"
+  db_pool_initial = 100
+  db_pool_max     = 300
 }
 
 alfresco_ro_content_configs = {
-  image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-content"
+  image_url       = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-content"
+  db_pool_initial = 100
+  db_pool_max     = 300
 }
 
 alfresco_share_configs = {
   image_url = "563502482979.dkr.ecr.eu-west-2.amazonaws.com/hmpps/alfresco-share"
+}
+
+# Environment-specific configuration for alfresco-database RDS instance
+alf_rds_props = {
+  instance_class          = "db.t2.large"
+  iops                    = 0
+  storage_type            = "gp2"
+  allocated_storage       = 100
+  maintenance_window      = "Wed:19:30-Wed:21:30"
+  backup_window           = "02:00-04:00"
+  backup_retention_period = 7
+  engine_version          = "11.14"
 }

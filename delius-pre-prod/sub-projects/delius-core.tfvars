@@ -5,15 +5,15 @@
 db_size_delius_core = {
   database_size        = "x_large"
   instance_type        = "r5.4xlarge"
-  disk_type_data       = "io1" # Requires iops and throughput to be set
-  disk_throughput_data = 750   # Only relevant when disks_volume_type = "gp3"
-  disk_type_root       = "io1" # Requires iops and throughput to be set
-  disk_throughput_root = 125   # Only relevant when disks_volume_type = "gp3"
+  disk_type_data       = "gp3" # Requires iops and throughput to be set
+  disk_throughput_data = 700   # Only relevant when disks_volume_type = "gp3"
+  disk_type_root       = "gp3" # Requires iops and throughput to be set
+  disk_throughput_root = 700   # Only relevant when disks_volume_type = "gp3"
   disks_quantity       = 16    # Do not decrease this
   disks_quantity_data  = 10
-  disk_iops_root       = 1000
-  disk_iops_data       = 1000
-  disk_iops_flash      = 500
+  disk_iops_root       = 3000
+  disk_iops_data       = 3000
+  disk_iops_flash      = 3000
   disk_size_data       = 1000 # Do not decrease this
   disk_size_flash      = 1000 # Do not decrease this
   ## total_storage    = 16000 # This should equal disks_quantity x disk_size
@@ -40,7 +40,7 @@ delius_app_config = {
   # oauth
   env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
   # user sign-in
-  env_OAUTH_LOGIN_ENABLED          = "false"
+  env_OAUTH_LOGIN_ENABLED          = "true"
   env_OAUTH_CLIENT_ID              = "delius-ui"
   secret_OAUTH_CLIENT_SECRET       = "/delius-pre-prod/delius/weblogic/ndelius-domain/oauth-client-secret"
   env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api-preprod.prison.service.justice.gov.uk/token/verify"
@@ -50,6 +50,8 @@ delius_app_config = {
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-pre-prod/delius/weblogic/ndelius-domain/api-client-secret"
+  # Temp set logging to DEBUG
+  env_LOG_LEVEL_NDELIUS = "DEBUG"
 }
 
 # GDPR
@@ -58,6 +60,8 @@ gdpr_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
+  api_version      = "0.27.0"
+  ui_version       = "0.27.0"
 }
 
 # Merge

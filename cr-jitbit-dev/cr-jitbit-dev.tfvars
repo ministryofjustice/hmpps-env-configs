@@ -39,3 +39,6 @@ alarms_config = {
     enabled     = true
     quiet_hours = [18, 8]
 }
+
+# FSx file system
+storage_capacity = 36

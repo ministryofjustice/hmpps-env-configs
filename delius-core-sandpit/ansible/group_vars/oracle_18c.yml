@@ -1,9 +1,0 @@
---- # oracle_18c.yml
-
-database_global_database: SANNDA
-database_taf_service: SANNDA_TAF
-database_primary_unique: SANNDA
-database_primary_sid: SANNDA
-oracle_osbws_chunk_size: 104857600
-
-database_version: oracle_18c

@@ -7,18 +7,15 @@ availability_zone = {
 }
 
 aws_account_ids = {
-  delius-core-non-prod       = "723123699647"
-  hmpps-delius-test          = "728765553488"
-  hmpps-delius-perf          = "130975965028"
-  hmpps-delius-stage         = "205048117103"
-  hmpps-delius-mis-dev       = "479759138745"
-  hmpps-delius-mis-test      = "349354156492"
-  hmpps-delius-training      = "330914586320"
-  hmpps-delius-training-test = "130847504577"
-  hmpps-delius-pre-prod      = "010587221707"
-  hmpps-delius-prod          = "050243167760"
-  hmpps-probation            = "570551521311"
-  cloud-platform             = "754256621582"
+  delius-core-non-prod  = "723123699647"
+  hmpps-delius-test     = "728765553488"
+  hmpps-delius-stage    = "205048117103"
+  hmpps-delius-mis-dev  = "479759138745"
+  hmpps-delius-training = "330914586320"
+  hmpps-delius-pre-prod = "010587221707"
+  hmpps-delius-prod     = "050243167760"
+  hmpps-probation       = "570551521311"
+  cloud-platform        = "754256621582"
 }
 
 ## cr = community rehabilitation
@@ -71,12 +68,11 @@ spg_app_name = "spg"
 
 # accounts used for updating alfresco ami permissions at release
 alf_account_ids = {
-  hmpps-delius-test          = "728765553488"
-  hmpps-delius-training      = "330914586320"
-  hmpps-delius-training-test = "130847504577"
-  hmpps-delius-core-dev      = "723123699647"
-  hmpps-alfresco-dev         = "563502482979"
-  eng-non-prod               = "895523100917"
+  hmpps-delius-test     = "728765553488"
+  hmpps-delius-training = "330914586320"
+  hmpps-delius-core-dev = "723123699647"
+  hmpps-alfresco-dev    = "563502482979"
+  eng-non-prod          = "895523100917"
 }
 
 alfresco_jvm_memory = "8G"
@@ -216,7 +212,15 @@ alf_db_parameters = [
 
 # content
 alfresco_content_configs = {
-  desired_count = 1
+  desired_count   = 1
+  db_pool_initial = 100
+  db_pool_max     = 300
+}
+
+# read-only
+alfresco_ro_content_configs = {
+  db_pool_initial = 100
+  db_pool_max     = 300
 }
 
 # elk
@@ -288,6 +292,7 @@ internal_moj_access_cidr_blocks = [
   "35.176.93.186/32",  # MOJ GlobalProtect
   "217.33.148.210/32", # Digital studio
   "194.75.210.216/29", # Unilink AOVPN
+  "83.98.63.176/29",   # Unilink AOVPN
   "78.33.10.50/31",    # Unilink AOVPN
   "78.33.10.52/30",    # Unilink AOVPN
   "78.33.10.56/30",    # Unilink AOVPN
@@ -313,6 +318,7 @@ user_access_cidr_blocks = [
   "35.178.200.180/32", #TEST  test-test-windows-injector-1
   "35.176.195.86/32",  #TEST  test-test-windows-loadrunner
   "194.75.210.216/29", # Unilink AOVPN
+  "83.98.63.176/29",   # Unilink AOVPN
   "78.33.10.50/31",    # Unilink AOVPN
   "78.33.10.52/30",    # Unilink AOVPN
   "78.33.10.56/30",    # Unilink AOVPN
@@ -344,6 +350,9 @@ user_access_cidr_blocks = [
   "20.49.214.228/32",  # Azure Landing Zone Egress
   "195.89.157.56/29",  # HMP Five Wells
   "195.59.215.184/29", # HMP Five Wells
+  "35.178.209.113/32", # cloudplatform-live-1
+  "3.8.51.207/32",     # cloudplatform-live-2
+  "35.177.252.54/32",  # cloudplatform-live-3
 ]
 
 # jenkins access
@@ -352,6 +361,12 @@ jenkins_access_cidr_blocks = [
   "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
   "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
   "35.176.246.202/32", #Engineering Jenkins non prod windows agent
+]
+
+moj_cloud_platform_cidr_blocks = [
+  "35.178.209.113/32", # cloudplatform-live-1
+  "3.8.51.207/32",     # cloudplatform-live-2
+  "35.177.252.54/32",  # cloudplatform-live-3
 ]
 
 #SPG has activeMQ running incomming
@@ -468,6 +483,8 @@ default_contact_search_config = {
 }
 contact_search_config = {}
 
+ecs_cluster_target_capacity = 99 # This value allows for one idling instance to be available in the cluster
+
 # Default ECS scaling config. These options can be overridden per-service below.
 common_ecs_scaling_config = {
   memory       = 2048 # Memory to assign to ECS container in MB
@@ -508,7 +525,7 @@ pwm_config = {}
 # UMT
 default_umt_config = {
   image_url                     = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
-  version                       = "1.13.0"         # Application version
+  version                       = "1.13.1"         # Application version
   redis_node_type               = "cache.t3.small" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 1                # Number of Redis shards (node groups) in the cluster
   redis_replicas_per_node_group = 0                # Number of read-only replicas for each shard (node group)
@@ -531,6 +548,8 @@ default_gdpr_config = {
   api_max_capacity            = 0
   ui_min_capacity             = 0
   ui_max_capacity             = 0
+  # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
+  # Example "0 0 13 ? * MON-FRI" Will trigger once at 1300 Monday to Friday
   cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders      = "-" #
   cron_retainedoffendersiicsa = "-" #
@@ -608,7 +627,7 @@ new_tech_config = {}
 default_community_api_config = {
   image_url        = "quay.io/hmpps/community-api"
   cpu              = 2048
-  enable_public_lb = true
+  enable_public_lb = false # Disabled due to XSS redirect vulnerability in Swagger (See https://dsdmoj.atlassian.net/browse/PI-403)
 
   # Default environment variables.
   # These will be overridden by CircleCI for certain environments, see https://github.com/ministryofjustice/community-api/blob/main/.circleci/config.yml
@@ -616,9 +635,9 @@ default_community_api_config = {
 }
 community_api_config = {}
 default_community_api_ingress = [ # Common CIDR ranges for ingress in all non-production environments
-  "35.178.209.113/32",            # cloudplatform-live1-1
-  "3.8.51.207/32",                # cloudplatform-live1-2
-  "35.177.252.54/32",             # cloudplatform-live1-3
+  "35.178.209.113/32",            # cloudplatform-live-1
+  "3.8.51.207/32",                # cloudplatform-live-2
+  "35.177.252.54/32",             # cloudplatform-live-3
   "35.177.252.195/32",            # healthkick
   "34.252.4.39/32",               # Analytics platform
   "34.251.212.33/32",             # Analytics platform

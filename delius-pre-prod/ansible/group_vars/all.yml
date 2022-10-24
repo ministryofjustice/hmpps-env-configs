@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-pre-prod
 simple_environment_name: pre-prod
-ndelius_version: "5.3.12.3"
+ndelius_version: "5.4.14.4"
 catalog: PCAT
 data_classification: official-data
 delegated_account_id: "010587221707"
@@ -42,5 +42,4 @@ ndelius_oauth_config:
   display_name: Login using justice.gov.uk credentials
   scope: delius
 
-management_server: 10.160.0.245
 emctl_agent: /u01/app/oracle/oem13c_agent/agent_inst/bin/emctl

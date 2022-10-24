@@ -5,15 +5,15 @@
 db_size_delius_core = {
   database_size        = "medium"
   instance_type        = "r5.xlarge"
-  disk_type_data       = "io1" # Requires iops and throughput to be set
-  disk_throughput_data = 750   # Only relevant when disks_volume_type = "gp3"
-  disk_type_root       = "io1" # Requires iops and throughput to be set
+  disk_type_data       = "gp3" # Requires iops and throughput to be set
+  disk_throughput_data = 125   # Only relevant when disks_volume_type = "gp3"
+  disk_type_root       = "gp3" # Requires iops and throughput to be set
   disk_throughput_root = 125   # Only relevant when disks_volume_type = "gp3"
   disks_quantity       = 4     # Do not decrease this
   disks_quantity_data  = 2
-  disk_iops_root       = 1000
-  disk_iops_data       = 1000
-  disk_iops_flash      = 500
+  disk_iops_root       = 3000
+  disk_iops_data       = 3000
+  disk_iops_flash      = 3000
   disk_size_data       = 500 # Do not decrease this
   disk_size_flash      = 500 # Do not decrease this
   ## total_storage    = 2000 # This should equal disks_quantity x disk_size
@@ -42,6 +42,12 @@ ci_db_ingress_1521 = true
 
 # WebLogic
 delius_app_config = {
+
+  # Increase min capacity due to issues with regression pack execution
+  # DST-12284 Intermittent 502 Bad Gateway / 504 Gateway Timeout errors
+  min_capacity = 6
+  max_capacity = 10
+
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
 
   # oauth
@@ -65,10 +71,21 @@ delius_app_config = {
 
 # GDPR
 gdpr_config = {
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity = 1
-  ui_min_capacity  = 1
-  ui_max_capacity  = 5
+  api_min_capacity  = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity  = 1
+  ui_min_capacity   = 1
+  ui_max_capacity   = 5
+  db_instance_class = "db.m5.large"
+  db_storage        = 100
+  # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
+  # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
+  # "0 0 9 ? * MON" Monday at 9am
+  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders      = "-" # disabled
+  cron_retainedoffendersiicsa = "-" # disabled
+  cron_eligiblefordeletion    = "-" # disabled
+  cron_deleteoffenders        = "-" # disabled
+  cron_destructionlogclearing = "-" # disabled
 }
 
 # Merge
