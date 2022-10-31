@@ -113,3 +113,5 @@ iaps_proxy_access_cidr_blocks = [
 ]
 
 iaps_proxy_monitoring_enabled = "1"  #Enable IAPS Proxy Monitoring in the environment
+
+iaps_overide_autostop_tags         = "False"    ##Override Phase1 autostop tag key value for Oracle RDS Database
