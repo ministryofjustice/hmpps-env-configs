@@ -20,7 +20,6 @@ aws_account_ids = {
 
 ## cr = community rehabilitation
 cr_account_ids = {
-  hmpps-cr-jira-non-production        = "529698415668"
   hmpps-cr-jira-production            = "172219029581"
   hmpps-cr-jitbit-non-production      = "377957503799"
   hmpps-cr-jitbit-production          = "097456858629"
