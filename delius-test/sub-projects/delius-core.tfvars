@@ -84,7 +84,7 @@ gdpr_config = {
   # "0 0 9 ? * MON" Monday at 9am
   cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders      = "-" # disabled
-  cron_retainedoffendersiicsa = "-" # disabled
+  cron_retainedoffendersiicsa = "0 0 8 ? * MON-FRI" # Run at 8am Monday to Friday
   cron_eligiblefordeletion    = "-" # disabled
   cron_deleteoffenders        = "-" # disabled
   cron_destructionlogclearing = "-" # disabled
