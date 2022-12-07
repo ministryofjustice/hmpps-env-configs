@@ -51,6 +51,10 @@ delius_users:
   mheywardchaplin_ro:
   acody_sro:
   arichardson_ro:
+  bbuchan_ro:
+     ash_report: true
+  ataboudi_ro:
+     ash_report: true
 oracle_software:
   version: 19.16
   superset_patch: p34130714_190000_Linux-x86-64.zip

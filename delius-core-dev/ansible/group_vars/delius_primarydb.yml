@@ -9,6 +9,8 @@ delius_users:
   nmcmahon_ro:
   mrees_ro:
   ahaslehurst_ro:
+  bbuchan_ro:
+     ash_report: true
   bbuchan_dba:
   rsingh_dba:
   dreid_dba:
