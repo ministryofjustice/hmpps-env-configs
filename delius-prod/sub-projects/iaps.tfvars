@@ -25,7 +25,7 @@ rds_major_engine_version = "19"
 
 rds_engine = "oracle-ee"
 
-rds_engine_version = "19.0.0.0.ru-2022-01.rur-2022-01.r1"
+rds_engine_version = "19.0.0.0.ru-2022-07.rur-2022-07.r1"
 
 rds_character_set_name = "WE8ISO8859P15"
 
