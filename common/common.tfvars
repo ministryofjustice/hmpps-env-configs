@@ -514,6 +514,17 @@ default_delius_eis_config = {
 }
 delius_eis_config = {}
 
+# Default Delius TestData API (WebLogic) config
+default_delius_testdata_api_config = {
+  image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:TD5.6.0-testdata-api" # Version is managed by Ansible
+  min_capacity          = 1
+  cpu                   = 2048
+  memory                = 4096 # 4GB
+  env_USER_MEM_ARGS     = "-XX:MaxRAMPercentage=90.0"
+  env_LOG_LEVEL_NDELIUS = "DEBUG"
+}
+delius_testdata_api_config = {}
+
 # Password Self-Service Tool (PWM)
 default_pwm_config = {
   image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/pwm"
