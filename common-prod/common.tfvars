@@ -631,16 +631,6 @@ default_umt_config = {
 }
 umt_config = {}
 
-# Approved Premises Tracker API
-default_aptracker_api_config = {
-  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-aptracker-api"
-  version      = "1.13" # Application version
-  log_level    = "INFO" # Application log-level
-  min_capacity = 0      # Service has not yet been enabled in prod environments
-  max_capacity = 0
-}
-aptracker_api_config = {}
-
 # Delius GDPR compliance tool
 default_gdpr_config = {
   api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
