@@ -5,8 +5,8 @@ database_taf_service: STGDSD_TAF
 database_primary_unique: STGDSD
 database_primary_sid: STGDSD
 database_parameters:
-   sga_max_size: 1G
-   sga_target: 1G
+   sga_max_size: 5G
+   sga_target: 5G
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
 sqlnet_parameters:
    grid:
