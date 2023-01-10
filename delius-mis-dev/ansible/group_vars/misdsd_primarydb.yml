@@ -5,8 +5,8 @@ database_taf_service: DMDDSD_TAF
 database_primary_unique: DMDDSD
 database_primary_sid: DMDDSD
 database_parameters:
-   sga_max_size: 1G
-   sga_target: 1G
+   sga_max_size: 5G
+   sga_target: 5G
 sqlnet_parameters:
    grid:
          SQLNET.INBOUND_CONNECT_TIMEOUT: 300

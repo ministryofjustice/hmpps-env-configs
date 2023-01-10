@@ -20,6 +20,8 @@ required_patches:
            filename: p26749785_1912000DBRU_Generic.zip
          - target_version: "19.14"
            filename: p26749785_1914000DBRU_Generic.zip
+         - target_version: "19.16"
+           filename: p26749785_1916000DBRU_Generic.zip
       description: PERF_DIAG NEED TO HAVE MORE CONTROL IN DICTIONARY FOR AUTO_STATS_ADVISOR_TASK
       grid_patch: false
       database_patch: true
@@ -33,11 +35,11 @@ delius_users:
   sgandalwar_dba:
   kmoss_dba:
 oracle_software:
-  version: 19.14
-  superset_patch: p33509923_190000_Linux-x86-64.zip
-  ojvm_patch: p33561310_190000_Linux-x86-64.zip
+  version: 19.16
+  superset_patch: p34130714_190000_Linux-x86-64.zip
+  ojvm_patch: p34086870_190000_Linux-x86-64.zip
   opatch:
-    version: 12.2.0.1.29
-    filename: p6880880_190000_Linux-x86-64.12.2.0.1.29.zip
+    version: 12.2.0.1.32
+    filename: p6880880_190000_Linux-x86-64.12.2.0.1.32.zip
 rman_level_0_backup_duration_target: "06:00"
 fsfo_mode: observe

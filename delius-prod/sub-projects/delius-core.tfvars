@@ -6,9 +6,9 @@ db_size_delius_core = {
   database_size        = "x_large"
   instance_type        = "r5.4xlarge"
   disk_type_data       = "gp3" # Requires iops and throughput to be set
-  disk_throughput_data = 1000   # Only relevant when disks_volume_type = "gp3"
+  disk_throughput_data = 1000  # Only relevant when disks_volume_type = "gp3"
   disk_type_root       = "gp3" # Requires iops and throughput to be set
-  disk_throughput_root = 1000   # Only relevant when disks_volume_type = "gp3"
+  disk_throughput_root = 1000  # Only relevant when disks_volume_type = "gp3"
   disks_quantity       = 16    # Do not decrease this
   disks_quantity_data  = 10
   disk_iops_root       = 4000
@@ -75,13 +75,6 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-}
-
-# Approved Premises Tracking API
-# (This service is currently disabled in Production)
-aptracker_api_config = {
-  ecs_scaling_min_capacity = 0
-  ecs_scaling_max_capacity = 0
 }
 
 # Delius API
