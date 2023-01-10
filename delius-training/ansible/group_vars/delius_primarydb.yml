@@ -20,3 +20,7 @@ oracle_software:
 database_parameters:
    sga_max_size: 2G
    sga_target: 2G
+database_locked_statistics:
+   - schema_name: DELIUS_APP_SCHEMA
+     table_names:
+      - DOC_MIGRATION_QUEUE_TAB: ALL
