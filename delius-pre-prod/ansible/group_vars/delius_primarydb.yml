@@ -62,5 +62,5 @@ oracle_software:
   opatch:
     version: 12.2.0.1.32
     filename: p6880880_190000_Linux-x86-64.12.2.0.1.32.zip
-fsfo_mode: observe
+fsfo_mode: enable
 audited_interaction_repo: PRDNDA
