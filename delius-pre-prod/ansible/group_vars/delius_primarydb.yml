@@ -64,3 +64,7 @@ oracle_software:
     filename: p6880880_190000_Linux-x86-64.12.2.0.1.32.zip
 fsfo_mode: enable
 audited_interaction_repo: PRDNDA
+database_locked_statistics:
+   - schema_name: DELIUS_APP_SCHEMA
+     table_names:
+      - DOC_MIGRATION_QUEUE_TAB: ALL
