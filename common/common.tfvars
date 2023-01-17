@@ -352,6 +352,7 @@ user_access_cidr_blocks = [
   "35.178.209.113/32", # cloudplatform-live-1
   "3.8.51.207/32",     # cloudplatform-live-2
   "35.177.252.54/32",  # cloudplatform-live-3
+  "195.95.131.65/32"   # Temporary access for NCC Group ITHC (remove after 20/01/2023 - see Slack thread: https://mojdt.slack.com/archives/C032BQQHJE5/p1673950358376759)
 ]
 
 # jenkins access
