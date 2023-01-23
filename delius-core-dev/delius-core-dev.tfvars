@@ -34,3 +34,8 @@ oracle_delete_unused_dbids = "yes"
 oracle_rotate_passwords_schedule = {
   schedule_expression = "00 9 ? * TUE *"
 }
+
+# GDPR
+gdpr_config = {
+  db_storage = 100
+}
