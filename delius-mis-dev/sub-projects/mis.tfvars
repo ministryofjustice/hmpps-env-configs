@@ -58,6 +58,7 @@ bws_hibernation             = false
 
 #Instance size for dis
 dis_instance_type           = "t2.xlarge"
+dis_instance_type_lower     = "t2.large"
 dis_root_size               = 75
 dis_server_count            = 1
 dis_disable_api_termination = false
@@ -229,6 +230,11 @@ nextcloud_redis_node_type   = "cache.t3.small"
 
 #monitoring
 mis_alarms_enabled = "true"
+
+#ETL scheduler
+#resizing_schedule         = "true"
+#dis_instance_type_am      = "t2.medium"  
+#dis_instance_type_pm      = "t2.xlarge"
 
 # mis fsx
 fsx_copy_tags_to_backups = false
