@@ -7,4 +7,3 @@ database_parameters:
    control_management_pack_access: DIAGNOSTIC+TUNING
    adg_account_info_tracking: GLOBAL
 active_data_guard: true
-awr_retention_days: 40

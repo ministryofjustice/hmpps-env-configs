@@ -20,4 +20,3 @@ required_patches:
       replaces_patch: "30616738"
 data_guard_parameters:
    ApplyLagThreshold: 1000
-awr_retention_days: 40
