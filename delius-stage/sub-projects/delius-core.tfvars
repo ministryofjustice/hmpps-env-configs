@@ -65,8 +65,8 @@ gdpr_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.27.0"
-  ui_version       = "0.27.0"
+  api_version      = "0.28.0"
+  ui_version       = "0.28.0"
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders      = "-" #
@@ -78,8 +78,8 @@ gdpr_config = {
 
 # Merge
 merge_config = {
-  api_version      = "0.22.1" 
-  ui_version       = "0.22.0" 
+  api_version      = "0.23.0" 
+  ui_version       = "0.23.0" 
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
   ui_min_capacity  = 2
