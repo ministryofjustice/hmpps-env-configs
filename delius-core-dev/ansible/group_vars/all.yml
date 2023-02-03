@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius-core
 environment_name: delius-core-dev
 simple_environment_name: dev
-ndelius_version: "5.6.4"
+ndelius_version: "5.6.4.1"
 catalog: DCAT
 data_classification: unclassified-data
 database_autotasks:
