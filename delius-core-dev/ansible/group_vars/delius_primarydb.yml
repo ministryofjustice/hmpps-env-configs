@@ -16,6 +16,7 @@ delius_users:
   dreid_dba:
   sgandalwar_dba:
   kmoss_dba:
+  worr_sro:
 oracle_software:
       version: 19.16
       superset_patch: p34130714_190000_Linux-x86-64.zip
