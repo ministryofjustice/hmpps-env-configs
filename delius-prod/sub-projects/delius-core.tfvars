@@ -42,6 +42,8 @@ ldap_config = {
 
 # WebLogic
 delius_app_config = {
+  min_capacity = 36 # Increased to handle higher memory usage following session timeout extension
+
   # oauth
   env_OAUTH_URL = "https://sign-in.hmpps.service.justice.gov.uk/auth"
   # user sign-in
