@@ -12,6 +12,7 @@ tagged_user                          = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>
 channel                              = "auto-stop-alerts"
 create_autostop_instance             = "true"
 mis_overide_autostop_tags            = "True"     ##Set autostop tag key value for MIS Servers
+mis_overide_resizing_schedule_tags   = "false"     ##Set resizing schedule tag key value for MIS Servers
 
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {

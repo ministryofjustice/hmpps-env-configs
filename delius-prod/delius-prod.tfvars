@@ -12,6 +12,9 @@ route53_domain_private = "service.justice.gov.uk"
 
 subdomain = "probation"
 
+mis_overide_resizing_schedule_tags   = "true"     ##Set resizing schedule tag key value for MIS Servers
+
+
 #Instance size for smtp server
 smtp_instance_type = "m5.large"
 
