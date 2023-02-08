@@ -88,34 +88,14 @@ db_size_mis = {
   disk_iops_data      = 5000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
-  disk_size_data      = 5000 # Do not decrease this
-  disk_size_flash     = 5000 # Do not decrease this
+  disk_size_data      = 500 # Do not decrease this without adjusting ASM
+  disk_size_flash     = 500 # Do not decrease this without adjusting ASM
   # total_storage  = 10000 # This should equal disks_quantity x disk_size
 
   disk_type_root       = "gp3"
   disk_throughput_root = 125
   disk_type_data       = "gp3"
   disk_throughput_data = 125
-}
-
-## MIS Datamart standby instances.
-## This variable was added to give us better granularity over standby instance
-## settings in non-prod environments to reduce cost
-db_size_mis_standby = {
-  database_size = "small"
-  instance_type = "t3.large"
-  # disk_iops      = 5000
-  # disks_quantity = 2          # Do not decrease this
-  # disk_size      = 5000        # Do not decrease this
-
-  disks_quantity      = 2 # Do not decrease this
-  disks_quantity_data = 1
-  disk_iops_data      = 5000
-  disk_iops_flash     = 500
-  disk_iops_root      = 1000
-  disk_size_data      = 500 # Do not decrease this without adjusting ASM
-  disk_size_flash     = 500 # Do not decrease this without adjusting ASM
-  # total_storage  = 10000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_mis_db = {
