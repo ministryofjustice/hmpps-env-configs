@@ -90,7 +90,7 @@ db_size_mis = {
   disk_iops_root      = 3000
   disk_size_data      = 500 # Do not decrease this without adjusting ASM
   disk_size_flash     = 500 # Do not decrease this without adjusting ASM
-  # total_storage  = 10000 # This should equal disks_quantity x disk_size
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 
   disk_type_root       = "gp3"
   disk_throughput_root = 125
@@ -170,9 +170,9 @@ db_size_misdsd = {
   disk_iops_data      = 3000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
-  disk_size_data      = 500 # Do not decrease this
-  disk_size_flash     = 500 # Do not decrease this
-  # total_storage  = 1000 # This should equal disks_quantity x disk_size
+  disk_size_data      = 100 # Do not decrease this without adjusting ASM
+  disk_size_flash     = 100 # Do not decrease this without adjusting ASM
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
 
   disk_type_root       = "gp3"
   disk_throughput_root = 125
