@@ -50,6 +50,8 @@ delius_app_config = {
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-pre-prod/delius/weblogic/ndelius-domain/api-client-secret"
+  # probation search
+  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk"
   # Temp set logging to DEBUG
   env_LOG_LEVEL_NDELIUS = "DEBUG"
 }
