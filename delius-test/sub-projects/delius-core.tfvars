@@ -94,10 +94,10 @@ gdpr_config = {
 merge_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
-  api_version      = "0.23.0"
+  api_version      = "0.24.0"
   ui_min_capacity  = 1
   ui_max_capacity  = 5
-  ui_version       = "0.23.0"
+  ui_version       = "0.24.0"
   schedule         = "0 5/10 7-23 ? * MON-FRI" # When to run the merge/unmerge scheduled process
 }
 
