@@ -9,7 +9,7 @@ db_size_delius_core = {
   disk_throughput_data = 400   # Only relevant when disks_volume_type = "gp3"
   disk_type_root       = "gp3" # Requires iops and throughput to be set
   disk_throughput_root = 400   # Only relevant when disks_volume_type = "gp3"
-  disks_quantity       = 16    # Do not decrease this
+  disks_quantity       = 11    # Do not decrease this without adjusting ASM
   disks_quantity_data  = 10
   disk_iops_root       = 3000
   disk_iops_data       = 3000
