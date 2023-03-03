@@ -7,6 +7,7 @@ database_primary_sid: DMDDSD
 database_parameters:
    sga_max_size: 5G
    sga_target: 5G
+   db_recovery_file_dest_size: 90G
 sqlnet_parameters:
    grid:
          SQLNET.INBOUND_CONNECT_TIMEOUT: 300
