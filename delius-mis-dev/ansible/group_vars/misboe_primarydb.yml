@@ -5,8 +5,9 @@ database_taf_service: DMDBOE_TAF
 database_primary_unique: DMDBOE
 database_primary_sid: DMDBOE
 database_parameters:
-   sga_max_size: 1G
-   sga_target: 1G
+   sga_max_size: 3G
+   sga_target: 3G
+   db_recovery_file_dest_size: 90G
 required_patches:
     p26749785:
       patch_files:
