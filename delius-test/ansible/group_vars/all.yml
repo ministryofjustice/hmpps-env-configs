@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-test
 simple_environment_name: test
-ndelius_version: "5.7.4"
+ndelius_version: "5.7.5"
 catalog: DCAT
 data_classification: unclassified-data
 database_autotasks:
