@@ -75,10 +75,10 @@ delius_app_config = {
 gdpr_config = {
   api_min_capacity  = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity  = 1
-  api_version       = "0.28.0"
+  api_version       = "0.30.0"
   ui_min_capacity   = 1
   ui_max_capacity   = 5
-  ui_version        = "0.28.0"
+  ui_version        = "0.30.0"
   db_instance_class = "db.m5.large"
   db_storage        = 100
   # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
@@ -96,10 +96,10 @@ gdpr_config = {
 merge_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
-  api_version      = "0.24.0"
+  api_version      = "0.25.0"
   ui_min_capacity  = 1
   ui_max_capacity  = 5
-  ui_version       = "0.24.0"
+  ui_version       = "0.25.0"
   schedule         = "0 5/10 7-23 ? * MON-FRI" # When to run the merge/unmerge scheduled process
 }
 
