@@ -84,7 +84,7 @@ alfresco_asg_props = {
 }
 
 alf_config_overrides = {
-  ecs_instance_type = "m5.8xlarge"
+  ecs_instance_type = "m5.4xlarge"
   node_max_count    = "6"
 }
 
