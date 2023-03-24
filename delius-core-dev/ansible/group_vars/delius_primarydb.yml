@@ -25,6 +25,7 @@ oracle_software:
           filename: p6880880_190000_Linux-x86-64.12.2.0.1.36.zip
 audited_interaction_repo: TSTNDA
 fsfo_mode: observe
+awr_retention_days: 16
 database_locked_statistics:
    - schema_name: DELIUS_APP_SCHEMA
      table_names:
