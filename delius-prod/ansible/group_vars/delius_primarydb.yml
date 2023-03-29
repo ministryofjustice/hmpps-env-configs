@@ -32,3 +32,4 @@ database_locked_statistics:
    - schema_name: DELIUS_APP_SCHEMA
      table_names:
       - DOC_MIGRATION_QUEUE_TAB: ALL
+awr_retention_days: 40
