@@ -21,6 +21,17 @@ delius_users:
   smauthoor_sro:
   acody_sro:
   worr_sro:
+  jmacbeth_ro:
+  jdundon_ro:
+  mthapa_ro:
+  maspin_ro:
+  mweatherall_ro:
+  mlaskowski_ro:
+  pmiller_ro:
+  pwilson_ro:
+  rmccormack_ro:
+  svalmonte_ro:
+  yfedkiv_dba:
 oracle_software:
   version: 19.16
   superset_patch: p34130714_190000_Linux-x86-64.zip
