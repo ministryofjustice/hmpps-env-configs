@@ -31,7 +31,7 @@ delius_users:
   pwilson_ro:
   rmccormack_ro:
   svalmonte_ro:
-  yfedkiv_dba:
+  yfedkiv_ro:
 oracle_software:
   version: 19.16
   superset_patch: p34130714_190000_Linux-x86-64.zip
