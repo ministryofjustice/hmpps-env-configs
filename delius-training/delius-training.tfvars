@@ -22,7 +22,7 @@ create_autostop_instance     = "true"
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 06 ? * 2,3,5,6 *"
+    daily_schedule  = "30 06 ? * 3,5,6 *"
     weekly_schedule = "30 06 ? * 4 *"
   }
 }
