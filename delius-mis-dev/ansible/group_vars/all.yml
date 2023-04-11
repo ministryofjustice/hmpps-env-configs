@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-mis-dev
 simple_environment_name: mis-dev
-ndelius_version: "5.7.2"
+ndelius_version: "5.7.10"
 catalog: DCAT
 data_classification: unclassified-data
 database_autotasks:
