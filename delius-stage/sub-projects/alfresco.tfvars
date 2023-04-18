@@ -100,6 +100,7 @@ alf_rds_props = {
   iops                    = 5000
   storage_type            = "io1"
   allocated_storage       = 1200
+  max_allocated_storage   = 1500
   maintenance_window      = "Wed:19:30-Wed:21:30"
   backup_window           = "02:00-04:00"
   backup_retention_period = 28
