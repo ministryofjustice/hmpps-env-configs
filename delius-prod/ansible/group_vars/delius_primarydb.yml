@@ -7,7 +7,7 @@ database_primary_sid: PRDNDA
 database_parameters:
    control_management_pack_access: DIAGNOSTIC+TUNING
    adg_account_info_tracking: GLOBAL
-rman_level_0_backup_duration_target: "21:00"
+rman_level_0_backup_duration_target: "12:00"
 rman_uncompressed_backup: Y
 rman_retention_policy: RECOVERY WINDOW OF 366 DAYS
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
