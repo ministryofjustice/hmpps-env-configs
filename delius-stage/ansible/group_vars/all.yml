@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-stage
 simple_environment_name: stage
-ndelius_version: "5.7.12"
+ndelius_version: "5.7.13"
 catalog: PCAT
 data_classification: official-data
 delegated_account_id: "205048117103"
