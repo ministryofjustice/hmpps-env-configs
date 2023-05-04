@@ -78,10 +78,10 @@ gdpr_config = {
 
 # Merge
 merge_config = {
-  api_version                = "0.26.0" # Application version
+  api_version                = "0.27.1" # Application version
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
-  ui_version                 = "0.26.0" # Application version
+  ui_version                 = "0.27.1" # Application version
   ui_min_capacity  = 2
   ui_max_capacity  = 10
 }
