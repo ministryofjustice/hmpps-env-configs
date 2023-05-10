@@ -387,6 +387,9 @@ internal_moj_access_cidr_blocks = [
   "78.33.32.108/32",   # Unilink AOVPN
   "217.138.45.109/32", # Unilink AOVPN
   "217.138.45.110/32", # Unilink AOVPN
+  "18.130.43.174/32",  # MP live_data-public-eu-west-2a-nat
+  "18.135.42.149/32",  # MP live_data-public-eu-west-2b-nat
+  "35.176.139.253/32", # MP live_data-public-eu-west-2c-nat
 ]
 
 # public / user access
