@@ -72,6 +72,8 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
+  api_version      = "0.27.1"
+  ui_version       = "0.27.1"
 }
 
 # Delius API
