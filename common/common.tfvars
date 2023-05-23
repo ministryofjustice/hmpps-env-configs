@@ -302,11 +302,8 @@ internal_moj_access_cidr_blocks = [
   "78.33.32.108/32",   # Unilink AOVPN
   "217.138.45.109/32", # Unilink AOVPN
   "217.138.45.110/32", # Unilink AOVPN
-  "18.133.150.172/32", # MP non_live_data-public-eu-west-2a-nat
   "13.43.9.198/32",    # MP non_live_data-public-eu-west-2a-nat
-  "18.134.23.64/32",   # MP non_live_data-public-eu-west-2b-nat
   "13.42.163.245/32",  # MP non_live_data-public-eu-west-2b-nat
-  "3.8.83.181/32",     # MP non_live_data-public-eu-west-2c-nat
   "18.132.208.127/32", # MP non_live_data-public-eu-west-2c-nat
 ]
 
@@ -358,6 +355,9 @@ user_access_cidr_blocks = [
   "35.178.209.113/32", # cloudplatform-live-1
   "3.8.51.207/32",     # cloudplatform-live-2
   "35.177.252.54/32",  # cloudplatform-live-3
+  "13.43.9.198/32",    # MP non_live_data-public-eu-west-2a-nat
+  "13.42.163.245/32",  # MP non_live_data-public-eu-west-2b-nat
+  "18.132.208.127/32", # MP non_live_data-public-eu-west-2c-nat
 ]
 
 # jenkins access
