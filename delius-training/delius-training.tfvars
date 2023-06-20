@@ -34,11 +34,11 @@ oracle_validate_backup_schedule = {
   }
 }
 
-# Note that, unlike backups, Flashback Schedule must be defined using UTC
+# Flashback Schedule defined using the Europe/London timezone
 oracle_flashback_schedule = {
   delius = {
     restorepoint   =  "TRAINING"
-    schedule       =  "30 05 ? * 2 *"
+    schedule       =  "30 06 ? * 2 *"
   }
 }
 
