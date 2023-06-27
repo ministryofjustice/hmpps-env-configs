@@ -38,6 +38,8 @@ ansible_vars_oracle_db = {
 env_user_access_cidr_blocks = [
 ]
 
+mp_corresponding_vpc_cidr = "10.26.24.0/21"
+
 # DSS Batch Task
 dss_job_envvars = [
   {

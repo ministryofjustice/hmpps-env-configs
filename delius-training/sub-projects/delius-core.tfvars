@@ -45,6 +45,8 @@ env_user_access_cidr_blocks = [
   "195.206.180.12/32", # Dedicated IP provided by Nicki Berry on 24/12/2020 (ALS-2487)
 ]
 
+mp_corresponding_vpc_cidr = "10.27.8.0/21"
+
 # DSS Batch Task
 dss_job_envvars = [
   {

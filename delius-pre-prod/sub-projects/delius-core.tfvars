@@ -104,6 +104,8 @@ env_user_access_cidr_blocks = [
   "195.95.131.0/24",   # Temporary access for NCC Group ITHC - Manchester  (review/remove after 06/02/2023 - see Slack thread: https://mojdt.slack.com/archives/C032BQQHJE5/p1672764936788469)
 ]
 
+mp_corresponding_vpc_cidr = "10.27.0.0/21"
+
 # DSS Batch Task
 dss_job_envvars = [
   {

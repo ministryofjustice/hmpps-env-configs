@@ -111,6 +111,8 @@ env_user_access_cidr_blocks = [
   "62.232.198.68/32",
 ]
 
+mp_corresponding_vpc_cidr = "10.27.0.0/21"
+
 # DSS Batch Task
 
 dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.6"
