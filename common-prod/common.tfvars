@@ -443,6 +443,10 @@ user_access_cidr_blocks = [
   "13.41.38.176/32",   # MP live_data-public-eu-west-2a-nat
   "3.8.81.175/32",     # MP live_data-public-eu-west-2b-nat
   "3.11.197.133/32",   # MP live_data-public-eu-west-2c-nat
+  "194.33.200.0/21",   # Vodafone DIA Sites
+  "194.33.216.0/24",   # Vodafone DIA Sites
+  "194.33.217.0/24",   # Vodafone DIA Sites
+  "194.33.218.0/24",   # Vodafone DIA Sites
 ]
 
 # jenkins access
