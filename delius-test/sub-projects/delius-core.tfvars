@@ -134,6 +134,9 @@ env_user_access_cidr_blocks = [
   "54.76.254.148/32" # DXW VPN
 ]
 
+# CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
+mp_corresponding_vpc_cidr = "10.26.8.0/21"
+
 # DSS Batch Task
 dss_job_envvars = [
   {

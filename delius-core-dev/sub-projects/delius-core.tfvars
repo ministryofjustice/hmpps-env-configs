@@ -94,6 +94,9 @@ community_api_ingress = [
 
 env_user_access_cidr_blocks = []
 
+# CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
+mp_corresponding_vpc_cidr = "10.26.24.0/21"
+
 # DSS Batch Task
 dss_job_envvars = [
   {
