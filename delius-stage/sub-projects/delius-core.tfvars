@@ -111,6 +111,7 @@ env_user_access_cidr_blocks = [
   "62.232.198.68/32",
 ]
 
+# CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
 mp_corresponding_vpc_cidr = "10.27.0.0/21"
 
 # DSS Batch Task
