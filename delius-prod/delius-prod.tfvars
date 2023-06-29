@@ -69,3 +69,7 @@ database_high_availability_count = {
   misboe = 1
   misdsd = 1
 }
+
+offloc_rotate_password_schedule = {
+  schedule_expression = "0 11 ? * TUE#1 *"
+}
