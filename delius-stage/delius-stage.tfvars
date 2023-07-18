@@ -68,3 +68,7 @@ database_high_availability_count = {
 oracle_rotate_passwords_schedule = {
     schedule_expression   =  "00 16 ? * WED *"
 }
+
+offloc_rotate_password_schedule = {
+  schedule_expression = ""
+}

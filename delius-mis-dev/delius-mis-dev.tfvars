@@ -34,6 +34,10 @@ oracle_backup_schedule = {
   }
 }
 
+offloc_rotate_password_schedule = {
+  schedule_expression = ""
+}
+
 oracle_delete_unused_dbids = "yes"
 
 oracle_rotate_passwords_schedule = {

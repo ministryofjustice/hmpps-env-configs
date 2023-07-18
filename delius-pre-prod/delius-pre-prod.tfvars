@@ -64,6 +64,10 @@ oracle_validate_backup_schedule = {
 
 oracle_delete_unused_dbids = "yes"
 
+offloc_rotate_password_schedule = {
+  schedule_expression = ""
+}
+
 oracle_rotate_passwords_schedule = {
     schedule_expression   =  "00 12 ? * WED *"
 }

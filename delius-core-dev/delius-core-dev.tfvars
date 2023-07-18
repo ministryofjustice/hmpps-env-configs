@@ -35,6 +35,10 @@ oracle_rotate_passwords_schedule = {
   schedule_expression = "00 9 ? * TUE *"
 }
 
+offloc_rotate_password_schedule = {
+  schedule_expression = ""
+}
+
 # GDPR
 gdpr_config = {
   db_storage = 100
