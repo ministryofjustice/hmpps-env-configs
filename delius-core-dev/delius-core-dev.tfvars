@@ -22,6 +22,13 @@ oracle_backup_schedule = {
   }
 }
 
+oracle_validate_backup_schedule = {
+  delius = {
+    host     = "Random Delius Standby"
+    schedule = "00 16 ? * MON *"
+  }
+}
+
 database_high_availability_count = {
   delius = 2
   mis    = 0
