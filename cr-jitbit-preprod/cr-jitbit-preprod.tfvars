@@ -19,6 +19,12 @@ mail_account = [
   "dtv.iom",
 ]
 
+cr_jitbit_overrides = {
+  asg_min_size              = 0
+  asg_max_size              = 0
+  asg_capacity              = 0
+}
+
 cr_jitbit_access_cidrs = []
 
 # Auto Start/Stop
