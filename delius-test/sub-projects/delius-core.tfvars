@@ -90,6 +90,7 @@ gdpr_config = {
   cron_eligiblefordeletion    = "-"                 # disabled
   cron_deleteoffenders        = "-"                 # disabled
   cron_destructionlogclearing = "-"                 # disabled
+  cron_eligiblefordeletionsoftdeleted = "-"         # disabled
 }
 
 # Merge
