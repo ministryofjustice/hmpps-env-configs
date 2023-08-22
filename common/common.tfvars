@@ -553,6 +553,7 @@ default_gdpr_config = {
   cron_eligiblefordeletion    = "-" #
   cron_deleteoffenders        = "-" #
   cron_destructionlogclearing = "-" #
+  cron_eligiblefordeletionsoftdeleted = "-" #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
   ui_version                  = "latest"              # Application version
   ui_memory                   = 1024                  # Memory to assign to UI container
