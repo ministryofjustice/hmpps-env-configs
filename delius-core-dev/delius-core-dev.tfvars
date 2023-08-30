@@ -42,6 +42,10 @@ oracle_rotate_passwords_schedule = {
   schedule_expression = "00 9 ? * TUE *"
 }
 
+oracle_s3_backup_bucket_access = {
+  modernisation_platform_role_arn = "arn:aws:iam::326912278139:role/base_ami_test_instance_iam_role"
+}
+
 offloc_rotate_password_schedule = {
   schedule_expression = ""
 }
