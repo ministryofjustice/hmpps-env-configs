@@ -434,6 +434,8 @@ user_access_cidr_blocks = [
   "194.33.248.0/29",   # ARK Corsham Internet Egress Vodafone
   "20.49.214.199/32",  # Azure Landing Zone Egress
   "20.49.214.228/32",  # Azure Landing Zone Egress
+  "20.26.11.71/32",    # Azure Landing Zone Egress
+  "20.26.11.108/32",   # Azure Landing Zone Egress
   "195.89.157.56/29",  # HMP Five Wells
   "195.59.215.184/29", # HMP Five Wells
   "35.178.209.113/32", # cloudplatform-live-1
@@ -642,29 +644,29 @@ umt_config = {}
 
 # Delius GDPR compliance tool
 default_gdpr_config = {
-  api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "0.27.0" # Application version
-  api_min_capacity            = 0        # This service is only enabled in specific environments
-  api_max_capacity            = 0
-  ui_min_capacity             = 0
-  ui_max_capacity             = 0
-  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "-" #
-  cron_retainedoffendersiicsa = "-" #
-  cron_eligiblefordeletion    = "-" #
-  cron_deleteoffenders        = "-" #
-  cron_destructionlogclearing = "-" #
+  api_image_url                       = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
+  api_version                         = "0.27.0" # Application version
+  api_min_capacity                    = 0        # This service is only enabled in specific environments
+  api_max_capacity                    = 0
+  ui_min_capacity                     = 0
+  ui_max_capacity                     = 0
+  cron_identifyduplicates             = "-" # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders              = "-" #
+  cron_retainedoffendersiicsa         = "-" #
+  cron_eligiblefordeletion            = "-" #
+  cron_deleteoffenders                = "-" #
+  cron_destructionlogclearing         = "-" #
   cron_eligiblefordeletionsoftdeleted = "-" #
-  ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
-  ui_version                  = "0.27.0"              # Application version
-  ui_memory                   = 1024                  # Memory to assign to UI container
-  ui_cpu                      = 512                   # CPU to assign to UI container
-  db_instance_class           = "db.m5.large"         # Instance type to use for the database
-  db_storage                  = 100                   # Allocated database storage in GB
-  db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
-  db_backup_window            = "19:00-21:00"         # Daily window to take RDS backups
-  db_backup_retention_period  = 14                    # Number of days to retain RDS backups for
-  log_level                   = "INFO"                # Application log-level
+  ui_image_url                        = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
+  ui_version                          = "0.27.0"              # Application version
+  ui_memory                           = 1024                  # Memory to assign to UI container
+  ui_cpu                              = 512                   # CPU to assign to UI container
+  db_instance_class                   = "db.m5.large"         # Instance type to use for the database
+  db_storage                          = 100                   # Allocated database storage in GB
+  db_maintenance_window               = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
+  db_backup_window                    = "19:00-21:00"         # Daily window to take RDS backups
+  db_backup_retention_period          = 14                    # Number of days to retain RDS backups for
+  log_level                           = "INFO"                # Application log-level
 }
 gdpr_config = {}
 
