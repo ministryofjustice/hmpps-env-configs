@@ -43,3 +43,14 @@ oracle_delete_unused_dbids = "yes"
 oracle_rotate_passwords_schedule = {
     schedule_expression   =  "00 12 ? * TUE *"
 }
+
+# Support for running different Ansible Versions for Oracle Playbooks
+# Specify the tag for the Docker Ansible Runner image to use
+# along with default tags for the Git branches with the appropriate
+# versions of Ansible compatible with that image.
+# (These will default to the "latest" image and "master" branch)
+oracle_ansible_versions = {
+   docker_image_tag = "0.0.0-20230712141248-alpha"
+   hmpps_manual_deployments_default_branch = "master"
+   hmpps_delius_pipelines_default_branch = "master"
+}
