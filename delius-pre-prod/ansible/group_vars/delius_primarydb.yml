@@ -68,6 +68,7 @@ delius_users:
   rmccormack_ro:
   svalmonte_ro:
   dbridgwood_sro:
+  wwang_ro:
 oracle_software:
       version: 19.18
       combo_patch: p34773504_190000_Linux-x86-64.zip
