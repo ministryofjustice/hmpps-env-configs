@@ -68,7 +68,7 @@ allowed_ssh_cidr = [
 alfresco_app_name = "alfresco"
 
 # spg broker url
-spg_messaging_broker_url = "tcp://spgw-jms-int.dev.delius-core.probation.hmpps.dsd.io:61616"
+spg_messaging_broker_url = "tcp://spgw-jms-int.dev.delius-mis-dev.probation.hmpps.dsd.io:61616"
 
 # Environment-specific configuration for alfresco-database RDS instance
 alf_rds_props = {
