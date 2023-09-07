@@ -51,6 +51,6 @@ oracle_rotate_passwords_schedule = {
 # (These will default to the "latest" image and "master" branch)
 oracle_ansible_versions = {
    docker_image_tag = "0.0.0-20230712141248-alpha"
-   hmpps_manual_deployments_default_branch = "master"
+   delius_manual_deployments_default_branch = "master"
    hmpps_delius_pipelines_default_branch = "master"
 }
