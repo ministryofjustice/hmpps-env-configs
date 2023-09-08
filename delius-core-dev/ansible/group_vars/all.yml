@@ -38,7 +38,7 @@ required_patches:
       database_patch: true
 database_parameters:
    sga_max_size: 3280M
-   sga_target: 3280M
+   sga_target: 3000M
    pga_aggregate_target: 1640M
    pga_aggregate_limit: 3280M
 oracle_osbws_chunk_size: 104857600
