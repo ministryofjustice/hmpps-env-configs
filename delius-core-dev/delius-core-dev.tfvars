@@ -43,7 +43,10 @@ oracle_rotate_passwords_schedule = {
 }
 
 oracle_s3_backup_bucket_access = {
-  modernisation_platform_role_arn = "arn:aws:iam::326912278139:role/base_ami_test_instance_iam_role"
+    modernisation_platform_role_arns = [
+      "arn:aws:iam::326912278139:role/base_ami_test_instance_iam_role",
+      "arn:aws:iam::326912278139:role/dev-delius-db-ec2_instance"
+    ]
 }
 
 offloc_rotate_password_schedule = {
