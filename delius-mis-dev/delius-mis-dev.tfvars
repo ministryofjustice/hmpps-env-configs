@@ -4,15 +4,15 @@ aws_nameserver = "10.162.32.2"
 
 
 #lambda auto start stop vars
-ec2_schedule                         = "true"
-autoscaling_schedule                 = "true"
-calendar_rule_enabled                = "true"
-autostop_notify_rule_enabled         = "true"
-tagged_user                          = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A>"
-channel                              = "auto-stop-alerts"
-create_autostop_instance             = "true"
-mis_overide_autostop_tags            = "True"     ##Set autostop tag key value for MIS Servers
-mis_overide_resizing_schedule_tags   = "false"     ##Set resizing schedule tag key value for MIS Servers
+ec2_schedule                       = "true"
+autoscaling_schedule               = "true"
+calendar_rule_enabled              = "true"
+autostop_notify_rule_enabled       = "true"
+tagged_user                        = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A>"
+channel                            = "auto-stop-alerts"
+create_autostop_instance           = "true"
+mis_overide_autostop_tags          = "True"  ##Set autostop tag key value for MIS Servers
+mis_overide_resizing_schedule_tags = "false" ##Set resizing schedule tag key value for MIS Servers
 
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
@@ -34,6 +34,13 @@ oracle_backup_schedule = {
   }
 }
 
+database_high_availability_count = {
+  delius = 2
+  mis    = 0
+  misboe = 0
+  misdsd = 0
+}
+
 offloc_rotate_password_schedule = {
   schedule_expression = ""
 }
@@ -41,7 +48,7 @@ offloc_rotate_password_schedule = {
 oracle_delete_unused_dbids = "yes"
 
 oracle_rotate_passwords_schedule = {
-    schedule_expression   =  "00 12 ? * TUE *"
+  schedule_expression = "00 12 ? * TUE *"
 }
 
 # Support for running different Ansible Versions for Oracle Playbooks
@@ -50,7 +57,7 @@ oracle_rotate_passwords_schedule = {
 # versions of Ansible compatible with that image.
 # (These will default to the "latest" image and "master" branch)
 oracle_ansible_versions = {
-   docker_image_tag = "0.0.0-20230712141248-alpha"
-   delius_manual_deployments_default_branch = "master"
-   hmpps_delius_pipelines_default_branch = "master"
+  docker_image_tag                         = "0.0.0-20230712141248-alpha"
+  delius_manual_deployments_default_branch = "master"
+  hmpps_delius_pipelines_default_branch    = "master"
 }
