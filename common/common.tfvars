@@ -615,7 +615,7 @@ default_new_tech_config = {
   env_DELIUS_API_BASE_URL              = "http://community-api.ecs.cluster:8080/api/"
   env_PDF_GENERATOR_URL                = "http://pdf-generator.ecs.cluster:8080/"
   env_HMPPS_AUTH_BASE_URL              = "https://sign-in-dev.hmpps.service.justice.gov.uk/"
-  env_NOMIS_API_BASE_URL               = "https://api-dev.prison.service.justice.gov.uk/"
+  env_NOMIS_API_BASE_URL               = "https://prison-api-dev.prison.service.justice.gov.uk/"
   env_PROBATION_OFFENDER_SEARCH_URL    = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk/"
 }
 new_tech_config = {}
