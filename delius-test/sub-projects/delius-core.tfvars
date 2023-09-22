@@ -69,6 +69,7 @@ delius_app_config = {
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
+  env_PSR_SERVICE_URL = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
