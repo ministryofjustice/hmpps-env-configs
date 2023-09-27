@@ -67,7 +67,7 @@ delius_app_config = {
   secret_NOTIFICATION_API_KEY = "/delius-test/delius/delius-application/govuk-notify/api-key"
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
-  env_ELASTICSEARCH_URL       = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk/delius"
+  env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
