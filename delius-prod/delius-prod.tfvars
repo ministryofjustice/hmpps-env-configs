@@ -71,7 +71,7 @@ database_high_availability_count = {
 }
 
 offloc_rotate_password_schedule = {
-  schedule_expression = "0 11 ? * TUE#1 *"
+  schedule_expression = "0 11 ? * TUE#3 *"
 }
 
 # Support for running different Ansible Versions for Oracle Playbooks
