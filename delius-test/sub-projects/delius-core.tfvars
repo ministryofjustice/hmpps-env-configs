@@ -67,8 +67,10 @@ delius_app_config = {
   secret_NOTIFICATION_API_KEY = "/delius-test/delius/delius-application/govuk-notify/api-key"
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
+  env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
@@ -84,13 +86,13 @@ gdpr_config = {
   # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   # "0 0 9 ? * MON" Monday at 9am
-  cron_identifyduplicates     = "-"                 # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "-"                 # disabled
-  cron_retainedoffendersiicsa = "0 0 8 ? * MON-FRI" # Run at 8am Monday to Friday
-  cron_eligiblefordeletion    = "-"                 # disabled
-  cron_deleteoffenders        = "-"                 # disabled
-  cron_destructionlogclearing = "-"                 # disabled
-  cron_eligiblefordeletionsoftdeleted = "-"         # disabled
+  cron_identifyduplicates             = "-"                 # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders              = "-"                 # disabled
+  cron_retainedoffendersiicsa         = "0 0 8 ? * MON-FRI" # Run at 8am Monday to Friday
+  cron_eligiblefordeletion            = "-"                 # disabled
+  cron_deleteoffenders                = "-"                 # disabled
+  cron_destructionlogclearing         = "-"                 # disabled
+  cron_eligiblefordeletionsoftdeleted = "-"                 # disabled
 }
 
 # Merge
