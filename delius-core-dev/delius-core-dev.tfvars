@@ -75,7 +75,8 @@ oracle_ansible_versions = {
 # (If using a standby database then Active Data Guard must be enabled).
 # Specify the target environment where the data is written.   It will 
 # be written to the primary Delius database server in that environment.
+# (Target Environment Names should match those listed in aws_account_ids)
 oracle_audited_interaction = {
   source_server = "delius_standbydb2"
-  target_environment = "delius-test"
+  target_environment = "hmpps-delius-test"
 }
