@@ -1,12 +1,12 @@
 [loadrunner]
-loadrunner.probation.service.justice.gov.uk
+delius-prod-loadrunner
 
 [delius_primarydb]
-delius-db-1.probation.service.justice.gov.uk
+delius-prod-delius-db-1
 [delius_standbydb1]
-delius-db-2.probation.service.justice.gov.uk
+delius-prod-delius-db-2
 [delius_standbydb2]
-delius-db-3.probation.service.justice.gov.uk
+delius-prod-delius-db-3
 
 [delius_dbs:children]
 delius_primarydb
@@ -15,27 +15,27 @@ delius_standbydb2
 
 
 [mis_primarydb]
-mis-db-1.probation.service.justice.gov.uk
+delius-prod-mis-db-1
 [mis_standbydb1]
-mis-db-2.probation.service.justice.gov.uk
+delius-prod-mis-db-2
 
 [mis_dbs:children]
 mis_primarydb
 mis_standbydb1
 
 [misboe_primarydb]
-misboe-db-1.probation.service.justice.gov.uk
+delius-prod-misboe-db-1
 [misboe_standbydb1]
-misboe-db-2.probation.service.justice.gov.uk
+delius-prod-misboe-db-2
 
 [misboe_dbs:children]
 misboe_primarydb
 misboe_standbydb1
 
 [misdsd_primarydb]
-misdsd-db-1.probation.service.justice.gov.uk
+delius-prod-misdsd-db-1
 [misdsd_standbydb1]
-misdsd-db-2.probation.service.justice.gov.uk
+delius-prod-misdsd-db-2
 
 [misdsd_dbs:children]
 misdsd_primarydb
