@@ -8,7 +8,7 @@ cloudwatch_log_retention = 14
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z2SOZ79CNGAPIF"
 
-public_ssl_arn = "arn:aws:acm:eu-west-2:723123699647:certificate/0b97aef6-3c80-48c2-818c-855d493b2d81"
+public_ssl_arn = ""
 
 # IAM
 eng_root_arn = "arn:aws:iam::895523100917:root"

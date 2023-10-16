@@ -1,3 +1,0 @@
----
-ldap_config:
-  rbac_version: "5.6.10"

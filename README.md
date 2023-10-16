@@ -17,7 +17,6 @@ Initially the Structure will be as follows and a new dir per env:
 
 ```
 ├── common
-├── delius-core-dev
 ├── delius-preprod
 ├── delius-prod
 ├── delius-stage
@@ -28,10 +27,6 @@ Example below
 ├── common
 │   ├── common.properties
 │   └── common.tfvars
-├── delius-core-dev
-│   ├── delius-core-dev.credentials.yml
-│   ├── delius-core-dev.properties
-│   └── delius-core-dev.tfvars
 ├── delius-stage
 │   ├── delius-stage.properties
 │   └── delius-stage.tfvars
