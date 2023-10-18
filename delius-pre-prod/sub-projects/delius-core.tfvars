@@ -54,6 +54,8 @@ delius_app_config = {
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk"
   # Temp set logging to DEBUG
   env_LOG_LEVEL_NDELIUS = "DEBUG"
+  # PSR Service
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
