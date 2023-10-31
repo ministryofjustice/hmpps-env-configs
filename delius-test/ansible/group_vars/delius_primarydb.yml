@@ -38,23 +38,14 @@ delius_users:
   ahughes_ro:
   wwang_ro:
 oracle_software:
-  version: 19.18
-  combo_patch: p34773504_190000_Linux-x86-64.zip
-  opatch:
-    version: 12.2.0.1.36
-    filename: p6880880_190000_Linux-x86-64.12.2.0.1.36.zip
+      version: '19.20'
+      combo_patch: p35370167_190000_Linux-x86-64.zip
+      opatch:
+          version: 12.2.0.1.39
+          filename: p6880880_190000_Linux-x86-64.12.2.0.1.39.zip
 database_parameters:
    processes: 1000
 database_locked_statistics:
    - schema_name: DELIUS_APP_SCHEMA
      table_names:
       - DOC_MIGRATION_QUEUE_TAB: ALL
-required_patches:
-    p35012866:
-      patch_files:
-         - target_version: "19.18"
-           filename: p35012866_1918000DBRU_Linux-x86-64.zip
-      description: "BUG_33527739_APPLY.SQL GOT ORA-13516: AWR OPERATION FAILED: CATPROC NOT VALID"
-      grid_patch: false
-      database_patch: true
-      datapatch_required: true
