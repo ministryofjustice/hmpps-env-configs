@@ -9,7 +9,7 @@ db_size_delius_core = {
   disk_throughput_data = 400   # Only relevant when disks_volume_type = "gp3"
   disk_type_root       = "gp3" # Requires iops and throughput to be set
   disk_throughput_root = 400   # Only relevant when disks_volume_type = "gp3"
-  disks_quantity       = 16    # Do not decrease this
+  disks_quantity       = 11    # Do not decrease this without adjusting ASM
   disks_quantity_data  = 10
   disk_iops_root       = 3000
   disk_iops_data       = 3000
@@ -63,10 +63,12 @@ delius_app_config = {
 gdpr_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
+  api_memory       = 16384 # 16GB
+  api_cpu          = 2048  # 2 vCPUs
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.27.0"
-  ui_version       = "0.27.0"
+  api_version      = "0.34.0"
+  ui_version       = "0.34.0"
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders      = "-" #
@@ -74,14 +76,15 @@ gdpr_config = {
   cron_eligiblefordeletion    = "-" #
   cron_deleteoffenders        = "-" # Disabled 
   cron_destructionlogclearing = "-" #
+  cron_eligiblefordeletionsoftdeleted = "-" #
 }
 
 # Merge
 merge_config = {
-  api_version      = "0.22.1" 
-  ui_version       = "0.22.0" 
+  api_version                = "0.29.0" # Application version
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
+  ui_version                 = "0.29.0" # Application version
   ui_min_capacity  = 2
   ui_max_capacity  = 10
 }
@@ -110,6 +113,9 @@ env_user_access_cidr_blocks = [
   # -i2n (Northgate) bastion IP traffic
   "62.232.198.68/32",
 ]
+
+# CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
+mp_corresponding_vpc_cidr = "10.27.0.0/21"
 
 # DSS Batch Task
 

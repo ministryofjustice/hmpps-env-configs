@@ -50,8 +50,12 @@ delius_app_config = {
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-pre-prod/delius/weblogic/ndelius-domain/api-client-secret"
+  # probation search
+  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk"
   # Temp set logging to DEBUG
   env_LOG_LEVEL_NDELIUS = "DEBUG"
+  # PSR Service
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
@@ -70,6 +74,8 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
+  api_version      = "0.29.0"
+  ui_version       = "0.29.0"
 }
 
 # Delius API
@@ -93,8 +99,15 @@ community_api_ingress = [
 ]
 
 env_user_access_cidr_blocks = [
-  "194.75.245.154/32", # Temporary access for external auditor Craig Dunn <craig.dunn@digitalaccessibilitycentre.org>.  To be removed after 9th July 2022.
+  "5.148.69.16/28",    # Temporary access for NCC Group ITHC - Cheltenham  (review/remove after 06/02/2023 - see Slack thread: https://mojdt.slack.com/archives/C032BQQHJE5/p1672764936788469)
+  "154.51.64.64/27",   # Temporary access for NCC Group ITHC - Leeds       (review/remove after 06/02/2023 - see Slack thread: https://mojdt.slack.com/archives/C032BQQHJE5/p1672764936788469)
+  "167.98.200.192/27", # Temporary access for NCC Group ITHC - London      (review/remove after 06/02/2023 - see Slack thread: https://mojdt.slack.com/archives/C032BQQHJE5/p1672764936788469)
+  "5.148.32.192/26",   # Temporary access for NCC Group ITHC - Manchester  (review/remove after 06/02/2023 - see Slack thread: https://mojdt.slack.com/archives/C032BQQHJE5/p1672764936788469)
+  "195.95.131.0/24",   # Temporary access for NCC Group ITHC - Manchester  (review/remove after 06/02/2023 - see Slack thread: https://mojdt.slack.com/archives/C032BQQHJE5/p1672764936788469)
 ]
+
+# CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
+mp_corresponding_vpc_cidr = "10.27.0.0/21"
 
 # DSS Batch Task
 dss_job_envvars = [

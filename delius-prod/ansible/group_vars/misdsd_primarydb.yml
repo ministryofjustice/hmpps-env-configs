@@ -21,9 +21,12 @@ delius_users:
   sgandalwar_dba:
   kmoss_dba:
 oracle_software:
-  version: 19.14
-  superset_patch: p33509923_190000_Linux-x86-64.zip
-  ojvm_patch: p33561310_190000_Linux-x86-64.zip
-  opatch:
-    version: 12.2.0.1.29
-    filename: p6880880_190000_Linux-x86-64.12.2.0.1.29.zip
+      version: 19.18
+      combo_patch: p34773504_190000_Linux-x86-64.zip
+      opatch:
+          version: 12.2.0.1.36
+          filename: p6880880_190000_Linux-x86-64.12.2.0.1.36.zip
+database_parameters:
+   sga_max_size: 5G
+   sga_target: 5G
+   db_recovery_file_dest_size: 150G

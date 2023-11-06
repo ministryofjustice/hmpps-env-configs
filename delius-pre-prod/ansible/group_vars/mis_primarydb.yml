@@ -23,6 +23,14 @@ required_patches:
       database_patch: true
       datapatch_required: false
       replaces_patch: "30616738"
+    p35012866:
+      patch_files:
+         - target_version: "19.18"
+           filename: p35012866_1918000DBRU_Linux-x86-64.zip
+      description: "BUG_33527739_APPLY.SQL GOT ORA-13516: AWR OPERATION FAILED: CATPROC NOT VALID"
+      grid_patch: false
+      database_patch: true
+      datapatch_required: true
 delius_users:
   bbuchan_dba:
   rsingh_dba:
@@ -30,10 +38,10 @@ delius_users:
   sgandalwar_dba:
   kmoss_dba:
 oracle_software:
-  version: 19.16
-  superset_patch: p34130714_190000_Linux-x86-64.zip
-  ojvm_patch: p34086870_190000_Linux-x86-64.zip
-  opatch:
-    version: 12.2.0.1.32
-    filename: p6880880_190000_Linux-x86-64.12.2.0.1.32.zip
-fsfo_mode: observe
+      version: 19.18
+      combo_patch: p34773504_190000_Linux-x86-64.zip
+      opatch:
+          version: 12.2.0.1.36
+          filename: p6880880_190000_Linux-x86-64.12.2.0.1.36.zip
+fsfo_mode: disabled
+awr_retention_days: 40

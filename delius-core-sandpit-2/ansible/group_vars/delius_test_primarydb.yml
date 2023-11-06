@@ -1,6 +1,0 @@
---- # delius_test_primarydb.yml
-
-database_global_database_name: SANNDA
-database_taf_service_name: SANNDA_TAF
-database_primary_unique_name: SANNDA
-database_primary_sid: SANNDA

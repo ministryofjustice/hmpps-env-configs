@@ -5,5 +5,14 @@ database_standby_sid: PRENDAS1
 database_primary_unique: PRENDA
 database_parameters:
    control_management_pack_access: DIAGNOSTIC+TUNING
-   adg_account_info_tracking: GLOBAL
+   adg_account_info_tracking: LOCAL
 active_data_guard: true
+required_patches:
+    p35012866:
+      patch_files:
+         - target_version: "19.18"
+           filename: p35012866_1918000DBRU_Linux-x86-64.zip
+      description: "BUG_33527739_APPLY.SQL GOT ORA-13516: AWR OPERATION FAILED: CATPROC NOT VALID"
+      grid_patch: false
+      database_patch: true
+      datapatch_required: true

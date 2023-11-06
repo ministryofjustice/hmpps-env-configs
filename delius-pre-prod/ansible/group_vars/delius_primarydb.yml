@@ -6,10 +6,10 @@ database_primary_unique: PRENDA
 database_primary_sid: PRENDA
 database_parameters:
    control_management_pack_access: DIAGNOSTIC+TUNING
-   adg_account_info_tracking: GLOBAL
+   adg_account_info_tracking: LOCAL
 rman_level_0_backup_duration_target: "21:00"
 rman_uncompressed_backup: Y
-rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
+rman_retention_policy: RECOVERY WINDOW OF 41 DAYS
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
 delius_users:
   amarke_ro:
@@ -55,12 +55,39 @@ delius_users:
      ash_report: true
   ataboudi_ro:
      ash_report: true
+  worr_sro:
+  mberridge_ro:
+  jmacbeth_ro:
+  jdundon_ro:
+  yfedkiv_dba:
+  mthapa_ro:
+  maspin_ro:
+  mlaskowski_ro:
+  pmiller_ro:
+  pwilson_ro:
+  rmccormack_ro:
+  svalmonte_ro:
+  dbridgwood_sro:
+  wwang_ro:
 oracle_software:
-  version: 19.16
-  superset_patch: p34130714_190000_Linux-x86-64.zip
-  ojvm_patch: p34086870_190000_Linux-x86-64.zip
-  opatch:
-    version: 12.2.0.1.32
-    filename: p6880880_190000_Linux-x86-64.12.2.0.1.32.zip
-fsfo_mode: observe
+      version: 19.18
+      combo_patch: p34773504_190000_Linux-x86-64.zip
+      opatch:
+          version: 12.2.0.1.36
+          filename: p6880880_190000_Linux-x86-64.12.2.0.1.36.zip
+fsfo_mode: disabled
 audited_interaction_repo: PRDNDA
+database_locked_statistics:
+   - schema_name: DELIUS_APP_SCHEMA
+     table_names:
+      - DOC_MIGRATION_QUEUE_TAB: ALL
+awr_retention_days: 40
+required_patches:
+    p35012866:
+      patch_files:
+         - target_version: "19.18"
+           filename: p35012866_1918000DBRU_Linux-x86-64.zip
+      description: "BUG_33527739_APPLY.SQL GOT ORA-13516: AWR OPERATION FAILED: CATPROC NOT VALID"
+      grid_patch: false
+      database_patch: true
+      datapatch_required: true

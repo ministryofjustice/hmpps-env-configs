@@ -18,5 +18,13 @@ required_patches:
       database_patch: true
       datapatch_required: false
       replaces_patch: "30616738"
+    p35012866:
+      patch_files:
+         - target_version: "19.18"
+           filename: p35012866_1918000DBRU_Linux-x86-64.zip
+      description: "BUG_33527739_APPLY.SQL GOT ORA-13516: AWR OPERATION FAILED: CATPROC NOT VALID"
+      grid_patch: false
+      database_patch: true
+      datapatch_required: true
 data_guard_parameters:
    ApplyLagThreshold: 1000

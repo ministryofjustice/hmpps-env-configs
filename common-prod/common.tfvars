@@ -7,7 +7,6 @@ availability_zone = {
 }
 
 aws_account_ids = {
-  delius-core-non-prod  = "723123699647"
   hmpps-delius-test     = "728765553488"
   hmpps-delius-stage    = "205048117103"
   hmpps-delius-mis-dev  = "479759138745"
@@ -21,8 +20,6 @@ aws_account_ids = {
 ## cr = community rehabilitation
 cr_account_ids = {
   hmpps-cr-jira-production            = "172219029581"
-  hmpps-cr-jitbit-non-production      = "377957503799"
-  hmpps-cr-jitbit-production          = "097456858629"
   hmpps-cr-unpaid-work-non-production = "964150688482"
   hmpps-cr-unpaid-work-production     = "787475932003"
 }
@@ -84,7 +81,7 @@ alfresco_asg_props = {
 }
 
 alf_config_overrides = {
-  ecs_instance_type = "m5.8xlarge"
+  ecs_instance_type = "m5.4xlarge"
   node_max_count    = "6"
 }
 
@@ -113,7 +110,7 @@ alf_ops_alerts = {
   slack_channel_name = "delius-alerts-alfresco-production"
   log_level          = "info"
   messaging_status   = "disabled"
-  runtime            = "python3.7"
+  runtime            = "python3.9"
   ssm_token          = "/alfresco/slack/token"
 }
 
@@ -387,6 +384,9 @@ internal_moj_access_cidr_blocks = [
   "78.33.32.108/32",   # Unilink AOVPN
   "217.138.45.109/32", # Unilink AOVPN
   "217.138.45.110/32", # Unilink AOVPN
+  "13.41.38.176/32",   # MP live_data-public-eu-west-2a-nat
+  "3.8.81.175/32",     # MP live_data-public-eu-west-2b-nat
+  "3.11.197.133/32",   # MP live_data-public-eu-west-2c-nat
 ]
 
 # public / user access
@@ -432,11 +432,20 @@ user_access_cidr_blocks = [
   "194.33.248.0/29",   # ARK Corsham Internet Egress Vodafone
   "20.49.214.199/32",  # Azure Landing Zone Egress
   "20.49.214.228/32",  # Azure Landing Zone Egress
+  "20.26.11.71/32",    # Azure Landing Zone Egress
+  "20.26.11.108/32",   # Azure Landing Zone Egress
   "195.89.157.56/29",  # HMP Five Wells
   "195.59.215.184/29", # HMP Five Wells
   "35.178.209.113/32", # cloudplatform-live-1
   "3.8.51.207/32",     # cloudplatform-live-2
   "35.177.252.54/32",  # cloudplatform-live-3
+  "13.41.38.176/32",   # MP live_data-public-eu-west-2a-nat
+  "3.8.81.175/32",     # MP live_data-public-eu-west-2b-nat
+  "3.11.197.133/32",   # MP live_data-public-eu-west-2c-nat
+  "194.33.200.0/21",   # Vodafone DIA Sites
+  "194.33.216.0/24",   # Vodafone DIA Sites
+  "194.33.217.0/24",   # Vodafone DIA Sites
+  "194.33.218.0/24",   # Vodafone DIA Sites
 ]
 
 # jenkins access
@@ -631,53 +640,44 @@ default_umt_config = {
 }
 umt_config = {}
 
-# Approved Premises Tracker API
-default_aptracker_api_config = {
-  image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-aptracker-api"
-  version      = "1.13" # Application version
-  log_level    = "INFO" # Application log-level
-  min_capacity = 0      # Service has not yet been enabled in prod environments
-  max_capacity = 0
-}
-aptracker_api_config = {}
-
 # Delius GDPR compliance tool
 default_gdpr_config = {
-  api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "0.27.0" # Application version
-  api_min_capacity            = 0        # This service is only enabled in specific environments
-  api_max_capacity            = 0
-  ui_min_capacity             = 0
-  ui_max_capacity             = 0
-  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "-" #
-  cron_retainedoffendersiicsa = "-" #
-  cron_eligiblefordeletion    = "-" #
-  cron_deleteoffenders        = "-" #
-  cron_destructionlogclearing = "-" #
-  ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
-  ui_version                  = "0.27.0"              # Application version
-  ui_memory                   = 1024                  # Memory to assign to UI container
-  ui_cpu                      = 512                   # CPU to assign to UI container
-  db_instance_class           = "db.m5.large"         # Instance type to use for the database
-  db_storage                  = 100                   # Allocated database storage in GB
-  db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
-  db_backup_window            = "19:00-21:00"         # Daily window to take RDS backups
-  db_backup_retention_period  = 14                    # Number of days to retain RDS backups for
-  log_level                   = "INFO"                # Application log-level
+  api_image_url                       = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
+  api_version                         = "0.27.0" # Application version
+  api_min_capacity                    = 0        # This service is only enabled in specific environments
+  api_max_capacity                    = 0
+  ui_min_capacity                     = 0
+  ui_max_capacity                     = 0
+  cron_identifyduplicates             = "-" # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders              = "-" #
+  cron_retainedoffendersiicsa         = "-" #
+  cron_eligiblefordeletion            = "-" #
+  cron_deleteoffenders                = "-" #
+  cron_destructionlogclearing         = "-" #
+  cron_eligiblefordeletionsoftdeleted = "-" #
+  ui_image_url                        = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
+  ui_version                          = "0.27.0"              # Application version
+  ui_memory                           = 1024                  # Memory to assign to UI container
+  ui_cpu                              = 512                   # CPU to assign to UI container
+  db_instance_class                   = "db.m5.large"         # Instance type to use for the database
+  db_storage                          = 100                   # Allocated database storage in GB
+  db_maintenance_window               = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
+  db_backup_window                    = "19:00-21:00"         # Daily window to take RDS backups
+  db_backup_retention_period          = 14                    # Number of days to retain RDS backups for
+  log_level                           = "INFO"                # Application log-level
 }
 gdpr_config = {}
 
 # Delius Merge compliance tool
 default_merge_config = {
   api_image_url              = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-api"
-  api_version                = "0.22.1" # Application version
+  api_version                = "0.29.0" # Application version
   api_min_capacity           = 0        # This service is only enabled in specific environments
   api_max_capacity           = 0
   ui_min_capacity            = 0
   ui_max_capacity            = 0
   ui_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-ui"
-  ui_version                 = "0.22.0"              # Application version
+  ui_version                 = "0.29.0"              # Application version
   ui_memory                  = 1024                  # Memory to assign to UI container
   ui_cpu                     = 512                   # CPU to assign to UI container
   db_instance_class          = "db.m5.large"         # Instance type to use for the database

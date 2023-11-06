@@ -7,7 +7,6 @@ availability_zone = {
 }
 
 aws_account_ids = {
-  delius-core-non-prod  = "723123699647"
   hmpps-delius-test     = "728765553488"
   hmpps-delius-stage    = "205048117103"
   hmpps-delius-mis-dev  = "479759138745"
@@ -21,8 +20,6 @@ aws_account_ids = {
 ## cr = community rehabilitation
 cr_account_ids = {
   hmpps-cr-jira-production            = "172219029581"
-  hmpps-cr-jitbit-non-production      = "377957503799"
-  hmpps-cr-jitbit-production          = "097456858629"
   hmpps-cr-unpaid-work-non-production = "964150688482"
   hmpps-cr-unpaid-work-production     = "787475932003"
 }
@@ -69,7 +66,6 @@ spg_app_name = "spg"
 alf_account_ids = {
   hmpps-delius-test     = "728765553488"
   hmpps-delius-training = "330914586320"
-  hmpps-delius-core-dev = "723123699647"
   hmpps-alfresco-dev    = "563502482979"
   eng-non-prod          = "895523100917"
 }
@@ -103,7 +99,7 @@ alf_ops_alerts = {
   slack_channel_name = "delius-alerts-alfresco-nonprod"
   log_level          = "info"
   messaging_status   = "disabled"
-  runtime            = "python3.7"
+  runtime            = "python3.9"
   ssm_token          = "/alfresco/slack/token"
 }
 
@@ -302,6 +298,9 @@ internal_moj_access_cidr_blocks = [
   "78.33.32.108/32",   # Unilink AOVPN
   "217.138.45.109/32", # Unilink AOVPN
   "217.138.45.110/32", # Unilink AOVPN
+  "13.43.9.198/32",    # MP non_live_data-public-eu-west-2a-nat
+  "13.42.163.245/32",  # MP non_live_data-public-eu-west-2b-nat
+  "18.132.208.127/32", # MP non_live_data-public-eu-west-2c-nat
 ]
 
 # public / user access
@@ -352,6 +351,9 @@ user_access_cidr_blocks = [
   "35.178.209.113/32", # cloudplatform-live-1
   "3.8.51.207/32",     # cloudplatform-live-2
   "35.177.252.54/32",  # cloudplatform-live-3
+  "13.43.9.198/32",    # MP non_live_data-public-eu-west-2a-nat
+  "13.42.163.245/32",  # MP non_live_data-public-eu-west-2b-nat
+  "18.132.208.127/32", # MP non_live_data-public-eu-west-2c-nat
 ]
 
 # jenkins access
@@ -542,22 +544,14 @@ default_umt_config = {
 }
 umt_config = {}
 
-# Approved Premises Tracker API
-default_aptracker_api_config = {
-  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-aptracker-api"
-  version   = "1.13"  # Application version
-  log_level = "DEBUG" # Application log-level
-}
-aptracker_api_config = {}
-
 # Delius GDPR compliance tool
 default_gdpr_config = {
-  api_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                 = "latest" # Application version
-  api_min_capacity            = 0        # This service is only enabled in specific environments
-  api_max_capacity            = 0
-  ui_min_capacity             = 0
-  ui_max_capacity             = 0
+  api_image_url    = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
+  api_version      = "latest" # Application version
+  api_min_capacity = 0        # This service is only enabled in specific environments
+  api_max_capacity = 0
+  ui_min_capacity  = 0
+  ui_max_capacity  = 0
   # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
   # Example "0 0 13 ? * MON-FRI" Will trigger once at 1300 Monday to Friday
   cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
@@ -566,6 +560,7 @@ default_gdpr_config = {
   cron_eligiblefordeletion    = "-" #
   cron_deleteoffenders        = "-" #
   cron_destructionlogclearing = "-" #
+  cron_eligiblefordeletionsoftdeleted = "-" #
   ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
   ui_version                  = "latest"              # Application version
   ui_memory                   = 1024                  # Memory to assign to UI container
@@ -628,7 +623,7 @@ default_new_tech_config = {
   env_DELIUS_API_BASE_URL              = "http://community-api.ecs.cluster:8080/api/"
   env_PDF_GENERATOR_URL                = "http://pdf-generator.ecs.cluster:8080/"
   env_HMPPS_AUTH_BASE_URL              = "https://sign-in-dev.hmpps.service.justice.gov.uk/"
-  env_NOMIS_API_BASE_URL               = "https://api-dev.prison.service.justice.gov.uk/"
+  env_NOMIS_API_BASE_URL               = "https://prison-api-dev.prison.service.justice.gov.uk/"
   env_PROBATION_OFFENDER_SEARCH_URL    = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk/"
 }
 new_tech_config = {}

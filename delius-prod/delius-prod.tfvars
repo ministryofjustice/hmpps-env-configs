@@ -12,6 +12,9 @@ route53_domain_private = "service.justice.gov.uk"
 
 subdomain = "probation"
 
+mis_overide_resizing_schedule_tags   = "false"     ##Set resizing schedule tag key value for MIS Servers
+
+
 #Instance size for smtp server
 smtp_instance_type = "m5.large"
 
@@ -37,7 +40,7 @@ oracle_backup_schedule = {
 
 oracle_validate_backup_schedule = {
   delius = {
-    host     = "delius_standbydb2"
+    host     = "Random Delius Standby"
     schedule = "00 13 ? * 4 *"
   },
   mis = {
@@ -65,4 +68,19 @@ database_high_availability_count = {
   mis    = 1
   misboe = 1
   misdsd = 1
+}
+
+offloc_rotate_password_schedule = {
+  schedule_expression = "0 11 ? * TUE#3 *"
+}
+
+# Support for running different Ansible Versions for Oracle Playbooks
+# Specify the tag for the Docker Ansible Runner image to use
+# along with default tags for the Git branches with the appropriate
+# versions of Ansible compatible with that image.
+# (These will default to the "latest" image and "master" branch)
+oracle_ansible_versions = {
+   docker_image_tag = "0.0.0-20230712141248-alpha"
+   delius_manual_deployments_default_branch = "master"
+   hmpps_delius_pipelines_default_branch = "master"
 }

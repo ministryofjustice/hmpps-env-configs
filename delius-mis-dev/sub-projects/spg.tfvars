@@ -1,0 +1,2 @@
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://alfresco.mis-dev.delius.probation.hmpps.dsd.io/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://alfresco.mis-dev.delius.probation.hmpps.dsd.io/alfresco/service/noms-spg"

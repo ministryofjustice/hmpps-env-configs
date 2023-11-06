@@ -35,12 +35,17 @@ delius_users:
   ilakanu_ro:
   swatson_ro:
   mheywardchaplin_ro:
+  ahughes_ro:
+  wwang_ro:
 oracle_software:
-      version: 19.16
-      superset_patch: p34130714_190000_Linux-x86-64.zip
-      ojvm_patch: p34086870_190000_Linux-x86-64.zip    
+      version: '19.20'
+      combo_patch: p35370167_190000_Linux-x86-64.zip
       opatch:
-          version: 12.2.0.1.32
-          filename: p6880880_190000_Linux-x86-64.12.2.0.1.32.zip
+          version: 12.2.0.1.39
+          filename: p6880880_190000_Linux-x86-64.12.2.0.1.39.zip
 database_parameters:
    processes: 1000
+database_locked_statistics:
+   - schema_name: DELIUS_APP_SCHEMA
+     table_names:
+      - DOC_MIGRATION_QUEUE_TAB: ALL

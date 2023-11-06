@@ -6,9 +6,9 @@ db_size_delius_core = {
   database_size        = "x_large"
   instance_type        = "r5.4xlarge"
   disk_type_data       = "gp3" # Requires iops and throughput to be set
-  disk_throughput_data = 1000   # Only relevant when disks_volume_type = "gp3"
+  disk_throughput_data = 1000  # Only relevant when disks_volume_type = "gp3"
   disk_type_root       = "gp3" # Requires iops and throughput to be set
-  disk_throughput_root = 1000   # Only relevant when disks_volume_type = "gp3"
+  disk_throughput_root = 1000  # Only relevant when disks_volume_type = "gp3"
   disks_quantity       = 16    # Do not decrease this
   disks_quantity_data  = 10
   disk_iops_root       = 4000
@@ -42,6 +42,8 @@ ldap_config = {
 
 # WebLogic
 delius_app_config = {
+  min_capacity = 40 # Increased to handle higher memory usage following session timeout extension
+
   # oauth
   env_OAUTH_URL = "https://sign-in.hmpps.service.justice.gov.uk/auth"
   # user sign-in
@@ -58,7 +60,9 @@ delius_app_config = {
   # gov.uk notify
   secret_NOTIFICATION_API_KEY = "/delius-prod/delius/delius-application/govuk-notify/api-key"
 
+  env_OFFENDER_SEARCH_API_URL       = "https://probation-offender-search.hmpps.service.justice.gov.uk"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
@@ -75,13 +79,6 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-}
-
-# Approved Premises Tracking API
-# (This service is currently disabled in Production)
-aptracker_api_config = {
-  ecs_scaling_min_capacity = 0
-  ecs_scaling_max_capacity = 0
 }
 
 # Delius API
@@ -115,6 +112,9 @@ env_user_access_cidr_blocks = [
   "194.33.248.0/24",
   "194.33.249.0/24",
 ]
+
+# CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
+mp_corresponding_vpc_cidr = "10.27.8.0/21"
 
 # DSS Batch Task
 dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.6"

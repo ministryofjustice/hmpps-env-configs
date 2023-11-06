@@ -22,18 +22,19 @@ create_autostop_instance     = "true"
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
   delius = {
-    daily_schedule  = "30 06 ? * 4-6 *"
-    weekly_schedule = "30 06 ? * 3 *"
+    daily_schedule  = "30 06 ? * 3,5,6 *"
+    weekly_schedule = "30 06 ? * 4 *"
   }
 }
 
 oracle_validate_backup_schedule = {
   delius = {
     host     =  "delius_primarydb"
-    schedule =  "00 18 ? * 4 *"
+    schedule =  "00 18 ? * 5 *"
   }
 }
 
+# Flashback Schedule defined using the Europe/London timezone
 oracle_flashback_schedule = {
   delius = {
     restorepoint   =  "TRAINING"
@@ -52,4 +53,18 @@ oracle_delete_unused_dbids = "yes"
 
 oracle_rotate_passwords_schedule = {
     schedule_expression   =  "00 15 ? * TUE *"
+}
+offloc_rotate_password_schedule = {
+  schedule_expression = ""
+}
+
+# Support for running different Ansible Versions for Oracle Playbooks
+# Specify the tag for the Docker Ansible Runner image to use
+# along with default tags for the Git branches with the appropriate
+# versions of Ansible compatible with that image.
+# (These will default to the "latest" image and "master" branch)
+oracle_ansible_versions = {
+   docker_image_tag = "0.0.0-20230712141248-alpha"
+   delius_manual_deployments_default_branch = "master"
+   hmpps_delius_pipelines_default_branch = "master"
 }

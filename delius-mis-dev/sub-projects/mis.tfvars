@@ -8,7 +8,7 @@ cloudwatch_log_retention = 14
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
-public_ssl_arn = "arn:aws:acm:eu-west-2:723123699647:certificate/0b97aef6-3c80-48c2-818c-855d493b2d81"
+public_ssl_arn = ""
 
 # IAM
 eng_root_arn = "arn:aws:iam::895523100917:root"
@@ -34,7 +34,7 @@ self_signed_server_early_renewal_hours = 336
 
 #Instance size for bcs
 bcs_instance_type           = "t2.xlarge"
-bcs_root_size               = 75
+bcs_root_size               = 125
 bcs_server_count            = 1
 bcs_disable_api_termination = false
 bcs_ebs_optimized           = false
@@ -42,7 +42,7 @@ bcs_hibernation             = false
 
 #Instance size for bps
 bps_instance_type           = "t2.xlarge"
-bps_root_size               = 75
+bps_root_size               = 125
 bps_server_count            = 1
 bps_disable_api_termination = false
 bps_ebs_optimized           = false
@@ -50,7 +50,7 @@ bps_hibernation             = false
 
 #Instance size for bws
 bws_instance_type           = "t2.xlarge"
-bws_root_size               = 75
+bws_root_size               = 125
 bws_server_count            = 1
 bws_disable_api_termination = false
 bws_ebs_optimized           = false
@@ -58,6 +58,7 @@ bws_hibernation             = false
 
 #Instance size for dis
 dis_instance_type           = "t2.xlarge"
+dis_instance_type_lower     = "t2.large"
 dis_root_size               = 75
 dis_server_count            = 1
 dis_disable_api_termination = false
@@ -87,34 +88,14 @@ db_size_mis = {
   disk_iops_data      = 5000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
-  disk_size_data      = 5000 # Do not decrease this
-  disk_size_flash     = 5000 # Do not decrease this
-  # total_storage  = 10000 # This should equal disks_quantity x disk_size
+  disk_size_data      = 500 # Do not decrease this without adjusting ASM
+  disk_size_flash     = 500 # Do not decrease this without adjusting ASM
+  # total_storage  = 1000 # This should equal disks_quantity x disk_size
 
   disk_type_root       = "gp3"
   disk_throughput_root = 125
   disk_type_data       = "gp3"
   disk_throughput_data = 125
-}
-
-## MIS Datamart standby instances.
-## This variable was added to give us better granularity over standby instance
-## settings in non-prod environments to reduce cost
-db_size_mis_standby = {
-  database_size = "small"
-  instance_type = "t3.large"
-  # disk_iops      = 5000
-  # disks_quantity = 2          # Do not decrease this
-  # disk_size      = 5000        # Do not decrease this
-
-  disks_quantity      = 2 # Do not decrease this
-  disks_quantity_data = 1
-  disk_iops_data      = 5000
-  disk_iops_flash     = 500
-  disk_iops_root      = 1000
-  disk_size_data      = 5000 # Do not decrease this
-  disk_size_flash     = 5000 # Do not decrease this
-  # total_storage  = 10000 # This should equal disks_quantity x disk_size
 }
 
 ansible_vars_mis_db = {
@@ -148,9 +129,9 @@ db_size_misboe = {
   disk_iops_data      = 3000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
-  disk_size_data      = 500 # Do not decrease this
-  disk_size_flash     = 500 # Do not decrease this
-  # total_storage  = 1000 # This should equal disks_quantity x disk_size
+  disk_size_data      = 100 # Do not decrease this
+  disk_size_flash     = 100 # Do not decrease this
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
 
   disk_type_root       = "gp3"
   disk_throughput_root = 125
@@ -189,9 +170,9 @@ db_size_misdsd = {
   disk_iops_data      = 3000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
-  disk_size_data      = 500 # Do not decrease this
-  disk_size_flash     = 500 # Do not decrease this
-  # total_storage  = 1000 # This should equal disks_quantity x disk_size
+  disk_size_data      = 100 # Do not decrease this without adjusting ASM
+  disk_size_flash     = 100 # Do not decrease this without adjusting ASM
+  # total_storage  = 200 # This should equal disks_quantity x disk_size
 
   disk_type_root       = "gp3"
   disk_throughput_root = 125

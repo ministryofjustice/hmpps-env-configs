@@ -31,10 +31,35 @@ delius_users:
   dreid_dba:
   sgandalwar_dba:
   kmoss_dba:
+  jmacbeth_ro:
+  jdundon_ro:
+  yfedkiv_dba:
+  mthapa_ro:
+  maspin_ro:
+  mlaskowski_ro:
+  pmiller_ro:
+  pwilson_ro:
+  rmccormack_ro:
+  svalmonte_ro:
 oracle_software:
-  version: 19.16
-  superset_patch: p34130714_190000_Linux-x86-64.zip
-  ojvm_patch: p34086870_190000_Linux-x86-64.zip
+  version: 19.18
+  combo_patch: p34773504_190000_Linux-x86-64.zip
   opatch:
-    version: 12.2.0.1.32
-    filename: p6880880_190000_Linux-x86-64.12.2.0.1.32.zip
+    version: 12.2.0.1.36
+    filename: p6880880_190000_Linux-x86-64.12.2.0.1.36.zip
+required_patches:
+    p35012866:
+      patch_files:
+         - target_version: "19.18"
+           filename: p35012866_1918000DBRU_Linux-x86-64.zip
+      description: "BUG_33527739_APPLY.SQL GOT ORA-13516: AWR OPERATION FAILED: CATPROC NOT VALID"
+      grid_patch: false
+      database_patch: true
+      datapatch_required: true
+database_locked_statistics:
+   - schema_name: DELIUS_APP_SCHEMA
+     table_names:
+      - DOC_MIGRATION_QUEUE_TAB: ALL
+database_parameters:
+   db_recovery_file_dest_size: 900G
+audited_interaction_repo: PRDNDA

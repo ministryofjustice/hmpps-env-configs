@@ -9,7 +9,7 @@ db_size_delius_core = {
   disk_throughput_data = 125   # Only relevant when disks_volume_type = "gp3"
   disk_type_root       = "gp3" # Requires iops and throughput to be set
   disk_throughput_root = 125   # Only relevant when disks_volume_type = "gp3"
-  disks_quantity       = 4     # Do not decrease this
+  disks_quantity       = 3     # Do not decrease this without amending ASM
   disks_quantity_data  = 2
   disk_iops_root       = 3000
   disk_iops_data       = 3000
@@ -45,7 +45,7 @@ delius_app_config = {
 
   # Increase min capacity due to issues with regression pack execution
   # DST-12284 Intermittent 502 Bad Gateway / 504 Gateway Timeout errors
-  min_capacity = 6
+  min_capacity = 8
   max_capacity = 10
 
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
@@ -65,45 +65,50 @@ delius_app_config = {
   secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
   # gov.uk notify
   secret_NOTIFICATION_API_KEY = "/delius-test/delius/delius-application/govuk-notify/api-key"
+  # probation search
+  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
+  env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
 gdpr_config = {
   api_min_capacity  = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity  = 1
-  api_version       = "0.27.0"
+  api_version       = "0.34.0"
   ui_min_capacity   = 1
   ui_max_capacity   = 5
-  ui_version        = "0.27.0"
+  ui_version        = "0.34.0"
   db_instance_class = "db.m5.large"
   db_storage        = 100
   # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   # "0 0 9 ? * MON" Monday at 9am
-  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "-" # disabled
-  cron_retainedoffendersiicsa = "0 0 8 ? * MON-FRI" # Run at 8am Monday to Friday
-  cron_eligiblefordeletion    = "-" # disabled
-  cron_deleteoffenders        = "-" # disabled
-  cron_destructionlogclearing = "-" # disabled
+  cron_identifyduplicates             = "-"                 # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders              = "-"                 # disabled
+  cron_retainedoffendersiicsa         = "0 0 8 ? * MON-FRI" # Run at 8am Monday to Friday
+  cron_eligiblefordeletion            = "-"                 # disabled
+  cron_deleteoffenders                = "-"                 # disabled
+  cron_destructionlogclearing         = "-"                 # disabled
+  cron_eligiblefordeletionsoftdeleted = "-"                 # disabled
 }
 
 # Merge
 merge_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
-  api_version      = "0.22.1"
+  api_version      = "0.29.0"
   ui_min_capacity  = 1
   ui_max_capacity  = 5
-  ui_version       = "0.22.0"
+  ui_version       = "0.29.0"
   schedule         = "0 5/10 7-23 ? * MON-FRI" # When to run the merge/unmerge scheduled process
 }
 
 # User Management
 umt_config = {
-  version = "latest"
+  version = "1.13.1"
 }
 
 # Delius API
@@ -131,6 +136,9 @@ community_api_ingress = [
 env_user_access_cidr_blocks = [
   "54.76.254.148/32" # DXW VPN
 ]
+
+# CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
+mp_corresponding_vpc_cidr = "10.26.8.0/21"
 
 # DSS Batch Task
 dss_job_envvars = [

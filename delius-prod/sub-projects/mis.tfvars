@@ -8,7 +8,7 @@ cloudwatch_log_retention = 14
 # ROUTE53 ZONE probation.hmpps.dsd.io
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
-public_ssl_arn = "arn:aws:acm:eu-west-2:723123699647:certificate/0b97aef6-3c80-48c2-818c-855d493b2d81"
+public_ssl_arn = ""
 
 # IAM
 eng_root_arn = "arn:aws:iam::895523100917:root"
@@ -58,6 +58,8 @@ bws_hibernation = false
 
 #Instance size for dis
 dis_instance_type  = "m5.12xlarge"
+dis_instance_type_lower  = "m5.4xlarge"
+
 dis_root_size = 75
 dis_server_count = 1
 dis_disable_api_termination = false
@@ -78,8 +80,8 @@ dfi_hibernation = false
 db_size_mis = {
   database_size  = "x_large"
   instance_type  = "r5.12xlarge"
-  disks_quantity      = 8   # Do not decrease this
-  disks_quantity_data = 4
+  disks_quantity      = 9   # Do not decrease this; when increasing this value a new data/flash volume is created. Both vols have different iops so check with DBAs which type of vol is required as they might have to perform a volume swapping within ASM. Ticket ref. https://dsdmoj.atlassian.net/browse/NIT-706
+  disks_quantity_data = 5
   disk_iops_data      = 5000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
@@ -98,8 +100,8 @@ db_size_mis = {
 db_size_mis_standby = {
   database_size  = "x_large"
   instance_type  = "r5.12xlarge"
-  disks_quantity      = 8   # Do not decrease this
-  disks_quantity_data = 4
+  disks_quantity      = 9   # Do not decrease this; when increasing this value a new data/flash volume is created. Both vols have different iops so check with DBAs which type of vol is required as they might have to perform a volume swapping within ASM. Ticket ref. https://dsdmoj.atlassian.net/browse/NIT-706
+  disks_quantity_data = 5
   disk_iops_data      = 5000
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
@@ -183,8 +185,8 @@ db_size_misdsd = {
   disk_iops_data      = 3000
   disk_iops_flash     = 3000
   disk_iops_root      = 5000
-  disk_size_data      = 500 # Do not decrease this
-  disk_size_flash     = 500 # Do not decrease this
+  disk_size_data      = 200 # Do not decrease this without adjusting ASM
+  disk_size_flash     = 200 # Do not decrease this without adjusting ASM
   # total_storage  = 1000 # This should equal disks_quantity x disk_size
   disk_type_root       = "gp3"
   disk_throughput_root = 500

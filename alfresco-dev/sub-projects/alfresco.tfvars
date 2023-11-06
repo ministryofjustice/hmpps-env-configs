@@ -105,6 +105,7 @@ alf_rds_props = {
   iops                    = 0
   storage_type            = "gp2"
   allocated_storage       = 100
+  max_allocated_storage   = 0 # disable storage auto scaling
   maintenance_window      = "Wed:19:30-Wed:21:30"
   backup_window           = "02:00-04:00"
   backup_retention_period = 7
