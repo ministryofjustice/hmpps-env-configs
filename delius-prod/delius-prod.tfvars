@@ -84,3 +84,16 @@ oracle_ansible_versions = {
    delius_manual_deployments_default_branch = "master"
    hmpps_delius_pipelines_default_branch = "master"
 }
+
+# Temporary override for del-prod-weblogic-app-task-definition memory increase
+default_delius_app_config = {
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:latest" # Version is managed by Ansible
+
+  min_capacity                          = 25
+  max_capacity                          = 40
+  memory                                = 24576 # 24GB
+  env_USER_MEM_ARGS                     = "-XX:MaxRAMPercentage=90.0"
+  env_LOG_LEVEL_NDELIUS                 = "INFO"
+  env_JDBC_CONNECTION_POOL_MIN_CAPACITY = 50
+  env_JDBC_CONNECTION_POOL_MAX_CAPACITY = 100
+}
