@@ -91,7 +91,7 @@ default_delius_app_config = {
 
   min_capacity                          = 25
   max_capacity                          = 40
-  memory                                = 24576 # 16GB
+  memory                                = 24576 # 24GB
   env_USER_MEM_ARGS                     = "-XX:MaxRAMPercentage=90.0"
   env_LOG_LEVEL_NDELIUS                 = "INFO"
   env_JDBC_CONNECTION_POOL_MIN_CAPACITY = 50
