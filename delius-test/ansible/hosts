@@ -2,7 +2,7 @@
 loadrunner.test.delius.probation.hmpps.dsd.io
 
 [delius_primarydb]
-delius-test-delius-db-1
+delius-db-1.test.delius.probation.hmpps.dsd.io
 
 [delius_dbs:children]
 delius_primarydb
