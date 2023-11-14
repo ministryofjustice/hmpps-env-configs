@@ -1,12 +1,12 @@
 [loadrunner]
-delius-mis-dev-loadrunner
+loadrunner.mis-dev.delius.probation.hmpps.dsd.io
 
 [delius_primarydb]
-delius-mis-dev-delius-db-1
+delius-db-1.mis-dev.delius.probation.hmpps.dsd.io
 [delius_standbydb1]
-delius-mis-dev-delius-db-2
+delius-db-2.mis-dev.delius.probation.hmpps.dsd.io
 [delius_standbydb2]
-delius-mis-dev-delius-db-3
+delius-db-3.mis-dev.delius.probation.hmpps.dsd.io
 
 [delius_dbs:children]
 delius_primarydb
@@ -14,19 +14,19 @@ delius_standbydb1
 delius_standbydb2
 
 [mis_primarydb]
-delius-mis-dev-mis-db-1
+mis-db-1.mis-dev.delius.probation.hmpps.dsd.io
 
 [mis_dbs:children]
 mis_primarydb
 
 [misboe_primarydb]
-delius-mis-dev-misboe-db-1
+misboe-db-1.mis-dev.delius.probation.hmpps.dsd.io
 
 [misboe_dbs:children]
 misboe_primarydb
 
 [misdsd_primarydb]
-delius-mis-dev-misdsd-db-1
+misdsd-db-1.mis-dev.delius.probation.hmpps.dsd.io
 
 [misdsd_dbs:children]
 misdsd_primarydb
