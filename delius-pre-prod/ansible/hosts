@@ -2,9 +2,9 @@
 loadrunner.pre-prod.delius.probation.hmpps.dsd.io
 
 [delius_primarydb]
-delius-pre-prod-delius-db-1
+delius-db-1.pre-prod.delius.probation.hmpps.dsd.io
 [delius_standbydb1]
-delius-pre-prod-delius-db-2
+delius-db-2.pre-prod.delius.probation.hmpps.dsd.io
 
 [delius_dbs:children]
 delius_primarydb
