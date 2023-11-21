@@ -52,10 +52,11 @@ delius_app_config = {
   secret_API_CLIENT_SECRET = "/delius-pre-prod/delius/weblogic/ndelius-domain/api-client-secret"
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk"
+  env_ELASTICSEARCH_URL       = "https://probation-search-preprod.hmpps.service.justice.gov.uk/delius"
   # Temp set logging to DEBUG
   env_LOG_LEVEL_NDELIUS = "DEBUG"
   # PSR Service
-  env_PSR_SERVICE_URL               = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
+  env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
