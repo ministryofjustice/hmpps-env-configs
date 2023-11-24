@@ -72,6 +72,20 @@ delius_app_config = {
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
 }
+delius_SR28_config = {
+  env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
+  # gov.uk notify
+  secret_NOTIFICATION_API_KEY = "/delius-test/delius/delius-application/govuk-notify/api-key"
+  # probation search
+  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
+  env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
+
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
+}
 
 # GDPR
 gdpr_config = {
