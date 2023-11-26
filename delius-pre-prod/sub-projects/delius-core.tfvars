@@ -140,3 +140,10 @@ dss_job_envvars = [
 
 # Use dsd.io public zone until transition to gov.uk is complete for this environment
 delius_core_public_zone = "legacy"
+
+database_high_availability_count = {
+  delius = 2
+  mis    = 1
+  misboe = 1
+  misdsd = 1
+}
