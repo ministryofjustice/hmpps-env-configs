@@ -155,3 +155,13 @@ dss_job_envvars = [
     "value" = "30"
   }
 ]
+
+# Self Signed Certs
+self_signed_ca_algorithm = "RSA"
+self_signed_ca_rsa_bits = "2048"
+self_signed_ca_validity_period_hours = 8544
+self_signed_ca_early_renewal_hours = 672
+self_signed_server_algorithm = "RSA"
+self_signed_server_rsa_bits = "2048"
+self_signed_server_validity_period_hours = 2160
+self_signed_server_early_renewal_hours = 336
