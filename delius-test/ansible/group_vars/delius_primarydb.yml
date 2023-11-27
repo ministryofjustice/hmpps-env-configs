@@ -44,7 +44,7 @@ oracle_software:
           version: 12.2.0.1.39
           filename: p6880880_190000_Linux-x86-64.12.2.0.1.39.zip
 database_parameters:
-   processes: 1000
+   processes: 1500
 database_locked_statistics:
    - schema_name: DELIUS_APP_SCHEMA
      table_names:
