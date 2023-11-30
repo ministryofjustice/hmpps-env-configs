@@ -74,6 +74,16 @@ delius_app_config = {
 }
 delius_SR28_config = {
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
+  # oauth
+  env_OAUTH_URL = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+  # user sign-in
+  env_OAUTH_LOGIN_ENABLED          = "false"
+  env_OAUTH_CLIENT_ID              = "delius-ui"
+  secret_OAUTH_CLIENT_SECRET       = "/delius-test/delius/weblogic/ndelius-domain/oauth-client-secret"
+  env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api-dev.prison.service.justice.gov.uk/token/verify"
+  env_OAUTH_CALLBACK_URL           = "https://ndelius-sr28.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_DEFAULT_SCOPE          = "delius"
+  env_OAUTH_LOGIN_NAME             = ""
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
