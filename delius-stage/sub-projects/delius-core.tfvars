@@ -70,21 +70,21 @@ gdpr_config = {
   api_version      = "0.35.0"
   ui_version       = "0.35.0"
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
-  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "-" #
-  cron_retainedoffendersiicsa = "-" #
-  cron_eligiblefordeletion    = "-" #
-  cron_deleteoffenders        = "-" # Disabled 
-  cron_destructionlogclearing = "-" #
+  cron_identifyduplicates             = "-" # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders              = "-" #
+  cron_retainedoffendersiicsa         = "-" #
+  cron_eligiblefordeletion            = "-" #
+  cron_deleteoffenders                = "-" # Disabled 
+  cron_destructionlogclearing         = "-" #
   cron_eligiblefordeletionsoftdeleted = "-" #
 }
 
 # Merge
 merge_config = {
-  api_version                = "0.29.0" # Application version
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_version      = "0.29.0" # Application version
+  api_min_capacity = 1        # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
-  ui_version                 = "0.29.0" # Application version
+  ui_version       = "0.29.0" # Application version
   ui_min_capacity  = 2
   ui_max_capacity  = 10
 }
@@ -152,16 +152,16 @@ dss_job_envvars = [
   },
   {
     "name"  = "PARSEERRORMAXLIMITOVERRIDE"
-    "value" = "30"
+    "value" = "100"
   }
 ]
 
 # Self Signed Certs
-self_signed_ca_algorithm = "RSA"
-self_signed_ca_rsa_bits = "2048"
-self_signed_ca_validity_period_hours = 8544
-self_signed_ca_early_renewal_hours = 672
-self_signed_server_algorithm = "RSA"
-self_signed_server_rsa_bits = "2048"
+self_signed_ca_algorithm                 = "RSA"
+self_signed_ca_rsa_bits                  = "2048"
+self_signed_ca_validity_period_hours     = 8544
+self_signed_ca_early_renewal_hours       = 672
+self_signed_server_algorithm             = "RSA"
+self_signed_server_rsa_bits              = "2048"
 self_signed_server_validity_period_hours = 2160
-self_signed_server_early_renewal_hours = 336
+self_signed_server_early_renewal_hours   = 336

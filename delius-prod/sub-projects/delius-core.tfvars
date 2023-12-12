@@ -152,7 +152,7 @@ dss_job_envvars = [
   },
   {
     "name"  = "PARSEERRORMAXLIMITOVERRIDE"
-    "value" = "30"
+    "value" = "100"
   }
 ]
 
