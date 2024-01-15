@@ -473,17 +473,6 @@ default_ldap_config = {
 }
 ldap_config = {}
 
-# Default values for Elasticsearch
-default_contact_search_config = {
-  instance_count                = 1
-  instance_type                 = "t3.medium.elasticsearch"
-  dedicated_master_enabled      = false
-  volume_size                   = 64
-  volume_type                   = "gp2"
-  automated_snapshot_start_hour = 23
-}
-contact_search_config = {}
-
 ecs_cluster_target_capacity = 99 # This value allows for one idling instance to be available in the cluster
 
 # Default ECS scaling config. These options can be overridden per-service below.
@@ -543,23 +532,23 @@ default_gdpr_config = {
   ui_max_capacity  = 0
   # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
   # Example "0 0 13 ? * MON-FRI" Will trigger once at 1300 Monday to Friday
-  cron_identifyduplicates     = "-" # Batch schedules. Set to "-" to disable.
-  cron_retainedoffenders      = "-" #
-  cron_retainedoffendersiicsa = "-" #
-  cron_eligiblefordeletion    = "-" #
-  cron_deleteoffenders        = "-" #
-  cron_destructionlogclearing = "-" #
+  cron_identifyduplicates             = "-" # Batch schedules. Set to "-" to disable.
+  cron_retainedoffenders              = "-" #
+  cron_retainedoffendersiicsa         = "-" #
+  cron_eligiblefordeletion            = "-" #
+  cron_deleteoffenders                = "-" #
+  cron_destructionlogclearing         = "-" #
   cron_eligiblefordeletionsoftdeleted = "-" #
-  ui_image_url                = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
-  ui_version                  = "latest"              # Application version
-  ui_memory                   = 1024                  # Memory to assign to UI container
-  ui_cpu                      = 512                   # CPU to assign to UI container
-  db_instance_class           = "db.t3.small"         # Instance type to use for the database
-  db_storage                  = 30                    # Allocated database storage in GB
-  db_maintenance_window       = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
-  db_backup_window            = "19:00-21:00"         # Daily window to take RDS backups
-  db_backup_retention_period  = 1                     # Number of days to retain RDS backups for
-  log_level                   = "DEBUG"               # Application log-level
+  ui_image_url                        = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr-ui"
+  ui_version                          = "latest"              # Application version
+  ui_memory                           = 1024                  # Memory to assign to UI container
+  ui_cpu                              = 512                   # CPU to assign to UI container
+  db_instance_class                   = "db.t3.small"         # Instance type to use for the database
+  db_storage                          = 30                    # Allocated database storage in GB
+  db_maintenance_window               = "Wed:21:00-Wed:23:00" # Maintenance window for database patching/upgrades
+  db_backup_window                    = "19:00-21:00"         # Daily window to take RDS backups
+  db_backup_retention_period          = 1                     # Number of days to retain RDS backups for
+  log_level                           = "DEBUG"               # Application log-level
 }
 gdpr_config = {}
 
