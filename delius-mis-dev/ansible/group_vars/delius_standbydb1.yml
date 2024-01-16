@@ -11,3 +11,5 @@ required_patches:
       grid_patch: false
       database_patch: true
       datapatch_required: true
+database_parameters:
+   db_recovery_file_dest_size: 450G

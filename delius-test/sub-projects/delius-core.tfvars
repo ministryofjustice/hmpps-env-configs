@@ -103,10 +103,10 @@ delius_SR28_config = {
 gdpr_config = {
   api_min_capacity  = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity  = 1
-  api_version       = "0.35.0"
+  api_version       = "0.37.0"
   ui_min_capacity   = 1
   ui_max_capacity   = 5
-  ui_version        = "0.35.0"
+  ui_version        = "0.37.0"
   db_instance_class = "db.m5.large"
   db_storage        = 100
   # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
@@ -189,3 +189,13 @@ dss_job_envvars = [
     "value" = "delius"
   }
 ]
+
+# Self Signed Certs
+self_signed_ca_algorithm = "RSA"
+self_signed_ca_rsa_bits = "2048"
+self_signed_ca_validity_period_hours = 8544
+self_signed_ca_early_renewal_hours = 672
+self_signed_server_algorithm = "RSA"
+self_signed_server_rsa_bits = "2048"
+self_signed_server_validity_period_hours = 2160
+self_signed_server_early_renewal_hours = 336

@@ -62,4 +62,3 @@ database_locked_statistics:
       - DOC_MIGRATION_QUEUE_TAB: ALL
 database_parameters:
    db_recovery_file_dest_size: 900G
-audited_interaction_repo: PRDNDA

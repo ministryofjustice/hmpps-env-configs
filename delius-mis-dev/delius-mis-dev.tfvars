@@ -62,6 +62,18 @@ oracle_ansible_versions = {
   hmpps_delius_pipelines_default_branch    = "master"
 }
 
+# Here we define the configuration for Audited Interaction data
+# preservation by defining which database server is used as a 
+# source for the data:  delius_primarydb, delius_standbydb1 or delius_standbydb2
+# (If using a standby database then Active Data Guard must be enabled).
+# Specify the target environment where the data is written.   It will 
+# be written to the primary Delius database server in that environment.
+# (Target Environment Names should match those listed in aws_account_ids)
+oracle_audited_interaction = {
+  source_server = "delius_standbydb2"
+  target_environment = "hmpps-delius-test"
+}
+
 oracle_s3_backup_bucket_access = {
     modernisation_platform_role_arns = [
       "arn:aws:iam::326912278139:role/dev-delius-db-ec2_instance"

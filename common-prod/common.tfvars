@@ -566,19 +566,6 @@ default_ldap_config = {
 }
 ldap_config = {}
 
-# Default values for Elasticsearch
-default_contact_search_config = {
-  instance_count                = 6
-  instance_type                 = "r6g.xlarge.elasticsearch"
-  dedicated_master_enabled      = true
-  dedicated_master_count        = 3 # See https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains-dedicatedmasternodes.html
-  dedicated_master_type         = "m6g.large.elasticsearch"
-  volume_size                   = 256
-  volume_type                   = "gp2"
-  automated_snapshot_start_hour = 23
-}
-contact_search_config = {}
-
 # Shared ECS Cluster
 node_min_count    = 5
 node_max_count    = 50
@@ -719,7 +706,7 @@ default_new_tech_config = {
   env_DELIUS_API_BASE_URL              = "http://community-api.ecs.cluster:8080/api/"
   env_PDF_GENERATOR_URL                = "http://pdf-generator.ecs.cluster:8080/"
   env_HMPPS_AUTH_BASE_URL              = "https://sign-in-preprod.hmpps.service.justice.gov.uk/"
-  env_NOMIS_API_BASE_URL               = "https://api-preprod.prison.service.justice.gov.uk/"
+  env_NOMIS_API_BASE_URL               = "https://prison-api-preprod.prison.service.justice.gov.uk/"
   env_PROBATION_OFFENDER_SEARCH_URL    = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk/"
 }
 new_tech_config = {}
@@ -776,7 +763,7 @@ dss_job_image = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/dss:3.1.6"
 
 dss_job_vcpus = 1
 
-dss_job_memory = 3096
+dss_job_memory = 3584
 
 dss_job_schedule = "cron(00 8 * * ? *)"
 

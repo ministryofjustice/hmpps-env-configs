@@ -59,8 +59,10 @@ delius_app_config = {
   secret_API_CLIENT_SECRET = "/delius-prod/delius/weblogic/ndelius-domain/api-client-secret"
   # gov.uk notify
   secret_NOTIFICATION_API_KEY = "/delius-prod/delius/delius-application/govuk-notify/api-key"
+  # probation search
+  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search.hmpps.service.justice.gov.uk"
+  env_ELASTICSEARCH_URL       = "https://probation-search.hmpps.service.justice.gov.uk/delius"
 
-  env_OFFENDER_SEARCH_API_URL       = "https://probation-offender-search.hmpps.service.justice.gov.uk"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
 }
@@ -146,11 +148,11 @@ dss_job_envvars = [
   },
   {
     "name"  = "JAVA_OPTS"
-    "value" = "-Xms1024m -Xmx3072m"
+    "value" = "-Xms1024m -Xmx2560m"
   },
   {
     "name"  = "PARSEERRORMAXLIMITOVERRIDE"
-    "value" = "30"
+    "value" = "100"
   }
 ]
 
