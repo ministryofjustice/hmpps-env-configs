@@ -71,6 +71,8 @@ delius_app_config = {
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
+  # Adding temporarily to allow testing of DST-13931 - Clear session on Homepage.
+  env_ENABLE_SESSION_CHECKS         = "true"
 }
 delius_SR28_config = {
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
