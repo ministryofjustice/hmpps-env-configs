@@ -63,10 +63,12 @@ delius_app_config = {
 gdpr_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
+  api_memory       = 16384 # 16GB
+  api_cpu          = 2048  # 2 vCPUs
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.27.0"
-  ui_version       = "0.27.0"
+  api_version      = "0.37.0"
+  ui_version       = "0.37.0"
 }
 
 # Merge
