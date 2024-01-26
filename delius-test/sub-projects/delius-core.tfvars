@@ -71,6 +71,35 @@ delius_app_config = {
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
+  # Adding temporarily to allow testing of DST-13931 - Clear session on Homepage.
+  env_ENABLE_SESSION_CHECKS = "true"
+}
+
+# Dual-running config:
+dual_run_with_sr28 = true
+delius_SR28_config = {
+  env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
+  # oauth
+  env_OAUTH_URL = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
+  # user sign-in
+  env_OAUTH_LOGIN_ENABLED          = "false"
+  env_OAUTH_CLIENT_ID              = "delius-ui"
+  secret_OAUTH_CLIENT_SECRET       = "/delius-test/delius/weblogic/ndelius-domain/oauth-client-secret"
+  env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api-dev.prison.service.justice.gov.uk/token/verify"
+  env_OAUTH_CALLBACK_URL           = "https://ndelius-sr28.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_DEFAULT_SCOPE          = "delius"
+  env_OAUTH_LOGIN_NAME             = ""
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
+  # gov.uk notify
+  secret_NOTIFICATION_API_KEY = "/delius-test/delius/delius-application/govuk-notify/api-key"
+  # probation search
+  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
+  env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
+
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
@@ -165,11 +194,11 @@ dss_job_envvars = [
 ]
 
 # Self Signed Certs
-self_signed_ca_algorithm = "RSA"
-self_signed_ca_rsa_bits = "2048"
-self_signed_ca_validity_period_hours = 8544
-self_signed_ca_early_renewal_hours = 672
-self_signed_server_algorithm = "RSA"
-self_signed_server_rsa_bits = "2048"
+self_signed_ca_algorithm                 = "RSA"
+self_signed_ca_rsa_bits                  = "2048"
+self_signed_ca_validity_period_hours     = 8544
+self_signed_ca_early_renewal_hours       = 672
+self_signed_server_algorithm             = "RSA"
+self_signed_server_rsa_bits              = "2048"
 self_signed_server_validity_period_hours = 2160
-self_signed_server_early_renewal_hours = 336
+self_signed_server_early_renewal_hours   = 336
