@@ -23,8 +23,8 @@ delius_users:
   sgandalwar_dba:
   kmoss_dba:
 oracle_software:
-      version: '19.20'
-      combo_patch: p35370167_190000_Linux-x86-64.zip
+      version: '19.22'
+      combo_patch: p36031453_190000_Linux-x86-64.zip
       opatch:
-          version: 12.2.0.1.39
-          filename: p6880880_190000_Linux-x86-64.12.2.0.1.39.zip
+          version: 12.2.0.1.41
+          filename: p6880880_190000_Linux-x86-64.12.2.0.1.41.zip
