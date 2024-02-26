@@ -58,3 +58,10 @@ oracle_ansible_versions = {
    delius_manual_deployments_default_branch = "master"
    hmpps_delius_pipelines_default_branch = "master"
 }
+
+
+oracle_s3_backup_bucket_access = {
+    modernisation_platform_role_arns = [
+      "arn:aws:iam::673591086753:role/instance-role-test-delius-db-1"
+    ]
+}
