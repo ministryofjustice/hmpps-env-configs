@@ -60,6 +60,8 @@ delius_app_config = {
   env_OAUTH_CALLBACK_URL           = "https://ndelius.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
   env_OAUTH_DEFAULT_SCOPE          = "delius"
   env_OAUTH_LOGIN_NAME             = ""
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-test/delius/probation-integration/application-insights/connection-string"
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
@@ -73,6 +75,10 @@ delius_app_config = {
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
   # Adding temporarily to allow testing of DST-13931 - Clear session on Homepage.
   env_ENABLE_SESSION_CHECKS = "true"
+}
+delius_eis_config = {
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-test/delius/probation-integration/application-insights/connection-string"
 }
 
 # Dual-running config:
