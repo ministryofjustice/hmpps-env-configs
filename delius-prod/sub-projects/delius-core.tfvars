@@ -54,6 +54,8 @@ delius_app_config = {
   env_OAUTH_CALLBACK_URL           = "https://ndelius.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
   env_OAUTH_DEFAULT_SCOPE          = "delius"
   env_OAUTH_LOGIN_NAME             = ""
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-prod/delius/probation-integration/application-insights/connection-string"
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-prod/delius/weblogic/ndelius-domain/api-client-secret"
@@ -65,6 +67,10 @@ delius_app_config = {
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
+}
+delius_eis_config = {
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-prod/delius/probation-integration/application-insights/connection-string"
 }
 
 # GDPR

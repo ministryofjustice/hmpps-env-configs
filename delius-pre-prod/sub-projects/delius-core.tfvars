@@ -47,6 +47,8 @@ delius_app_config = {
   env_OAUTH_CALLBACK_URL           = "https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/auth/token.jsp"
   env_OAUTH_DEFAULT_SCOPE          = "delius"
   env_OAUTH_LOGIN_NAME             = ""
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-pre-prod/delius/probation-integration/application-insights/connection-string"
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-pre-prod/delius/weblogic/ndelius-domain/api-client-secret"
@@ -57,6 +59,10 @@ delius_app_config = {
   env_LOG_LEVEL_NDELIUS = "DEBUG"
   # PSR Service
   env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
+}
+delius_eis_config = {
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-pre-prod/delius/probation-integration/application-insights/connection-string"
 }
 
 # GDPR
@@ -144,11 +150,11 @@ dss_job_envvars = [
 delius_core_public_zone = "legacy"
 
 # Self Signed Certs
-self_signed_ca_algorithm = "RSA"
-self_signed_ca_rsa_bits = "2048"
-self_signed_ca_validity_period_hours = 8544
-self_signed_ca_early_renewal_hours = 672
-self_signed_server_algorithm = "RSA"
-self_signed_server_rsa_bits = "2048"
+self_signed_ca_algorithm                 = "RSA"
+self_signed_ca_rsa_bits                  = "2048"
+self_signed_ca_validity_period_hours     = 8544
+self_signed_ca_early_renewal_hours       = 672
+self_signed_server_algorithm             = "RSA"
+self_signed_server_rsa_bits              = "2048"
 self_signed_server_validity_period_hours = 2160
-self_signed_server_early_renewal_hours = 336
+self_signed_server_early_renewal_hours   = 336
