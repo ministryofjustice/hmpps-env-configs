@@ -95,6 +95,8 @@ delius_SR28_config = {
   env_OAUTH_CALLBACK_URL           = "https://ndelius-sr28.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
   env_OAUTH_DEFAULT_SCOPE          = "delius"
   env_OAUTH_LOGIN_NAME             = ""
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-test/delius/probation-integration/application-insights/connection-string"
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
