@@ -1,2 +1,2 @@
-SPG_DOCUMENT_REST_SERVICE_ADMIN_URL  ="https://hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk/alfresco/service/admin-spg"
-SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL  ="https://hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk/alfresco/service/noms-spg"
+SPG_DOCUMENT_REST_SERVICE_ADMIN_URL = "https://hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk/alfresco/service/admin-spg"
+SPG_DOCUMENT_REST_SERVICE_PUBLIC_URL = "https://hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk/alfresco/service/noms-spg"
