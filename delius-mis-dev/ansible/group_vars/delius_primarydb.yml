@@ -11,8 +11,6 @@ delius_users:
   dreid_dba:
   sgandalwar_dba:
   kmoss_dba:
-  pmcphee_ro:
-  achimber_ro:
 oracle_software:
       version: '19.22'
       combo_patch: p36031453_190000_Linux-x86-64.zip
