@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-prod
 simple_environment_name: prod
-ndelius_version: "5.8.12.6"
+ndelius_version: "5.8.12.8"
 catalog: PCAT
 data_classification: official-data
 required_patches:
