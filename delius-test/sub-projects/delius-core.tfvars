@@ -70,7 +70,10 @@ delius_app_config = {
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
   env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
-
+  # alfresco
+  env_DMS_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
   # Adding temporarily to allow testing of DST-13931 - Clear session on Homepage.
@@ -79,6 +82,9 @@ delius_app_config = {
 delius_eis_config = {
   # azure application insights
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-test/delius/probation-integration/application-insights/connection-string"
+  # alfresco
+  env_DMS_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
 # Dual-running config:
@@ -105,21 +111,25 @@ delius_SR28_config = {
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
   env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
-
+  # alfresco
+  env_DMS_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
 }
 
 # GDPR
 gdpr_config = {
-  api_min_capacity  = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity  = 1
-  api_version       = "0.37.0"
-  ui_min_capacity   = 1
-  ui_max_capacity   = 5
-  ui_version        = "0.37.0"
-  db_instance_class = "db.m5.large"
-  db_storage        = 100
+  api_min_capacity      = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity      = 1
+  api_version           = "0.37.0"
+  ui_min_capacity       = 1
+  ui_max_capacity       = 5
+  ui_version            = "0.37.0"
+  db_instance_class     = "db.m5.large"
+  db_storage            = 100
+  env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
   # second (0-59), minute (0 - 59), hour (0 - 23), day of the month (1 - 31), month (1 - 12) (or JAN-DEC), day of the week (0 - 7) (or MON-SUN -- 0 or 7 is Sunday)
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   # "0 0 9 ? * MON" Monday at 9am
@@ -134,13 +144,14 @@ gdpr_config = {
 
 # Merge
 merge_config = {
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity = 1
-  api_version      = "0.29.0"
-  ui_min_capacity  = 1
-  ui_max_capacity  = 5
-  ui_version       = "0.29.0"
-  schedule         = "0 5/10 7-23 ? * MON-FRI" # When to run the merge/unmerge scheduled process
+  api_min_capacity      = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity      = 1
+  api_version           = "0.29.0"
+  ui_min_capacity       = 1
+  ui_max_capacity       = 5
+  ui_version            = "0.29.0"
+  env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  schedule              = "0 5/10 7-23 ? * MON-FRI" # When to run the merge/unmerge scheduled process
 }
 
 # User Management
@@ -163,12 +174,20 @@ delius_api_secrets = {
 }
 
 # Community API
+community_api_config = {
+  env_ALFRESCO_BASEURL = "https://hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk/alfresco/s/noms-spg"
+}
 community_api_ingress = [
   "51.140.222.8/32",  # azure hmpps-auth legacy server
   "20.39.162.11/32",  # azure hmpps-auth nomisapi-t3
   "20.39.161.240/32", # azure hmpps-auth nomisapi-t2
   "54.76.254.148/32", # DXW
 ]
+
+# New Tech
+new_tech_config = {
+  env_STORE_ALFRESCO_URL = "https://hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk/alfresco/service/"
+}
 
 env_user_access_cidr_blocks = [
   "54.76.254.148/32" # DXW VPN
