@@ -791,7 +791,7 @@ cr_ancillary_access_cidrs = [
   "194.33.193.0/25", # ARK internet (DOM1)
   "194.33.196.0/25", # ARK internet (DOM1)
   "194.33.197.0/25", # ARK internet (DOM1)
-  "51.149.250.0/24, # MoJO Production Account BYOIP CIDR range
+  "51.149.250.0/24", # MoJO Production Account BYOIP CIDR range
   "51.149.249.0/29", # ARK Corsham Internet Egress Exponential-E
   "194.33.249.0/29", # ARK Corsham Internet Egress Vodafone
   "51.149.249.32/29", # ARK Farnborough Internet Egress Exponential-E
