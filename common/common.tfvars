@@ -786,21 +786,21 @@ cr_ancillary_admin_cidrs = [
 ]
 
 cr_ancillary_access_cidrs = [
-  "195.59.75.0/24",  # ARK internet (DOM1)
-  "194.33.192.0/25", # ARK internet (DOM1)
-  "194.33.193.0/25", # ARK internet (DOM1)
-  "194.33.196.0/25", # ARK internet (DOM1)
-  "194.33.197.0/25", # ARK internet (DOM1)
-  "51.149.250.0/24", # MoJO Production Account BYOIP CIDR range
-  "51.149.249.0/29", # ARK Corsham Internet Egress Exponential-E
-  "194.33.249.0/29", # ARK Corsham Internet Egress Vodafone
+  "195.59.75.0/24",   # ARK internet (DOM1)
+  "194.33.192.0/25",  # ARK internet (DOM1)
+  "194.33.193.0/25",  # ARK internet (DOM1)
+  "194.33.196.0/25",  # ARK internet (DOM1)
+  "194.33.197.0/25",  # ARK internet (DOM1)
+  "51.149.250.0/24",  # MoJO Production Account BYOIP CIDR range
+  "51.149.249.0/29",  # ARK Corsham Internet Egress Exponential-E
+  "194.33.249.0/29",  # ARK Corsham Internet Egress Vodafone
   "51.149.249.32/29", # ARK Farnborough Internet Egress Exponential-E
-  "194.33.248.0/29" # ARK Farnborough Internet Egress Vodafone
+  "194.33.248.0/29",  # ARK Farnborough Internet Egress Vodafone
   "20.49.214.199/32", # Azure Landing Zone Egress
   "20.49.214.228/32", # Azure Landing Zone Egress
-  "20.26.11.71/32", # Azure Landing Zone Egress
-  "20.26.11.108/32", # Azure Landing Zone Egress
-  "128.77.75.128/26" # Palo Alto Prisma Access Egress IP Addresses
+  "20.26.11.71/32",   # Azure Landing Zone Egress
+  "20.26.11.108/32",  # Azure Landing Zone Egress
+  "128.77.75.128/26"  # Palo Alto Prisma Access Egress IP Addresses
 ]
 
 # London Region not support yet, so metrics are not yet publised, can be enabled at later stage for Route53 endpoint monitor
