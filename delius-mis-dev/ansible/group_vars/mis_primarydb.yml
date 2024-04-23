@@ -5,15 +5,15 @@ database_taf_service: DMDMIS_TAF
 database_primary_unique: DMDMIS
 database_primary_sid: DMDMIS
 required_patches:
-    p32044533:
-      patch_files:
-         - target_version: "19.9"
-           filename: p32044533_199000DBRU_Linux-x86-64.zip
-      description: ORA-600 [OPIFCH2:ROWSETSEARLYRET] LOGGED IN DATABASE ALERT LOG
-      grid_patch: false
-      database_patch: true
-      datapatch_required: false
-      replaces_patch: "30616738"
+  p32044533:
+    patch_files:
+       - target_version: "19.9"
+         filename: p32044533_199000DBRU_Linux-x86-64.zip
+    description: ORA-600 [OPIFCH2:ROWSETSEARLYRET] LOGGED IN DATABASE ALERT LOG
+    grid_patch: false
+    database_patch: true
+    datapatch_required: false
+    replaces_patch: "30616738"
   p36252161:
     patch_files:
       - target_version: "19.22"
@@ -30,8 +30,8 @@ delius_users:
   sgandalwar_dba:
   kmoss_dba:
 oracle_software:
-      version: '19.22'
-      combo_patch: p36031453_190000_Linux-x86-64.zip
-      opatch:
-          version: 12.2.0.1.41
-          filename: p6880880_190000_Linux-x86-64.12.2.0.1.41.zip
+  version: '19.22'
+  combo_patch: p36031453_190000_Linux-x86-64.zip
+  opatch:
+    version: 12.2.0.1.41
+    filename: p6880880_190000_Linux-x86-64.12.2.0.1.41.zip
