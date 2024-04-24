@@ -14,15 +14,6 @@ required_patches:
     database_patch: true
     datapatch_required: false
     replaces_patch: "30616738"
-  p36252161:
-    patch_files:
-      - target_version: "19.22"
-        filename: p36252161_1922000OCWRU_Linux-x86-64.zip
-    description: UNSUPPORTED CONFIGURATION DETECTED FOR REAL-TIME SCHEDULING REQUIREMENTS.
-    grid_patch: true
-    database_patch: false
-    datapatch_required: false
-    install_with_opatchauto: true
 delius_users:
   bbuchan_dba:
   rsingh_dba:
