@@ -24,3 +24,4 @@ database_locked_statistics:
 database_parameters:
    db_recovery_file_dest_size: 450G
 fsfo_mode: enabled
+audited_interaction_client: true
