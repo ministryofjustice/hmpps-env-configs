@@ -91,3 +91,4 @@ required_patches:
       grid_patch: false
       database_patch: true
       datapatch_required: true
+audited_interaction_client: true
