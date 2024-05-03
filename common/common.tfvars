@@ -518,7 +518,7 @@ delius_testdata_api_config = {}
 
 # Default Delius SR28 (WebLogic) config
 default_delius_SR28_config = {
-  image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:5.8.12.6" # Version is managed by Ansible
+  image_url             = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-weblogic:5.8.12.8" # Version is managed by Ansible
   min_capacity          = 1
   cpu                   = 2048
   memory                = 4096 # 4GB

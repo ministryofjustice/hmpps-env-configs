@@ -59,6 +59,18 @@ delius_app_config = {
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
 }
 
+# Dual-running config:
+dual_run_with_sr28 = true
+delius_SR28_config = {
+  # oauth
+  env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
+
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
+}
+
 # GDPR
 gdpr_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
