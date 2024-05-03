@@ -76,6 +76,7 @@ oracle_audited_interaction = {
 
 oracle_s3_backup_bucket_access = {
     modernisation_platform_role_arns = [
-      "arn:aws:iam::326912278139:role/instance-role-dev-delius-db-1"
+      "arn:aws:iam::326912278139:role/instance-role-delius-core-dev-db-1",
+      "arn:aws:iam::891377175249:role/instance-role-delius-mis-dev-mis-db-1"
     ]
 }
