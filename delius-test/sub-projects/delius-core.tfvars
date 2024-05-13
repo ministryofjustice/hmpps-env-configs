@@ -76,8 +76,6 @@ delius_app_config = {
   # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
-  # Adding temporarily to allow testing of DST-13931 - Clear session on Homepage.
-  env_ENABLE_SESSION_CHECKS = "true"
 }
 delius_eis_config = {
   # azure application insights
