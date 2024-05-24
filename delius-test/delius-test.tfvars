@@ -62,6 +62,6 @@ oracle_ansible_versions = {
 
 oracle_s3_backup_bucket_access = {
     modernisation_platform_role_arns = [
-      "arn:aws:iam::673591086753:role/instance-role-test-delius-db-1"
+      "arn:aws:iam::673591086753:role/instance-role-delius-core-test-db-1"
     ]
 }
