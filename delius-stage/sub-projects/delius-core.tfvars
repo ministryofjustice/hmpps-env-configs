@@ -79,8 +79,8 @@ gdpr_config = {
   api_cpu          = 2048  # 2 vCPUs
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.39.0"
-  ui_version       = "0.39.0"
+  api_version      = "0.37.0"
+  ui_version       = "0.37.0"
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   cron_identifyduplicates             = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders              = "-" #
