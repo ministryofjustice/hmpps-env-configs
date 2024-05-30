@@ -65,6 +65,33 @@ delius_eis_config = {
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-pre-prod/delius/probation-integration/application-insights/connection-string"
 }
 
+# Dual-running config
+dual_run_with_sr28 = true
+delius_SR28_config = {
+  # oauth
+  env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
+  # user sign-in
+  env_OAUTH_LOGIN_ENABLED          = "false"
+  env_OAUTH_CLIENT_ID              = "delius-ui"
+  secret_OAUTH_CLIENT_SECRET       = "/delius-pre-prod/delius/weblogic/ndelius-domain/oauth-client-secret"
+  env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api-preprod.prison.service.justice.gov.uk/token/verify"
+  env_OAUTH_CALLBACK_URL           = "https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_DEFAULT_SCOPE          = "delius"
+  env_OAUTH_LOGIN_NAME             = ""
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-pre-prod/delius/probation-integration/application-insights/connection-string"
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-pre-prod/delius/weblogic/ndelius-domain/api-client-secret"
+  # probation search
+  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk"
+  env_ELASTICSEARCH_URL       = "https://probation-search-preprod.hmpps.service.justice.gov.uk/delius"
+  # Temp set logging to DEBUG
+  env_LOG_LEVEL_NDELIUS = "DEBUG"
+  # PSR Service
+  env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
+}
+
 # GDPR
 gdpr_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
