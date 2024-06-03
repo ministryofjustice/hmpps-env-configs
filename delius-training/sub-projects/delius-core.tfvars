@@ -40,6 +40,8 @@ delius_app_config = {
   env_TRAINING_MODE = "training"
 }
 
+dual_run_with_sr28 = true
+
 env_user_access_cidr_blocks = [
   # -Sopra Steria
   "195.206.180.12/32", # Dedicated IP provided by Nicki Berry on 24/12/2020 (ALS-2487)
