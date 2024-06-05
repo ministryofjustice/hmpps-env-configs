@@ -446,6 +446,7 @@ user_access_cidr_blocks = [
   "194.33.216.0/24",   # Vodafone DIA Sites
   "194.33.217.0/24",   # Vodafone DIA Sites
   "194.33.218.0/24",   # Vodafone DIA Sites
+  "128.77.75.64/26",   # Palo Alto Prisma Access Corporate Egress
 ]
 
 # jenkins access
