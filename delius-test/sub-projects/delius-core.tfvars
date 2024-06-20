@@ -152,11 +152,6 @@ merge_config = {
   schedule              = "0 5/10 7-23 ? * MON-FRI" # When to run the merge/unmerge scheduled process
 }
 
-# User Management
-umt_config = {
-  version = "1.13.1"
-}
-
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
