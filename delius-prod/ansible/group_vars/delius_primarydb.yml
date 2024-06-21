@@ -7,6 +7,8 @@ database_primary_sid: PRDNDA
 database_parameters:
    control_management_pack_access: DIAGNOSTIC+TUNING
    adg_account_info_tracking: LOCAL
+   sga_max_size: 50G
+   sga_target: 50G
 rman_level_0_backup_duration_target: "12:00"
 rman_uncompressed_backup: Y
 rman_retention_policy: RECOVERY WINDOW OF 366 DAYS
@@ -41,11 +43,11 @@ delius_users:
   mryall_sro:
   pmcphee_sro:
 oracle_software:
-      version: 19.18
-      combo_patch: p34773504_190000_Linux-x86-64.zip
+      version: '19.22'
+      combo_patch: p36031453_190000_Linux-x86-64.zip
       opatch:
-          version: 12.2.0.1.36
-          filename: p6880880_190000_Linux-x86-64.12.2.0.1.36.zip
+          version: 12.2.0.1.41
+          filename: p6880880_190000_Linux-x86-64.12.2.0.1.41.zip
 database_locked_statistics:
    - schema_name: DELIUS_APP_SCHEMA
      table_names:
