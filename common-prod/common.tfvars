@@ -896,11 +896,11 @@ cr_ancillary_access_cidrs = [
   "20.49.214.228/32", # Azure Landing Zone Egress
   "20.26.11.71/32",   # Azure Landing Zone Egress
   "20.26.11.108/32",  # Azure Landing Zone Egress
-  "194.33.200.0/21",   # Vodafone DIA Sites
-  "194.33.216.0/24",   # Vodafone DIA Sites
-  "194.33.217.0/24",   # Vodafone DIA Sites
-  "194.33.218.0/24",   # Vodafone DIA Sites
-  "128.77.75.64/26",   # Palo Alto Prisma Access Corporate Egress
+  "194.33.200.0/21",  # Vodafone DIA Sites
+  "194.33.216.0/24",  # Vodafone DIA Sites
+  "194.33.217.0/24",  # Vodafone DIA Sites
+  "194.33.218.0/24",  # Vodafone DIA Sites
+  "128.77.75.64/26",  # Palo Alto Prisma Access Corporate Egress
 ]
 
 # London Region not support yet, so metrics are not yet publised, can be enabled at later stage for Route53 endpoint monitor
