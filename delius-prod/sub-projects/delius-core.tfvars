@@ -111,9 +111,9 @@ gdpr_config = {
 
 # Merge
 merge_config = {
-  # Temporarily disable merge 0.30.0 in production until DB patch is applied:
-  api_min_capacity = 0
-  api_max_capacity = 0
+  # Temporarily disable merge 0.30.0 in production until DB patch is applied, but we need API running as ND uses it to check for Merge in Progress:
+  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 1
   ui_min_capacity  = 0
   ui_max_capacity  = 0
 }
