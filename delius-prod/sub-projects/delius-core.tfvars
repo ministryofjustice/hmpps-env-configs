@@ -111,9 +111,9 @@ gdpr_config = {
 
 # Merge
 merge_config = {
+  api_min_capacity = 1
+  api_max_capacity = 1
   # Temporarily disable merge 0.30.0 in production until DB patch is applied:
-  api_min_capacity = 0
-  api_max_capacity = 0
   ui_min_capacity  = 0
   ui_max_capacity  = 0
 }
