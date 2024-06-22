@@ -73,6 +73,34 @@ delius_eis_config = {
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-prod/delius/probation-integration/application-insights/connection-string"
 }
 
+# WebLogic
+dual_run_with_sr28 = true
+delius_SR28_config = {
+  # oauth
+  env_OAUTH_URL = "https://sign-in.hmpps.service.justice.gov.uk/auth"
+  # user sign-in
+  env_OAUTH_LOGIN_ENABLED          = "false"
+  env_OAUTH_CLIENT_ID              = "delius-ui"
+  secret_OAUTH_CLIENT_SECRET       = "/delius-prod/delius/weblogic/ndelius-domain/oauth-client-secret"
+  env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api.prison.service.justice.gov.uk/token/verify"
+  env_OAUTH_CALLBACK_URL           = "https://ndelius.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
+  env_OAUTH_DEFAULT_SCOPE          = "delius"
+  env_OAUTH_LOGIN_NAME             = ""
+  # azure application insights
+  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-prod/delius/probation-integration/application-insights/connection-string"
+  # api access
+  env_API_CLIENT_ID        = "delius-ui-client"
+  secret_API_CLIENT_SECRET = "/delius-prod/delius/weblogic/ndelius-domain/api-client-secret"
+  # gov.uk notify
+  secret_NOTIFICATION_API_KEY = "/delius-prod/delius/delius-application/govuk-notify/api-key"
+  # probation search
+  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search.hmpps.service.justice.gov.uk"
+  env_ELASTICSEARCH_URL       = "https://probation-search.hmpps.service.justice.gov.uk/delius"
+
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
+}
+
 # GDPR
 gdpr_config = {
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
@@ -83,10 +111,11 @@ gdpr_config = {
 
 # Merge
 merge_config = {
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity = 1
-  ui_min_capacity  = 2
-  ui_max_capacity  = 10
+  # Temporarily disable merge 0.30.0 in production until DB patch is applied:
+  api_min_capacity = 0
+  api_max_capacity = 0
+  ui_min_capacity  = 0
+  ui_max_capacity  = 0
 }
 
 # Delius API
