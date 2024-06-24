@@ -9,6 +9,7 @@ database_parameters:
    adg_account_info_tracking: LOCAL
    sga_max_size: 50G
    sga_target: 50G
+   pga_aggregate_limit: 40G
 rman_level_0_backup_duration_target: "21:00"
 rman_uncompressed_backup: Y
 rman_retention_policy: RECOVERY WINDOW OF 41 DAYS
