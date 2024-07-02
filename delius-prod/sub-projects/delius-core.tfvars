@@ -40,6 +40,12 @@ ldap_config = {
   backup_retention_days = 90
 }
 
+# User Management
+umt_config = {
+  image_url                     = "ghcr.io/ministryofjustice/delius-core-user-management"
+  version = "1.14.1"
+}
+
 # WebLogic
 delius_app_config = {
   min_capacity = 40 # Increased to handle higher memory usage following session timeout extension
@@ -114,8 +120,8 @@ merge_config = {
   # Temporarily disable merge 0.30.0 in production until DB patch is applied, but we need API running as ND uses it to check for Merge in Progress:
   api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
   api_max_capacity = 1
-  ui_min_capacity  = 0
-  ui_max_capacity  = 0
+  ui_min_capacity = 0
+  ui_max_capacity = 0
 }
 
 # Delius API
