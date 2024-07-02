@@ -35,6 +35,12 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file  = "database"
 }
 
+# User Management
+umt_config = {
+  image_url = "ghcr.io/ministryofjustice/delius-core-user-management"
+  version   = "1.14.1"
+}
+
 # WebLogic
 delius_app_config = {
   # oauth

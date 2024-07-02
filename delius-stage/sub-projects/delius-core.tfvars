@@ -42,8 +42,8 @@ ldap_config = {
 
 # User Management
 umt_config = {
-  image_url                     = "ghcr.io/ministryofjustice/delius-core-user-management"
-  version = "1.14.1"
+  image_url = "ghcr.io/ministryofjustice/delius-core-user-management"
+  version   = "1.14.1"
 }
 
 # WebLogic
