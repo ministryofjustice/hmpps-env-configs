@@ -40,12 +40,6 @@ ldap_config = {
   instance_type = "m5.xlarge"
 }
 
-# User Management
-umt_config = {
-  image_url = "ghcr.io/ministryofjustice/delius-core-user-management"
-  version   = "1.14.1"
-}
-
 # WebLogic
 delius_app_config = {
   min_capacity = 2
