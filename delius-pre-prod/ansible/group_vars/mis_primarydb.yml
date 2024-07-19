@@ -38,10 +38,10 @@ delius_users:
   sgandalwar_dba:
   kmoss_dba:
 oracle_software:
-      version: 19.18
-      combo_patch: p34773504_190000_Linux-x86-64.zip
+      version: '19.22'
+      combo_patch: p36031453_190000_Linux-x86-64.zip
       opatch:
-          version: 12.2.0.1.36
-          filename: p6880880_190000_Linux-x86-64.12.2.0.1.36.zip
+          version: 12.2.0.1.41
+          filename: p6880880_190000_Linux-x86-64.12.2.0.1.41.zip
 fsfo_mode: disabled
 awr_retention_days: 40
