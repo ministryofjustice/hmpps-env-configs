@@ -38,6 +38,9 @@ ansible_vars_oracle_db = {
 env_user_access_cidr_blocks = [
 ]
 
+# Dual-running config:
+dual_run_with_sr28 = true
+
 # CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
 mp_corresponding_vpc_cidr = "10.26.24.0/21"
 
