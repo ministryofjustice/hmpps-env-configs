@@ -175,7 +175,7 @@ ansible_vars_misboe_db = {
 ## Data Services Repo
 db_size_misdsd = {
   database_size  = "small"
-  instance_type  = "t3.large"
+  instance_type  = "r7i.large"
   # disk_iops      = 1000
   # disks_quantity = 2          # Do not decrease this
   # disk_size      = 500        # Do not decrease this
