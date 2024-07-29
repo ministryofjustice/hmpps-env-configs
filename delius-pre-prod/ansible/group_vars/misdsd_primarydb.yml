@@ -5,6 +5,7 @@ database_taf_service: PREDSD_TAF
 database_primary_unique: PREDSD
 database_primary_sid: PREDSD
 oracle_osbws_chunk_size: 52428800
+rman_level_0_backup_duration_target: "12:00"
 database_parameters:
    sga_max_size: 5G
    sga_target: 5G
