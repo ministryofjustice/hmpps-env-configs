@@ -6,6 +6,7 @@ database_primary_unique: PRDDSD
 database_primary_sid: PRDDSD
 rman_retention_policy: RECOVERY WINDOW OF 366 DAYS
 oracle_osbws_chunk_size: 52428800
+rman_level_0_backup_duration_target: "12:00"
 sqlnet_parameters:
    grid:
          SQLNET.INBOUND_CONNECT_TIMEOUT: 300
