@@ -5,7 +5,7 @@ database_taf_service: STGNDA_TAF
 database_primary_unique: STGNDA
 database_primary_sid: STGNDA
 database_parameters:
-   control_management_pack_access: DIAGNOSTIC+TUNING
+   control_management_pack_access: NONE
    sga_max_size: 30G
    sga_target: 30G
    pga_aggregate_limit: 20G
