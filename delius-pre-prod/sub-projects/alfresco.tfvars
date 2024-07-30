@@ -58,8 +58,8 @@ allowed_cidr_block = [
   "217.138.45.109/32",  # Unilink AOVPN
   "217.138.45.110/32",  # Unilink AOVPN
   "31.241.149.106/32",  # Airflow in Analytical Platform
-  "52.210.79.20",       # Airflow in Analytical Platform
-  "54.228.134.38",      # Airflow in Analytical Platform
+  "52.210.79.20/32",       # Airflow in Analytical Platform
+  "54.228.134.38/32",      # Airflow in Analytical Platform
 ]
 
 # common
