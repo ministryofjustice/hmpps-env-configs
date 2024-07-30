@@ -39,7 +39,6 @@ self_signed_server_early_renewal_hours = 336
 # ALLOWED CIDRS
 
 allowed_cidr_block = [
-  "109.148.151.107/32", #Don Home
   "81.134.202.29/32",   #Moj VPN
   "217.33.148.210/32",  #Digital studio
   "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
@@ -58,6 +57,9 @@ allowed_cidr_block = [
   "78.33.32.108/32",    # Unilink AOVPN
   "217.138.45.109/32",  # Unilink AOVPN
   "217.138.45.110/32",  # Unilink AOVPN
+  "31.241.149.106/32",  # Airflow in Analytical Platform
+  "52.210.79.20",       # Airflow in Analytical Platform
+  "54.228.134.38",      # Airflow in Analytical Platform
 ]
 
 # common
