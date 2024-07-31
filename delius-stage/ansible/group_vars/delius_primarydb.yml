@@ -8,7 +8,7 @@ database_parameters:
    control_management_pack_access: NONE
    sga_max_size: 30G
    sga_target: 30G
-   pga_aggregate_limit: 20G
+   pga_aggregate_limit: 30G
 rman_level_0_backup_duration_target: "21:00"
 rman_uncompressed_backup: Y
 rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
