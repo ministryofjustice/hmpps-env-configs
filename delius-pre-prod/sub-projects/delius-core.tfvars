@@ -112,6 +112,11 @@ merge_config = {
   ui_max_capacity  = 10
 }
 
+# UMT
+umt_config = {
+  version = "1.13.1"
+}
+
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
