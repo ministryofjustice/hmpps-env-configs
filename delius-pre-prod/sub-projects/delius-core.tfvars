@@ -114,7 +114,8 @@ merge_config = {
 
 # UMT
 umt_config = {
-  version = "1.13.1"
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
+  version   = "1.13.1"
 }
 
 # Delius API
