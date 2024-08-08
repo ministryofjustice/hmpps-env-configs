@@ -40,6 +40,12 @@ ansible_vars_oracle_db = {
 # enable ingress from the CI (Jenkins/AWS Codepipeline)
 ci_db_ingress_1521 = true
 
+# User Management
+umt_config = {
+  image_url = "ghcr.io/ministryofjustice/delius-core-user-management"
+  version   = "1.14.2"
+}
+
 # WebLogic
 delius_app_config = {
 
