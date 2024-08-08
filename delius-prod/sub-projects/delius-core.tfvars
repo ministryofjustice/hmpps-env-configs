@@ -40,6 +40,12 @@ ldap_config = {
   backup_retention_days = 90
 }
 
+# User Management
+umt_config = {
+  image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
+  version   = "1.13.1"
+}
+
 # WebLogic
 delius_app_config = {
   min_capacity = 40 # Increased to handle higher memory usage following session timeout extension
