@@ -77,8 +77,8 @@ delius_app_config = {
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
   env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
   # alfresco
-  env_DMS_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
-  env_DMS_OFFICE_URI_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_HOST            = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
   # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
@@ -87,8 +87,8 @@ delius_eis_config = {
   # azure application insights
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-test/delius/probation-integration/application-insights/connection-string"
   # alfresco
-  env_DMS_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
-  env_DMS_OFFICE_URI_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_HOST            = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
 # Dual-running config:
@@ -116,8 +116,8 @@ delius_SR28_config = {
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
   env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
   # alfresco
-  env_DMS_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
-  env_DMS_OFFICE_URI_HOST : "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_HOST            = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
   # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
