@@ -94,6 +94,12 @@ merge_config = {
   ui_max_capacity  = 10
 }
 
+# User Management
+umt_config = {
+  image_url = "ghcr.io/ministryofjustice/delius-core-user-management"
+  version   = "1.14.2"
+}
+
 # Delius API
 delius_api_environment = {
   SPRING_PROFILES_ACTIVE                                = "applicationinsights"
