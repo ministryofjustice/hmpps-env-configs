@@ -95,3 +95,9 @@ oracle_audited_interaction = {
   source_server = "delius_primarydb"
   target_environment = "hmpps-delius-prod"
 }
+
+oracle_s3_backup_bucket_access = {
+    modernisation_platform_role_arns = [
+      "arn:aws:iam::730335601417:role/instance-role-delius-core-stage-db-1"
+    ]
+}
