@@ -42,8 +42,7 @@ ci_db_ingress_1521 = true
 
 # User Management
 umt_config = {
-  image_url = "ghcr.io/ministryofjustice/delius-core-user-management"
-  version   = "1.14.2"
+  version   = "1.15.0"
 }
 
 # WebLogic
