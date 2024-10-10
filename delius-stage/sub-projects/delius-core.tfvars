@@ -51,7 +51,7 @@ delius_app_config = {
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
 
-  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
 }
 
 # Dual-running config:
@@ -63,7 +63,7 @@ delius_SR28_config = {
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
 
-  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk"
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
 }
 
 # GDPR
