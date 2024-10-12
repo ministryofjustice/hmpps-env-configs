@@ -631,7 +631,7 @@ pwm_config = {}
 # User Management Tool (UMT)
 default_umt_config = {
   image_url                     = "ghcr.io/ministryofjustice/delius-core-user-management"
-  version                       = "1.14.1"         # Application version
+  version                       = "1.15.0"         # Application version
   memory                        = 4096             # Additional memory required to support Redis caching
   redis_node_type               = "cache.m5.large" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 2                # Number of Redis shards (node groups) in the cluster
