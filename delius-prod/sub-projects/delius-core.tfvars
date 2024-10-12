@@ -43,7 +43,7 @@ ldap_config = {
 # User Management
 umt_config = {
   image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/ndelius-um"
-  version   = "1.13.1"
+  version   = "1.15.0"
 }
 
 # WebLogic
