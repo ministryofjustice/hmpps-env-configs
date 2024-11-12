@@ -39,27 +39,27 @@ self_signed_server_early_renewal_hours = 336
 # ALLOWED CIDRS
 
 allowed_cidr_block = [
-  "81.134.202.29/32",   #Moj VPN
-  "217.33.148.210/32",  #Digital studio
-  "35.176.14.16/32",    #Engineering Jenkins non prod AZ 1
-  "35.177.83.160/32",   #Engineering Jenkins non prod AZ 2
-  "18.130.108.149/32",  #Engineering Jenkins non prod AZ 3
-  "35.178.206.119/32",  #SPG instance public NAT address
-  "194.75.210.216/29",  # Unilink AOVPN
-  "83.98.63.176/29",    # Unilink AOVPN
-  "78.33.10.50/31",     # Unilink AOVPN
-  "78.33.10.52/30",     # Unilink AOVPN
-  "78.33.10.56/30",     # Unilink AOVPN
-  "78.33.10.60/32",     # Unilink AOVPN
-  "78.33.32.99/32",     # Unilink AOVPN
-  "78.33.32.100/30",    # Unilink AOVPN
-  "78.33.32.104/30",    # Unilink AOVPN
-  "78.33.32.108/32",    # Unilink AOVPN
-  "217.138.45.109/32",  # Unilink AOVPN
-  "217.138.45.110/32",  # Unilink AOVPN
-  "34.241.149.106/32",  # Airflow in Analytical Platform
-  "52.210.79.20/32",    # Airflow in Analytical Platform
-  "54.228.134.38/32",   # Airflow in Analytical Platform
+  "81.134.202.29/32",  #Moj VPN
+  "217.33.148.210/32", #Digital studio
+  "35.176.14.16/32",   #Engineering Jenkins non prod AZ 1
+  "35.177.83.160/32",  #Engineering Jenkins non prod AZ 2
+  "18.130.108.149/32", #Engineering Jenkins non prod AZ 3
+  "35.178.206.119/32", #SPG instance public NAT address
+  "194.75.210.216/29", # Unilink AOVPN
+  "83.98.63.176/29",   # Unilink AOVPN
+  "78.33.10.50/31",    # Unilink AOVPN
+  "78.33.10.52/30",    # Unilink AOVPN
+  "78.33.10.56/30",    # Unilink AOVPN
+  "78.33.10.60/32",    # Unilink AOVPN
+  "78.33.32.99/32",    # Unilink AOVPN
+  "78.33.32.100/30",   # Unilink AOVPN
+  "78.33.32.104/30",   # Unilink AOVPN
+  "78.33.32.108/32",   # Unilink AOVPN
+  "217.138.45.109/32", # Unilink AOVPN
+  "217.138.45.110/32", # Unilink AOVPN
+  "34.248.212.25/32",  # Airflow in Analytical Platform
+  "18.203.121.201/32", # Airflow in Analytical Platform
+  "54.195.84.59/32",   # Airflow in Analytical Platform
 ]
 
 # common
