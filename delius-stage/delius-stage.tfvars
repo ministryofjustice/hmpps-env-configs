@@ -100,6 +100,7 @@ oracle_s3_backup_bucket_access = {
     modernisation_platform_role_arns = [
       "arn:aws:iam::730335601417:role/instance-role-delius-core-stage-db-1",
       "arn:aws:iam::471112751565:role/instance-role-delius-mis-stage-mis-db-1",
-      "arn:aws:iam::471112751565:role/instance-role-delius-mis-stage-dsd-db-1"
+      "arn:aws:iam::471112751565:role/instance-role-delius-mis-stage-dsd-db-1",
+      "arn:aws:iam::471112751565:role/instance-role-delius-mis-stage-boe-db-1"
     ]
 }
