@@ -98,6 +98,6 @@ oracle_ansible_versions = {
 # be written to the primary Delius database server in that environment.
 # (Target Environment Names should match those listed in aws_account_ids)
 oracle_audited_interaction = {
-  source_server = "delius_primarydb"
+  source_server = "delius_standbydb1"
   target_environment = "hmpps-delius-prod"
 }
