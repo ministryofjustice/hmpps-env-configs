@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-training
 simple_environment_name: training
-ndelius_version: "6.0.36"
+ndelius_version: "6.1.22"
 catalog: DCAT
 data_classification: unclassified-data
 database_autotasks:
