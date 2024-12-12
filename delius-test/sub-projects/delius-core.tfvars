@@ -81,6 +81,7 @@ delius_app_config = {
   # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-dev.apps.live-1.cloud-platform.service.justice.gov.uk"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
+  env_PDFCREATION_URL               = "https://ndelius-new-tech-test.hmpps.service.justice.gov.uk/newTech"
 }
 delius_eis_config = {
   # azure application insights

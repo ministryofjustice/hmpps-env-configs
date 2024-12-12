@@ -59,6 +59,7 @@ delius_app_config = {
   env_LOG_LEVEL_NDELIUS = "DEBUG"
   # PSR Service
   env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
+  env_PDFCREATION_URL = "https://ndelius-new-tech-preprod.hmpps.service.justice.gov.uk/newTech"
 }
 delius_eis_config = {
   # azure application insights
