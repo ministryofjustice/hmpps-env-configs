@@ -67,6 +67,7 @@ delius_app_config = {
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
+  # env_PDFCREATION_URL               = "https://ndelius-new-tech.hmpps.service.justice.gov.uk/newTech" # TODO uncomment this for switchover in prod
 }
 delius_eis_config = {
   # azure application insights
