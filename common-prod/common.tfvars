@@ -700,13 +700,16 @@ delius_api_config = {}
 # PDF Generator
 default_pdf_generator_config = {
   image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-pdfgenerator"
+  min_capacity = 0 # Disabled - migrated to cloud platform
+  max_capacity = 0 # Disabled - migrated to cloud platform
 }
 pdf_generator_config = {}
 
 # New Tech Web Service
 default_new_tech_config = {
   image_url = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/new-tech-web"
-
+  min_capacity = 0 # Disabled - migrated to cloud platform
+  max_capacity = 0 # Disabled - migrated to cloud platform
   # Default environment variables.
   # These will be overridden by CircleCI for certain environments, see https://github.com/ministryofjustice/ndelius-new-tech/blob/main/.circleci/config.yml
   env_BASE_PATH                        = "/newTech/"
@@ -729,7 +732,8 @@ default_community_api_config = {
   memory           = 4096
   cpu              = 2048
   enable_public_lb = false
-
+  min_capacity = 0 # Disabled - migrated to cloud platform
+  max_capacity = 0 # Disabled - migrated to cloud platform
   # Default environment variables.
   # These will be overridden by CircleCI for certain environments, see https://github.com/ministryofjustice/community-api/blob/main/.circleci/config.yml
   env_SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/.well-known/jwks.json"
