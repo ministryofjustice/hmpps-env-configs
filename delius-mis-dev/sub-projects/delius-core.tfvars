@@ -35,6 +35,15 @@ ansible_vars_oracle_db = {
   oracle_dbca_template_file  = "database"
 }
 
+# WebLogic
+delius_app_config = {
+  env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
+
+  # alfresco
+  env_DMS_HOST            = "hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk"
+}
+
 env_user_access_cidr_blocks = [
 ]
 
