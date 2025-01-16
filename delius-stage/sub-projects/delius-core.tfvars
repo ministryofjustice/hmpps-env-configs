@@ -102,8 +102,8 @@ merge_config = {
   api_max_capacity      = 1
   ui_min_capacity       = 2
   ui_max_capacity       = 10
-  api_version           = "0.31.0"
-  ui_version            = "0.31.0"
+  api_version           = "0.34.0"
+  ui_version            = "0.34.0"
   env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
