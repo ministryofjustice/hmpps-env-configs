@@ -15,6 +15,7 @@ mis_overide_autostop_tags          = "True"  ##Set autostop tag key value for MI
 mis_overide_resizing_schedule_tags = "false" ##Set resizing schedule tag key value for MIS Servers
 
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
+/*
 oracle_backup_schedule = {
   delius = {
     daily_schedule  = "30 06 ? * 2,3,5,6 *"
@@ -33,6 +34,7 @@ oracle_backup_schedule = {
     weekly_schedule = "30 06 ? * 4 *"
   }
 }
+*/
 
 database_high_availability_count = {
   delius = 2
