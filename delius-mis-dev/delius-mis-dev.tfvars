@@ -49,8 +49,9 @@ offloc_rotate_password_schedule = {
 
 oracle_delete_unused_dbids = "yes"
 
+# Disable password rotation ahead of decommissioning
 oracle_rotate_passwords_schedule = {
-  schedule_expression = "00 12 ? * TUE *"
+  schedule_expression = ""
 }
 
 # Support for running different Ansible Versions for Oracle Playbooks
