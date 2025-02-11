@@ -597,8 +597,8 @@ default_delius_app_config = {
   memory                                = 16384 # 16GB
   env_USER_MEM_ARGS                     = "-XX:MaxRAMPercentage=90.0"
   env_LOG_LEVEL_NDELIUS                 = "INFO"
-  env_JDBC_CONNECTION_POOL_MIN_CAPACITY = 50
-  env_JDBC_CONNECTION_POOL_MAX_CAPACITY = 100
+  env_JDBC_CONNECTION_POOL_MIN_CAPACITY = 25
+  env_JDBC_CONNECTION_POOL_MAX_CAPACITY = 50
 }
 delius_app_config = {}
 
@@ -609,8 +609,8 @@ default_delius_eis_config = {
   memory                                = 16384 # 16GB
   env_USER_MEM_ARGS                     = "-XX:MaxRAMPercentage=90.0"
   env_LOG_LEVEL_NDELIUS                 = "INFO"
-  env_JDBC_CONNECTION_POOL_MIN_CAPACITY = 50
-  env_JDBC_CONNECTION_POOL_MAX_CAPACITY = 100
+  env_JDBC_CONNECTION_POOL_MIN_CAPACITY = 10
+  env_JDBC_CONNECTION_POOL_MAX_CAPACITY = 20
 }
 delius_eis_config = {}
 
