@@ -57,6 +57,7 @@ allowed_cidr_block = [
   "78.33.32.108/32",   # Unilink AOVPN
   "217.138.45.109/32", # Unilink AOVPN
   "217.138.45.110/32", # Unilink AOVPN
+  "128.77.75.64/26"    # Prisma VPN
 ]
 
 alfresco_access_cidr_blocks = [

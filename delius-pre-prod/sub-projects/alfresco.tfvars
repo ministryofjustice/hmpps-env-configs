@@ -60,6 +60,7 @@ allowed_cidr_block = [
   "34.248.212.25/32",  # Airflow in Analytical Platform
   "18.203.121.201/32", # Airflow in Analytical Platform
   "54.195.84.59/32",   # Airflow in Analytical Platform
+  "128.77.75.64/26"    # Prisma VPN
 ]
 
 # common
