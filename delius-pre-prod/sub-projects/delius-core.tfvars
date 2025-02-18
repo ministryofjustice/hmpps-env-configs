@@ -60,6 +60,7 @@ delius_app_config = {
   # PSR Service
   env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
   env_PDFCREATION_URL = "https://ndelius-new-tech-preprod.hmpps.service.justice.gov.uk/newTech"
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
 }
 delius_eis_config = {
   # azure application insights
@@ -91,6 +92,7 @@ delius_SR28_config = {
   env_LOG_LEVEL_NDELIUS = "DEBUG"
   # PSR Service
   env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
 }
 
 # GDPR
