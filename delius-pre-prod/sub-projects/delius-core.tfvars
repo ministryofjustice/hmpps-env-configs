@@ -113,13 +113,13 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.31.0" # Application version
-  ui_version       = "0.31.0" # Application version
+  api_version      = "0.35.0" # Application version
+  ui_version       = "0.35.0" # Application version
 }
 
 # UMT
 umt_config = {
-  version   = "1.15.0"
+  version   = "1.17.0"
 }
 
 # Delius API
