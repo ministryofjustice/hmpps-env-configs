@@ -635,7 +635,7 @@ pwm_config = {}
 # User Management Tool (UMT)
 default_umt_config = {
   image_url                     = "ghcr.io/ministryofjustice/delius-core-user-management"
-  version                       = "1.15.0"         # Application version
+  version                       = "1.17.0"         # Application version
   memory                        = 4096             # Additional memory required to support Redis caching
   redis_node_type               = "cache.m5.large" # Instance type to use for the Redis token store cluster
   redis_node_groups             = 2                # Number of Redis shards (node groups) in the cluster
@@ -674,13 +674,13 @@ gdpr_config = {}
 # Delius Merge compliance tool
 default_merge_config = {
   api_image_url              = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-api"
-  api_version                = "0.31.0" # Application version
+  api_version                = "0.35.0" # Application version
   api_min_capacity           = 0        # This service is only enabled in specific environments
   api_max_capacity           = 0
   ui_min_capacity            = 0
   ui_max_capacity            = 0
   ui_image_url               = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-ui"
-  ui_version                 = "0.31.0"              # Application version
+  ui_version                 = "0.35.0"              # Application version
   ui_memory                  = 1024                  # Memory to assign to UI container
   ui_cpu                     = 512                   # CPU to assign to UI container
   db_instance_class          = "db.m5.large"         # Instance type to use for the database
