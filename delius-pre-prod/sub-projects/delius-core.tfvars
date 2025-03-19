@@ -60,6 +60,9 @@ delius_app_config = {
   # PSR Service
   env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
   env_PDFCREATION_URL = "https://ndelius-new-tech-preprod.hmpps.service.justice.gov.uk/newTech"
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
+  env_BREACH_NOTICE_API_URL         = "https://breach-notice-api-preprod.hmpps.service.justice.gov.uk"
+  env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice-preprod.hmpps.service.justice.gov.uk/breach-notice/%s"
 }
 delius_eis_config = {
   # azure application insights
@@ -91,6 +94,7 @@ delius_SR28_config = {
   env_LOG_LEVEL_NDELIUS = "DEBUG"
   # PSR Service
   env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
+  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
 }
 
 # GDPR
@@ -111,13 +115,13 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.31.0" # Application version
-  ui_version       = "0.31.0" # Application version
+  api_version      = "0.35.0" # Application version
+  ui_version       = "0.35.0" # Application version
 }
 
 # UMT
 umt_config = {
-  version   = "1.15.0"
+  version   = "1.17.0"
 }
 
 # Delius API

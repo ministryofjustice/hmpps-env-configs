@@ -64,10 +64,12 @@ delius_app_config = {
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search.hmpps.service.justice.gov.uk"
   env_ELASTICSEARCH_URL       = "https://probation-search.hmpps.service.justice.gov.uk/delius"
-
+  # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
   env_PDFCREATION_URL               = "https://ndelius-new-tech.hmpps.service.justice.gov.uk/newTech"
+  env_BREACH_NOTICE_API_URL         = "https://breach-notice-api.hmpps.service.justice.gov.uk"
+  env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice.hmpps.service.justice.gov.uk/breach-notice/%s"
 }
 delius_eis_config = {
   # azure application insights
@@ -183,7 +185,7 @@ dss_job_envvars = [
   },
   {
     "name"  = "JAVA_OPTS"
-    "value" = "-Xms1024m -Xmx2560m"
+    "value" = "-Xms1024m -Xmx3584m"
   },
   {
     "name"  = "PARSEERRORMAXLIMITOVERRIDE"
