@@ -33,9 +33,8 @@ required_patches:
 delius_users:
   bbuchan_dba:
   rsingh_dba:
-  dreid_dba:
-  sgandalwar_dba:
   kmoss_dba:
+  dbelton_dba:
 oracle_software:
       version: '19.24'
       combo_patch: p36522439_190000_Linux-x86-64.zip

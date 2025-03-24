@@ -8,9 +8,8 @@ cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cf
 delius_users:
   bbuchan_dba:
   rsingh_dba:
-  dreid_dba:
-  sgandalwar_dba:
   kmoss_dba:
+  dbelton_dba:
 oracle_software:
       version: '19.25'
       combo_patch: p36866740_190000_Linux-x86-64.zip
