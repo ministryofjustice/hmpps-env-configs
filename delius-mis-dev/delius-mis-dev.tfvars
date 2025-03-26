@@ -11,6 +11,7 @@ autostop_notify_rule_enabled       = "true"
 tagged_user                        = "<@UA84K4FG8>  <@UA8N2QDHR>  <@U9C74KBLP>  <@UAWCS3F0A>"
 channel                            = "auto-stop-alerts"
 create_autostop_instance           = "true"
+delius_overide_autostop_tags       = "False" ##Override Phase1 autostop tag key value for Oracle Primary Servers
 mis_overide_autostop_tags          = "True"  ##Set autostop tag key value for MIS Servers
 mis_overide_resizing_schedule_tags = "false" ##Set resizing schedule tag key value for MIS Servers
 
