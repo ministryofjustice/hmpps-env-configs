@@ -227,7 +227,7 @@ mis_alarms_enabled = "true"
 # mis fsx
 fsx_copy_tags_to_backups = false
 
-fsx_bfs_fileshare_size = 800      # GiB
+fsx_bfs_fileshare_size = 900      # GiB
 fsx_bfs_fileshare_throughput = 32 # MB/s
 
 # NDMIS LB Management
