@@ -30,7 +30,7 @@ oracle_backup_schedule = {
 oracle_validate_backup_schedule = {
   delius = {
     host     =  "delius_primarydb"
-    schedule =  "00 18 ? * 5 *"
+    schedule =  "00 17 ? * 5 *"
   }
 }
 
