@@ -18,8 +18,6 @@ listener_parameters:
        INBOUND_CONNECT_TIMEOUT_LISTENER: 300
 delius_users:
   bbuchan_dba:
-  rsingh_dba:
-  dreid_dba:
   sgandalwar_dba:
   kmoss_dba:
 oracle_software:

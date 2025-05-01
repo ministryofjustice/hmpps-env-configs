@@ -17,7 +17,6 @@ cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cf
 delius_users:
   nhodgkinson_ro:
   bbuchan_dba:
-  rsingh_dba:
   kmoss_dba:
   dbelton_dba:
   smauthoor_sro:
