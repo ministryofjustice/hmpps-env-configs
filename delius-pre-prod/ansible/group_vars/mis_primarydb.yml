@@ -44,6 +44,7 @@ delius_users:
   bbuchan_dba:
   kmoss_dba:
   dbelton_dba:
+  hmpps_data_hub_ro:
 oracle_software:
       version: '19.25'
       combo_patch: p36866740_190000_Linux-x86-64.zip
