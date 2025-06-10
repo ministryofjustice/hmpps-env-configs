@@ -68,8 +68,8 @@ delius_SR28_config = {
   # oauth
   env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
   # api access
-  # env_API_CLIENT_ID                 = "delius-ui-client"
-  # secret_API_CLIENT_SECRET          = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
+  env_API_CLIENT_ID                 = "delius-ui-client"
+  secret_API_CLIENT_SECRET          = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
   # env_DMS_HOST                      = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   # env_DMS_OFFICE_URI_HOST           = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
@@ -77,33 +77,33 @@ delius_SR28_config = {
 
 # GDPR
 gdpr_config = {
-  # api_min_capacity      = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  # api_max_capacity      = 1
-  # api_memory            = 16384 # 16GB
-  # api_cpu               = 2048  # 2 vCPUs
-  # ui_min_capacity       = 2
-  # ui_max_capacity       = 10
-  # api_version           = "0.39.0"
-  # ui_version            = "0.39.0"
+  api_min_capacity      = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity      = 1
+  api_memory            = 16384 # 16GB
+  api_cpu               = 2048  # 2 vCPUs
+  ui_min_capacity       = 2
+  ui_max_capacity       = 10
+  api_version           = "0.39.0"
+  ui_version            = "0.39.0"
   # env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   cron_identifyduplicates             = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders              = "-" #
   cron_retainedoffendersiicsa         = "-" #
   cron_eligiblefordeletion            = "-" #
-  # cron_deleteoffenders                = "-" # Disabled
+  cron_deleteoffenders                = "-" # Disabled
   cron_destructionlogclearing         = "-" #
   cron_eligiblefordeletionsoftdeleted = "-" #
 }
 
 # Merge
 merge_config = {
-  # api_min_capacity      = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  # api_max_capacity      = 1
-  # ui_min_capacity       = 2
-  # ui_max_capacity       = 10
-  # api_version           = "0.35.0"
-  # ui_version            = "0.35.0"
+  api_min_capacity      = 1 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity      = 1
+  ui_min_capacity       = 2
+  ui_max_capacity       = 10
+  api_version           = "0.35.0"
+  ui_version            = "0.35.0"
   # env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
