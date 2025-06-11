@@ -51,16 +51,16 @@ delius_app_config = {
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
   # Alfresco
-  env_DMS_HOST                      = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-  env_DMS_OFFICE_URI_HOST           = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  # env_DMS_HOST                      = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  # env_DMS_OFFICE_URI_HOST           = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
 }
 
-delius_eis_config = {
-  # alfresco
-  env_DMS_HOST            = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-}
+# delius_eis_config = {
+#   # alfresco
+#   env_DMS_HOST            = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+#   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+# }
 
 # Dual-running config:
 dual_run_with_sr28 = true
@@ -70,8 +70,8 @@ delius_SR28_config = {
   # api access
   env_API_CLIENT_ID                 = "delius-ui-client"
   secret_API_CLIENT_SECRET          = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
-  env_DMS_HOST                      = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-  env_DMS_OFFICE_URI_HOST           = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  # env_DMS_HOST                      = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  # env_DMS_OFFICE_URI_HOST           = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
 }
 
@@ -85,7 +85,7 @@ gdpr_config = {
   ui_max_capacity       = 10
   api_version           = "0.39.0"
   ui_version            = "0.39.0"
-  env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  # env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   cron_identifyduplicates             = "-" # Batch schedules. Set to "-" to disable.
   cron_retainedoffenders              = "-" #
@@ -104,7 +104,7 @@ merge_config = {
   ui_max_capacity       = 10
   api_version           = "0.35.0"
   ui_version            = "0.35.0"
-  env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  # env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
 # User Management
@@ -126,9 +126,9 @@ delius_api_secrets = {
   SPRING_DATASOURCE_PASSWORD     = "/delius-stage/delius/delius-database/db/delius_api_pool_password"
 }
 
-community_api_config = {
-  env_ALFRESCO_BASEURL = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk/alfresco/s/noms-spg"
-}
+# community_api_config = {
+#   env_ALFRESCO_BASEURL = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk/alfresco/s/noms-spg"
+# }
 
 # Community API
 community_api_ingress = [
@@ -137,9 +137,9 @@ community_api_ingress = [
 ]
 
 # New Tech
-new_tech_config = {
-  env_STORE_ALFRESCO_URL = "https://hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk/alfresco/service/"
-}
+# new_tech_config = {
+#   env_STORE_ALFRESCO_URL = "https://hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk/alfresco/service/"
+# }
 
 
 env_user_access_cidr_blocks = [
