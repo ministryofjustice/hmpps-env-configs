@@ -16,7 +16,6 @@ rman_retention_policy: RECOVERY WINDOW OF 31 DAYS
 cfo_database_directory: "/u01/app/oracle/admin/{{ database_global_database }}/cfo/shared_files/National/cfo"
 oracle_osbws_chunk_size: 104857600
 delius_users:
-  jstanley_ro:
   amarke_ro:
   arichardson_ro:
   cbarnett_ro:
