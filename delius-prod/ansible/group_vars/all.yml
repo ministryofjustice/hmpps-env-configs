@@ -6,31 +6,6 @@ simple_environment_name: prod
 ndelius_version: "6.2.14.5"
 catalog: PCAT
 data_classification: official-data
-required_patches:
-    p31810213:
-      patch_files:
-         - target_version: "19.9"
-           filename: p31810213_199000DBRU_Linux-x86-64.zip
-      description: Ora-600 [kghuclientasp_04] after upgrade to 19c database (Doc ID 2730880.1)
-      grid_patch: false
-      database_patch: true
-      target_version: "19.9"
-    p30828205:
-      patch_files:
-         - target_version: "19.9"
-           filename: p30828205_199000DBRU_Linux-x86-64.zip
-      description: Data Pump does not support compatibility above 19.0
-      postinstall_sql: postinstall.sql
-      grid_patch: false
-      database_patch: true
-    p30616738:
-      patch_files:
-         - target_version: "19.9"
-           filename: p30616738_199000DBRU_Linux-x86-64.zip
-      description: ORA-600 [qesrLoopOverSetRowP:rows] From Query In Job That Used To Work In 11g (Doc ID 2596180.1) 
-      grid_patch: false
-      database_patch: true
-      target_version: "19.9"
 
 # DEPRECATED - remove after WebLogic upgrade (ALS-2957):
 prepare_a_case_url: https://prepare-case-probation.service.justice.gov.uk/
