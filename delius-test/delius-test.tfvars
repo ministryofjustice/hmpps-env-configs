@@ -15,6 +15,7 @@ autostop_notify_rule_enabled = "true"
 tagged_user                  = "<@U5XAZK38U>  <@UB9EZ30PK>  <@UJLLH2BS6>"
 channel                      = "po_test_delius_test_alerts"
 create_autostop_instance     = "true"
+delius_overide_autostop_tags = "False" ##Override Phase1 autostop tag key value for Oracle Primary Servers
 
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
