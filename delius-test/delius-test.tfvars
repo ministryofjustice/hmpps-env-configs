@@ -43,11 +43,10 @@ database_high_availability_count = {
 
 oracle_delete_unused_dbids = "yes"
 
-/*
+# Disable password rotation ahead of decommissioning
 oracle_rotate_passwords_schedule = {
-    schedule_expression   =  "00 14 ? * TUE *"
+  schedule_expression = ""
 }
-*/
 
 offloc_rotate_password_schedule = {
   schedule_expression = ""
