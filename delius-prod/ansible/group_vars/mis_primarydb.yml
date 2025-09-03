@@ -29,6 +29,8 @@ required_patches:
           filename: p34755459_1924000DBRU_Linux-x86-64.zip
         - target_version: "19.25"
           filename: p34755459_1925000DBRU_Linux-x86-64.zip
+        - target_version: "19.27"
+          filename: p35413661_1927000DBRU_Linux-x86-64.zip
       description: "ORA-00600 [QERIXGETKEY OPTDESC] WITH FUNCTION BASED INDEX ON SUBSTR"
       grid_patch: false
       database_patch: true
@@ -37,9 +39,9 @@ delius_users:
   kmoss_dba:
   dbelton_dba:
 oracle_software:
-      version: '19.25'
-      combo_patch: p36866740_190000_Linux-x86-64.zip
-      opatch:
-          version: 12.2.0.1.43
-          filename: p6880880_190000_Linux-x86-64.12.2.0.1.43.zip
+  version: "19.27"
+  combo_patch: p37591516_190000_Linux-x86-64.zip
+  opatch:
+    version: 12.2.0.1.46
+    filename: p6880880_190000_Linux-x86-64.12.2.0.1.46.zip
 awr_retention_days: 40
