@@ -3,7 +3,7 @@ region: eu-west-2
 project_name: delius
 environment_name: delius-pre-prod
 simple_environment_name: pre-prod
-ndelius_version: "6.3.12.2"
+ndelius_version: "6.4.7"
 catalog: PCAT
 data_classification: official-data
 delegated_account_id: "010587221707"
