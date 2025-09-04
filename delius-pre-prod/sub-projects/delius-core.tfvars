@@ -105,8 +105,8 @@ gdpr_config = {
   api_cpu          = 2048  # 2 vCPUs
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.37.0"
-  ui_version       = "0.37.0"
+  api_version      = "0.45.0"
+  ui_version       = "0.45.0"
 }
 
 # Merge
@@ -115,8 +115,8 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.35.0" # Application version
-  ui_version       = "0.35.0" # Application version
+  api_version      = "0.36.0" # Application version
+  ui_version       = "0.36.0" # Application version
 }
 
 # UMT
