@@ -201,8 +201,8 @@ ansible_vars_misdsd_db = {
 legacy_environment_name = "100"
 
 #Nextcloud
-nextcloud_instance_type     = "t2.small"
-rds_instance_class          = "db.t2.small"
+nextcloud_instance_type     = "t3.small"
+rds_instance_class          = "db.t3.small"
 mariadb_monitoring_interval = 30
 rds_allocated_storage       = "500"
 number_cache_clusters       = 2
