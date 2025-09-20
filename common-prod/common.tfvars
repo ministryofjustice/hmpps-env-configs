@@ -646,7 +646,7 @@ umt_config = {}
 # Delius GDPR compliance tool
 default_gdpr_config = {
   api_image_url                       = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-gdpr"
-  api_version                         = "0.27.0" # Application version
+  api_version                         = "0.45.0" # Application version
   api_min_capacity                    = 0        # This service is only enabled in specific environments
   api_max_capacity                    = 0
   ui_min_capacity                     = 0
@@ -674,7 +674,7 @@ gdpr_config = {}
 # Delius Merge compliance tool
 default_merge_config = {
   api_image_url              = "895523100917.dkr.ecr.eu-west-2.amazonaws.com/hmpps/delius-merge-api"
-  api_version                = "0.35.0" # Application version
+  api_version                = "0.36.0" # Application version
   api_min_capacity           = 0        # This service is only enabled in specific environments
   api_max_capacity           = 0
   ui_min_capacity            = 0
