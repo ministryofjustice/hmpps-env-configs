@@ -49,6 +49,8 @@ delius_app_config = {
   env_OAUTH_LOGIN_NAME             = ""
   # azure application insights
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-pre-prod/delius/probation-integration/application-insights/connection-string"
+  # OS Data Hub API Key
+  secret_OS_DATAHUB_API_KEY = "/delius-pre-prod/delius/delius-application/osuk-datahub/api-key"
   # api access
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-pre-prod/delius/weblogic/ndelius-domain/api-client-secret"

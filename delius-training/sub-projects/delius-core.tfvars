@@ -38,6 +38,8 @@ ansible_vars_oracle_db = {
 # WebLogic
 delius_app_config = {
   env_TRAINING_MODE = "training"
+  # OS Data Hub API Key
+  secret_OS_DATAHUB_API_KEY = "/delius-training/delius/delius-application/osuk-datahub/api-key"
 }
 
 dual_run_with_sr28 = true

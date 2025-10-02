@@ -61,6 +61,8 @@ delius_app_config = {
   secret_API_CLIENT_SECRET = "/delius-prod/delius/weblogic/ndelius-domain/api-client-secret"
   # gov.uk notify
   secret_NOTIFICATION_API_KEY = "/delius-prod/delius/delius-application/govuk-notify/api-key"
+  # OS Data Hub API Key
+  secret_OS_DATAHUB_API_KEY = "/delius-prod/delius/delius-application/osuk-datahub/api-key"
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search.hmpps.service.justice.gov.uk"
   env_ELASTICSEARCH_URL       = "https://probation-search.hmpps.service.justice.gov.uk/delius"
