@@ -36,7 +36,6 @@ delius_users:
   abritton_ro:
   smcallister_ro:
   jrobson_ro:
-  sbathina_sro:
   dbridgwood_sro:
   achimber_sro:
   mryall_sro:
@@ -44,7 +43,6 @@ delius_users:
   acraik_sro:
   gwheeler_sro:
   lnagarur_sro:
-  tmanassis_sro:
 oracle_software:
   version: "19.27"
   combo_patch: p37591516_190000_Linux-x86-64.zip
