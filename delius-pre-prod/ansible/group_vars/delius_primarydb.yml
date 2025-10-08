@@ -68,15 +68,12 @@ delius_users:
   pwilson_ro:
   rmccormack_ro:
   svalmonte_ro:
-  dbridgwood_sro:
   wwang_ro:
   achimber_ro:
   pmcphee_ro:
   acraik_sro:
   gwheeler_sro:
   lnagarur_sro:
-  sbathina_sro:
-  tmanassis_sro:
   joseibonsu_ro:
 oracle_software:
   version: "19.27"
