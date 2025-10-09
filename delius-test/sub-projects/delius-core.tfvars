@@ -84,6 +84,8 @@ delius_app_config = {
   env_PDFCREATION_URL               = "https://ndelius-new-tech-test.hmpps.service.justice.gov.uk/newTech"
   env_BREACH_NOTICE_API_URL         = "https://breach-notice-api-dev.hmpps.service.justice.gov.uk"
   env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice-dev.hmpps.service.justice.gov.uk/breach-notice/%s"
+  env_SUICIDE_RISK_API_URL          = "https://suicide-risk-form-api-dev.hmpps.service.justice.gov.uk/"
+  env_SUICIDE_RISK_UI_URL_FORMAT    = "https://suicide-risk-form-dev.hmpps.service.justice.gov.uk/suicide-risk/%s"
 }
 delius_eis_config = {
   # azure application insights

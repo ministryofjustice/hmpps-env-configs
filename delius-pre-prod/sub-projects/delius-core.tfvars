@@ -63,6 +63,8 @@ delius_app_config = {
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
   env_BREACH_NOTICE_API_URL         = "https://breach-notice-api-preprod.hmpps.service.justice.gov.uk"
   env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice-preprod.hmpps.service.justice.gov.uk/breach-notice/%s"
+  env_SUICIDE_RISK_API_URL          = "https://suicide-risk-form-api-preprod.hmpps.service.justice.gov.uk/"
+  env_SUICIDE_RISK_UI_URL_FORMAT    = "https://suicide-risk-form-preprod.hmpps.service.justice.gov.uk/suicide-risk/%s"
 }
 delius_eis_config = {
   # azure application insights
