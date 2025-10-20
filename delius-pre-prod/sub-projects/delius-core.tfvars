@@ -57,6 +57,9 @@ delius_app_config = {
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk"
   env_ELASTICSEARCH_URL       = "https://probation-search-preprod.hmpps.service.justice.gov.uk/delius"
+  # alfresco
+  env_DMS_HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
   # Temp set logging to DEBUG
   env_LOG_LEVEL_NDELIUS = "DEBUG"
   # PSR Service
@@ -71,6 +74,9 @@ delius_app_config = {
 delius_eis_config = {
   # azure application insights
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-pre-prod/delius/probation-integration/application-insights/connection-string"
+  # alfresco
+  env_DMS_HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
 # Dual-running config
@@ -94,6 +100,9 @@ delius_SR28_config = {
   # probation search
   env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-preprod.hmpps.service.justice.gov.uk"
   env_ELASTICSEARCH_URL       = "https://probation-search-preprod.hmpps.service.justice.gov.uk/delius"
+  # alfresco
+  env_DMS_HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
   # Temp set logging to DEBUG
   env_LOG_LEVEL_NDELIUS = "DEBUG"
   # PSR Service
@@ -111,6 +120,7 @@ gdpr_config = {
   ui_max_capacity  = 10
   api_version      = "0.45.0"
   ui_version       = "0.45.0"
+  env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
 # Merge
@@ -121,6 +131,7 @@ merge_config = {
   ui_max_capacity  = 10
   api_version      = "0.36.0" # Application version
   ui_version       = "0.36.0" # Application version
+  env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
 # UMT
@@ -143,10 +154,18 @@ delius_api_secrets = {
 }
 
 # Community API
+community_api_config = {
+  env_ALFRESCO_BASEURL = "https://hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk/alfresco/s/noms-spg"
+}
 community_api_ingress = [
   "51.140.228.7/32",  # azure hmpps-auth legacy server
   "20.39.163.219/32", # azure hmpps-auth nomisapi-preprod
 ]
+
+# New Tech
+new_tech_config = {
+  env_STORE_ALFRESCO_URL = "https://hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk/alfresco/service/"
+}
 
 env_user_access_cidr_blocks = [
   "5.148.69.16/28",    # Temporary access for NCC Group ITHC - Cheltenham  (review/remove after 06/02/2023 - see Slack thread: https://mojdt.slack.com/archives/C032BQQHJE5/p1672764936788469)
