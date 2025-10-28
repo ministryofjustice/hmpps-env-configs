@@ -40,6 +40,8 @@ delius_app_config = {
   env_TRAINING_MODE = "training"
   # OS Data Hub API Key
   secret_OS_DATAHUB_API_KEY = "/delius-training/delius/delius-application/osuk-datahub/api-key"
+  # deep link base URL
+  env_DEEPLINK_BASE_URL     = "https://ndelius.training.probation.service.justice.gov.uk/NDelius-war/delius/JSP/deeplink.xhtml"
 }
 
 dual_run_with_sr28 = true
