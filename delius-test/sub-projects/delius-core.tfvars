@@ -88,6 +88,8 @@ delius_app_config = {
   env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice-dev.hmpps.service.justice.gov.uk/breach-notice/%s"
   env_SUICIDE_RISK_API_URL          = "https://suicide-risk-form-api-dev.hmpps.service.justice.gov.uk"
   env_SUICIDE_RISK_UI_URL_FORMAT    = "https://suicide-risk-form-dev.hmpps.service.justice.gov.uk/suicide-risk/%s"
+  # deep link base URL
+  env_DEEPLINK_BASE_URL             = "https://ndelius.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/deeplink.xhtml"
 }
 delius_eis_config = {
   # azure application insights

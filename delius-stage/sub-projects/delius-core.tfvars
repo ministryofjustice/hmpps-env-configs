@@ -56,6 +56,8 @@ delius_app_config = {
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
   # OS Data Hub API Key
   secret_OS_DATAHUB_API_KEY = "/delius-stage/delius/delius-application/osuk-datahub/api-key"
+  # deep link base URL
+  env_DEEPLINK_BASE_URL     = "https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/deeplink.xhtml"
 }
 
 # delius_eis_config = {
