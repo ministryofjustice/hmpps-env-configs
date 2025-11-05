@@ -1,15 +1,6 @@
 [loadrunner]
 loadrunner.stage.delius.probation.hmpps.dsd.io
 
-[delius_primarydb]
-delius-db-1.stage.delius.probation.hmpps.dsd.io
-
-[delius_dbs:children]
-delius_primarydb
-
-[source_rds_iaps]
-delius-db-1.probation.service.justice.gov.uk
-
 [mis_primarydb]
 mis-db-1.stage.delius.probation.hmpps.dsd.io
 
@@ -29,7 +20,6 @@ misdsd-db-1.stage.delius.probation.hmpps.dsd.io
 misdsd_primarydb
 
 [oracle_databases:children]
-delius_dbs
 mis_dbs
 misboe_dbs
 misdsd_dbs
