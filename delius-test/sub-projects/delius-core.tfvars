@@ -42,7 +42,7 @@ ci_db_ingress_1521 = true
 
 # User Management
 umt_config = {
-  version   = "2.1.0"
+  version   = "2.2.0"
 }
 
 # WebLogic
