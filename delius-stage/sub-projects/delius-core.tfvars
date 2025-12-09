@@ -87,8 +87,8 @@ gdpr_config = {
   api_cpu               = 2048  # 2 vCPUs
   ui_min_capacity       = 2
   ui_max_capacity       = 10
-  api_version           = "0.39.0"
-  ui_version            = "0.39.0"
+  api_version           = "0.51.0"
+  ui_version            = "0.51.0"
   # env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   # Example CRON "0 0 15 ? * MON-FRI" # Run at 3pm Monday to Friday
   cron_identifyduplicates             = "-" # Batch schedules. Set to "-" to disable.
