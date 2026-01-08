@@ -120,8 +120,8 @@ gdpr_config = {
   api_cpu          = 2048  # 2 vCPUs
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.45.0"
-  ui_version       = "0.45.0"
+  api_version      = "0.51.0"
+  ui_version       = "0.51.0"
   env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
