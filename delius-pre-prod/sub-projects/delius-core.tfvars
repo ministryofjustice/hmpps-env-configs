@@ -138,7 +138,7 @@ merge_config = {
 
 # UMT
 umt_config = {
-  version   = "1.17.0"
+  version   = "2.2.0"
 }
 
 # Delius API
