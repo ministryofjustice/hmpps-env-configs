@@ -74,6 +74,7 @@ dfi_server_resources = 1
 dfi_disable_api_termination = false
 dfi_ebs_optimized = true
 dfi_hibernation = false
+dfi_mp_datasync_s3_role = arn:aws:iam::590183722357:role/delius-mis-prod-datasync-s3-role
 
 # Databases
 ## MIS Datamart
