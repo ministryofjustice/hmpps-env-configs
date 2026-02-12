@@ -113,7 +113,7 @@ merge_config = {
 
 # User Management
 umt_config = {
-  version = "2.2.0"
+  version = "2.2.1"
 }
 
 # Delius API
