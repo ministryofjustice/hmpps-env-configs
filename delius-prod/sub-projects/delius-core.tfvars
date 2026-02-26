@@ -72,6 +72,7 @@ delius_app_config = {
   # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
+  env_PSR_UI_URL_FORMAT             = "https://pre-sentence-service.hmpps.service.justice.gov.uk/%s"
   env_PDFCREATION_URL               = "https://ndelius-new-tech.hmpps.service.justice.gov.uk/newTech"
   env_BREACH_NOTICE_API_URL         = "https://breach-notice-api.hmpps.service.justice.gov.uk"
   env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice.hmpps.service.justice.gov.uk/breach-notice/%s"
@@ -117,6 +118,7 @@ delius_SR28_config = {
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
   env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
+  env_PSR_UI_URL_FORMAT             = "https://pre-sentence-service.hmpps.service.justice.gov.uk/%s"
 }
 
 # GDPR
