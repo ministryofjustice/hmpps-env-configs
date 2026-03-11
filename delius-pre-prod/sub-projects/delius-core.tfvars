@@ -133,14 +133,14 @@ merge_config = {
   api_max_capacity = 1
   ui_min_capacity  = 2
   ui_max_capacity  = 10
-  api_version      = "0.36.0" # Application version
-  ui_version       = "0.36.0" # Application version
+  api_version      = "0.37.0" # Application version
+  ui_version       = "0.37.0" # Application version
   env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
 # UMT
 umt_config = {
-  version   = "2.2.1"
+  version   = "2.3.1"
 }
 
 # Delius API
