@@ -46,6 +46,9 @@ delius_app_config = {
 
 env_user_access_cidr_blocks = [
 ]
+# True if Weblogic ECS tasks hosted on own EC2 instances
+create_weblogic_capacity_provider = true
+weblogic_ecs_instance_type        = "m5.large"
 
 # Dual-running config:
 dual_run_with_sr28 = true
