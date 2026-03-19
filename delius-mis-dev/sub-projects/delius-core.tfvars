@@ -50,6 +50,9 @@ env_user_access_cidr_blocks = [
 create_weblogic_capacity_provider = true
 weblogic_ecs_instance_type        = "m5.large"
 
+# Install XSIAM XDR agent on ECS hosts
+install_xdr_agent = true
+
 # Dual-running config:
 dual_run_with_sr28 = true
 

@@ -102,6 +102,9 @@ delius_eis_config = {
 create_weblogic_capacity_provider = false
 weblogic_ecs_instance_type        = "m5.large"
 
+# Install XSIAM XDR agent on ECS hosts
+install_xdr_agent = true
+
 # Dual-running config:
 dual_run_with_sr28 = true
 delius_SR28_config = {
