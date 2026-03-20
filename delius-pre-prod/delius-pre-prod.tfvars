@@ -73,7 +73,7 @@ oracle_rotate_passwords_schedule = {
 }
 
 database_high_availability_count = {
-  delius = 1
+  delius = 2
   mis    = 1
   misboe = 1
   misdsd = 1
