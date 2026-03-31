@@ -73,7 +73,7 @@ oracle_rotate_passwords_schedule = {
 }
 
 database_high_availability_count = {
-  delius = 1
+  delius = 2
   mis    = 1
   misboe = 1
   misdsd = 1
@@ -98,6 +98,6 @@ oracle_ansible_versions = {
 # be written to the primary Delius database server in that environment.
 # (Target Environment Names should match those listed in aws_account_ids)
 oracle_audited_interaction = {
-  source_server = "delius_standbydb1"
+  source_server = "delius_standbydb2"
   target_environment = "hmpps-delius-prod"
 }

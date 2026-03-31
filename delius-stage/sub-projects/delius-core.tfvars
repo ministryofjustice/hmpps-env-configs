@@ -51,8 +51,8 @@ delius_app_config = {
   env_API_CLIENT_ID        = "delius-ui-client"
   secret_API_CLIENT_SECRET = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
   # Alfresco
-  # env_DMS_HOST                      = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-  # env_DMS_OFFICE_URI_HOST           = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_HOST                      = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST           = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
   # OS Data Hub API Key
   secret_OS_DATAHUB_API_KEY = "/delius-stage/delius/delius-application/osuk-datahub/api-key"
@@ -60,11 +60,12 @@ delius_app_config = {
   env_DEEPLINK_BASE_URL     = "https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/deeplink.xhtml"
 }
 
-# delius_eis_config = {
-#   # alfresco
-#   env_DMS_HOST            = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-#   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-# }
+delius_eis_config = {
+  # alfresco
+  env_DMS_HOST            = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+}
+
 # True if Weblogic ECS tasks hosted on own EC2 instances
 create_weblogic_capacity_provider = false
 weblogic_ecs_instance_type        = "m5.large"

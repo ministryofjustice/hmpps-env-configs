@@ -90,6 +90,11 @@ delius_app_config = {
   env_SUICIDE_RISK_UI_URL_FORMAT    = "https://suicide-risk-form-dev.hmpps.service.justice.gov.uk/suicide-risk/%s"
   # deep link base URL
   env_DEEPLINK_BASE_URL             = "https://ndelius.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/deeplink.xhtml"
+  # Cloud Platform services
+  env_MERGE_URL                     = "https://delius-merge-ui-test.hmpps.service.justice.gov.uk/merge/ui/"
+  env_MERGE_API_URL                 = "https://delius-merge-api-test.hmpps.service.justice.gov.uk/merge/api/"
+  env_MERGE_OAUTH_URL               = "https://delius-user-management-test.hmpps.service.justice.gov.uk/umt/"
+  env_USERMANAGEMENT_URL            = "https://delius-user-management-test.hmpps.service.justice.gov.uk/umt/"
 }
 delius_eis_config = {
   # azure application insights
