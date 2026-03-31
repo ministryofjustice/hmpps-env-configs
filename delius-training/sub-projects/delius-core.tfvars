@@ -43,6 +43,12 @@ delius_app_config = {
   # deep link base URL
   env_DEEPLINK_BASE_URL     = "https://ndelius.training.probation.service.justice.gov.uk/NDelius-war/delius/JSP/deeplink.xhtml"
 }
+# True if Weblogic ECS tasks hosted on own EC2 instances
+create_weblogic_capacity_provider = false
+weblogic_ecs_instance_type        = "m5.large"
+
+# Install XSIAM XDR agent on ECS hosts
+install_xdr_agent = true
 
 dual_run_with_sr28 = true
 
