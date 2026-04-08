@@ -42,6 +42,9 @@ delius_app_config = {
   secret_OS_DATAHUB_API_KEY = "/delius-training/delius/delius-application/osuk-datahub/api-key"
   # deep link base URL
   env_DEEPLINK_BASE_URL     = "https://ndelius.training.probation.service.justice.gov.uk/NDelius-war/delius/JSP/deeplink.xhtml"
+  # alfresco
+  env_DMS_HOST = "hmpps-delius-alfresco-training.apps.live.cloud-platform.service.justice.gov.uk"
+  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-training.apps.live.cloud-platform.service.justice.gov.uk"
 }
 # True if Weblogic ECS tasks hosted on own EC2 instances
 create_weblogic_capacity_provider = false
