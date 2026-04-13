@@ -63,9 +63,9 @@ delius_app_config = {
   # Temp set logging to DEBUG
   env_LOG_LEVEL_NDELIUS = "DEBUG"
   # PSR Service
-  env_PSR_SERVICE_URL = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk"
-  env_PSR_UI_URL_FORMAT = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk/%s"
-  env_PDFCREATION_URL = "https://ndelius-new-tech-preprod.hmpps.service.justice.gov.uk/newTech"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk/api/v1/report"
+  env_PSR_UI_URL_FORMAT             = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk/psr/%s"
+  env_PDFCREATION_URL               = "https://ndelius-new-tech-preprod.hmpps.service.justice.gov.uk/newTech"
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
   env_BREACH_NOTICE_API_URL         = "https://breach-notice-api-preprod.hmpps.service.justice.gov.uk"
   env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice-preprod.hmpps.service.justice.gov.uk/breach-notice/%s"
