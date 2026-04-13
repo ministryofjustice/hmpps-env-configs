@@ -123,8 +123,8 @@ delius_SR28_config = {
   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-prod.apps.live.cloud-platform.service.justice.gov.uk"
 
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
-  env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
-  env_PSR_UI_URL_FORMAT             = "https://pre-sentence-service.hmpps.service.justice.gov.uk/%s"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk/api/v1/report"
+  env_PSR_UI_URL_FORMAT             = "https://pre-sentence-service.hmpps.service.justice.gov.uk/psr/%s"
 }
 
 # GDPR
