@@ -86,7 +86,7 @@ db_size_mis = {
   instance_type  = "r5.12xlarge"
   disks_quantity      = 10   # Do not decrease this; when increasing this value a new data/flash volume is created. Both vols have different iops so check with DBAs which type of vol is required as they might have to perform a volume swapping within ASM. Ticket ref. https://dsdmoj.atlassian.net/browse/NIT-706
   disks_quantity_data = 6
-  disk_iops_data      = 5000
+  disk_iops_data      = 6400
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
   disk_size_data      = 1000 # Do not decrease this
@@ -95,7 +95,7 @@ db_size_mis = {
   disk_type_root       = "gp3"
   disk_throughput_root = 500
   disk_type_data       = "gp3"
-  disk_throughput_data = 500
+  disk_throughput_data = 400
 }
 
 ## MIS Datamart standby instances.
@@ -106,7 +106,7 @@ db_size_mis_standby = {
   instance_type  = "r5.12xlarge"
   disks_quantity      = 10   # Do not decrease this; when increasing this value a new data/flash volume is created. Both vols have different iops so check with DBAs which type of vol is required as they might have to perform a volume swapping within ASM. Ticket ref. https://dsdmoj.atlassian.net/browse/NIT-706
   disks_quantity_data = 6
-  disk_iops_data      = 5000
+  disk_iops_data      = 6400
   disk_iops_flash     = 3000
   disk_iops_root      = 3000
   disk_size_data      = 1000 # Do not decrease this
@@ -115,7 +115,7 @@ db_size_mis_standby = {
   disk_type_root       = "gp3"
   disk_throughput_root = 500
   disk_type_data       = "gp3"
-  disk_throughput_data = 500
+  disk_throughput_data = 400
 }
 
 ansible_vars_mis_db = {
