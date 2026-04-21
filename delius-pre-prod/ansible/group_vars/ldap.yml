@@ -2,4 +2,4 @@
 ldap_config:
 
 
-  rbac_version: "6.5.1"
+  rbac_version: "6.5.2.1"
