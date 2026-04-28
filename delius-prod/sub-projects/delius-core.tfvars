@@ -71,8 +71,8 @@ delius_app_config = {
   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-prod.apps.live.cloud-platform.service.justice.gov.uk"
   # links to other services
   env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-case-probation.service.justice.gov.uk/"
-  env_PSR_SERVICE_URL               = "https://pre-sentence-service.hmpps.service.justice.gov.uk"
-  env_PSR_UI_URL_FORMAT             = "https://pre-sentence-service.hmpps.service.justice.gov.uk/%s"
+  env_PSR_SERVICE_URL               = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk/api/v1/report"
+  env_PSR_UI_URL_FORMAT             = "https://pre-sentence-service-preprod.hmpps.service.justice.gov.uk/psr/%s"
   env_PDFCREATION_URL               = "https://ndelius-new-tech.hmpps.service.justice.gov.uk/newTech"
   env_BREACH_NOTICE_API_URL         = "https://breach-notice-api.hmpps.service.justice.gov.uk"
   env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice.hmpps.service.justice.gov.uk/breach-notice/%s"
