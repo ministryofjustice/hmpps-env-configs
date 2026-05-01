@@ -96,52 +96,24 @@ delius_app_config = {
   env_MERGE_OAUTH_URL               = "https://delius-user-management-test.hmpps.service.justice.gov.uk/umt/"
   env_USERMANAGEMENT_URL            = "https://delius-user-management-test.hmpps.service.justice.gov.uk/umt/"
 }
+
 delius_eis_config = {
   # azure application insights
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-test/delius/probation-integration/application-insights/connection-string"
   # alfresco
   env_DMS_HOST            = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
+
+  min_capacity          = 1
+  max_capacity          = 1
 }
+
 # True if Weblogic ECS tasks hosted on own EC2 instances
 create_weblogic_capacity_provider = true
 weblogic_ecs_instance_type        = "m5.large"
 
 # Install XSIAM XDR agent on ECS hosts
 install_xdr_agent = true
-
-# Dual-running config:
-dual_run_with_sr28 = true
-delius_SR28_config = {
-  env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
-  # oauth
-  env_OAUTH_URL = "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
-  # user sign-in
-  env_OAUTH_LOGIN_ENABLED          = "false"
-  env_OAUTH_CLIENT_ID              = "delius-ui"
-  secret_OAUTH_CLIENT_SECRET       = "/delius-test/delius/weblogic/ndelius-domain/oauth-client-secret"
-  env_OAUTH_TOKEN_VERIFICATION_URL = "https://token-verification-api-dev.prison.service.justice.gov.uk/token/verify"
-  env_OAUTH_CALLBACK_URL           = "https://ndelius-sr28.test.probation.service.justice.gov.uk/NDelius-war/delius/JSP/auth/token.jsp"
-  env_OAUTH_DEFAULT_SCOPE          = "delius"
-  env_OAUTH_LOGIN_NAME             = ""
-  # azure application insights
-  secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-test/delius/probation-integration/application-insights/connection-string"
-  # api access
-  env_API_CLIENT_ID        = "delius-ui-client"
-  secret_API_CLIENT_SECRET = "/delius-test/delius/weblogic/ndelius-domain/api-client-secret"
-  # gov.uk notify
-  secret_NOTIFICATION_API_KEY = "/delius-test/delius/delius-application/govuk-notify/api-key"
-  # probation search
-  env_OFFENDER_SEARCH_API_URL = "https://probation-offender-search-dev.hmpps.service.justice.gov.uk"
-  env_ELASTICSEARCH_URL       = "https://probation-search-dev.hmpps.service.justice.gov.uk/delius"
-  # alfresco
-  env_DMS_HOST            = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
-  env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
-  # links to other services
-  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-dev.apps.live-1.cloud-platform.service.justice.gov.uk"
-  env_PSR_SERVICE_URL               = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk"
-  env_PSR_UI_URL_FORMAT             = "https://pre-sentence-service-dev.hmpps.service.justice.gov.uk/%s"
-}
 
 # GDPR
 gdpr_config = {

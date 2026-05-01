@@ -44,6 +44,11 @@ delius_app_config = {
   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk"
 }
 
+delius_eis_config = {
+  min_capacity          = 0 # Disable as EIS not used in Mis-Dev
+  max_capacity          = 0 # Disable as EIS not used in Mis-Dev
+}
+
 env_user_access_cidr_blocks = [
 ]
 # True if Weblogic ECS tasks hosted on own EC2 instances
@@ -52,9 +57,6 @@ weblogic_ecs_instance_type        = "m5.large"
 
 # Install XSIAM XDR agent on ECS hosts
 install_xdr_agent = true
-
-# Dual-running config:
-dual_run_with_sr28 = true
 
 # CIDR of corresponding Modernisation Platform VPC. Used to allow traffic between legacy and migration environments
 mp_corresponding_vpc_cidr = "10.26.24.0/21"
