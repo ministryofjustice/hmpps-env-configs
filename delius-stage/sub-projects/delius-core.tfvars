@@ -64,6 +64,9 @@ delius_eis_config = {
   # alfresco
   env_DMS_HOST            = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
+
+  min_capacity          = 0 # Disable as EIS not used in Stage
+  max_capacity          = 0 # Disable as EIS not used in Stage
 }
 
 # True if Weblogic ECS tasks hosted on own EC2 instances
@@ -72,19 +75,6 @@ weblogic_ecs_instance_type        = "m5.large"
 
 # Install XSIAM XDR agent on ECS hosts
 install_xdr_agent = true
-
-# Dual-running config:
-dual_run_with_sr28 = true
-delius_SR28_config = {
-  # oauth
-  env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
-  # api access
-  env_API_CLIENT_ID                 = "delius-ui-client"
-  secret_API_CLIENT_SECRET          = "/delius-stage/delius/weblogic/ndelius-domain/api-client-secret"
-  # env_DMS_HOST                      = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-  # env_DMS_OFFICE_URI_HOST           = "hmpps-delius-alfresco-stage.apps.live.cloud-platform.service.justice.gov.uk"
-  env_PREPARE_CASE_FOR_SENTENCE_URL = "https://prepare-a-case-preprod.apps.live-1.cloud-platform.service.justice.gov.uk"
-}
 
 # GDPR
 gdpr_config = {
