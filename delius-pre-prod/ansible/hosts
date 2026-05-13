@@ -44,7 +44,6 @@ misdsd_primarydb
 misdsd_standbydb1
 
 [oracle_databases:children]
-delius_dbs
 mis_dbs
 misboe_dbs
 misdsd_dbs
