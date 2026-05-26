@@ -1,6 +1,6 @@
 # delius-pre-prod  delius-core.tfvar
 ## Delius Core Specific
-ecs_instance_type = "r7i.2xlarge"
+ecs_instance_type = "r7i.2xlarge" # Temp: Overrides common-prod/common.tfvars
 
 # ref ../../common/common.tfvars
 db_size_delius_core = {
