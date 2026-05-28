@@ -70,8 +70,9 @@ database_high_availability_count = {
   misdsd = 1
 }
 
+# From May 2026 Offloc endpoint has changed and regular rotation of password is not required
 offloc_rotate_password_schedule = {
-  schedule_expression = "0 11 ? * TUE#3 *"
+  schedule_expression = ""
 }
 
 # Support for running different Ansible Versions for Oracle Playbooks
