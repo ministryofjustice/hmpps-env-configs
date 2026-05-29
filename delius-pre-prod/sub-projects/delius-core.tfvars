@@ -72,6 +72,8 @@ delius_app_config = {
   env_BREACH_NOTICE_UI_URL_FORMAT   = "https://breach-notice-preprod.hmpps.service.justice.gov.uk/breach-notice/%s"
   env_SUICIDE_RISK_API_URL          = "https://suicide-risk-form-api-preprod.hmpps.service.justice.gov.uk"
   env_SUICIDE_RISK_UI_URL_FORMAT    = "https://suicide-risk-form-preprod.hmpps.service.justice.gov.uk/suicide-risk/%s"
+  env_COSSO_API_URL                 = "https://cosso-api-preprod.hmpps.service.justice.gov.uk/cosso"
+  env_COSSO_UI_URL_FORMAT           = "https://cosso-ui-preprod.hmpps.service.justice.gov.uk/cosso/%s"
   # deep link base URL
   env_DEEPLINK_BASE_URL             = "https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/deeplink.xhtml"
 }
