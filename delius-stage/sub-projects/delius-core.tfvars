@@ -58,6 +58,11 @@ delius_app_config = {
   secret_OS_DATAHUB_API_KEY = "/delius-stage/delius/delius-application/osuk-datahub/api-key"
   # deep link base URL
   env_DEEPLINK_BASE_URL     = "https://ndelius.stage.probation.service.justice.gov.uk/NDelius-war/delius/JSP/deeplink.xhtml"
+  # Cloud Platform services
+  env_MERGE_URL                     = "https://delius-merge-ui-stage.hmpps.service.justice.gov.uk/merge/ui/"
+  env_MERGE_API_URL                 = "https://delius-merge-api-stage.hmpps.service.justice.gov.uk/merge/api/"
+  env_MERGE_OAUTH_URL               = "https://delius-user-management-stage.hmpps.service.justice.gov.uk/umt/"
+  env_USERMANAGEMENT_URL            = "https://delius-user-management-stage.hmpps.service.justice.gov.uk/umt/"
 }
 
 delius_eis_config = {
