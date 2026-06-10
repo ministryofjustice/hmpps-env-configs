@@ -42,6 +42,12 @@ delius_app_config = {
   # alfresco
   env_DMS_HOST            = "hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk"
   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-dev.apps.live.cloud-platform.service.justice.gov.uk"
+  # Cloud Platform services
+  env_MERGE_URL                     = "https://delius-merge-ui-dev.hmpps.service.justice.gov.uk/merge/ui/"
+  env_MERGE_API_URL                 = "https://delius-merge-api-dev.hmpps.service.justice.gov.uk/merge/api/"
+  env_MERGE_OAUTH_URL               = "https://delius-user-management-dev.hmpps.service.justice.gov.uk/umt/"
+  env_GDPR_URL                      = "https://delius-gdpr-ui-dev.hmpps.service.justice.gov.uk/gdpr/ui/"
+  env_USERMANAGEMENT_URL            = "https://delius-user-management-dev.hmpps.service.justice.gov.uk/umt/"
 }
 
 delius_eis_config = {
