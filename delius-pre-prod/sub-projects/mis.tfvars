@@ -9,7 +9,9 @@ cloudwatch_log_retention = 14
 route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 
 # CIDR where HMPP domain and FSX are hosted
-modernisation_platform_hmpp_dc_cidr = "10.27.136.0/21"
+modernisation_platform_hmpp_dc_cidr     = "10.27.136.0/21"
+modernisation_platform_hmpp_dc_ips      = ["10.27.136.5", "10.27.137.5"]
+modernisation_platform_hmpp_domain_name = "azure.hmpp.root"
 
 public_ssl_arn = ""
 
