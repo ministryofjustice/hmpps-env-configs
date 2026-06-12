@@ -25,10 +25,6 @@ smtp_instance_type = "m5.large"
 
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
-  mis = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 06 ? * 1 *"
-  },
   misboe = {
     daily_schedule  = "00 03 ? * 2-7 *"
     weekly_schedule = "00 06 ? * 1 *"
