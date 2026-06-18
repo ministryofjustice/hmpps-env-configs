@@ -36,10 +36,6 @@ oracle_backup_schedule = {
 }
 
 oracle_validate_backup_schedule = {
-  mis = {
-    host     = "mis_standbydb1"
-    schedule = "00 07 ? * 5 *"
-  },
   misboe = {
     host     = "misboe_standbydb1"
     schedule = "00 07 ? * 5 *"
