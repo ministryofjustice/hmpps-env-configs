@@ -100,6 +100,7 @@ delius_app_config = {
   env_MERGE_API_URL                 = "https://delius-merge-api-test.hmpps.service.justice.gov.uk/merge/api/"
   env_MERGE_OAUTH_URL               = "https://delius-user-management-test.hmpps.service.justice.gov.uk/umt/"
   env_USERMANAGEMENT_URL            = "https://delius-user-management-test.hmpps.service.justice.gov.uk/umt/"
+  env_GDPR_URL                      = "https://delius-gdpr-ui-test.hmpps.service.justice.gov.uk/gdpr/ui/"
 }
 
 delius_eis_config = {
