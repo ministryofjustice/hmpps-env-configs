@@ -48,6 +48,7 @@ delius_users:
   himitiaz_rw:
   jdundon_rw:
   maspin_rw:
+  himitiaz_ro:
 oracle_software:
   version: "19.28"
   combo_patch: p37952382_190000_Linux-x86-64.zip
