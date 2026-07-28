@@ -79,7 +79,7 @@ dfi_server_resources = 1
 dfi_disable_api_termination = false
 dfi_ebs_optimized = true
 dfi_hibernation = false
-#dfi_mp_datasync_s3_role = "arn:aws:iam::590183722357:role/delius-mis-prod-datasync-s3-role"
+dfi_mp_datasync_s3_role = "arn:aws:iam::590183722357:role/delius-mis-prod-datasync-s3-role"
 
 # Databases
 ## MIS Datamart
@@ -226,6 +226,8 @@ rds_instance_class           = "db.m5.xlarge"
 mariadb_monitoring_interval  = 5
 rds_allocated_storage        = "1000"
 nextcloud_instance_count     = 3
+nextcloud_smb_access_cidrs   = ["10.27.8.0/24", "10.27.9.0/24", "10.27.10.0/24"]
+nextcloud_nfs_access_cidrs   = ["10.27.8.0/24", "10.27.9.0/24", "10.27.10.0/24"]
 
 #monitoring
 mis_alarms_enabled = "true"
