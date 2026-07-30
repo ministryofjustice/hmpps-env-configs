@@ -207,14 +207,15 @@ ansible_vars_misdsd_db = {
 legacy_environment_name = "100"
 
 #Nextcloud
-nextcloud_instance_type     = "t3.small"
-rds_instance_class          = "db.t3.small"
-mariadb_monitoring_interval = 30
-rds_allocated_storage       = "500"
-number_cache_clusters       = 2
-nextcloud_redis_node_type   = "cache.t3.small"
-nextcloud_smb_access_cidrs  = ["10.26.24.0/24", "10.26.25.0/24", "10.26.26.0/24"]
-nextcloud_nfs_access_cidrs  = ["10.26.24.0/24", "10.26.25.0/24", "10.26.26.0/24"]
+nextcloud_instance_type            = "t3.small"
+rds_instance_class                 = "db.t3.small"
+mariadb_monitoring_interval        = 30
+rds_allocated_storage              = "500"
+number_cache_clusters              = 2
+nextcloud_redis_node_type          = "cache.t3.small"
+nextcloud_smb_access_cidrs         = ["10.26.24.0/24", "10.26.25.0/24", "10.26.26.0/24"]
+nextcloud_nfs_access_cidrs         = ["10.26.24.0/24", "10.26.25.0/24", "10.26.26.0/24"]
+nextcloud_efs_iam_mount_principals = ["arn:aws:iam::891377175249:root"]
 
 #monitoring
 mis_alarms_enabled = "true"
