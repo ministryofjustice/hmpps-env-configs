@@ -12,6 +12,10 @@ route53_hosted_zone_id = "Z3VDCLGXC4HLOW"
 modernisation_platform_hmpp_dc_cidr     = "10.27.136.0/21"
 modernisation_platform_hmpp_dc_ips      = ["10.27.136.5", "10.27.137.5"]
 modernisation_platform_hmpp_domain_name = "azure.hmpp.root"
+modernisation_platform_mis_cname        = "prod.delius-mis.hmpps-production.modernisation-platform.service.justice.gov.uk"
+
+modernisation_platform_mis_cert_validation_name  = "_3593a50835074d85ca32adaa79a9569d.reporting.probation.service.justice.gov.uk."
+modernisation_platform_mis_cert_validation_value = "_9d6717d3f6cb9cd96df1c6d7159c2633.jkddzztszm.acm-validations.aws."
 
 public_ssl_arn = ""
 
