@@ -76,6 +76,12 @@ delius_app_config = {
   env_COSSO_UI_URL_FORMAT           = "https://cosso-ui-preprod.hmpps.service.justice.gov.uk/cosso/%s"
   # deep link base URL
   env_DEEPLINK_BASE_URL             = "https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/deeplink.xhtml"
+  # Cloud Platform services
+  env_MERGE_URL                     = "https://delius-merge-ui-preprod.hmpps.service.justice.gov.uk/merge/ui/"
+  env_MERGE_API_URL                 = "https://delius-merge-api-preprod.hmpps.service.justice.gov.uk/merge/api/"
+  env_MERGE_OAUTH_URL               = "https://delius-user-management-preprod.hmpps.service.justice.gov.uk/umt/"
+  env_GDPR_URL                      = "https://delius-gdpr-ui-preprod.hmpps.service.justice.gov.uk/gdpr/ui/"
+  env_USERMANAGEMENT_URL            = "https://delius-user-management-preprod.hmpps.service.justice.gov.uk/umt/"
 }
 delius_eis_config = {
   # azure application insights
