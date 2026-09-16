@@ -51,8 +51,8 @@ delius_app_config = {
 
   # Increase min capacity due to issues with regression pack execution
   # DST-12284 Intermittent 502 Bad Gateway / 504 Gateway Timeout errors
-  min_capacity = 8
-  max_capacity = 10
+  min_capacity = 0
+  max_capacity = 0
 
   env_TRAINING_MODE_APP_NAME = "National Delius - TEST USE ONLY"
 

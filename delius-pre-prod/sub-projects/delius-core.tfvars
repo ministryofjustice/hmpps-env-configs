@@ -196,7 +196,7 @@ dss_job_envvars = [
 ]
 
 # Use dsd.io public zone until transition to gov.uk is complete for this environment
-delius_core_public_zone = "legacy"
+delius_core_public_zone = "strategic"
 
 # Self Signed Certs
 self_signed_ca_algorithm                 = "RSA"
