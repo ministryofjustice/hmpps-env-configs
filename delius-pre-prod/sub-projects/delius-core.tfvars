@@ -38,6 +38,8 @@ ansible_vars_oracle_db = {
 
 # WebLogic
 delius_app_config = {
+  min_capacity = 0
+  max_capacity = 0
   # oauth
   env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
   # user sign-in
@@ -78,6 +80,8 @@ delius_app_config = {
   env_DEEPLINK_BASE_URL             = "https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/deeplink.xhtml"
 }
 delius_eis_config = {
+  min_capacity = 0
+  max_capacity = 0
   # azure application insights
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-pre-prod/delius/probation-integration/application-insights/connection-string"
   # alfresco
