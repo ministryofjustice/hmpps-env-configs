@@ -38,6 +38,8 @@ ansible_vars_oracle_db = {
 
 # WebLogic
 delius_app_config = {
+  min_capacity = 0
+  max_capacity = 0
   # oauth
   env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
   # user sign-in
@@ -78,6 +80,8 @@ delius_app_config = {
   env_DEEPLINK_BASE_URL             = "https://ndelius.pre-prod.delius.probation.hmpps.dsd.io/NDelius-war/delius/JSP/deeplink.xhtml"
 }
 delius_eis_config = {
+  min_capacity = 0
+  max_capacity = 0
   # azure application insights
   secret_APPLICATIONINSIGHTS_CONNECTION_STRING = "/delius-pre-prod/delius/probation-integration/application-insights/connection-string"
   # alfresco
@@ -95,12 +99,12 @@ install_xdr_agent = true
 
 # GDPR
 gdpr_config = {
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity = 1
+  api_min_capacity = 0 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 0
   api_memory       = 16384 # 16GB
   api_cpu          = 2048  # 2 vCPUs
-  ui_min_capacity  = 2
-  ui_max_capacity  = 10
+  ui_min_capacity  = 0
+  ui_max_capacity  = 0
   api_version      = "0.51.0"
   ui_version       = "0.51.0"
   env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
@@ -108,10 +112,10 @@ gdpr_config = {
 
 # Merge
 merge_config = {
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity = 1
-  ui_min_capacity  = 2
-  ui_max_capacity  = 10
+  api_min_capacity = 0 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 0
+  ui_min_capacity  = 0
+  ui_max_capacity  = 0
   api_version      = "0.37.0" # Application version
   ui_version       = "0.37.0" # Application version
   env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
@@ -119,6 +123,8 @@ merge_config = {
 
 # UMT
 umt_config = {
+  min_capacity = 0 # UMT moved to CP
+  max_capacity = 0
   version   = "2.3.1"
 }
 
