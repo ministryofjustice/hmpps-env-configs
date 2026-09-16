@@ -110,8 +110,8 @@ delius_eis_config = {
   env_DMS_HOST            = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
   env_DMS_OFFICE_URI_HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
 
-  min_capacity          = 1
-  max_capacity          = 1
+  min_capacity          = 0
+  max_capacity          = 0
 }
 
 # True if Weblogic ECS tasks hosted on own EC2 instances
