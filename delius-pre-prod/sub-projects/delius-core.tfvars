@@ -123,6 +123,8 @@ merge_config = {
 
 # UMT
 umt_config = {
+  min_capacity = 0 # UMT moved to CP
+  max_capacity = 0
   version   = "2.3.1"
 }
 
