@@ -95,12 +95,12 @@ install_xdr_agent = true
 
 # GDPR
 gdpr_config = {
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity = 1
+  api_min_capacity = 0 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 0
   api_memory       = 16384 # 16GB
   api_cpu          = 2048  # 2 vCPUs
-  ui_min_capacity  = 2
-  ui_max_capacity  = 10
+  ui_min_capacity  = 0
+  ui_max_capacity  = 0
   api_version      = "0.51.0"
   ui_version       = "0.51.0"
   env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-preprod.apps.live.cloud-platform.service.justice.gov.uk"
@@ -108,10 +108,10 @@ gdpr_config = {
 
 # Merge
 merge_config = {
-  api_min_capacity = 1 # Batch processing currently doesn't scale so fixing to 1 instance
-  api_max_capacity = 1
-  ui_min_capacity  = 2
-  ui_max_capacity  = 10
+  api_min_capacity = 0 # Batch processing currently doesn't scale so fixing to 1 instance
+  api_max_capacity = 0
+  ui_min_capacity  = 0
+  ui_max_capacity  = 0
   api_version      = "0.37.0" # Application version
   ui_version       = "0.37.0" # Application version
   env_ALFRESCO_DMS-HOST = "hmpps-delius-alfresco-test.apps.live.cloud-platform.service.justice.gov.uk"
