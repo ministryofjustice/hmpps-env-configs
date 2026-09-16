@@ -42,8 +42,8 @@ ldap_config = {
 
 # WebLogic
 delius_app_config = {
-  min_capacity = 2
-  max_capacity = 5
+  min_capacity = 0
+  max_capacity = 0
 
   # oauth
   env_OAUTH_URL = "https://sign-in-preprod.hmpps.service.justice.gov.uk/auth"
