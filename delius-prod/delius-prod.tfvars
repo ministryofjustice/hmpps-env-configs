@@ -14,6 +14,7 @@ subdomain = "probation"
 
 mis_overide_resizing_schedule_tags   = "false"     ##Set resizing schedule tag key value for MIS Servers
 
+delius_overide_autostop_tags = "False"
 
 #Instance size for smtp server
 smtp_instance_type = "m5.large"
