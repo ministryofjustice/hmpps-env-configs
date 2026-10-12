@@ -20,10 +20,6 @@ smtp_instance_type = "m5.large"
 
 # oracle_backup_schedule should be specified using the Europe/London timezone (i.e DST is handled automatically)
 oracle_backup_schedule = {
-  delius = {
-    daily_schedule  = "00 03 ? * 2-7 *"
-    weekly_schedule = "00 03 ? * 1 *"
-  },
   misboe = {
     daily_schedule  = "00 03 ? * 2-7 *"
     weekly_schedule = "00 03 ? * 1 *"
@@ -35,10 +31,6 @@ oracle_backup_schedule = {
 }
 
 oracle_validate_backup_schedule = {
-  delius = {
-    host     = "Random Delius Standby"
-    schedule = "00 13 ? * 4 *"
-  },
   misboe = {
     host     = "misboe_standbydb1"
     schedule = "00 13 ? * 4 *"
