@@ -45,7 +45,6 @@ oracle_validate_backup_schedule = {
 oracle_delete_unused_dbids = "no"
 
 oracle_rotate_passwords_schedule = {
-    schedule_expression   =  "00 14 ? * WED *"
 }
 
 database_high_availability_count = {
